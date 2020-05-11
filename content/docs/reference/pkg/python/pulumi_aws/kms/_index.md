@@ -19,6 +19,13 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides an alias for a KMS customer master key. AWS Console enforces 1-to-1 mapping between aliases &amp; keys,
 but API (hence this provider too) allows you to create as many aliases as
 the <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/limits.html">account limits</a> allow you.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">key</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">Key</span><span class="p">(</span><span class="s2">&quot;key&quot;</span><span class="p">)</span>
+<span class="n">alias</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">Alias</span><span class="p">(</span><span class="s2">&quot;alias&quot;</span><span class="p">,</span> <span class="n">target_key_id</span><span class="o">=</span><span class="n">key</span><span class="o">.</span><span class="n">key_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -158,6 +165,22 @@ the <cite>``kms.Ciphertext`</cite> data source &lt;<a class="reference external"
 <div><p><strong>Note:</strong> All arguments including the plaintext be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">oauth_config</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">Key</span><span class="p">(</span><span class="s2">&quot;oauthConfig&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;oauth config&quot;</span><span class="p">,</span>
+    <span class="n">is_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">oauth</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">Ciphertext</span><span class="p">(</span><span class="s2">&quot;oauth&quot;</span><span class="p">,</span>
+    <span class="n">key_id</span><span class="o">=</span><span class="n">oauth_config</span><span class="o">.</span><span class="n">key_id</span><span class="p">,</span>
+    <span class="n">plaintext</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;client_id&quot;: &quot;e587dbae22222f55da22&quot;,</span>
+<span class="s2">  &quot;client_secret&quot;: &quot;8289575d00000ace55e1815ec13673955721b8a5&quot;</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -258,6 +281,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including the key material will be stored in the raw state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">ExternalKey</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;KMS EXTERNAL for AMI encryption&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -499,6 +528,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.kms.Grant">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">Grant</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">constraints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grant_creation_tokens</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grantee_principal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">operations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retire_on_delete</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retiring_principal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Grant" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource-based access control mechanism for a KMS customer master key.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">key</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">Key</span><span class="p">(</span><span class="s2">&quot;key&quot;</span><span class="p">)</span>
+<span class="n">role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;role&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;lambda.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Sid&quot;: &quot;&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">grant</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">Grant</span><span class="p">(</span><span class="s2">&quot;grant&quot;</span><span class="p">,</span>
+    <span class="n">constraints</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;encryptionContextEquals&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;Department&quot;</span><span class="p">:</span> <span class="s2">&quot;Finance&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">}],</span>
+    <span class="n">grantee_principal</span><span class="o">=</span><span class="n">role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">key_id</span><span class="o">=</span><span class="n">key</span><span class="o">.</span><span class="n">key_id</span><span class="p">,</span>
+    <span class="n">operations</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;Encrypt&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Decrypt&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;GenerateDataKey&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -664,6 +727,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.kms.Key">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">Key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">customer_master_key_spec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deletion_window_in_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_key_rotation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_usage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a KMS customer master key.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">key</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">Key</span><span class="p">(</span><span class="s2">&quot;key&quot;</span><span class="p">,</span>
+    <span class="n">deletion_window_in_days</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;KMS key 1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -824,6 +895,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to get the ARN of a KMS key alias.
 By using this data source, you can reference key alias
 without having to hard code the ARN as input.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">s3</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">get_alias</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;alias/aws/s3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The display name of the alias. The name must start with the word “alias” followed by a forward slash (alias/)</p>
@@ -838,6 +915,21 @@ without having to hard code the ARN as input.</p>
 by using an AWS KMS customer master key. The value returned by this data source
 changes every apply. For a stable ciphertext value, see the <cite>``kms.Ciphertext`</cite>
 resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/kms_ciphertext.html">https://www.terraform.io/docs/providers/aws/r/kms_ciphertext.html</a>&gt;`_.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">oauth_config</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">Key</span><span class="p">(</span><span class="s2">&quot;oauthConfig&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;oauth config&quot;</span><span class="p">,</span>
+    <span class="n">is_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">oauth</span> <span class="o">=</span> <span class="n">oauth_config</span><span class="o">.</span><span class="n">key_id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">key_id</span><span class="p">:</span> <span class="n">aws</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">get_cipher_text</span><span class="p">(</span><span class="n">key_id</span><span class="o">=</span><span class="n">key_id</span><span class="p">,</span>
+    <span class="n">plaintext</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;client_id&quot;: &quot;e587dbae22222f55da22&quot;,</span>
+<span class="s2">  &quot;client_secret&quot;: &quot;8289575d00000ace55e1815ec13673955721b8a5&quot;</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -856,6 +948,12 @@ resource &lt;<a class="reference external" href="https://www.terraform.io/docs/p
 the specified KMS Key with flexible key id input.
 This can be useful to reference key alias
 without having to hard code the ARN as input.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">get_key</span><span class="p">(</span><span class="n">key_id</span><span class="o">=</span><span class="s2">&quot;arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

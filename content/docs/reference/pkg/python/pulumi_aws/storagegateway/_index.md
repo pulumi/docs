@@ -25,6 +25,14 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE:</strong> The Storage Gateway API provides no method to remove a cache disk. Destroying this resource does not perform any Storage Gateway actions.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">storagegateway</span><span class="o">.</span><span class="n">Cache</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">disk_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;storagegateway.getLocalDisk&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">gateway_arn</span><span class="o">=</span><span class="n">aws_storagegateway_gateway</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -111,6 +119,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> The gateway must have cache added (e.g. via the <cite>``storagegateway.Cache`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/storagegateway_cache.html">https://www.terraform.io/docs/providers/aws/r/storagegateway_cache.html</a>&gt;`_ resource) before creating volumes otherwise the Storage Gateway API will return an error.</p>
 <p><strong>NOTE:</strong> The gateway must have an upload buffer added (e.g. via the <cite>``storagegateway.UploadBuffer`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/storagegateway_upload_buffer.html">https://www.terraform.io/docs/providers/aws/r/storagegateway_upload_buffer.html</a>&gt;`_ resource) before the volume is operational to clients, however the Storage Gateway API will allow volume creation without error in that case and return volume status as <code class="docutils literal notranslate"><span class="pre">UPLOAD</span> <span class="pre">BUFFER</span> <span class="pre">NOT</span> <span class="pre">CONFIGURED</span></code>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">storagegateway</span><span class="o">.</span><span class="n">CachesIscsiVolume</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">gateway_arn</span><span class="o">=</span><span class="n">aws_storagegateway_cache</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;gateway_arn&quot;</span><span class="p">],</span>
+    <span class="n">network_interface_id</span><span class="o">=</span><span class="n">aws_instance</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;private_ip&quot;</span><span class="p">],</span>
+    <span class="n">target_name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">volume_size_in_bytes</span><span class="o">=</span><span class="mi">5368709120</span><span class="p">)</span>
+<span class="c1"># 5 GB</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">storagegateway</span><span class="o">.</span><span class="n">CachesIscsiVolume</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">gateway_arn</span><span class="o">=</span><span class="n">aws_storagegateway_cache</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;gateway_arn&quot;</span><span class="p">],</span>
+    <span class="n">network_interface_id</span><span class="o">=</span><span class="n">aws_instance</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;private_ip&quot;</span><span class="p">],</span>
+    <span class="n">snapshot_id</span><span class="o">=</span><span class="n">aws_ebs_snapshot</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">target_name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">volume_size_in_bytes</span><span class="o">=</span><span class="n">aws_ebs_snapshot</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;volume_size&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">storagegateway</span><span class="o">.</span><span class="n">CachesIscsiVolume</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">gateway_arn</span><span class="o">=</span><span class="n">aws_storagegateway_cache</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;gateway_arn&quot;</span><span class="p">],</span>
+    <span class="n">network_interface_id</span><span class="o">=</span><span class="n">aws_instance</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;private_ip&quot;</span><span class="p">],</span>
+    <span class="n">source_volume_arn</span><span class="o">=</span><span class="n">aws_storagegateway_cached_iscsi_volume</span><span class="p">[</span><span class="s2">&quot;existing&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">target_name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">volume_size_in_bytes</span><span class="o">=</span><span class="n">aws_storagegateway_cached_iscsi_volume</span><span class="p">[</span><span class="s2">&quot;existing&quot;</span><span class="p">][</span><span class="s2">&quot;volume_size_in_bytes&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -285,6 +326,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p>NOTE: The Storage Gateway API requires the gateway to be connected to properly return information after activation. If you are receiving <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">specified</span> <span class="pre">gateway</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">connected</span></code> errors during resource creation (gateway activation), ensure your gateway instance meets the <a class="reference external" href="https://docs.aws.amazon.com/storagegateway/latest/userguide/Requirements.html">Storage Gateway requirements</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">storagegateway</span><span class="o">.</span><span class="n">Gateway</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">gateway_ip_address</span><span class="o">=</span><span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
+    <span class="n">gateway_name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">gateway_timezone</span><span class="o">=</span><span class="s2">&quot;GMT&quot;</span><span class="p">,</span>
+    <span class="n">gateway_type</span><span class="o">=</span><span class="s2">&quot;FILE_S3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">storagegateway</span><span class="o">.</span><span class="n">Gateway</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">gateway_ip_address</span><span class="o">=</span><span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
+    <span class="n">gateway_name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">gateway_timezone</span><span class="o">=</span><span class="s2">&quot;GMT&quot;</span><span class="p">,</span>
+    <span class="n">gateway_type</span><span class="o">=</span><span class="s2">&quot;VTL&quot;</span><span class="p">,</span>
+    <span class="n">media_changer_type</span><span class="o">=</span><span class="s2">&quot;AWS-Gateway-VTL&quot;</span><span class="p">,</span>
+    <span class="n">tape_drive_type</span><span class="o">=</span><span class="s2">&quot;IBM-ULT3580-TD5&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">storagegateway</span><span class="o">.</span><span class="n">Gateway</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">gateway_ip_address</span><span class="o">=</span><span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
+    <span class="n">gateway_name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">gateway_timezone</span><span class="o">=</span><span class="s2">&quot;GMT&quot;</span><span class="p">,</span>
+    <span class="n">gateway_type</span><span class="o">=</span><span class="s2">&quot;CACHED&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">storagegateway</span><span class="o">.</span><span class="n">Gateway</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">gateway_ip_address</span><span class="o">=</span><span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
+    <span class="n">gateway_name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">gateway_timezone</span><span class="o">=</span><span class="s2">&quot;GMT&quot;</span><span class="p">,</span>
+    <span class="n">gateway_type</span><span class="o">=</span><span class="s2">&quot;STORED&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -492,6 +575,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.storagegateway.NfsFileShare">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.storagegateway.</code><code class="sig-name descname">NfsFileShare</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_lists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_storage_class</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gateway_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guess_mime_type_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_encrypted</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_key_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nfs_file_share_defaults</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_acl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_only</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">requester_pays</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">squash</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.NfsFileShare" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Storage Gateway NFS File Share.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">storagegateway</span><span class="o">.</span><span class="n">NfsFileShare</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">client_lists</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">],</span>
+    <span class="n">gateway_arn</span><span class="o">=</span><span class="n">aws_storagegateway_gateway</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">location_arn</span><span class="o">=</span><span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">role_arn</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -711,6 +804,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.storagegateway.SmbFileShare">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.storagegateway.</code><code class="sig-name descname">SmbFileShare</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authentication</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_storage_class</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gateway_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guess_mime_type_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">invalid_user_lists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_encrypted</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_key_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_acl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_only</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">requester_pays</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_user_lists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.SmbFileShare" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Storage Gateway SMB File Share.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">storagegateway</span><span class="o">.</span><span class="n">SmbFileShare</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">authentication</span><span class="o">=</span><span class="s2">&quot;ActiveDirectory&quot;</span><span class="p">,</span>
+    <span class="n">gateway_arn</span><span class="o">=</span><span class="n">aws_storagegateway_gateway</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">location_arn</span><span class="o">=</span><span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">role_arn</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">storagegateway</span><span class="o">.</span><span class="n">SmbFileShare</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">authentication</span><span class="o">=</span><span class="s2">&quot;GuestAccess&quot;</span><span class="p">,</span>
+    <span class="n">gateway_arn</span><span class="o">=</span><span class="n">aws_storagegateway_gateway</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">location_arn</span><span class="o">=</span><span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">role_arn</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -913,6 +1026,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> The Storage Gateway API provides no method to remove an upload buffer disk. Destroying this resource does not perform any Storage Gateway actions.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">storagegateway</span><span class="o">.</span><span class="n">UploadBuffer</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">disk_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;storagegateway.getLocalDisk&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">gateway_arn</span><span class="o">=</span><span class="n">aws_storagegateway_gateway</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -998,6 +1119,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> The Storage Gateway API provides no method to remove a working storage disk. Destroying this resource does not perform any Storage Gateway actions.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">storagegateway</span><span class="o">.</span><span class="n">WorkingStorage</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">disk_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;storagegateway.getLocalDisk&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">gateway_arn</span><span class="o">=</span><span class="n">aws_storagegateway_gateway</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1080,6 +1209,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.storagegateway.get_local_disk">
 <code class="sig-prename descclassname">pulumi_aws.storagegateway.</code><code class="sig-name descname">get_local_disk</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">disk_node</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gateway_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.get_local_disk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a Storage Gateway local disk. The disk identifier is useful for adding the disk as a cache or upload buffer to a gateway.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">storagegateway</span><span class="o">.</span><span class="n">get_local_disk</span><span class="p">(</span><span class="n">disk_path</span><span class="o">=</span><span class="n">aws_volume_attachment</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;device_name&quot;</span><span class="p">],</span>
+    <span class="n">gateway_arn</span><span class="o">=</span><span class="n">aws_storagegateway_gateway</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

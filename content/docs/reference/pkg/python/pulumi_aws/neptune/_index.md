@@ -24,6 +24,19 @@ window. Because of this, this provider may report a difference in its planning
 phase because a modification has not yet taken place. You can use the
 <code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> flag to instruct the service to apply the change immediately
 (see documentation below).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">neptune</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">apply_immediately</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">backup_retention_period</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">cluster_identifier</span><span class="o">=</span><span class="s2">&quot;neptune-cluster-demo&quot;</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;neptune&quot;</span><span class="p">,</span>
+    <span class="n">iam_database_authentication_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">preferred_backup_window</span><span class="o">=</span><span class="s2">&quot;07:00-09:00&quot;</span><span class="p">,</span>
+    <span class="n">skip_final_snapshot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -326,6 +339,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A Cluster Instance Resource defines attributes that are specific to a single instance in a Neptune Cluster.</p>
 <p>You can simply add neptune instances and Neptune manages the replication. You can use the <a class="reference external" href="https://www.terraform.io/docs/configuration/resources.html#count">count</a>
 meta-parameter to make multiple instances and join them all to the same Neptune Cluster, or you may specify different Cluster Instance resources with various <code class="docutils literal notranslate"><span class="pre">instance_class</span></code> sizes.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">neptune</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">apply_immediately</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">backup_retention_period</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">cluster_identifier</span><span class="o">=</span><span class="s2">&quot;neptune-cluster-demo&quot;</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;neptune&quot;</span><span class="p">,</span>
+    <span class="n">iam_database_authentication_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">preferred_backup_window</span><span class="o">=</span><span class="s2">&quot;07:00-09:00&quot;</span><span class="p">,</span>
+    <span class="n">skip_final_snapshot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="nb">range</span> <span class="ow">in</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]:</span>
+    <span class="n">example</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">aws</span><span class="o">.</span><span class="n">neptune</span><span class="o">.</span><span class="n">ClusterInstance</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;example-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">apply_immediately</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">cluster_identifier</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;neptune&quot;</span><span class="p">,</span>
+        <span class="n">instance_class</span><span class="o">=</span><span class="s2">&quot;db.r4.large&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -583,6 +616,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.neptune.ClusterParameterGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.neptune.</code><code class="sig-name descname">ClusterParameterGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">family</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.ClusterParameterGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Neptune Cluster Parameter Group</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">neptune</span><span class="o">.</span><span class="n">ClusterParameterGroup</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;neptune cluster parameter group&quot;</span><span class="p">,</span>
+    <span class="n">family</span><span class="o">=</span><span class="s2">&quot;neptune1&quot;</span><span class="p">,</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;neptune_enable_audit_log&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -721,6 +766,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.neptune.ClusterSnapshot">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.neptune.</code><code class="sig-name descname">ClusterSnapshot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">db_cluster_identifier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">db_cluster_snapshot_identifier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.ClusterSnapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Neptune database cluster snapshot.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">neptune</span><span class="o">.</span><span class="n">ClusterSnapshot</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">db_cluster_identifier</span><span class="o">=</span><span class="n">aws_neptune_cluster</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">db_cluster_snapshot_identifier</span><span class="o">=</span><span class="s2">&quot;resourcetestsnapshot1234&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -879,7 +932,47 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aws.neptune.EventSubscription">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.neptune.</code><code class="sig-name descname">EventSubscription</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">event_categories</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sns_topic_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.EventSubscription" title="Permalink to this definition">¶</a></dt>
-<dd><p>The following additional atttributes are provided:</p>
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default_cluster</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">neptune</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;defaultCluster&quot;</span><span class="p">,</span>
+    <span class="n">apply_immediately</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="n">backup_retention_period</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">cluster_identifier</span><span class="o">=</span><span class="s2">&quot;neptune-cluster-demo&quot;</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;neptune&quot;</span><span class="p">,</span>
+    <span class="n">iam_database_authentication_enabled</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="n">preferred_backup_window</span><span class="o">=</span><span class="s2">&quot;07:00-09:00&quot;</span><span class="p">,</span>
+    <span class="n">skip_final_snapshot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">neptune</span><span class="o">.</span><span class="n">ClusterInstance</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">apply_immediately</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="n">cluster_identifier</span><span class="o">=</span><span class="n">default_cluster</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;neptune&quot;</span><span class="p">,</span>
+    <span class="n">instance_class</span><span class="o">=</span><span class="s2">&quot;db.r4.large&quot;</span><span class="p">)</span>
+<span class="n">default_topic</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;defaultTopic&quot;</span><span class="p">)</span>
+<span class="n">default_event_subscription</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">neptune</span><span class="o">.</span><span class="n">EventSubscription</span><span class="p">(</span><span class="s2">&quot;defaultEventSubscription&quot;</span><span class="p">,</span>
+    <span class="n">event_categories</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;maintenance&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;availability&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;creation&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;backup&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;restoration&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;recovery&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;deletion&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;failover&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;failure&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;notification&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;configuration change&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;read replica&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">sns_topic_arn</span><span class="o">=</span><span class="n">default_topic</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">source_ids</span><span class="o">=</span><span class="p">[</span><span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">source_type</span><span class="o">=</span><span class="s2">&quot;db-instance&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;env&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<p>The following additional atttributes are provided:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> - The name of the Neptune event notification subscription.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">arn</span></code> - The Amazon Resource Name of the Neptune event notification subscription.</p></li>
@@ -1015,6 +1108,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.neptune.ParameterGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.neptune.</code><code class="sig-name descname">ParameterGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">family</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.ParameterGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Neptune Parameter Group</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">neptune</span><span class="o">.</span><span class="n">ParameterGroup</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">family</span><span class="o">=</span><span class="s2">&quot;neptune1&quot;</span><span class="p">,</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;neptune_query_timeout&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;25&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1145,6 +1249,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.neptune.SubnetGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.neptune.</code><code class="sig-name descname">SubnetGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.SubnetGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Neptune subnet group resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">neptune</span><span class="o">.</span><span class="n">SubnetGroup</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">subnet_ids</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;frontend&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;backend&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="p">],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;My neptune subnet group&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

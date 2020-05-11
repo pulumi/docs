@@ -20,6 +20,20 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>Note:</strong> Amazon API Gateway Version 2 resources are used for creating and deploying WebSocket and HTTP APIs. To create and deploy REST APIs, use Amazon API Gateway Version 1.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigatewayv2</span><span class="o">.</span><span class="n">Api</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">protocol_type</span><span class="o">=</span><span class="s2">&quot;WEBSOCKET&quot;</span><span class="p">,</span>
+    <span class="n">route_selection_expression</span><span class="o">=</span><span class="s2">&quot;$$request.body.action&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigatewayv2</span><span class="o">.</span><span class="n">Api</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">protocol_type</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -246,6 +260,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigatewayv2.</code><code class="sig-name descname">ApiMapping</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_mapping_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.ApiMapping" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Amazon API Gateway Version 2 API mapping.
 More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html">Amazon API Gateway Developer Guide</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigatewayv2</span><span class="o">.</span><span class="n">ApiMapping</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">api_id</span><span class="o">=</span><span class="n">aws_apigatewayv2_api</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">domain_name</span><span class="o">=</span><span class="n">aws_apigatewayv2_domain_name</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">stage</span><span class="o">=</span><span class="n">aws_apigatewayv2_stage</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -346,6 +369,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigatewayv2.</code><code class="sig-name descname">Authorizer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorizer_credentials_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorizer_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorizer_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_sources</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">jwt_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Authorizer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Amazon API Gateway Version 2 authorizer.
 More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigatewayv2</span><span class="o">.</span><span class="n">Authorizer</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">api_id</span><span class="o">=</span><span class="n">aws_apigatewayv2_api</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">authorizer_type</span><span class="o">=</span><span class="s2">&quot;REQUEST&quot;</span><span class="p">,</span>
+    <span class="n">authorizer_uri</span><span class="o">=</span><span class="n">aws_lambda_function</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;invoke_arn&quot;</span><span class="p">],</span>
+    <span class="n">identity_sources</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;route.request.header.Auth&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigatewayv2</span><span class="o">.</span><span class="n">Authorizer</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">api_id</span><span class="o">=</span><span class="n">aws_apigatewayv2_api</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">authorizer_type</span><span class="o">=</span><span class="s2">&quot;JWT&quot;</span><span class="p">,</span>
+    <span class="n">identity_sources</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;$$request.header.Authorization&quot;</span><span class="p">],</span>
+    <span class="n">jwt_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;audience&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;issuer&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;https://</span><span class="si">{</span><span class="n">aws_cognito_user_pool</span><span class="p">[</span><span class="s1">&#39;example&#39;</span><span class="p">][</span><span class="s1">&#39;endpoint&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -504,12 +550,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aws.apigatewayv2.Deployment">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigatewayv2.</code><code class="sig-name descname">Deployment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Deployment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigatewayv2.</code><code class="sig-name descname">Deployment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">triggers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Deployment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Amazon API Gateway Version 2 deployment.
 More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
 <blockquote>
-<div><p><strong>Note:</strong> Creating a deployment for an API requires at least one <code class="docutils literal notranslate"><span class="pre">apigatewayv2.Route</span></code> resource associated with that API.</p>
+<div><p><strong>Note:</strong> Creating a deployment for an API requires at least one <code class="docutils literal notranslate"><span class="pre">apigatewayv2.Route</span></code> resource associated with that API. To avoid race conditions when all resources are being created together, you need to add implicit resource references via the <code class="docutils literal notranslate"><span class="pre">triggers</span></code> argument or explicit resource references using the <cite>resource ``dependsOn`</cite> meta-argument &lt;<a class="reference external" href="https://www.pulumi.com/docs/intro/concepts/programming-model/#dependson">https://www.pulumi.com/docs/intro/concepts/programming-model/#dependson</a>&gt;`_.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigatewayv2</span><span class="o">.</span><span class="n">Deployment</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">api_id</span><span class="o">=</span><span class="n">aws_apigatewayv2_route</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;api_id&quot;</span><span class="p">],</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Example deployment&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -517,6 +571,7 @@ More information can be found in the <a class="reference external" href="https:/
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API identifier.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description for the deployment resource.</p></li>
+<li><p><strong>triggers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of arbitrary keys and values that, when changed, will trigger a redeployment.</p></li>
 </ul>
 </dd>
 </dl>
@@ -538,9 +593,15 @@ More information can be found in the <a class="reference external" href="https:/
 <dd><p>The description for the deployment resource.</p>
 </dd></dl>
 
+<dl class="py attribute">
+<dt id="pulumi_aws.apigatewayv2.Deployment.triggers">
+<code class="sig-name descname">triggers</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Deployment.triggers" title="Permalink to this definition">¶</a></dt>
+<dd><p>A map of arbitrary keys and values that, when changed, will trigger a redeployment.</p>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pulumi_aws.apigatewayv2.Deployment.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_deployed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Deployment.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_deployed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">triggers</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Deployment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Deployment resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -552,6 +613,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API identifier.</p></li>
 <li><p><strong>auto_deployed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the deployment was automatically released.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description for the deployment resource.</p></li>
+<li><p><strong>triggers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of arbitrary keys and values that, when changed, will trigger a redeployment.</p></li>
 </ul>
 </dd>
 </dl>
@@ -604,6 +666,18 @@ More information can be found in the <a class="reference external" href="https:/
 <div><p><strong>Note:</strong> This resource establishes ownership of and the TLS settings for
 a particular domain name. An API stage can be associated with the domain name using the <code class="docutils literal notranslate"><span class="pre">apigatewayv2.ApiMapping</span></code> resource.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigatewayv2</span><span class="o">.</span><span class="n">DomainName</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">domain_name</span><span class="o">=</span><span class="s2">&quot;ws-api.example.com&quot;</span><span class="p">,</span>
+    <span class="n">domain_name_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;certificateArn&quot;</span><span class="p">:</span> <span class="n">aws_acm_certificate</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;endpointType&quot;</span><span class="p">:</span> <span class="s2">&quot;REGIONAL&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;securityPolicy&quot;</span><span class="p">:</span> <span class="s2">&quot;TLS_1_2&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -736,6 +810,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigatewayv2.</code><code class="sig-name descname">Integration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_handling_strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">credentials_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">passthrough_behavior</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">payload_format_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_templates</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_selection_expression</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout_milliseconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Integration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Amazon API Gateway Version 2 integration.
 More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigatewayv2</span><span class="o">.</span><span class="n">Integration</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">api_id</span><span class="o">=</span><span class="n">aws_apigatewayv2_api</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">integration_type</span><span class="o">=</span><span class="s2">&quot;MOCK&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_function</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lambda_</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s2">&quot;exampleFunction&quot;</span><span class="p">,</span>
+    <span class="n">code</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">FileArchive</span><span class="p">(</span><span class="s2">&quot;example.zip&quot;</span><span class="p">),</span>
+    <span class="n">handler</span><span class="o">=</span><span class="s2">&quot;index.handler&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">runtime</span><span class="o">=</span><span class="s2">&quot;nodejs10.x&quot;</span><span class="p">)</span>
+<span class="n">example_integration</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigatewayv2</span><span class="o">.</span><span class="n">Integration</span><span class="p">(</span><span class="s2">&quot;exampleIntegration&quot;</span><span class="p">,</span>
+    <span class="n">api_id</span><span class="o">=</span><span class="n">aws_apigatewayv2_api</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">connection_type</span><span class="o">=</span><span class="s2">&quot;INTERNET&quot;</span><span class="p">,</span>
+    <span class="n">content_handling_strategy</span><span class="o">=</span><span class="s2">&quot;CONVERT_TO_TEXT&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Lambda example&quot;</span><span class="p">,</span>
+    <span class="n">integration_method</span><span class="o">=</span><span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+    <span class="n">integration_type</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">integration_uri</span><span class="o">=</span><span class="n">example_function</span><span class="o">.</span><span class="n">invoke_arn</span><span class="p">,</span>
+    <span class="n">passthrough_behavior</span><span class="o">=</span><span class="s2">&quot;WHEN_NO_MATCH&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -934,6 +1035,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigatewayv2.</code><code class="sig-name descname">IntegrationResponse</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_handling_strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_response_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">response_templates</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_selection_expression</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.IntegrationResponse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Amazon API Gateway Version 2 integration response.
 More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigatewayv2</span><span class="o">.</span><span class="n">IntegrationResponse</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">api_id</span><span class="o">=</span><span class="n">aws_apigatewayv2_api</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">integration_id</span><span class="o">=</span><span class="n">aws_apigatewayv2_integration</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">integration_response_key</span><span class="o">=</span><span class="s2">&quot;/200/&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1050,6 +1160,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigatewayv2.Model">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigatewayv2.</code><code class="sig-name descname">Model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schema</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Amazon API Gateway Version 2 <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/models-mappings.html#models-mappings-models">model</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigatewayv2</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">api_id</span><span class="o">=</span><span class="n">aws_apigatewayv2_api</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;application/json&quot;</span><span class="p">,</span>
+    <span class="n">schema</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;$$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,</span>
+<span class="s2">  &quot;title&quot;: &quot;ExampleModel&quot;,</span>
+<span class="s2">  &quot;type&quot;: &quot;object&quot;,</span>
+<span class="s2">  &quot;properties&quot;: {</span>
+<span class="s2">    &quot;id&quot;: { &quot;type&quot;: &quot;string&quot; }</span>
+<span class="s2">  }</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1158,6 +1286,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigatewayv2.</code><code class="sig-name descname">Route</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_key_required</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization_scopes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorizer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">model_selection_expression</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">operation_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_models</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">route_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">route_response_selection_expression</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Route" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Amazon API Gateway Version 2 route.
 More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigatewayv2</span><span class="o">.</span><span class="n">Route</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">api_id</span><span class="o">=</span><span class="n">aws_apigatewayv2_api</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">route_key</span><span class="o">=</span><span class="s2">&quot;$$default&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1324,6 +1460,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigatewayv2.</code><code class="sig-name descname">RouteResponse</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">model_selection_expression</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">response_models</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">route_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">route_response_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.RouteResponse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Amazon API Gateway Version 2 route response.
 More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigatewayv2</span><span class="o">.</span><span class="n">RouteResponse</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">api_id</span><span class="o">=</span><span class="n">aws_apigatewayv2_api</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">route_id</span><span class="o">=</span><span class="n">aws_apigatewayv2_route</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">route_response_key</span><span class="o">=</span><span class="s2">&quot;$$default&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1433,6 +1578,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigatewayv2.</code><code class="sig-name descname">Stage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_log_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_deploy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_certificate_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_route_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deployment_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">route_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stage_variables</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Stage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Amazon API Gateway Version 2 stage.
 More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigatewayv2</span><span class="o">.</span><span class="n">Stage</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">api_id</span><span class="o">=</span><span class="n">aws_apigatewayv2_api</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1701,6 +1852,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> Amazon API Gateway Version 2 VPC Links enable private integrations that connect HTTP APIs to private resources in a VPC.
 To enable private integration for REST APIs, use the Amazon API Gateway Version 1 VPC Link <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/api_gateway_vpc_link.html">resource</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigatewayv2</span><span class="o">.</span><span class="n">VpcLink</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">security_group_ids</span><span class="o">=</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;ec2.SecurityGroup&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
+    <span class="n">subnet_ids</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;ec2.getSubnetIds&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;ids&quot;</span><span class="p">],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Usage&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

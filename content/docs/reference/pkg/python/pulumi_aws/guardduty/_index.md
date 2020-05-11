@@ -25,6 +25,12 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE:</strong> Deleting this resource is equivalent to “disabling” GuardDuty for an AWS region, which removes all existing findings. You can set the <code class="docutils literal notranslate"><span class="pre">enable</span></code> attribute to <code class="docutils literal notranslate"><span class="pre">false</span></code> to instead “suspend” monitoring and feedback reporting while keeping existing data. See the <a class="reference external" href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_suspend-disable.html">Suspending or Disabling Amazon GuardDuty documentation</a> for more information.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">my_detector</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">guardduty</span><span class="o">.</span><span class="n">Detector</span><span class="p">(</span><span class="s2">&quot;myDetector&quot;</span><span class="p">,</span> <span class="n">enable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -142,6 +148,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> Currently in GuardDuty, users from member accounts cannot upload and further manage IPSets. IPSets that are uploaded by the master account are imposed on GuardDuty functionality in its member accounts. See the <a class="reference external" href="https://docs.aws.amazon.com/guardduty/latest/ug/create-ip-set.html">GuardDuty API Documentation</a></p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">master</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">guardduty</span><span class="o">.</span><span class="n">Detector</span><span class="p">(</span><span class="s2">&quot;master&quot;</span><span class="p">,</span> <span class="n">enable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">,</span> <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">my_ip_set_bucket_object</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">BucketObject</span><span class="p">(</span><span class="s2">&quot;myIPSetBucketObject&quot;</span><span class="p">,</span>
+    <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;public-read&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;10.0.0.0/8</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;MyIPSet&quot;</span><span class="p">)</span>
+<span class="n">my_ip_set_ip_set</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">guardduty</span><span class="o">.</span><span class="n">IPSet</span><span class="p">(</span><span class="s2">&quot;myIPSetIPSet&quot;</span><span class="p">,</span>
+    <span class="n">activate</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">detector_id</span><span class="o">=</span><span class="n">master</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;TXT&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">my_ip_set_bucket_object</span><span class="o">.</span><span class="n">bucket</span><span class="p">,</span> <span class="n">my_ip_set_bucket_object</span><span class="o">.</span><span class="n">key</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">bucket</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;https://s3.amazonaws.com/</span><span class="si">{</span><span class="n">bucket</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -248,6 +273,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.guardduty.InviteAccepter">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.guardduty.</code><code class="sig-name descname">InviteAccepter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">detector_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.InviteAccepter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to accept a pending GuardDuty invite on creation, ensure the detector has the correct master account on read, and disassociate with the master account upon removal.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">master</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">guardduty</span><span class="o">.</span><span class="n">Detector</span><span class="p">(</span><span class="s2">&quot;master&quot;</span><span class="p">)</span>
+<span class="n">member_detector</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">guardduty</span><span class="o">.</span><span class="n">Detector</span><span class="p">(</span><span class="s2">&quot;memberDetector&quot;</span><span class="p">)</span>
+<span class="n">dev</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">guardduty</span><span class="o">.</span><span class="n">Member</span><span class="p">(</span><span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="n">member_detector</span><span class="o">.</span><span class="n">account_id</span><span class="p">,</span>
+    <span class="n">detector_id</span><span class="o">=</span><span class="n">master</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">email</span><span class="o">=</span><span class="s2">&quot;required@example.com&quot;</span><span class="p">,</span>
+    <span class="n">invite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">member_invite_accepter</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">guardduty</span><span class="o">.</span><span class="n">InviteAccepter</span><span class="p">(</span><span class="s2">&quot;memberInviteAccepter&quot;</span><span class="p">,</span>
+    <span class="n">detector_id</span><span class="o">=</span><span class="n">member_detector</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">master_account_id</span><span class="o">=</span><span class="n">master</span><span class="o">.</span><span class="n">account_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -330,6 +370,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.guardduty.Member">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.guardduty.</code><code class="sig-name descname">Member</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">detector_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_email_notification</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">invitation_message</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">invite</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.Member" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage a GuardDuty member. To accept invitations in member accounts, see the <cite>``guardduty.InviteAccepter`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/guardduty_invite_accepter.html">https://www.terraform.io/docs/providers/aws/r/guardduty_invite_accepter.html</a>&gt;`_.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">master</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">guardduty</span><span class="o">.</span><span class="n">Detector</span><span class="p">(</span><span class="s2">&quot;master&quot;</span><span class="p">,</span> <span class="n">enable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">member_detector</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">guardduty</span><span class="o">.</span><span class="n">Detector</span><span class="p">(</span><span class="s2">&quot;memberDetector&quot;</span><span class="p">,</span> <span class="n">enable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">member_member</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">guardduty</span><span class="o">.</span><span class="n">Member</span><span class="p">(</span><span class="s2">&quot;memberMember&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="n">member_detector</span><span class="o">.</span><span class="n">account_id</span><span class="p">,</span>
+    <span class="n">detector_id</span><span class="o">=</span><span class="n">master</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">email</span><span class="o">=</span><span class="s2">&quot;required@example.com&quot;</span><span class="p">,</span>
+    <span class="n">invite</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">invitation_message</span><span class="o">=</span><span class="s2">&quot;please accept guardduty invitation&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -452,6 +505,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.guardduty.OrganizationAdminAccount">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.guardduty.</code><code class="sig-name descname">OrganizationAdminAccount</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.OrganizationAdminAccount" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a GuardDuty Organization Admin Account. The AWS account utilizing this resource must be an Organizations master account. More information about Organizations support in GuardDuty can be found in the <a class="reference external" href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_organizations.html">GuardDuty User Guide</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_organization</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">Organization</span><span class="p">(</span><span class="s2">&quot;exampleOrganization&quot;</span><span class="p">,</span>
+    <span class="n">aws_service_access_principals</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;guardduty.amazonaws.com&quot;</span><span class="p">],</span>
+    <span class="n">feature_set</span><span class="o">=</span><span class="s2">&quot;ALL&quot;</span><span class="p">)</span>
+<span class="n">example_detector</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">guardduty</span><span class="o">.</span><span class="n">Detector</span><span class="p">(</span><span class="s2">&quot;exampleDetector&quot;</span><span class="p">)</span>
+<span class="n">example_organization_admin_account</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">guardduty</span><span class="o">.</span><span class="n">OrganizationAdminAccount</span><span class="p">(</span><span class="s2">&quot;exampleOrganizationAdminAccount&quot;</span><span class="p">,</span> <span class="n">admin_account_id</span><span class="o">=</span><span class="s2">&quot;123456789012&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -529,6 +592,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> This is an advanced resource. The provider will automatically assume management of the GuardDuty Organization Configuration without import and perform no actions on removal from the resource configuration.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_detector</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">guardduty</span><span class="o">.</span><span class="n">Detector</span><span class="p">(</span><span class="s2">&quot;exampleDetector&quot;</span><span class="p">,</span> <span class="n">enable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">example_organization_configuration</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">guardduty</span><span class="o">.</span><span class="n">OrganizationConfiguration</span><span class="p">(</span><span class="s2">&quot;exampleOrganizationConfiguration&quot;</span><span class="p">,</span>
+    <span class="n">auto_enable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">detector_id</span><span class="o">=</span><span class="n">example_detector</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -614,6 +686,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> Currently in GuardDuty, users from member accounts cannot upload and further manage ThreatIntelSets. ThreatIntelSets that are uploaded by the master account are imposed on GuardDuty functionality in its member accounts. See the <a class="reference external" href="https://docs.aws.amazon.com/guardduty/latest/ug/create-threat-intel-set.html">GuardDuty API Documentation</a></p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">master</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">guardduty</span><span class="o">.</span><span class="n">Detector</span><span class="p">(</span><span class="s2">&quot;master&quot;</span><span class="p">,</span> <span class="n">enable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">,</span> <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">my_threat_intel_set_bucket_object</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">BucketObject</span><span class="p">(</span><span class="s2">&quot;myThreatIntelSetBucketObject&quot;</span><span class="p">,</span>
+    <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;public-read&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;10.0.0.0/8</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;MyThreatIntelSet&quot;</span><span class="p">)</span>
+<span class="n">my_threat_intel_set_threat_intel_set</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">guardduty</span><span class="o">.</span><span class="n">ThreatIntelSet</span><span class="p">(</span><span class="s2">&quot;myThreatIntelSetThreatIntelSet&quot;</span><span class="p">,</span>
+    <span class="n">activate</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">detector_id</span><span class="o">=</span><span class="n">master</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;TXT&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">my_threat_intel_set_bucket_object</span><span class="o">.</span><span class="n">bucket</span><span class="p">,</span> <span class="n">my_threat_intel_set_bucket_object</span><span class="o">.</span><span class="n">key</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">bucket</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;https://s3.amazonaws.com/</span><span class="si">{</span><span class="n">bucket</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -720,6 +811,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.guardduty.get_detector">
 <code class="sig-prename descclassname">pulumi_aws.guardduty.</code><code class="sig-name descname">get_detector</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.get_detector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a GuardDuty detector.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">guardduty</span><span class="o">.</span><span class="n">get_detector</span><span class="p">()</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – The ID of the detector.</p>

@@ -38,6 +38,42 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p><strong>NOTE:</strong> To instead manage <a class="reference external" href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">DynamoDB Global Tables V2 (version 2019.11.21)</a>, use the <cite>``dynamodb.Table`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html">https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html</a>&gt;`_ <code class="docutils literal notranslate"><span class="pre">replica</span></code> configuration block.</p>
 <p>Note: There are many restrictions before you can properly create DynamoDB Global Tables in multiple regions. See the <a class="reference external" href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables_reqs_bestpractices.html">AWS DynamoDB Global Table Requirements</a> for more information.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_pulumi</span> <span class="k">as</span> <span class="nn">pulumi</span>
+
+<span class="n">us_east_1</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">Aws</span><span class="p">(</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">)</span>
+<span class="n">us_west_2</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">Aws</span><span class="p">(</span><span class="s2">&quot;us-west-2&quot;</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-west-2&quot;</span><span class="p">)</span>
+<span class="n">us_east_1_table</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">dynamodb</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="s2">&quot;us-east-1Table&quot;</span><span class="p">,</span>
+    <span class="n">attributes</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;myAttribute&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">hash_key</span><span class="o">=</span><span class="s2">&quot;myAttribute&quot;</span><span class="p">,</span>
+    <span class="n">read_capacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">stream_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">stream_view_type</span><span class="o">=</span><span class="s2">&quot;NEW_AND_OLD_IMAGES&quot;</span><span class="p">,</span>
+    <span class="n">write_capacity</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">us_west_2_table</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">dynamodb</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="s2">&quot;us-west-2Table&quot;</span><span class="p">,</span>
+    <span class="n">attributes</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;myAttribute&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">hash_key</span><span class="o">=</span><span class="s2">&quot;myAttribute&quot;</span><span class="p">,</span>
+    <span class="n">read_capacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">stream_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">stream_view_type</span><span class="o">=</span><span class="s2">&quot;NEW_AND_OLD_IMAGES&quot;</span><span class="p">,</span>
+    <span class="n">write_capacity</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">my_table</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">dynamodb</span><span class="o">.</span><span class="n">GlobalTable</span><span class="p">(</span><span class="s2">&quot;myTable&quot;</span><span class="p">,</span> <span class="n">replicas</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;regionName&quot;</span><span class="p">:</span> <span class="s2">&quot;us-east-1&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;regionName&quot;</span><span class="p">:</span> <span class="s2">&quot;us-west-2&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -141,6 +177,70 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> It is recommended to use <cite>``ignoreChanges`</cite> &lt;<a class="reference external" href="https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges">https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges</a>&gt;`_ for <code class="docutils literal notranslate"><span class="pre">read_capacity</span></code> and/or <code class="docutils literal notranslate"><span class="pre">write_capacity</span></code> if there’s <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_policy.html">autoscaling policy</a> attached to the table.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">basic_dynamodb_table</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">dynamodb</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="s2">&quot;basic-dynamodb-table&quot;</span><span class="p">,</span>
+    <span class="n">attributes</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;UserId&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;GameTitle&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;TopScore&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">billing_mode</span><span class="o">=</span><span class="s2">&quot;PROVISIONED&quot;</span><span class="p">,</span>
+    <span class="n">global_secondary_indexes</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;hashKey&quot;</span><span class="p">:</span> <span class="s2">&quot;GameTitle&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;GameTitleIndex&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;nonKeyAttributes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;UserId&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;projectionType&quot;</span><span class="p">:</span> <span class="s2">&quot;INCLUDE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;rangeKey&quot;</span><span class="p">:</span> <span class="s2">&quot;TopScore&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;readCapacity&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;writeCapacity&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">hash_key</span><span class="o">=</span><span class="s2">&quot;UserId&quot;</span><span class="p">,</span>
+    <span class="n">range_key</span><span class="o">=</span><span class="s2">&quot;GameTitle&quot;</span><span class="p">,</span>
+    <span class="n">read_capacity</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;production&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;dynamodb-table-1&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;attributeName&quot;</span><span class="p">:</span> <span class="s2">&quot;TimeToExist&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">write_capacity</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">dynamodb</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">attributes</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;TestTableHashKey&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">billing_mode</span><span class="o">=</span><span class="s2">&quot;PAY_PER_REQUEST&quot;</span><span class="p">,</span>
+    <span class="n">hash_key</span><span class="o">=</span><span class="s2">&quot;TestTableHashKey&quot;</span><span class="p">,</span>
+    <span class="n">replicas</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;regionName&quot;</span><span class="p">:</span> <span class="s2">&quot;us-east-2&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;regionName&quot;</span><span class="p">:</span> <span class="s2">&quot;us-west-2&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">stream_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">stream_view_type</span><span class="o">=</span><span class="s2">&quot;NEW_AND_OLD_IMAGES&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -540,6 +640,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_table</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">dynamodb</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="s2">&quot;exampleTable&quot;</span><span class="p">,</span>
+    <span class="n">attributes</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;exampleHashKey&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">hash_key</span><span class="o">=</span><span class="s2">&quot;exampleHashKey&quot;</span><span class="p">,</span>
+    <span class="n">read_capacity</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">write_capacity</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">example_table_item</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">dynamodb</span><span class="o">.</span><span class="n">TableItem</span><span class="p">(</span><span class="s2">&quot;exampleTableItem&quot;</span><span class="p">,</span>
+    <span class="n">hash_key</span><span class="o">=</span><span class="n">example_table</span><span class="o">.</span><span class="n">hash_key</span><span class="p">,</span>
+    <span class="n">item</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;exampleHashKey&quot;: {&quot;S&quot;: &quot;something&quot;},</span>
+<span class="s2">  &quot;one&quot;: {&quot;N&quot;: &quot;11111&quot;},</span>
+<span class="s2">  &quot;two&quot;: {&quot;N&quot;: &quot;22222&quot;},</span>
+<span class="s2">  &quot;three&quot;: {&quot;N&quot;: &quot;33333&quot;},</span>
+<span class="s2">  &quot;four&quot;: {&quot;N&quot;: &quot;44444&quot;}</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">table_name</span><span class="o">=</span><span class="n">example_table</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -641,6 +766,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.dynamodb.get_table">
 <code class="sig-prename descclassname">pulumi_aws.dynamodb.</code><code class="sig-name descname">get_table</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_side_encryption</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.get_table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a DynamoDB table.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">table_name</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">dynamodb</span><span class="o">.</span><span class="n">get_table</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;tableName&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the DynamoDB table.</p>

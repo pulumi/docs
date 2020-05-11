@@ -17,6 +17,89 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.appautoscaling.Policy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appautoscaling.</code><code class="sig-name descname">Policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scalable_dimension</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_namespace</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">step_scaling_policy_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_tracking_scaling_policy_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appautoscaling.Policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Application AutoScaling Policy resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">dynamodb_table_read_target</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appautoscaling</span><span class="o">.</span><span class="n">Target</span><span class="p">(</span><span class="s2">&quot;dynamodbTableReadTarget&quot;</span><span class="p">,</span>
+    <span class="n">max_capacity</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">min_capacity</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="s2">&quot;table/tableName&quot;</span><span class="p">,</span>
+    <span class="n">scalable_dimension</span><span class="o">=</span><span class="s2">&quot;dynamodb:table:ReadCapacityUnits&quot;</span><span class="p">,</span>
+    <span class="n">service_namespace</span><span class="o">=</span><span class="s2">&quot;dynamodb&quot;</span><span class="p">)</span>
+<span class="n">dynamodb_table_read_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appautoscaling</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;dynamodbTableReadPolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy_type</span><span class="o">=</span><span class="s2">&quot;TargetTrackingScaling&quot;</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">dynamodb_table_read_target</span><span class="o">.</span><span class="n">resource_id</span><span class="p">,</span>
+    <span class="n">scalable_dimension</span><span class="o">=</span><span class="n">dynamodb_table_read_target</span><span class="o">.</span><span class="n">scalable_dimension</span><span class="p">,</span>
+    <span class="n">service_namespace</span><span class="o">=</span><span class="n">dynamodb_table_read_target</span><span class="o">.</span><span class="n">service_namespace</span><span class="p">,</span>
+    <span class="n">target_tracking_scaling_policy_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;predefinedMetricSpecification&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;predefinedMetricType&quot;</span><span class="p">:</span> <span class="s2">&quot;DynamoDBReadCapacityUtilization&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;targetValue&quot;</span><span class="p">:</span> <span class="mi">70</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">ecs_target</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appautoscaling</span><span class="o">.</span><span class="n">Target</span><span class="p">(</span><span class="s2">&quot;ecsTarget&quot;</span><span class="p">,</span>
+    <span class="n">max_capacity</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">min_capacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="s2">&quot;service/clusterName/serviceName&quot;</span><span class="p">,</span>
+    <span class="n">scalable_dimension</span><span class="o">=</span><span class="s2">&quot;ecs:service:DesiredCount&quot;</span><span class="p">,</span>
+    <span class="n">service_namespace</span><span class="o">=</span><span class="s2">&quot;ecs&quot;</span><span class="p">)</span>
+<span class="n">ecs_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appautoscaling</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;ecsPolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy_type</span><span class="o">=</span><span class="s2">&quot;StepScaling&quot;</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">ecs_target</span><span class="o">.</span><span class="n">resource_id</span><span class="p">,</span>
+    <span class="n">scalable_dimension</span><span class="o">=</span><span class="n">ecs_target</span><span class="o">.</span><span class="n">scalable_dimension</span><span class="p">,</span>
+    <span class="n">service_namespace</span><span class="o">=</span><span class="n">ecs_target</span><span class="o">.</span><span class="n">service_namespace</span><span class="p">,</span>
+    <span class="n">step_scaling_policy_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;adjustmentType&quot;</span><span class="p">:</span> <span class="s2">&quot;ChangeInCapacity&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cooldown&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+        <span class="s2">&quot;metricAggregationType&quot;</span><span class="p">:</span> <span class="s2">&quot;Maximum&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;stepAdjustment&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;metricIntervalUpperBound&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;scalingAdjustment&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">ecs_service</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;ecsService&quot;</span><span class="p">,</span>
+    <span class="n">cluster</span><span class="o">=</span><span class="s2">&quot;clusterName&quot;</span><span class="p">,</span>
+    <span class="n">desired_count</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">lifecycle</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;ignoreChanges&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;desiredCount&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">task_definition</span><span class="o">=</span><span class="s2">&quot;taskDefinitionFamily:1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">replicas_target</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appautoscaling</span><span class="o">.</span><span class="n">Target</span><span class="p">(</span><span class="s2">&quot;replicasTarget&quot;</span><span class="p">,</span>
+    <span class="n">max_capacity</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span>
+    <span class="n">min_capacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;cluster:</span><span class="si">{</span><span class="n">aws_rds_cluster</span><span class="p">[</span><span class="s1">&#39;example&#39;</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">scalable_dimension</span><span class="o">=</span><span class="s2">&quot;rds:cluster:ReadReplicaCount&quot;</span><span class="p">,</span>
+    <span class="n">service_namespace</span><span class="o">=</span><span class="s2">&quot;rds&quot;</span><span class="p">)</span>
+<span class="n">replicas_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appautoscaling</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;replicasPolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy_type</span><span class="o">=</span><span class="s2">&quot;TargetTrackingScaling&quot;</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">replicas_target</span><span class="o">.</span><span class="n">resource_id</span><span class="p">,</span>
+    <span class="n">scalable_dimension</span><span class="o">=</span><span class="n">replicas_target</span><span class="o">.</span><span class="n">scalable_dimension</span><span class="p">,</span>
+    <span class="n">service_namespace</span><span class="o">=</span><span class="n">replicas_target</span><span class="o">.</span><span class="n">service_namespace</span><span class="p">,</span>
+    <span class="n">target_tracking_scaling_policy_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;predefinedMetricSpecification&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;predefinedMetricType&quot;</span><span class="p">:</span> <span class="s2">&quot;RDSReaderAverageCPUUtilization&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;scaleInCooldown&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+        <span class="s2">&quot;scaleOutCooldown&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+        <span class="s2">&quot;targetValue&quot;</span><span class="p">:</span> <span class="mi">75</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -273,6 +356,46 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appautoscaling.ScheduledAction">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appautoscaling.</code><code class="sig-name descname">ScheduledAction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scalable_dimension</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scalable_target_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_namespace</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appautoscaling.ScheduledAction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Application AutoScaling ScheduledAction resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">dynamodb_target</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appautoscaling</span><span class="o">.</span><span class="n">Target</span><span class="p">(</span><span class="s2">&quot;dynamodbTarget&quot;</span><span class="p">,</span>
+    <span class="n">max_capacity</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">min_capacity</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="s2">&quot;table/tableName&quot;</span><span class="p">,</span>
+    <span class="n">scalable_dimension</span><span class="o">=</span><span class="s2">&quot;dynamodb:table:ReadCapacityUnits&quot;</span><span class="p">,</span>
+    <span class="n">service_namespace</span><span class="o">=</span><span class="s2">&quot;dynamodb&quot;</span><span class="p">)</span>
+<span class="n">dynamodb_scheduled_action</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appautoscaling</span><span class="o">.</span><span class="n">ScheduledAction</span><span class="p">(</span><span class="s2">&quot;dynamodbScheduledAction&quot;</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">dynamodb_target</span><span class="o">.</span><span class="n">resource_id</span><span class="p">,</span>
+    <span class="n">scalable_dimension</span><span class="o">=</span><span class="n">dynamodb_target</span><span class="o">.</span><span class="n">scalable_dimension</span><span class="p">,</span>
+    <span class="n">scalable_target_action</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;maxCapacity&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;minCapacity&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">schedule</span><span class="o">=</span><span class="s2">&quot;at(2006-01-02T15:04:05)&quot;</span><span class="p">,</span>
+    <span class="n">service_namespace</span><span class="o">=</span><span class="n">dynamodb_target</span><span class="o">.</span><span class="n">service_namespace</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">ecs_target</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appautoscaling</span><span class="o">.</span><span class="n">Target</span><span class="p">(</span><span class="s2">&quot;ecsTarget&quot;</span><span class="p">,</span>
+    <span class="n">max_capacity</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">min_capacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="s2">&quot;service/clusterName/serviceName&quot;</span><span class="p">,</span>
+    <span class="n">scalable_dimension</span><span class="o">=</span><span class="s2">&quot;ecs:service:DesiredCount&quot;</span><span class="p">,</span>
+    <span class="n">service_namespace</span><span class="o">=</span><span class="s2">&quot;ecs&quot;</span><span class="p">)</span>
+<span class="n">ecs_scheduled_action</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appautoscaling</span><span class="o">.</span><span class="n">ScheduledAction</span><span class="p">(</span><span class="s2">&quot;ecsScheduledAction&quot;</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">ecs_target</span><span class="o">.</span><span class="n">resource_id</span><span class="p">,</span>
+    <span class="n">scalable_dimension</span><span class="o">=</span><span class="n">ecs_target</span><span class="o">.</span><span class="n">scalable_dimension</span><span class="p">,</span>
+    <span class="n">scalable_target_action</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;maxCapacity&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;minCapacity&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">schedule</span><span class="o">=</span><span class="s2">&quot;at(2006-01-02T15:04:05)&quot;</span><span class="p">,</span>
+    <span class="n">service_namespace</span><span class="o">=</span><span class="n">ecs_target</span><span class="o">.</span><span class="n">service_namespace</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -435,6 +558,50 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> The <a class="reference external" href="https://docs.aws.amazon.com/autoscaling/application/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-roles">Application Auto Scaling service automatically attempts to manage IAM Service-Linked Roles</a> when registering certain service namespaces for the first time. To manually manage this role, see the <cite>``iam.ServiceLinkedRole`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/iam_service_linked_role.html">https://www.terraform.io/docs/providers/aws/r/iam_service_linked_role.html</a>&gt;`_.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">dynamodb_table_read_target</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appautoscaling</span><span class="o">.</span><span class="n">Target</span><span class="p">(</span><span class="s2">&quot;dynamodbTableReadTarget&quot;</span><span class="p">,</span>
+    <span class="n">max_capacity</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">min_capacity</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;table/</span><span class="si">{</span><span class="n">aws_dynamodb_table</span><span class="p">[</span><span class="s1">&#39;example&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">scalable_dimension</span><span class="o">=</span><span class="s2">&quot;dynamodb:table:ReadCapacityUnits&quot;</span><span class="p">,</span>
+    <span class="n">service_namespace</span><span class="o">=</span><span class="s2">&quot;dynamodb&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">dynamodb_index_read_target</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appautoscaling</span><span class="o">.</span><span class="n">Target</span><span class="p">(</span><span class="s2">&quot;dynamodbIndexReadTarget&quot;</span><span class="p">,</span>
+    <span class="n">max_capacity</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">min_capacity</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;table/</span><span class="si">{</span><span class="n">aws_dynamodb_table</span><span class="p">[</span><span class="s1">&#39;example&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/index/</span><span class="si">{</span><span class="n">var</span><span class="p">[</span><span class="s1">&#39;index_name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">scalable_dimension</span><span class="o">=</span><span class="s2">&quot;dynamodb:index:ReadCapacityUnits&quot;</span><span class="p">,</span>
+    <span class="n">service_namespace</span><span class="o">=</span><span class="s2">&quot;dynamodb&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">ecs_target</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appautoscaling</span><span class="o">.</span><span class="n">Target</span><span class="p">(</span><span class="s2">&quot;ecsTarget&quot;</span><span class="p">,</span>
+    <span class="n">max_capacity</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">min_capacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;service/</span><span class="si">{</span><span class="n">aws_ecs_cluster</span><span class="p">[</span><span class="s1">&#39;example&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">aws_ecs_service</span><span class="p">[</span><span class="s1">&#39;example&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">scalable_dimension</span><span class="o">=</span><span class="s2">&quot;ecs:service:DesiredCount&quot;</span><span class="p">,</span>
+    <span class="n">service_namespace</span><span class="o">=</span><span class="s2">&quot;ecs&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">replicas</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appautoscaling</span><span class="o">.</span><span class="n">Target</span><span class="p">(</span><span class="s2">&quot;replicas&quot;</span><span class="p">,</span>
+    <span class="n">max_capacity</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span>
+    <span class="n">min_capacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;cluster:</span><span class="si">{</span><span class="n">aws_rds_cluster</span><span class="p">[</span><span class="s1">&#39;example&#39;</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">scalable_dimension</span><span class="o">=</span><span class="s2">&quot;rds:cluster:ReadReplicaCount&quot;</span><span class="p">,</span>
+    <span class="n">service_namespace</span><span class="o">=</span><span class="s2">&quot;rds&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

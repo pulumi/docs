@@ -17,6 +17,77 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.dlm.LifecyclePolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.dlm.</code><code class="sig-name descname">LifecyclePolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">execution_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_details</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dlm.LifecyclePolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html">Data Lifecycle Manager (DLM) lifecycle policy</a> for managing snapshots.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">dlm_lifecycle_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;dlmLifecycleRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;dlm.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Sid&quot;: &quot;&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">dlm_lifecycle</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicy</span><span class="p">(</span><span class="s2">&quot;dlmLifecycle&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">   &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">   &quot;Statement&quot;: [</span>
+<span class="s2">      {</span>
+<span class="s2">         &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">         &quot;Action&quot;: [</span>
+<span class="s2">            &quot;ec2:CreateSnapshot&quot;,</span>
+<span class="s2">            &quot;ec2:DeleteSnapshot&quot;,</span>
+<span class="s2">            &quot;ec2:DescribeVolumes&quot;,</span>
+<span class="s2">            &quot;ec2:DescribeSnapshots&quot;</span>
+<span class="s2">         ],</span>
+<span class="s2">         &quot;Resource&quot;: &quot;*&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      {</span>
+<span class="s2">         &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">         &quot;Action&quot;: [</span>
+<span class="s2">            &quot;ec2:CreateTags&quot;</span>
+<span class="s2">         ],</span>
+<span class="s2">         &quot;Resource&quot;: &quot;arn:aws:ec2:*::snapshot/*&quot;</span>
+<span class="s2">      }</span>
+<span class="s2">   ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">dlm_lifecycle_role</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">dlm</span><span class="o">.</span><span class="n">LifecyclePolicy</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;example DLM lifecycle policy&quot;</span><span class="p">,</span>
+    <span class="n">execution_role_arn</span><span class="o">=</span><span class="n">dlm_lifecycle_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">policy_details</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;resourceTypes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;VOLUME&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;schedule&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;copyTags&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s2">&quot;createRule&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;interval&quot;</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span>
+                <span class="s2">&quot;intervalUnit&quot;</span><span class="p">:</span> <span class="s2">&quot;HOURS&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;times&quot;</span><span class="p">:</span> <span class="s2">&quot;23:45&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;2 weeks of daily snapshots&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;retainRule&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;tagsToAdd&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;SnapshotCreator&quot;</span><span class="p">:</span> <span class="s2">&quot;DLM&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;targetTags&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;Snapshot&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">state</span><span class="o">=</span><span class="s2">&quot;ENABLED&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

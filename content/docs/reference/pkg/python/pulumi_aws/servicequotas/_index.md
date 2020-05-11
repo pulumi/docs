@@ -93,6 +93,15 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.servicequotas.ServiceQuota">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.servicequotas.</code><code class="sig-name descname">ServiceQuota</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">quota_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.ServiceQuota" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an individual Service Quota.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">servicequotas</span><span class="o">.</span><span class="n">ServiceQuota</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">quota_code</span><span class="o">=</span><span class="s2">&quot;L-F678F1CE&quot;</span><span class="p">,</span>
+    <span class="n">service_code</span><span class="o">=</span><span class="s2">&quot;vpc&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="mi">75</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -220,6 +229,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.servicequotas.get_service">
 <code class="sig-prename descclassname">pulumi_aws.servicequotas.</code><code class="sig-name descname">get_service</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.get_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a Service Quotas Service.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">servicequotas</span><span class="o">.</span><span class="n">get_service</span><span class="p">(</span><span class="n">service_name</span><span class="o">=</span><span class="s2">&quot;Amazon Virtual Private Cloud (Amazon VPC)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>service_name</strong> (<em>str</em>) – <p>Service name to lookup within Service Quotas. Available values can be found with the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-services.html">AWS CLI service-quotas list-services command</a>.</p>
@@ -232,6 +247,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.servicequotas.get_service_quota">
 <code class="sig-prename descclassname">pulumi_aws.servicequotas.</code><code class="sig-name descname">get_service_quota</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">quota_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">quota_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.get_service_quota" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a Service Quota.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">by_quota_code</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">servicequotas</span><span class="o">.</span><span class="n">get_service_quota</span><span class="p">(</span><span class="n">quota_code</span><span class="o">=</span><span class="s2">&quot;L-F678F1CE&quot;</span><span class="p">,</span>
+    <span class="n">service_code</span><span class="o">=</span><span class="s2">&quot;vpc&quot;</span><span class="p">)</span>
+<span class="n">by_quota_name</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">servicequotas</span><span class="o">.</span><span class="n">get_service_quota</span><span class="p">(</span><span class="n">quota_name</span><span class="o">=</span><span class="s2">&quot;VPCs per Region&quot;</span><span class="p">,</span>
+    <span class="n">service_code</span><span class="o">=</span><span class="s2">&quot;vpc&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

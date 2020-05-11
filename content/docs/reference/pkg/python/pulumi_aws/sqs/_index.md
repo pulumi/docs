@@ -51,7 +51,41 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py class">
 <dt id="pulumi_aws.sqs.Queue">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sqs.</code><code class="sig-name descname">Queue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_based_deduplication</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delay_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fifo_queue</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_data_key_reuse_period_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_master_key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_message_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message_retention_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">receive_wait_time_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redrive_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility_timeout_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sqs.Queue" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">queue</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sqs</span><span class="o">.</span><span class="n">Queue</span><span class="p">(</span><span class="s2">&quot;queue&quot;</span><span class="p">,</span>
+    <span class="n">delay_seconds</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span>
+    <span class="n">max_message_size</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span>
+    <span class="n">message_retention_seconds</span><span class="o">=</span><span class="mi">86400</span><span class="p">,</span>
+    <span class="n">receive_wait_time_seconds</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">redrive_policy</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span>
+        <span class="s2">&quot;deadLetterTargetArn&quot;</span><span class="p">:</span> <span class="n">aws_sqs_queue</span><span class="p">[</span><span class="s2">&quot;queue_deadletter&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;maxReceiveCount&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="p">}),</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;production&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">queue</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sqs</span><span class="o">.</span><span class="n">Queue</span><span class="p">(</span><span class="s2">&quot;queue&quot;</span><span class="p">,</span>
+    <span class="n">content_based_deduplication</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">fifo_queue</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">queue</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sqs</span><span class="o">.</span><span class="n">Queue</span><span class="p">(</span><span class="s2">&quot;queue&quot;</span><span class="p">,</span>
+    <span class="n">kms_data_key_reuse_period_seconds</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">kms_master_key_id</span><span class="o">=</span><span class="s2">&quot;alias/aws/sqs&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
@@ -242,6 +276,34 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sqs.</code><code class="sig-name descname">QueuePolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">queue_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sqs.QueuePolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to set a policy of an SQS Queue
 while referencing ARN of the queue within the policy.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">queue</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sqs</span><span class="o">.</span><span class="n">Queue</span><span class="p">(</span><span class="s2">&quot;queue&quot;</span><span class="p">)</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sqs</span><span class="o">.</span><span class="n">QueuePolicy</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="n">queue</span><span class="o">.</span><span class="n">arn</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">arn</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Id&quot;: &quot;sqspolicy&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">      &quot;Sid&quot;: &quot;First&quot;,</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: &quot;*&quot;,</span>
+<span class="s2">      &quot;Action&quot;: &quot;sqs:SendMessage&quot;,</span>
+<span class="s2">      &quot;Resource&quot;: &quot;</span><span class="si">{</span><span class="n">arn</span><span class="si">}</span><span class="s2">&quot;,</span>
+<span class="s2">      &quot;Condition&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">        &quot;ArnEquals&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">          &quot;aws:SourceArn&quot;: &quot;</span><span class="si">{</span><span class="n">aws_sns_topic</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="s2">        </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">      </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">    </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">  ]</span>
+<span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">),</span>
+    <span class="n">queue_url</span><span class="o">=</span><span class="n">queue</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -326,6 +388,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to get the ARN and URL of queue in AWS Simple Queue Service (SQS).
 By using this data source, you can reference SQS queues without having to hardcode
 the ARNs as input.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sqs</span><span class="o">.</span><span class="n">get_queue</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;queue&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

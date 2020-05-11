@@ -22,6 +22,12 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.glue.CatalogDatabase">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">CatalogDatabase</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">catalog_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.CatalogDatabase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Glue Catalog Database Resource. You can refer to the <a class="reference external" href="http://docs.aws.amazon.com/glue/latest/dg/populate-data-catalog.html">Glue Developer Guide</a> for a full explanation of the Glue Data Catalog functionality</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">glue</span><span class="o">.</span><span class="n">CatalogDatabase</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">CatalogDatabase</span><span class="p">(</span><span class="s2">&quot;awsGlueCatalogDatabase&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;MyCatalogDatabase&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -128,6 +134,64 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.CatalogTable">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">CatalogTable</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">catalog_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partition_keys</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_descriptor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">table_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">view_expanded_text</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">view_original_text</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.CatalogTable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Glue Catalog Table Resource. You can refer to the <a class="reference external" href="http://docs.aws.amazon.com/glue/latest/dg/populate-data-catalog.html">Glue Developer Guide</a> for a full explanation of the Glue Data Catalog functionality.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">glue</span><span class="o">.</span><span class="n">CatalogTable</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">CatalogTable</span><span class="p">(</span><span class="s2">&quot;awsGlueCatalogTable&quot;</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;MyCatalogDatabase&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;MyCatalogTable&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">glue</span><span class="o">.</span><span class="n">CatalogTable</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">CatalogTable</span><span class="p">(</span><span class="s2">&quot;awsGlueCatalogTable&quot;</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;MyCatalogDatabase&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;MyCatalogTable&quot;</span><span class="p">,</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;EXTERNAL&quot;</span><span class="p">:</span> <span class="s2">&quot;TRUE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;parquet.compression&quot;</span><span class="p">:</span> <span class="s2">&quot;SNAPPY&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">storage_descriptor</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;columns&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;my_string&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;my_double&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;double&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;my_date&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;my_bigint&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;bigint&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;my_struct&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;struct&lt;my_nested_string:string&gt;&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;inputFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;s3://my-bucket/event-streams/my-stream&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;outputFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;serDeInfo&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;my-stream&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;serialization.format&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;serializationLibrary&quot;</span><span class="p">:</span> <span class="s2">&quot;org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">table_type</span><span class="o">=</span><span class="s2">&quot;EXTERNAL_TABLE&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -425,6 +489,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> It is only valid to create one type of classifier (csv, grok, JSON, or XML). Changing classifier types will recreate the classifier.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">Classifier</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">csv_classifier</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;allowSingleColumn&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;containsHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;PRESENT&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;delimiter&quot;</span><span class="p">:</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;disableValueTrimming&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;header&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;example1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;example2&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;quoteSymbol&quot;</span><span class="p">:</span> <span class="s2">&quot;&#39;&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">Classifier</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">grok_classifier</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;classification&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;grokPattern&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">Classifier</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">json_classifier</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;jsonPath&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">Classifier</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">xml_classifier</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;classification&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rowTag&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -599,6 +705,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Connection">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Connection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">catalog_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_properties</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">match_criterias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">physical_connection_requirements</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Glue Connection resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">Connection</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">connection_properties</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;JDBC_CONNECTION_URL&quot;</span><span class="p">:</span> <span class="s2">&quot;jdbc:mysql://example.com/exampledatabase&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;PASSWORD&quot;</span><span class="p">:</span> <span class="s2">&quot;examplepassword&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;USERNAME&quot;</span><span class="p">:</span> <span class="s2">&quot;exampleusername&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">Connection</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">connection_properties</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;JDBC_CONNECTION_URL&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;jdbc:mysql://</span><span class="si">{</span><span class="n">aws_rds_cluster</span><span class="p">[</span><span class="s1">&#39;example&#39;</span><span class="p">][</span><span class="s1">&#39;endpoint&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/exampledatabase&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;PASSWORD&quot;</span><span class="p">:</span> <span class="s2">&quot;examplepassword&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;USERNAME&quot;</span><span class="p">:</span> <span class="s2">&quot;exampleusername&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">physical_connection_requirements</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;availabilityZone&quot;</span><span class="p">:</span> <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;availability_zone&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;securityGroupIdList&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">aws_security_group</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
+        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -606,7 +738,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>catalog_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Data Catalog in which to create the connection. If none is supplied, the AWS account ID is used by default.</p></li>
 <li><p><strong>connection_properties</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of key-value pairs used as parameters for this connection.</p></li>
-<li><p><strong>connection_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the connection. Supported are: <code class="docutils literal notranslate"><span class="pre">JDBC</span></code>, <code class="docutils literal notranslate"><span class="pre">MONGODB</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">JBDC</span></code>.</p></li>
+<li><p><strong>connection_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the connection. Supported are: <code class="docutils literal notranslate"><span class="pre">JDBC</span></code>, <code class="docutils literal notranslate"><span class="pre">MONGODB</span></code>, <code class="docutils literal notranslate"><span class="pre">KAFKA</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">JBDC</span></code>.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the connection.</p></li>
 <li><p><strong>match_criterias</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of criteria that can be used in selecting this connection.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the connection.</p></li>
@@ -635,7 +767,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.glue.Connection.connection_type">
 <code class="sig-name descname">connection_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Connection.connection_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of the connection. Supported are: <code class="docutils literal notranslate"><span class="pre">JDBC</span></code>, <code class="docutils literal notranslate"><span class="pre">MONGODB</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">JBDC</span></code>.</p>
+<dd><p>The type of the connection. Supported are: <code class="docutils literal notranslate"><span class="pre">JDBC</span></code>, <code class="docutils literal notranslate"><span class="pre">MONGODB</span></code>, <code class="docutils literal notranslate"><span class="pre">KAFKA</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">JBDC</span></code>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -680,7 +812,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>catalog_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Data Catalog in which to create the connection. If none is supplied, the AWS account ID is used by default.</p></li>
 <li><p><strong>connection_properties</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of key-value pairs used as parameters for this connection.</p></li>
-<li><p><strong>connection_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the connection. Supported are: <code class="docutils literal notranslate"><span class="pre">JDBC</span></code>, <code class="docutils literal notranslate"><span class="pre">MONGODB</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">JBDC</span></code>.</p></li>
+<li><p><strong>connection_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the connection. Supported are: <code class="docutils literal notranslate"><span class="pre">JDBC</span></code>, <code class="docutils literal notranslate"><span class="pre">MONGODB</span></code>, <code class="docutils literal notranslate"><span class="pre">KAFKA</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">JBDC</span></code>.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the connection.</p></li>
 <li><p><strong>match_criterias</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of criteria that can be used in selecting this connection.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the connection.</p></li>
@@ -738,6 +870,63 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Crawler">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Crawler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">catalog_targets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">classifiers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dynamodb_targets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">jdbc_targets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3_targets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schema_change_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">table_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Crawler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Glue Crawler. More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html">AWS Glue Developer Guide</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">Crawler</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="n">aws_glue_catalog_database</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">dynamodb_targets</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;table-name&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">Crawler</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="n">aws_glue_catalog_database</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">jdbc_targets</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;connectionName&quot;</span><span class="p">:</span> <span class="n">aws_glue_connection</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;database-name/%&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">Crawler</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="n">aws_glue_catalog_database</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">s3_targets</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;s3://</span><span class="si">{</span><span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s1">&#39;example&#39;</span><span class="p">][</span><span class="s1">&#39;bucket&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">Crawler</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">catalog_targets</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="n">aws_glue_catalog_database</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;tables&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">aws_glue_catalog_table</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">]],</span>
+    <span class="p">}],</span>
+    <span class="n">configuration</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;:1.0,</span>
+<span class="s2">  &quot;Grouping&quot;: {</span>
+<span class="s2">    &quot;TableGroupingPolicy&quot;: &quot;CombineCompatibleSchemas&quot;</span>
+<span class="s2">  }</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="n">aws_glue_catalog_database</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">schema_change_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;deleteBehavior&quot;</span><span class="p">:</span> <span class="s2">&quot;LOG&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1017,6 +1206,41 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p>Glue functionality, such as monitoring and logging of jobs, is typically managed with the <code class="docutils literal notranslate"><span class="pre">default_arguments</span></code> argument. See the <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-glue-arguments.html">Special Parameters Used by AWS Glue</a> topic in the Glue developer guide for additional information.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">Job</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">command</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;scriptLocation&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;s3://</span><span class="si">{</span><span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s1">&#39;example&#39;</span><span class="p">][</span><span class="s1">&#39;bucket&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/example.py&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">role_arn</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">Job</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">command</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;scriptLocation&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;s3://</span><span class="si">{</span><span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s1">&#39;example&#39;</span><span class="p">][</span><span class="s1">&#39;bucket&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/example.scala&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">default_arguments</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;--job-language&quot;</span><span class="p">:</span> <span class="s2">&quot;scala&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">role_arn</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_log_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">LogGroup</span><span class="p">(</span><span class="s2">&quot;exampleLogGroup&quot;</span><span class="p">,</span> <span class="n">retention_in_days</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">example_job</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">Job</span><span class="p">(</span><span class="s2">&quot;exampleJob&quot;</span><span class="p">,</span> <span class="n">default_arguments</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;--continuous-log-logGroup&quot;</span><span class="p">:</span> <span class="n">example_log_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="s2">&quot;--enable-continuous-cloudwatch-log&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--enable-continuous-log-filter&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--enable-metrics&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1268,6 +1492,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.SecurityConfiguration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">SecurityConfiguration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.SecurityConfiguration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Glue Security Configuration.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">SecurityConfiguration</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">encryption_configuration</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;cloudwatchEncryption&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;cloudwatchEncryptionMode&quot;</span><span class="p">:</span> <span class="s2">&quot;DISABLED&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;jobBookmarksEncryption&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;jobBookmarksEncryptionMode&quot;</span><span class="p">:</span> <span class="s2">&quot;DISABLED&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;s3Encryption&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;kmsKeyArn&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;kms.Key&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;s3EncryptionMode&quot;</span><span class="p">:</span> <span class="s2">&quot;SSE-KMS&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1412,6 +1653,75 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Trigger">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Trigger</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">predicate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workflow_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Trigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Glue Trigger resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">Trigger</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;jobName&quot;</span><span class="p">:</span> <span class="n">aws_glue_job</span><span class="p">[</span><span class="s2">&quot;example1&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">predicate</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;jobName&quot;</span><span class="p">:</span> <span class="n">aws_glue_job</span><span class="p">[</span><span class="s2">&quot;example2&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;SUCCEEDED&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">},</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;CONDITIONAL&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">Trigger</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;jobName&quot;</span><span class="p">:</span> <span class="n">aws_glue_job</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;ON_DEMAND&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">Trigger</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;jobName&quot;</span><span class="p">:</span> <span class="n">aws_glue_job</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">schedule</span><span class="o">=</span><span class="s2">&quot;cron(15 12 * * ? *)&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;SCHEDULED&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">Trigger</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;crawlerName&quot;</span><span class="p">:</span> <span class="n">aws_glue_crawler</span><span class="p">[</span><span class="s2">&quot;example1&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">predicate</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;jobName&quot;</span><span class="p">:</span> <span class="n">aws_glue_job</span><span class="p">[</span><span class="s2">&quot;example2&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;SUCCEEDED&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">},</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;CONDITIONAL&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">Trigger</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;jobName&quot;</span><span class="p">:</span> <span class="n">aws_glue_job</span><span class="p">[</span><span class="s2">&quot;example1&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">predicate</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;crawlState&quot;</span><span class="p">:</span> <span class="s2">&quot;SUCCEEDED&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;crawlerName&quot;</span><span class="p">:</span> <span class="n">aws_glue_crawler</span><span class="p">[</span><span class="s2">&quot;example2&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+        <span class="p">}],</span>
+    <span class="p">},</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;CONDITIONAL&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1619,6 +1929,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Glue Workflow resource.
 The workflow graph (DAG) can be build using the <code class="docutils literal notranslate"><span class="pre">glue.Trigger</span></code> resource. 
 See the example below for creating a graph with four nodes (two triggers and two jobs).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">Workflow</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+<span class="n">example_start</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">Trigger</span><span class="p">(</span><span class="s2">&quot;example-start&quot;</span><span class="p">,</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;jobName&quot;</span><span class="p">:</span> <span class="s2">&quot;example-job&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;ON_DEMAND&quot;</span><span class="p">,</span>
+    <span class="n">workflow_name</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_inner</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">Trigger</span><span class="p">(</span><span class="s2">&quot;example-inner&quot;</span><span class="p">,</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;jobName&quot;</span><span class="p">:</span> <span class="s2">&quot;another-example-job&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">predicate</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;jobName&quot;</span><span class="p">:</span> <span class="s2">&quot;example-job&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;SUCCEEDED&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">},</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;CONDITIONAL&quot;</span><span class="p">,</span>
+    <span class="n">workflow_name</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1709,6 +2043,184 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.get_script">
 <code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">get_script</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dag_edges</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dag_nodes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">language</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.get_script" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to generate a Glue script from a Directed Acyclic Graph (DAG).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">get_script</span><span class="p">(</span><span class="n">dag_edges</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;datasource0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;applymapping1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;applymapping1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;selectfields2&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;selectfields2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;resolvechoice3&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;resolvechoice3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;datasink4&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">dag_nodes</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;database&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;</span><span class="p">{</span><span class="n">aws_glue_catalog_database</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]}</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;table_name&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;</span><span class="p">{</span><span class="n">aws_glue_catalog_table</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]}</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;datasource0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;nodeType&quot;</span><span class="p">:</span> <span class="s2">&quot;DataSource&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;mapping&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;[(&quot;</span><span class="n">column1</span><span class="s2">&quot;, &quot;</span><span class="n">string</span><span class="s2">&quot;, &quot;</span><span class="n">column1</span><span class="s2">&quot;, &quot;</span><span class="n">string</span><span class="s2">&quot;)]&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;applymapping1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;nodeType&quot;</span><span class="p">:</span> <span class="s2">&quot;ApplyMapping&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;paths&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;[&quot;</span><span class="n">column1</span><span class="s2">&quot;]&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;selectfields2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;nodeType&quot;</span><span class="p">:</span> <span class="s2">&quot;SelectFields&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;choice&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="n">MATCH_CATALOG</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;database&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;</span><span class="p">{</span><span class="n">aws_glue_catalog_database</span><span class="p">[</span><span class="s1">&#39;destination&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]}</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;table_name&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;</span><span class="p">{</span><span class="n">aws_glue_catalog_table</span><span class="p">[</span><span class="s1">&#39;destination&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]}</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;resolvechoice3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;nodeType&quot;</span><span class="p">:</span> <span class="s2">&quot;ResolveChoice&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;database&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;</span><span class="p">{</span><span class="n">aws_glue_catalog_database</span><span class="p">[</span><span class="s1">&#39;destination&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]}</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;table_name&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;</span><span class="p">{</span><span class="n">aws_glue_catalog_table</span><span class="p">[</span><span class="s1">&#39;destination&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]}</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;datasink4&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;nodeType&quot;</span><span class="p">:</span> <span class="s2">&quot;DataSink&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">language</span><span class="o">=</span><span class="s2">&quot;PYTHON&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;pythonScript&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">python_script</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">get_script</span><span class="p">(</span><span class="n">dag_edges</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;datasource0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;applymapping1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;applymapping1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;selectfields2&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;selectfields2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;resolvechoice3&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;resolvechoice3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;datasink4&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">dag_nodes</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;database&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;</span><span class="p">{</span><span class="n">aws_glue_catalog_database</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]}</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;table_name&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;</span><span class="p">{</span><span class="n">aws_glue_catalog_table</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]}</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;datasource0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;nodeType&quot;</span><span class="p">:</span> <span class="s2">&quot;DataSource&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;mappings&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;[(&quot;</span><span class="n">column1</span><span class="s2">&quot;, &quot;</span><span class="n">string</span><span class="s2">&quot;, &quot;</span><span class="n">column1</span><span class="s2">&quot;, &quot;</span><span class="n">string</span><span class="s2">&quot;)]&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;applymapping1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;nodeType&quot;</span><span class="p">:</span> <span class="s2">&quot;ApplyMapping&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;paths&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;[&quot;</span><span class="n">column1</span><span class="s2">&quot;]&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;selectfields2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;nodeType&quot;</span><span class="p">:</span> <span class="s2">&quot;SelectFields&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;choice&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="n">MATCH_CATALOG</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;database&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;</span><span class="p">{</span><span class="n">aws_glue_catalog_database</span><span class="p">[</span><span class="s1">&#39;destination&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]}</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;table_name&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;</span><span class="p">{</span><span class="n">aws_glue_catalog_table</span><span class="p">[</span><span class="s1">&#39;destination&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]}</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;resolvechoice3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;nodeType&quot;</span><span class="p">:</span> <span class="s2">&quot;ResolveChoice&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;database&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;</span><span class="p">{</span><span class="n">aws_glue_catalog_database</span><span class="p">[</span><span class="s1">&#39;destination&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]}</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;table_name&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;</span><span class="p">{</span><span class="n">aws_glue_catalog_table</span><span class="p">[</span><span class="s1">&#39;destination&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]}</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;datasink4&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;nodeType&quot;</span><span class="p">:</span> <span class="s2">&quot;DataSink&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">language</span><span class="o">=</span><span class="s2">&quot;SCALA&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;scalaCode&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">scala_code</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

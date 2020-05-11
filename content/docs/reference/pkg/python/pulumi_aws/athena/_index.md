@@ -17,6 +17,15 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.athena.Database">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.athena.</code><code class="sig-name descname">Database</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.athena.Database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Athena database.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">hoge_bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;hogeBucket&quot;</span><span class="p">)</span>
+<span class="n">hoge_database</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">athena</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s2">&quot;hogeDatabase&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">hoge_bucket</span><span class="o">.</span><span class="n">bucket</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;database_name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -129,6 +138,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.athena.NamedQuery">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.athena.</code><code class="sig-name descname">NamedQuery</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">query</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workgroup</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.athena.NamedQuery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Athena Named Query resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">hoge_bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;hogeBucket&quot;</span><span class="p">)</span>
+<span class="n">test_key</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">Key</span><span class="p">(</span><span class="s2">&quot;testKey&quot;</span><span class="p">,</span>
+    <span class="n">deletion_window_in_days</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Athena KMS Key&quot;</span><span class="p">)</span>
+<span class="n">test_workgroup</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">athena</span><span class="o">.</span><span class="n">Workgroup</span><span class="p">(</span><span class="s2">&quot;testWorkgroup&quot;</span><span class="p">,</span> <span class="n">configuration</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;resultConfiguration&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;encryptionConfiguration&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;encryptionOption&quot;</span><span class="p">:</span> <span class="s2">&quot;SSE_KMS&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;kmsKeyArn&quot;</span><span class="p">:</span> <span class="n">test_key</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+<span class="p">})</span>
+<span class="n">hoge_database</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">athena</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s2">&quot;hogeDatabase&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">hoge_bucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;users&quot;</span><span class="p">)</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">athena</span><span class="o">.</span><span class="n">NamedQuery</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">database</span><span class="o">=</span><span class="n">hoge_database</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">query</span><span class="o">=</span><span class="n">hoge_database</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">name</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;SELECT * FROM </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> limit 10;&quot;</span><span class="p">),</span>
+    <span class="n">workgroup</span><span class="o">=</span><span class="n">test_workgroup</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -235,6 +268,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.athena.Workgroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.athena.</code><code class="sig-name descname">Workgroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.athena.Workgroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Athena Workgroup.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">athena</span><span class="o">.</span><span class="n">Workgroup</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">configuration</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;enforceWorkgroupConfiguration&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;publishCloudwatchMetricsEnabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;resultConfiguration&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;encryptionConfiguration&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;encryptionOption&quot;</span><span class="p">:</span> <span class="s2">&quot;SSE_KMS&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;kmsKeyArn&quot;</span><span class="p">:</span> <span class="n">aws_kms_key</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;outputLocation&quot;</span><span class="p">:</span> <span class="s2">&quot;s3://</span><span class="si">{aws_s3_bucket.example.bucket}</span><span class="s2">/output/&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

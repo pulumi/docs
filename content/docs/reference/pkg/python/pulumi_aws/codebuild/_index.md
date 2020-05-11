@@ -17,6 +17,181 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.codebuild.Project">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.codebuild.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">artifacts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">badge_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">build_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">environment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logs_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">queued_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secondary_artifacts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secondary_sources</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codebuild.Project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodeBuild Project resource. See also the <cite>``codebuild.Webhook`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/codebuild_webhook.html">https://www.terraform.io/docs/providers/aws/r/codebuild_webhook.html</a>&gt;`_, which manages the webhook to the source (e.g. the “rebuild every time a code change is pushed” option in the CodeBuild web console).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;exampleBucket&quot;</span><span class="p">,</span> <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">example_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;exampleRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;codebuild.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">example_role_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicy</span><span class="p">(</span><span class="s2">&quot;exampleRolePolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">example_bucket</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span> <span class="n">example_bucket</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">exampleBucketArn</span><span class="p">,</span> <span class="n">exampleBucketArn1</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Resource&quot;: [</span>
+<span class="s2">        &quot;*&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;logs:CreateLogGroup&quot;,</span>
+<span class="s2">        &quot;logs:CreateLogStream&quot;,</span>
+<span class="s2">        &quot;logs:PutLogEvents&quot;</span>
+<span class="s2">      ]</span>
+<span class="s2">    </span><span class="se">&#x7D;&#x7D;</span><span class="s2">,</span>
+<span class="s2">    </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;ec2:CreateNetworkInterface&quot;,</span>
+<span class="s2">        &quot;ec2:DescribeDhcpOptions&quot;,</span>
+<span class="s2">        &quot;ec2:DescribeNetworkInterfaces&quot;,</span>
+<span class="s2">        &quot;ec2:DeleteNetworkInterface&quot;,</span>
+<span class="s2">        &quot;ec2:DescribeSubnets&quot;,</span>
+<span class="s2">        &quot;ec2:DescribeSecurityGroups&quot;,</span>
+<span class="s2">        &quot;ec2:DescribeVpcs&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Resource&quot;: &quot;*&quot;</span>
+<span class="s2">    </span><span class="se">&#x7D;&#x7D;</span><span class="s2">,</span>
+<span class="s2">    </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;ec2:CreateNetworkInterfacePermission&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Resource&quot;: [</span>
+<span class="s2">        &quot;arn:aws:ec2:us-east-1:123456789012:network-interface/*&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Condition&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">        &quot;StringEquals&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">          &quot;ec2:Subnet&quot;: [</span>
+<span class="s2">            &quot;</span><span class="si">{</span><span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example1&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;,</span>
+<span class="s2">            &quot;</span><span class="si">{</span><span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example2&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="s2">          ],</span>
+<span class="s2">          &quot;ec2:AuthorizedService&quot;: &quot;codebuild.amazonaws.com&quot;</span>
+<span class="s2">        </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">      </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">    </span><span class="se">&#x7D;&#x7D;</span><span class="s2">,</span>
+<span class="s2">    </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;s3:*&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Resource&quot;: [</span>
+<span class="s2">        &quot;</span><span class="si">{</span><span class="n">example_bucket_arn</span><span class="si">}</span><span class="s2">&quot;,</span>
+<span class="s2">        &quot;</span><span class="si">{</span><span class="n">example_bucket_arn1</span><span class="si">}</span><span class="s2">/*&quot;</span>
+<span class="s2">      ]</span>
+<span class="s2">    </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">  ]</span>
+<span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">),</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">example_role</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_project</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codebuild</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;exampleProject&quot;</span><span class="p">,</span>
+    <span class="n">artifacts</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;NO_ARTIFACTS&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">build_timeout</span><span class="o">=</span><span class="s2">&quot;5&quot;</span><span class="p">,</span>
+    <span class="n">cache</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="n">example_bucket</span><span class="o">.</span><span class="n">bucket</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;S3&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;test_codebuild_project&quot;</span><span class="p">,</span>
+    <span class="n">environment</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;computeType&quot;</span><span class="p">:</span> <span class="s2">&quot;BUILD_GENERAL1_SMALL&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;environmentVariable&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SOME_KEY1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;SOME_VALUE1&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SOME_KEY2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PARAMETER_STORE&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;SOME_VALUE2&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;aws/codebuild/standard:1.0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;imagePullCredentialsType&quot;</span><span class="p">:</span> <span class="s2">&quot;CODEBUILD&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;LINUX_CONTAINER&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">logs_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;cloudwatchLogs&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;groupName&quot;</span><span class="p">:</span> <span class="s2">&quot;log-group&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;streamName&quot;</span><span class="p">:</span> <span class="s2">&quot;log-stream&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;s3Logs&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="n">example_bucket</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="nb">id</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s2">/build-log&quot;</span><span class="p">),</span>
+            <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ENABLED&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">service_role</span><span class="o">=</span><span class="n">example_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">source</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;gitCloneDepth&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;gitSubmodulesConfig&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;fetchSubmodules&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/mitchellh/packer.git&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;GITHUB&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">source_version</span><span class="o">=</span><span class="s2">&quot;master&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Test&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vpc_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;securityGroupIds&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="n">aws_security_group</span><span class="p">[</span><span class="s2">&quot;example1&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+            <span class="n">aws_security_group</span><span class="p">[</span><span class="s2">&quot;example2&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;subnets&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example1&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+            <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example2&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;vpcId&quot;</span><span class="p">:</span> <span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="p">})</span>
+<span class="n">project_with_cache</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codebuild</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;project-with-cache&quot;</span><span class="p">,</span>
+    <span class="n">artifacts</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;NO_ARTIFACTS&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">build_timeout</span><span class="o">=</span><span class="s2">&quot;5&quot;</span><span class="p">,</span>
+    <span class="n">cache</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;modes&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;LOCAL_DOCKER_LAYER_CACHE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;LOCAL_SOURCE_CACHE&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;LOCAL&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;test_codebuild_project_cache&quot;</span><span class="p">,</span>
+    <span class="n">environment</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;computeType&quot;</span><span class="p">:</span> <span class="s2">&quot;BUILD_GENERAL1_SMALL&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;environmentVariable&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SOME_KEY1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;SOME_VALUE1&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;aws/codebuild/standard:1.0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;imagePullCredentialsType&quot;</span><span class="p">:</span> <span class="s2">&quot;CODEBUILD&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;LINUX_CONTAINER&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">queued_timeout</span><span class="o">=</span><span class="s2">&quot;5&quot;</span><span class="p">,</span>
+    <span class="n">service_role</span><span class="o">=</span><span class="n">example_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">source</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;gitCloneDepth&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/mitchellh/packer.git&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;GITHUB&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Test&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -573,6 +748,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.codebuild.SourceCredential">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.codebuild.</code><code class="sig-name descname">SourceCredential</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auth_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codebuild.SourceCredential" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodeBuild Source Credentials Resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codebuild</span><span class="o">.</span><span class="n">SourceCredential</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">auth_type</span><span class="o">=</span><span class="s2">&quot;PERSONAL_ACCESS_TOKEN&quot;</span><span class="p">,</span>
+    <span class="n">server_type</span><span class="o">=</span><span class="s2">&quot;GITHUB&quot;</span><span class="p">,</span>
+    <span class="n">token</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codebuild</span><span class="o">.</span><span class="n">SourceCredential</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">auth_type</span><span class="o">=</span><span class="s2">&quot;BASIC_AUTH&quot;</span><span class="p">,</span>
+    <span class="n">server_type</span><span class="o">=</span><span class="s2">&quot;BITBUCKET&quot;</span><span class="p">,</span>
+    <span class="n">token</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">user_name</span><span class="o">=</span><span class="s2">&quot;test-user&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -678,6 +872,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.codebuild.Webhook">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.codebuild.</code><code class="sig-name descname">Webhook</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">branch_filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filter_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codebuild.Webhook" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a CodeBuild webhook, which is an endpoint accepted by the CodeBuild service to trigger builds from source code repositories. Depending on the source type of the CodeBuild project, the CodeBuild service may also automatically create and delete the actual repository webhook as well.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codebuild</span><span class="o">.</span><span class="n">Webhook</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">filter_groups</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;filter&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;pattern&quot;</span><span class="p">:</span> <span class="s2">&quot;PUSH&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;EVENT&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;pattern&quot;</span><span class="p">:</span> <span class="s2">&quot;master&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;HEAD_REF&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">project_name</span><span class="o">=</span><span class="n">aws_codebuild_project</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="n">example_webhook</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codebuild</span><span class="o">.</span><span class="n">Webhook</span><span class="p">(</span><span class="s2">&quot;exampleWebhook&quot;</span><span class="p">,</span> <span class="n">project_name</span><span class="o">=</span><span class="n">aws_codebuild_project</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+<span class="n">example_repository_webhook</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">RepositoryWebhook</span><span class="p">(</span><span class="s2">&quot;exampleRepositoryWebhook&quot;</span><span class="p">,</span>
+    <span class="n">active</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;contentType&quot;</span><span class="p">:</span> <span class="s2">&quot;json&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;insecureSsl&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;secret&quot;</span><span class="p">:</span> <span class="n">example_webhook</span><span class="o">.</span><span class="n">secret</span><span class="p">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">example_webhook</span><span class="o">.</span><span class="n">payload_url</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">events</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;push&quot;</span><span class="p">],</span>
+    <span class="n">repository</span><span class="o">=</span><span class="n">github_repository</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

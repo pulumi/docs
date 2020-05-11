@@ -33,6 +33,69 @@ For information about compute environment, see <a class="reference external" hre
 <div><p><strong>Note:</strong> To prevent a race condition during environment deletion, make sure to set <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> to the related <code class="docutils literal notranslate"><span class="pre">iam.RolePolicyAttachment</span></code>;
 otherwise, the policy may be destroyed too soon and the compute environment will then get stuck in the <code class="docutils literal notranslate"><span class="pre">DELETING</span></code> state, see <a class="reference external" href="http://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html">Troubleshooting AWS Batch</a> .</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">ecs_instance_role_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;ecsInstanceRoleRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">    &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">    &quot;Statement&quot;: [</span>
+<span class="s2">        {</span>
+<span class="s2">            &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">            &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">            &quot;Principal&quot;: {</span>
+<span class="s2">                &quot;Service&quot;: &quot;ec2.amazonaws.com&quot;</span>
+<span class="s2">            }</span>
+<span class="s2">        }</span>
+<span class="s2">    ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">ecs_instance_role_role_policy_attachment</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicyAttachment</span><span class="p">(</span><span class="s2">&quot;ecsInstanceRoleRolePolicyAttachment&quot;</span><span class="p">,</span>
+    <span class="n">policy_arn</span><span class="o">=</span><span class="s2">&quot;arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">ecs_instance_role_role</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">ecs_instance_role_instance_profile</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">InstanceProfile</span><span class="p">(</span><span class="s2">&quot;ecsInstanceRoleInstanceProfile&quot;</span><span class="p">,</span> <span class="n">role</span><span class="o">=</span><span class="n">ecs_instance_role_role</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">aws_batch_service_role_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;awsBatchServiceRoleRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">    &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">    &quot;Statement&quot;: [</span>
+<span class="s2">        {</span>
+<span class="s2">            &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">            &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">            &quot;Principal&quot;: {</span>
+<span class="s2">                &quot;Service&quot;: &quot;batch.amazonaws.com&quot;</span>
+<span class="s2">            }</span>
+<span class="s2">        }</span>
+<span class="s2">    ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">aws_batch_service_role_role_policy_attachment</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicyAttachment</span><span class="p">(</span><span class="s2">&quot;awsBatchServiceRoleRolePolicyAttachment&quot;</span><span class="p">,</span>
+    <span class="n">policy_arn</span><span class="o">=</span><span class="s2">&quot;arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">aws_batch_service_role_role</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">sample_security_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;sampleSecurityGroup&quot;</span><span class="p">,</span> <span class="n">egress</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;cidrBlocks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;-1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+<span class="p">}])</span>
+<span class="n">sample_vpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;sampleVpc&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.1.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">sample_subnet</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;sampleSubnet&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.1.1.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">sample_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">sample_compute_environment</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">batch</span><span class="o">.</span><span class="n">ComputeEnvironment</span><span class="p">(</span><span class="s2">&quot;sampleComputeEnvironment&quot;</span><span class="p">,</span>
+    <span class="n">compute_environment_name</span><span class="o">=</span><span class="s2">&quot;sample&quot;</span><span class="p">,</span>
+    <span class="n">compute_resources</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;instanceRole&quot;</span><span class="p">:</span> <span class="n">ecs_instance_role_instance_profile</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+        <span class="s2">&quot;instanceType&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;c4.large&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;maxVcpus&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+        <span class="s2">&quot;minVcpus&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;securityGroupIds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">sample_security_group</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+        <span class="s2">&quot;subnets&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">sample_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;EC2&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">service_role</span><span class="o">=</span><span class="n">aws_batch_service_role_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;MANAGED&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -355,6 +418,46 @@ of the job queue.</p>
 <dt id="pulumi_aws.batch.JobDefinition">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.batch.</code><code class="sig-name descname">JobDefinition</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_properties</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retry_strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.JobDefinition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Batch Job Definition resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">batch</span><span class="o">.</span><span class="n">JobDefinition</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">container_properties</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">        &quot;command&quot;: [&quot;ls&quot;, &quot;-la&quot;],</span>
+<span class="s2">        &quot;image&quot;: &quot;busybox&quot;,</span>
+<span class="s2">        &quot;memory&quot;: 1024,</span>
+<span class="s2">        &quot;vcpus&quot;: 1,</span>
+<span class="s2">        &quot;volumes&quot;: [</span>
+<span class="s2">      {</span>
+<span class="s2">        &quot;host&quot;: {</span>
+<span class="s2">          &quot;sourcePath&quot;: &quot;/tmp&quot;</span>
+<span class="s2">        },</span>
+<span class="s2">        &quot;name&quot;: &quot;tmp&quot;</span>
+<span class="s2">      }</span>
+<span class="s2">    ],</span>
+<span class="s2">        &quot;environment&quot;: [</span>
+<span class="s2">                {&quot;name&quot;: &quot;VARNAME&quot;, &quot;value&quot;: &quot;VARVAL&quot;}</span>
+<span class="s2">        ],</span>
+<span class="s2">        &quot;mountPoints&quot;: [</span>
+<span class="s2">                {</span>
+<span class="s2">          &quot;sourceVolume&quot;: &quot;tmp&quot;,</span>
+<span class="s2">          &quot;containerPath&quot;: &quot;/tmp&quot;,</span>
+<span class="s2">          &quot;readOnly&quot;: false</span>
+<span class="s2">        }</span>
+<span class="s2">        ],</span>
+<span class="s2">    &quot;ulimits&quot;: [</span>
+<span class="s2">      {</span>
+<span class="s2">        &quot;hardLimit&quot;: 1024,</span>
+<span class="s2">        &quot;name&quot;: &quot;nofile&quot;,</span>
+<span class="s2">        &quot;softLimit&quot;: 1024</span>
+<span class="s2">      }</span>
+<span class="s2">    ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;container&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -512,6 +615,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.batch.JobQueue">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.batch.</code><code class="sig-name descname">JobQueue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_environments</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.JobQueue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Batch Job Queue resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_queue</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">batch</span><span class="o">.</span><span class="n">JobQueue</span><span class="p">(</span><span class="s2">&quot;testQueue&quot;</span><span class="p">,</span>
+    <span class="n">compute_environments</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">aws_batch_compute_environment</span><span class="p">[</span><span class="s2">&quot;test_environment_1&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="n">aws_batch_compute_environment</span><span class="p">[</span><span class="s2">&quot;test_environment_2&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="p">],</span>
+    <span class="n">priority</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">state</span><span class="o">=</span><span class="s2">&quot;ENABLED&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -630,6 +745,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.batch.</code><code class="sig-name descname">get_compute_environment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">compute_environment_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.get_compute_environment" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Batch Compute Environment data source allows access to details of a specific
 compute environment within AWS Batch.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">batch_mongo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">batch</span><span class="o">.</span><span class="n">get_compute_environment</span><span class="p">(</span><span class="n">compute_environment_name</span><span class="o">=</span><span class="s2">&quot;batch-mongo-production&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>compute_environment_name</strong> (<em>str</em>) – The name of the Batch Compute Environment</p>
@@ -642,6 +763,12 @@ compute environment within AWS Batch.</p>
 <code class="sig-prename descclassname">pulumi_aws.batch.</code><code class="sig-name descname">get_job_queue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.get_job_queue" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Batch Job Queue data source allows access to details of a specific
 job queue within AWS Batch.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_queue</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">batch</span><span class="o">.</span><span class="n">get_job_queue</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;tf-test-batch-job-queue&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the job queue.</p>

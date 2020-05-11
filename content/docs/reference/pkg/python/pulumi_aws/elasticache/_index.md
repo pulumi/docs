@@ -37,6 +37,35 @@ place. You can use the <code class="docutils literal notranslate"><span class="p
 change immediately. Using <code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> can result in a brief downtime as the server reboots.
 See the AWS Docs on <a class="reference external" href="https://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Clusters.Modify.html">Modifying an ElastiCache Cache Cluster</a> for more information.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticache</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;memcached&quot;</span><span class="p">,</span>
+    <span class="n">node_type</span><span class="o">=</span><span class="s2">&quot;cache.m4.large&quot;</span><span class="p">,</span>
+    <span class="n">num_cache_nodes</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">parameter_group_name</span><span class="o">=</span><span class="s2">&quot;default.memcached1.4&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">11211</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticache</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;redis&quot;</span><span class="p">,</span>
+    <span class="n">engine_version</span><span class="o">=</span><span class="s2">&quot;3.2.10&quot;</span><span class="p">,</span>
+    <span class="n">node_type</span><span class="o">=</span><span class="s2">&quot;cache.m4.large&quot;</span><span class="p">,</span>
+    <span class="n">num_cache_nodes</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">parameter_group_name</span><span class="o">=</span><span class="s2">&quot;default.redis3.2&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">replica</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticache</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;replica&quot;</span><span class="p">,</span> <span class="n">replication_group_id</span><span class="o">=</span><span class="n">aws_elasticache_replication_group</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -618,6 +647,23 @@ begin taking a daily snapshot of the cache cluster.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Attempting to remove the <code class="docutils literal notranslate"><span class="pre">reserved-memory</span></code> parameter when <code class="docutils literal notranslate"><span class="pre">family</span></code> is set to <code class="docutils literal notranslate"><span class="pre">redis2.6</span></code> or <code class="docutils literal notranslate"><span class="pre">redis2.8</span></code> may show a perpetual difference in this provider due to an Elasticache API limitation. Leave that parameter configured with any value to workaround the issue.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticache</span><span class="o">.</span><span class="n">ParameterGroup</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">family</span><span class="o">=</span><span class="s2">&quot;redis2.8&quot;</span><span class="p">,</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;activerehashing&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;yes&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;min-slaves-to-write&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -741,6 +787,37 @@ actual modification has not yet taken place. You can use the
 immediately. Using <code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> can result in a brief downtime as
 servers reboots.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticache</span><span class="o">.</span><span class="n">ReplicationGroup</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">automatic_failover_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;us-west-2a&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;us-west-2b&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">node_type</span><span class="o">=</span><span class="s2">&quot;cache.m4.large&quot;</span><span class="p">,</span>
+    <span class="n">number_cache_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">parameter_group_name</span><span class="o">=</span><span class="s2">&quot;default.redis3.2&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">,</span>
+    <span class="n">replication_group_description</span><span class="o">=</span><span class="s2">&quot;test description&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">baz</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticache</span><span class="o">.</span><span class="n">ReplicationGroup</span><span class="p">(</span><span class="s2">&quot;baz&quot;</span><span class="p">,</span>
+    <span class="n">automatic_failover_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">cluster_mode</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;numNodeGroups&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;replicasPerNodeGroup&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">node_type</span><span class="o">=</span><span class="s2">&quot;cache.t2.small&quot;</span><span class="p">,</span>
+    <span class="n">parameter_group_name</span><span class="o">=</span><span class="s2">&quot;default.redis3.2.cluster.on&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">,</span>
+    <span class="n">replication_group_description</span><span class="o">=</span><span class="s2">&quot;test description&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1097,6 +1174,13 @@ clusters.</p>
 ElastiCache cluster <strong>outside</strong> of a VPC. If you are using a VPC, see the
 ElastiCache Subnet Group resource.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bar_security_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;barSecurityGroup&quot;</span><span class="p">)</span>
+<span class="n">bar_elasticache_security_group_security_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticache</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;barElasticache/securityGroupSecurityGroup&quot;</span><span class="p">,</span> <span class="n">security_group_names</span><span class="o">=</span><span class="p">[</span><span class="n">bar_security_group</span><span class="o">.</span><span class="n">name</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1195,6 +1279,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 ElastiCache cluster <strong>inside</strong> of a VPC. If you are on EC2 Classic, see the
 ElastiCache Security Group resource.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo_vpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;fooVpc&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-test&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">foo_subnet</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;fooSubnet&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="s2">&quot;us-west-2a&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-test&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">foo_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticache</span><span class="o">.</span><span class="n">SubnetGroup</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">subnet_ids</span><span class="o">=</span><span class="p">[</span><span class="n">foo_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1285,6 +1387,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elasticache.get_cluster">
 <code class="sig-prename descclassname">pulumi_aws.elasticache.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an Elasticache Cluster</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">my_cluster</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticache</span><span class="o">.</span><span class="n">get_cluster</span><span class="p">(</span><span class="n">cluster_id</span><span class="o">=</span><span class="s2">&quot;my-cluster-id&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1299,6 +1407,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elasticache.get_replication_group">
 <code class="sig-prename descclassname">pulumi_aws.elasticache.</code><code class="sig-name descname">get_replication_group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">replication_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.get_replication_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an Elasticache Replication Group.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticache</span><span class="o">.</span><span class="n">get_replication_group</span><span class="p">(</span><span class="n">replication_group_id</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>replication_group_id</strong> (<em>str</em>) – The identifier for the replication group.</p>

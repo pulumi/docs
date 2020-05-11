@@ -35,6 +35,25 @@ brief downtime as the broker reboots.</p>
 <p><strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">mq</span><span class="o">.</span><span class="n">Broker</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">broker_name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">aws_mq_configuration</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;revision&quot;</span><span class="p">:</span> <span class="n">aws_mq_configuration</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;latest_revision&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">engine_type</span><span class="o">=</span><span class="s2">&quot;ActiveMQ&quot;</span><span class="p">,</span>
+    <span class="n">engine_version</span><span class="o">=</span><span class="s2">&quot;5.15.0&quot;</span><span class="p">,</span>
+    <span class="n">host_instance_type</span><span class="o">=</span><span class="s2">&quot;mq.t2.micro&quot;</span><span class="p">,</span>
+    <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span><span class="n">aws_security_group</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
+    <span class="n">users</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;MindTheGap&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;ExampleUser&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -365,6 +384,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.mq.</code><code class="sig-name descname">Configuration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an MQ Configuration Resource.</p>
 <p>For more information on Amazon MQ, see <a class="reference external" href="https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/welcome.html">Amazon MQ documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">mq</span><span class="o">.</span><span class="n">Configuration</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;</span>
+<span class="s2">&lt;broker xmlns=&quot;http://activemq.apache.org/schema/core&quot;&gt;</span>
+<span class="s2">  &lt;plugins&gt;</span>
+<span class="s2">    &lt;forcePersistencyModeBrokerPlugin persistenceFlag=&quot;true&quot;/&gt;</span>
+<span class="s2">    &lt;statisticsBrokerPlugin/&gt;</span>
+<span class="s2">    &lt;timeStampingBrokerPlugin ttlCeiling=&quot;86400000&quot; zeroExpirationOverride=&quot;86400000&quot;/&gt;</span>
+<span class="s2">  &lt;/plugins&gt;</span>
+<span class="s2">&lt;/broker&gt;</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Example Configuration&quot;</span><span class="p">,</span>
+    <span class="n">engine_type</span><span class="o">=</span><span class="s2">&quot;ActiveMQ&quot;</span><span class="p">,</span>
+    <span class="n">engine_version</span><span class="o">=</span><span class="s2">&quot;5.15.0&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -512,6 +550,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.mq.get_broker">
 <code class="sig-prename descclassname">pulumi_aws.mq.</code><code class="sig-name descname">get_broker</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">broker_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">broker_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.get_broker" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a MQ Broker.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">broker_id</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;brokerId&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">broker_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">broker_id</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">broker_name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;brokerName&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">broker_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">broker_name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">by_id</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">mq</span><span class="o">.</span><span class="n">get_broker</span><span class="p">(</span><span class="n">broker_id</span><span class="o">=</span><span class="n">broker_id</span><span class="p">)</span>
+<span class="n">by_name</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">mq</span><span class="o">.</span><span class="n">get_broker</span><span class="p">(</span><span class="n">broker_name</span><span class="o">=</span><span class="n">broker_name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

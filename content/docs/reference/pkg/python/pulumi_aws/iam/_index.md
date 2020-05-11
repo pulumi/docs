@@ -17,6 +17,32 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.iam.AccessKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iam.</code><code class="sig-name descname">AccessKey</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pgp_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.AccessKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IAM access key. This is a set of credentials that allow API requests to be made as an IAM user.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">lb_user</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;lbUser&quot;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;/system/&quot;</span><span class="p">)</span>
+<span class="n">lb_access_key</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">AccessKey</span><span class="p">(</span><span class="s2">&quot;lbAccessKey&quot;</span><span class="p">,</span>
+    <span class="n">pgp_key</span><span class="o">=</span><span class="s2">&quot;keybase:some_person_that_exists&quot;</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="n">lb_user</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">lb_ro</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">UserPolicy</span><span class="p">(</span><span class="s2">&quot;lbRo&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;ec2:Describe*&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Resource&quot;: &quot;*&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="n">lb_user</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;secret&quot;</span><span class="p">,</span> <span class="n">lb_access_key</span><span class="o">.</span><span class="n">encrypted_secret</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -185,6 +211,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> There is only a single account alias per AWS account.</p>
 </div></blockquote>
 <p>Manages the account alias for the AWS Account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">alias</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">AccountAlias</span><span class="p">(</span><span class="s2">&quot;alias&quot;</span><span class="p">,</span> <span class="n">account_alias</span><span class="o">=</span><span class="s2">&quot;my-account-alias&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -264,6 +296,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>Manages Password Policy for the AWS Account.
 See more about <a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_account-policy.html">Account Password Policy</a>
 in the official AWS docs.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">strict</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">AccountPasswordPolicy</span><span class="p">(</span><span class="s2">&quot;strict&quot;</span><span class="p">,</span>
+    <span class="n">allow_users_to_change_password</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">minimum_password_length</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+    <span class="n">require_lowercase_characters</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">require_numbers</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">require_symbols</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">require_uppercase_characters</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -739,6 +783,12 @@ was created.</p>
 <dt id="pulumi_aws.iam.Group">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iam.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IAM group.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">developers</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;developers&quot;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;/users/&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -846,6 +896,20 @@ more information on managing IAM Groups or IAM Users, see <a class="reference ex
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iam.GroupMembership</span></code> will conflict with itself if used more than once with the same group. To non-exclusively manage the users in a group, see the
 [<code class="docutils literal notranslate"><span class="pre">iam.UserGroupMembership</span></code> resource][3].</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">)</span>
+<span class="n">user_one</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;userOne&quot;</span><span class="p">)</span>
+<span class="n">user_two</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;userTwo&quot;</span><span class="p">)</span>
+<span class="n">team</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">GroupMembership</span><span class="p">(</span><span class="s2">&quot;team&quot;</span><span class="p">,</span>
+    <span class="n">group</span><span class="o">=</span><span class="n">group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">users</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">user_one</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">user_two</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -936,6 +1000,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iam.GroupPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iam.</code><code class="sig-name descname">GroupPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GroupPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IAM policy attached to a group.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">my_developers</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;myDevelopers&quot;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;/users/&quot;</span><span class="p">)</span>
+<span class="n">my_developer_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">GroupPolicy</span><span class="p">(</span><span class="s2">&quot;myDeveloperPolicy&quot;</span><span class="p">,</span>
+    <span class="n">group</span><span class="o">=</span><span class="n">my_developers</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;ec2:Describe*&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Resource&quot;: &quot;*&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1043,6 +1129,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> The usage of this resource conflicts with the <code class="docutils literal notranslate"><span class="pre">iam.PolicyAttachment</span></code> resource and will permanently show a difference if both are defined.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">)</span>
+<span class="n">policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A test policy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="c1"># insert policy here</span>
+<span class="n">test_attach</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">GroupPolicyAttachment</span><span class="p">(</span><span class="s2">&quot;test-attach&quot;</span><span class="p">,</span>
+    <span class="n">group</span><span class="o">=</span><span class="n">group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">policy_arn</span><span class="o">=</span><span class="n">policy</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1125,6 +1224,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iam.InstanceProfile">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iam.</code><code class="sig-name descname">InstanceProfile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.InstanceProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IAM instance profile.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;role&quot;</span><span class="p">,</span>
+    <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">    &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">    &quot;Statement&quot;: [</span>
+<span class="s2">        {</span>
+<span class="s2">            &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">            &quot;Principal&quot;: {</span>
+<span class="s2">               &quot;Service&quot;: &quot;ec2.amazonaws.com&quot;</span>
+<span class="s2">            },</span>
+<span class="s2">            &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">            &quot;Sid&quot;: &quot;&quot;</span>
+<span class="s2">        }</span>
+<span class="s2">    ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">path</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="n">test_profile</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">InstanceProfile</span><span class="p">(</span><span class="s2">&quot;testProfile&quot;</span><span class="p">,</span> <span class="n">role</span><span class="o">=</span><span class="n">role</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1252,6 +1374,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iam.OpenIdConnectProvider">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iam.</code><code class="sig-name descname">OpenIdConnectProvider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id_lists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thumbprint_lists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.OpenIdConnectProvider" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IAM OpenID Connect provider.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">OpenIdConnectProvider</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">client_id_lists</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;266362248691-342342xasdasdasda-apps.googleusercontent.com&quot;</span><span class="p">],</span>
+    <span class="n">thumbprint_lists</span><span class="o">=</span><span class="p">[],</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://accounts.google.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1349,6 +1480,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iam.Policy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iam.</code><code class="sig-name descname">Policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.Policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IAM policy.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;My test policy&quot;</span><span class="p">,</span>
+    <span class="n">path</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;ec2:Describe*&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Resource&quot;: &quot;*&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1470,6 +1623,49 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> The usage of this resource conflicts with the <code class="docutils literal notranslate"><span class="pre">iam.GroupPolicyAttachment</span></code>, <code class="docutils literal notranslate"><span class="pre">iam.RolePolicyAttachment</span></code>, and <code class="docutils literal notranslate"><span class="pre">iam.UserPolicyAttachment</span></code> resources and will permanently show a difference if both are defined.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">user</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">)</span>
+<span class="n">role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;role&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;ec2.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Sid&quot;: &quot;&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">)</span>
+<span class="n">policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A test policy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;ec2:Describe*&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Resource&quot;: &quot;*&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">test_attach</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">PolicyAttachment</span><span class="p">(</span><span class="s2">&quot;test-attach&quot;</span><span class="p">,</span>
+    <span class="n">groups</span><span class="o">=</span><span class="p">[</span><span class="n">group</span><span class="o">.</span><span class="n">name</span><span class="p">],</span>
+    <span class="n">policy_arn</span><span class="o">=</span><span class="n">policy</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">roles</span><span class="o">=</span><span class="p">[</span><span class="n">role</span><span class="o">.</span><span class="n">name</span><span class="p">],</span>
+    <span class="n">users</span><span class="o">=</span><span class="p">[</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1579,6 +1775,45 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><em>NOTE:</em> If policies are attached to the role via the <cite>``iam.PolicyAttachment`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/iam_policy_attachment.html">https://www.terraform.io/docs/providers/aws/r/iam_policy_attachment.html</a>&gt;`_ and you are modifying the role <code class="docutils literal notranslate"><span class="pre">name</span></code> or <code class="docutils literal notranslate"><span class="pre">path</span></code>, the <code class="docutils literal notranslate"><span class="pre">force_detach_policies</span></code> argument must be set to <code class="docutils literal notranslate"><span class="pre">true</span></code> and applied before attempting the operation otherwise you will encounter a <code class="docutils literal notranslate"><span class="pre">DeleteConflict</span></code> error. The <cite>``iam.RolePolicyAttachment`</cite> resource (recommended) &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/iam_role_policy_attachment.html">https://www.terraform.io/docs/providers/aws/r/iam_role_policy_attachment.html</a>&gt;`_ does not have this requirement.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;testRole&quot;</span><span class="p">,</span>
+    <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;ec2.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Sid&quot;: &quot;&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tag-key&quot;</span><span class="p">:</span> <span class="s2">&quot;tag-value&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">instance_assume_role_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;sts:AssumeRole&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;principals&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;identifiers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ec2.amazonaws.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Service&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+<span class="p">}])</span>
+<span class="n">instance</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span>
+    <span class="n">assume_role_policy</span><span class="o">=</span><span class="n">instance_assume_role_policy</span><span class="o">.</span><span class="n">json</span><span class="p">,</span>
+    <span class="n">path</span><span class="o">=</span><span class="s2">&quot;/system/&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1743,6 +1978,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iam.RolePolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iam.</code><code class="sig-name descname">RolePolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.RolePolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IAM role inline policy.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;testRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;ec2.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Sid&quot;: &quot;&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">test_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicy</span><span class="p">(</span><span class="s2">&quot;testPolicy&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">test_role</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;ec2:Describe*&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Resource&quot;: &quot;*&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1850,6 +2119,45 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> The usage of this resource conflicts with the <code class="docutils literal notranslate"><span class="pre">iam.PolicyAttachment</span></code> resource and will permanently show a difference if both are defined.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;role&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;    {</span>
+<span class="s2">      &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">      &quot;Statement&quot;: [</span>
+<span class="s2">        {</span>
+<span class="s2">          &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">          &quot;Principal&quot;: {</span>
+<span class="s2">            &quot;Service&quot;: &quot;ec2.amazonaws.com&quot;</span>
+<span class="s2">          },</span>
+<span class="s2">          &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">          &quot;Sid&quot;: &quot;&quot;</span>
+<span class="s2">        }</span>
+<span class="s2">      ]</span>
+<span class="s2">    }</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A test policy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;ec2:Describe*&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Resource&quot;: &quot;*&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">test_attach</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicyAttachment</span><span class="p">(</span><span class="s2">&quot;test-attach&quot;</span><span class="p">,</span>
+    <span class="n">policy_arn</span><span class="o">=</span><span class="n">policy</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">role</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1932,6 +2240,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iam.SamlProvider">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iam.</code><code class="sig-name descname">SamlProvider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">saml_metadata_document</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.SamlProvider" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IAM SAML provider.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">SamlProvider</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">saml_metadata_document</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;saml-metadata.xml&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2041,6 +2355,14 @@ Certificates][2] in AWS Documentation.</p>
 <div><p><strong>Note:</strong> All arguments including the private key will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_cert</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">ServerCertificate</span><span class="p">(</span><span class="s2">&quot;testCert&quot;</span><span class="p">,</span>
+    <span class="n">certificate_body</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;self-ca-cert.pem&quot;</span><span class="p">),</span>
+    <span class="n">private_key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;test-key.pem&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2189,6 +2511,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iam.ServiceLinkedRole">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iam.</code><code class="sig-name descname">ServiceLinkedRole</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">aws_service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_suffix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.ServiceLinkedRole" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html">IAM service-linked role</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">elasticbeanstalk</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">ServiceLinkedRole</span><span class="p">(</span><span class="s2">&quot;elasticbeanstalk&quot;</span><span class="p">,</span> <span class="n">aws_service_name</span><span class="o">=</span><span class="s2">&quot;elasticbeanstalk.amazonaws.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2315,6 +2643,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iam.SshKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iam.</code><code class="sig-name descname">SshKey</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encoding</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.SshKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Uploads an SSH public key and associates it with the specified IAM user.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">user_user</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;userUser&quot;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="n">user_ssh_key</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">SshKey</span><span class="p">(</span><span class="s2">&quot;userSshKey&quot;</span><span class="p">,</span>
+    <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;SSH&quot;</span><span class="p">,</span>
+    <span class="n">public_key</span><span class="o">=</span><span class="s2">&quot;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD3F6tyPEFEzV0LX3X8BsXdMsQz1x2cEikKDEY0aIj41qgxMCP/iteneqXSIFZBp5vizPvaoIR3Um9xK7PGoW8giupGn+EPuxIA4cDM4vzOqOkiMPhz5XK0whEjkVzTo4+S0puvDZuwIsdiW9mxhJc7tgBNL0cYlWSYVkz4G/fslNfRPW5mYAM49f4fhtxPb5ok4Q2Lg9dPKVHO/Bgeu5woMc7RY0p1ej6D4CKFE6lymSDJpW0YHX/wqE9+cfEauh7xZcG0q9t2ta6F6fmX0agvpFyZo8aFbXeUBr7osSCJNgvavWbM/06niWrOvYX2xwWdhXmXSrbX8ZbabVohBK41 mytest@mydomain.com&quot;</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">user_user</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2430,6 +2768,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><em>NOTE:</em> If policies are attached to the user via the <cite>``iam.PolicyAttachment`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/iam_policy_attachment.html">https://www.terraform.io/docs/providers/aws/r/iam_policy_attachment.html</a>&gt;`_ and you are modifying the user <code class="docutils literal notranslate"><span class="pre">name</span></code> or <code class="docutils literal notranslate"><span class="pre">path</span></code>, the <code class="docutils literal notranslate"><span class="pre">force_destroy</span></code> argument must be set to <code class="docutils literal notranslate"><span class="pre">true</span></code> and applied before attempting the operation otherwise you will encounter a <code class="docutils literal notranslate"><span class="pre">DeleteConflict</span></code> error. The <cite>``iam.UserPolicyAttachment`</cite> resource (recommended) &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/iam_user_policy_attachment.html">https://www.terraform.io/docs/providers/aws/r/iam_user_policy_attachment.html</a>&gt;`_ does not have this requirement.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">lb_user</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;lbUser&quot;</span><span class="p">,</span>
+    <span class="n">path</span><span class="o">=</span><span class="s2">&quot;/system/&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tag-key&quot;</span><span class="p">:</span> <span class="s2">&quot;tag-value&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">lb_access_key</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">AccessKey</span><span class="p">(</span><span class="s2">&quot;lbAccessKey&quot;</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">lb_user</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">lb_ro</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">UserPolicy</span><span class="p">(</span><span class="s2">&quot;lbRo&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;ec2:Describe*&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Resource&quot;: &quot;*&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="n">lb_user</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2560,6 +2925,24 @@ resource can be used multiple times with the same user for non-overlapping
 groups.</p>
 <p>To exclusively manage the users in a group, see the
 [<code class="docutils literal notranslate"><span class="pre">iam.GroupMembership</span></code> resource][3].</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">user1</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;user1&quot;</span><span class="p">)</span>
+<span class="n">group1</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;group1&quot;</span><span class="p">)</span>
+<span class="n">group2</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;group2&quot;</span><span class="p">)</span>
+<span class="n">example1</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">UserGroupMembership</span><span class="p">(</span><span class="s2">&quot;example1&quot;</span><span class="p">,</span>
+    <span class="n">groups</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">group1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">group2</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">user</span><span class="o">=</span><span class="n">user1</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">group3</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;group3&quot;</span><span class="p">)</span>
+<span class="n">example2</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">UserGroupMembership</span><span class="p">(</span><span class="s2">&quot;example2&quot;</span><span class="p">,</span>
+    <span class="n">groups</span><span class="o">=</span><span class="p">[</span><span class="n">group3</span><span class="o">.</span><span class="n">name</span><span class="p">],</span>
+    <span class="n">user</span><span class="o">=</span><span class="n">user1</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2649,6 +3032,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p>To reset an IAM User login password via this provider, you can use delete and recreate this resource or change any of the arguments.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_user</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;exampleUser&quot;</span><span class="p">,</span>
+    <span class="n">force_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">path</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="n">example_user_login_profile</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">UserLoginProfile</span><span class="p">(</span><span class="s2">&quot;exampleUserLoginProfile&quot;</span><span class="p">,</span>
+    <span class="n">pgp_key</span><span class="o">=</span><span class="s2">&quot;keybase:some_person_that_exists&quot;</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="n">example_user</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;password&quot;</span><span class="p">,</span> <span class="n">example_user_login_profile</span><span class="o">.</span><span class="n">encrypted_password</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2761,6 +3156,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iam.UserPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iam.</code><code class="sig-name descname">UserPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.UserPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IAM policy attached to a user.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">lb_user</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;lbUser&quot;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;/system/&quot;</span><span class="p">)</span>
+<span class="n">lb_ro</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">UserPolicy</span><span class="p">(</span><span class="s2">&quot;lbRo&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;ec2:Describe*&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Resource&quot;: &quot;*&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="n">lb_user</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">lb_access_key</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">AccessKey</span><span class="p">(</span><span class="s2">&quot;lbAccessKey&quot;</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">lb_user</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2862,6 +3280,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> The usage of this resource conflicts with the <code class="docutils literal notranslate"><span class="pre">iam.PolicyAttachment</span></code> resource and will permanently show a difference if both are defined.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">user</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">)</span>
+<span class="n">policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A test policy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="c1"># insert policy here</span>
+<span class="n">test_attach</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">UserPolicyAttachment</span><span class="p">(</span><span class="s2">&quot;test-attach&quot;</span><span class="p">,</span>
+    <span class="n">policy_arn</span><span class="o">=</span><span class="n">policy</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2945,6 +3376,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.iam.</code><code class="sig-name descname">get_account_alias</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_account_alias" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IAM Account Alias data source allows access to the account alias
 for the effective account in which this provider is working.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">current</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_account_alias</span><span class="p">()</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;accountId&quot;</span><span class="p">,</span> <span class="n">current</span><span class="o">.</span><span class="n">account_alias</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py function">
@@ -2953,6 +3391,12 @@ for the effective account in which this provider is working.</p>
 <dd><p>This data source can be used to fetch information about a specific
 IAM group. By using this data source, you can reference IAM group
 properties without having to hard code ARNs as input.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="n">group_name</span><span class="o">=</span><span class="s2">&quot;an_example_group_name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>group_name</strong> (<em>str</em>) – The friendly IAM group name to match.</p>
@@ -2966,6 +3410,12 @@ properties without having to hard code ARNs as input.</p>
 <dd><p>This data source can be used to fetch information about a specific
 IAM instance profile. By using this data source, you can reference IAM
 instance profile properties without having to hard code ARNs as input.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_instance_profile</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;an_example_instance_profile_name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The friendly IAM instance profile name to match.</p>
@@ -2978,6 +3428,12 @@ instance profile properties without having to hard code ARNs as input.</p>
 <code class="sig-prename descclassname">pulumi_aws.iam.</code><code class="sig-name descname">get_policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source can be used to fetch information about a specific
 IAM policy.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy</span><span class="p">(</span><span class="n">arn</span><span class="o">=</span><span class="s2">&quot;arn:aws:iam::123456789012:policy/UsersManageOwnCredentials&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>arn</strong> (<em>str</em>) – ARN of the IAM policy.</p>
@@ -2992,6 +3448,44 @@ IAM policy.</p>
 <p>This is a data source which can be used to construct a JSON representation of
 an IAM policy document, for use with resources which expect policy documents,
 such as the <code class="docutils literal notranslate"><span class="pre">iam.Policy</span></code> resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_policy_document</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;s3:ListAllMyBuckets&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;s3:GetBucketLocation&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;arn:aws:s3:::*&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;sid&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;s3:ListBucket&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;condition&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;test&quot;</span><span class="p">:</span> <span class="s2">&quot;StringLike&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;home/&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;home/&amp;{aws:username}/&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;variable&quot;</span><span class="p">:</span> <span class="s2">&quot;s3:prefix&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;arn:aws:s3:::</span><span class="si">{</span><span class="n">var</span><span class="p">[</span><span class="s1">&#39;s3_bucket_name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;s3:*&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="sa">f</span><span class="s2">&quot;arn:aws:s3:::</span><span class="si">{</span><span class="n">var</span><span class="p">[</span><span class="s1">&#39;s3_bucket_name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/home/&amp;</span><span class="se">&#x7B;&#x7B;</span><span class="s2">aws:username</span><span class="se">&#x7D;&#x7D;</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;arn:aws:s3:::</span><span class="si">{</span><span class="n">var</span><span class="p">[</span><span class="s1">&#39;s3_bucket_name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/home/&amp;</span><span class="se">&#x7B;&#x7B;</span><span class="s2">aws:username</span><span class="se">&#x7D;&#x7D;</span><span class="s2">/*&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">},</span>
+<span class="p">])</span>
+<span class="n">example_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;examplePolicy&quot;</span><span class="p">,</span>
+    <span class="n">path</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="n">example_policy_document</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Using this data source to generate policy documents is <em>optional</em>. It is also
 valid to use literal JSON strings within your configuration, or to use the
 <code class="docutils literal notranslate"><span class="pre">file</span></code> interpolation function to read a raw JSON policy document from a file.</p>
@@ -3007,6 +3501,102 @@ states that <code class="docutils literal notranslate"><span class="pre">&quot;P
 those principals have different behavior for IAM Role Trust Policy. Therefore
 this provider will normalize the principal field only in above-mentioned case and principals
 like <code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">=</span> <span class="pre">&quot;AWS&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">identifiers</span> <span class="pre">=</span> <span class="pre">[&quot;*&quot;]</span></code> will be rendered as <code class="docutils literal notranslate"><span class="pre">&quot;Principal&quot;:</span> <span class="pre">{&quot;AWS&quot;:</span> <span class="pre">&quot;*&quot;}</span></code>.</p>
+<p>Showing how you can use this as an assume role policy as well as showing how you can specify multiple principal blocks with different types.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">event_stream_bucket_role_assume_role_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;sts:AssumeRole&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;principals&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;identifiers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;firehose.amazonaws.com&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Service&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;identifiers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;trusted_role_arn&quot;</span><span class="p">]],</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
+<p>Showing how you can use <code class="docutils literal notranslate"><span class="pre">source_json</span></code> and <code class="docutils literal notranslate"><span class="pre">override_json</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">source</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ec2:*&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;s3:*&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;sid&quot;</span><span class="p">:</span> <span class="s2">&quot;SidToOverwrite&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">])</span>
+<span class="n">source_json_example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">source_json</span><span class="o">=</span><span class="n">source</span><span class="o">.</span><span class="n">json</span><span class="p">,</span>
+    <span class="n">statements</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;s3:*&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;arn:aws:s3:::somebucket&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;arn:aws:s3:::somebucket/*&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;sid&quot;</span><span class="p">:</span> <span class="s2">&quot;SidToOverwrite&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">override</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;s3:*&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;sid&quot;</span><span class="p">:</span> <span class="s2">&quot;SidToOverwrite&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+<span class="n">override_json_example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">override_json</span><span class="o">=</span><span class="n">override</span><span class="o">.</span><span class="n">json</span><span class="p">,</span>
+    <span class="n">statements</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ec2:*&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;s3:*&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;arn:aws:s3:::somebucket&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;arn:aws:s3:::somebucket/*&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;sid&quot;</span><span class="p">:</span> <span class="s2">&quot;SidToOverwrite&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">data.aws_iam_policy_document.source_json_example.json</span></code> will evaluate to:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">data.aws_iam_policy_document.override_json_example.json</span></code> will evaluate to:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p>You can also combine <code class="docutils literal notranslate"><span class="pre">source_json</span></code> and <code class="docutils literal notranslate"><span class="pre">override_json</span></code> in the same document.</p>
+<p>Use without a <code class="docutils literal notranslate"><span class="pre">statement</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">source</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ec2:DescribeAccountAttributes&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;sid&quot;</span><span class="p">:</span> <span class="s2">&quot;OverridePlaceholder&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+<span class="n">override</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;s3:GetObject&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;sid&quot;</span><span class="p">:</span> <span class="s2">&quot;OverridePlaceholder&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+<span class="n">politik</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">override_json</span><span class="o">=</span><span class="n">override</span><span class="o">.</span><span class="n">json</span><span class="p">,</span>
+    <span class="n">source_json</span><span class="o">=</span><span class="n">source</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">data.aws_iam_policy_document.politik.json</span></code> will evaluate to:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3082,6 +3672,12 @@ to. This is required by AWS if used for an IAM policy.</p></li>
 <dd><p>This data source can be used to fetch information about a specific
 IAM role. By using this data source, you can reference IAM role
 properties without having to hard code ARNs as input.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_role</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;an_example_role_name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3096,6 +3692,20 @@ properties without having to hard code ARNs as input.</p>
 <dt id="pulumi_aws.iam.get_server_certificate">
 <code class="sig-prename descclassname">pulumi_aws.iam.</code><code class="sig-name descname">get_server_certificate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">latest</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_server_certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to lookup information about IAM Server Certificates.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">my_domain</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_server_certificate</span><span class="p">(</span><span class="n">latest</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">name_prefix</span><span class="o">=</span><span class="s2">&quot;my-domain.org&quot;</span><span class="p">)</span>
+<span class="n">elb</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;elb&quot;</span><span class="p">,</span> <span class="n">listeners</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;instancePort&quot;</span><span class="p">:</span> <span class="mi">8000</span><span class="p">,</span>
+    <span class="s2">&quot;instanceProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;https&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;lbPort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+    <span class="s2">&quot;lbProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;https&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sslCertificateId&quot;</span><span class="p">:</span> <span class="n">my_domain</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
 <p>The import function will read in certificate body, certificate chain (if it exists), id, name, path, and arn. 
 It will not retrieve the private key which is not available through the AWS API.</p>
 <dl class="field-list simple">
@@ -3116,6 +3726,12 @@ It will not retrieve the private key which is not available through the AWS API.
 <dd><p>This data source can be used to fetch information about a specific
 IAM user. By using this data source, you can reference IAM user
 properties without having to hard code ARNs or unique IDs as input.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="n">user_name</span><span class="o">=</span><span class="s2">&quot;an_example_user_name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>user_name</strong> (<em>str</em>) – The friendly IAM user name to match.</p>

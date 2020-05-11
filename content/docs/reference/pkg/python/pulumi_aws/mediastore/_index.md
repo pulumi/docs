@@ -17,6 +17,12 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.mediastore.Container">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.mediastore.</code><code class="sig-name descname">Container</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mediastore.Container" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a MediaStore Container.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">mediastore</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -113,6 +119,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.mediastore.ContainerPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.mediastore.</code><code class="sig-name descname">ContainerPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mediastore.ContainerPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a MediaStore Container Policy.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">current_region</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_region</span><span class="p">()</span>
+<span class="n">current_caller_identity</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_caller_identity</span><span class="p">()</span>
+<span class="n">example_container</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">mediastore</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">)</span>
+<span class="n">example_container_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">mediastore</span><span class="o">.</span><span class="n">ContainerPolicy</span><span class="p">(</span><span class="s2">&quot;exampleContainerPolicy&quot;</span><span class="p">,</span>
+    <span class="n">container_name</span><span class="o">=</span><span class="n">example_container</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="n">example_container</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">name</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">        &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">        &quot;Statement&quot;: [</span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">                &quot;Sid&quot;: &quot;MediaStoreFullAccess&quot;,</span>
+<span class="s2">                &quot;Action&quot;: [ &quot;mediastore:*&quot; ],</span>
+<span class="s2">                &quot;Principal&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2">&quot;AWS&quot; : &quot;arn:aws:iam::</span><span class="si">{</span><span class="n">current_caller_identity</span><span class="o">.</span><span class="n">account_id</span><span class="si">}</span><span class="s2">:root&quot;</span><span class="se">&#x7D;&#x7D;</span><span class="s2">,</span>
+<span class="s2">                &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">                &quot;Resource&quot;: &quot;arn:aws:mediastore:</span><span class="si">{</span><span class="n">current_caller_identity</span><span class="o">.</span><span class="n">account_id</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">current_region</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">:container/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">/*&quot;,</span>
+<span class="s2">                &quot;Condition&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">                        &quot;Bool&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"> &quot;aws:SecureTransport&quot;: &quot;true&quot; </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">                </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">        </span><span class="se">&#x7D;&#x7D;</span><span class="s2">]</span>
+<span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

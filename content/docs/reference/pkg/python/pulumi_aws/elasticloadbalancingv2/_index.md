@@ -71,6 +71,115 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">alb.Listener</span></code> is known as <code class="docutils literal notranslate"><span class="pre">lb.Listener</span></code>. The functionality is identical.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">front_end_load_balancer</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;frontEndLoadBalancer&quot;</span><span class="p">)</span>
+<span class="n">front_end_target_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">TargetGroup</span><span class="p">(</span><span class="s2">&quot;frontEndTargetGroup&quot;</span><span class="p">)</span>
+<span class="n">front_end_listener</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="s2">&quot;frontEndListener&quot;</span><span class="p">,</span>
+    <span class="n">certificate_arn</span><span class="o">=</span><span class="s2">&quot;arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4&quot;</span><span class="p">,</span>
+    <span class="n">default_actions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;targetGroupArn&quot;</span><span class="p">:</span> <span class="n">front_end_target_group</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;forward&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">load_balancer_arn</span><span class="o">=</span><span class="n">front_end_load_balancer</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="s2">&quot;443&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTPS&quot;</span><span class="p">,</span>
+    <span class="n">ssl_policy</span><span class="o">=</span><span class="s2">&quot;ELBSecurityPolicy-2016-08&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">front_end_load_balancer</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;frontEndLoadBalancer&quot;</span><span class="p">)</span>
+<span class="n">front_end_listener</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="s2">&quot;frontEndListener&quot;</span><span class="p">,</span>
+    <span class="n">default_actions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;redirect&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;HTTPS&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;statusCode&quot;</span><span class="p">:</span> <span class="s2">&quot;HTTP_301&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;redirect&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">load_balancer_arn</span><span class="o">=</span><span class="n">front_end_load_balancer</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="s2">&quot;80&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">front_end_load_balancer</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;frontEndLoadBalancer&quot;</span><span class="p">)</span>
+<span class="n">front_end_listener</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="s2">&quot;frontEndListener&quot;</span><span class="p">,</span>
+    <span class="n">default_actions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;fixedResponse&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;contentType&quot;</span><span class="p">:</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;messageBody&quot;</span><span class="p">:</span> <span class="s2">&quot;Fixed response content&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;statusCode&quot;</span><span class="p">:</span> <span class="s2">&quot;200&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;fixed-response&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">load_balancer_arn</span><span class="o">=</span><span class="n">front_end_load_balancer</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="s2">&quot;80&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">front_end_load_balancer</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;frontEndLoadBalancer&quot;</span><span class="p">)</span>
+<span class="n">front_end_target_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">TargetGroup</span><span class="p">(</span><span class="s2">&quot;frontEndTargetGroup&quot;</span><span class="p">)</span>
+<span class="n">pool</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserPool</span><span class="p">(</span><span class="s2">&quot;pool&quot;</span><span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserPoolClient</span><span class="p">(</span><span class="s2">&quot;client&quot;</span><span class="p">)</span>
+<span class="n">domain</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserPoolDomain</span><span class="p">(</span><span class="s2">&quot;domain&quot;</span><span class="p">)</span>
+<span class="n">front_end_listener</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="s2">&quot;frontEndListener&quot;</span><span class="p">,</span>
+    <span class="n">default_actions</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;authenticateCognito&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;userPoolArn&quot;</span><span class="p">:</span> <span class="n">pool</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+                <span class="s2">&quot;userPoolClientId&quot;</span><span class="p">:</span> <span class="n">client</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                <span class="s2">&quot;userPoolDomain&quot;</span><span class="p">:</span> <span class="n">domain</span><span class="o">.</span><span class="n">domain</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;authenticate-cognito&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;targetGroupArn&quot;</span><span class="p">:</span> <span class="n">front_end_target_group</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;forward&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">load_balancer_arn</span><span class="o">=</span><span class="n">front_end_load_balancer</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="s2">&quot;80&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">front_end_load_balancer</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;frontEndLoadBalancer&quot;</span><span class="p">)</span>
+<span class="n">front_end_target_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">TargetGroup</span><span class="p">(</span><span class="s2">&quot;frontEndTargetGroup&quot;</span><span class="p">)</span>
+<span class="n">front_end_listener</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="s2">&quot;frontEndListener&quot;</span><span class="p">,</span>
+    <span class="n">default_actions</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;authenticateOidc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;authorizationEndpoint&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com/authorization_endpoint&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;clientId&quot;</span><span class="p">:</span> <span class="s2">&quot;client_id&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;clientSecret&quot;</span><span class="p">:</span> <span class="s2">&quot;client_secret&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;issuer&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;tokenEndpoint&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com/token_endpoint&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;userInfoEndpoint&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com/user_info_endpoint&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;authenticate-oidc&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;targetGroupArn&quot;</span><span class="p">:</span> <span class="n">front_end_target_group</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;forward&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">load_balancer_arn</span><span class="o">=</span><span class="n">front_end_load_balancer</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="s2">&quot;80&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Deprecated: aws.elasticloadbalancingv2.Listener has been deprecated in favour of aws.lb.Listener</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -346,6 +455,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">alb.ListenerCertificate</span></code> is known as <code class="docutils literal notranslate"><span class="pre">lb.ListenerCertificate</span></code>. The functionality is identical.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_certificate</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">acm</span><span class="o">.</span><span class="n">Certificate</span><span class="p">(</span><span class="s2">&quot;exampleCertificate&quot;</span><span class="p">)</span>
+<span class="n">front_end_load_balancer</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;frontEndLoadBalancer&quot;</span><span class="p">)</span>
+<span class="n">front_end_listener</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="s2">&quot;frontEndListener&quot;</span><span class="p">)</span>
+<span class="n">example_listener_certificate</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">ListenerCertificate</span><span class="p">(</span><span class="s2">&quot;exampleListenerCertificate&quot;</span><span class="p">,</span>
+    <span class="n">certificate_arn</span><span class="o">=</span><span class="n">example_certificate</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">listener_arn</span><span class="o">=</span><span class="n">front_end_listener</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Deprecated: aws.elasticloadbalancingv2.ListenerCertificate has been deprecated in favour of aws.lb.ListenerCertificate</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -432,6 +552,103 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">alb.ListenerRule</span></code> is known as <code class="docutils literal notranslate"><span class="pre">lb.ListenerRule</span></code>. The functionality is identical.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">front_end_load_balancer</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;frontEndLoadBalancer&quot;</span><span class="p">)</span>
+<span class="n">front_end_listener</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="s2">&quot;frontEndListener&quot;</span><span class="p">)</span>
+<span class="n">static</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">ListenerRule</span><span class="p">(</span><span class="s2">&quot;static&quot;</span><span class="p">,</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;targetGroupArn&quot;</span><span class="p">:</span> <span class="n">aws_lb_target_group</span><span class="p">[</span><span class="s2">&quot;static&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;forward&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">conditions</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;pathPattern&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/static/*&quot;</span><span class="p">],</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;hostHeader&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;example.com&quot;</span><span class="p">],</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">listener_arn</span><span class="o">=</span><span class="n">front_end_listener</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">priority</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">host_based_routing</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">ListenerRule</span><span class="p">(</span><span class="s2">&quot;hostBasedRouting&quot;</span><span class="p">,</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;targetGroupArn&quot;</span><span class="p">:</span> <span class="n">aws_lb_target_group</span><span class="p">[</span><span class="s2">&quot;static&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;forward&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">conditions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;hostHeader&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;my-service.*.mydomain.io&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">}],</span>
+    <span class="n">listener_arn</span><span class="o">=</span><span class="n">front_end_listener</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">priority</span><span class="o">=</span><span class="mi">99</span><span class="p">)</span>
+<span class="n">redirect_http_to_https</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">ListenerRule</span><span class="p">(</span><span class="s2">&quot;redirectHttpToHttps&quot;</span><span class="p">,</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;redirect&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;HTTPS&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;statusCode&quot;</span><span class="p">:</span> <span class="s2">&quot;HTTP_301&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;redirect&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">conditions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;httpHeader&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;httpHeaderName&quot;</span><span class="p">:</span> <span class="s2">&quot;X-Forwarded-For&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;192.168.1.*&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">}],</span>
+    <span class="n">listener_arn</span><span class="o">=</span><span class="n">front_end_listener</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+<span class="n">health_check</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">ListenerRule</span><span class="p">(</span><span class="s2">&quot;healthCheck&quot;</span><span class="p">,</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;fixedResponse&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;contentType&quot;</span><span class="p">:</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;messageBody&quot;</span><span class="p">:</span> <span class="s2">&quot;HEALTHY&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;statusCode&quot;</span><span class="p">:</span> <span class="s2">&quot;200&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;fixed-response&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">conditions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;queryString&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;health&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;check&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">listener_arn</span><span class="o">=</span><span class="n">front_end_listener</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+<span class="n">pool</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserPool</span><span class="p">(</span><span class="s2">&quot;pool&quot;</span><span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserPoolClient</span><span class="p">(</span><span class="s2">&quot;client&quot;</span><span class="p">)</span>
+<span class="n">domain</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserPoolDomain</span><span class="p">(</span><span class="s2">&quot;domain&quot;</span><span class="p">)</span>
+<span class="n">admin</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">ListenerRule</span><span class="p">(</span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;authenticateOidc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;authorizationEndpoint&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com/authorization_endpoint&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;clientId&quot;</span><span class="p">:</span> <span class="s2">&quot;client_id&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;clientSecret&quot;</span><span class="p">:</span> <span class="s2">&quot;client_secret&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;issuer&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;tokenEndpoint&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com/token_endpoint&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;userInfoEndpoint&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com/user_info_endpoint&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;authenticate-oidc&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;targetGroupArn&quot;</span><span class="p">:</span> <span class="n">aws_lb_target_group</span><span class="p">[</span><span class="s2">&quot;static&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;forward&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">listener_arn</span><span class="o">=</span><span class="n">front_end_listener</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Deprecated: aws.elasticloadbalancingv2.ListenerRule has been deprecated in favour of aws.lb.ListenerRule</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -514,7 +731,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of exactly one pattern to match. Required when <code class="docutils literal notranslate"><span class="pre">field</span></code> is set.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pathPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Contains a single <code class="docutils literal notranslate"><span class="pre">values</span></code> item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard charaters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a <code class="docutils literal notranslate"><span class="pre">query-string</span></code> condition.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Contains a single <code class="docutils literal notranslate"><span class="pre">values</span></code> item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a <code class="docutils literal notranslate"><span class="pre">query-string</span></code> condition.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of exactly one pattern to match. Required when <code class="docutils literal notranslate"><span class="pre">field</span></code> is set.</p></li>
 </ul>
@@ -615,7 +832,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of exactly one pattern to match. Required when <code class="docutils literal notranslate"><span class="pre">field</span></code> is set.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pathPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Contains a single <code class="docutils literal notranslate"><span class="pre">values</span></code> item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard charaters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a <code class="docutils literal notranslate"><span class="pre">query-string</span></code> condition.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Contains a single <code class="docutils literal notranslate"><span class="pre">values</span></code> item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a <code class="docutils literal notranslate"><span class="pre">query-string</span></code> condition.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of exactly one pattern to match. Required when <code class="docutils literal notranslate"><span class="pre">field</span></code> is set.</p></li>
 </ul>
@@ -735,7 +952,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of exactly one pattern to match. Required when <code class="docutils literal notranslate"><span class="pre">field</span></code> is set.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pathPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Contains a single <code class="docutils literal notranslate"><span class="pre">values</span></code> item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard charaters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a <code class="docutils literal notranslate"><span class="pre">query-string</span></code> condition.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Contains a single <code class="docutils literal notranslate"><span class="pre">values</span></code> item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a <code class="docutils literal notranslate"><span class="pre">query-string</span></code> condition.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of exactly one pattern to match. Required when <code class="docutils literal notranslate"><span class="pre">field</span></code> is set.</p></li>
 </ul>
@@ -800,6 +1017,55 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">alb.LoadBalancer</span></code> is known as <code class="docutils literal notranslate"><span class="pre">lb.LoadBalancer</span></code>. The functionality is identical.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">access_logs</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;bucket&quot;</span><span class="p">:</span> <span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s2">&quot;lb_logs&quot;</span><span class="p">][</span><span class="s2">&quot;bucket&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;test-lb&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">enable_deletion_protection</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">internal</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">load_balancer_type</span><span class="o">=</span><span class="s2">&quot;application&quot;</span><span class="p">,</span>
+    <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span><span class="n">aws_security_group</span><span class="p">[</span><span class="s2">&quot;lb_sg&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
+    <span class="n">subnets</span><span class="o">=</span><span class="p">[[</span><span class="n">__item</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;public&quot;</span><span class="p">]]],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;production&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">enable_deletion_protection</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">internal</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">load_balancer_type</span><span class="o">=</span><span class="s2">&quot;network&quot;</span><span class="p">,</span>
+    <span class="n">subnets</span><span class="o">=</span><span class="p">[[</span><span class="n">__item</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;public&quot;</span><span class="p">]]],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;production&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">load_balancer_type</span><span class="o">=</span><span class="s2">&quot;network&quot;</span><span class="p">,</span>
+    <span class="n">subnet_mappings</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;allocationId&quot;</span><span class="p">:</span> <span class="n">aws_eip</span><span class="p">[</span><span class="s2">&quot;example1&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example1&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;allocationId&quot;</span><span class="p">:</span> <span class="n">aws_eip</span><span class="p">[</span><span class="s2">&quot;example2&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example2&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <p>Deprecated: aws.elasticloadbalancingv2.LoadBalancer has been deprecated in favour of aws.lb.LoadBalancer</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1067,6 +1333,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">alb.TargetGroup</span></code> is known as <code class="docutils literal notranslate"><span class="pre">lb.TargetGroup</span></code>. The functionality is identical.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">TargetGroup</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">ip_example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">TargetGroup</span><span class="p">(</span><span class="s2">&quot;ip-example&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">target_type</span><span class="o">=</span><span class="s2">&quot;ip&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">lambda_example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">TargetGroup</span><span class="p">(</span><span class="s2">&quot;lambda-example&quot;</span><span class="p">,</span> <span class="n">target_type</span><span class="o">=</span><span class="s2">&quot;lambda&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Deprecated: aws.elasticloadbalancingv2.TargetGroup has been deprecated in favour of aws.lb.TargetGroup</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1331,6 +1624,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">alb.TargetGroupAttachment</span></code> is known as <code class="docutils literal notranslate"><span class="pre">lb.TargetGroupAttachment</span></code>. The functionality is identical.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_target_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">TargetGroup</span><span class="p">(</span><span class="s2">&quot;testTargetGroup&quot;</span><span class="p">)</span>
+<span class="n">test_instance</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;testInstance&quot;</span><span class="p">)</span>
+<span class="n">test_target_group_attachment</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">TargetGroupAttachment</span><span class="p">(</span><span class="s2">&quot;testTargetGroupAttachment&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
+    <span class="n">target_group_arn</span><span class="o">=</span><span class="n">test_target_group</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">target_id</span><span class="o">=</span><span class="n">test_instance</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_target_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">TargetGroup</span><span class="p">(</span><span class="s2">&quot;testTargetGroup&quot;</span><span class="p">,</span> <span class="n">target_type</span><span class="o">=</span><span class="s2">&quot;lambda&quot;</span><span class="p">)</span>
+<span class="n">test_function</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lambda_</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s2">&quot;testFunction&quot;</span><span class="p">)</span>
+<span class="n">with_lb</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lambda_</span><span class="o">.</span><span class="n">Permission</span><span class="p">(</span><span class="s2">&quot;withLb&quot;</span><span class="p">,</span>
+    <span class="n">action</span><span class="o">=</span><span class="s2">&quot;lambda:InvokeFunction&quot;</span><span class="p">,</span>
+    <span class="n">function</span><span class="o">=</span><span class="n">test_function</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">principal</span><span class="o">=</span><span class="s2">&quot;elasticloadbalancing.amazonaws.com&quot;</span><span class="p">,</span>
+    <span class="n">source_arn</span><span class="o">=</span><span class="n">test_target_group</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+<span class="n">test_target_group_attachment</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">TargetGroupAttachment</span><span class="p">(</span><span class="s2">&quot;testTargetGroupAttachment&quot;</span><span class="p">,</span>
+    <span class="n">target_group_arn</span><span class="o">=</span><span class="n">test_target_group</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">target_id</span><span class="o">=</span><span class="n">test_function</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Deprecated: aws.elasticloadbalancingv2.TargetGroupAttachment has been deprecated in favour of aws.lb.TargetGroupAttachment</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1436,6 +1755,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>This data source can prove useful when a module accepts an LB Listener as an
 input variable and needs to know the LB it is attached to, or other
 information specific to the listener in question.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">listener_arn</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">require_object</span><span class="p">(</span><span class="s2">&quot;listenerArn&quot;</span><span class="p">)</span>
+<span class="n">listener</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">get_listener</span><span class="p">(</span><span class="n">arn</span><span class="o">=</span><span class="n">listener_arn</span><span class="p">)</span>
+<span class="n">selected</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">get_load_balancer</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;default-public&quot;</span><span class="p">)</span>
+<span class="n">selected443</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">get_listener</span><span class="p">(</span><span class="n">load_balancer_arn</span><span class="o">=</span><span class="n">selected</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">443</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Deprecated: aws.elasticloadbalancingv2.getListener has been deprecated in favour of aws.lb.getListener</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1458,6 +1788,20 @@ information specific to the listener in question.</p>
 <p>This data source can prove useful when a module accepts an LB as an input
 variable and needs to, for example, determine the security groups associated
 with it, etc.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">lb_arn</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;lbArn&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">lb_arn</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">lb_arn</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">lb_name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;lbName&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">lb_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">lb_name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">get_load_balancer</span><span class="p">(</span><span class="n">arn</span><span class="o">=</span><span class="n">lb_arn</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="n">lb_name</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Deprecated: aws.elasticloadbalancingv2.getLoadBalancer has been deprecated in favour of aws.lb.getLoadBalancer</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1479,6 +1823,20 @@ with it, etc.</p>
 <p>This data source can prove useful when a module accepts an LB Target Group as an
 input variable and needs to know its attributes. It can also be used to get the ARN of
 an LB Target Group for use in other resources, given LB Target Group name.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">lb_tg_arn</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;lbTgArn&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">lb_tg_arn</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">lb_tg_arn</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">lb_tg_name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;lbTgName&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">lb_tg_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">lb_tg_name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">get_target_group</span><span class="p">(</span><span class="n">arn</span><span class="o">=</span><span class="n">lb_tg_arn</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="n">lb_tg_name</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Deprecated: aws.elasticloadbalancingv2.getTargetGroup has been deprecated in favour of aws.lb.getTargetGroup</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

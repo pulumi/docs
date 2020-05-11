@@ -17,6 +17,25 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.s3.AccessPoint">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">AccessPoint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_access_block_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.AccessPoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage an S3 Access Point.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;exampleBucket&quot;</span><span class="p">)</span>
+<span class="n">example_access_point</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">AccessPoint</span><span class="p">(</span><span class="s2">&quot;exampleAccessPoint&quot;</span><span class="p">,</span> <span class="n">bucket</span><span class="o">=</span><span class="n">example_bucket</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;exampleBucket&quot;</span><span class="p">)</span>
+<span class="n">example_vpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;exampleVpc&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">example_access_point</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">AccessPoint</span><span class="p">(</span><span class="s2">&quot;exampleAccessPoint&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">example_bucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">vpc_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;vpcId&quot;</span><span class="p">:</span> <span class="n">example_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -251,6 +270,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> Each AWS account may only have one S3 Public Access Block configuration. Multiple configurations of the resource against the same AWS account will cause a perpetual difference.</p>
 <p>Advanced usage: To use a custom API endpoint for this resource, use the <cite>``s3control`</cite> endpoint provider configuration &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/index.html#s3control">https://www.terraform.io/docs/providers/aws/index.html#s3control</a>&gt;`_, not the <code class="docutils literal notranslate"><span class="pre">s3</span></code> endpoint provider configuration.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">AccountPublicAccessBlock</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">block_public_acls</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">block_public_policy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -419,34 +446,124 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aws.s3.AnalyticsConfiguration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">AnalyticsConfiguration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_class_analysis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.AnalyticsConfiguration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a AnalyticsConfiguration resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.</p>
+<dd><p>Provides a S3 bucket <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/analytics-storage-class.html">analytics configuration</a> resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+<span class="n">analytics</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;analytics&quot;</span><span class="p">)</span>
+<span class="n">example_entire_bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">AnalyticsConfiguration</span><span class="p">(</span><span class="s2">&quot;example-entire-bucket&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">bucket</span><span class="p">,</span>
+    <span class="n">storage_class_analysis</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;data_export&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;destination&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;s3_bucket_destination&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;bucketArn&quot;</span><span class="p">:</span> <span class="n">analytics</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+<span class="n">example_filtered</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">AnalyticsConfiguration</span><span class="p">(</span><span class="s2">&quot;example-filtered&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">bucket</span><span class="p">,</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;documents/&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="s2">&quot;high&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket this analytics configuration is associated with.</p></li>
+<li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Object filtering that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the analytics configuration for the bucket.</p></li>
+<li><p><strong>storage_class_analysis</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration for the analytics data export (documented below).</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>filter</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Object prefix for filtering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Set of object tags for filtering.</p></li>
 </ul>
 <p>The <strong>storage_class_analysis</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dataExport</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataExport</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Data export configuration (documented below).</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">destination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the destination for the exported analytics data (documented below).</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">s3BucketDestination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3BucketDestination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Analytics data export currently only supports an S3 bucket destination (documented below).</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bucketAccountId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">bucketArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketAccountId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The account ID that owns the destination bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the destination bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The output format of exported analytics data. Allowed values: <code class="docutils literal notranslate"><span class="pre">CSV</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">CSV</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Object prefix for filtering.</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">outputSchemaVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outputSchemaVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The schema version of exported analytics data. Allowed values: <code class="docutils literal notranslate"><span class="pre">V_1</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">V_1</span></code>.</p></li>
 </ul>
 </li>
 </ul>
+<dl class="py attribute">
+<dt id="pulumi_aws.s3.AnalyticsConfiguration.bucket">
+<code class="sig-name descname">bucket</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.AnalyticsConfiguration.bucket" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the bucket this analytics configuration is associated with.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.s3.AnalyticsConfiguration.filter">
+<code class="sig-name descname">filter</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.AnalyticsConfiguration.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Object filtering that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Object prefix for filtering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Set of object tags for filtering.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.s3.AnalyticsConfiguration.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.AnalyticsConfiguration.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique identifier of the analytics configuration for the bucket.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.s3.AnalyticsConfiguration.storage_class_analysis">
+<code class="sig-name descname">storage_class_analysis</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.AnalyticsConfiguration.storage_class_analysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration for the analytics data export (documented below).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataExport</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Data export configuration (documented below).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the destination for the exported analytics data (documented below).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3BucketDestination</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Analytics data export currently only supports an S3 bucket destination (documented below).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketAccountId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The account ID that owns the destination bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the destination bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The output format of exported analytics data. Allowed values: <code class="docutils literal notranslate"><span class="pre">CSV</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">CSV</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Object prefix for filtering.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outputSchemaVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The schema version of exported analytics data. Allowed values: <code class="docutils literal notranslate"><span class="pre">V_1</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">V_1</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pulumi_aws.s3.AnalyticsConfiguration.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_class_analysis</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.AnalyticsConfiguration.get" title="Permalink to this definition">¶</a></dt>
@@ -458,31 +575,35 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket this analytics configuration is associated with.</p></li>
+<li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Object filtering that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the analytics configuration for the bucket.</p></li>
+<li><p><strong>storage_class_analysis</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration for the analytics data export (documented below).</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>filter</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Object prefix for filtering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Set of object tags for filtering.</p></li>
 </ul>
 <p>The <strong>storage_class_analysis</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dataExport</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataExport</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Data export configuration (documented below).</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">destination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the destination for the exported analytics data (documented below).</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">s3BucketDestination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3BucketDestination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Analytics data export currently only supports an S3 bucket destination (documented below).</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bucketAccountId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">bucketArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketAccountId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The account ID that owns the destination bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the destination bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The output format of exported analytics data. Allowed values: <code class="docutils literal notranslate"><span class="pre">CSV</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">CSV</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Object prefix for filtering.</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">outputSchemaVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outputSchemaVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The schema version of exported analytics data. Allowed values: <code class="docutils literal notranslate"><span class="pre">V_1</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">V_1</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -545,6 +666,259 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.s3.Bucket">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">Bucket</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">acceleration_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">acl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cors_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grants</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hosted_zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lifecycle_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loggings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_lock_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_payer</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_side_encryption_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">versioning</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">website</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">website_domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">website_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.Bucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a S3 bucket resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">,</span>
+    <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Dev&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;My bucket&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">,</span>
+    <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;public-read&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;policy.json&quot;</span><span class="p">),</span>
+    <span class="n">website</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;website&quot;</span><span class="p">:</span> <span class="s2">&quot;error.html&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;website&quot;</span><span class="p">:</span> <span class="s2">&quot;index.html&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;website&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;[{</span>
+<span class="s2">    &quot;Condition&quot;: {</span>
+<span class="s2">        &quot;KeyPrefixEquals&quot;: &quot;docs/&quot;</span>
+<span class="s2">    },</span>
+<span class="s2">    &quot;Redirect&quot;: {</span>
+<span class="s2">        &quot;ReplaceKeyPrefixWith&quot;: &quot;documents/&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">}]</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">,</span>
+    <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;public-read&quot;</span><span class="p">,</span>
+    <span class="n">cors_rules</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;allowedHeaders&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;allowedMethods&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;PUT&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;allowedOrigins&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;https://s3-website-test.mydomain.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;exposeHeaders&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ETag&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;maxAgeSeconds&quot;</span><span class="p">:</span> <span class="mi">3000</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">,</span>
+    <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">,</span>
+    <span class="n">versioning</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">log_bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;logBucket&quot;</span><span class="p">,</span> <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;log-delivery-write&quot;</span><span class="p">)</span>
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">,</span>
+    <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">,</span>
+    <span class="n">loggings</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;targetBucket&quot;</span><span class="p">:</span> <span class="n">log_bucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;targetPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;log/&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">,</span>
+    <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">,</span>
+    <span class="n">lifecycle_rules</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;expiration&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;days&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;log&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;log/&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;autoclean&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rule&quot;</span><span class="p">:</span> <span class="s2">&quot;log&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;transition&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;days&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+                    <span class="s2">&quot;storageClass&quot;</span><span class="p">:</span> <span class="s2">&quot;STANDARD_IA&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;days&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+                    <span class="s2">&quot;storageClass&quot;</span><span class="p">:</span> <span class="s2">&quot;GLACIER&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;expiration&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-01-12&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;tmp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;tmp/&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+<span class="n">versioning_bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;versioningBucket&quot;</span><span class="p">,</span>
+    <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">,</span>
+    <span class="n">lifecycle_rules</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;noncurrentVersionExpiration&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;days&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;noncurrentVersionTransition&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;days&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+                <span class="s2">&quot;storageClass&quot;</span><span class="p">:</span> <span class="s2">&quot;STANDARD_IA&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;days&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+                <span class="s2">&quot;storageClass&quot;</span><span class="p">:</span> <span class="s2">&quot;GLACIER&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;config/&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">versioning</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_pulumi</span> <span class="k">as</span> <span class="nn">pulumi</span>
+
+<span class="n">central</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">Aws</span><span class="p">(</span><span class="s2">&quot;central&quot;</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="s2">&quot;eu-central-1&quot;</span><span class="p">)</span>
+<span class="n">replication_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;replicationRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;s3.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Sid&quot;: &quot;&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">destination</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;eu-west-1&quot;</span><span class="p">,</span>
+    <span class="n">versioning</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">,</span>
+    <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;eu-central-1&quot;</span><span class="p">,</span>
+    <span class="n">replication_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="n">replication_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+        <span class="s2">&quot;rules&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;destination&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;bucket&quot;</span><span class="p">:</span> <span class="n">destination</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+                <span class="s2">&quot;storageClass&quot;</span><span class="p">:</span> <span class="s2">&quot;STANDARD&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;Enabled&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">},</span>
+    <span class="n">versioning</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">replication_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;replicationPolicy&quot;</span><span class="p">,</span> <span class="n">policy</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">bucket</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span> <span class="n">bucket</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span> <span class="n">destination</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">bucketArn</span><span class="p">,</span> <span class="n">bucketArn1</span><span class="p">,</span> <span class="n">destinationArn</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;s3:GetReplicationConfiguration&quot;,</span>
+<span class="s2">        &quot;s3:ListBucket&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Resource&quot;: [</span>
+<span class="s2">        &quot;</span><span class="si">{</span><span class="n">bucket_arn</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="s2">      ]</span>
+<span class="s2">    </span><span class="se">&#x7D;&#x7D;</span><span class="s2">,</span>
+<span class="s2">    </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;s3:GetObjectVersion&quot;,</span>
+<span class="s2">        &quot;s3:GetObjectVersionAcl&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Resource&quot;: [</span>
+<span class="s2">        &quot;</span><span class="si">{</span><span class="n">bucket_arn1</span><span class="si">}</span><span class="s2">/*&quot;</span>
+<span class="s2">      ]</span>
+<span class="s2">    </span><span class="se">&#x7D;&#x7D;</span><span class="s2">,</span>
+<span class="s2">    </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;s3:ReplicateObject&quot;,</span>
+<span class="s2">        &quot;s3:ReplicateDelete&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Resource&quot;: &quot;</span><span class="si">{</span><span class="n">destination_arn</span><span class="si">}</span><span class="s2">/*&quot;</span>
+<span class="s2">    </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">  ]</span>
+<span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">))</span>
+<span class="n">replication_role_policy_attachment</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicyAttachment</span><span class="p">(</span><span class="s2">&quot;replicationRolePolicyAttachment&quot;</span><span class="p">,</span>
+    <span class="n">policy_arn</span><span class="o">=</span><span class="n">replication_policy</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">replication_role</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">mykey</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">Key</span><span class="p">(</span><span class="s2">&quot;mykey&quot;</span><span class="p">,</span>
+    <span class="n">deletion_window_in_days</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This key is used to encrypt bucket objects&quot;</span><span class="p">)</span>
+<span class="n">mybucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;mybucket&quot;</span><span class="p">,</span> <span class="n">server_side_encryption_configuration</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;rule&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;applyServerSideEncryptionByDefault&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;kmsMasterKeyId&quot;</span><span class="p">:</span> <span class="n">mykey</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+            <span class="s2">&quot;sseAlgorithm&quot;</span><span class="p">:</span> <span class="s2">&quot;aws:kms&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">current_user</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_canonical_user_id</span><span class="p">()</span>
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">,</span> <span class="n">grants</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">current_user</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;FULL_CONTROL&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;CanonicalUser&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;READ&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;WRITE&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Group&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;uri&quot;</span><span class="p">:</span> <span class="s2">&quot;http://acs.amazonaws.com/groups/s3/LogDelivery&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1226,6 +1600,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.s3.BucketMetric">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">BucketMetric</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketMetric" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a S3 bucket <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html">metrics configuration</a> resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+<span class="n">example_entire_bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">BucketMetric</span><span class="p">(</span><span class="s2">&quot;example-entire-bucket&quot;</span><span class="p">,</span> <span class="n">bucket</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">bucket</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+<span class="n">example_filtered</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">BucketMetric</span><span class="p">(</span><span class="s2">&quot;example-filtered&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">bucket</span><span class="p">,</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;documents/&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="s2">&quot;high&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1334,6 +1730,191 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> S3 Buckets only support a single notification configuration. Declaring multiple <code class="docutils literal notranslate"><span class="pre">s3.BucketNotification</span></code> resources to the same S3 Bucket will cause a perpetual difference in configuration. See the example “Trigger multiple Lambda functions” for an option.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">)</span>
+<span class="n">topic</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;topic&quot;</span><span class="p">,</span> <span class="n">policy</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">arn</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">arn</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">    &quot;Version&quot;:&quot;2012-10-17&quot;,</span>
+<span class="s2">    &quot;Statement&quot;:[</span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">        &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">        &quot;Principal&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2">&quot;AWS&quot;:&quot;*&quot;</span><span class="se">&#x7D;&#x7D;</span><span class="s2">,</span>
+<span class="s2">        &quot;Action&quot;: &quot;SNS:Publish&quot;,</span>
+<span class="s2">        &quot;Resource&quot;: &quot;arn:aws:sns:*:*:s3-event-notification-topic&quot;,</span>
+<span class="s2">        &quot;Condition&quot;:</span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">            &quot;ArnLike&quot;:</span><span class="se">&#x7B;&#x7B;</span><span class="s2">&quot;aws:SourceArn&quot;:&quot;</span><span class="si">{</span><span class="n">arn</span><span class="si">}</span><span class="s2">&quot;</span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">        </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">    </span><span class="se">&#x7D;&#x7D;</span><span class="s2">]</span>
+<span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">))</span>
+<span class="n">bucket_notification</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">BucketNotification</span><span class="p">(</span><span class="s2">&quot;bucketNotification&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">topics</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;events&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;s3:ObjectCreated:*&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;filterSuffix&quot;</span><span class="p">:</span> <span class="s2">&quot;.log&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;topicArn&quot;</span><span class="p">:</span> <span class="n">topic</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">)</span>
+<span class="n">queue</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sqs</span><span class="o">.</span><span class="n">Queue</span><span class="p">(</span><span class="s2">&quot;queue&quot;</span><span class="p">,</span> <span class="n">policy</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">arn</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">arn</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: &quot;*&quot;,</span>
+<span class="s2">      &quot;Action&quot;: &quot;sqs:SendMessage&quot;,</span>
+<span class="s2">          &quot;Resource&quot;: &quot;arn:aws:sqs:*:*:s3-event-notification-queue&quot;,</span>
+<span class="s2">      &quot;Condition&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">        &quot;ArnEquals&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"> &quot;aws:SourceArn&quot;: &quot;</span><span class="si">{</span><span class="n">arn</span><span class="si">}</span><span class="s2">&quot; </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">      </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">    </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">  ]</span>
+<span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">))</span>
+<span class="n">bucket_notification</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">BucketNotification</span><span class="p">(</span><span class="s2">&quot;bucketNotification&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">queues</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;events&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;s3:ObjectCreated:*&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;filterSuffix&quot;</span><span class="p">:</span> <span class="s2">&quot;.log&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;queueArn&quot;</span><span class="p">:</span> <span class="n">queue</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">iam_for_lambda</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;iamForLambda&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;lambda.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">func</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lambda_</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s2">&quot;func&quot;</span><span class="p">,</span>
+    <span class="n">code</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">FileArchive</span><span class="p">(</span><span class="s2">&quot;your-function.zip&quot;</span><span class="p">),</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">iam_for_lambda</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">handler</span><span class="o">=</span><span class="s2">&quot;exports.example&quot;</span><span class="p">,</span>
+    <span class="n">runtime</span><span class="o">=</span><span class="s2">&quot;go1.x&quot;</span><span class="p">)</span>
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">)</span>
+<span class="n">allow_bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lambda_</span><span class="o">.</span><span class="n">Permission</span><span class="p">(</span><span class="s2">&quot;allowBucket&quot;</span><span class="p">,</span>
+    <span class="n">action</span><span class="o">=</span><span class="s2">&quot;lambda:InvokeFunction&quot;</span><span class="p">,</span>
+    <span class="n">function</span><span class="o">=</span><span class="n">func</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">principal</span><span class="o">=</span><span class="s2">&quot;s3.amazonaws.com&quot;</span><span class="p">,</span>
+    <span class="n">source_arn</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+<span class="n">bucket_notification</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">BucketNotification</span><span class="p">(</span><span class="s2">&quot;bucketNotification&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">lambda_function</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;lambdaFunctionArn&quot;</span><span class="p">:</span> <span class="n">func</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+        <span class="s2">&quot;events&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;s3:ObjectCreated:*&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;filterPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;AWSLogs/&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;filterSuffix&quot;</span><span class="p">:</span> <span class="s2">&quot;.log&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">iam_for_lambda</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;iamForLambda&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;lambda.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">func1</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lambda_</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s2">&quot;func1&quot;</span><span class="p">,</span>
+    <span class="n">code</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">FileArchive</span><span class="p">(</span><span class="s2">&quot;your-function1.zip&quot;</span><span class="p">),</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">iam_for_lambda</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">handler</span><span class="o">=</span><span class="s2">&quot;exports.example&quot;</span><span class="p">,</span>
+    <span class="n">runtime</span><span class="o">=</span><span class="s2">&quot;go1.x&quot;</span><span class="p">)</span>
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">)</span>
+<span class="n">allow_bucket1</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lambda_</span><span class="o">.</span><span class="n">Permission</span><span class="p">(</span><span class="s2">&quot;allowBucket1&quot;</span><span class="p">,</span>
+    <span class="n">action</span><span class="o">=</span><span class="s2">&quot;lambda:InvokeFunction&quot;</span><span class="p">,</span>
+    <span class="n">function</span><span class="o">=</span><span class="n">func1</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">principal</span><span class="o">=</span><span class="s2">&quot;s3.amazonaws.com&quot;</span><span class="p">,</span>
+    <span class="n">source_arn</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+<span class="n">func2</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lambda_</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s2">&quot;func2&quot;</span><span class="p">,</span>
+    <span class="n">code</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">FileArchive</span><span class="p">(</span><span class="s2">&quot;your-function2.zip&quot;</span><span class="p">),</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">iam_for_lambda</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">handler</span><span class="o">=</span><span class="s2">&quot;exports.example&quot;</span><span class="p">)</span>
+<span class="n">allow_bucket2</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lambda_</span><span class="o">.</span><span class="n">Permission</span><span class="p">(</span><span class="s2">&quot;allowBucket2&quot;</span><span class="p">,</span>
+    <span class="n">action</span><span class="o">=</span><span class="s2">&quot;lambda:InvokeFunction&quot;</span><span class="p">,</span>
+    <span class="n">function</span><span class="o">=</span><span class="n">func2</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">principal</span><span class="o">=</span><span class="s2">&quot;s3.amazonaws.com&quot;</span><span class="p">,</span>
+    <span class="n">source_arn</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+<span class="n">bucket_notification</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">BucketNotification</span><span class="p">(</span><span class="s2">&quot;bucketNotification&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">lambda_function</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;lambdaFunctionArn&quot;</span><span class="p">:</span> <span class="n">func1</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+            <span class="s2">&quot;events&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;s3:ObjectCreated:*&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;filterPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;AWSLogs/&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filterSuffix&quot;</span><span class="p">:</span> <span class="s2">&quot;.log&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;lambdaFunctionArn&quot;</span><span class="p">:</span> <span class="n">func2</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+            <span class="s2">&quot;events&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;s3:ObjectCreated:*&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;filterPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;OtherLogs/&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filterSuffix&quot;</span><span class="p">:</span> <span class="s2">&quot;.log&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">)</span>
+<span class="n">queue</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sqs</span><span class="o">.</span><span class="n">Queue</span><span class="p">(</span><span class="s2">&quot;queue&quot;</span><span class="p">,</span> <span class="n">policy</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">arn</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">arn</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: &quot;*&quot;,</span>
+<span class="s2">      &quot;Action&quot;: &quot;sqs:SendMessage&quot;,</span>
+<span class="s2">          &quot;Resource&quot;: &quot;arn:aws:sqs:*:*:s3-event-notification-queue&quot;,</span>
+<span class="s2">      &quot;Condition&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">        &quot;ArnEquals&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"> &quot;aws:SourceArn&quot;: &quot;</span><span class="si">{</span><span class="n">arn</span><span class="si">}</span><span class="s2">&quot; </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">      </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">    </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">  ]</span>
+<span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">))</span>
+<span class="n">bucket_notification</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">BucketNotification</span><span class="p">(</span><span class="s2">&quot;bucketNotification&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">queues</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;events&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;s3:ObjectCreated:*&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;filterPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;images/&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;image-upload-event&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;queueArn&quot;</span><span class="p">:</span> <span class="n">queue</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;events&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;s3:ObjectCreated:*&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;filterPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;videos/&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;video-upload-event&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;queueArn&quot;</span><span class="p">:</span> <span class="n">queue</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1501,6 +2082,63 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.s3.BucketObject">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">BucketObject</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">acl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_control</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_base64</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_disposition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_encoding</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_language</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">etag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_lock_legal_hold_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_lock_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_lock_retain_until_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_side_encryption</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_class</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">website_redirect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketObject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a S3 bucket object resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">examplekms</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">Key</span><span class="p">(</span><span class="s2">&quot;examplekms&quot;</span><span class="p">,</span>
+    <span class="n">deletion_window_in_days</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;KMS key 1&quot;</span><span class="p">)</span>
+<span class="n">examplebucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;examplebucket&quot;</span><span class="p">,</span> <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">examplebucket_object</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">BucketObject</span><span class="p">(</span><span class="s2">&quot;examplebucketObject&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">examplebucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;someobject&quot;</span><span class="p">,</span>
+    <span class="n">kms_key_id</span><span class="o">=</span><span class="n">examplekms</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">source</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">FileAsset</span><span class="p">(</span><span class="s2">&quot;index.html&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">examplebucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;examplebucket&quot;</span><span class="p">,</span> <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">examplebucket_object</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">BucketObject</span><span class="p">(</span><span class="s2">&quot;examplebucketObject&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">examplebucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;someobject&quot;</span><span class="p">,</span>
+    <span class="n">server_side_encryption</span><span class="o">=</span><span class="s2">&quot;aws:kms&quot;</span><span class="p">,</span>
+    <span class="n">source</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">FileAsset</span><span class="p">(</span><span class="s2">&quot;index.html&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">examplebucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;examplebucket&quot;</span><span class="p">,</span> <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">examplebucket_object</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">BucketObject</span><span class="p">(</span><span class="s2">&quot;examplebucketObject&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">examplebucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;someobject&quot;</span><span class="p">,</span>
+    <span class="n">server_side_encryption</span><span class="o">=</span><span class="s2">&quot;AES256&quot;</span><span class="p">,</span>
+    <span class="n">source</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">FileAsset</span><span class="p">(</span><span class="s2">&quot;index.html&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">examplebucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;examplebucket&quot;</span><span class="p">,</span>
+    <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">,</span>
+    <span class="n">object_lock_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;objectLockEnabled&quot;</span><span class="p">:</span> <span class="s2">&quot;Enabled&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">versioning</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">examplebucket_object</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">BucketObject</span><span class="p">(</span><span class="s2">&quot;examplebucketObject&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">examplebucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">force_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;someobject&quot;</span><span class="p">,</span>
+    <span class="n">object_lock_legal_hold_status</span><span class="o">=</span><span class="s2">&quot;ON&quot;</span><span class="p">,</span>
+    <span class="n">object_lock_mode</span><span class="o">=</span><span class="s2">&quot;GOVERNANCE&quot;</span><span class="p">,</span>
+    <span class="n">object_lock_retain_until_date</span><span class="o">=</span><span class="s2">&quot;2021-12-31T23:59:60Z&quot;</span><span class="p">,</span>
+    <span class="n">source</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">FileAsset</span><span class="p">(</span><span class="s2">&quot;important.txt&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1781,6 +2419,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.s3.BucketPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">BucketPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attaches a policy to an S3 bucket resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">)</span>
+<span class="n">bucket_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">BucketPolicy</span><span class="p">(</span><span class="s2">&quot;bucketPolicy&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Id&quot;: &quot;MYBUCKETPOLICY&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Sid&quot;: &quot;IPAllow&quot;,</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Deny&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: &quot;*&quot;,</span>
+<span class="s2">      &quot;Action&quot;: &quot;s3:*&quot;,</span>
+<span class="s2">      &quot;Resource&quot;: &quot;arn:aws:s3:::my_tf_test_bucket/*&quot;,</span>
+<span class="s2">      &quot;Condition&quot;: {</span>
+<span class="s2">         &quot;IpAddress&quot;: {&quot;aws:SourceIp&quot;: &quot;8.8.8.8/32&quot;}</span>
+<span class="s2">      }</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1863,6 +2527,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.s3.BucketPublicAccessBlock">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">BucketPublicAccessBlock</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">block_public_acls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">block_public_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ignore_public_acls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">restrict_public_buckets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketPublicAccessBlock" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages S3 bucket-level Public Access Block configuration. For more information about these settings, see the <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html">AWS S3 Block Public Access documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;exampleBucket&quot;</span><span class="p">)</span>
+<span class="n">example_bucket_public_access_block</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">BucketPublicAccessBlock</span><span class="p">(</span><span class="s2">&quot;exampleBucketPublicAccessBlock&quot;</span><span class="p">,</span>
+    <span class="n">block_public_acls</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">block_public_policy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">example_bucket</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2258,6 +2932,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.s3.Inventory">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">Inventory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">included_object_versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">optional_fields</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.Inventory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a S3 bucket <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html">inventory configuration</a> resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;testBucket&quot;</span><span class="p">)</span>
+<span class="n">inventory</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;inventory&quot;</span><span class="p">)</span>
+<span class="n">test_inventory</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Inventory</span><span class="p">(</span><span class="s2">&quot;testInventory&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">test_bucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">destination</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;bucket&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;bucketArn&quot;</span><span class="p">:</span> <span class="n">inventory</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+            <span class="s2">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;ORC&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">included_object_versions</span><span class="o">=</span><span class="s2">&quot;All&quot;</span><span class="p">,</span>
+    <span class="n">schedule</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;frequency&quot;</span><span class="p">:</span> <span class="s2">&quot;Daily&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
+<span class="n">inventory</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;inventory&quot;</span><span class="p">)</span>
+<span class="n">test_prefix</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Inventory</span><span class="p">(</span><span class="s2">&quot;test-prefix&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">test</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">destination</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;bucket&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;bucketArn&quot;</span><span class="p">:</span> <span class="n">inventory</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+            <span class="s2">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;ORC&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;inventory&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;documents/&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">included_object_versions</span><span class="o">=</span><span class="s2">&quot;All&quot;</span><span class="p">,</span>
+    <span class="n">schedule</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;frequency&quot;</span><span class="p">:</span> <span class="s2">&quot;Daily&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2477,6 +3193,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides details about a specific S3 bucket.</p>
 <p>This resource may prove useful when setting up a Route53 record, or an origin for a CloudFront
 Distribution.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">selected</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">get_bucket</span><span class="p">(</span><span class="n">bucket</span><span class="o">=</span><span class="s2">&quot;bucket.test.com&quot;</span><span class="p">)</span>
+<span class="n">test_zone</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">get_zone</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;test.com.&quot;</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">aliases</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">selected</span><span class="o">.</span><span class="n">website_domain</span><span class="p">,</span>
+        <span class="s2">&quot;zoneId&quot;</span><span class="p">:</span> <span class="n">selected</span><span class="o">.</span><span class="n">hosted_zone_id</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;bucket&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">test_zone</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">selected</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">get_bucket</span><span class="p">(</span><span class="n">bucket</span><span class="o">=</span><span class="s2">&quot;a-test-bucket&quot;</span><span class="p">)</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudfront</span><span class="o">.</span><span class="n">Distribution</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="n">origins</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;domainName&quot;</span><span class="p">:</span> <span class="n">selected</span><span class="o">.</span><span class="n">bucket_domain_name</span><span class="p">,</span>
+    <span class="s2">&quot;originId&quot;</span><span class="p">:</span> <span class="s2">&quot;s3-selected-bucket&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>bucket</strong> (<em>str</em>) – The name of the bucket</p>
@@ -2492,6 +3233,17 @@ Distribution.</p>
 <blockquote>
 <div><p><strong>Note:</strong> The content of an object (<code class="docutils literal notranslate"><span class="pre">body</span></code> field) is available only for objects which have a human-readable <code class="docutils literal notranslate"><span class="pre">Content-Type</span></code> (<code class="docutils literal notranslate"><span class="pre">text/*</span></code> and <code class="docutils literal notranslate"><span class="pre">application/json</span></code>). This is to prevent printing unsafe characters and potentially downloading large amount of data which would be thrown away in favour of metadata.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bootstrap_script</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">get_bucket_object</span><span class="p">(</span><span class="n">bucket</span><span class="o">=</span><span class="s2">&quot;ourcorp-deploy-config&quot;</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;ec2-bootstrap-script.sh&quot;</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">ami</span><span class="o">=</span><span class="s2">&quot;ami-2757f631&quot;</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;t2.micro&quot;</span><span class="p">,</span>
+    <span class="n">user_data</span><span class="o">=</span><span class="n">bootstrap_script</span><span class="o">.</span><span class="n">body</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2512,6 +3264,14 @@ Distribution.</p>
 <div><p><strong>NOTE on ``max_keys``:</strong> Retrieving very large numbers of keys can adversely affect this provider’s performance.</p>
 </div></blockquote>
 <p>The bucket-objects data source returns keys (i.e., file names) and other metadata about objects in an S3 bucket.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">my_objects</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">get_bucket_objects</span><span class="p">(</span><span class="n">bucket</span><span class="o">=</span><span class="s2">&quot;ourcorp&quot;</span><span class="p">)</span>
+<span class="n">object_info</span> <span class="o">=</span> <span class="p">[</span><span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">get_bucket_object</span><span class="p">(</span><span class="n">bucket</span><span class="o">=</span><span class="n">my_objects</span><span class="o">.</span><span class="n">bucket</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="n">my_objects</span><span class="o">.</span><span class="n">keys</span><span class="p">[</span><span class="n">__index</span><span class="p">])</span> <span class="k">for</span> <span class="n">__index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">my_objects</span><span class="o">.</span><span class="n">keys</span><span class="p">))]</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -17,6 +17,14 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.cfg.AggregateAuthorization">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cfg.</code><code class="sig-name descname">AggregateAuthorization</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cfg.AggregateAuthorization" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Config Aggregate Authorization</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">AggregateAuthorization</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;123456789012&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;eu-west-2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -114,6 +122,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cfg.ConfigurationAggregator">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cfg.</code><code class="sig-name descname">ConfigurationAggregator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_aggregation_source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organization_aggregation_source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cfg.ConfigurationAggregator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Config Configuration Aggregator</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">account</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">ConfigurationAggregator</span><span class="p">(</span><span class="s2">&quot;account&quot;</span><span class="p">,</span> <span class="n">account_aggregation_source</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;accountIds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;123456789012&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;regions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;us-west-2&quot;</span><span class="p">],</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">organization_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;organizationRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Sid&quot;: &quot;&quot;,</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;config.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">organization_configuration_aggregator</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">ConfigurationAggregator</span><span class="p">(</span><span class="s2">&quot;organizationConfigurationAggregator&quot;</span><span class="p">,</span> <span class="n">organization_aggregation_source</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;allRegions&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">organization_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">organization_role_policy_attachment</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicyAttachment</span><span class="p">(</span><span class="s2">&quot;organizationRolePolicyAttachment&quot;</span><span class="p">,</span>
+    <span class="n">policy_arn</span><span class="o">=</span><span class="s2">&quot;arn:aws:iam::aws:policy/service-role/AWSConfigRoleForOrganizations&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">organization_role</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -128,7 +172,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>account_aggregation_source</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">account_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of 12-digit account IDs of the account(s) being aggregated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">accountIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of 12-digit account IDs of the account(s) being aggregated.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allRegions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, aggregate existing AWS Config regions and future regions.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">regions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of source regions being aggregated.</p></li>
 </ul>
@@ -143,7 +187,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">account_aggregation_source</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cfg.ConfigurationAggregator.account_aggregation_source" title="Permalink to this definition">¶</a></dt>
 <dd><p>The account(s) to aggregate config data from as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">account_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of 12-digit account IDs of the account(s) being aggregated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">accountIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of 12-digit account IDs of the account(s) being aggregated.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allRegions</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true, aggregate existing AWS Config regions and future regions.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">regions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of source regions being aggregated.</p></li>
 </ul>
@@ -199,7 +243,7 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>account_aggregation_source</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">account_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of 12-digit account IDs of the account(s) being aggregated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">accountIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of 12-digit account IDs of the account(s) being aggregated.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allRegions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, aggregate existing AWS Config regions and future regions.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">regions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of source regions being aggregated.</p></li>
 </ul>
@@ -256,6 +300,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> Delivery Channel requires a <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder.html">Configuration Recorder</a> to be present. Use of <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> (as shown below) is recommended to avoid race conditions.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">,</span> <span class="n">force_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">foo_delivery_channel</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">DeliveryChannel</span><span class="p">(</span><span class="s2">&quot;fooDeliveryChannel&quot;</span><span class="p">,</span> <span class="n">s3_bucket_name</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">bucket</span><span class="p">)</span>
+<span class="n">role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;role&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;config.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Sid&quot;: &quot;&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">foo_recorder</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">Recorder</span><span class="p">(</span><span class="s2">&quot;fooRecorder&quot;</span><span class="p">,</span> <span class="n">role_arn</span><span class="o">=</span><span class="n">role</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+<span class="n">role_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicy</span><span class="p">(</span><span class="s2">&quot;rolePolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">bucket</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span> <span class="n">bucket</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">bucketArn</span><span class="p">,</span> <span class="n">bucketArn1</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;s3:*&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Resource&quot;: [</span>
+<span class="s2">        &quot;</span><span class="si">{</span><span class="n">bucket_arn</span><span class="si">}</span><span class="s2">&quot;,</span>
+<span class="s2">        &quot;</span><span class="si">{</span><span class="n">bucket_arn1</span><span class="si">}</span><span class="s2">/*&quot;</span>
+<span class="s2">      ]</span>
+<span class="s2">    </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">  ]</span>
+<span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">),</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">role</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -383,6 +469,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> This resource must be created in the Organization master account and rules will include the master account unless its ID is added to the <code class="docutils literal notranslate"><span class="pre">excluded_accounts</span></code> argument.</p>
 <p><strong>NOTE:</strong> The proper Lambda permission to allow the AWS Config service invoke the Lambda Function must be in place before the rule will successfully create or update. See also the <cite>``lambda.Permission`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html</a>&gt;`_.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_permission</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lambda_</span><span class="o">.</span><span class="n">Permission</span><span class="p">(</span><span class="s2">&quot;examplePermission&quot;</span><span class="p">,</span>
+    <span class="n">action</span><span class="o">=</span><span class="s2">&quot;lambda:InvokeFunction&quot;</span><span class="p">,</span>
+    <span class="n">function</span><span class="o">=</span><span class="n">aws_lambda_function</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">principal</span><span class="o">=</span><span class="s2">&quot;config.amazonaws.com&quot;</span><span class="p">)</span>
+<span class="n">example_organization</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">Organization</span><span class="p">(</span><span class="s2">&quot;exampleOrganization&quot;</span><span class="p">,</span>
+    <span class="n">aws_service_access_principals</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;config-multiaccountsetup.amazonaws.com&quot;</span><span class="p">],</span>
+    <span class="n">feature_set</span><span class="o">=</span><span class="s2">&quot;ALL&quot;</span><span class="p">)</span>
+<span class="n">example_organization_custom_rule</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">OrganizationCustomRule</span><span class="p">(</span><span class="s2">&quot;exampleOrganizationCustomRule&quot;</span><span class="p">,</span>
+    <span class="n">lambda_function_arn</span><span class="o">=</span><span class="n">aws_lambda_function</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">trigger_types</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ConfigurationItemChangeNotification&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -548,6 +649,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> This resource must be created in the Organization master account and rules will include the master account unless its ID is added to the <code class="docutils literal notranslate"><span class="pre">excluded_accounts</span></code> argument.</p>
 <p><strong>NOTE:</strong> Every Organization account except those configured in the <code class="docutils literal notranslate"><span class="pre">excluded_accounts</span></code> argument must have a Configuration Recorder with proper IAM permissions before the rule will successfully create or update. See also the <cite>``cfg.Recorder`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder.html">https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder.html</a>&gt;`_.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_organization</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">Organization</span><span class="p">(</span><span class="s2">&quot;exampleOrganization&quot;</span><span class="p">,</span>
+    <span class="n">aws_service_access_principals</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;config-multiaccountsetup.amazonaws.com&quot;</span><span class="p">],</span>
+    <span class="n">feature_set</span><span class="o">=</span><span class="s2">&quot;ALL&quot;</span><span class="p">)</span>
+<span class="n">example_organization_managed_rule</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">OrganizationManagedRule</span><span class="p">(</span><span class="s2">&quot;exampleOrganizationManagedRule&quot;</span><span class="p">,</span> <span class="n">rule_identifier</span><span class="o">=</span><span class="s2">&quot;IAM_PASSWORD_POLICY&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -705,6 +815,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <em>Starting</em> the Configuration Recorder requires a <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/config_delivery_channel.html">delivery channel</a> (while delivery channel creation requires Configuration Recorder). This is why <cite>``cfg.RecorderStatus`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder_status.html">https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder_status.html</a>&gt;`_ is a separate resource.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;role&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;config.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Sid&quot;: &quot;&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">Recorder</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="n">role_arn</span><span class="o">=</span><span class="n">role</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -837,6 +968,52 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> Starting Configuration Recorder requires a <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/config_delivery_channel.html">Delivery Channel</a> to be present. Use of <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> (as shown below) is recommended to avoid race conditions.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo_recorder_status</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">RecorderStatus</span><span class="p">(</span><span class="s2">&quot;fooRecorderStatus&quot;</span><span class="p">,</span> <span class="n">is_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;role&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;config.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Sid&quot;: &quot;&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">role_policy_attachment</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicyAttachment</span><span class="p">(</span><span class="s2">&quot;rolePolicyAttachment&quot;</span><span class="p">,</span>
+    <span class="n">policy_arn</span><span class="o">=</span><span class="s2">&quot;arn:aws:iam::aws:policy/service-role/AWSConfigRole&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">role</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">)</span>
+<span class="n">foo_delivery_channel</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">DeliveryChannel</span><span class="p">(</span><span class="s2">&quot;fooDeliveryChannel&quot;</span><span class="p">,</span> <span class="n">s3_bucket_name</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">bucket</span><span class="p">)</span>
+<span class="n">foo_recorder</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">Recorder</span><span class="p">(</span><span class="s2">&quot;fooRecorder&quot;</span><span class="p">,</span> <span class="n">role_arn</span><span class="o">=</span><span class="n">role</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+<span class="n">role_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicy</span><span class="p">(</span><span class="s2">&quot;rolePolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">bucket</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span> <span class="n">bucket</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">bucketArn</span><span class="p">,</span> <span class="n">bucketArn1</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;s3:*&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Resource&quot;: [</span>
+<span class="s2">        &quot;</span><span class="si">{</span><span class="n">bucket_arn</span><span class="si">}</span><span class="s2">&quot;,</span>
+<span class="s2">        &quot;</span><span class="si">{</span><span class="n">bucket_arn1</span><span class="si">}</span><span class="s2">/*&quot;</span>
+<span class="s2">      ]</span>
+<span class="s2">    </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">  ]</span>
+<span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">),</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">role</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -922,6 +1099,61 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> Config Rule requires an existing <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder.html">Configuration Recorder</a> to be present. Use of <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> is recommended (as shown below) to avoid race conditions.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">rule</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">Rule</span><span class="p">(</span><span class="s2">&quot;rule&quot;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sourceIdentifier&quot;</span><span class="p">:</span> <span class="s2">&quot;S3_BUCKET_VERSIONING_ENABLED&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;role&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;config.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Sid&quot;: &quot;&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">Recorder</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="n">role_arn</span><span class="o">=</span><span class="n">role</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+<span class="n">role_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicy</span><span class="p">(</span><span class="s2">&quot;rolePolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">        {</span>
+<span class="s2">                &quot;Action&quot;: &quot;config:Put*&quot;,</span>
+<span class="s2">                &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">                &quot;Resource&quot;: &quot;*&quot;</span>
+
+<span class="s2">        }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">role</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_recorder</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">Recorder</span><span class="p">(</span><span class="s2">&quot;exampleRecorder&quot;</span><span class="p">)</span>
+<span class="n">example_function</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lambda_</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s2">&quot;exampleFunction&quot;</span><span class="p">)</span>
+<span class="n">example_permission</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lambda_</span><span class="o">.</span><span class="n">Permission</span><span class="p">(</span><span class="s2">&quot;examplePermission&quot;</span><span class="p">,</span>
+    <span class="n">action</span><span class="o">=</span><span class="s2">&quot;lambda:InvokeFunction&quot;</span><span class="p">,</span>
+    <span class="n">function</span><span class="o">=</span><span class="n">example_function</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">principal</span><span class="o">=</span><span class="s2">&quot;config.amazonaws.com&quot;</span><span class="p">)</span>
+<span class="n">example_rule</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">Rule</span><span class="p">(</span><span class="s2">&quot;exampleRule&quot;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;CUSTOM_LAMBDA&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sourceIdentifier&quot;</span><span class="p">:</span> <span class="n">example_function</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+<span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

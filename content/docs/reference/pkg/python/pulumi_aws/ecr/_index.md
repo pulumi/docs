@@ -114,6 +114,60 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p><strong>NOTE:</strong> Only one <code class="docutils literal notranslate"><span class="pre">ecr.LifecyclePolicy</span></code> resource can be used with the same ECR repository. To apply multiple rules, they must be combined in the <code class="docutils literal notranslate"><span class="pre">policy</span></code> JSON.</p>
 <p><strong>NOTE:</strong> The AWS ECR API seems to reorder rules based on <code class="docutils literal notranslate"><span class="pre">rulePriority</span></code>. If you define multiple rules that are not sorted in ascending <code class="docutils literal notranslate"><span class="pre">rulePriority</span></code> order in the this provider code, the resource will be flagged for recreation every deployment.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ecr</span><span class="o">.</span><span class="n">Repository</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+<span class="n">foopolicy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ecr</span><span class="o">.</span><span class="n">LifecyclePolicy</span><span class="p">(</span><span class="s2">&quot;foopolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">    &quot;rules&quot;: [</span>
+<span class="s2">        {</span>
+<span class="s2">            &quot;rulePriority&quot;: 1,</span>
+<span class="s2">            &quot;description&quot;: &quot;Expire images older than 14 days&quot;,</span>
+<span class="s2">            &quot;selection&quot;: {</span>
+<span class="s2">                &quot;tagStatus&quot;: &quot;untagged&quot;,</span>
+<span class="s2">                &quot;countType&quot;: &quot;sinceImagePushed&quot;,</span>
+<span class="s2">                &quot;countUnit&quot;: &quot;days&quot;,</span>
+<span class="s2">                &quot;countNumber&quot;: 14</span>
+<span class="s2">            },</span>
+<span class="s2">            &quot;action&quot;: {</span>
+<span class="s2">                &quot;type&quot;: &quot;expire&quot;</span>
+<span class="s2">            }</span>
+<span class="s2">        }</span>
+<span class="s2">    ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">repository</span><span class="o">=</span><span class="n">foo</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ecr</span><span class="o">.</span><span class="n">Repository</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+<span class="n">foopolicy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ecr</span><span class="o">.</span><span class="n">LifecyclePolicy</span><span class="p">(</span><span class="s2">&quot;foopolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">    &quot;rules&quot;: [</span>
+<span class="s2">        {</span>
+<span class="s2">            &quot;rulePriority&quot;: 1,</span>
+<span class="s2">            &quot;description&quot;: &quot;Keep last 30 images&quot;,</span>
+<span class="s2">            &quot;selection&quot;: {</span>
+<span class="s2">                &quot;tagStatus&quot;: &quot;tagged&quot;,</span>
+<span class="s2">                &quot;tagPrefixList&quot;: [&quot;v&quot;],</span>
+<span class="s2">                &quot;countType&quot;: &quot;imageCountMoreThan&quot;,</span>
+<span class="s2">                &quot;countNumber&quot;: 30</span>
+<span class="s2">            },</span>
+<span class="s2">            &quot;action&quot;: {</span>
+<span class="s2">                &quot;type&quot;: &quot;expire&quot;</span>
+<span class="s2">            }</span>
+<span class="s2">        }</span>
+<span class="s2">    ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">repository</span><span class="o">=</span><span class="n">foo</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -204,6 +258,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ecr.Repository">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">Repository</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_scanning_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_tag_mutability</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.Repository" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Container Registry Repository.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ecr</span><span class="o">.</span><span class="n">Repository</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">image_scanning_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;scanOnPush&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">image_tag_mutability</span><span class="o">=</span><span class="s2">&quot;MUTABLE&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -336,6 +400,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">RepositoryPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.RepositoryPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Container Registry Repository Policy.</p>
 <p>Note that currently only one policy may be applied to a repository.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ecr</span><span class="o">.</span><span class="n">Repository</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+<span class="n">foopolicy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ecr</span><span class="o">.</span><span class="n">RepositoryPolicy</span><span class="p">(</span><span class="s2">&quot;foopolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">    &quot;Version&quot;: &quot;2008-10-17&quot;,</span>
+<span class="s2">    &quot;Statement&quot;: [</span>
+<span class="s2">        {</span>
+<span class="s2">            &quot;Sid&quot;: &quot;new policy&quot;,</span>
+<span class="s2">            &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">            &quot;Principal&quot;: &quot;*&quot;,</span>
+<span class="s2">            &quot;Action&quot;: [</span>
+<span class="s2">                &quot;ecr:GetDownloadUrlForLayer&quot;,</span>
+<span class="s2">                &quot;ecr:BatchGetImage&quot;,</span>
+<span class="s2">                &quot;ecr:BatchCheckLayerAvailability&quot;,</span>
+<span class="s2">                &quot;ecr:PutImage&quot;,</span>
+<span class="s2">                &quot;ecr:InitiateLayerUpload&quot;,</span>
+<span class="s2">                &quot;ecr:UploadLayerPart&quot;,</span>
+<span class="s2">                &quot;ecr:CompleteLayerUpload&quot;,</span>
+<span class="s2">                &quot;ecr:DescribeRepositories&quot;,</span>
+<span class="s2">                &quot;ecr:GetRepositoryPolicy&quot;,</span>
+<span class="s2">                &quot;ecr:ListImages&quot;,</span>
+<span class="s2">                &quot;ecr:DeleteRepository&quot;,</span>
+<span class="s2">                &quot;ecr:BatchDeleteImage&quot;,</span>
+<span class="s2">                &quot;ecr:SetRepositoryPolicy&quot;,</span>
+<span class="s2">                &quot;ecr:DeleteRepositoryPolicy&quot;</span>
+<span class="s2">            ]</span>
+<span class="s2">        }</span>
+<span class="s2">    ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">repository</span><span class="o">=</span><span class="n">foo</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -431,6 +531,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ecr.get_image">
 <code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">get_image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">image_digest</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_tag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registry_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.get_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECR Image data source allows the details of an image with a particular tag or digest to be retrieved.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">service_image</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ecr</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">image_tag</span><span class="o">=</span><span class="s2">&quot;latest&quot;</span><span class="p">,</span>
+    <span class="n">repository_name</span><span class="o">=</span><span class="s2">&quot;my/service&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -447,6 +554,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ecr.get_repository">
 <code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">get_repository</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.get_repository" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECR Repository data source allows the ARN, Repository URI and Registry ID to be retrieved for an ECR repository.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">service</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ecr</span><span class="o">.</span><span class="n">get_repository</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;ecr-repository&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

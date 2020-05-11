@@ -21,6 +21,18 @@ you to deploy and manage applications in the AWS cloud without worrying about
 the infrastructure that runs those applications.</p>
 <p>This resource creates an application that has one configuration template named
 <code class="docutils literal notranslate"><span class="pre">default</span></code>, and no application versions</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">tftest</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticbeanstalk</span><span class="o">.</span><span class="n">Application</span><span class="p">(</span><span class="s2">&quot;tftest&quot;</span><span class="p">,</span>
+    <span class="n">appversion_lifecycle</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;deleteSourceFromS3&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;maxCount&quot;</span><span class="p">:</span> <span class="mi">128</span><span class="p">,</span>
+        <span class="s2">&quot;serviceRole&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;beanstalk_service&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;tf-test-desc&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -142,6 +154,22 @@ Elastic Beanstalk Environments it is possible that an error may be returned
 when attempting to delete an Application Version while it is still in use by a different environment.
 To work around this you can either create each environment in a separate AWS account or create your <code class="docutils literal notranslate"><span class="pre">elasticbeanstalk.ApplicationVersion</span></code> resources with a unique names in your Elastic Beanstalk Application. For example &amp;lt;revision&amp;gt;-&amp;lt;environment&amp;gt;.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default_bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;defaultBucket&quot;</span><span class="p">)</span>
+<span class="n">default_bucket_object</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">BucketObject</span><span class="p">(</span><span class="s2">&quot;defaultBucketObject&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">default_bucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;beanstalk/go-v1.zip&quot;</span><span class="p">,</span>
+    <span class="n">source</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">FileAsset</span><span class="p">(</span><span class="s2">&quot;go-v1.zip&quot;</span><span class="p">))</span>
+<span class="n">default_application</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticbeanstalk</span><span class="o">.</span><span class="n">Application</span><span class="p">(</span><span class="s2">&quot;defaultApplication&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;tf-test-desc&quot;</span><span class="p">)</span>
+<span class="n">default_application_version</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticbeanstalk</span><span class="o">.</span><span class="n">ApplicationVersion</span><span class="p">(</span><span class="s2">&quot;defaultApplicationVersion&quot;</span><span class="p">,</span>
+    <span class="n">application</span><span class="o">=</span><span class="s2">&quot;tf-test-name&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">default_bucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;application version&quot;</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="n">default_bucket_object</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -291,6 +319,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides an Elastic Beanstalk Configuration Template, which are associated with
 a specific application and are used to deploy different versions of the
 application with the same configuration settings.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">tftest</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticbeanstalk</span><span class="o">.</span><span class="n">Application</span><span class="p">(</span><span class="s2">&quot;tftest&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;tf-test-desc&quot;</span><span class="p">)</span>
+<span class="n">tf_template</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticbeanstalk</span><span class="o">.</span><span class="n">ConfigurationTemplate</span><span class="p">(</span><span class="s2">&quot;tfTemplate&quot;</span><span class="p">,</span>
+    <span class="n">application</span><span class="o">=</span><span class="n">tftest</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">solution_stack_name</span><span class="o">=</span><span class="s2">&quot;64bit Amazon Linux 2015.09 v2.0.8 running Go 1.4&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The <code class="docutils literal notranslate"><span class="pre">setting</span></code> field supports the following format:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> - unique namespace identifying the option’s associated AWS resource</p></li>
@@ -446,6 +483,15 @@ you to deploy and manage applications in the AWS cloud without worrying about
 the infrastructure that runs those applications.</p>
 <p>Environments are often things such as <code class="docutils literal notranslate"><span class="pre">development</span></code>, <code class="docutils literal notranslate"><span class="pre">integration</span></code>, or
 <code class="docutils literal notranslate"><span class="pre">production</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">tftest</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticbeanstalk</span><span class="o">.</span><span class="n">Application</span><span class="p">(</span><span class="s2">&quot;tftest&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;tf-test-desc&quot;</span><span class="p">)</span>
+<span class="n">tfenvtest</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticbeanstalk</span><span class="o">.</span><span class="n">Environment</span><span class="p">(</span><span class="s2">&quot;tfenvtest&quot;</span><span class="p">,</span>
+    <span class="n">application</span><span class="o">=</span><span class="n">tftest</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">solution_stack_name</span><span class="o">=</span><span class="s2">&quot;64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Some options can be stack-specific, check <a class="reference external" href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html">AWS Docs</a>
 for supported options and examples.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">setting</span></code> and <code class="docutils literal notranslate"><span class="pre">all_settings</span></code> mappings support the following format:</p>
@@ -455,6 +501,27 @@ for supported options and examples.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> - value for the configuration option</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code> - (Optional) resource name for <a class="reference external" href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html#command-options-general-autoscalingscheduledaction">scheduled action</a></p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">tftest</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticbeanstalk</span><span class="o">.</span><span class="n">Application</span><span class="p">(</span><span class="s2">&quot;tftest&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;tf-test-desc&quot;</span><span class="p">)</span>
+<span class="n">tfenvtest</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticbeanstalk</span><span class="o">.</span><span class="n">Environment</span><span class="p">(</span><span class="s2">&quot;tfenvtest&quot;</span><span class="p">,</span>
+    <span class="n">application</span><span class="o">=</span><span class="n">tftest</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">settings</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;VPCId&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;namespace&quot;</span><span class="p">:</span> <span class="s2">&quot;aws:ec2:vpc&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;vpc-xxxxxxxx&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Subnets&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;namespace&quot;</span><span class="p">:</span> <span class="s2">&quot;aws:ec2:vpc&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;subnet-xxxxxxxx&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">solution_stack_name</span><span class="o">=</span><span class="s2">&quot;64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -842,6 +909,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elasticbeanstalk.get_application">
 <code class="sig-prename descclassname">pulumi_aws.elasticbeanstalk.</code><code class="sig-name descname">get_application</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.get_application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about an Elastic Beanstalk Application.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticbeanstalk</span><span class="o">.</span><span class="n">get_application</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;arn&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;description&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">description</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the application</p>
@@ -853,6 +928,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elasticbeanstalk.get_hosted_zone">
 <code class="sig-prename descclassname">pulumi_aws.elasticbeanstalk.</code><code class="sig-name descname">get_hosted_zone</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.get_hosted_zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an <a class="reference external" href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticbeanstalk_region">elastic beanstalk hosted zone</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">current</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticbeanstalk</span><span class="o">.</span><span class="n">get_hosted_zone</span><span class="p">()</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>region</strong> (<em>str</em>) – The region you’d like the zone for. By default, fetches the current region.</p>
@@ -864,6 +945,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elasticbeanstalk.get_solution_stack">
 <code class="sig-prename descclassname">pulumi_aws.elasticbeanstalk.</code><code class="sig-name descname">get_solution_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">most_recent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.get_solution_stack" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the name of a elastic beanstalk solution stack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">multi_docker</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticbeanstalk</span><span class="o">.</span><span class="n">get_solution_stack</span><span class="p">(</span><span class="n">most_recent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;^64bit Amazon Linux (.*) Multi-container Docker (.*)$$&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

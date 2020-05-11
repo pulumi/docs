@@ -24,6 +24,12 @@ this parameter to manage the DNS records for that domain.</p>
 <blockquote>
 <div><p><strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see <a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">“Regions and Availability Zones in Amazon Lightsail”</a> for more details</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">domain_test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lightsail</span><span class="o">.</span><span class="n">Domain</span><span class="p">(</span><span class="s2">&quot;domainTest&quot;</span><span class="p">,</span> <span class="n">domain_name</span><span class="o">=</span><span class="s2">&quot;mydomain.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -110,6 +116,20 @@ for more information.</p>
 <blockquote>
 <div><p><strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see <a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">“Regions and Availability Zones in Amazon Lightsail”</a> for more details</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="c1"># Create a new GitLab Lightsail Instance</span>
+<span class="n">gitlab_test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lightsail</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;gitlabTest&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="s2">&quot;us-east-1b&quot;</span><span class="p">,</span>
+    <span class="n">blueprint_id</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="n">bundle_id</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="n">key_pair_name</span><span class="o">=</span><span class="s2">&quot;some_key_name&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <p>Lightsail currently supports the following Availability Zones (e.g. <code class="docutils literal notranslate"><span class="pre">us-east-1a</span></code>):</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ap-northeast-1{a,c,d}</span></code></p></li>
@@ -349,6 +369,25 @@ Lightsail.</p>
 <blockquote>
 <div><p><strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see <a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">“Regions and Availability Zones in Amazon Lightsail”</a> for more details</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="c1"># Create a new Lightsail Key Pair</span>
+<span class="n">lg_key_pair</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lightsail</span><span class="o">.</span><span class="n">KeyPair</span><span class="p">(</span><span class="s2">&quot;lgKeyPair&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">lg_key_pair</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lightsail</span><span class="o">.</span><span class="n">KeyPair</span><span class="p">(</span><span class="s2">&quot;lgKeyPair&quot;</span><span class="p">,</span> <span class="n">pgp_key</span><span class="o">=</span><span class="s2">&quot;keybase:keybaseusername&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">lg_key_pair</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lightsail</span><span class="o">.</span><span class="n">KeyPair</span><span class="p">(</span><span class="s2">&quot;lgKeyPair&quot;</span><span class="p">,</span> <span class="n">public_key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;~/.ssh/id_rsa.pub&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -494,6 +533,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see <a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">“Regions and Availability Zones in Amazon Lightsail”</a> for more details</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lightsail</span><span class="o">.</span><span class="n">StaticIp</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -592,6 +637,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see <a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">“Regions and Availability Zones in Amazon Lightsail”</a> for more details</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_static_ip</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lightsail</span><span class="o">.</span><span class="n">StaticIp</span><span class="p">(</span><span class="s2">&quot;testStaticIp&quot;</span><span class="p">)</span>
+<span class="n">test_instance</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lightsail</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;testInstance&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="s2">&quot;us-east-1b&quot;</span><span class="p">,</span>
+    <span class="n">blueprint_id</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="n">bundle_id</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="n">key_pair_name</span><span class="o">=</span><span class="s2">&quot;some_key_name&quot;</span><span class="p">)</span>
+<span class="n">test_static_ip_attachment</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lightsail</span><span class="o">.</span><span class="n">StaticIpAttachment</span><span class="p">(</span><span class="s2">&quot;testStaticIpAttachment&quot;</span><span class="p">,</span>
+    <span class="n">instance_name</span><span class="o">=</span><span class="n">test_instance</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">static_ip_name</span><span class="o">=</span><span class="n">test_static_ip</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

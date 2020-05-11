@@ -22,6 +22,18 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.directoryservice.ConditionalForwader">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directoryservice.</code><code class="sig-name descname">ConditionalForwader</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">directory_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_ips</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remote_domain_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.ConditionalForwader" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a conditional forwarder for managed Microsoft AD in AWS Directory Service.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directoryservice</span><span class="o">.</span><span class="n">ConditionalForwader</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">directory_id</span><span class="o">=</span><span class="n">aws_directory_service_directory</span><span class="p">[</span><span class="s2">&quot;ad&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">dns_ips</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;8.8.8.8&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;8.8.4.4&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">remote_domain_name</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -116,6 +128,88 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> All arguments including the password and customer username will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="s2">&quot;us-west-2a&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">bar_subnet</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;barSubnet&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="s2">&quot;us-west-2b&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">bar_directory</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directoryservice</span><span class="o">.</span><span class="n">Directory</span><span class="p">(</span><span class="s2">&quot;barDirectory&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;SuperSecretPassw0rd&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;Small&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Project&quot;</span><span class="p">:</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vpc_settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;subnetIds&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="n">bar_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;vpcId&quot;</span><span class="p">:</span> <span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="s2">&quot;us-west-2a&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">bar_subnet</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;barSubnet&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="s2">&quot;us-west-2b&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">bar_directory</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directoryservice</span><span class="o">.</span><span class="n">Directory</span><span class="p">(</span><span class="s2">&quot;barDirectory&quot;</span><span class="p">,</span>
+    <span class="n">edition</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;SuperSecretPassw0rd&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Project&quot;</span><span class="p">:</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;MicrosoftAD&quot;</span><span class="p">,</span>
+    <span class="n">vpc_settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;subnetIds&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="n">bar_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;vpcId&quot;</span><span class="p">:</span> <span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="s2">&quot;us-west-2a&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="s2">&quot;us-west-2b&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">connector</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directoryservice</span><span class="o">.</span><span class="n">Directory</span><span class="p">(</span><span class="s2">&quot;connector&quot;</span><span class="p">,</span>
+    <span class="n">connect_settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;customerDnsIps&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;A.B.C.D&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;customerUsername&quot;</span><span class="p">:</span> <span class="s2">&quot;Admin&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subnetIds&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="n">bar</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;vpcId&quot;</span><span class="p">:</span> <span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;SuperSecretPassw0rd&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;Small&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;ADConnector&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -417,6 +511,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directoryservice.LogService">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directoryservice.</code><code class="sig-name descname">LogService</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">directory_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.LogService" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Log subscription for AWS Directory Service that pushes logs to cloudwatch.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_log_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">LogGroup</span><span class="p">(</span><span class="s2">&quot;exampleLogGroup&quot;</span><span class="p">,</span> <span class="n">retention_in_days</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">ad_log_policy_policy_document</span> <span class="o">=</span> <span class="n">example_log_group</span><span class="o">.</span><span class="n">arn</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">arn</span><span class="p">:</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;logs:CreateLogStream&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;logs:PutLogEvents&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;effect&quot;</span><span class="p">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;principals&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;identifiers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ds.amazonaws.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Service&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">arn</span><span class="p">],</span>
+<span class="p">}]))</span>
+<span class="n">ad_log_policy_log_resource_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">LogResourcePolicy</span><span class="p">(</span><span class="s2">&quot;ad-log-policyLogResourcePolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy_document</span><span class="o">=</span><span class="n">ad_log_policy_policy_document</span><span class="o">.</span><span class="n">json</span><span class="p">,</span>
+    <span class="n">policy_name</span><span class="o">=</span><span class="s2">&quot;ad-log-policy&quot;</span><span class="p">)</span>
+<span class="n">example_log_service</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directoryservice</span><span class="o">.</span><span class="n">LogService</span><span class="p">(</span><span class="s2">&quot;exampleLogService&quot;</span><span class="p">,</span>
+    <span class="n">directory_id</span><span class="o">=</span><span class="n">aws_directory_service_directory</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">log_group_name</span><span class="o">=</span><span class="n">example_log_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -499,6 +617,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directoryservice.get_directory">
 <code class="sig-prename descclassname">pulumi_aws.directoryservice.</code><code class="sig-name descname">get_directory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directory_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.get_directory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get attributes of AWS Directory Service directory (SimpleAD, Managed AD, AD Connector). It’s especially useful to refer AWS Managed AD or on-premise AD in AD Connector configuration.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directoryservice</span><span class="o">.</span><span class="n">get_directory</span><span class="p">(</span><span class="n">directory_id</span><span class="o">=</span><span class="n">aws_directory_service_directory</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -19,6 +19,37 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides a Kinesis Analytics Application resource. Kinesis Analytics is a managed service that
 allows processing and analyzing streaming data using standard SQL.</p>
 <p>For more details, see the <a class="reference external" href="https://docs.aws.amazon.com/kinesisanalytics/latest/dev/what-is.html">Amazon Kinesis Analytics Documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_stream</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kinesis</span><span class="o">.</span><span class="n">Stream</span><span class="p">(</span><span class="s2">&quot;testStream&quot;</span><span class="p">,</span> <span class="n">shard_count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">test_application</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kinesis</span><span class="o">.</span><span class="n">AnalyticsApplication</span><span class="p">(</span><span class="s2">&quot;testApplication&quot;</span><span class="p">,</span> <span class="n">inputs</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;kinesisStream&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;resourceArn&quot;</span><span class="p">:</span> <span class="n">test_stream</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;namePrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;test_prefix&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;parallelism&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;schema&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;recordColumns&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;mapping&quot;</span><span class="p">:</span> <span class="s2">&quot;$$.test&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sqlType&quot;</span><span class="p">:</span> <span class="s2">&quot;VARCHAR(8)&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;recordEncoding&quot;</span><span class="p">:</span> <span class="s2">&quot;UTF-8&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;recordFormat&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;mappingParameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;json&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;recordRowPath&quot;</span><span class="p">:</span> <span class="s2">&quot;$$&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+<span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -684,6 +715,180 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">FirehoseDeliveryStream</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extended_s3_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kinesis_source_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redshift_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_side_encryption</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">splunk_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Kinesis Firehose Delivery Stream resource. Amazon Kinesis Firehose is a fully managed, elastic service to easily deliver real-time data streams to destinations such as Amazon S3 and Amazon Redshift.</p>
 <p>For more details, see the <a class="reference external" href="https://aws.amazon.com/documentation/firehose/">Amazon Kinesis Firehose Documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">,</span> <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">firehose_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;firehoseRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;firehose.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Sid&quot;: &quot;&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">lambda_iam</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;lambdaIam&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;lambda.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Sid&quot;: &quot;&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">lambda_processor</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lambda_</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s2">&quot;lambdaProcessor&quot;</span><span class="p">,</span>
+    <span class="n">code</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">FileArchive</span><span class="p">(</span><span class="s2">&quot;lambda.zip&quot;</span><span class="p">),</span>
+    <span class="n">handler</span><span class="o">=</span><span class="s2">&quot;exports.handler&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">lambda_iam</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">runtime</span><span class="o">=</span><span class="s2">&quot;nodejs8.10&quot;</span><span class="p">)</span>
+<span class="n">extended_s3_stream</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kinesis</span><span class="o">.</span><span class="n">FirehoseDeliveryStream</span><span class="p">(</span><span class="s2">&quot;extendedS3Stream&quot;</span><span class="p">,</span>
+    <span class="n">destination</span><span class="o">=</span><span class="s2">&quot;extended_s3&quot;</span><span class="p">,</span>
+    <span class="n">extended_s3_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;bucketArn&quot;</span><span class="p">:</span> <span class="n">bucket</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+        <span class="s2">&quot;processingConfiguration&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;processors&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">&quot;parameterName&quot;</span><span class="p">:</span> <span class="s2">&quot;LambdaArn&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;parameterValue&quot;</span><span class="p">:</span> <span class="n">lambda_processor</span><span class="o">.</span><span class="n">arn</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">arn</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">arn</span><span class="si">}</span><span class="s2">:$$LATEST&quot;</span><span class="p">),</span>
+                <span class="p">}],</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Lambda&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">firehose_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">,</span> <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">firehose_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;firehoseRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;firehose.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Sid&quot;: &quot;&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">test_stream</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kinesis</span><span class="o">.</span><span class="n">FirehoseDeliveryStream</span><span class="p">(</span><span class="s2">&quot;testStream&quot;</span><span class="p">,</span>
+    <span class="n">destination</span><span class="o">=</span><span class="s2">&quot;s3&quot;</span><span class="p">,</span>
+    <span class="n">s3_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;bucketArn&quot;</span><span class="p">:</span> <span class="n">bucket</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">firehose_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_cluster</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">redshift</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;testCluster&quot;</span><span class="p">,</span>
+    <span class="n">cluster_identifier</span><span class="o">=</span><span class="s2">&quot;tf-redshift-cluster-</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">cluster_type</span><span class="o">=</span><span class="s2">&quot;single-node&quot;</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">master_password</span><span class="o">=</span><span class="s2">&quot;T3stPass&quot;</span><span class="p">,</span>
+    <span class="n">master_username</span><span class="o">=</span><span class="s2">&quot;testuser&quot;</span><span class="p">,</span>
+    <span class="n">node_type</span><span class="o">=</span><span class="s2">&quot;dc1.large&quot;</span><span class="p">)</span>
+<span class="n">test_stream</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kinesis</span><span class="o">.</span><span class="n">FirehoseDeliveryStream</span><span class="p">(</span><span class="s2">&quot;testStream&quot;</span><span class="p">,</span>
+    <span class="n">destination</span><span class="o">=</span><span class="s2">&quot;redshift&quot;</span><span class="p">,</span>
+    <span class="n">redshift_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;clusterJdbcurl&quot;</span><span class="p">:</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">test_cluster</span><span class="o">.</span><span class="n">endpoint</span><span class="p">,</span> <span class="n">test_cluster</span><span class="o">.</span><span class="n">database_name</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">endpoint</span><span class="p">,</span> <span class="n">database_name</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;jdbc:redshift://</span><span class="si">{</span><span class="n">endpoint</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">database_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;copyOptions&quot;</span><span class="p">:</span> <span class="s2">&quot;delimiter &#39;|&#39;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dataTableColumns&quot;</span><span class="p">:</span> <span class="s2">&quot;test-col&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dataTableName&quot;</span><span class="p">:</span> <span class="s2">&quot;test-table&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;T3stPass&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;s3BackupConfiguration&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;bucketArn&quot;</span><span class="p">:</span> <span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s2">&quot;bucket&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;bufferInterval&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+            <span class="s2">&quot;bufferSize&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+            <span class="s2">&quot;compressionFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;GZIP&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;s3BackupMode&quot;</span><span class="p">:</span> <span class="s2">&quot;Enabled&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;testuser&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">s3_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;bucketArn&quot;</span><span class="p">:</span> <span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s2">&quot;bucket&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;bufferInterval&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+        <span class="s2">&quot;bufferSize&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;compressionFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;GZIP&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_cluster</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticsearch</span><span class="o">.</span><span class="n">Domain</span><span class="p">(</span><span class="s2">&quot;testCluster&quot;</span><span class="p">)</span>
+<span class="n">test_stream</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kinesis</span><span class="o">.</span><span class="n">FirehoseDeliveryStream</span><span class="p">(</span><span class="s2">&quot;testStream&quot;</span><span class="p">,</span>
+    <span class="n">destination</span><span class="o">=</span><span class="s2">&quot;elasticsearch&quot;</span><span class="p">,</span>
+    <span class="n">elasticsearch_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;domainArn&quot;</span><span class="p">:</span> <span class="n">test_cluster</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+        <span class="s2">&quot;indexName&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;processingConfiguration&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;processors&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">&quot;parameterName&quot;</span><span class="p">:</span> <span class="s2">&quot;LambdaArn&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;parameterValue&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">aws_lambda_function</span><span class="p">[</span><span class="s1">&#39;lambda_processor&#39;</span><span class="p">][</span><span class="s1">&#39;arn&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">:$$LATEST&quot;</span><span class="p">,</span>
+                <span class="p">}],</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Lambda&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;typeName&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">s3_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;bucketArn&quot;</span><span class="p">:</span> <span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s2">&quot;bucket&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;bufferInterval&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+        <span class="s2">&quot;bufferSize&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;compressionFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;GZIP&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_stream</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kinesis</span><span class="o">.</span><span class="n">FirehoseDeliveryStream</span><span class="p">(</span><span class="s2">&quot;testStream&quot;</span><span class="p">,</span>
+    <span class="n">destination</span><span class="o">=</span><span class="s2">&quot;splunk&quot;</span><span class="p">,</span>
+    <span class="n">s3_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;bucketArn&quot;</span><span class="p">:</span> <span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s2">&quot;bucket&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;bufferInterval&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+        <span class="s2">&quot;bufferSize&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;compressionFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;GZIP&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">splunk_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;hecAcknowledgmentTimeout&quot;</span><span class="p">:</span> <span class="mi">600</span><span class="p">,</span>
+        <span class="s2">&quot;hecEndpoint&quot;</span><span class="p">:</span> <span class="s2">&quot;https://http-inputs-mydomain.splunkcloud.com:443&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hecEndpointType&quot;</span><span class="p">:</span> <span class="s2">&quot;Event&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hecToken&quot;</span><span class="p">:</span> <span class="s2">&quot;51D4DA16-C61B-4F5F-8EC7-ED4301342A4A&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;s3BackupMode&quot;</span><span class="p">:</span> <span class="s2">&quot;FailedEventsOnly&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1705,6 +1910,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Kinesis Stream resource. Amazon Kinesis is a managed service that
 scales elastically for real-time processing of streaming big data.</p>
 <p>For more details, see the <a class="reference external" href="https://aws.amazon.com/documentation/kinesis/">Amazon Kinesis Documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_stream</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kinesis</span><span class="o">.</span><span class="n">Stream</span><span class="p">(</span><span class="s2">&quot;testStream&quot;</span><span class="p">,</span>
+    <span class="n">retention_period</span><span class="o">=</span><span class="mi">48</span><span class="p">,</span>
+    <span class="n">shard_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">shard_level_metrics</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;IncomingBytes&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;OutgoingBytes&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1850,6 +2070,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">VideoStream</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_retention_in_hours</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">device_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">media_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Kinesis Video Stream resource. Amazon Kinesis Video Streams makes it easy to securely stream video from connected devices to AWS for analytics, machine learning (ML), playback, and other processing.</p>
 <p>For more details, see the <a class="reference external" href="https://aws.amazon.com/documentation/kinesis/">Amazon Kinesis Documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kinesis</span><span class="o">.</span><span class="n">VideoStream</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">data_retention_in_hours</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">device_name</span><span class="o">=</span><span class="s2">&quot;kinesis-video-device-name&quot;</span><span class="p">,</span>
+    <span class="n">media_type</span><span class="o">=</span><span class="s2">&quot;video/h264&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;kinesis-video-stream&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1991,6 +2223,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to get information about a Kinesis Stream for use in other
 resources.</p>
 <p>For more details, see the <a class="reference external" href="https://aws.amazon.com/documentation/kinesis/">Amazon Kinesis Documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">stream</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kinesis</span><span class="o">.</span><span class="n">get_stream</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;stream-name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

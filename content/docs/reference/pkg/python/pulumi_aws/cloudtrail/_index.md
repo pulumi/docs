@@ -44,6 +44,88 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p><em>NOTE:</em> For a multi-region trail, this resource must be in the home region of the trail.</p>
 <p><em>NOTE:</em> For an organization trail, this resource must be in the master account of the organization.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">current</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_caller_identity</span><span class="p">()</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">force_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">    &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">    &quot;Statement&quot;: [</span>
+<span class="s2">        </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">            &quot;Sid&quot;: &quot;AWSCloudTrailAclCheck&quot;,</span>
+<span class="s2">            &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">            &quot;Principal&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">              &quot;Service&quot;: &quot;cloudtrail.amazonaws.com&quot;</span>
+<span class="s2">            </span><span class="se">&#x7D;&#x7D;</span><span class="s2">,</span>
+<span class="s2">            &quot;Action&quot;: &quot;s3:GetBucketAcl&quot;,</span>
+<span class="s2">            &quot;Resource&quot;: &quot;arn:aws:s3:::tf-test-trail&quot;</span>
+<span class="s2">        </span><span class="se">&#x7D;&#x7D;</span><span class="s2">,</span>
+<span class="s2">        </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">            &quot;Sid&quot;: &quot;AWSCloudTrailWrite&quot;,</span>
+<span class="s2">            &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">            &quot;Principal&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">              &quot;Service&quot;: &quot;cloudtrail.amazonaws.com&quot;</span>
+<span class="s2">            </span><span class="se">&#x7D;&#x7D;</span><span class="s2">,</span>
+<span class="s2">            &quot;Action&quot;: &quot;s3:PutObject&quot;,</span>
+<span class="s2">            &quot;Resource&quot;: &quot;arn:aws:s3:::tf-test-trail/prefix/AWSLogs/</span><span class="si">{</span><span class="n">current</span><span class="o">.</span><span class="n">account_id</span><span class="si">}</span><span class="s2">/*&quot;,</span>
+<span class="s2">            &quot;Condition&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">                &quot;StringEquals&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">                    &quot;s3:x-amz-acl&quot;: &quot;bucket-owner-full-control&quot;</span>
+<span class="s2">                </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">            </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">        </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">    ]</span>
+<span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudtrail</span><span class="o">.</span><span class="n">Trail</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">include_global_service_events</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">s3_bucket_name</span><span class="o">=</span><span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">s3_key_prefix</span><span class="o">=</span><span class="s2">&quot;prefix&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudtrail</span><span class="o">.</span><span class="n">Trail</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">event_selectors</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;dataResource&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS::Lambda::Function&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;arn:aws:lambda&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="s2">&quot;includeManagementEvents&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;readWriteType&quot;</span><span class="p">:</span> <span class="s2">&quot;All&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudtrail</span><span class="o">.</span><span class="n">Trail</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">event_selectors</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;dataResource&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS::S3::Object&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;arn:aws:s3:::&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="s2">&quot;includeManagementEvents&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;readWriteType&quot;</span><span class="p">:</span> <span class="s2">&quot;All&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">important_bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">get_bucket</span><span class="p">(</span><span class="n">bucket</span><span class="o">=</span><span class="s2">&quot;important-bucket&quot;</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudtrail</span><span class="o">.</span><span class="n">Trail</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">event_selectors</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;dataResource&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS::S3::Object&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">important_bucket</span><span class="o">.</span><span class="n">arn</span><span class="si">}</span><span class="s2">/&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="s2">&quot;includeManagementEvents&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;readWriteType&quot;</span><span class="p">:</span> <span class="s2">&quot;All&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -294,6 +376,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.cloudtrail.</code><code class="sig-name descname">get_service_account</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudtrail.get_service_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the Account ID of the <a class="reference external" href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-supported-regions.html">AWS CloudTrail Service Account</a>
 in a given region for the purpose of allowing CloudTrail to store trail data in S3.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudtrail</span><span class="o">.</span><span class="n">get_service_account</span><span class="p">()</span>
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">,</span>
+    <span class="n">force_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">  &quot;Version&quot;: &quot;2008-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">      &quot;Sid&quot;: &quot;Put bucket policy needed for trails&quot;,</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">        &quot;AWS&quot;: &quot;</span><span class="si">{</span><span class="n">main</span><span class="o">.</span><span class="n">arn</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="s2">      </span><span class="se">&#x7D;&#x7D;</span><span class="s2">,</span>
+<span class="s2">      &quot;Action&quot;: &quot;s3:PutObject&quot;,</span>
+<span class="s2">      &quot;Resource&quot;: &quot;arn:aws:s3:::tf-cloudtrail-logging-test-bucket/*&quot;</span>
+<span class="s2">    </span><span class="se">&#x7D;&#x7D;</span><span class="s2">,</span>
+<span class="s2">    </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">      &quot;Sid&quot;: &quot;Get bucket policy needed for trails&quot;,</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">        &quot;AWS&quot;: &quot;</span><span class="si">{</span><span class="n">main</span><span class="o">.</span><span class="n">arn</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="s2">      </span><span class="se">&#x7D;&#x7D;</span><span class="s2">,</span>
+<span class="s2">      &quot;Action&quot;: &quot;s3:GetBucketAcl&quot;,</span>
+<span class="s2">      &quot;Resource&quot;: &quot;arn:aws:s3:::tf-cloudtrail-logging-test-bucket&quot;</span>
+<span class="s2">    </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">  ]</span>
+<span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>region</strong> (<em>str</em>) – Name of the region whose AWS CloudTrail account ID is desired.

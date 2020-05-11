@@ -21,6 +21,12 @@ Please keep in mind that this feature is only supported on the “us-west-2” r
 This resource will error if you try to create a project in another region.</p>
 <p>For more information about Device Farm Projects, see the AWS Documentation on
 [Device Farm Projects][aws-get-project].</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">awesome_devices</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">devicefarm</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;awesomeDevices&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

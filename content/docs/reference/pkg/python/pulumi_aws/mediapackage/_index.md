@@ -17,6 +17,14 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.mediapackage.Channel">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.mediapackage.</code><code class="sig-name descname">Channel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">channel_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mediapackage.Channel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS Elemental MediaPackage Channel.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">kittens</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">mediapackage</span><span class="o">.</span><span class="n">Channel</span><span class="p">(</span><span class="s2">&quot;kittens&quot;</span><span class="p">,</span>
+    <span class="n">channel_id</span><span class="o">=</span><span class="s2">&quot;kitten-channel&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A channel dedicated to amusing videos of kittens.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

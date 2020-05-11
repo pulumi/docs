@@ -17,6 +17,28 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.ssm.Activation">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">Activation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expiration_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registration_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Activation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Registers an on-premises server or virtual machine with Amazon EC2 so that it can be managed using Run Command.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;testRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;  {</span>
+<span class="s2">    &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">    &quot;Statement&quot;: {</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {&quot;Service&quot;: &quot;ssm.amazonaws.com&quot;},</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  }</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">test_attach</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicyAttachment</span><span class="p">(</span><span class="s2">&quot;testAttach&quot;</span><span class="p">,</span>
+    <span class="n">policy_arn</span><span class="o">=</span><span class="s2">&quot;arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">test_role</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ssm</span><span class="o">.</span><span class="n">Activation</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Test&quot;</span><span class="p">,</span>
+    <span class="n">iam_role</span><span class="o">=</span><span class="n">test_role</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">registration_limit</span><span class="o">=</span><span class="s2">&quot;5&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -153,6 +175,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.Association">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">Association</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">association_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">automation_target_parameter_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compliance_severity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">document_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_concurrency</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_errors</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedule_expression</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">targets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Association" title="Permalink to this definition">¶</a></dt>
 <dd><p>Associates an SSM Document to an instance or EC2 tag.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ssm</span><span class="o">.</span><span class="n">Association</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">targets</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;InstanceIds&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">aws_instance</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -370,6 +401,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 or greater can update their content once created, see <a class="reference external" href="http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html#document-schemas-features">SSM Schema Features</a>. To update a document with an older
 schema version you must recreate the resource.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ssm</span><span class="o">.</span><span class="n">Document</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;  {</span>
+<span class="s2">    &quot;schemaVersion&quot;: &quot;1.2&quot;,</span>
+<span class="s2">    &quot;description&quot;: &quot;Check ip configuration of a Linux instance.&quot;,</span>
+<span class="s2">    &quot;parameters&quot;: {</span>
+
+<span class="s2">    },</span>
+<span class="s2">    &quot;runtimeConfig&quot;: {</span>
+<span class="s2">      &quot;aws:runShellScript&quot;: {</span>
+<span class="s2">        &quot;properties&quot;: [</span>
+<span class="s2">          {</span>
+<span class="s2">            &quot;id&quot;: &quot;0.aws:runShellScript&quot;,</span>
+<span class="s2">            &quot;runCommand&quot;: [&quot;ifconfig&quot;]</span>
+<span class="s2">          }</span>
+<span class="s2">        ]</span>
+<span class="s2">      }</span>
+<span class="s2">    }</span>
+<span class="s2">  }</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">document_type</span><span class="o">=</span><span class="s2">&quot;Command&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The permissions attribute specifies how you want to share the document. If you share a document privately,
 you must specify the AWS user account IDs for those people who can use the document. If you share a document
 publicly, you must specify All as the account ID.</p>
@@ -399,11 +456,6 @@ publicly, you must specify All as the account ID.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The key describing the location of an attachment to a document. Valid key types include: <code class="docutils literal notranslate"><span class="pre">SourceUrl</span></code> and <code class="docutils literal notranslate"><span class="pre">S3FileUrl</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the document attachment file</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The value describing the location of an attachment to a document</p></li>
-</ul>
-<p>The <strong>permissions</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">account_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <dl class="py attribute">
 <dt id="pulumi_aws.ssm.Document.attachments_sources">
@@ -498,10 +550,6 @@ publicly, you must specify All as the account ID.</p>
 <dt id="pulumi_aws.ssm.Document.permissions">
 <code class="sig-name descname">permissions</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Document.permissions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Additional Permissions to attach to the document. See Permissions below for details.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">account_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-</ul>
 </dd></dl>
 
 <dl class="py attribute">
@@ -578,11 +626,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">default_value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the document.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the document.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
-<p>The <strong>permissions</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">account_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </dd></dl>
@@ -695,6 +738,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.MaintenanceWindow">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">MaintenanceWindow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_unassociated_targets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cutoff</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">duration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedule_timezone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SSM Maintenance Window resource</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">production</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ssm</span><span class="o">.</span><span class="n">MaintenanceWindow</span><span class="p">(</span><span class="s2">&quot;production&quot;</span><span class="p">,</span>
+    <span class="n">cutoff</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">duration</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">schedule</span><span class="o">=</span><span class="s2">&quot;cron(0 16 ? * TUE *)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -854,6 +906,43 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.MaintenanceWindowTarget">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">MaintenanceWindowTarget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_information</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">targets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">window_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTarget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SSM Maintenance Window Target resource</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">window</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ssm</span><span class="o">.</span><span class="n">MaintenanceWindow</span><span class="p">(</span><span class="s2">&quot;window&quot;</span><span class="p">,</span>
+    <span class="n">cutoff</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">duration</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">schedule</span><span class="o">=</span><span class="s2">&quot;cron(0 16 ? * TUE *)&quot;</span><span class="p">)</span>
+<span class="n">target1</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ssm</span><span class="o">.</span><span class="n">MaintenanceWindowTarget</span><span class="p">(</span><span class="s2">&quot;target1&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is a maintenance window target&quot;</span><span class="p">,</span>
+    <span class="n">resource_type</span><span class="o">=</span><span class="s2">&quot;INSTANCE&quot;</span><span class="p">,</span>
+    <span class="n">targets</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;tag:Name&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;acceptance_test&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">window_id</span><span class="o">=</span><span class="n">window</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">window</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ssm</span><span class="o">.</span><span class="n">MaintenanceWindow</span><span class="p">(</span><span class="s2">&quot;window&quot;</span><span class="p">,</span>
+    <span class="n">cutoff</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">duration</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">schedule</span><span class="o">=</span><span class="s2">&quot;cron(0 16 ? * TUE *)&quot;</span><span class="p">)</span>
+<span class="n">target1</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ssm</span><span class="o">.</span><span class="n">MaintenanceWindowTarget</span><span class="p">(</span><span class="s2">&quot;target1&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is a maintenance window target&quot;</span><span class="p">,</span>
+    <span class="n">resource_type</span><span class="o">=</span><span class="s2">&quot;RESOURCE_GROUP&quot;</span><span class="p">,</span>
+    <span class="n">targets</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;resource-groups:ResourceTypeFilters&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;AWS::EC2::INSTANCE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;AWS::EC2::VPC&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">window_id</span><span class="o">=</span><span class="n">window</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -985,6 +1074,89 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.MaintenanceWindowTask">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">MaintenanceWindowTask</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logging_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_concurrency</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_errors</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">targets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">task_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">task_invocation_parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">task_parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">task_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">window_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTask" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SSM Maintenance Window Task resource</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ssm</span><span class="o">.</span><span class="n">MaintenanceWindowTask</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">max_concurrency</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">max_errors</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">priority</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">service_role_arn</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">targets</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;InstanceIds&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">aws_instance</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
+    <span class="p">}],</span>
+    <span class="n">task_arn</span><span class="o">=</span><span class="s2">&quot;AWS-RestartEC2Instance&quot;</span><span class="p">,</span>
+    <span class="n">task_invocation_parameters</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;automationParameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;documentVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;$$LATEST&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;parameter&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;InstanceId&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">aws_instance</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
+            <span class="p">}],</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">task_type</span><span class="o">=</span><span class="s2">&quot;AUTOMATION&quot;</span><span class="p">,</span>
+    <span class="n">window_id</span><span class="o">=</span><span class="n">aws_ssm_maintenance_window</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ssm</span><span class="o">.</span><span class="n">MaintenanceWindowTask</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">max_concurrency</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">max_errors</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">priority</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">service_role_arn</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">targets</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;InstanceIds&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">aws_instance</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
+    <span class="p">}],</span>
+    <span class="n">task_arn</span><span class="o">=</span><span class="s2">&quot;AWS-RunShellScript&quot;</span><span class="p">,</span>
+    <span class="n">task_invocation_parameters</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;runCommandParameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;notificationConfig&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;notificationArn&quot;</span><span class="p">:</span> <span class="n">aws_sns_topic</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;notificationEvents&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;All&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;notificationType&quot;</span><span class="p">:</span> <span class="s2">&quot;Command&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;outputS3Bucket&quot;</span><span class="p">:</span> <span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;bucket&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;outputS3KeyPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;output&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;parameter&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;commands&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">],</span>
+            <span class="p">}],</span>
+            <span class="s2">&quot;serviceRoleArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;timeoutSeconds&quot;</span><span class="p">:</span> <span class="mi">600</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">task_type</span><span class="o">=</span><span class="s2">&quot;RUN_COMMAND&quot;</span><span class="p">,</span>
+    <span class="n">window_id</span><span class="o">=</span><span class="n">aws_ssm_maintenance_window</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ssm</span><span class="o">.</span><span class="n">MaintenanceWindowTask</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">max_concurrency</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">max_errors</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">priority</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">service_role_arn</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">targets</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;InstanceIds&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">aws_instance</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
+    <span class="p">}],</span>
+    <span class="n">task_arn</span><span class="o">=</span><span class="n">aws_sfn_activity</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">task_invocation_parameters</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;stepFunctionsParameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;input&quot;</span><span class="p">:</span> <span class="s2">&quot;{&quot;</span><span class="n">key1</span><span class="s2">&quot;:&quot;</span><span class="n">value1</span><span class="s2">&quot;}&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">task_type</span><span class="o">=</span><span class="s2">&quot;STEP_FUNCTIONS&quot;</span><span class="p">,</span>
+    <span class="n">window_id</span><span class="o">=</span><span class="n">aws_ssm_maintenance_window</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1352,6 +1524,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.Parameter">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">Parameter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_pattern</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">overwrite</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Parameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SSM Parameter resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ssm</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;String&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1512,6 +1692,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 both marked as optional fields, but the Patch Baseline requires that at least one
 of them is specified.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">production</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ssm</span><span class="o">.</span><span class="n">PatchBaseline</span><span class="p">(</span><span class="s2">&quot;production&quot;</span><span class="p">,</span> <span class="n">approved_patches</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;KB123456&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1699,6 +1885,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.PatchGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">PatchGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">baseline_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">patch_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.PatchGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SSM Patch Group resource</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">production</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ssm</span><span class="o">.</span><span class="n">PatchBaseline</span><span class="p">(</span><span class="s2">&quot;production&quot;</span><span class="p">,</span> <span class="n">approved_patches</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;KB123456&quot;</span><span class="p">])</span>
+<span class="n">patchgroup</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ssm</span><span class="o">.</span><span class="n">PatchGroup</span><span class="p">(</span><span class="s2">&quot;patchgroup&quot;</span><span class="p">,</span>
+    <span class="n">baseline_id</span><span class="o">=</span><span class="n">production</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">patch_group</span><span class="o">=</span><span class="s2">&quot;patch-group-name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1781,6 +1976,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.ResourceDataSync">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">ResourceDataSync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3_destination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.ResourceDataSync" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a SSM resource data sync.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">hoge_bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;hogeBucket&quot;</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">)</span>
+<span class="n">hoge_bucket_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">BucketPolicy</span><span class="p">(</span><span class="s2">&quot;hogeBucketPolicy&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">hoge_bucket</span><span class="o">.</span><span class="n">bucket</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">    &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">    &quot;Statement&quot;: [</span>
+<span class="s2">        {</span>
+<span class="s2">            &quot;Sid&quot;: &quot;SSMBucketPermissionsCheck&quot;,</span>
+<span class="s2">            &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">            &quot;Principal&quot;: {</span>
+<span class="s2">                &quot;Service&quot;: &quot;ssm.amazonaws.com&quot;</span>
+<span class="s2">            },</span>
+<span class="s2">            &quot;Action&quot;: &quot;s3:GetBucketAcl&quot;,</span>
+<span class="s2">            &quot;Resource&quot;: &quot;arn:aws:s3:::tf-test-bucket-1234&quot;</span>
+<span class="s2">        },</span>
+<span class="s2">        {</span>
+<span class="s2">            &quot;Sid&quot;: &quot; SSMBucketDelivery&quot;,</span>
+<span class="s2">            &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">            &quot;Principal&quot;: {</span>
+<span class="s2">                &quot;Service&quot;: &quot;ssm.amazonaws.com&quot;</span>
+<span class="s2">            },</span>
+<span class="s2">            &quot;Action&quot;: &quot;s3:PutObject&quot;,</span>
+<span class="s2">            &quot;Resource&quot;: [&quot;arn:aws:s3:::tf-test-bucket-1234/*&quot;],</span>
+<span class="s2">            &quot;Condition&quot;: {</span>
+<span class="s2">                &quot;StringEquals&quot;: {</span>
+<span class="s2">                    &quot;s3:x-amz-acl&quot;: &quot;bucket-owner-full-control&quot;</span>
+<span class="s2">                }</span>
+<span class="s2">            }</span>
+<span class="s2">        }</span>
+<span class="s2">    ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ssm</span><span class="o">.</span><span class="n">ResourceDataSync</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="n">s3_destination</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;bucketName&quot;</span><span class="p">:</span> <span class="n">hoge_bucket</span><span class="o">.</span><span class="n">bucket</span><span class="p">,</span>
+    <span class="s2">&quot;region&quot;</span><span class="p">:</span> <span class="n">hoge_bucket</span><span class="o">.</span><span class="n">region</span><span class="p">,</span>
+<span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1886,6 +2123,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.get_document">
 <code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">get_document</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">document_format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">document_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.get_document" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the contents of the specified Systems Manager document.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ssm</span><span class="o">.</span><span class="n">get_document</span><span class="p">(</span><span class="n">document_format</span><span class="o">=</span><span class="s2">&quot;YAML&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;AWS-GatherSoftwareInventory&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">,</span> <span class="n">foo</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1901,6 +2146,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.get_parameter">
 <code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">get_parameter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">with_decryption</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.get_parameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SSM Parameter data source.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ssm</span><span class="o">.</span><span class="n">get_parameter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1915,6 +2166,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.get_patch_baseline">
 <code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">get_patch_baseline</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">default_baseline</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">operating_system</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.get_patch_baseline" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SSM Patch Baseline data source. Useful if you wish to reuse the default baselines provided.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">centos</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ssm</span><span class="o">.</span><span class="n">get_patch_baseline</span><span class="p">(</span><span class="n">name_prefix</span><span class="o">=</span><span class="s2">&quot;AWS-&quot;</span><span class="p">,</span>
+    <span class="n">operating_system</span><span class="o">=</span><span class="s2">&quot;CENTOS&quot;</span><span class="p">,</span>
+    <span class="n">owner</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

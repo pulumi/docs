@@ -288,12 +288,35 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2transitgateway.</code><code class="sig-name descname">PeeringAttachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_transit_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transit_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.PeeringAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EC2 Transit Gateway Peering Attachment.
 For examples of custom route table association and propagation, see the <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/tgw/TGW_Scenarios.html">EC2 Transit Gateway Networking Examples Guide</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_pulumi</span> <span class="k">as</span> <span class="nn">pulumi</span>
+
+<span class="n">local</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">Aws</span><span class="p">(</span><span class="s2">&quot;local&quot;</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">)</span>
+<span class="n">peer</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">Aws</span><span class="p">(</span><span class="s2">&quot;peer&quot;</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-west-2&quot;</span><span class="p">)</span>
+<span class="n">peer_region</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_region</span><span class="p">()</span>
+<span class="n">local_transit_gateway</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">TransitGateway</span><span class="p">(</span><span class="s2">&quot;localTransitGateway&quot;</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Local TGW&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">peer_transit_gateway</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">TransitGateway</span><span class="p">(</span><span class="s2">&quot;peerTransitGateway&quot;</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Peer TGW&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">PeeringAttachment</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">peer_account_id</span><span class="o">=</span><span class="n">peer_transit_gateway</span><span class="o">.</span><span class="n">owner_id</span><span class="p">,</span>
+    <span class="n">peer_region</span><span class="o">=</span><span class="n">peer_region</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">peer_transit_gateway_id</span><span class="o">=</span><span class="n">peer_transit_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">transit_gateway_id</span><span class="o">=</span><span class="n">local_transit_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;TGW Peering Requestor&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>peer_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/index.html">AWS provider</a> is currently connected to.</p></li>
+<li><p><strong>peer_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.</p></li>
 <li><p><strong>peer_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Region of EC2 Transit Gateway to peer with.</p></li>
 <li><p><strong>peer_transit_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Transit Gateway to peer with.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value tags for the EC2 Transit Gateway Peering Attachment.</p></li>
@@ -304,7 +327,7 @@ For examples of custom route table association and propagation, see the <a class
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2transitgateway.PeeringAttachment.peer_account_id">
 <code class="sig-name descname">peer_account_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.PeeringAttachment.peer_account_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/index.html">AWS provider</a> is currently connected to.</p>
+<dd><p>Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -342,8 +365,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>peer_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/index.html">AWS provider</a> is currently connected to.</p>
-</p></li>
+<li><p><strong>peer_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.</p></li>
 <li><p><strong>peer_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Region of EC2 Transit Gateway to peer with.</p></li>
 <li><p><strong>peer_transit_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Transit Gateway to peer with.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value tags for the EC2 Transit Gateway Peering Attachment.</p></li>
@@ -395,6 +417,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2transitgateway.Route">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2transitgateway.</code><code class="sig-name descname">Route</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">blackhole</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transit_gateway_attachment_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transit_gateway_route_table_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.Route" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EC2 Transit Gateway Route.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">Route</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">destination_cidr_block</span><span class="o">=</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">,</span>
+    <span class="n">transit_gateway_attachment_id</span><span class="o">=</span><span class="n">aws_ec2_transit_gateway_vpc_attachment</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">transit_gateway_route_table_id</span><span class="o">=</span><span class="n">aws_ec2_transit_gateway</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;association_default_route_table_id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">Route</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">blackhole</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">destination_cidr_block</span><span class="o">=</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">,</span>
+    <span class="n">transit_gateway_route_table_id</span><span class="o">=</span><span class="n">aws_ec2_transit_gateway</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;association_default_route_table_id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -493,6 +533,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2transitgateway.RouteTable">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2transitgateway.</code><code class="sig-name descname">RouteTable</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transit_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.RouteTable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EC2 Transit Gateway Route Table.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">RouteTable</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">transit_gateway_id</span><span class="o">=</span><span class="n">aws_ec2_transit_gateway</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -589,6 +635,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2transitgateway.RouteTableAssociation">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2transitgateway.</code><code class="sig-name descname">RouteTableAssociation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transit_gateway_attachment_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transit_gateway_route_table_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.RouteTableAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EC2 Transit Gateway Route Table association.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">RouteTableAssociation</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">transit_gateway_attachment_id</span><span class="o">=</span><span class="n">aws_ec2_transit_gateway_vpc_attachment</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">transit_gateway_route_table_id</span><span class="o">=</span><span class="n">aws_ec2_transit_gateway_route_table</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -685,6 +739,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2transitgateway.RouteTablePropagation">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2transitgateway.</code><code class="sig-name descname">RouteTablePropagation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transit_gateway_attachment_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transit_gateway_route_table_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.RouteTablePropagation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EC2 Transit Gateway Route Table propagation.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">RouteTablePropagation</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">transit_gateway_attachment_id</span><span class="o">=</span><span class="n">aws_ec2_transit_gateway_vpc_attachment</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">transit_gateway_route_table_id</span><span class="o">=</span><span class="n">aws_ec2_transit_gateway_route_table</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -781,6 +843,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2transitgateway.TransitGateway">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2transitgateway.</code><code class="sig-name descname">TransitGateway</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">amazon_side_asn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_accept_shared_attachments</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_route_table_association</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_route_table_propagation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_support</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpn_ecmp_support</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.TransitGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EC2 Transit Gateway.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">TransitGateway</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -939,6 +1007,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2transitgateway.VpcAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2transitgateway.</code><code class="sig-name descname">VpcAttachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_support</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_support</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transit_gateway_default_route_table_association</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transit_gateway_default_route_table_propagation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transit_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EC2 Transit Gateway VPC Attachment. For examples of custom route table association and propagation, see the EC2 Transit Gateway Networking Examples Guide.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">VpcAttachment</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">subnet_ids</span><span class="o">=</span><span class="p">[</span><span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
+    <span class="n">transit_gateway_id</span><span class="o">=</span><span class="n">aws_ec2_transit_gateway</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1081,6 +1158,16 @@ is created, an EC2 Transit Gateway VPC Attachment resource is automatically crea
 The requester can use the <code class="docutils literal notranslate"><span class="pre">ec2transitgateway.VpcAttachment</span></code> resource to manage its side of the connection
 and the accepter can use the <code class="docutils literal notranslate"><span class="pre">ec2transitgateway.VpcAttachmentAccepter</span></code> resource to “adopt” its side of the
 connection into management.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">VpcAttachmentAccepter</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Example cross-account attachment&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">transit_gateway_attachment_id</span><span class="o">=</span><span class="n">aws_ec2_transit_gateway_vpc_attachment</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1221,6 +1308,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2transitgateway.get_direct_connect_gateway_attachment">
 <code class="sig-prename descclassname">pulumi_aws.ec2transitgateway.</code><code class="sig-name descname">get_direct_connect_gateway_attachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dx_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transit_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.get_direct_connect_gateway_attachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on an EC2 Transit Gateway’s attachment to a Direct Connect Gateway.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">get_direct_connect_gateway_attachment</span><span class="p">(</span><span class="n">dx_gateway_id</span><span class="o">=</span><span class="n">aws_dx_gateway</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">transit_gateway_id</span><span class="o">=</span><span class="n">aws_ec2_transit_gateway</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1242,6 +1336,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2transitgateway.get_peering_attachment">
 <code class="sig-prename descclassname">pulumi_aws.ec2transitgateway.</code><code class="sig-name descname">get_peering_attachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.get_peering_attachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on an EC2 Transit Gateway Peering Attachment.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">get_peering_attachment</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;transit-gateway-attachment-id&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;tgw-attach-12345678&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">attachment</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">get_peering_attachment</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;tgw-attach-12345678&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1265,6 +1374,27 @@ An EC2 Transit Gateway Peering Attachment be selected if any one of the given va
 <dt id="pulumi_aws.ec2transitgateway.get_route_table">
 <code class="sig-prename descclassname">pulumi_aws.ec2transitgateway.</code><code class="sig-name descname">get_route_table</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.get_route_table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on an EC2 Transit Gateway Route Table.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">get_route_table</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;default-association-route-table&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;true&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;transit-gateway-id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;tgw-12345678&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+<span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">get_route_table</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;tgw-rtb-12345678&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1285,6 +1415,21 @@ An EC2 Transit Gateway Peering Attachment be selected if any one of the given va
 <dt id="pulumi_aws.ec2transitgateway.get_transit_gateway">
 <code class="sig-prename descclassname">pulumi_aws.ec2transitgateway.</code><code class="sig-name descname">get_transit_gateway</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.get_transit_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on an EC2 Transit Gateway.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">get_transit_gateway</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;options.amazon-side-asn&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;64512&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">get_transit_gateway</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;tgw-12345678&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1305,6 +1450,21 @@ An EC2 Transit Gateway Peering Attachment be selected if any one of the given va
 <dt id="pulumi_aws.ec2transitgateway.get_vpc_attachment">
 <code class="sig-prename descclassname">pulumi_aws.ec2transitgateway.</code><code class="sig-name descname">get_vpc_attachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.get_vpc_attachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on an EC2 Transit Gateway VPC Attachment.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">get_vpc_attachment</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;vpc-id&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;vpc-12345678&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">get_vpc_attachment</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;tgw-attach-12345678&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1325,6 +1485,22 @@ An EC2 Transit Gateway Peering Attachment be selected if any one of the given va
 <dt id="pulumi_aws.ec2transitgateway.get_vpn_attachment">
 <code class="sig-prename descclassname">pulumi_aws.ec2transitgateway.</code><code class="sig-name descname">get_vpn_attachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transit_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpn_connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.get_vpn_attachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on an EC2 Transit Gateway VPN Attachment.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">get_vpn_attachment</span><span class="p">(</span><span class="n">transit_gateway_id</span><span class="o">=</span><span class="n">aws_ec2_transit_gateway</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">vpn_connection_id</span><span class="o">=</span><span class="n">aws_vpn_connection</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">get_vpn_attachment</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;resource-id&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;some-resource&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

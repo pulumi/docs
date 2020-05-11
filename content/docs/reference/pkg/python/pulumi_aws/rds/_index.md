@@ -58,6 +58,72 @@ for more information.</p>
 <p><strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;us-west-2a&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;us-west-2b&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;us-west-2c&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">backup_retention_period</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">cluster_identifier</span><span class="o">=</span><span class="s2">&quot;aurora-cluster-demo&quot;</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;mydb&quot;</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;aurora-mysql&quot;</span><span class="p">,</span>
+    <span class="n">engine_version</span><span class="o">=</span><span class="s2">&quot;5.7.mysql_aurora.2.03.2&quot;</span><span class="p">,</span>
+    <span class="n">master_password</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">master_username</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">preferred_backup_window</span><span class="o">=</span><span class="s2">&quot;07:00-09:00&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;us-west-2a&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;us-west-2b&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;us-west-2c&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">backup_retention_period</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">cluster_identifier</span><span class="o">=</span><span class="s2">&quot;aurora-cluster-demo&quot;</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;mydb&quot;</span><span class="p">,</span>
+    <span class="n">master_password</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">master_username</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">preferred_backup_window</span><span class="o">=</span><span class="s2">&quot;07:00-09:00&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">postgresql</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;postgresql&quot;</span><span class="p">,</span>
+    <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;us-west-2a&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;us-west-2b&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;us-west-2c&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">backup_retention_period</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">cluster_identifier</span><span class="o">=</span><span class="s2">&quot;aurora-cluster-demo&quot;</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;mydb&quot;</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;aurora-postgresql&quot;</span><span class="p">,</span>
+    <span class="n">master_password</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">master_username</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">preferred_backup_window</span><span class="o">=</span><span class="s2">&quot;07:00-09:00&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">cluster_identifier</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">db_subnet_group_name</span><span class="o">=</span><span class="n">aws_db_subnet_group</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">engine_mode</span><span class="o">=</span><span class="s2">&quot;multimaster&quot;</span><span class="p">,</span>
+    <span class="n">master_password</span><span class="o">=</span><span class="s2">&quot;barbarbarbar&quot;</span><span class="p">,</span>
+    <span class="n">master_username</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">skip_final_snapshot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -514,6 +580,54 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.rds.</code><code class="sig-name descname">ClusterEndpoint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_endpoint_identifier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_identifier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_endpoint_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">excluded_members</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">static_members</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.ClusterEndpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a RDS Aurora Cluster Endpoint.
 You can refer to the <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.Endpoints.html#Aurora.Endpoints.Cluster">User Guide</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;us-west-2a&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;us-west-2b&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;us-west-2c&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">backup_retention_period</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">cluster_identifier</span><span class="o">=</span><span class="s2">&quot;aurora-cluster-demo&quot;</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;mydb&quot;</span><span class="p">,</span>
+    <span class="n">master_password</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">master_username</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">preferred_backup_window</span><span class="o">=</span><span class="s2">&quot;07:00-09:00&quot;</span><span class="p">)</span>
+<span class="n">test1</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">ClusterInstance</span><span class="p">(</span><span class="s2">&quot;test1&quot;</span><span class="p">,</span>
+    <span class="n">apply_immediately</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">cluster_identifier</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">identifier</span><span class="o">=</span><span class="s2">&quot;test1&quot;</span><span class="p">,</span>
+    <span class="n">instance_class</span><span class="o">=</span><span class="s2">&quot;db.t2.small&quot;</span><span class="p">)</span>
+<span class="n">test2</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">ClusterInstance</span><span class="p">(</span><span class="s2">&quot;test2&quot;</span><span class="p">,</span>
+    <span class="n">apply_immediately</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">cluster_identifier</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">identifier</span><span class="o">=</span><span class="s2">&quot;test2&quot;</span><span class="p">,</span>
+    <span class="n">instance_class</span><span class="o">=</span><span class="s2">&quot;db.t2.small&quot;</span><span class="p">)</span>
+<span class="n">test3</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">ClusterInstance</span><span class="p">(</span><span class="s2">&quot;test3&quot;</span><span class="p">,</span>
+    <span class="n">apply_immediately</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">cluster_identifier</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">identifier</span><span class="o">=</span><span class="s2">&quot;test3&quot;</span><span class="p">,</span>
+    <span class="n">instance_class</span><span class="o">=</span><span class="s2">&quot;db.t2.small&quot;</span><span class="p">)</span>
+<span class="n">eligible</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">ClusterEndpoint</span><span class="p">(</span><span class="s2">&quot;eligible&quot;</span><span class="p">,</span>
+    <span class="n">cluster_endpoint_identifier</span><span class="o">=</span><span class="s2">&quot;reader&quot;</span><span class="p">,</span>
+    <span class="n">cluster_identifier</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">custom_endpoint_type</span><span class="o">=</span><span class="s2">&quot;READER&quot;</span><span class="p">,</span>
+    <span class="n">excluded_members</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">test1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="n">test2</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">])</span>
+<span class="n">static</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">ClusterEndpoint</span><span class="p">(</span><span class="s2">&quot;static&quot;</span><span class="p">,</span>
+    <span class="n">cluster_endpoint_identifier</span><span class="o">=</span><span class="s2">&quot;static&quot;</span><span class="p">,</span>
+    <span class="n">cluster_identifier</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">custom_endpoint_type</span><span class="o">=</span><span class="s2">&quot;READER&quot;</span><span class="p">,</span>
+    <span class="n">static_members</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">test1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="n">test3</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -654,6 +768,27 @@ Cluster, or you may specify different Cluster Instance resources with various
 <blockquote>
 <div><p><strong>NOTE:</strong> Deletion Protection from the RDS service can only be enabled at the cluster level, not for individual cluster instances. You can still add the <cite>``protect`</cite> CustomResourceOption &lt;<a class="reference external" href="https://www.pulumi.com/docs/intro/concepts/programming-model/#protect">https://www.pulumi.com/docs/intro/concepts/programming-model/#protect</a>&gt;`_ to this resource configuration if you desire protection from accidental deletion.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;us-west-2a&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;us-west-2b&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;us-west-2c&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">cluster_identifier</span><span class="o">=</span><span class="s2">&quot;aurora-cluster-demo&quot;</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;mydb&quot;</span><span class="p">,</span>
+    <span class="n">master_password</span><span class="o">=</span><span class="s2">&quot;barbut8chars&quot;</span><span class="p">,</span>
+    <span class="n">master_username</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+<span class="n">cluster_instances</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="nb">range</span> <span class="ow">in</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]:</span>
+    <span class="n">cluster_instances</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">ClusterInstance</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;clusterInstances-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">cluster_identifier</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="n">identifier</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;aurora-cluster-demo-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">instance_class</span><span class="o">=</span><span class="s2">&quot;db.r4.large&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -990,6 +1125,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Reference.html">Aurora MySQL Parameters</a></p></li>
 <li><p><a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraPostgreSQL.Reference.html">Aurora PostgreSQL Parameters</a></p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">ClusterParameterGroup</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;RDS default cluster parameter group&quot;</span><span class="p">,</span>
+    <span class="n">family</span><span class="o">=</span><span class="s2">&quot;aurora5.6&quot;</span><span class="p">,</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;character_set_server&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;utf8&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;character_set_client&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;utf8&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1134,6 +1287,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.ClusterSnapshot">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.rds.</code><code class="sig-name descname">ClusterSnapshot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">db_cluster_identifier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">db_cluster_snapshot_identifier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.ClusterSnapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a RDS database cluster snapshot for Aurora clusters. For managing RDS database instance snapshots, see the <cite>``rds.Snapshot`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/db_snapshot.html">https://www.terraform.io/docs/providers/aws/r/db_snapshot.html</a>&gt;`_.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">ClusterSnapshot</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">db_cluster_identifier</span><span class="o">=</span><span class="n">aws_rds_cluster</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">db_cluster_snapshot_identifier</span><span class="o">=</span><span class="s2">&quot;resourcetestsnapshot1234&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1301,6 +1462,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.EventSubscription">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.rds.</code><code class="sig-name descname">EventSubscription</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">event_categories</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sns_topic</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.EventSubscription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DB event subscription resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default_instance</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;defaultInstance&quot;</span><span class="p">,</span>
+    <span class="n">allocated_storage</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">db_subnet_group_name</span><span class="o">=</span><span class="s2">&quot;my_database_subnet_group&quot;</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;mysql&quot;</span><span class="p">,</span>
+    <span class="n">engine_version</span><span class="o">=</span><span class="s2">&quot;5.6.17&quot;</span><span class="p">,</span>
+    <span class="n">instance_class</span><span class="o">=</span><span class="s2">&quot;db.t2.micro&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;mydb&quot;</span><span class="p">,</span>
+    <span class="n">parameter_group_name</span><span class="o">=</span><span class="s2">&quot;default.mysql5.6&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+<span class="n">default_topic</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;defaultTopic&quot;</span><span class="p">)</span>
+<span class="n">default_event_subscription</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">EventSubscription</span><span class="p">(</span><span class="s2">&quot;defaultEventSubscription&quot;</span><span class="p">,</span>
+    <span class="n">event_categories</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;availability&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;deletion&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;failover&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;failure&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;low storage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maintenance&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;notification&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;read replica&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;recovery&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;restoration&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">sns_topic</span><span class="o">=</span><span class="n">default_topic</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">source_ids</span><span class="o">=</span><span class="p">[</span><span class="n">default_instance</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">source_type</span><span class="o">=</span><span class="s2">&quot;db-instance&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The following additional atttributes are provided:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> - The name of the RDS event notification subscription</p></li>
@@ -1906,6 +2099,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.rds.</code><code class="sig-name descname">GlobalCluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deletion_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">global_cluster_identifier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_encrypted</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.GlobalCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a RDS Global Cluster, which is an Aurora global database spread across multiple regions. The global database contains a single primary cluster with read-write capability, and a read-only secondary cluster that receives data from the primary cluster through high-speed replication performed by the Aurora storage subsystem.</p>
 <p>More information about Aurora global databases can be found in the <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database-creating">Aurora User Guide</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_pulumi</span> <span class="k">as</span> <span class="nn">pulumi</span>
+
+<span class="n">primary</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">Aws</span><span class="p">(</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-east-2&quot;</span><span class="p">)</span>
+<span class="n">secondary</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">Aws</span><span class="p">(</span><span class="s2">&quot;secondary&quot;</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-west-2&quot;</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">GlobalCluster</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">global_cluster_identifier</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+<span class="n">primary_cluster</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;primaryCluster&quot;</span><span class="p">,</span>
+    <span class="n">engine_mode</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">,</span>
+    <span class="n">global_cluster_identifier</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">primary_cluster_instance</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">ClusterInstance</span><span class="p">(</span><span class="s2">&quot;primaryClusterInstance&quot;</span><span class="p">,</span> <span class="n">cluster_identifier</span><span class="o">=</span><span class="n">primary_cluster</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">secondary_cluster</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;secondaryCluster&quot;</span><span class="p">,</span>
+    <span class="n">engine_mode</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">,</span>
+    <span class="n">global_cluster_identifier</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">secondary_cluster_instance</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">ClusterInstance</span><span class="p">(</span><span class="s2">&quot;secondaryClusterInstance&quot;</span><span class="p">,</span> <span class="n">cluster_identifier</span><span class="o">=</span><span class="n">secondary_cluster</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2075,6 +2285,29 @@ state</a>.</p>
 <p>Amazon RDS supports three types of instance classes: Standard, Memory Optimized,
 and Burstable Performance. For more information please read the AWS RDS documentation
 about <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class Types</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">allocated_storage</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;mysql&quot;</span><span class="p">,</span>
+    <span class="n">engine_version</span><span class="o">=</span><span class="s2">&quot;5.7&quot;</span><span class="p">,</span>
+    <span class="n">instance_class</span><span class="o">=</span><span class="s2">&quot;db.t2.micro&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;mydb&quot;</span><span class="p">,</span>
+    <span class="n">parameter_group_name</span><span class="o">=</span><span class="s2">&quot;default.mysql5.7&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;foobarbaz&quot;</span><span class="p">,</span>
+    <span class="n">storage_type</span><span class="o">=</span><span class="s2">&quot;gp2&quot;</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">allocated_storage</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+    <span class="n">max_allocated_storage</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2873,6 +3106,34 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.MySQL.Options.html">MySQL Options</a></p></li>
 <li><p><a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.Options.html">Oracle Options</a></p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">OptionGroup</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">engine_name</span><span class="o">=</span><span class="s2">&quot;sqlserver-ee&quot;</span><span class="p">,</span>
+    <span class="n">major_engine_version</span><span class="o">=</span><span class="s2">&quot;11.00&quot;</span><span class="p">,</span>
+    <span class="n">options</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;optionName&quot;</span><span class="p">:</span> <span class="s2">&quot;Timezone&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;optionSettings&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;TIME_ZONE&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;UTC&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;optionName&quot;</span><span class="p">:</span> <span class="s2">&quot;SQLSERVER_BACKUP_RESTORE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;optionSettings&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;IAM_ROLE_ARN&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+            <span class="p">}],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;optionName&quot;</span><span class="p">:</span> <span class="s2">&quot;TDE&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">option_group_description</span><span class="o">=</span><span class="s2">&quot;Option Group&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3050,6 +3311,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ModifyInstance.Oracle.html#USER_ModifyInstance.Oracle.sqlnet">Oracle Parameters</a></p></li>
 <li><p><a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.PostgreSQL.CommonDBATasks.html#Appendix.PostgreSQL.CommonDBATasks.Parameters">PostgreSQL Parameters</a></p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">ParameterGroup</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">family</span><span class="o">=</span><span class="s2">&quot;mysql5.6&quot;</span><span class="p">,</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;character_set_server&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;utf8&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;character_set_client&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;utf8&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3201,6 +3479,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p>To manage the RDS DB Instance IAM Role for <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html">Enhanced Monitoring</a>, see the <code class="docutils literal notranslate"><span class="pre">rds.Instance</span></code> resource <code class="docutils literal notranslate"><span class="pre">monitoring_role_arn</span></code> argument instead.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">RoleAssociation</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">db_instance_identifier</span><span class="o">=</span><span class="n">aws_db_instance</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">feature_name</span><span class="o">=</span><span class="s2">&quot;S3_INTEGRATION&quot;</span><span class="p">,</span>
+    <span class="n">role_arn</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3295,6 +3582,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 EC2-Classic Platform. For instances inside a VPC, use the
 <cite>``aws_db_instance.vpc_security_group_ids`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/db_instance.html#vpc_security_group_ids">https://www.terraform.io/docs/providers/aws/r/db_instance.html#vpc_security_group_ids</a>&gt;`_
 attribute instead.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">ingress</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;cidr&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.0.0/24&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3423,6 +3718,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.Snapshot">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.rds.</code><code class="sig-name descname">Snapshot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">db_instance_identifier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">db_snapshot_identifier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.Snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a RDS database instance snapshot. For managing RDS database cluster snapshots, see the <cite>``rds.ClusterSnapshot`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/db_cluster_snapshot.html">https://www.terraform.io/docs/providers/aws/r/db_cluster_snapshot.html</a>&gt;`_.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">allocated_storage</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">backup_retention_period</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;MySQL&quot;</span><span class="p">,</span>
+    <span class="n">engine_version</span><span class="o">=</span><span class="s2">&quot;5.6.21&quot;</span><span class="p">,</span>
+    <span class="n">instance_class</span><span class="o">=</span><span class="s2">&quot;db.t2.micro&quot;</span><span class="p">,</span>
+    <span class="n">maintenance_window</span><span class="o">=</span><span class="s2">&quot;Fri:09:00-Fri:09:30&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;baz&quot;</span><span class="p">,</span>
+    <span class="n">parameter_group_name</span><span class="o">=</span><span class="s2">&quot;default.mysql5.6&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;barbarbarbar&quot;</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">Snapshot</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">db_instance_identifier</span><span class="o">=</span><span class="n">bar</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">db_snapshot_identifier</span><span class="o">=</span><span class="s2">&quot;testsnapshot1234&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3618,6 +3932,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.SubnetGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.rds.</code><code class="sig-name descname">SubnetGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.SubnetGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an RDS DB subnet group resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">SubnetGroup</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">subnet_ids</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;frontend&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;backend&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="p">],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;My DB subnet group&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3731,6 +4058,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.get_cluster">
 <code class="sig-prename descclassname">pulumi_aws.rds.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_identifier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a RDS cluster.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">cluster_name</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">get_cluster</span><span class="p">(</span><span class="n">cluster_identifier</span><span class="o">=</span><span class="s2">&quot;clusterName&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>cluster_identifier</strong> (<em>str</em>) – The cluster identifier of the RDS cluster.</p>
@@ -3746,6 +4079,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> This data source does not apply to snapshots created on DB Instances. 
 See the <cite>``rds.Snapshot`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/db_snapshot.html">https://www.terraform.io/docs/providers/aws/d/db_snapshot.html</a>&gt;`_ for DB Instance snapshots.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">development_final_snapshot</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">get_cluster_snapshot</span><span class="p">(</span><span class="n">db_cluster_identifier</span><span class="o">=</span><span class="s2">&quot;development_cluster&quot;</span><span class="p">,</span>
+    <span class="n">most_recent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># Use the last snapshot of the dev database before it was destroyed to create</span>
+<span class="c1"># a new dev database.</span>
+<span class="n">aurora_cluster</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;auroraCluster&quot;</span><span class="p">,</span>
+    <span class="n">cluster_identifier</span><span class="o">=</span><span class="s2">&quot;development_cluster&quot;</span><span class="p">,</span>
+    <span class="n">db_subnet_group_name</span><span class="o">=</span><span class="s2">&quot;my_db_subnet_group&quot;</span><span class="p">,</span>
+    <span class="n">lifecycle</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;ignoreChanges&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;snapshotIdentifier&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">snapshot_identifier</span><span class="o">=</span><span class="n">development_final_snapshot</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">aurora_cluster_instance</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">ClusterInstance</span><span class="p">(</span><span class="s2">&quot;auroraClusterInstance&quot;</span><span class="p">,</span>
+    <span class="n">cluster_identifier</span><span class="o">=</span><span class="n">aurora_cluster</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">db_subnet_group_name</span><span class="o">=</span><span class="s2">&quot;my_db_subnet_group&quot;</span><span class="p">,</span>
+    <span class="n">instance_class</span><span class="o">=</span><span class="s2">&quot;db.t2.small&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3769,7 +4122,14 @@ included in the returned results by default. Possible values are, <code class="d
 <dl class="py function">
 <dt id="pulumi_aws.rds.get_event_categories">
 <code class="sig-prename descclassname">pulumi_aws.rds.</code><code class="sig-name descname">get_event_categories</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">source_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.get_event_categories" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_event_categories</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">get_event_categories</span><span class="p">()</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">example_event_categories</span><span class="o">.</span><span class="n">event_categories</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>source_type</strong> (<em>str</em>) – The type of source that will be generating the events. Valid options are db-instance, db-security-group, db-parameter-group, db-snapshot, db-cluster or db-cluster-snapshot.</p>
 </dd>
@@ -3780,6 +4140,12 @@ included in the returned results by default. Possible values are, <code class="d
 <dt id="pulumi_aws.rds.get_instance">
 <code class="sig-prename descclassname">pulumi_aws.rds.</code><code class="sig-name descname">get_instance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">db_instance_identifier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.get_instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an RDS instance</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">database</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">get_instance</span><span class="p">(</span><span class="n">db_instance_identifier</span><span class="o">=</span><span class="s2">&quot;my-test-database&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>db_instance_identifier</strong> (<em>str</em>) – The name of the RDS instance</p>
@@ -3795,6 +4161,31 @@ included in the returned results by default. Possible values are, <code class="d
 <div><p><strong>NOTE:</strong> This data source does not apply to snapshots created on Aurora DB clusters.
 See the <cite>``rds.ClusterSnapshot`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/db_cluster_snapshot.html">https://www.terraform.io/docs/providers/aws/d/db_cluster_snapshot.html</a>&gt;`_ for DB Cluster snapshots.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">prod</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;prod&quot;</span><span class="p">,</span>
+    <span class="n">allocated_storage</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">db_subnet_group_name</span><span class="o">=</span><span class="s2">&quot;my_database_subnet_group&quot;</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;mysql&quot;</span><span class="p">,</span>
+    <span class="n">engine_version</span><span class="o">=</span><span class="s2">&quot;5.6.17&quot;</span><span class="p">,</span>
+    <span class="n">instance_class</span><span class="o">=</span><span class="s2">&quot;db.t2.micro&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;mydb&quot;</span><span class="p">,</span>
+    <span class="n">parameter_group_name</span><span class="o">=</span><span class="s2">&quot;default.mysql5.6&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+<span class="n">latest_prod_snapshot</span> <span class="o">=</span> <span class="n">prod</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="nb">id</span><span class="p">:</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">get_snapshot</span><span class="p">(</span><span class="n">db_instance_identifier</span><span class="o">=</span><span class="nb">id</span><span class="p">,</span>
+    <span class="n">most_recent</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<span class="c1"># Use the latest production snapshot to create a dev instance.</span>
+<span class="n">dev</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+    <span class="n">instance_class</span><span class="o">=</span><span class="s2">&quot;db.t2.micro&quot;</span><span class="p">,</span>
+    <span class="n">lifecycle</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;ignoreChanges&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;snapshotIdentifier&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;mydbdev&quot;</span><span class="p">,</span>
+    <span class="n">snapshot_identifier</span><span class="o">=</span><span class="n">latest_prod_snapshot</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

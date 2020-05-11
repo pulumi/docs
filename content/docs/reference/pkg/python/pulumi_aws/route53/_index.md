@@ -37,6 +37,14 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.route53.DelegationSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">DelegationSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reference_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.DelegationSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a <a class="reference external" href="https://docs.aws.amazon.com/Route53/latest/APIReference/API-actions-by-function.html#actions-by-function-reusable-delegation-sets">Route53 Delegation Set</a> resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">DelegationSet</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span> <span class="n">reference_name</span><span class="o">=</span><span class="s2">&quot;DynDNS&quot;</span><span class="p">)</span>
+<span class="n">primary</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span> <span class="n">delegation_set_id</span><span class="o">=</span><span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">secondary</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;secondary&quot;</span><span class="p">,</span> <span class="n">delegation_set_id</span><span class="o">=</span><span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -232,6 +240,65 @@ Values are <code class="docutils literal notranslate"><span class="pre">NOT_SHAR
 <dt id="pulumi_aws.route53.HealthCheck">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">HealthCheck</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">child_health_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">child_healthchecks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudwatch_alarm_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudwatch_alarm_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_sni</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">failure_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fqdn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">insufficient_data_health_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">invert_healthcheck</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">measure_latency</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reference_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">regions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">search_string</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.HealthCheck" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Route53 health check.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">failure_threshold</span><span class="o">=</span><span class="s2">&quot;5&quot;</span><span class="p">,</span>
+    <span class="n">fqdn</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
+    <span class="n">request_interval</span><span class="o">=</span><span class="s2">&quot;30&quot;</span><span class="p">,</span>
+    <span class="n">resource_path</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-test-health-check&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">failure_threshold</span><span class="o">=</span><span class="s2">&quot;5&quot;</span><span class="p">,</span>
+    <span class="n">fqdn</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">443</span><span class="p">,</span>
+    <span class="n">request_interval</span><span class="o">=</span><span class="s2">&quot;30&quot;</span><span class="p">,</span>
+    <span class="n">resource_path</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="n">search_string</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;HTTPS_STR_MATCH&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">parent</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;parent&quot;</span><span class="p">,</span>
+    <span class="n">child_health_threshold</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">child_healthchecks</span><span class="o">=</span><span class="p">[</span><span class="n">aws_route53_health_check</span><span class="p">[</span><span class="s2">&quot;child&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-test-calculated-health-check&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;CALCULATED&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">MetricAlarm</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">alarm_description</span><span class="o">=</span><span class="s2">&quot;This metric monitors ec2 cpu utilization&quot;</span><span class="p">,</span>
+    <span class="n">comparison_operator</span><span class="o">=</span><span class="s2">&quot;GreaterThanOrEqualToThreshold&quot;</span><span class="p">,</span>
+    <span class="n">evaluation_periods</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+    <span class="n">metric_name</span><span class="o">=</span><span class="s2">&quot;CPUUtilization&quot;</span><span class="p">,</span>
+    <span class="n">namespace</span><span class="o">=</span><span class="s2">&quot;AWS/EC2&quot;</span><span class="p">,</span>
+    <span class="n">period</span><span class="o">=</span><span class="s2">&quot;120&quot;</span><span class="p">,</span>
+    <span class="n">statistic</span><span class="o">=</span><span class="s2">&quot;Average&quot;</span><span class="p">,</span>
+    <span class="n">threshold</span><span class="o">=</span><span class="s2">&quot;80&quot;</span><span class="p">)</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">HealthCheck</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">cloudwatch_alarm_name</span><span class="o">=</span><span class="n">foobar</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">cloudwatch_alarm_region</span><span class="o">=</span><span class="s2">&quot;us-west-2&quot;</span><span class="p">,</span>
+    <span class="n">insufficient_data_health_status</span><span class="o">=</span><span class="s2">&quot;Healthy&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;CLOUDWATCH_METRIC&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -460,6 +527,32 @@ a permissive CloudWatch log resource policy must be in place, and
 the Route53 hosted zone must be public.
 See <a class="reference external" href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/query-logs.html?console_help=true#query-logs-configuring">Configuring Logging for DNS Queries</a> for additional details.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_pulumi</span> <span class="k">as</span> <span class="nn">pulumi</span>
+
+<span class="n">us_east_1</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">Aws</span><span class="p">(</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">)</span>
+<span class="n">aws_route53_example_com</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">LogGroup</span><span class="p">(</span><span class="s2">&quot;awsRoute53ExampleCom&quot;</span><span class="p">,</span> <span class="n">retention_in_days</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">route53_query_logging_policy_policy_document</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;logs:CreateLogStream&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;logs:PutLogEvents&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;principals&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;identifiers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;route53.amazonaws.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Service&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;arn:aws:logs:*:*:log-group:/aws/route53/*&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">route53_query_logging_policy_log_resource_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">LogResourcePolicy</span><span class="p">(</span><span class="s2">&quot;route53-query-logging-policyLogResourcePolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy_document</span><span class="o">=</span><span class="n">route53_query_logging_policy_policy_document</span><span class="o">.</span><span class="n">json</span><span class="p">,</span>
+    <span class="n">policy_name</span><span class="o">=</span><span class="s2">&quot;route53-query-logging-policy&quot;</span><span class="p">)</span>
+<span class="n">example_com_zone</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;exampleComZone&quot;</span><span class="p">)</span>
+<span class="n">example_com_query_log</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">QueryLog</span><span class="p">(</span><span class="s2">&quot;exampleComQueryLog&quot;</span><span class="p">,</span>
+    <span class="n">cloudwatch_log_group_arn</span><span class="o">=</span><span class="n">aws_route53_example_com</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">example_com_zone</span><span class="o">.</span><span class="n">zone_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -542,6 +635,82 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.route53.Record">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">Record</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">aliases</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_overwrite</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">failover_routing_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">geolocation_routing_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latency_routing_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multivalue_answer_routing_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">records</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">set_identifier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">weighted_routing_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.Record" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Route53 record resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">www</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;www&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;www.example.com&quot;</span><span class="p">,</span>
+    <span class="n">records</span><span class="o">=</span><span class="p">[</span><span class="n">aws_eip</span><span class="p">[</span><span class="s2">&quot;lb&quot;</span><span class="p">][</span><span class="s2">&quot;public_ip&quot;</span><span class="p">]],</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="s2">&quot;300&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">aws_route53_zone</span><span class="p">[</span><span class="s2">&quot;primary&quot;</span><span class="p">][</span><span class="s2">&quot;zone_id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">www_dev</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;www-dev&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;www&quot;</span><span class="p">,</span>
+    <span class="n">records</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;dev.example.com&quot;</span><span class="p">],</span>
+    <span class="n">set_identifier</span><span class="o">=</span><span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="s2">&quot;5&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;CNAME&quot;</span><span class="p">,</span>
+    <span class="n">weighted_routing_policies</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">aws_route53_zone</span><span class="p">[</span><span class="s2">&quot;primary&quot;</span><span class="p">][</span><span class="s2">&quot;zone_id&quot;</span><span class="p">])</span>
+<span class="n">www_live</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;www-live&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;www&quot;</span><span class="p">,</span>
+    <span class="n">records</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;live.example.com&quot;</span><span class="p">],</span>
+    <span class="n">set_identifier</span><span class="o">=</span><span class="s2">&quot;live&quot;</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="s2">&quot;5&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;CNAME&quot;</span><span class="p">,</span>
+    <span class="n">weighted_routing_policies</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">aws_route53_zone</span><span class="p">[</span><span class="s2">&quot;primary&quot;</span><span class="p">][</span><span class="s2">&quot;zone_id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
+    <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;us-east-1c&quot;</span><span class="p">],</span>
+    <span class="n">listeners</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;instancePort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="s2">&quot;instanceProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;lbPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="s2">&quot;lbProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">www</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;www&quot;</span><span class="p">,</span>
+    <span class="n">aliases</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;evaluateTargetHealth&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">main</span><span class="o">.</span><span class="n">dns_name</span><span class="p">,</span>
+        <span class="s2">&quot;zoneId&quot;</span><span class="p">:</span> <span class="n">main</span><span class="o">.</span><span class="n">zone_id</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">aws_route53_zone</span><span class="p">[</span><span class="s2">&quot;primary&quot;</span><span class="p">][</span><span class="s2">&quot;zone_id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_zone</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;exampleZone&quot;</span><span class="p">)</span>
+<span class="n">example_record</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;exampleRecord&quot;</span><span class="p">,</span>
+    <span class="n">allow_overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;test.example.com&quot;</span><span class="p">,</span>
+    <span class="n">records</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">example_zone</span><span class="o">.</span><span class="n">name_servers</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="n">example_zone</span><span class="o">.</span><span class="n">name_servers</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="n">example_zone</span><span class="o">.</span><span class="n">name_servers</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+        <span class="n">example_zone</span><span class="o">.</span><span class="n">name_servers</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span>
+    <span class="p">],</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;NS&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">example_zone</span><span class="o">.</span><span class="n">zone_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -798,6 +967,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.route53.ResolverEndpoint">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">ResolverEndpoint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">direction</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_group_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.ResolverEndpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Route 53 Resolver endpoint resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">ResolverEndpoint</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">direction</span><span class="o">=</span><span class="s2">&quot;INBOUND&quot;</span><span class="p">,</span>
+    <span class="n">ip_addresses</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;sn1&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.64.4&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;sn2&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">security_group_ids</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">aws_security_group</span><span class="p">[</span><span class="s2">&quot;sg1&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="n">aws_security_group</span><span class="p">[</span><span class="s2">&quot;sg2&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="p">],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Prod&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -944,6 +1136,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.route53.ResolverRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">ResolverRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resolver_endpoint_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rule_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_ips</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.ResolverRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Route53 Resolver rule.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">sys</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">ResolverRule</span><span class="p">(</span><span class="s2">&quot;sys&quot;</span><span class="p">,</span>
+    <span class="n">domain_name</span><span class="o">=</span><span class="s2">&quot;subdomain.example.com&quot;</span><span class="p">,</span>
+    <span class="n">rule_type</span><span class="o">=</span><span class="s2">&quot;SYSTEM&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">fwd</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">ResolverRule</span><span class="p">(</span><span class="s2">&quot;fwd&quot;</span><span class="p">,</span>
+    <span class="n">domain_name</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="n">resolver_endpoint_id</span><span class="o">=</span><span class="n">aws_route53_resolver_endpoint</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">rule_type</span><span class="o">=</span><span class="s2">&quot;FORWARD&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Prod&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">target_ips</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;123.45.67.89&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1101,6 +1316,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.route53.ResolverRuleAssociation">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">ResolverRuleAssociation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resolver_rule_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.ResolverRuleAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Route53 Resolver rule association.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">ResolverRuleAssociation</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">resolver_rule_id</span><span class="o">=</span><span class="n">aws_route53_resolver_rule</span><span class="p">[</span><span class="s2">&quot;sys&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1191,6 +1414,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.route53.Zone">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">Zone</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">comment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delegation_set_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpcs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.Zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Route53 Hosted Zone.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">primary</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;primary&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">)</span>
+<span class="n">dev</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;dev&quot;</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">dev_ns</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;dev-ns&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;dev.example.com&quot;</span><span class="p">,</span>
+    <span class="n">records</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">dev</span><span class="o">.</span><span class="n">name_servers</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="n">dev</span><span class="o">.</span><span class="n">name_servers</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="n">dev</span><span class="o">.</span><span class="n">name_servers</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+        <span class="n">dev</span><span class="o">.</span><span class="n">name_servers</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span>
+    <span class="p">],</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="s2">&quot;30&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;NS&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">main</span><span class="o">.</span><span class="n">zone_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">private</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;private&quot;</span><span class="p">,</span> <span class="n">vpcs</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;vpcId&quot;</span><span class="p">:</span> <span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1340,6 +1597,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> Unless explicit association ordering is required (e.g. a separate cross-account association authorization), usage of this resource is not recommended. Use the <code class="docutils literal notranslate"><span class="pre">vpc</span></code> configuration blocks available within the <cite>``route53.Zone`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/route53_zone.html">https://www.terraform.io/docs/providers/aws/r/route53_zone.html</a>&gt;`_ instead.</p>
 <p><strong>NOTE:</strong> This provider provides both this standalone Zone VPC Association resource and exclusive VPC associations defined in-line in the <cite>``route53.Zone`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/route53_zone.html">https://www.terraform.io/docs/providers/aws/r/route53_zone.html</a>&gt;`_ via <code class="docutils literal notranslate"><span class="pre">vpc</span></code> configuration blocks. At this time, you cannot use those in-line VPC associations in conjunction with this resource and the same zone ID otherwise it will cause a perpetual difference in plan output. You can optionally use <cite>``ignoreChanges`</cite> &lt;<a class="reference external" href="https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges">https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges</a>&gt;`_ in the <code class="docutils literal notranslate"><span class="pre">route53.Zone</span></code> resource to manage additional associations via this resource.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">primary</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.6.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">enable_dns_hostnames</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">enable_dns_support</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">secondary_vpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;secondaryVpc&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.7.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">enable_dns_hostnames</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">enable_dns_support</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">lifecycle</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;ignoreChanges&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;vpcId&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vpcRegion&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vpcs&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">vpcs</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;vpcId&quot;</span><span class="p">:</span> <span class="n">primary</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">secondary_zone_association</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">ZoneAssociation</span><span class="p">(</span><span class="s2">&quot;secondaryZoneAssociation&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">secondary_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">zone_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1431,6 +1715,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">get_delegation_set</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.get_delegation_set" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">route53.DelegationSet</span></code> provides details about a specific Route 53 Delegation Set.</p>
 <p>This data source allows to find a list of name servers associated with a specific delegation set.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">dset</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">get_delegation_set</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;MQWGHCBFAKEID&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – The Hosted Zone id of the desired delegation set.</p>
@@ -1442,6 +1732,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.route53.get_resolver_rule">
 <code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">get_resolver_rule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domain_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resolver_endpoint_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resolver_rule_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rule_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.get_resolver_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">route53.ResolverRule</span></code> provides details about a specific Route53 Resolver rule.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">get_resolver_rule</span><span class="p">(</span><span class="n">domain_name</span><span class="o">=</span><span class="s2">&quot;subdomain.example.com&quot;</span><span class="p">,</span>
+    <span class="n">rule_type</span><span class="o">=</span><span class="s2">&quot;SYSTEM&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1460,6 +1757,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.route53.get_resolver_rules">
 <code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">get_resolver_rules</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resolver_endpoint_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rule_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">share_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.get_resolver_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">route53.getResolverRules</span></code> provides details about a set of Route53 Resolver rules.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">get_resolver_rules</span><span class="p">(</span><span class="n">tags</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1478,6 +1783,19 @@ Values are <code class="docutils literal notranslate"><span class="pre">NOT_SHAR
 <code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">get_zone</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_record_set_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.get_zone" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">route53.Zone</span></code> provides details about a specific Route 53 Hosted Zone.</p>
 <p>This data source allows to find a Hosted Zone ID given Hosted Zone name and certain search criteria.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">selected</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">get_zone</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;test.com.&quot;</span><span class="p">,</span>
+    <span class="n">private_zone</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">www</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;www&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;www.</span><span class="si">{</span><span class="n">selected</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">records</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.0.1&quot;</span><span class="p">],</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="s2">&quot;300&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">selected</span><span class="o">.</span><span class="n">zone_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

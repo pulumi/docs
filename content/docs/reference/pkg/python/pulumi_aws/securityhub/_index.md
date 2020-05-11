@@ -20,6 +20,12 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE:</strong> Destroying this resource will disable Security Hub for this AWS account.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">securityhub</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -86,6 +92,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.securityhub.Member">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.securityhub.</code><code class="sig-name descname">Member</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">invite</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.Member" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Security Hub member resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">securityhub</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">)</span>
+<span class="n">example_member</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">securityhub</span><span class="o">.</span><span class="n">Member</span><span class="p">(</span><span class="s2">&quot;exampleMember&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;123456789012&quot;</span><span class="p">,</span>
+    <span class="n">email</span><span class="o">=</span><span class="s2">&quot;example@example.com&quot;</span><span class="p">,</span>
+    <span class="n">invite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -190,6 +206,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.securityhub.ProductSubscription">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.securityhub.</code><code class="sig-name descname">ProductSubscription</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">product_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.ProductSubscription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Subscribes to a Security Hub product.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">securityhub</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">)</span>
+<span class="n">current</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_region</span><span class="p">()</span>
+<span class="n">example_product_subscription</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">securityhub</span><span class="o">.</span><span class="n">ProductSubscription</span><span class="p">(</span><span class="s2">&quot;exampleProductSubscription&quot;</span><span class="p">,</span> <span class="n">product_arn</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;arn:aws:securityhub:</span><span class="si">{</span><span class="n">current</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">:733251395267:product/alertlogic/althreatmanagement&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -271,6 +295,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.securityhub.StandardsSubscription">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.securityhub.</code><code class="sig-name descname">StandardsSubscription</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">standards_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.StandardsSubscription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Subscribes to a Security Hub standard.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">securityhub</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+<span class="n">cis</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">securityhub</span><span class="o">.</span><span class="n">StandardsSubscription</span><span class="p">(</span><span class="s2">&quot;cis&quot;</span><span class="p">,</span> <span class="n">standards_arn</span><span class="o">=</span><span class="s2">&quot;arn:aws:securityhub:::ruleset/cis-aws-foundations-benchmark/v/1.2.0&quot;</span><span class="p">)</span>
+<span class="n">pci321</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">securityhub</span><span class="o">.</span><span class="n">StandardsSubscription</span><span class="p">(</span><span class="s2">&quot;pci321&quot;</span><span class="p">,</span> <span class="n">standards_arn</span><span class="o">=</span><span class="s2">&quot;arn:aws:securityhub:us-east-1::standards/pci-dss/v/3.2.1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

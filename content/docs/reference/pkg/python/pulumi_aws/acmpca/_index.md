@@ -25,6 +25,61 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE:</strong> Creating this resource will leave the certificate authority in a <code class="docutils literal notranslate"><span class="pre">PENDING_CERTIFICATE</span></code> status, which means it cannot yet issue certificates. To complete this setup, you must fully sign the certificate authority CSR available in the <code class="docutils literal notranslate"><span class="pre">certificate_signing_request</span></code> attribute and import the signed certificate using the AWS SDK, CLI or Console. This provider can support another resource to manage that workflow automatically in the future.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">acmpca</span><span class="o">.</span><span class="n">CertificateAuthority</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">certificate_authority_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;keyAlgorithm&quot;</span><span class="p">:</span> <span class="s2">&quot;RSA_4096&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;signingAlgorithm&quot;</span><span class="p">:</span> <span class="s2">&quot;SHA512WITHRSA&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subject&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;commonName&quot;</span><span class="p">:</span> <span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">permanent_deletion_time_in_days</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;exampleBucket&quot;</span><span class="p">)</span>
+<span class="n">acmpca_bucket_access</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">example_bucket</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span> <span class="n">example_bucket</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">exampleBucketArn</span><span class="p">,</span> <span class="n">exampleBucketArn1</span><span class="p">:</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;s3:GetBucketAcl&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;s3:GetBucketLocation&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;s3:PutObject&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;s3:PutObjectAcl&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;principals&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;identifiers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;acm-pca.amazonaws.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Service&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="n">example_bucket_arn</span><span class="p">,</span>
+        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">example_bucket_arn1</span><span class="si">}</span><span class="s2">/*&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+<span class="p">}]))</span>
+<span class="n">example_bucket_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">BucketPolicy</span><span class="p">(</span><span class="s2">&quot;exampleBucketPolicy&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">example_bucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="n">acmpca_bucket_access</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>
+<span class="n">example_certificate_authority</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">acmpca</span><span class="o">.</span><span class="n">CertificateAuthority</span><span class="p">(</span><span class="s2">&quot;exampleCertificateAuthority&quot;</span><span class="p">,</span>
+    <span class="n">certificate_authority_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;keyAlgorithm&quot;</span><span class="p">:</span> <span class="s2">&quot;RSA_4096&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;signingAlgorithm&quot;</span><span class="p">:</span> <span class="s2">&quot;SHA512WITHRSA&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subject&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;commonName&quot;</span><span class="p">:</span> <span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">revocation_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;crlConfiguration&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;customCname&quot;</span><span class="p">:</span> <span class="s2">&quot;crl.example.com&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;expirationInDays&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+            <span class="s2">&quot;s3BucketName&quot;</span><span class="p">:</span> <span class="n">example_bucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -371,6 +426,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.acmpca.get_certificate_authority">
 <code class="sig-prename descclassname">pulumi_aws.acmpca.</code><code class="sig-name descname">get_certificate_authority</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">revocation_configurations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.get_certificate_authority" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on a AWS Certificate Manager Private Certificate Authority (ACM PCA Certificate Authority).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">acmpca</span><span class="o">.</span><span class="n">get_certificate_authority</span><span class="p">(</span><span class="n">arn</span><span class="o">=</span><span class="s2">&quot;arn:aws:acm-pca:us-east-1:123456789012:certificate-authority/12345678-1234-1234-1234-123456789012&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

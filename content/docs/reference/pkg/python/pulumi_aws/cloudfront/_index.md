@@ -32,6 +32,134 @@ after creation or modification. During this time, deletes to resources will be
 blocked. If you need to delete a distribution that is enabled and you do not
 want to wait, you need to use the <code class="docutils literal notranslate"><span class="pre">retain_on_delete</span></code> flag.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">,</span>
+    <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;My bucket&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">s3_origin_id</span> <span class="o">=</span> <span class="s2">&quot;myS3Origin&quot;</span>
+<span class="n">s3_distribution</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudfront</span><span class="o">.</span><span class="n">Distribution</span><span class="p">(</span><span class="s2">&quot;s3Distribution&quot;</span><span class="p">,</span>
+    <span class="n">aliases</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;mysite.example.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;yoursite.example.com&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;Some comment&quot;</span><span class="p">,</span>
+    <span class="n">default_cache_behavior</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;allowedMethods&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;DELETE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;HEAD&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;OPTIONS&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;PATCH&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;PUT&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;cachedMethods&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;HEAD&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;defaultTtl&quot;</span><span class="p">:</span> <span class="mi">3600</span><span class="p">,</span>
+        <span class="s2">&quot;forwardedValues&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;cookies&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;forward&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;queryString&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;maxTtl&quot;</span><span class="p">:</span> <span class="mi">86400</span><span class="p">,</span>
+        <span class="s2">&quot;minTtl&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;targetOriginId&quot;</span><span class="p">:</span> <span class="n">s3_origin_id</span><span class="p">,</span>
+        <span class="s2">&quot;viewerProtocolPolicy&quot;</span><span class="p">:</span> <span class="s2">&quot;allow-all&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">default_root_object</span><span class="o">=</span><span class="s2">&quot;index.html&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">is_ipv6_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">logging_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;bucket&quot;</span><span class="p">:</span> <span class="s2">&quot;mylogs.s3.amazonaws.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;includeCookies&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;myprefix&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">ordered_cache_behaviors</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;allowedMethods&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;HEAD&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;OPTIONS&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;cachedMethods&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;HEAD&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;OPTIONS&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;compress&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;defaultTtl&quot;</span><span class="p">:</span> <span class="mi">86400</span><span class="p">,</span>
+            <span class="s2">&quot;forwardedValues&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;cookies&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;forward&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;headers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Origin&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;queryString&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;maxTtl&quot;</span><span class="p">:</span> <span class="mi">31536000</span><span class="p">,</span>
+            <span class="s2">&quot;minTtl&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;pathPattern&quot;</span><span class="p">:</span> <span class="s2">&quot;/content/immutable/*&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;targetOriginId&quot;</span><span class="p">:</span> <span class="n">s3_origin_id</span><span class="p">,</span>
+            <span class="s2">&quot;viewerProtocolPolicy&quot;</span><span class="p">:</span> <span class="s2">&quot;redirect-to-https&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;allowedMethods&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;HEAD&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;OPTIONS&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;cachedMethods&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;HEAD&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;compress&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;defaultTtl&quot;</span><span class="p">:</span> <span class="mi">3600</span><span class="p">,</span>
+            <span class="s2">&quot;forwardedValues&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;cookies&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;forward&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;queryString&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;maxTtl&quot;</span><span class="p">:</span> <span class="mi">86400</span><span class="p">,</span>
+            <span class="s2">&quot;minTtl&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;pathPattern&quot;</span><span class="p">:</span> <span class="s2">&quot;/content/*&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;targetOriginId&quot;</span><span class="p">:</span> <span class="n">s3_origin_id</span><span class="p">,</span>
+            <span class="s2">&quot;viewerProtocolPolicy&quot;</span><span class="p">:</span> <span class="s2">&quot;redirect-to-https&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">origins</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;domainName&quot;</span><span class="p">:</span> <span class="n">bucket</span><span class="o">.</span><span class="n">bucket_regional_domain_name</span><span class="p">,</span>
+        <span class="s2">&quot;originId&quot;</span><span class="p">:</span> <span class="n">s3_origin_id</span><span class="p">,</span>
+        <span class="s2">&quot;s3OriginConfig&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;originAccessIdentity&quot;</span><span class="p">:</span> <span class="s2">&quot;origin-access-identity/cloudfront/ABCDEFG1234567&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">}],</span>
+    <span class="n">price_class</span><span class="o">=</span><span class="s2">&quot;PriceClass_200&quot;</span><span class="p">,</span>
+    <span class="n">restrictions</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;geoRestriction&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;locations&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;US&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;CA&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;GB&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;DE&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;restrictionType&quot;</span><span class="p">:</span> <span class="s2">&quot;whitelist&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;production&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">viewer_certificate</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;cloudfrontDefaultCertificate&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1233,7 +1361,51 @@ CloudFront system.</p>
 <p>For information about CloudFront distributions, see the
 <a class="reference external" href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html">Amazon CloudFront Developer Guide</a>. For more information on generating
 origin access identities, see
-[Using an Origin Access Identity to Restrict Access to Your Amazon S3 Content][2].</p>
+<a class="reference external" href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html">Using an Origin Access Identity to Restrict Access to Your Amazon S3 Content</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">origin_access_identity</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudfront</span><span class="o">.</span><span class="n">OriginAccessIdentity</span><span class="p">(</span><span class="s2">&quot;originAccessIdentity&quot;</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;Some comment&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Normally, when referencing an origin access identity in CloudFront, you need to
+prefix the ID with the <code class="docutils literal notranslate"><span class="pre">origin-access-identity/cloudfront/</span></code> special path.
+The <code class="docutils literal notranslate"><span class="pre">cloudfront_access_identity_path</span></code> allows this to be circumvented.
+The below snippet demonstrates use with the <code class="docutils literal notranslate"><span class="pre">s3_origin_config</span></code> structure for the
+<cite>``cloudfront.Distribution`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html">https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html</a>&gt;`_ resource:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p>Note that the AWS API may translate the <code class="docutils literal notranslate"><span class="pre">s3_canonical_user_id</span></code> <code class="docutils literal notranslate"><span class="pre">CanonicalUser</span></code>
+principal into an <code class="docutils literal notranslate"><span class="pre">AWS</span></code> IAM ARN principal when supplied in an
+<cite>``s3.Bucket`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/s3_bucket.html">https://www.terraform.io/docs/providers/aws/r/s3_bucket.html</a>&gt;`_ bucket policy, causing spurious diffs. If
+you see this behaviour, use the <code class="docutils literal notranslate"><span class="pre">iam_arn</span></code> instead:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">s3_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;s3:GetObject&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;principals&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;identifiers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">aws_cloudfront_origin_access_identity</span><span class="p">[</span><span class="s2">&quot;origin_access_identity&quot;</span><span class="p">][</span><span class="s2">&quot;iam_arn&quot;</span><span class="p">]],</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s1">&#39;example&#39;</span><span class="p">][</span><span class="s1">&#39;arn&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/*&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;s3:ListBucket&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;principals&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;identifiers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">aws_cloudfront_origin_access_identity</span><span class="p">[</span><span class="s2">&quot;origin_access_identity&quot;</span><span class="p">][</span><span class="s2">&quot;iam_arn&quot;</span><span class="p">]],</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">]],</span>
+    <span class="p">},</span>
+<span class="p">])</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">BucketPolicy</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">policy</span><span class="o">=</span><span class="n">s3_policy</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1356,7 +1528,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aws.cloudfront.PublicKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudfront.</code><code class="sig-name descname">PublicKey</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">comment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encoded_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.PublicKey" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudfront</span><span class="o">.</span><span class="n">PublicKey</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;test public key&quot;</span><span class="p">,</span>
+    <span class="n">encoded_key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;public_key.pem&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
@@ -1468,6 +1648,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudfront.get_distribution">
 <code class="sig-prename descclassname">pulumi_aws.cloudfront.</code><code class="sig-name descname">get_distribution</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.get_distribution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a CloudFront distribution.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudfront</span><span class="o">.</span><span class="n">get_distribution</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;EDFDVBD632BHDS5&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – The identifier for the distribution. For example: <code class="docutils literal notranslate"><span class="pre">EDFDVBD632BHDS5</span></code>.</p>

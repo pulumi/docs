@@ -21,6 +21,12 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p><strong>Note:</strong> Account management must be done from the organization’s master account.</p>
 </div></blockquote>
 <p>!&gt; <strong>WARNING:</strong> Deleting this resource will only remove an AWS account from an organization. This provider will not close the account. The member account must be prepared to be a standalone account beforehand. See the <a class="reference external" href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html">AWS Organizations documentation</a> for more information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">account</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;account&quot;</span><span class="p">,</span> <span class="n">email</span><span class="o">=</span><span class="s2">&quot;john@doe.org&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -242,6 +248,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.organizations.Organization">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.organizations.</code><code class="sig-name descname">Organization</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">aws_service_access_principals</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled_policy_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">feature_set</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.organizations.Organization" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create an organization.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">org</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">Organization</span><span class="p">(</span><span class="s2">&quot;org&quot;</span><span class="p">,</span>
+    <span class="n">aws_service_access_principals</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;cloudtrail.amazonaws.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;config.amazonaws.com&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">feature_set</span><span class="o">=</span><span class="s2">&quot;ALL&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -438,6 +455,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.organizations.OrganizationalUnit">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.organizations.</code><code class="sig-name descname">OrganizationalUnit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.organizations.OrganizationalUnit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create an organizational unit.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">OrganizationalUnit</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">parent_id</span><span class="o">=</span><span class="n">aws_organizations_organization</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;roots&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -547,6 +570,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.organizations.Policy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.organizations.</code><code class="sig-name descname">Policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.organizations.Policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage an <a class="reference external" href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies.html">AWS Organizations policy</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: {</span>
+<span class="s2">    &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">    &quot;Action&quot;: &quot;*&quot;,</span>
+<span class="s2">    &quot;Resource&quot;: &quot;*&quot;</span>
+<span class="s2">  }</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -653,6 +691,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.organizations.PolicyAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.organizations.</code><code class="sig-name descname">PolicyAttachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.organizations.PolicyAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to attach an AWS Organizations policy to an organization account, root, or unit.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">account</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">PolicyAttachment</span><span class="p">(</span><span class="s2">&quot;account&quot;</span><span class="p">,</span>
+    <span class="n">policy_id</span><span class="o">=</span><span class="n">aws_organizations_policy</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">target_id</span><span class="o">=</span><span class="s2">&quot;123456789012&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">root</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">PolicyAttachment</span><span class="p">(</span><span class="s2">&quot;root&quot;</span><span class="p">,</span>
+    <span class="n">policy_id</span><span class="o">=</span><span class="n">aws_organizations_policy</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">target_id</span><span class="o">=</span><span class="n">aws_organizations_organization</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;roots&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">unit</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">PolicyAttachment</span><span class="p">(</span><span class="s2">&quot;unit&quot;</span><span class="p">,</span>
+    <span class="n">policy_id</span><span class="o">=</span><span class="n">aws_organizations_policy</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">target_id</span><span class="o">=</span><span class="n">aws_organizations_organizational_unit</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -735,12 +797,53 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.organizations.get_organization">
 <code class="sig-prename descclassname">pulumi_aws.organizations.</code><code class="sig-name descname">get_organization</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.organizations.get_organization" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information about the organization that the user’s account belongs to</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_organization</span><span class="p">()</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;accountIds&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">__item</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="n">example</span><span class="o">.</span><span class="n">accounts</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_organization</span><span class="p">()</span>
+<span class="n">sns_topic</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;snsTopic&quot;</span><span class="p">)</span>
+<span class="n">sns_topic_policy_policy_document</span> <span class="o">=</span> <span class="n">sns_topic</span><span class="o">.</span><span class="n">arn</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">arn</span><span class="p">:</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;SNS:Subscribe&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;SNS:Publish&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;condition&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;test&quot;</span><span class="p">:</span> <span class="s2">&quot;StringEquals&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+        <span class="s2">&quot;variable&quot;</span><span class="p">:</span> <span class="s2">&quot;aws:PrincipalOrgID&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="s2">&quot;effect&quot;</span><span class="p">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;principals&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;identifiers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">arn</span><span class="p">],</span>
+<span class="p">}]))</span>
+<span class="n">sns_topic_policy_topic_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">TopicPolicy</span><span class="p">(</span><span class="s2">&quot;snsTopicPolicyTopicPolicy&quot;</span><span class="p">,</span>
+    <span class="n">arn</span><span class="o">=</span><span class="n">sns_topic</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="n">sns_topic_policy_policy_document</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py function">
 <dt id="pulumi_aws.organizations.get_organizational_units">
 <code class="sig-prename descclassname">pulumi_aws.organizations.</code><code class="sig-name descname">get_organizational_units</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.organizations.get_organizational_units" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get all direct child organizational units under a parent organizational unit. This only provides immediate children, not all children.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">org</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_organization</span><span class="p">()</span>
+<span class="n">ou</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_organizational_units</span><span class="p">(</span><span class="n">parent_id</span><span class="o">=</span><span class="n">org</span><span class="o">.</span><span class="n">roots</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>parent_id</strong> (<em>str</em>) – The parent ID of the organizational unit.</p>

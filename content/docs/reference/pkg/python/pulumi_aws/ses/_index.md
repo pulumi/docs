@@ -17,6 +17,12 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.ses.ActiveReceiptRuleSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ses.</code><code class="sig-name descname">ActiveReceiptRuleSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rule_set_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.ActiveReceiptRuleSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to designate the active SES receipt rule set</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ses</span><span class="o">.</span><span class="n">ActiveReceiptRuleSet</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span> <span class="n">rule_set_name</span><span class="o">=</span><span class="s2">&quot;primary-rules&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -157,6 +163,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.ConfigurationSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ses.</code><code class="sig-name descname">ConfigurationSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.ConfigurationSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SES configuration set resource</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ses</span><span class="o">.</span><span class="n">ConfigurationSet</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -232,6 +244,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ses.</code><code class="sig-name descname">DomainDkim</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.DomainDkim" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SES domain DKIM generation resource.</p>
 <p>Domain ownership needs to be confirmed first using <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/ses_domain_identity.html">ses_domain_identity Resource</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_domain_identity</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ses</span><span class="o">.</span><span class="n">DomainIdentity</span><span class="p">(</span><span class="s2">&quot;exampleDomainIdentity&quot;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">)</span>
+<span class="n">example_domain_dkim</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ses</span><span class="o">.</span><span class="n">DomainDkim</span><span class="p">(</span><span class="s2">&quot;exampleDomainDkim&quot;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="n">example_domain_identity</span><span class="o">.</span><span class="n">domain</span><span class="p">)</span>
+<span class="n">example_amazonses_dkim_record</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="nb">range</span> <span class="ow">in</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]:</span>
+    <span class="n">example_amazonses_dkim_record</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;exampleAmazonsesDkimRecord-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="n">example_domain_dkim</span><span class="o">.</span><span class="n">dkim_tokens</span><span class="p">[</span><span class="nb">range</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">dkim_tokens</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">dkim_tokens</span><span class="si">}</span><span class="s2">._domainkey.example.com&quot;</span><span class="p">),</span>
+        <span class="n">records</span><span class="o">=</span><span class="p">[</span><span class="n">example_domain_dkim</span><span class="o">.</span><span class="n">dkim_tokens</span><span class="p">[</span><span class="nb">range</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">dkim_tokens</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">dkim_tokens</span><span class="si">}</span><span class="s2">.dkim.amazonses.com&quot;</span><span class="p">)],</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="s2">&quot;600&quot;</span><span class="p">,</span>
+        <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;CNAME&quot;</span><span class="p">,</span>
+        <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;ABCDEFGHIJ123&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -324,6 +351,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.DomainIdentity">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ses.</code><code class="sig-name descname">DomainIdentity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.DomainIdentity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SES domain identity resource</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ses</span><span class="o">.</span><span class="n">DomainIdentity</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">)</span>
+<span class="n">example_amazonses_verification_record</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;exampleAmazonsesVerificationRecord&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;_amazonses.example.com&quot;</span><span class="p">,</span>
+    <span class="n">records</span><span class="o">=</span><span class="p">[</span><span class="n">example</span><span class="o">.</span><span class="n">verification_token</span><span class="p">],</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="s2">&quot;600&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;TXT&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;ABCDEFGHIJ123&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -431,6 +470,19 @@ deploy the required DNS verification records, and wait for verification to compl
 <blockquote>
 <div><p><strong>WARNING:</strong> This resource implements a part of the verification workflow. It does not represent a real-world entity in AWS, therefore changing or deleting this resource on its own has no immediate effect.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ses</span><span class="o">.</span><span class="n">DomainIdentity</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">)</span>
+<span class="n">example_amazonses_verification_record</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;exampleAmazonsesVerificationRecord&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="nb">id</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;_amazonses.</span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+    <span class="n">records</span><span class="o">=</span><span class="p">[</span><span class="n">example</span><span class="o">.</span><span class="n">verification_token</span><span class="p">],</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="s2">&quot;600&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;TXT&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">aws_route53_zone</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;zone_id&quot;</span><span class="p">])</span>
+<span class="n">example_verification</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ses</span><span class="o">.</span><span class="n">DomainIdentityVerification</span><span class="p">(</span><span class="s2">&quot;exampleVerification&quot;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -512,6 +564,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.EmailIdentity">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ses.</code><code class="sig-name descname">EmailIdentity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.EmailIdentity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SES email identity resource</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ses</span><span class="o">.</span><span class="n">EmailIdentity</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">email</span><span class="o">=</span><span class="s2">&quot;email@example.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -593,6 +651,54 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.EventDestination">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ses.</code><code class="sig-name descname">EventDestination</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudwatch_destinations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">configuration_set_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kinesis_destination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">matching_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sns_destination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.EventDestination" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SES event destination</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">cloudwatch</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ses</span><span class="o">.</span><span class="n">EventDestination</span><span class="p">(</span><span class="s2">&quot;cloudwatch&quot;</span><span class="p">,</span>
+    <span class="n">cloudwatch_destinations</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;defaultValue&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dimensionName&quot;</span><span class="p">:</span> <span class="s2">&quot;dimension&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;valueSource&quot;</span><span class="p">:</span> <span class="s2">&quot;emailHeader&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">configuration_set_name</span><span class="o">=</span><span class="n">aws_ses_configuration_set</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">matching_types</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;bounce&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;send&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">kinesis</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ses</span><span class="o">.</span><span class="n">EventDestination</span><span class="p">(</span><span class="s2">&quot;kinesis&quot;</span><span class="p">,</span>
+    <span class="n">configuration_set_name</span><span class="o">=</span><span class="n">aws_ses_configuration_set</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">kinesis_destination</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;streamArn&quot;</span><span class="p">:</span> <span class="n">aws_kinesis_firehose_delivery_stream</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">matching_types</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;bounce&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;send&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">sns</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ses</span><span class="o">.</span><span class="n">EventDestination</span><span class="p">(</span><span class="s2">&quot;sns&quot;</span><span class="p">,</span>
+    <span class="n">configuration_set_name</span><span class="o">=</span><span class="n">aws_ses_configuration_set</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">matching_types</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;bounce&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;send&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">sns_destination</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;topicArn&quot;</span><span class="p">:</span> <span class="n">aws_sns_topic</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -757,6 +863,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.IdentityNotificationTopic">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ses.</code><code class="sig-name descname">IdentityNotificationTopic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">include_original_headers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.IdentityNotificationTopic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resource for managing SES Identity Notification Topics</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ses</span><span class="o">.</span><span class="n">IdentityNotificationTopic</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">identity</span><span class="o">=</span><span class="n">aws_ses_domain_identity</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;domain&quot;</span><span class="p">],</span>
+    <span class="n">include_original_headers</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">notification_type</span><span class="o">=</span><span class="s2">&quot;Bounce&quot;</span><span class="p">,</span>
+    <span class="n">topic_arn</span><span class="o">=</span><span class="n">aws_sns_topic</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -855,6 +971,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.IdentityPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ses.</code><code class="sig-name descname">IdentityPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.IdentityPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a SES Identity Policy. More information about SES Sending Authorization Policies can be found in the <a class="reference external" href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization-policies.html">SES Developer Guide</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_domain_identity</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ses</span><span class="o">.</span><span class="n">DomainIdentity</span><span class="p">(</span><span class="s2">&quot;exampleDomainIdentity&quot;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">)</span>
+<span class="n">example_policy_document</span> <span class="o">=</span> <span class="n">example_domain_identity</span><span class="o">.</span><span class="n">arn</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">arn</span><span class="p">:</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;SES:SendEmail&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;SES:SendRawEmail&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;principals&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;identifiers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">arn</span><span class="p">],</span>
+<span class="p">}]))</span>
+<span class="n">example_identity_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ses</span><span class="o">.</span><span class="n">IdentityPolicy</span><span class="p">(</span><span class="s2">&quot;exampleIdentityPolicy&quot;</span><span class="p">,</span>
+    <span class="n">identity</span><span class="o">=</span><span class="n">example_domain_identity</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="n">example_policy_document</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -948,6 +1084,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> For the MAIL FROM domain to be fully usable, this resource should be paired with the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/ses_domain_identity.html">ses.DomainIdentity resource</a>. To validate the MAIL FROM domain, a DNS MX record is required. To pass SPF checks, a DNS TXT record may also be required. See the <a class="reference external" href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/mail-from-set.html">Amazon SES MAIL FROM documentation</a> for more information.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="c1"># Example SES Domain Identity</span>
+<span class="n">example_domain_identity</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ses</span><span class="o">.</span><span class="n">DomainIdentity</span><span class="p">(</span><span class="s2">&quot;exampleDomainIdentity&quot;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">)</span>
+<span class="n">example_mail_from</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ses</span><span class="o">.</span><span class="n">MailFrom</span><span class="p">(</span><span class="s2">&quot;exampleMailFrom&quot;</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="n">example_domain_identity</span><span class="o">.</span><span class="n">domain</span><span class="p">,</span>
+    <span class="n">mail_from_domain</span><span class="o">=</span><span class="n">example_domain_identity</span><span class="o">.</span><span class="n">domain</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">domain</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;bounce.</span><span class="si">{</span><span class="n">domain</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+<span class="c1"># Example Route53 MX record</span>
+<span class="n">example_ses_domain_mail_from_mx</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;exampleSesDomainMailFromMx&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="n">example_mail_from</span><span class="o">.</span><span class="n">mail_from_domain</span><span class="p">,</span>
+    <span class="n">records</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10 feedback-smtp.us-east-1.amazonses.com&quot;</span><span class="p">],</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="s2">&quot;600&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;MX&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">aws_route53_zone</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="c1"># Example Route53 TXT record for SPF</span>
+<span class="n">example_ses_domain_mail_from_txt</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;exampleSesDomainMailFromTxt&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="n">example_mail_from</span><span class="o">.</span><span class="n">mail_from_domain</span><span class="p">,</span>
+    <span class="n">records</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;v=spf1 include:amazonses.com -all&quot;</span><span class="p">],</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="s2">&quot;600&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;TXT&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">aws_route53_zone</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1039,6 +1199,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.ReceiptFilter">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ses.</code><code class="sig-name descname">ReceiptFilter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.ReceiptFilter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SES receipt filter resource</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="nb">filter</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ses</span><span class="o">.</span><span class="n">ReceiptFilter</span><span class="p">(</span><span class="s2">&quot;filter&quot;</span><span class="p">,</span>
+    <span class="n">cidr</span><span class="o">=</span><span class="s2">&quot;10.10.10.10&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;Block&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1129,6 +1297,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.ReceiptRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ses.</code><code class="sig-name descname">ReceiptRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_header_actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">after</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bounce_actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lambda_actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">recipients</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rule_set_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3_actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scan_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sns_actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stop_actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tls_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workmail_actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.ReceiptRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SES receipt rule resource</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="c1"># Add a header to the email and store it in S3</span>
+<span class="n">store</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ses</span><span class="o">.</span><span class="n">ReceiptRule</span><span class="p">(</span><span class="s2">&quot;store&quot;</span><span class="p">,</span>
+    <span class="n">add_header_actions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;headerName&quot;</span><span class="p">:</span> <span class="s2">&quot;Custom-Header&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;headerValue&quot;</span><span class="p">:</span> <span class="s2">&quot;Added by SES&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;position&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">recipients</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;karen@example.com&quot;</span><span class="p">],</span>
+    <span class="n">rule_set_name</span><span class="o">=</span><span class="s2">&quot;default-rule-set&quot;</span><span class="p">,</span>
+    <span class="n">s3_actions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;bucketName&quot;</span><span class="p">:</span> <span class="s2">&quot;emails&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;position&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">scan_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1441,6 +1629,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.ReceiptRuleSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ses.</code><code class="sig-name descname">ReceiptRuleSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rule_set_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.ReceiptRuleSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SES receipt rule set resource</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ses</span><span class="o">.</span><span class="n">ReceiptRuleSet</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span> <span class="n">rule_set_name</span><span class="o">=</span><span class="s2">&quot;primary-rules&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1515,6 +1709,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.Template">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ses.</code><code class="sig-name descname">Template</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">html</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subject</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">text</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.Template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create a SES template.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">my_template</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ses</span><span class="o">.</span><span class="n">Template</span><span class="p">(</span><span class="s2">&quot;myTemplate&quot;</span><span class="p">,</span>
+    <span class="n">html</span><span class="o">=</span><span class="s2">&quot;&lt;h1&gt;Hello {{name}},&lt;/h1&gt;&lt;p&gt;Your favorite animal is {{favoriteanimal}}.&lt;/p&gt;&quot;</span><span class="p">,</span>
+    <span class="n">subject</span><span class="o">=</span><span class="s2">&quot;Greetings, {{name}}!&quot;</span><span class="p">,</span>
+    <span class="n">text</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;Hello {{name}},</span>
+<span class="s2">Your favorite animal is {{favoriteanimal}}.</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

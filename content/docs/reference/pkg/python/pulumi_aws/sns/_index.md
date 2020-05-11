@@ -40,6 +40,23 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.sns.PlatformApplication">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sns.</code><code class="sig-name descname">PlatformApplication</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">event_delivery_failure_topic_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">event_endpoint_created_topic_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">event_endpoint_deleted_topic_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">event_endpoint_updated_topic_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">failure_feedback_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">platform_credential</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">platform_principal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">success_feedback_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">success_feedback_sample_rate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sns.PlatformApplication" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SNS platform application resource</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">apns_application</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">PlatformApplication</span><span class="p">(</span><span class="s2">&quot;apnsApplication&quot;</span><span class="p">,</span>
+    <span class="n">platform</span><span class="o">=</span><span class="s2">&quot;APNS&quot;</span><span class="p">,</span>
+    <span class="n">platform_credential</span><span class="o">=</span><span class="s2">&quot;&lt;APNS PRIVATE KEY&gt;&quot;</span><span class="p">,</span>
+    <span class="n">platform_principal</span><span class="o">=</span><span class="s2">&quot;&lt;APNS CERTIFICATE&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">gcm_application</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">PlatformApplication</span><span class="p">(</span><span class="s2">&quot;gcmApplication&quot;</span><span class="p">,</span>
+    <span class="n">platform</span><span class="o">=</span><span class="s2">&quot;GCM&quot;</span><span class="p">,</span>
+    <span class="n">platform_credential</span><span class="o">=</span><span class="s2">&quot;&lt;GCM API KEY&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -204,6 +221,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.sns.SmsPreferences">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sns.</code><code class="sig-name descname">SmsPreferences</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_sender_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_sms_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delivery_status_iam_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delivery_status_success_sampling_rate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monthly_spend_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">usage_report_s3_bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sns.SmsPreferences" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a way to set SNS SMS preferences.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">update_sms_prefs</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">SmsPreferences</span><span class="p">(</span><span class="s2">&quot;updateSmsPrefs&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -318,6 +341,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.sns.Topic">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sns.</code><code class="sig-name descname">Topic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_failure_feedback_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_success_feedback_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_success_feedback_sample_rate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delivery_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_failure_feedback_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_success_feedback_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_success_feedback_sample_rate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_master_key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lambda_failure_feedback_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lambda_success_feedback_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lambda_success_feedback_sample_rate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sqs_failure_feedback_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sqs_success_feedback_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sqs_success_feedback_sample_rate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sns.Topic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SNS topic resource</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">user_updates</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;userUpdates&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">user_updates</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;userUpdates&quot;</span><span class="p">,</span> <span class="n">delivery_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;http&quot;: {</span>
+<span class="s2">    &quot;defaultHealthyRetryPolicy&quot;: {</span>
+<span class="s2">      &quot;minDelayTarget&quot;: 20,</span>
+<span class="s2">      &quot;maxDelayTarget&quot;: 20,</span>
+<span class="s2">      &quot;numRetries&quot;: 3,</span>
+<span class="s2">      &quot;numMaxDelayRetries&quot;: 0,</span>
+<span class="s2">      &quot;numNoDelayRetries&quot;: 0,</span>
+<span class="s2">      &quot;numMinDelayRetries&quot;: 0,</span>
+<span class="s2">      &quot;backoffFunction&quot;: &quot;linear&quot;</span>
+<span class="s2">    },</span>
+<span class="s2">    &quot;disableSubscriptionOverrides&quot;: false,</span>
+<span class="s2">    &quot;defaultThrottlePolicy&quot;: {</span>
+<span class="s2">      &quot;maxReceivesPerSecond&quot;: 1</span>
+<span class="s2">    }</span>
+<span class="s2">  }</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">user_updates</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;userUpdates&quot;</span><span class="p">,</span> <span class="n">kms_master_key_id</span><span class="o">=</span><span class="s2">&quot;alias/aws/sns&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The <code class="docutils literal notranslate"><span class="pre">&lt;endpoint&gt;_success_feedback_role_arn</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;endpoint&gt;_failure_feedback_role_arn</span></code> arguments are used to give Amazon SNS write access to use CloudWatch Logs on your behalf. The <code class="docutils literal notranslate"><span class="pre">&lt;endpoint&gt;_success_feedback_sample_rate</span></code> argument is for specifying the sample rate percentage (0-100) of successfully delivered messages. After you configure the  <code class="docutils literal notranslate"><span class="pre">&lt;endpoint&gt;_failure_feedback_role_arn</span></code> argument, then all failed message deliveries generate CloudWatch Logs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -549,6 +608,41 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> If a Principal is specified as just an AWS account ID rather than an ARN, AWS silently converts it to the ARN for the root user, causing future deployments to differ. To avoid this problem, just specify the full ARN, e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:iam::123456789012:root</span></code></p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
+<span class="n">sns_topic_policy</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">arn</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">arn</span><span class="p">:</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">policy_id</span><span class="o">=</span><span class="s2">&quot;__default_policy_ID&quot;</span><span class="p">,</span>
+    <span class="n">statements</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;SNS:Subscribe&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;SNS:SetTopicAttributes&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;SNS:RemovePermission&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;SNS:Receive&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;SNS:Publish&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;SNS:ListSubscriptionsByTopic&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;SNS:GetTopicAttributes&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;SNS:DeleteTopic&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;SNS:AddPermission&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;condition&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;test&quot;</span><span class="p">:</span> <span class="s2">&quot;StringEquals&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;account-id&quot;</span><span class="p">]],</span>
+            <span class="s2">&quot;variable&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS:SourceOwner&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;effect&quot;</span><span class="p">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;principals&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;identifiers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">arn</span><span class="p">],</span>
+        <span class="s2">&quot;sid&quot;</span><span class="p">:</span> <span class="s2">&quot;__default_statement_ID&quot;</span><span class="p">,</span>
+    <span class="p">}]))</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">TopicPolicy</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">arn</span><span class="o">=</span><span class="n">test</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="n">sns_topic_policy</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -642,6 +736,15 @@ probably be SQS queues.</p>
 <p><strong>NOTE:</strong> If SNS topic and SQS queue are in different AWS accounts but the same region it is important for the “sns.TopicSubscription” to use the AWS provider of the account with the SQS queue. If “sns.TopicSubscription” is using a Provider with a different account than the SQS queue, the provider creates the subscriptions but does not keep state and tries to re-create the subscription at every apply.</p>
 <p><strong>NOTE:</strong> If SNS topic and SQS queue are in different AWS accounts and different AWS regions it is important to recognize that the subscription needs to be initiated from the account with the SQS queue but in the region of the SNS topic.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">user_updates_sqs_target</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">TopicSubscription</span><span class="p">(</span><span class="s2">&quot;userUpdatesSqsTarget&quot;</span><span class="p">,</span>
+    <span class="n">endpoint</span><span class="o">=</span><span class="s2">&quot;arn:aws:sqs:us-west-2:432981146916:queue-too&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;sqs&quot;</span><span class="p">,</span>
+    <span class="n">topic</span><span class="o">=</span><span class="s2">&quot;arn:aws:sns:us-west-2:432981146916:user-updates-topic&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -785,6 +888,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to get the ARN of a topic in AWS Simple Notification
 Service (SNS). By using this data source, you can reference SNS topics
 without having to hard code the ARNs as input.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">get_topic</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;an_example_topic&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The friendly name of the topic to match.</p>

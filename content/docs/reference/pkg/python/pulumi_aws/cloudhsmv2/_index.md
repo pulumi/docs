@@ -244,6 +244,15 @@ The number of available cluster certificates may vary depending on state of the 
 <dt id="pulumi_aws.cloudhsmv2.Hsm">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudhsmv2.</code><code class="sig-name descname">Hsm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudhsmv2.Hsm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an HSM module in Amazon CloudHSM v2 cluster.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudhsmv2</span><span class="o">.</span><span class="n">get_cluster</span><span class="p">(</span><span class="n">cluster_id</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;cloudhsm_cluster_id&quot;</span><span class="p">])</span>
+<span class="n">cloudhsm_v2_hsm</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudhsmv2</span><span class="o">.</span><span class="n">Hsm</span><span class="p">(</span><span class="s2">&quot;cloudhsmV2Hsm&quot;</span><span class="p">,</span>
+    <span class="n">cluster_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">cluster_id</span><span class="p">,</span>
+    <span class="n">subnet_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">subnet_ids</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -363,6 +372,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudhsmv2.get_cluster">
 <code class="sig-prename descclassname">pulumi_aws.cloudhsmv2.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudhsmv2.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a CloudHSM v2 cluster</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudhsmv2</span><span class="o">.</span><span class="n">get_cluster</span><span class="p">(</span><span class="n">cluster_id</span><span class="o">=</span><span class="s2">&quot;cluster-testclusterid&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
