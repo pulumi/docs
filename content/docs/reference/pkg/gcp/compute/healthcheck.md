@@ -44,6 +44,17 @@ const tcp_health_check = new gcp.compute.HealthCheck("tcp-health-check", {
     timeoutSec: 1,
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+tcp_health_check = gcp.compute.HealthCheck("tcp-health-check",
+    check_interval_sec=1,
+    tcp_health_check={
+        "port": "80",
+    },
+    timeout_sec=1)
+```
 ## Example Usage - Health Check Tcp Full
 
 
@@ -66,6 +77,24 @@ const tcp_health_check = new gcp.compute.HealthCheck("tcp-health-check", {
     unhealthyThreshold: 5,
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+tcp_health_check = gcp.compute.HealthCheck("tcp-health-check",
+    check_interval_sec=1,
+    description="Health check via tcp",
+    healthy_threshold=4,
+    tcp_health_check={
+        "portName": "health-check-port",
+        "portSpecification": "USE_NAMED_PORT",
+        "proxyHeader": "NONE",
+        "request": "ARE YOU HEALTHY?",
+        "response": "I AM HEALTHY",
+    },
+    timeout_sec=1,
+    unhealthy_threshold=5)
+```
 ## Example Usage - Health Check Ssl
 
 
@@ -80,6 +109,17 @@ const ssl_health_check = new gcp.compute.HealthCheck("ssl-health-check", {
     },
     timeoutSec: 1,
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+ssl_health_check = gcp.compute.HealthCheck("ssl-health-check",
+    check_interval_sec=1,
+    ssl_health_check={
+        "port": "443",
+    },
+    timeout_sec=1)
 ```
 ## Example Usage - Health Check Ssl Full
 
@@ -103,6 +143,24 @@ const ssl_health_check = new gcp.compute.HealthCheck("ssl-health-check", {
     unhealthyThreshold: 5,
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+ssl_health_check = gcp.compute.HealthCheck("ssl-health-check",
+    check_interval_sec=1,
+    description="Health check via ssl",
+    healthy_threshold=4,
+    ssl_health_check={
+        "portName": "health-check-port",
+        "portSpecification": "USE_NAMED_PORT",
+        "proxyHeader": "NONE",
+        "request": "ARE YOU HEALTHY?",
+        "response": "I AM HEALTHY",
+    },
+    timeout_sec=1,
+    unhealthy_threshold=5)
+```
 ## Example Usage - Health Check Http
 
 
@@ -117,6 +175,17 @@ const http_health_check = new gcp.compute.HealthCheck("http-health-check", {
     },
     timeoutSec: 1,
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+http_health_check = gcp.compute.HealthCheck("http-health-check",
+    check_interval_sec=1,
+    http_health_check={
+        "port": 80,
+    },
+    timeout_sec=1)
 ```
 ## Example Usage - Health Check Http Full
 
@@ -141,6 +210,25 @@ const http_health_check = new gcp.compute.HealthCheck("http-health-check", {
     unhealthyThreshold: 5,
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+http_health_check = gcp.compute.HealthCheck("http-health-check",
+    check_interval_sec=1,
+    description="Health check via http",
+    healthy_threshold=4,
+    http_health_check={
+        "host": "1.2.3.4",
+        "portName": "health-check-port",
+        "portSpecification": "USE_NAMED_PORT",
+        "proxyHeader": "NONE",
+        "requestPath": "/mypath",
+        "response": "I AM HEALTHY",
+    },
+    timeout_sec=1,
+    unhealthy_threshold=5)
+```
 ## Example Usage - Health Check Https
 
 
@@ -155,6 +243,17 @@ const https_health_check = new gcp.compute.HealthCheck("https-health-check", {
     },
     timeoutSec: 1,
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+https_health_check = gcp.compute.HealthCheck("https-health-check",
+    check_interval_sec=1,
+    https_health_check={
+        "port": "443",
+    },
+    timeout_sec=1)
 ```
 ## Example Usage - Health Check Https Full
 
@@ -179,6 +278,25 @@ const https_health_check = new gcp.compute.HealthCheck("https-health-check", {
     unhealthyThreshold: 5,
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+https_health_check = gcp.compute.HealthCheck("https-health-check",
+    check_interval_sec=1,
+    description="Health check via https",
+    healthy_threshold=4,
+    https_health_check={
+        "host": "1.2.3.4",
+        "portName": "health-check-port",
+        "portSpecification": "USE_NAMED_PORT",
+        "proxyHeader": "NONE",
+        "requestPath": "/mypath",
+        "response": "I AM HEALTHY",
+    },
+    timeout_sec=1,
+    unhealthy_threshold=5)
+```
 ## Example Usage - Health Check Http2
 
 
@@ -193,6 +311,17 @@ const http2_health_check = new gcp.compute.HealthCheck("http2-health-check", {
     },
     timeoutSec: 1,
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+http2_health_check = gcp.compute.HealthCheck("http2-health-check",
+    check_interval_sec=1,
+    http2_health_check={
+        "port": "443",
+    },
+    timeout_sec=1)
 ```
 ## Example Usage - Health Check Http2 Full
 
@@ -217,11 +346,62 @@ const http2_health_check = new gcp.compute.HealthCheck("http2-health-check", {
     unhealthyThreshold: 5,
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+http2_health_check = gcp.compute.HealthCheck("http2-health-check",
+    check_interval_sec=1,
+    description="Health check via http2",
+    healthy_threshold=4,
+    http2_health_check={
+        "host": "1.2.3.4",
+        "portName": "health-check-port",
+        "portSpecification": "USE_NAMED_PORT",
+        "proxyHeader": "NONE",
+        "requestPath": "/mypath",
+        "response": "I AM HEALTHY",
+    },
+    timeout_sec=1,
+    unhealthy_threshold=5)
+```
+## Example Usage - Health Check With Logging
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const health-check-with-logging = new gcp.compute.HealthCheck("health-check-with-logging", {
+    timeoutSec: 1,
+    checkIntervalSec: 1,
+    tcp_health_check: {
+        port: "22",
+    },
+    log_config: {
+        enable: true,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+health_check_with_logging = gcp.compute.HealthCheck("health-check-with-logging",
+    timeout_sec=1,
+    check_interval_sec=1,
+    tcp_health_check={
+        "port": "22",
+    },
+    log_config={
+        "enable": True,
+    })
+```
 
 
 
 ## Create a HealthCheck Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1133,7 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing HealthCheck Resource {#look-up}
 
 Get an existing HealthCheck resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#HealthCheckState">HealthCheckState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#HealthCheck">HealthCheck</a></span></code></pre></div>
@@ -1926,9 +2106,6 @@ consecutive failures. The default value is 2.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckHttp2HealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckHttp2HealthCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.HealthCheckHttp2HealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.HealthCheckHttp2HealthCheck.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1992,7 +2169,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2079,7 +2256,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2166,7 +2343,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2253,7 +2430,7 @@ port_name are defined, port takes precedence.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2292,9 +2469,6 @@ can only be ASCII.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckHttpHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckHttpHealthCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.HealthCheckHttpHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.HealthCheckHttpHealthCheck.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2358,7 +2532,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2445,7 +2619,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2532,7 +2706,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2619,7 +2793,7 @@ port_name are defined, port takes precedence.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2658,9 +2832,6 @@ can only be ASCII.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckHttpsHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckHttpsHealthCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.HealthCheckHttpsHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.HealthCheckHttpsHealthCheck.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2724,7 +2895,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2811,7 +2982,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2898,7 +3069,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2985,7 +3156,7 @@ port_name are defined, port takes precedence.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3023,9 +3194,6 @@ can only be ASCII.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckLogConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckLogConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.HealthCheckLogConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.HealthCheckLogConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3110,9 +3278,6 @@ which means no health check logging will be done.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckSslHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckSslHealthCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.HealthCheckSslHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.HealthCheckSslHealthCheck.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3165,7 +3330,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3243,7 +3408,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3321,7 +3486,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3399,7 +3564,7 @@ port_name are defined, port takes precedence.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3440,9 +3605,6 @@ can only be ASCII.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckTcpHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckTcpHealthCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.HealthCheckTcpHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.HealthCheckTcpHealthCheck.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3495,7 +3657,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3573,7 +3735,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3651,7 +3813,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3729,7 +3891,7 @@ port_name are defined, port takes precedence.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

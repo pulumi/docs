@@ -34,11 +34,48 @@ const basic = new gcp.monitoring.Group("basic", {
     filter: "resource.metadata.region=\"europe-west2\"",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+basic = gcp.monitoring.Group("basic",
+    display_name="tf-test MonitoringGroup",
+    filter="resource.metadata.region=\"europe-west2\"")
+```
+## Example Usage - Monitoring Group Subgroup
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const parent = new gcp.monitoring.Group("parent", {
+    displayName: "tf-test MonitoringParentGroup",
+    filter: "resource.metadata.region=\"europe-west2\"",
+});
+const subgroup = new gcp.monitoring.Group("subgroup", {
+    displayName: "tf-test MonitoringSubGroup",
+    filter: "resource.metadata.region=\"europe-west2\"",
+    parentName: parent.name,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+parent = gcp.monitoring.Group("parent",
+    display_name="tf-test MonitoringParentGroup",
+    filter="resource.metadata.region=\"europe-west2\"")
+subgroup = gcp.monitoring.Group("subgroup",
+    display_name="tf-test MonitoringSubGroup",
+    filter="resource.metadata.region=\"europe-west2\"",
+    parent_name=parent.name)
+```
 
 
 
 ## Create a Group Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -566,7 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Group Resource {#look-up}
 
 Get an existing Group resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#GroupState">GroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#Group">Group</a></span></code></pre></div>

@@ -20,26 +20,10 @@ phase because a modification has not yet taken place. You can use the
 `apply_immediately` flag to instruct the service to apply the change immediately
 (see documentation below).
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -54,13 +38,30 @@ const defaultCluster = new aws.neptune.Cluster("default", {
     skipFinalSnapshot: true,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+default = aws.neptune.Cluster("default",
+    apply_immediately=True,
+    backup_retention_period=5,
+    cluster_identifier="neptune-cluster-demo",
+    engine="neptune",
+    iam_database_authentication_enabled=True,
+    preferred_backup_window="07:00-09:00",
+    skip_final_snapshot=True)
+```
+
+> **Note:** AWS Neptune does not support user name/password–based access control.
+See the AWS [Docs](https://docs.aws.amazon.com/neptune/latest/userguide/limits.html) for more information.
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a Cluster Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1424,7 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Cluster Resource {#look-up}
 
 Get an existing Cluster resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/neptune/#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/neptune/#Cluster">Cluster</a></span></code></pre></div>

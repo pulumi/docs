@@ -14,26 +14,10 @@ Provides a resource to manage a GuardDuty detector.
 
 > **NOTE:** Deleting this resource is equivalent to "disabling" GuardDuty for an AWS region, which removes all existing findings. You can set the `enable` attribute to `false` to instead "suspend" monitoring and feedback reporting while keeping existing data. See the [Suspending or Disabling Amazon GuardDuty documentation](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_suspend-disable.html) for more information.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -42,13 +26,20 @@ const myDetector = new aws.guardduty.Detector("MyDetector", {
     enable: true,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+my_detector = aws.guardduty.Detector("myDetector", enable=True)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a Detector Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -440,7 +431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Detector Resource {#look-up}
 
 Get an existing Detector resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/guardduty/#DetectorState">DetectorState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/guardduty/#Detector">Detector</a></span></code></pre></div>

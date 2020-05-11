@@ -12,96 +12,13 @@ meta_desc: "Explore the Authorizer resource of the apigateway module, including 
 
 Provides an API Gateway Authorizer.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const demoRestApi = new aws.apigateway.RestApi("demo", {});
-const invocationRole = new aws.iam.Role("invocation_role", {
-    assumeRolePolicy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "sts:AssumeRole",
-      "Principal": {
-        "Service": "apigateway.amazonaws.com"
-      },
-      "Effect": "Allow",
-      "Sid": ""
-    }
-  ]
-}
-`,
-    path: "/",
-});
-const lambda = new aws.iam.Role("lambda", {
-    assumeRolePolicy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "sts:AssumeRole",
-      "Principal": {
-        "Service": "lambda.amazonaws.com"
-      },
-      "Effect": "Allow",
-      "Sid": ""
-    }
-  ]
-}
-`,
-});
-const authorizer = new aws.lambda.Function("authorizer", {
-    code: new pulumi.asset.FileArchive("lambda-function.zip"),
-    handler: "exports.example",
-    role: lambda.arn,
-});
-const demoAuthorizer = new aws.apigateway.Authorizer("demo", {
-    authorizerCredentials: invocationRole.arn,
-    authorizerUri: authorizer.invokeArn,
-    restApi: demoRestApi.id,
-});
-const invocationPolicy = new aws.iam.RolePolicy("invocation_policy", {
-    policy: pulumi.interpolate`{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "lambda:InvokeFunction",
-      "Effect": "Allow",
-      "Resource": "${authorizer.arn}"
-    }
-  ]
-}
-`,
-    role: invocationRole.id,
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
 
 
+
 ## Create a Authorizer Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -749,7 +666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Authorizer Resource {#look-up}
 
 Get an existing Authorizer resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#AuthorizerState">AuthorizerState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#Authorizer">Authorizer</a></span></code></pre></div>

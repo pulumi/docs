@@ -28,11 +28,49 @@ import * as gcp from "@pulumi/gcp";
 
 const my_repo = new gcp.sourcerepo.Repository("my-repo", {});
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_repo = gcp.sourcerepo.Repository("my-repo")
+```
+## Example Usage - Sourcerepo Repository Full
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const test-account = new gcp.serviceAccount.Account("test-account", {
+    accountId: "my-account",
+    displayName: "Test Service Account",
+});
+const topic = new gcp.pubsub.Topic("topic", {});
+const my-repo = new gcp.sourcerepo.Repository("my-repo", {pubsub_configs: [{
+    topic: topic.id,
+    messageFormat: "JSON",
+    serviceAccountEmail: test-account.email,
+}]});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+test_account = gcp.service_account.Account("test-account",
+    account_id="my-account",
+    display_name="Test Service Account")
+topic = gcp.pubsub.Topic("topic")
+my_repo = gcp.sourcerepo.Repository("my-repo", pubsub_configs=[{
+    "topic": topic.id,
+    "messageFormat": "JSON",
+    "serviceAccountEmail": test_account.email,
+}])
+```
 
 
 
 ## Create a Repository Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -508,7 +546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Repository Resource {#look-up}
 
 Get an existing Repository resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/sourcerepo/#RepositoryState">RepositoryState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/sourcerepo/#Repository">Repository</a></span></code></pre></div>
@@ -864,9 +902,6 @@ Keyed by the topic names.  Structure is documented below.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sourcerepo?tab=doc#RepositoryPubsubConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sourcerepo?tab=doc#RepositoryPubsubConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SourceRepo.Inputs.RepositoryPubsubConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SourceRepo.Outputs.RepositoryPubsubConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

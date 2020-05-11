@@ -13,12 +13,46 @@ meta_desc: "Explore the SslCert resource of the sql module, including examples, 
 Creates a new Google SQL SSL Cert on a Google SQL Instance. For more information, see the [official documentation](https://cloud.google.com/sql/), or the [JSON API](https://cloud.google.com/sql/docs/mysql/admin-api/v1beta4/sslCerts).
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+Example creating a SQL Client Certificate.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * as random from "@pulumi/random";
+
+const dbNameSuffix = new random.RandomId("dbNameSuffix", {byteLength: 4});
+const master = new gcp.sql.DatabaseInstance("master", {settings: {
+    tier: "db-f1-micro",
+}});
+const clientCert = new gcp.sql.SslCert("clientCert", {
+    commonName: "client-name",
+    instance: master.name,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+import pulumi_random as random
+
+db_name_suffix = random.RandomId("dbNameSuffix", byte_length=4)
+master = gcp.sql.DatabaseInstance("master", settings={
+    "tier": "db-f1-micro",
+})
+client_cert = gcp.sql.SslCert("clientCert",
+    common_name="client-name",
+    instance=master.name)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Create a SslCert Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -682,7 +716,7 @@ for example 2012-11-15T16:19:00.094Z.
 ## Look up an Existing SslCert Resource {#look-up}
 
 Get an existing SslCert resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/sql/#SslCertState">SslCertState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/sql/#SslCert">SslCert</a></span></code></pre></div>

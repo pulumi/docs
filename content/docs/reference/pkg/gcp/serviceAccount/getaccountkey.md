@@ -14,13 +14,38 @@ Get service account public key. For more information, see [the official document
 
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myaccount = new gcp.serviceAccount.Account("myaccount", {accountId: "dev-foo-account"});
+const mykeyKey = new gcp.serviceAccount.Key("mykeyKey", {serviceAccountId: myaccount.name});
+const mykeyAccountKey = mykeyKey.name.apply(name => gcp.serviceAccount.getAccountKey({
+    name: name,
+    publicKeyType: "TYPE_X509_PEM_FILE",
+}));
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+myaccount = gcp.service_account.Account("myaccount", account_id="dev-foo-account")
+mykey_key = gcp.service_account.Key("mykeyKey", service_account_id=myaccount.name)
+mykey_account_key = mykey_key.name.apply(lambda name: gcp.serviceAccount.get_account_key(name=name,
+    public_key_type="TYPE_X509_PEM_FILE"))
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Using GetAccountKey {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -443,16 +468,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

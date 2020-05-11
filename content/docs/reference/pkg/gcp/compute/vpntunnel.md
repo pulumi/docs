@@ -20,10 +20,160 @@ To get more information about VpnTunnel, see:
     * [Cloud VPN Overview](https://cloud.google.com/vpn/docs/concepts/overview)
     * [Networks and Tunnel Routing](https://cloud.google.com/vpn/docs/concepts/choosing-networks-routing)
 
+> **Warning:** All arguments including `shared_secret` will be stored in the raw
+state as plain-text.
+
+## Example Usage - Vpn Tunnel Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const network1 = new gcp.compute.Network("network1", {});
+const targetGateway = new gcp.compute.VPNGateway("targetGateway", {network: network1.selfLink});
+const vpnStaticIp = new gcp.compute.Address("vpnStaticIp", {});
+const frEsp = new gcp.compute.ForwardingRule("frEsp", {
+    ipProtocol: "ESP",
+    ipAddress: vpnStaticIp.address,
+    target: targetGateway.selfLink,
+});
+const frUdp500 = new gcp.compute.ForwardingRule("frUdp500", {
+    ipProtocol: "UDP",
+    portRange: "500",
+    ipAddress: vpnStaticIp.address,
+    target: targetGateway.selfLink,
+});
+const frUdp4500 = new gcp.compute.ForwardingRule("frUdp4500", {
+    ipProtocol: "UDP",
+    portRange: "4500",
+    ipAddress: vpnStaticIp.address,
+    target: targetGateway.selfLink,
+});
+const tunnel1 = new gcp.compute.VPNTunnel("tunnel1", {
+    peerIp: "15.0.0.120",
+    sharedSecret: "a secret message",
+    targetVpnGateway: targetGateway.selfLink,
+});
+const route1 = new gcp.compute.Route("route1", {
+    network: network1.name,
+    destRange: "15.0.0.0/24",
+    priority: 1000,
+    nextHopVpnTunnel: tunnel1.selfLink,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network1 = gcp.compute.Network("network1")
+target_gateway = gcp.compute.VPNGateway("targetGateway", network=network1.self_link)
+vpn_static_ip = gcp.compute.Address("vpnStaticIp")
+fr_esp = gcp.compute.ForwardingRule("frEsp",
+    ip_protocol="ESP",
+    ip_address=vpn_static_ip.address,
+    target=target_gateway.self_link)
+fr_udp500 = gcp.compute.ForwardingRule("frUdp500",
+    ip_protocol="UDP",
+    port_range="500",
+    ip_address=vpn_static_ip.address,
+    target=target_gateway.self_link)
+fr_udp4500 = gcp.compute.ForwardingRule("frUdp4500",
+    ip_protocol="UDP",
+    port_range="4500",
+    ip_address=vpn_static_ip.address,
+    target=target_gateway.self_link)
+tunnel1 = gcp.compute.VPNTunnel("tunnel1",
+    peer_ip="15.0.0.120",
+    shared_secret="a secret message",
+    target_vpn_gateway=target_gateway.self_link)
+route1 = gcp.compute.Route("route1",
+    network=network1.name,
+    dest_range="15.0.0.0/24",
+    priority=1000,
+    next_hop_vpn_tunnel=tunnel1.self_link)
+```
+## Example Usage - Vpn Tunnel Beta
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const network1 = new gcp.compute.Network("network1", {});
+const targetGateway = new gcp.compute.VPNGateway("targetGateway", {network: network1.selfLink});
+const vpnStaticIp = new gcp.compute.Address("vpnStaticIp", {});
+const frEsp = new gcp.compute.ForwardingRule("frEsp", {
+    ipProtocol: "ESP",
+    ipAddress: vpnStaticIp.address,
+    target: targetGateway.selfLink,
+});
+const frUdp500 = new gcp.compute.ForwardingRule("frUdp500", {
+    ipProtocol: "UDP",
+    portRange: "500",
+    ipAddress: vpnStaticIp.address,
+    target: targetGateway.selfLink,
+});
+const frUdp4500 = new gcp.compute.ForwardingRule("frUdp4500", {
+    ipProtocol: "UDP",
+    portRange: "4500",
+    ipAddress: vpnStaticIp.address,
+    target: targetGateway.selfLink,
+});
+const tunnel1 = new gcp.compute.VPNTunnel("tunnel1", {
+    peerIp: "15.0.0.120",
+    sharedSecret: "a secret message",
+    targetVpnGateway: targetGateway.selfLink,
+    labels: {
+        foo: "bar",
+    },
+});
+const route1 = new gcp.compute.Route("route1", {
+    network: network1.name,
+    destRange: "15.0.0.0/24",
+    priority: 1000,
+    nextHopVpnTunnel: tunnel1.selfLink,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network1 = gcp.compute.Network("network1")
+target_gateway = gcp.compute.VPNGateway("targetGateway", network=network1.self_link)
+vpn_static_ip = gcp.compute.Address("vpnStaticIp")
+fr_esp = gcp.compute.ForwardingRule("frEsp",
+    ip_protocol="ESP",
+    ip_address=vpn_static_ip.address,
+    target=target_gateway.self_link)
+fr_udp500 = gcp.compute.ForwardingRule("frUdp500",
+    ip_protocol="UDP",
+    port_range="500",
+    ip_address=vpn_static_ip.address,
+    target=target_gateway.self_link)
+fr_udp4500 = gcp.compute.ForwardingRule("frUdp4500",
+    ip_protocol="UDP",
+    port_range="4500",
+    ip_address=vpn_static_ip.address,
+    target=target_gateway.self_link)
+tunnel1 = gcp.compute.VPNTunnel("tunnel1",
+    peer_ip="15.0.0.120",
+    shared_secret="a secret message",
+    target_vpn_gateway=target_gateway.self_link,
+    labels={
+        "foo": "bar",
+    })
+route1 = gcp.compute.Route("route1",
+    network=network1.name,
+    dest_range="15.0.0.0/24",
+    priority=1000,
+    next_hop_vpn_tunnel=tunnel1.self_link)
+```
+
 
 
 ## Create a VPNTunnel Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -210,7 +360,7 @@ The VPNTunnel resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Shared secret used to set the secure session between the Cloud VPN
-gateway and the peer VPN gateway.
+gateway and the peer VPN gateway.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -392,7 +542,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Shared secret used to set the secure session between the Cloud VPN
-gateway and the peer VPN gateway.
+gateway and the peer VPN gateway.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -574,7 +724,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Shared secret used to set the secure session between the Cloud VPN
-gateway and the peer VPN gateway.
+gateway and the peer VPN gateway.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -756,7 +906,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Shared secret used to set the secure session between the Cloud VPN
-gateway and the peer VPN gateway.
+gateway and the peer VPN gateway.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1223,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing VPNTunnel Resource {#look-up}
 
 Get an existing VPNTunnel resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#VPNTunnelState">VPNTunnelState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#VPNTunnel">VPNTunnel</a></span></code></pre></div>
@@ -1522,7 +1672,7 @@ Only IPv4 is supported.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Shared secret used to set the secure session between the Cloud VPN
-gateway and the peer VPN gateway.
+gateway and the peer VPN gateway.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1758,7 +1908,7 @@ Only IPv4 is supported.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Shared secret used to set the secure session between the Cloud VPN
-gateway and the peer VPN gateway.
+gateway and the peer VPN gateway.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1994,7 +2144,7 @@ Only IPv4 is supported.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Shared secret used to set the secure session between the Cloud VPN
-gateway and the peer VPN gateway.
+gateway and the peer VPN gateway.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2230,7 +2380,7 @@ Only IPv4 is supported.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Shared secret used to set the secure session between the Cloud VPN
-gateway and the peer VPN gateway.
+gateway and the peer VPN gateway.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -15,26 +15,10 @@ the specified KMS Key with flexible key id input.
 This can be useful to reference key alias
 without having to hard code the ARN as input.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -43,14 +27,21 @@ const foo = pulumi.output(aws.kms.getKey({
     keyId: "arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab",
 }, { async: true }));
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+foo = aws.kms.get_key(key_id="arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab")
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetKey {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -757,16 +748,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

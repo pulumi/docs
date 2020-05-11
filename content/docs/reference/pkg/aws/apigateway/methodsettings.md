@@ -12,26 +12,10 @@ meta_desc: "Explore the MethodSettings resource of the apigateway module, includ
 
 Provides an API Gateway Method Settings, e.g. logging or monitoring.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -81,13 +65,56 @@ const methodSettings = new aws.apigateway.MethodSettings("s", {
     stageName: testStage.stageName,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+test_rest_api = aws.apigateway.RestApi("testRestApi", description="This is my API for demonstration purposes")
+test_deployment = aws.apigateway.Deployment("testDeployment",
+    rest_api=test_rest_api.id,
+    stage_name="dev")
+test_stage = aws.apigateway.Stage("testStage",
+    deployment=test_deployment.id,
+    rest_api=test_rest_api.id,
+    stage_name="prod")
+test_resource = aws.apigateway.Resource("testResource",
+    parent_id=test_rest_api.root_resource_id,
+    path_part="mytestresource",
+    rest_api=test_rest_api.id)
+test_method = aws.apigateway.Method("testMethod",
+    authorization="NONE",
+    http_method="GET",
+    resource_id=test_resource.id,
+    rest_api=test_rest_api.id)
+method_settings = aws.apigateway.MethodSettings("methodSettings",
+    method_path=pulumi.Output.all(test_resource.path_part, test_method.http_method).apply(lambda path_part, http_method: f"{path_part}/{http_method}"),
+    rest_api=test_rest_api.id,
+    settings={
+        "loggingLevel": "INFO",
+        "metricsEnabled": True,
+    },
+    stage_name=test_stage.stage_name)
+test_integration = aws.apigateway.Integration("testIntegration",
+    http_method=test_method.http_method,
+    request_templates={
+        "application/xml": """{
+   "body" : $$input.json('$$')
+}
+
+""",
+    },
+    resource_id=test_resource.id,
+    rest_api=test_rest_api.id,
+    type="MOCK")
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a MethodSettings Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -515,7 +542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing MethodSettings Resource {#look-up}
 
 Get an existing MethodSettings resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#MethodSettingsState">MethodSettingsState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#MethodSettings">MethodSettings</a></span></code></pre></div>
@@ -823,9 +850,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#MethodSettingsSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#MethodSettingsSettingsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Inputs.MethodSettingsSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Outputs.MethodSettingsSettings.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

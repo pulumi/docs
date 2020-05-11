@@ -47,11 +47,33 @@ const my_index = new gcp.firestore.Index("my-index", {
     project: "my-project-name",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_index = gcp.firestore.Index("my-index",
+    collection="chatrooms",
+    fields=[
+        {
+            "fieldPath": "name",
+            "order": "ASCENDING",
+        },
+        {
+            "fieldPath": "description",
+            "order": "DESCENDING",
+        },
+        {
+            "fieldPath": "__name__",
+            "order": "DESCENDING",
+        },
+    ],
+    project="my-project-name")
+```
 
 
 
 ## Create a Index Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -279,8 +301,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The scope at which a query is run. One of `"COLLECTION"` or
-`"COLLECTION_GROUP"`. Defaults to `"COLLECTION"`.
+    <dd>{{% md %}}The scope at which a query is run.
 {{% /md %}}</dd>
 
 </dl>
@@ -338,8 +359,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The scope at which a query is run. One of `"COLLECTION"` or
-`"COLLECTION_GROUP"`. Defaults to `"COLLECTION"`.
+    <dd>{{% md %}}The scope at which a query is run.
 {{% /md %}}</dd>
 
 </dl>
@@ -397,8 +417,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The scope at which a query is run. One of `"COLLECTION"` or
-`"COLLECTION_GROUP"`. Defaults to `"COLLECTION"`.
+    <dd>{{% md %}}The scope at which a query is run.
 {{% /md %}}</dd>
 
 </dl>
@@ -456,8 +475,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The scope at which a query is run. One of `"COLLECTION"` or
-`"COLLECTION_GROUP"`. Defaults to `"COLLECTION"`.
+    <dd>{{% md %}}The scope at which a query is run.
 {{% /md %}}</dd>
 
 </dl>
@@ -583,7 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Index Resource {#look-up}
 
 Get an existing Index resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/firestore/#IndexState">IndexState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/firestore/#Index">Index</a></span></code></pre></div>
@@ -762,8 +780,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The scope at which a query is run. One of `"COLLECTION"` or
-`"COLLECTION_GROUP"`. Defaults to `"COLLECTION"`.
+    <dd>{{% md %}}The scope at which a query is run.
 {{% /md %}}</dd>
 
 </dl>
@@ -831,8 +848,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The scope at which a query is run. One of `"COLLECTION"` or
-`"COLLECTION_GROUP"`. Defaults to `"COLLECTION"`.
+    <dd>{{% md %}}The scope at which a query is run.
 {{% /md %}}</dd>
 
 </dl>
@@ -900,8 +916,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The scope at which a query is run. One of `"COLLECTION"` or
-`"COLLECTION_GROUP"`. Defaults to `"COLLECTION"`.
+    <dd>{{% md %}}The scope at which a query is run.
 {{% /md %}}</dd>
 
 </dl>
@@ -969,8 +984,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The scope at which a query is run. One of `"COLLECTION"` or
-`"COLLECTION_GROUP"`. Defaults to `"COLLECTION"`.
+    <dd>{{% md %}}The scope at which a query is run.
 {{% /md %}}</dd>
 
 </dl>
@@ -995,9 +1009,6 @@ If it is not provided, the provider project is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/firestore?tab=doc#IndexFieldArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/firestore?tab=doc#IndexFieldOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Firestore.Inputs.IndexFieldArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Firestore.Outputs.IndexField.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

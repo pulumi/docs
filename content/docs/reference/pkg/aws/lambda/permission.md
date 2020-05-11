@@ -13,7 +13,87 @@ meta_desc: "Explore the Permission resource of the lambda module, including exam
 Creates a Lambda permission to allow external sources invoking the Lambda function
 (e.g. CloudWatch Event Rule, SNS or S3).
 
+{{% examples %}}
+## Example Usage
+{{% example %}}
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const iamForLambda = new aws.iam.Role("iam_for_lambda", {
+    assumeRolePolicy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+`,
+});
+const testLambda = new aws.lambda.Function("test_lambda", {
+    code: new pulumi.asset.FileArchive("lambdatest.zip"),
+    handler: "exports.handler",
+    role: iamForLambda.arn,
+    runtime: "nodejs8.10",
+});
+const testAlias = new aws.lambda.Alias("test_alias", {
+    description: "a sample description",
+    functionName: testLambda.functionName,
+    functionVersion: "$LATEST",
+});
+const allowCloudwatch = new aws.lambda.Permission("allow_cloudwatch", {
+    action: "lambda:InvokeFunction",
+    function: testLambda.functionName,
+    principal: "events.amazonaws.com",
+    qualifier: testAlias.name,
+    sourceArn: "arn:aws:events:eu-west-1:111122223333:rule/RunDaily",
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+iam_for_lambda = aws.iam.Role("iamForLambda", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+
+""")
+test_lambda = aws.lambda_.Function("testLambda",
+    code=pulumi.FileArchive("lambdatest.zip"),
+    handler="exports.handler",
+    role=iam_for_lambda.arn,
+    runtime="nodejs8.10")
+test_alias = aws.lambda_.Alias("testAlias",
+    description="a sample description",
+    function_name=test_lambda.name,
+    function_version="$$LATEST")
+allow_cloudwatch = aws.lambda_.Permission("allowCloudwatch",
+    action="lambda:InvokeFunction",
+    function=test_lambda.name,
+    principal="events.amazonaws.com",
+    qualifier=test_alias.name,
+    source_arn="arn:aws:events:eu-west-1:111122223333:rule/RunDaily")
+```
+
+{{% /example %}}
+{{% /examples %}}
 ## Usage with SNS
 
 ```typescript
@@ -55,6 +135,41 @@ const lambda = new aws.sns.TopicSubscription("lambda", {
     topic: defaultTopic.arn,
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+default_topic = aws.sns.Topic("defaultTopic")
+default_role = aws.iam.Role("defaultRole", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+
+""")
+func = aws.lambda_.Function("func",
+    code=pulumi.FileArchive("lambdatest.zip"),
+    handler="exports.handler",
+    role=default_role.arn,
+    runtime="python2.7")
+with_sns = aws.lambda_.Permission("withSns",
+    action="lambda:InvokeFunction",
+    function=func.name,
+    principal="sns.amazonaws.com",
+    source_arn=default_topic.arn)
+lambda_ = aws.sns.TopicSubscription("lambda",
+    endpoint=func.arn,
+    protocol="lambda",
+    topic=default_topic.arn)
+```
 
 ## Specify Lambda permissions for API Gateway REST API
 
@@ -72,71 +187,22 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
     sourceArn: pulumi.interpolate`${myDemoAPI.executionArn}/*/*/*`,
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const iamForLambda = new aws.iam.Role("iam_for_lambda", {
-    assumeRolePolicy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "sts:AssumeRole",
-      "Principal": {
-        "Service": "lambda.amazonaws.com"
-      },
-      "Effect": "Allow",
-      "Sid": ""
-    }
-  ]
-}
-`,
-});
-const testLambda = new aws.lambda.Function("test_lambda", {
-    code: new pulumi.asset.FileArchive("lambdatest.zip"),
-    handler: "exports.handler",
-    role: iamForLambda.arn,
-    runtime: "nodejs8.10",
-});
-const testAlias = new aws.lambda.Alias("test_alias", {
-    description: "a sample description",
-    functionName: testLambda.functionName,
-    functionVersion: "$LATEST",
-});
-const allowCloudwatch = new aws.lambda.Permission("allow_cloudwatch", {
-    action: "lambda:InvokeFunction",
-    function: testLambda.functionName,
-    principal: "events.amazonaws.com",
-    qualifier: testAlias.name,
-    sourceArn: "arn:aws:events:eu-west-1:111122223333:rule/RunDaily",
-});
+my_demo_api = aws.apigateway.RestApi("myDemoAPI", description="This is my API for demonstration purposes")
+lambda_permission = aws.lambda_.Permission("lambdaPermission",
+    action="lambda:InvokeFunction",
+    function="MyDemoFunction",
+    principal="apigateway.amazonaws.com",
+    source_arn=my_demo_api.execution_arn.apply(lambda execution_arn: f"{execution_arn}/*/*/*"))
 ```
-{{% /example %}}
 
-{{% /examples %}}
 
 
 ## Create a Permission Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -780,7 +846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Permission Resource {#look-up}
 
 Get an existing Permission resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#PermissionState">PermissionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Permission">Permission</a></span></code></pre></div>

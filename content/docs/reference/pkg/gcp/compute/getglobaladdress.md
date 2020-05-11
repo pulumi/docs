@@ -14,13 +14,45 @@ Get the IP address from a static address reserved for a Global Forwarding Rule w
 the official [API](https://cloud.google.com/compute/docs/reference/latest/globalAddresses) documentation.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myAddress = gcp.compute.getGlobalAddress({
+    name: "foobar",
+});
+const prod = new gcp.dns.ManagedZone("prod", {dnsName: "prod.mydomain.com."});
+const frontend = new gcp.dns.RecordSet("frontend", {
+    type: "A",
+    ttl: 300,
+    managedZone: prod.name,
+    rrdatas: [myAddress.then(myAddress => myAddress.address)],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_address = gcp.compute.get_global_address(name="foobar")
+prod = gcp.dns.ManagedZone("prod", dns_name="prod.mydomain.com.")
+frontend = gcp.dns.RecordSet("frontend",
+    type="A",
+    ttl=300,
+    managed_zone=prod.name,
+    rrdatas=[my_address.address])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Using GetGlobalAddress {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -407,16 +439,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

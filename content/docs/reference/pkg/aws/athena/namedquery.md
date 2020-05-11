@@ -12,26 +12,10 @@ meta_desc: "Explore the NamedQuery resource of the athena module, including exam
 
 Provides an Athena Named Query resource.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -61,13 +45,38 @@ const foo = new aws.athena.NamedQuery("foo", {
     workgroup: testWorkgroup.id,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+hoge_bucket = aws.s3.Bucket("hogeBucket")
+test_key = aws.kms.Key("testKey",
+    deletion_window_in_days=7,
+    description="Athena KMS Key")
+test_workgroup = aws.athena.Workgroup("testWorkgroup", configuration={
+    "resultConfiguration": {
+        "encryptionConfiguration": {
+            "encryptionOption": "SSE_KMS",
+            "kmsKeyArn": test_key.arn,
+        },
+    },
+})
+hoge_database = aws.athena.Database("hogeDatabase",
+    bucket=hoge_bucket.id,
+    name="users")
+foo = aws.athena.NamedQuery("foo",
+    database=hoge_database.name,
+    query=hoge_database.name.apply(lambda name: f"SELECT * FROM {name} limit 10;"),
+    workgroup=test_workgroup.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a NamedQuery Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -531,7 +540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing NamedQuery Resource {#look-up}
 
 Get an existing NamedQuery resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/athena/#NamedQueryState">NamedQueryState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/athena/#NamedQuery">NamedQuery</a></span></code></pre></div>

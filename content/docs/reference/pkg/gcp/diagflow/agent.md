@@ -47,11 +47,32 @@ const fullAgent = new gcp.diagflow.Agent("full_agent", {
     timeZone: "America/New_York",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+full_agent = gcp.diagflow.Agent("fullAgent",
+    api_version="API_VERSION_V2_BETA_1",
+    avatar_uri="https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png",
+    classification_threshold=0.3,
+    default_language_code="en",
+    description="Example description.",
+    display_name="dialogflow-agent",
+    enable_logging=True,
+    match_mode="MATCH_MODE_ML_ONLY",
+    supported_language_codes=[
+        "fr",
+        "de",
+        "es",
+    ],
+    tier="TIER_STANDARD",
+    time_zone="America/New_York")
+```
 
 
 
 ## Create a Agent Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -899,7 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Agent Resource {#look-up}
 
 Get an existing Agent resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/diagflow/#AgentState">AgentState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/diagflow/#Agent">Agent</a></span></code></pre></div>

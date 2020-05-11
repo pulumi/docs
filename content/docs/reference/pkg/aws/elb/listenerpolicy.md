@@ -53,6 +53,41 @@ const wu_tang_listener_policies_443 = new aws.elb.ListenerPolicy("wu-tang-listen
     policyNames: [wu_tang_ssl.policyName],
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+wu_tang = aws.elb.LoadBalancer("wu-tang",
+    availability_zones=["us-east-1a"],
+    listeners=[{
+        "instancePort": 443,
+        "instanceProtocol": "http",
+        "lbPort": 443,
+        "lbProtocol": "https",
+        "sslCertificateId": "arn:aws:iam::000000000000:server-certificate/wu-tang.net",
+    }],
+    tags={
+        "Name": "wu-tang",
+    })
+wu_tang_ssl = aws.elb.LoadBalancerPolicy("wu-tang-ssl",
+    load_balancer_name=wu_tang.name,
+    policy_attributes=[
+        {
+            "name": "ECDHE-ECDSA-AES128-GCM-SHA256",
+            "value": "true",
+        },
+        {
+            "name": "Protocol-TLSv1.2",
+            "value": "true",
+        },
+    ],
+    policy_name="wu-tang-ssl",
+    policy_type_name="SSLNegotiationPolicyType")
+wu_tang_listener_policies_443 = aws.elb.ListenerPolicy("wu-tang-listener-policies-443",
+    load_balancer_name=wu_tang.name,
+    load_balancer_port=443,
+    policy_names=[wu_tang_ssl.policy_name])
+```
 
 This example shows how to customize the TLS settings of an HTTPS listener.
 
@@ -90,13 +125,42 @@ const wu_tang_listener_policies_443 = new aws.elb.ListenerPolicy("wu-tang-listen
     policyNames: [wu_tang_ssl_tls_1_1.policyName],
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+wu_tang = aws.elb.LoadBalancer("wu-tang",
+    availability_zones=["us-east-1a"],
+    listeners=[{
+        "instancePort": 443,
+        "instanceProtocol": "http",
+        "lbPort": 443,
+        "lbProtocol": "https",
+        "sslCertificateId": "arn:aws:iam::000000000000:server-certificate/wu-tang.net",
+    }],
+    tags={
+        "Name": "wu-tang",
+    })
+wu_tang_ssl_tls_1_1 = aws.elb.LoadBalancerPolicy("wu-tang-ssl-tls-1-1",
+    load_balancer_name=wu_tang.name,
+    policy_attributes=[{
+        "name": "Reference-Security-Policy",
+        "value": "ELBSecurityPolicy-TLS-1-1-2017-01",
+    }],
+    policy_name="wu-tang-ssl",
+    policy_type_name="SSLNegotiationPolicyType")
+wu_tang_listener_policies_443 = aws.elb.ListenerPolicy("wu-tang-listener-policies-443",
+    load_balancer_name=wu_tang.name,
+    load_balancer_port=443,
+    policy_names=[wu_tang_ssl_tls_1_1.policy_name])
+```
 
 This example shows how to add a [Predefined Security Policy for ELBs](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-security-policy-table.html)
 
 
 
 ## Create a ListenerPolicy Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -488,7 +552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ListenerPolicy Resource {#look-up}
 
 Get an existing ListenerPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elb/#ListenerPolicyState">ListenerPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elb/#ListenerPolicy">ListenerPolicy</a></span></code></pre></div>

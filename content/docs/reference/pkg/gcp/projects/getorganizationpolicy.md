@@ -15,13 +15,36 @@ Allows management of Organization policies for a Google Project. For more inform
 documentation](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const policy = gcp.projects.getOrganizationPolicy({
+    project: "project-id",
+    constraint: "constraints/serviceuser.services",
+});
+export const version = policy.then(policy => policy.version);
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+policy = gcp.projects.get_organization_policy(project="project-id",
+    constraint="constraints/serviceuser.services")
+pulumi.export("version", policy.version)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Using GetOrganizationPolicy {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -501,9 +524,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#GetOrganizationPolicyBooleanPolicy">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.Outputs.GetOrganizationPolicyBooleanPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -578,9 +598,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#GetOrganizationPolicyListPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.Outputs.GetOrganizationPolicyListPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -753,9 +770,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#GetOrganizationPolicyListPolicyAllow">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.Outputs.GetOrganizationPolicyListPolicyAllow.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -862,9 +876,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#GetOrganizationPolicyListPolicyDeny">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.Outputs.GetOrganizationPolicyListPolicyDeny.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -973,9 +984,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#GetOrganizationPolicyRestorePolicy">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.Outputs.GetOrganizationPolicyRestorePolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1044,16 +1052,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

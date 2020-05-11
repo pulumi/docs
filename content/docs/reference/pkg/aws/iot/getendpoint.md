@@ -19,7 +19,7 @@ Returns a unique endpoint specific to the AWS account making the call.
 
 ## Using GetEndpoint {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -282,16 +282,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

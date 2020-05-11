@@ -12,11 +12,33 @@ meta_desc: "Explore the GetOrganization function of the organizations module, in
 
 Use this data source to get information about a Google Cloud Organization.
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const org = gcp.organizations.getOrganization({
+    domain: "example.com",
+});
+const sales = new gcp.organizations.Folder("sales", {
+    displayName: "Sales",
+    parent: org.then(org => org.name),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+org = gcp.organizations.get_organization(domain="example.com")
+sales = gcp.organizations.Folder("sales",
+    display_name="Sales",
+    parent=org.name)
+```
+
 
 
 ## Using GetOrganization {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -471,16 +493,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

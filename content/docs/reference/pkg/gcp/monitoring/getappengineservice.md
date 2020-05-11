@@ -25,11 +25,71 @@ To get more information about Service, see:
     * [Service Monitoring](https://cloud.google.com/monitoring/service-monitoring)
     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
 
+## Example Usage - Monitoring App Engine Service
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bucket = new gcp.storage.Bucket("bucket", {});
+const object = new gcp.storage.BucketObject("object", {
+    bucket: bucket.name,
+    source: new pulumi.asset.FileAsset("./test-fixtures/appengine/hello-world.zip"),
+});
+const myapp = new gcp.appengine.StandardAppVersion("myapp", {
+    versionId: "v1",
+    service: "myapp",
+    runtime: "nodejs10",
+    entrypoint: {
+        shell: "node ./app.js",
+    },
+    deployment: {
+        zip: {
+            sourceUrl: pulumi.interpolate`https://storage.googleapis.com/${bucket.name}/${object.name}`,
+        },
+    },
+    envVariables: {
+        port: "8080",
+    },
+    deleteServiceOnDestroy: false,
+});
+const srv = myapp.service.apply(service => gcp.monitoring.getAppEngineService({
+    moduleId: service,
+}));
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bucket = gcp.storage.Bucket("bucket")
+object = gcp.storage.BucketObject("object",
+    bucket=bucket.name,
+    source=pulumi.FileAsset("./test-fixtures/appengine/hello-world.zip"))
+myapp = gcp.appengine.StandardAppVersion("myapp",
+    version_id="v1",
+    service="myapp",
+    runtime="nodejs10",
+    entrypoint={
+        "shell": "node ./app.js",
+    },
+    deployment={
+        "zip": {
+            "sourceUrl": pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
+        },
+    },
+    env_variables={
+        "port": "8080",
+    },
+    delete_service_on_destroy=False)
+srv = myapp.service.apply(lambda service: gcp.monitoring.get_app_engine_service(module_id=service))
+```
+
 
 
 ## Using GetAppEngineService {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -453,9 +513,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#GetAppEngineServiceTelemetry">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.GetAppEngineServiceTelemetry.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -524,16 +581,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

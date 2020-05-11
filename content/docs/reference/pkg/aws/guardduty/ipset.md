@@ -14,26 +14,10 @@ Provides a resource to manage a GuardDuty IPSet.
 
 > **Note:** Currently in GuardDuty, users from member accounts cannot upload and further manage IPSets. IPSets that are uploaded by the master account are imposed on GuardDuty functionality in its member accounts. See the [GuardDuty API Documentation](https://docs.aws.amazon.com/guardduty/latest/ug/create-ip-set.html)
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -57,13 +41,33 @@ const myIPSetIPSet = new aws.guardduty.IPSet("MyIPSet", {
     location: pulumi.interpolate`https://s3.amazonaws.com/${myIPSetBucketObject.bucket}/${myIPSetBucketObject.key}`,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+master = aws.guardduty.Detector("master", enable=True)
+bucket = aws.s3.Bucket("bucket", acl="private")
+my_ip_set_bucket_object = aws.s3.BucketObject("myIPSetBucketObject",
+    acl="public-read",
+    bucket=bucket.id,
+    content="""10.0.0.0/8
+
+""",
+    key="MyIPSet")
+my_ip_set_ip_set = aws.guardduty.IPSet("myIPSetIPSet",
+    activate=True,
+    detector_id=master.id,
+    format="TXT",
+    location=pulumi.Output.all(my_ip_set_bucket_object.bucket, my_ip_set_bucket_object.key).apply(lambda bucket, key: f"https://s3.amazonaws.com/{bucket}/{key}"))
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a IPSet Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -527,7 +531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing IPSet Resource {#look-up}
 
 Get an existing IPSet resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/guardduty/#IPSetState">IPSetState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/guardduty/#IPSet">IPSet</a></span></code></pre></div>

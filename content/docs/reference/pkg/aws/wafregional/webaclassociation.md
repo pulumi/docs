@@ -73,6 +73,53 @@ const fooWebAclAssociation = new aws.wafregional.WebAclAssociation("foo", {
     webAclId: fooWebAcl.id,
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+ipset = aws.wafregional.IpSet("ipset", ip_set_descriptors=[{
+    "type": "IPV4",
+    "value": "192.0.7.0/24",
+}])
+foo_rule = aws.wafregional.Rule("fooRule",
+    metric_name="tfWAFRule",
+    predicates=[{
+        "dataId": ipset.id,
+        "negated": False,
+        "type": "IPMatch",
+    }])
+foo_web_acl = aws.wafregional.WebAcl("fooWebAcl",
+    default_action={
+        "type": "ALLOW",
+    },
+    metric_name="foo",
+    rules=[{
+        "action": {
+            "type": "BLOCK",
+        },
+        "priority": 1,
+        "ruleId": foo_rule.id,
+    }])
+foo_vpc = aws.ec2.Vpc("fooVpc", cidr_block="10.1.0.0/16")
+available = aws.get_availability_zones()
+foo_subnet = aws.ec2.Subnet("fooSubnet",
+    availability_zone=available.names[0],
+    cidr_block="10.1.1.0/24",
+    vpc_id=foo_vpc.id)
+bar = aws.ec2.Subnet("bar",
+    availability_zone=available.names[1],
+    cidr_block="10.1.2.0/24",
+    vpc_id=foo_vpc.id)
+foo_load_balancer = aws.alb.LoadBalancer("fooLoadBalancer",
+    internal=True,
+    subnets=[
+        foo_subnet.id,
+        bar.id,
+    ])
+foo_web_acl_association = aws.wafregional.WebAclAssociation("fooWebAclAssociation",
+    resource_arn=foo_load_balancer.arn,
+    web_acl_id=foo_web_acl.id)
+```
 
 ## API Gateway Association Example
 
@@ -152,11 +199,74 @@ const association = new aws.wafregional.WebAclAssociation("association", {
     webAclId: fooWebAcl.id,
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+ipset = aws.wafregional.IpSet("ipset", ip_set_descriptors=[{
+    "type": "IPV4",
+    "value": "192.0.7.0/24",
+}])
+foo_rule = aws.wafregional.Rule("fooRule",
+    metric_name="tfWAFRule",
+    predicates=[{
+        "dataId": ipset.id,
+        "negated": False,
+        "type": "IPMatch",
+    }])
+foo_web_acl = aws.wafregional.WebAcl("fooWebAcl",
+    default_action={
+        "type": "ALLOW",
+    },
+    metric_name="foo",
+    rules=[{
+        "action": {
+            "type": "BLOCK",
+        },
+        "priority": 1,
+        "ruleId": foo_rule.id,
+    }])
+test_rest_api = aws.apigateway.RestApi("testRestApi")
+test_resource = aws.apigateway.Resource("testResource",
+    parent_id=test_rest_api.root_resource_id,
+    path_part="test",
+    rest_api=test_rest_api.id)
+test_method = aws.apigateway.Method("testMethod",
+    authorization="NONE",
+    http_method="GET",
+    resource_id=test_resource.id,
+    rest_api=test_rest_api.id)
+test_method_response = aws.apigateway.MethodResponse("testMethodResponse",
+    http_method=test_method.http_method,
+    resource_id=test_resource.id,
+    rest_api=test_rest_api.id,
+    status_code="400")
+test_integration = aws.apigateway.Integration("testIntegration",
+    http_method=test_method.http_method,
+    integration_http_method="GET",
+    resource_id=test_resource.id,
+    rest_api=test_rest_api.id,
+    type="HTTP",
+    uri="http://www.example.com")
+test_integration_response = aws.apigateway.IntegrationResponse("testIntegrationResponse",
+    http_method=test_integration.http_method,
+    resource_id=test_resource.id,
+    rest_api=test_rest_api.id,
+    status_code=test_method_response.status_code)
+test_deployment = aws.apigateway.Deployment("testDeployment", rest_api=test_rest_api.id)
+test_stage = aws.apigateway.Stage("testStage",
+    deployment=test_deployment.id,
+    rest_api=test_rest_api.id,
+    stage_name="test")
+association = aws.wafregional.WebAclAssociation("association",
+    resource_arn=test_stage.arn,
+    web_acl_id=foo_web_acl.id)
+```
 
 
 
 ## Create a WebAclAssociation Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -512,7 +622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing WebAclAssociation Resource {#look-up}
 
 Get an existing WebAclAssociation resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#WebAclAssociationState">WebAclAssociationState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#WebAclAssociation">WebAclAssociation</a></span></code></pre></div>

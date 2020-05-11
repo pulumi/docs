@@ -13,26 +13,10 @@ meta_desc: "Explore the LoadBalancerBackendServerPolicy resource of the elb modu
 Attaches a load balancer policy to an ELB backend server.
 
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -75,13 +59,62 @@ const wu_tang_backend_auth_policies_443 = new aws.elb.LoadBalancerBackendServerP
     policyNames: [wu_tang_root_ca_backend_auth_policy.policyName],
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+wu_tang = aws.elb.LoadBalancer("wu-tang",
+    availability_zones=["us-east-1a"],
+    listeners=[{
+        "instancePort": 443,
+        "instanceProtocol": "http",
+        "lbPort": 443,
+        "lbProtocol": "https",
+        "sslCertificateId": "arn:aws:iam::000000000000:server-certificate/wu-tang.net",
+    }],
+    tags={
+        "Name": "wu-tang",
+    })
+wu_tang_ca_pubkey_policy = aws.elb.LoadBalancerPolicy("wu-tang-ca-pubkey-policy",
+    load_balancer_name=wu_tang.name,
+    policy_attributes=[{
+        "name": "PublicKey",
+        "value": (lambda path: open(path).read())("wu-tang-pubkey"),
+    }],
+    policy_name="wu-tang-ca-pubkey-policy",
+    policy_type_name="PublicKeyPolicyType")
+wu_tang_root_ca_backend_auth_policy = aws.elb.LoadBalancerPolicy("wu-tang-root-ca-backend-auth-policy",
+    load_balancer_name=wu_tang.name,
+    policy_attributes=[{
+        "name": "PublicKeyPolicyName",
+        "value": aws_load_balancer_policy["wu-tang-root-ca-pubkey-policy"]["policy_name"],
+    }],
+    policy_name="wu-tang-root-ca-backend-auth-policy",
+    policy_type_name="BackendServerAuthenticationPolicyType")
+wu_tang_backend_auth_policies_443 = aws.elb.LoadBalancerBackendServerPolicy("wu-tang-backend-auth-policies-443",
+    instance_port=443,
+    load_balancer_name=wu_tang.name,
+    policy_names=[wu_tang_root_ca_backend_auth_policy.policy_name])
+```
+
+Where the file `pubkey` in the current directory contains only the _public key_ of the certificate.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
+```
+
+This example shows how to enable backend authentication for an ELB as well as customize the TLS settings.
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a LoadBalancerBackendServerPolicy Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -473,7 +506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing LoadBalancerBackendServerPolicy Resource {#look-up}
 
 Get an existing LoadBalancerBackendServerPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elb/#LoadBalancerBackendServerPolicyState">LoadBalancerBackendServerPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elb/#LoadBalancerBackendServerPolicy">LoadBalancerBackendServerPolicy</a></span></code></pre></div>

@@ -17,12 +17,254 @@ and
 
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myImage = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const foobar = new gcp.compute.Disk("foobar", {
+    image: myImage.then(myImage => myImage.selfLink),
+    size: 10,
+    type: "pd-ssd",
+    zone: "us-central1-a",
+});
+const default = new gcp.compute.InstanceTemplate("default", {
+    description: "This template is used to create app server instances.",
+    tags: [
+        "foo",
+        "bar",
+    ],
+    labels: {
+        environment: "dev",
+    },
+    instanceDescription: "description assigned to instances",
+    machineType: "n1-standard-1",
+    canIpForward: false,
+    scheduling: {
+        automaticRestart: true,
+        onHostMaintenance: "MIGRATE",
+    },
+    disk: [
+        {
+            sourceImage: "debian-cloud/debian-9",
+            autoDelete: true,
+            boot: true,
+        },
+        {
+            source: foobar.name,
+            autoDelete: false,
+            boot: false,
+        },
+    ],
+    network_interface: [{
+        network: "default",
+    }],
+    metadata: {
+        foo: "bar",
+    },
+    service_account: {
+        scopes: [
+            "userinfo-email",
+            "compute-ro",
+            "storage-ro",
+        ],
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_image = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+foobar = gcp.compute.Disk("foobar",
+    image=my_image.self_link,
+    size=10,
+    type="pd-ssd",
+    zone="us-central1-a")
+default = gcp.compute.InstanceTemplate("default",
+    description="This template is used to create app server instances.",
+    tags=[
+        "foo",
+        "bar",
+    ],
+    labels={
+        "environment": "dev",
+    },
+    instance_description="description assigned to instances",
+    machine_type="n1-standard-1",
+    can_ip_forward=False,
+    scheduling={
+        "automaticRestart": True,
+        "onHostMaintenance": "MIGRATE",
+    },
+    disk=[
+        {
+            "sourceImage": "debian-cloud/debian-9",
+            "autoDelete": True,
+            "boot": True,
+        },
+        {
+            "source": foobar.name,
+            "autoDelete": False,
+            "boot": False,
+        },
+    ],
+    network_interface=[{
+        "network": "default",
+    }],
+    metadata={
+        "foo": "bar",
+    },
+    service_account={
+        "scopes": [
+            "userinfo-email",
+            "compute-ro",
+            "storage-ro",
+        ],
+    })
+```
+
+{{% /example %}}
 {{% /examples %}}
+## Using with Instance Group Manager
+
+Instance Templates cannot be updated after creation with the Google
+Cloud Platform API. In order to update an Instance Template, this provider will
+create a replacement. In order to effectively
+use an Instance Template resource with an [Instance Group Manager resource](https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html).
+Either omit the Instance Template `name` attribute, or specify a partial name
+with `name_prefix`. Example:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instanceTemplate = new gcp.compute.InstanceTemplate("instanceTemplate", {
+    namePrefix: "instance-template-",
+    machineType: "n1-standard-1",
+    region: "us-central1",
+    disk: [{}],
+    network_interface: [{}],
+});
+const instanceGroupManager = new gcp.compute.InstanceGroupManager("instanceGroupManager", {
+    instanceTemplate: instanceTemplate.selfLink,
+    baseInstanceName: "instance-group-manager",
+    zone: "us-central1-f",
+    targetSize: "1",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance_template = gcp.compute.InstanceTemplate("instanceTemplate",
+    name_prefix="instance-template-",
+    machine_type="n1-standard-1",
+    region="us-central1",
+    disk=[{}],
+    network_interface=[{}])
+instance_group_manager = gcp.compute.InstanceGroupManager("instanceGroupManager",
+    instance_template=instance_template.self_link,
+    base_instance_name="instance-group-manager",
+    zone="us-central1-f",
+    target_size="1")
+```
+
+With this setup, this provider generates a unique name for your Instance
+Template and can then update the Instance Group manager without conflict before
+destroying the previous Instance Template.
+
+## Deploying the Latest Image
+
+A common way to use instance templates and managed instance groups is to deploy the
+latest image in a family, usually the latest build of your application. There are two
+ways to do this in the provider, and they have their pros and cons. The difference ends
+up being in how "latest" is interpreted. You can either deploy the latest image available
+when the provider runs, or you can have each instance check what the latest image is when
+it's being created, either as part of a scaling event or being rebuilt by the instance
+group manager.
+
+If you're not sure, we recommend deploying the latest image available when the provider runs,
+because this means all the instances in your group will be based on the same image, always,
+and means that no upgrades or changes to your instances happen outside of a `pulumi up`.
+You can achieve this by using the `gcp.compute.Image`
+data source, which will retrieve the latest image on every `pulumi apply`, and will update
+the template to use that specific image:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myImage = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const instanceTemplate = new gcp.compute.InstanceTemplate("instanceTemplate", {
+    namePrefix: "instance-template-",
+    machineType: "n1-standard-1",
+    region: "us-central1",
+    disk: [{
+        sourceImage: google_compute_image.my_image.self_link,
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_image = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+instance_template = gcp.compute.InstanceTemplate("instanceTemplate",
+    name_prefix="instance-template-",
+    machine_type="n1-standard-1",
+    region="us-central1",
+    disk=[{
+        "sourceImage": google_compute_image["my_image"]["self_link"],
+    }])
+```
+
+To have instances update to the latest on every scaling event or instance re-creation,
+use the family as the image for the disk, and it will use GCP's default behavior, setting
+the image for the template to the family:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instanceTemplate = new gcp.compute.InstanceTemplate("instance_template", {
+    // boot disk
+    disks: [{
+        sourceImage: "debian-cloud/debian-9",
+    }],
+    machineType: "n1-standard-1",
+    namePrefix: "instance-template-",
+    region: "us-central1",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance_template = gcp.compute.InstanceTemplate("instanceTemplate",
+    disks=[{
+        "sourceImage": "debian-cloud/debian-9",
+    }],
+    machine_type="n1-standard-1",
+    name_prefix="instance-template-",
+    region="us-central1")
+```
 
 
 
 ## Create a InstanceTemplate Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1226,7 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing InstanceTemplate Resource {#look-up}
 
 Get an existing InstanceTemplate resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#InstanceTemplateState">InstanceTemplateState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#InstanceTemplate">InstanceTemplate</a></span></code></pre></div>
@@ -2311,9 +2553,6 @@ this configuration option are detailed below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceTemplateDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceTemplateDiskOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceTemplateDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceTemplateDisk.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2901,9 +3140,6 @@ initialize this disk. This can be one of: the image's `self_link`,
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceTemplateDiskDiskEncryptionKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceTemplateDiskDiskEncryptionKeyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceTemplateDiskDiskEncryptionKeyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceTemplateDiskDiskEncryptionKey.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2982,9 +3218,6 @@ initialize this disk. This can be one of: the image's `self_link`,
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceTemplateGuestAcceleratorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceTemplateGuestAcceleratorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceTemplateGuestAcceleratorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceTemplateGuestAccelerator.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3100,9 +3333,6 @@ initialize this disk. This can be one of: the image's `self_link`,
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceTemplateNetworkInterfaceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceTemplateNetworkInterfaceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceTemplateNetworkInterfaceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceTemplateNetworkInterface.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3455,9 +3685,6 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceTemplateNetworkInterfaceAccessConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceTemplateNetworkInterfaceAccessConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceTemplateNetworkInterfaceAccessConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceTemplateNetworkInterfaceAccessConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3617,9 +3844,6 @@ STANDARD. If this field is not specified, it is assumed to be PREMIUM.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceTemplateNetworkInterfaceAliasIpRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceTemplateNetworkInterfaceAliasIpRangeOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceTemplateNetworkInterfaceAliasIpRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceTemplateNetworkInterfaceAliasIpRange.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3758,9 +3982,6 @@ range. If left unspecified, the primary range of the subnetwork will be used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceTemplateSchedulingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceTemplateSchedulingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceTemplateSchedulingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceTemplateScheduling.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3985,9 +4206,6 @@ false. Read more on this
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceTemplateSchedulingNodeAffinityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceTemplateSchedulingNodeAffinityOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceTemplateSchedulingNodeAffinityArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceTemplateSchedulingNodeAffinity.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4139,9 +4357,6 @@ or `NOT_IN` for anti-affinities.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceTemplateServiceAccountArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceTemplateServiceAccountOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceTemplateServiceAccountArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceTemplateServiceAccount.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4268,9 +4483,6 @@ default Google Compute Engine service account is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceTemplateShieldedInstanceConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceTemplateShieldedInstanceConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceTemplateShieldedInstanceConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceTemplateShieldedInstanceConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

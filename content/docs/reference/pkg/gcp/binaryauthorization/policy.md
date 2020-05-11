@@ -19,10 +19,113 @@ To get more information about Policy, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/binary-authorization/)
 
+## Example Usage - Binary Authorization Policy Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const note = new gcp.containeranalysis.Note("note", {attestation_authority: {
+    hint: {
+        humanReadableName: "My attestor",
+    },
+}});
+const attestor = new gcp.binaryauthorization.Attestor("attestor", {attestation_authority_note: {
+    noteReference: note.name,
+}});
+const policy = new gcp.binaryauthorization.Policy("policy", {
+    admission_whitelist_patterns: [{
+        namePattern: "gcr.io/google_containers/*",
+    }],
+    default_admission_rule: {
+        evaluationMode: "ALWAYS_ALLOW",
+        enforcementMode: "ENFORCED_BLOCK_AND_AUDIT_LOG",
+    },
+    cluster_admission_rules: [{
+        cluster: "us-central1-a.prod-cluster",
+        evaluationMode: "REQUIRE_ATTESTATION",
+        enforcementMode: "ENFORCED_BLOCK_AND_AUDIT_LOG",
+        requireAttestationsBies: [attestor.name],
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+note = gcp.containeranalysis.Note("note", attestation_authority={
+    "hint": {
+        "humanReadableName": "My attestor",
+    },
+})
+attestor = gcp.binaryauthorization.Attestor("attestor", attestation_authority_note={
+    "noteReference": note.name,
+})
+policy = gcp.binaryauthorization.Policy("policy",
+    admission_whitelist_patterns=[{
+        "namePattern": "gcr.io/google_containers/*",
+    }],
+    default_admission_rule={
+        "evaluationMode": "ALWAYS_ALLOW",
+        "enforcementMode": "ENFORCED_BLOCK_AND_AUDIT_LOG",
+    },
+    cluster_admission_rules=[{
+        "cluster": "us-central1-a.prod-cluster",
+        "evaluationMode": "REQUIRE_ATTESTATION",
+        "enforcementMode": "ENFORCED_BLOCK_AND_AUDIT_LOG",
+        "requireAttestationsBies": [attestor.name],
+    }])
+```
+## Example Usage - Binary Authorization Policy Global Evaluation
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const note = new gcp.containeranalysis.Note("note", {attestation_authority: {
+    hint: {
+        humanReadableName: "My attestor",
+    },
+}});
+const attestor = new gcp.binaryauthorization.Attestor("attestor", {attestation_authority_note: {
+    noteReference: note.name,
+}});
+const policy = new gcp.binaryauthorization.Policy("policy", {
+    default_admission_rule: {
+        evaluationMode: "REQUIRE_ATTESTATION",
+        enforcementMode: "ENFORCED_BLOCK_AND_AUDIT_LOG",
+        requireAttestationsBies: [attestor.name],
+    },
+    globalPolicyEvaluationMode: "ENABLE",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+note = gcp.containeranalysis.Note("note", attestation_authority={
+    "hint": {
+        "humanReadableName": "My attestor",
+    },
+})
+attestor = gcp.binaryauthorization.Attestor("attestor", attestation_authority_note={
+    "noteReference": note.name,
+})
+policy = gcp.binaryauthorization.Policy("policy",
+    default_admission_rule={
+        "evaluationMode": "REQUIRE_ATTESTATION",
+        "enforcementMode": "ENFORCED_BLOCK_AND_AUDIT_LOG",
+        "requireAttestationsBies": [attestor.name],
+    },
+    global_policy_evaluation_mode="ENABLE")
+```
+
 
 
 ## Create a Policy Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -562,7 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Policy Resource {#look-up}
 
 Get an existing Policy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/binaryauthorization/#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/binaryauthorization/#Policy">Policy</a></span></code></pre></div>
@@ -983,9 +1086,6 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#PolicyAdmissionWhitelistPatternArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#PolicyAdmissionWhitelistPatternOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Inputs.PolicyAdmissionWhitelistPatternArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Outputs.PolicyAdmissionWhitelistPattern.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1076,9 +1176,6 @@ part.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#PolicyClusterAdmissionRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#PolicyClusterAdmissionRuleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Inputs.PolicyClusterAdmissionRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Outputs.PolicyClusterAdmissionRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1294,9 +1391,6 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#PolicyDefaultAdmissionRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#PolicyDefaultAdmissionRuleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Inputs.PolicyDefaultAdmissionRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Outputs.PolicyDefaultAdmissionRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

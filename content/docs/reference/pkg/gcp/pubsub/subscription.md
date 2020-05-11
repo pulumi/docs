@@ -20,10 +20,141 @@ To get more information about Subscription, see:
 * How-to Guides
     * [Managing Subscriptions](https://cloud.google.com/pubsub/docs/admin#managing_subscriptions)
 
+## Example Usage - Pubsub Subscription Push
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleTopic = new gcp.pubsub.Topic("exampleTopic", {});
+const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
+    topic: exampleTopic.name,
+    ackDeadlineSeconds: 20,
+    labels: {
+        foo: "bar",
+    },
+    push_config: {
+        pushEndpoint: "https://example.com/push",
+        attributes: {
+            "x-goog-version": "v1",
+        },
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_topic = gcp.pubsub.Topic("exampleTopic")
+example_subscription = gcp.pubsub.Subscription("exampleSubscription",
+    topic=example_topic.name,
+    ack_deadline_seconds=20,
+    labels={
+        "foo": "bar",
+    },
+    push_config={
+        "pushEndpoint": "https://example.com/push",
+        "attributes": {
+            "x-goog-version": "v1",
+        },
+    })
+```
+## Example Usage - Pubsub Subscription Pull
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleTopic = new gcp.pubsub.Topic("exampleTopic", {});
+const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
+    topic: exampleTopic.name,
+    labels: {
+        foo: "bar",
+    },
+    messageRetentionDuration: "1200s",
+    retainAckedMessages: true,
+    ackDeadlineSeconds: 20,
+    expiration_policy: {
+        ttl: "300000.5s",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_topic = gcp.pubsub.Topic("exampleTopic")
+example_subscription = gcp.pubsub.Subscription("exampleSubscription",
+    topic=example_topic.name,
+    labels={
+        "foo": "bar",
+    },
+    message_retention_duration="1200s",
+    retain_acked_messages=True,
+    ack_deadline_seconds=20,
+    expiration_policy={
+        "ttl": "300000.5s",
+    })
+```
+## Example Usage - Pubsub Subscription Different Project
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleTopic = new gcp.pubsub.Topic("exampleTopic", {project: "topic-project"});
+const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
+    project: "subscription-project",
+    topic: exampleTopic.name,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_topic = gcp.pubsub.Topic("exampleTopic", project="topic-project")
+example_subscription = gcp.pubsub.Subscription("exampleSubscription",
+    project="subscription-project",
+    topic=example_topic.name)
+```
+## Example Usage - Pubsub Subscription Dead Letter
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleTopic = new gcp.pubsub.Topic("exampleTopic", {});
+const exampleDeadLetter = new gcp.pubsub.Topic("exampleDeadLetter", {});
+const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
+    topic: exampleTopic.name,
+    dead_letter_policy: {
+        deadLetterTopic: exampleDeadLetter.id,
+        maxDeliveryAttempts: 10,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_topic = gcp.pubsub.Topic("exampleTopic")
+example_dead_letter = gcp.pubsub.Topic("exampleDeadLetter")
+example_subscription = gcp.pubsub.Subscription("exampleSubscription",
+    topic=example_topic.name,
+    dead_letter_policy={
+        "deadLetterTopic": example_dead_letter.id,
+        "maxDeliveryAttempts": 10,
+    })
+```
+
 
 
 ## Create a Subscription Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -855,7 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Subscription Resource {#look-up}
 
 Get an existing Subscription resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/pubsub/#SubscriptionState">SubscriptionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/pubsub/#Subscription">Subscription</a></span></code></pre></div>
@@ -1568,9 +1699,6 @@ messageRetentionDuration window.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionDeadLetterPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionDeadLetterPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Inputs.SubscriptionDeadLetterPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Outputs.SubscriptionDeadLetterPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1746,9 +1874,6 @@ If this parameter is 0, a default value of 5 is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionExpirationPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionExpirationPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Inputs.SubscriptionExpirationPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Outputs.SubscriptionExpirationPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1843,9 +1968,6 @@ Example - "3.5s".
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionPushConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionPushConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Inputs.SubscriptionPushConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Outputs.SubscriptionPushConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2077,9 +2199,6 @@ an Authorization header in the HTTP request for every pushed message.  Structure
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionPushConfigOidcTokenArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionPushConfigOidcTokenOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Inputs.SubscriptionPushConfigOidcTokenArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Outputs.SubscriptionPushConfigOidcToken.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

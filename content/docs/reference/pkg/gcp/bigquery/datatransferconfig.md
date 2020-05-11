@@ -20,10 +20,67 @@ To get more information about Config, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/bigquery/docs/reference/datatransfer/rest/)
 
+## Example Usage - Scheduled Query
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const project = gcp.organizations.getProject({});
+const permissions = new gcp.projects.IAMMember("permissions", {
+    role: "roles/iam.serviceAccountShortTermTokenMinter",
+    member: project.then(project => `serviceAccount:service-${project.number}@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com`),
+});
+const myDataset = new gcp.bigquery.Dataset("myDataset", {
+    datasetId: "my_dataset",
+    friendlyName: "foo",
+    description: "bar",
+    location: "asia-northeast1",
+});
+const queryConfig = new gcp.bigquery.DataTransferConfig("queryConfig", {
+    displayName: "my-query",
+    location: "asia-northeast1",
+    dataSourceId: "scheduled_query",
+    schedule: "first sunday of quarter 00:00",
+    destinationDatasetId: myDataset.datasetId,
+    params: {
+        destination_table_name_template: "my-table",
+        write_disposition: "WRITE_APPEND",
+        query: "SELECT name FROM tabl WHERE x = 'y'",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+project = gcp.organizations.get_project()
+permissions = gcp.projects.IAMMember("permissions",
+    role="roles/iam.serviceAccountShortTermTokenMinter",
+    member=f"serviceAccount:service-{project.number}@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com")
+my_dataset = gcp.bigquery.Dataset("myDataset",
+    dataset_id="my_dataset",
+    friendly_name="foo",
+    description="bar",
+    location="asia-northeast1")
+query_config = gcp.bigquery.DataTransferConfig("queryConfig",
+    display_name="my-query",
+    location="asia-northeast1",
+    data_source_id="scheduled_query",
+    schedule="first sunday of quarter 00:00",
+    destination_dataset_id=my_dataset.dataset_id,
+    params={
+        "destination_table_name_template": "my-table",
+        "write_disposition": "WRITE_APPEND",
+        "query": "SELECT name FROM tabl WHERE x = 'y'",
+    })
+```
+
 
 
 ## Create a DataTransferConfig Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -31,7 +88,7 @@ To get more information about Config, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DataTransferConfig</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>data_refresh_window_days=None<span class="p">, </span>data_source_id=None<span class="p">, </span>destination_dataset_id=None<span class="p">, </span>disabled=None<span class="p">, </span>display_name=None<span class="p">, </span>location=None<span class="p">, </span>params=None<span class="p">, </span>project=None<span class="p">, </span>schedule=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DataTransferConfig</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>data_refresh_window_days=None<span class="p">, </span>data_source_id=None<span class="p">, </span>destination_dataset_id=None<span class="p">, </span>disabled=None<span class="p">, </span>display_name=None<span class="p">, </span>location=None<span class="p">, </span>params=None<span class="p">, </span>project=None<span class="p">, </span>schedule=None<span class="p">, </span>service_account_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -297,6 +354,17 @@ https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cro
 NOTE: the granularity should be at least 8 hours, or less frequent.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Service<wbr>Account<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Optional service account name. If this field is set, transfer config will
+be created with this service account credentials. It requires that
+requesting user calling this API has permissions to act as this service account.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -396,6 +464,17 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Service<wbr>Account<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Optional service account name. If this field is set, transfer config will
+be created with this service account credentials. It requires that
+requesting user calling this API has permissions to act as this service account.
 {{% /md %}}</dd>
 
 </dl>
@@ -499,6 +578,17 @@ https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cro
 NOTE: the granularity should be at least 8 hours, or less frequent.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>service<wbr>Account<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Optional service account name. If this field is set, transfer config will
+be created with this service account credentials. It requires that
+requesting user calling this API has permissions to act as this service account.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -598,6 +688,17 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>service_<wbr>account_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Optional service account name. If this field is set, transfer config will
+be created with this service account credentials. It requires that
+requesting user calling this API has permissions to act as this service account.
 {{% /md %}}</dd>
 
 </dl>
@@ -727,14 +828,14 @@ required. The name is ignored when creating a transfer config.
 ## Look up an Existing DataTransferConfig Resource {#look-up}
 
 Get an existing DataTransferConfig resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#DataTransferConfigState">DataTransferConfigState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#DataTransferConfig">DataTransferConfig</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>data_refresh_window_days=None<span class="p">, </span>data_source_id=None<span class="p">, </span>destination_dataset_id=None<span class="p">, </span>disabled=None<span class="p">, </span>display_name=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>params=None<span class="p">, </span>project=None<span class="p">, </span>schedule=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>data_refresh_window_days=None<span class="p">, </span>data_source_id=None<span class="p">, </span>destination_dataset_id=None<span class="p">, </span>disabled=None<span class="p">, </span>display_name=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>params=None<span class="p">, </span>project=None<span class="p">, </span>schedule=None<span class="p">, </span>service_account_name=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -953,6 +1054,17 @@ https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cro
 NOTE: the granularity should be at least 8 hours, or less frequent.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Service<wbr>Account<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Optional service account name. If this field is set, transfer config will
+be created with this service account credentials. It requires that
+requesting user calling this API has permissions to act as this service account.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1063,6 +1175,17 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Service<wbr>Account<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Optional service account name. If this field is set, transfer config will
+be created with this service account credentials. It requires that
+requesting user calling this API has permissions to act as this service account.
 {{% /md %}}</dd>
 
 </dl>
@@ -1177,6 +1300,17 @@ https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cro
 NOTE: the granularity should be at least 8 hours, or less frequent.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>service<wbr>Account<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Optional service account name. If this field is set, transfer config will
+be created with this service account credentials. It requires that
+requesting user calling this API has permissions to act as this service account.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1287,6 +1421,17 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>service_<wbr>account_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Optional service account name. If this field is set, transfer config will
+be created with this service account credentials. It requires that
+requesting user calling this API has permissions to act as this service account.
 {{% /md %}}</dd>
 
 </dl>

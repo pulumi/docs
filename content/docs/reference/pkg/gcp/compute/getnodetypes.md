@@ -14,13 +14,39 @@ Provides available node types for Compute Engine sole-tenant nodes in a zone
 for a given project. For more information, see [the official documentation](https://cloud.google.com/compute/docs/nodes/#types) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/nodeTypes).
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const central1b = gcp.compute.getNodeTypes({
+    zone: "us-central1-b",
+});
+const tmpl = new gcp.compute.NodeTemplate("tmpl", {
+    region: "us-central1",
+    nodeType: data.google_compute_node_types.types.names[0],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+central1b = gcp.compute.get_node_types(zone="us-central1-b")
+tmpl = gcp.compute.NodeTemplate("tmpl",
+    region="us-central1",
+    node_type=data["gcp.compute.getNodeTypes"]["types"]["names"])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Using GetNodeTypes {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -343,16 +369,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

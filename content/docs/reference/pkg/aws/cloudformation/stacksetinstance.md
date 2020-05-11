@@ -16,26 +16,10 @@ Manages a CloudFormation StackSet Instance. Instances are managed in the account
 
 > **NOTE:** To retain the Stack during resource destroy, ensure `retain_stack` has been set to `true` in the state first. This must be completed _before_ a deployment that would destroy the resource.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -46,22 +30,20 @@ const example = new aws.cloudformation.StackSetInstance("example", {
     stackSetName: aws_cloudformation_stack_set_example.name,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example = aws.cloudformation.StackSetInstance("example",
+    account_id="123456789012",
+    region="us-east-1",
+    stack_set_name=aws_cloudformation_stack_set["example"]["name"])
+```
+
+{{% /example %}}
+{{% example %}}
 ### Example IAM Setup in Target Account
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -97,13 +79,40 @@ const aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyRolePolicy = n
     role: aWSCloudFormationStackSetExecutionRole.name,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+a_ws_cloud_formation_stack_set_execution_role_assume_role_policy = aws.iam.get_policy_document(statements=[{
+    "actions": ["sts:AssumeRole"],
+    "effect": "Allow",
+    "principals": [{
+        "identifiers": [aws_iam_role["AWSCloudFormationStackSetAdministrationRole"]["arn"]],
+        "type": "AWS",
+    }],
+}])
+a_ws_cloud_formation_stack_set_execution_role = aws.iam.Role("aWSCloudFormationStackSetExecutionRole", assume_role_policy=a_ws_cloud_formation_stack_set_execution_role_assume_role_policy.json)
+a_ws_cloud_formation_stack_set_execution_role_minimum_execution_policy_policy_document = aws.iam.get_policy_document(statements=[{
+    "actions": [
+        "cloudformation:*",
+        "s3:*",
+        "sns:*",
+    ],
+    "effect": "Allow",
+    "resources": ["*"],
+}])
+a_ws_cloud_formation_stack_set_execution_role_minimum_execution_policy_role_policy = aws.iam.RolePolicy("aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyRolePolicy",
+    policy=a_ws_cloud_formation_stack_set_execution_role_minimum_execution_policy_policy_document.json,
+    role=a_ws_cloud_formation_stack_set_execution_role.name)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a StackSetInstance Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -603,7 +612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing StackSetInstance Resource {#look-up}
 
 Get an existing StackSetInstance resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudformation/#StackSetInstanceState">StackSetInstanceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudformation/#StackSetInstance">StackSetInstance</a></span></code></pre></div>

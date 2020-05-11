@@ -12,40 +12,75 @@ meta_desc: "Explore the GetRegions function of the AWS package, including exampl
 
 Provides information about AWS Regions. Can be used to filter regions i.e. by Opt-In status or only regions enabled for current account. To get details like endpoint and description of each region the data source can be combined with the [`aws..getRegion` data source](https://www.terraform.io/docs/providers/aws/d/region.html).
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+Enabled AWS Regions:
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const current = pulumi.output(aws.getRegions({ async: true }));
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+current = aws.get_regions()
+```
+
+All the regions regardless of the availability
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const current = pulumi.output(aws.getRegions({
+    allRegions: true,
+}, { async: true }));
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+current = aws.get_regions(all_regions=True)
+```
+
+To see regions that are filtered by `"not-opted-in"`, the `all_regions` argument needs to be set to `true` or no results will be returned.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const current = pulumi.output(aws.getRegions({
+    allRegions: true,
+    filters: [{
+        name: "opt-in-status",
+        values: ["not-opted-in"],
+    }],
+}, { async: true }));
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+current = aws.get_regions(all_regions=True,
+    filters=[{
+        "name": "opt-in-status",
+        "values": ["not-opted-in"],
+    }])
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetRegions {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -369,9 +404,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/?tab=doc#GetRegionsFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/?tab=doc#GetRegionsFilter">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Inputs.GetRegionsFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Outputs.GetRegionsFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -480,16 +512,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

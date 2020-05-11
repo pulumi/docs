@@ -12,11 +12,66 @@ meta_desc: "Explore the GetNetblockIPRanges function of the compute module, incl
 
 Use this data source to get the IP addresses from different special IP ranges on Google Cloud Platform.
 
+## Example Usage - Cloud Ranges
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const netblock = gcp.compute.getNetblockIPRanges({});
+export const cidrBlocks = netblock.then(netblock => netblock.cidrBlocks);
+export const cidrBlocksIpv4 = netblock.then(netblock => netblock.cidrBlocksIpv4s);
+export const cidrBlocksIpv6 = netblock.then(netblock => netblock.cidrBlocksIpv6s);
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+netblock = gcp.compute.get_netblock_ip_ranges()
+pulumi.export("cidrBlocks", netblock.cidr_blocks)
+pulumi.export("cidrBlocksIpv4", netblock.cidr_blocks_ipv4s)
+pulumi.export("cidrBlocksIpv6", netblock.cidr_blocks_ipv6s)
+```
+
+## Example Usage - Allow Health Checks
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const legacy-hcs = gcp.compute.getNetblockIPRanges({
+    rangeType: "legacy-health-checkers",
+});
+const default = new gcp.compute.Network("default", {});
+const allow-hcs = new gcp.compute.Firewall("allow-hcs", {
+    network: default.name,
+    allow: [{
+        protocol: "tcp",
+        ports: ["80"],
+    }],
+    sourceRanges: legacy-hcs.then(legacy_hcs => legacy_hcs.cidrBlocksIpv4s),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+legacy_hcs = gcp.compute.get_netblock_ip_ranges(range_type="legacy-health-checkers")
+default = gcp.compute.Network("default")
+allow_hcs = gcp.compute.Firewall("allow-hcs",
+    network=default.name,
+    allow=[{
+        "protocol": "tcp",
+        "ports": ["80"],
+    }],
+    source_ranges=legacy_hcs.cidr_blocks_ipv4s)
+```
+
 
 
 ## Using GetNetblockIPRanges {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -331,16 +386,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

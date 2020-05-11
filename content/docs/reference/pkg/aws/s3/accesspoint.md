@@ -13,12 +13,63 @@ meta_desc: "Explore the AccessPoint resource of the s3 module, including example
 Provides a resource to manage an S3 Access Point.
 
 {{% examples %}}
+## Example Usage
+
+{{% example %}}
+### Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleBucket = new aws.s3.Bucket("exampleBucket", {});
+const exampleAccessPoint = new aws.s3.AccessPoint("exampleAccessPoint", {bucket: exampleBucket.id});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_bucket = aws.s3.Bucket("exampleBucket")
+example_access_point = aws.s3.AccessPoint("exampleAccessPoint", bucket=example_bucket.id)
+```
+
+{{% /example %}}
+{{% example %}}
+### Access Point Restricted to a VPC
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleBucket = new aws.s3.Bucket("exampleBucket", {});
+const exampleVpc = new aws.ec2.Vpc("exampleVpc", {cidrBlock: "10.0.0.0/16"});
+const exampleAccessPoint = new aws.s3.AccessPoint("exampleAccessPoint", {
+    bucket: exampleBucket.id,
+    vpc_configuration: {
+        vpcId: exampleVpc.id,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_bucket = aws.s3.Bucket("exampleBucket")
+example_vpc = aws.ec2.Vpc("exampleVpc", cidr_block="10.0.0.0/16")
+example_access_point = aws.s3.AccessPoint("exampleAccessPoint",
+    bucket=example_bucket.id,
+    vpc_configuration={
+        "vpcId": example_vpc.id,
+    })
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Create a AccessPoint Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -666,7 +717,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
 ## Look up an Existing AccessPoint Resource {#look-up}
 
 Get an existing AccessPoint resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#AccessPointState">AccessPointState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#AccessPoint">AccessPoint</a></span></code></pre></div>
@@ -1195,9 +1246,6 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#AccessPointPublicAccessBlockConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#AccessPointPublicAccessBlockConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.AccessPointPublicAccessBlockConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.AccessPointPublicAccessBlockConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1408,9 +1456,6 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#AccessPointVpcConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#AccessPointVpcConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.AccessPointVpcConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.AccessPointVpcConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

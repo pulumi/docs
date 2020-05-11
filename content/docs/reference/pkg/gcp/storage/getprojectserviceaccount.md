@@ -19,13 +19,39 @@ For more information see
 [the API reference](https://cloud.google.com/storage/docs/json_api/v1/projects/serviceAccount).
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const gcsAccount = gcp.storage.getProjectServiceAccount({});
+const binding = new gcp.pubsub.TopicIAMBinding("binding", {
+    topic: google_pubsub_topic.topic.name,
+    role: "roles/pubsub.publisher",
+    members: [gcsAccount.then(gcsAccount => `serviceAccount:${gcsAccount.emailAddress}`)],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+gcs_account = gcp.storage.get_project_service_account()
+binding = gcp.pubsub.TopicIAMBinding("binding",
+    topic=google_pubsub_topic["topic"]["name"],
+    role="roles/pubsub.publisher",
+    members=[f"serviceAccount:{gcs_account.email_address}"])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Using GetProjectServiceAccount {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -344,16 +370,4 @@ in order to grant IAM permissions.
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

@@ -12,26 +12,10 @@ meta_desc: "Explore the DomainPolicy resource of the elasticsearch module, inclu
 
 Allows setting policy to an Elasticsearch domain while referencing domain attributes (e.g. ARN)
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -58,13 +42,38 @@ const main = new aws.elasticsearch.DomainPolicy("main", {
     domainName: example.domainName,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example = aws.elasticsearch.Domain("example", elasticsearch_version="2.3")
+main = aws.elasticsearch.DomainPolicy("main",
+    access_policies=example.arn.apply(lambda arn: f"""{{
+    "Version": "2012-10-17",
+    "Statement": [
+        {{
+            "Action": "es:*",
+            "Principal": "*",
+            "Effect": "Allow",
+            "Condition": {{
+                "IpAddress": {{"aws:SourceIp": "127.0.0.1/32"}}
+            }},
+            "Resource": "{arn}/*"
+        }}
+    ]
+}}
+
+"""),
+    domain_name=example.domain_name)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a DomainPolicy Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -420,7 +429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DomainPolicy Resource {#look-up}
 
 Get an existing DomainPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticsearch/#DomainPolicyState">DomainPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticsearch/#DomainPolicy">DomainPolicy</a></span></code></pre></div>

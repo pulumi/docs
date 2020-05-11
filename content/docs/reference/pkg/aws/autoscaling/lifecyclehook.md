@@ -24,26 +24,10 @@ behavior. If you need hooks to run on all instances, add them with
 [`aws.autoscaling.Group`](https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html),
 but take care to not duplicate those hooks with this resource.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -71,13 +55,40 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
     roleArn: "arn:aws:iam::123456789012:role/S3Access",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+foobar_group = aws.autoscaling.Group("foobarGroup",
+    availability_zones=["us-west-2a"],
+    health_check_type="EC2",
+    tags=[{
+        "key": "Foo",
+        "propagateAtLaunch": True,
+        "value": "foo-bar",
+    }],
+    termination_policies=["OldestInstance"])
+foobar_lifecycle_hook = aws.autoscaling.LifecycleHook("foobarLifecycleHook",
+    autoscaling_group_name=foobar_group.name,
+    default_result="CONTINUE",
+    heartbeat_timeout=2000,
+    lifecycle_transition="autoscaling:EC2_INSTANCE_LAUNCHING",
+    notification_metadata="""{
+  "foo": "bar"
+}
+
+""",
+    notification_target_arn="arn:aws:sqs:us-east-1:444455556666:queue1*",
+    role_arn="arn:aws:iam::123456789012:role/S3Access")
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a LifecycleHook Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -649,7 +660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing LifecycleHook Resource {#look-up}
 
 Get an existing LifecycleHook resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/autoscaling/#LifecycleHookState">LifecycleHookState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/autoscaling/#LifecycleHook">LifecycleHook</a></span></code></pre></div>

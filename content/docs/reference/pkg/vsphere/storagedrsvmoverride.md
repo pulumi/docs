@@ -21,56 +21,26 @@ page][ref-vsphere-datastore-clusters].
 
 [ref-vsphere-datastore-clusters]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-598DF695-107E-406B-9C95-0AF961FC227A.html
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+The example below builds on the [Storage DRS
+example][tf-vsphere-vm-storage-drs-example] in the `vsphere..VirtualMachine`
+resource. However, rather than use the output of the
+[`vsphere..DatastoreCluster` data
+source][tf-vsphere-datastore-cluster-data-source] for the location of the
+virtual machine, we instead get what is assumed to be a member datastore using
+the [`vsphere..getDatastore` data source][tf-vsphere-datastore-data-source] and put
+the virtual machine there instead. We then use the
+`vsphere..StorageDrsVmOverride` resource to ensure that Storage DRS does not
+apply to this virtual machine, and hence the VM will never be migrated off of
+the datastore.
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
+[tf-vsphere-vm-storage-drs-example]: /docs/providers/vsphere/r/virtual_machine.html#using-storage-drs
+[tf-vsphere-datastore-cluster-data-source]: /docs/providers/vsphere/d/datastore_cluster.html
+[tf-vsphere-datastore-data-source]: /docs/providers/vsphere/d/datastore.html
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_vsphere as vsphere
-
-dc = vsphere.get_datacenter(name="dc1")
-datastore_cluster = vsphere.get_datastore_cluster(datacenter_id=dc.id,
-    name="datastore-cluster1")
-member_datastore = vsphere.get_datastore(datacenter_id=dc.id,
-    name="datastore-cluster1-member1")
-pool = vsphere.get_resource_pool(datacenter_id=dc.id,
-    name="cluster1/Resources")
-network = vsphere.get_network(datacenter_id=dc.id,
-    name="public")
-vm = vsphere.VirtualMachine("vm",
-    datastore_id=member_datastore.id,
-    disks=[{
-        "label": "disk0",
-        "size": 20,
-    }],
-    guest_id="other3xLinux64Guest",
-    memory=1024,
-    network_interfaces=[{
-        "networkId": network.id,
-    }],
-    num_cpus=2,
-    resource_pool_id=pool.id)
-drs_vm_override = vsphere.StorageDrsVmOverride("drsVmOverride",
-    datastore_cluster_id=datastore_cluster.id,
-    sdrs_enabled=False,
-    virtual_machine_id=vm.id)
-```
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -114,13 +84,45 @@ const drsVmOverride = new vsphere.StorageDrsVmOverride("drs_vm_override", {
     virtualMachineId: vm.id,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_vsphere as vsphere
 
+dc = vsphere.get_datacenter(name="dc1")
+datastore_cluster = vsphere.get_datastore_cluster(datacenter_id=dc.id,
+    name="datastore-cluster1")
+member_datastore = vsphere.get_datastore(datacenter_id=dc.id,
+    name="datastore-cluster1-member1")
+pool = vsphere.get_resource_pool(datacenter_id=dc.id,
+    name="cluster1/Resources")
+network = vsphere.get_network(datacenter_id=dc.id,
+    name="public")
+vm = vsphere.VirtualMachine("vm",
+    datastore_id=member_datastore.id,
+    disks=[{
+        "label": "disk0",
+        "size": 20,
+    }],
+    guest_id="other3xLinux64Guest",
+    memory=1024,
+    network_interfaces=[{
+        "networkId": network.id,
+    }],
+    num_cpus=2,
+    resource_pool_id=pool.id)
+drs_vm_override = vsphere.StorageDrsVmOverride("drsVmOverride",
+    datastore_cluster_id=datastore_cluster.id,
+    sdrs_enabled=False,
+    virtual_machine_id=vm.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a StorageDrsVmOverride Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -632,7 +634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing StorageDrsVmOverride Resource {#look-up}
 
 Get an existing StorageDrsVmOverride resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#StorageDrsVmOverrideState">StorageDrsVmOverrideState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#StorageDrsVmOverride">StorageDrsVmOverride</a></span></code></pre></div>

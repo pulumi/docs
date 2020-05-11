@@ -19,12 +19,50 @@ in conjunction with any Network ACL Rule resources. Doing so will cause
 a conflict of rule settings and will overwrite rules.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const barNetworkAcl = new aws.ec2.NetworkAcl("barNetworkAcl", {vpcId: aws_vpc.foo.id});
+const barNetworkAclRule = new aws.ec2.NetworkAclRule("barNetworkAclRule", {
+    networkAclId: barNetworkAcl.id,
+    ruleNumber: 200,
+    egress: false,
+    protocol: "tcp",
+    ruleAction: "allow",
+    cidrBlock: aws_vpc.foo.cidr_block,
+    fromPort: 22,
+    toPort: 22,
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+bar_network_acl = aws.ec2.NetworkAcl("barNetworkAcl", vpc_id=aws_vpc["foo"]["id"])
+bar_network_acl_rule = aws.ec2.NetworkAclRule("barNetworkAclRule",
+    network_acl_id=bar_network_acl.id,
+    rule_number=200,
+    egress=False,
+    protocol="tcp",
+    rule_action="allow",
+    cidr_block=aws_vpc["foo"]["cidr_block"],
+    from_port=22,
+    to_port=22)
+```
+
+> **Note:** One of either `cidr_block` or `ipv6_cidr_block` is required.
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Create a NetworkAclRule Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -704,7 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing NetworkAclRule Resource {#look-up}
 
 Get an existing NetworkAclRule resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#NetworkAclRuleState">NetworkAclRuleState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#NetworkAclRule">NetworkAclRule</a></span></code></pre></div>

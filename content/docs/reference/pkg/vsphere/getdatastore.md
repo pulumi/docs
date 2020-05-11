@@ -17,33 +17,10 @@ want to use to create virtual machines in using the
 
 [docs-virtual-machine-resource]: /docs/providers/vsphere/r/virtual_machine.html
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_vsphere as vsphere
-
-datacenter = vsphere.get_datacenter(name="dc1")
-datastore = vsphere.get_datastore(datacenter_id=datacenter.id,
-    name="datastore1")
-```
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -56,14 +33,23 @@ const datastore = datacenter.apply(datacenter => vsphere.getDatastore({
     name: "datastore1",
 }, { async: true }));
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_vsphere as vsphere
 
+datacenter = vsphere.get_datacenter(name="dc1")
+datastore = vsphere.get_datastore(datacenter_id=datacenter.id,
+    name="datastore1")
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetDatastore {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -354,16 +340,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
-</dl>
 

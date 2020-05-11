@@ -16,26 +16,12 @@ and
 [API](https://cloud.google.com/storage/docs/json_api/v1/objects).
 
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+Example picture stored within a folder.
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -45,14 +31,22 @@ const picture = pulumi.output(gcp.storage.getBucketObject({
     name: "folder/butterfly01.jpg",
 }, { async: true }));
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
 
+picture = gcp.storage.get_bucket_object(bucket="image-store",
+    name="folder/butterfly01.jpg")
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetBucketObject {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -823,16 +817,4 @@ storage class or to a [standard](https://cloud.google.com/storage/docs/storage-c
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

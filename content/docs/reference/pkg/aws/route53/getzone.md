@@ -14,26 +14,13 @@ meta_desc: "Explore the GetZone function of the route53 module, including exampl
 
 This data source allows to find a Hosted Zone ID given Hosted Zone name and certain search criteria.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+The following example shows how to get a Hosted Zone from its name and from this data how to create a Record Set.
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -50,14 +37,28 @@ const www = new aws.route53.Record("www", {
     zoneId: selected.zoneId!,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+selected = aws.route53.get_zone(name="test.com.",
+    private_zone=True)
+www = aws.route53.Record("www",
+    name=f"www.{selected.name}",
+    records=["10.0.0.1"],
+    ttl="300",
+    type="A",
+    zone_id=selected.zone_id)
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetZone {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -788,16 +789,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

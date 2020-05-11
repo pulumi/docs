@@ -19,10 +19,66 @@ To get more information about DomainMapping, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/run/docs/mapping-custom-domains)
 
+## Example Usage - Cloud Run Domain Mapping Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultService = new gcp.cloudrun.Service("defaultService", {
+    location: "us-central1",
+    metadata: {
+        namespace: "my-project-name",
+    },
+    template: {
+        spec: {
+            containers: [{
+                image: "gcr.io/cloudrun/hello",
+            }],
+        },
+    },
+});
+const defaultDomainMapping = new gcp.cloudrun.DomainMapping("defaultDomainMapping", {
+    location: "us-central1",
+    metadata: {
+        namespace: "my-project-name",
+    },
+    spec: {
+        routeName: defaultService.name,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_service = gcp.cloudrun.Service("defaultService",
+    location="us-central1",
+    metadata={
+        "namespace": "my-project-name",
+    },
+    template={
+        "spec": {
+            "containers": [{
+                "image": "gcr.io/cloudrun/hello",
+            }],
+        },
+    })
+default_domain_mapping = gcp.cloudrun.DomainMapping("defaultDomainMapping",
+    location="us-central1",
+    metadata={
+        "namespace": "my-project-name",
+    },
+    spec={
+        "routeName": default_service.name,
+    })
+```
+
 
 
 ## Create a DomainMapping Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -526,7 +582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DomainMapping Resource {#look-up}
 
 Get an existing DomainMapping resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#DomainMappingState">DomainMappingState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#DomainMapping">DomainMapping</a></span></code></pre></div>
@@ -911,9 +967,6 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingMetadataArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingMetadataOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.DomainMappingMetadataArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.DomainMappingMetadata.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1281,9 +1334,6 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingSpecOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.DomainMappingSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.DomainMappingSpec.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1450,9 +1500,6 @@ has given such a warning.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingStatusOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.DomainMappingStatus.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1625,9 +1672,6 @@ has given such a warning.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingStatusConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.DomainMappingStatusCondition.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1798,9 +1842,6 @@ has given such a warning.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingStatusResourceRecordOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.DomainMappingStatusResourceRecord.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -12,26 +12,10 @@ meta_desc: "Explore the GetLaunchConfiguration function of the ec2 module, inclu
 
 Provides information about a Launch Configuration.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -40,14 +24,21 @@ const ubuntu = pulumi.output(aws.ec2.getLaunchConfiguration({
     name: "test-launch-config",
 }, { async: true }));
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+ubuntu = aws.ec2.get_launch_configuration(name="test-launch-config")
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetLaunchConfiguration {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -883,9 +874,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchConfigurationEbsBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchConfigurationEbsBlockDevice.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1181,9 +1169,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchConfigurationEphemeralBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchConfigurationEphemeralBlockDevice.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1298,9 +1283,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchConfigurationRootBlockDevice">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchConfigurationRootBlockDevice.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1518,16 +1500,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

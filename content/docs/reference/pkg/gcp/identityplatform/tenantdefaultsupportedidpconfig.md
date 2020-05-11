@@ -18,8 +18,39 @@ the marketplace prior to using this resource.
 
 
 
+## Example Usage - Identity Platform Tenant Default Supported Idp Config Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const tenant = new gcp.identityplatform.Tenant("tenant", {displayName: "tenant"});
+const idpConfig = new gcp.identityplatform.TenantDefaultSupportedIdpConfig("idpConfig", {
+    enabled: true,
+    tenant: tenant.name,
+    idpId: "playgames.google.com",
+    clientId: "my-client-id",
+    clientSecret: "secret",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+tenant = gcp.identityplatform.Tenant("tenant", display_name="tenant")
+idp_config = gcp.identityplatform.TenantDefaultSupportedIdpConfig("idpConfig",
+    enabled=True,
+    tenant=tenant.name,
+    idp_id="playgames.google.com",
+    client_id="my-client-id",
+    client_secret="secret")
+```
+
+
+
 ## Create a TenantDefaultSupportedIdpConfig Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -599,7 +630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing TenantDefaultSupportedIdpConfig Resource {#look-up}
 
 Get an existing TenantDefaultSupportedIdpConfig resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/identityplatform/#TenantDefaultSupportedIdpConfigState">TenantDefaultSupportedIdpConfigState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/identityplatform/#TenantDefaultSupportedIdpConfig">TenantDefaultSupportedIdpConfig</a></span></code></pre></div>

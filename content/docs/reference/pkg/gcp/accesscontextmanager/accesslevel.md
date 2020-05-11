@@ -34,7 +34,7 @@ const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
                 osConstraints: [{
                     osType: "DESKTOP_CHROME_OS",
                 }],
-                requireScreenLock: false,
+                requireScreenLock: true,
             },
             regions: [
                 "CH",
@@ -51,11 +51,37 @@ const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy",
     title: "my policy",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+access_level = gcp.accesscontextmanager.AccessLevel("access-level",
+    basic={
+        "conditions": [{
+            "devicePolicy": {
+                "osConstraints": [{
+                    "osType": "DESKTOP_CHROME_OS",
+                }],
+                "requireScreenLock": True,
+            },
+            "regions": [
+                "CH",
+                "IT",
+                "US",
+            ],
+        }],
+    },
+    parent=f"accessPolicies/{google_access_context_manager_access_policy['test-access']['name']}",
+    title="chromeos_no_lock")
+access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
+    parent="organizations/123456789",
+    title="my policy")
+```
 
 
 
 ## Create a AccessLevel Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -531,7 +557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing AccessLevel Resource {#look-up}
 
 Get an existing AccessLevel resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/accesscontextmanager/#AccessLevelState">AccessLevelState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/accesscontextmanager/#AccessLevel">AccessLevel</a></span></code></pre></div>
@@ -888,9 +914,6 @@ Format: accessPolicies/{policy_id}
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#AccessLevelBasicArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#AccessLevelBasicOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Outputs.AccessLevelBasic.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -917,7 +940,7 @@ Format: accessPolicies/{policy_id}
 is granted this AccessLevel. If AND is used, each Condition in
 conditions must be satisfied for the AccessLevel to be applied. If
 OR is used, at least one Condition in conditions must be satisfied
-for the AccessLevel to be applied. Defaults to AND if unspecified.
+for the AccessLevel to be applied.
 {{% /md %}}</dd>
 
 </dl>
@@ -946,7 +969,7 @@ for the AccessLevel to be applied. Defaults to AND if unspecified.
 is granted this AccessLevel. If AND is used, each Condition in
 conditions must be satisfied for the AccessLevel to be applied. If
 OR is used, at least one Condition in conditions must be satisfied
-for the AccessLevel to be applied. Defaults to AND if unspecified.
+for the AccessLevel to be applied.
 {{% /md %}}</dd>
 
 </dl>
@@ -975,7 +998,7 @@ for the AccessLevel to be applied. Defaults to AND if unspecified.
 is granted this AccessLevel. If AND is used, each Condition in
 conditions must be satisfied for the AccessLevel to be applied. If
 OR is used, at least one Condition in conditions must be satisfied
-for the AccessLevel to be applied. Defaults to AND if unspecified.
+for the AccessLevel to be applied.
 {{% /md %}}</dd>
 
 </dl>
@@ -1004,7 +1027,7 @@ for the AccessLevel to be applied. Defaults to AND if unspecified.
 is granted this AccessLevel. If AND is used, each Condition in
 conditions must be satisfied for the AccessLevel to be applied. If
 OR is used, at least one Condition in conditions must be satisfied
-for the AccessLevel to be applied. Defaults to AND if unspecified.
+for the AccessLevel to be applied.
 {{% /md %}}</dd>
 
 </dl>
@@ -1021,9 +1044,6 @@ for the AccessLevel to be applied. Defaults to AND if unspecified.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#AccessLevelBasicConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#AccessLevelBasicConditionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Outputs.AccessLevelBasicCondition.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1384,9 +1404,6 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#AccessLevelBasicConditionDevicePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#AccessLevelBasicConditionDevicePolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Outputs.AccessLevelBasicConditionDevicePolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1661,9 +1678,6 @@ to be true. Defaults to false.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#AccessLevelBasicConditionDevicePolicyOsConstraintArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#AccessLevelBasicConditionDevicePolicyOsConstraintOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyOsConstraintArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Outputs.AccessLevelBasicConditionDevicePolicyOsConstraint.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

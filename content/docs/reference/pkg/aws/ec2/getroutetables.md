@@ -12,26 +12,14 @@ meta_desc: "Explore the GetRouteTables function of the ec2 module, including exa
 
 This resource can be useful for getting back a list of route table ids to be referenced elsewhere.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+The following adds a route for a particular cidr block to every (private
+kops) route table in a specified vpc to use a particular vpc peering
+connection.
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -52,14 +40,31 @@ for (let i = 0; i < rts.apply(rts => rts.ids.length); i++) {
     }));
 }
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+rts = aws.ec2.get_route_tables(filters=[{
+        "name": "tag:kubernetes.io/kops/role",
+        "values": ["private*"],
+    }],
+    vpc_id=var["vpc_id"])
+route = []
+for range in [{"value": i} for i in range(0, len(rts.ids))]:
+    route.append(aws.ec2.Route(f"route-{range['value']}",
+        destination_cidr_block="10.0.1.0/22",
+        route_table_id=rts.ids[range["value"]],
+        vpc_peering_connection_id="pcx-0e9a7a9ecd137dc54"))
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetRouteTables {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -455,9 +460,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetRouteTablesFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetRouteTablesFilter">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetRouteTablesFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetRouteTablesFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -574,16 +576,4 @@ A Route Table will be selected if any one of the given values matches.
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

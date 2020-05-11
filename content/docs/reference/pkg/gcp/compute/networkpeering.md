@@ -21,12 +21,45 @@ to be functional.
 > Subnets IP ranges across peered VPC networks cannot overlap.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default = new gcp.compute.Network("default", {autoCreateSubnetworks: "false"});
+const other = new gcp.compute.Network("other", {autoCreateSubnetworks: "false"});
+const peering1 = new gcp.compute.NetworkPeering("peering1", {
+    network: default.selfLink,
+    peerNetwork: other.selfLink,
+});
+const peering2 = new gcp.compute.NetworkPeering("peering2", {
+    network: other.selfLink,
+    peerNetwork: default.selfLink,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.Network("default", auto_create_subnetworks="false")
+other = gcp.compute.Network("other", auto_create_subnetworks="false")
+peering1 = gcp.compute.NetworkPeering("peering1",
+    network=default.self_link,
+    peer_network=other.self_link)
+peering2 = gcp.compute.NetworkPeering("peering2",
+    network=other.self_link,
+    peer_network=default.self_link)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Create a NetworkPeering Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -578,7 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing NetworkPeering Resource {#look-up}
 
 Get an existing NetworkPeering resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#NetworkPeeringState">NetworkPeeringState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#NetworkPeering">NetworkPeering</a></span></code></pre></div>

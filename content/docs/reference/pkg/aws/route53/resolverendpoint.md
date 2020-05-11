@@ -12,26 +12,10 @@ meta_desc: "Explore the ResolverEndpoint resource of the route53 module, includi
 
 Provides a Route 53 Resolver endpoint resource.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -56,13 +40,37 @@ const foo = new aws.route53.ResolverEndpoint("foo", {
     },
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+foo = aws.route53.ResolverEndpoint("foo",
+    direction="INBOUND",
+    ip_addresses=[
+        {
+            "subnetId": aws_subnet["sn1"]["id"],
+        },
+        {
+            "ip": "10.0.64.4",
+            "subnetId": aws_subnet["sn2"]["id"],
+        },
+    ],
+    security_group_ids=[
+        aws_security_group["sg1"]["id"],
+        aws_security_group["sg2"]["id"],
+    ],
+    tags={
+        "Environment": "Prod",
+    })
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a ResolverEndpoint Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -610,7 +618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ResolverEndpoint Resource {#look-up}
 
 Get an existing ResolverEndpoint resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#ResolverEndpointState">ResolverEndpointState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#ResolverEndpoint">ResolverEndpoint</a></span></code></pre></div>
@@ -1038,9 +1046,6 @@ to your network (for outbound endpoints) or on the way from your network to your
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ResolverEndpointIpAddressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ResolverEndpointIpAddressOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.ResolverEndpointIpAddressArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.ResolverEndpointIpAddress.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

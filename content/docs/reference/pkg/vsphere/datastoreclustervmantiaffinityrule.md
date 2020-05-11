@@ -30,55 +30,19 @@ connections.
 
 > **NOTE:** Storage DRS requires a vSphere Enterprise Plus license.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+The example below creates two virtual machines in a cluster using the
+[`vsphere..VirtualMachine`][tf-vsphere-vm-resource] resource, creating the
+virtual machines in the datastore cluster looked up by the
+[`vsphere..DatastoreCluster`][tf-vsphere-datastore-cluster-data-source] data
+source. It then creates an anti-affinity rule for these two virtual machines,
+ensuring they will run on different datastores whenever possible.
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
+[tf-vsphere-vm-resource]: /docs/providers/vsphere/r/virtual_machine.html
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_vsphere as vsphere
-
-dc = vsphere.get_datacenter(name="dc1")
-datastore_cluster = vsphere.get_datastore_cluster(datacenter_id=dc.id,
-    name="datastore-cluster1")
-cluster = vsphere.get_compute_cluster(datacenter_id=dc.id,
-    name="cluster1")
-network = vsphere.get_network(datacenter_id=dc.id,
-    name="network1")
-vm = []
-for range in [{"value": i} for i in range(0, 2)]:
-    vm.append(vsphere.VirtualMachine(f"vm-{range['value']}",
-        datastore_cluster_id=datastore_cluster.id,
-        disks=[{
-            "label": "disk0",
-            "size": 20,
-        }],
-        guest_id="other3xLinux64Guest",
-        memory=2048,
-        network_interfaces=[{
-            "networkId": network.id,
-        }],
-        num_cpus=2,
-        resource_pool_id=cluster.resource_pool_id))
-cluster_vm_anti_affinity_rule = vsphere.DatastoreClusterVmAntiAffinityRule("clusterVmAntiAffinityRule",
-    datastore_cluster_id=datastore_cluster.id,
-    virtual_machine_ids=[__item.id for __item in vm])
-```
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -120,13 +84,44 @@ const clusterVmAntiAffinityRule = new vsphere.DatastoreClusterVmAntiAffinityRule
     virtualMachineIds: vm.map(v => v.id),
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_vsphere as vsphere
 
+dc = vsphere.get_datacenter(name="dc1")
+datastore_cluster = vsphere.get_datastore_cluster(datacenter_id=dc.id,
+    name="datastore-cluster1")
+cluster = vsphere.get_compute_cluster(datacenter_id=dc.id,
+    name="cluster1")
+network = vsphere.get_network(datacenter_id=dc.id,
+    name="network1")
+vm = []
+for range in [{"value": i} for i in range(0, 2)]:
+    vm.append(vsphere.VirtualMachine(f"vm-{range['value']}",
+        datastore_cluster_id=datastore_cluster.id,
+        disks=[{
+            "label": "disk0",
+            "size": 20,
+        }],
+        guest_id="other3xLinux64Guest",
+        memory=2048,
+        network_interfaces=[{
+            "networkId": network.id,
+        }],
+        num_cpus=2,
+        resource_pool_id=cluster.resource_pool_id))
+cluster_vm_anti_affinity_rule = vsphere.DatastoreClusterVmAntiAffinityRule("clusterVmAntiAffinityRule",
+    datastore_cluster_id=datastore_cluster.id,
+    virtual_machine_ids=[__item.id for __item in vm])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a DatastoreClusterVmAntiAffinityRule Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -606,7 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DatastoreClusterVmAntiAffinityRule Resource {#look-up}
 
 Get an existing DatastoreClusterVmAntiAffinityRule resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DatastoreClusterVmAntiAffinityRuleState">DatastoreClusterVmAntiAffinityRuleState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DatastoreClusterVmAntiAffinityRule">DatastoreClusterVmAntiAffinityRule</a></span></code></pre></div>

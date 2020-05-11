@@ -12,16 +12,79 @@ meta_desc: "Explore the Deployment resource of the apigateway module, including 
 
 Provides an API Gateway REST Deployment.
 
-> **Note:** Depends on having `aws.apigateway.Integration` inside your rest api (which in turn depends on `aws.apigateway.Method`). To avoid race conditions
-you might need to add an explicit `depends_on = ["${aws_api_gateway_integration.name}"]`.
+> **Note:** This resource depends on having at least one `aws.apigateway.Integration` created in the REST API, which 
+itself has other dependencies. To avoid race conditions when all resources are being created together, you need to add 
+implicit resource references via the `triggers` argument or explicit resource references using the 
+[resource `dependsOn` meta-argument](https://www.pulumi.com/docs/intro/concepts/programming-model/#dependson).
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const myDemoAPI = new aws.apigateway.RestApi("myDemoAPI", {description: "This is my API for demonstration purposes"});
+const myDemoResource = new aws.apigateway.Resource("myDemoResource", {
+    restApi: myDemoAPI.id,
+    parentId: myDemoAPI.rootResourceId,
+    pathPart: "test",
+});
+const myDemoMethod = new aws.apigateway.Method("myDemoMethod", {
+    restApi: myDemoAPI.id,
+    resourceId: myDemoResource.id,
+    httpMethod: "GET",
+    authorization: "NONE",
+});
+const myDemoIntegration = new aws.apigateway.Integration("myDemoIntegration", {
+    restApi: myDemoAPI.id,
+    resourceId: myDemoResource.id,
+    httpMethod: myDemoMethod.httpMethod,
+    type: "MOCK",
+});
+const myDemoDeployment = new aws.apigateway.Deployment("myDemoDeployment", {
+    restApi: myDemoAPI.id,
+    stageName: "test",
+    variables: {
+        answer: "42",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+my_demo_api = aws.apigateway.RestApi("myDemoAPI", description="This is my API for demonstration purposes")
+my_demo_resource = aws.apigateway.Resource("myDemoResource",
+    rest_api=my_demo_api.id,
+    parent_id=my_demo_api.root_resource_id,
+    path_part="test")
+my_demo_method = aws.apigateway.Method("myDemoMethod",
+    rest_api=my_demo_api.id,
+    resource_id=my_demo_resource.id,
+    http_method="GET",
+    authorization="NONE")
+my_demo_integration = aws.apigateway.Integration("myDemoIntegration",
+    rest_api=my_demo_api.id,
+    resource_id=my_demo_resource.id,
+    http_method=my_demo_method.http_method,
+    type="MOCK")
+my_demo_deployment = aws.apigateway.Deployment("myDemoDeployment",
+    rest_api=my_demo_api.id,
+    stage_name="test",
+    variables={
+        "answer": "42",
+    })
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Create a Deployment Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -29,7 +92,7 @@ you might need to add an explicit `depends_on = ["${aws_api_gateway_integration.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Deployment</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>rest_api=None<span class="p">, </span>stage_description=None<span class="p">, </span>stage_name=None<span class="p">, </span>variables=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Deployment</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>rest_api=None<span class="p">, </span>stage_description=None<span class="p">, </span>stage_name=None<span class="p">, </span>triggers=None<span class="p">, </span>variables=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -239,6 +302,15 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span>Triggers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of arbitrary keys and values that, when changed, will trigger a redeployment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Variables</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
@@ -287,6 +359,15 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the stage. If the specified stage already exists, it will be updated to point to the new deployment. If the stage does not exist, a new one will be created and point to this deployment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Triggers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of arbitrary keys and values that, when changed, will trigger a redeployment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -343,6 +424,15 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span>triggers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of arbitrary keys and values that, when changed, will trigger a redeployment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>variables</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
@@ -395,6 +485,15 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span>triggers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of arbitrary keys and values that, when changed, will trigger a redeployment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>variables</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
@@ -435,7 +534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The execution ARN to be used in [`lambda_permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn`
+    <dd>{{% md %}}The execution ARN to be used in `lambda_permission` resource's `source_arn`
 when allowing API Gateway to invoke a Lambda function,
 e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
 {{% /md %}}</dd>
@@ -480,7 +579,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The execution ARN to be used in [`lambda_permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn`
+    <dd>{{% md %}}The execution ARN to be used in `lambda_permission` resource's `source_arn`
 when allowing API Gateway to invoke a Lambda function,
 e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
 {{% /md %}}</dd>
@@ -525,7 +624,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The execution ARN to be used in [`lambda_permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn`
+    <dd>{{% md %}}The execution ARN to be used in `lambda_permission` resource's `source_arn`
 when allowing API Gateway to invoke a Lambda function,
 e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
 {{% /md %}}</dd>
@@ -570,7 +669,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The execution ARN to be used in [`lambda_permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn`
+    <dd>{{% md %}}The execution ARN to be used in `lambda_permission` resource's `source_arn`
 when allowing API Gateway to invoke a Lambda function,
 e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
 {{% /md %}}</dd>
@@ -605,14 +704,14 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 ## Look up an Existing Deployment Resource {#look-up}
 
 Get an existing Deployment resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#DeploymentState">DeploymentState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#Deployment">Deployment</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>created_date=None<span class="p">, </span>description=None<span class="p">, </span>execution_arn=None<span class="p">, </span>invoke_url=None<span class="p">, </span>rest_api=None<span class="p">, </span>stage_description=None<span class="p">, </span>stage_name=None<span class="p">, </span>variables=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>created_date=None<span class="p">, </span>description=None<span class="p">, </span>execution_arn=None<span class="p">, </span>invoke_url=None<span class="p">, </span>rest_api=None<span class="p">, </span>stage_description=None<span class="p">, </span>stage_name=None<span class="p">, </span>triggers=None<span class="p">, </span>variables=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -750,7 +849,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The execution ARN to be used in [`lambda_permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn`
+    <dd>{{% md %}}The execution ARN to be used in `lambda_permission` resource's `source_arn`
 when allowing API Gateway to invoke a Lambda function,
 e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
 {{% /md %}}</dd>
@@ -794,6 +893,15 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 
     <dt class="property-optional"
             title="Optional">
+        <span>Triggers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of arbitrary keys and values that, when changed, will trigger a redeployment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Variables</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
@@ -832,7 +940,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The execution ARN to be used in [`lambda_permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn`
+    <dd>{{% md %}}The execution ARN to be used in `lambda_permission` resource's `source_arn`
 when allowing API Gateway to invoke a Lambda function,
 e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
 {{% /md %}}</dd>
@@ -876,6 +984,15 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 
     <dt class="property-optional"
             title="Optional">
+        <span>Triggers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of arbitrary keys and values that, when changed, will trigger a redeployment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Variables</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
@@ -914,7 +1031,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The execution ARN to be used in [`lambda_permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn`
+    <dd>{{% md %}}The execution ARN to be used in `lambda_permission` resource's `source_arn`
 when allowing API Gateway to invoke a Lambda function,
 e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
 {{% /md %}}</dd>
@@ -958,6 +1075,15 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 
     <dt class="property-optional"
             title="Optional">
+        <span>triggers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of arbitrary keys and values that, when changed, will trigger a redeployment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>variables</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
@@ -996,7 +1122,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The execution ARN to be used in [`lambda_permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn`
+    <dd>{{% md %}}The execution ARN to be used in `lambda_permission` resource's `source_arn`
 when allowing API Gateway to invoke a Lambda function,
 e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
 {{% /md %}}</dd>
@@ -1036,6 +1162,15 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the stage. If the specified stage already exists, it will be updated to point to the new deployment. If the stage does not exist, a new one will be created and point to this deployment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>triggers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of arbitrary keys and values that, when changed, will trigger a redeployment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

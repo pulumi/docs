@@ -18,10 +18,35 @@ To get more information about Realm, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/game-servers/docs)
 
+## Example Usage - Game Service Realm Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default = new gcp.gameservices.Realm("default", {
+    realmId: "tf-test-realm",
+    timeZone: "EST",
+    location: "global",
+    description: "one of the nine",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.gameservices.Realm("default",
+    realm_id="tf-test-realm",
+    time_zone="EST",
+    location="global",
+    description="one of the nine")
+```
+
 
 
 ## Create a Realm Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -609,7 +634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Realm Resource {#look-up}
 
 Get an existing Realm resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#RealmState">RealmState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#Realm">Realm</a></span></code></pre></div>

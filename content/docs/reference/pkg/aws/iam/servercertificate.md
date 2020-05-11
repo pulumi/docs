@@ -24,26 +24,12 @@ Certificates][2] in AWS Documentation.
 > **Note:** All arguments including the private key will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+**Using certs on file:**
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -54,13 +40,107 @@ const testCert = new aws.iam.ServerCertificate("test_cert", {
     privateKey: fs.readFileSync("test-key.pem", "utf-8"),
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+test_cert = aws.iam.ServerCertificate("testCert",
+    certificate_body=(lambda path: open(path).read())("self-ca-cert.pem"),
+    private_key=(lambda path: open(path).read())("test-key.pem"))
+```
+
+**Example with cert in-line:**
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const testCertAlt = new aws.iam.ServerCertificate("test_cert_alt", {
+    certificateBody: `-----BEGIN CERTIFICATE-----
+[......] # cert contents
+-----END CERTIFICATE-----
+`,
+    privateKey: `-----BEGIN RSA PRIVATE KEY-----
+[......] # cert contents
+-----END RSA PRIVATE KEY-----
+`,
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_cert_alt = aws.iam.ServerCertificate("testCertAlt",
+    certificate_body="""-----BEGIN CERTIFICATE-----
+[......] # cert contents
+-----END CERTIFICATE-----
+
+""",
+    private_key="""-----BEGIN RSA PRIVATE KEY-----
+[......] # cert contents
+-----END RSA PRIVATE KEY-----
+
+""")
+```
+
+**Use in combination with an AWS ELB resource:**
+
+Some properties of an IAM Server Certificates cannot be updated while they are
+in use. In order for this provider to effectively manage a Certificate in this situation, it is
+recommended you utilize the `name_prefix` attribute and enable the
+`create_before_destroy` [lifecycle block][lifecycle]. This will allow this provider
+to create a new, updated `aws.iam.ServerCertificate` resource and replace it in
+dependant resources before attempting to destroy the old version.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as fs from "fs";
+
+const testCert = new aws.iam.ServerCertificate("test_cert", {
+    certificateBody: fs.readFileSync("self-ca-cert.pem", "utf-8"),
+    namePrefix: "example-cert",
+    privateKey: fs.readFileSync("test-key.pem", "utf-8"),
+});
+const ourapp = new aws.elb.LoadBalancer("ourapp", {
+    availabilityZones: ["us-west-2a"],
+    crossZoneLoadBalancing: true,
+    listeners: [{
+        instancePort: 8000,
+        instanceProtocol: "http",
+        lbPort: 443,
+        lbProtocol: "https",
+        sslCertificateId: testCert.arn,
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_cert = aws.iam.ServerCertificate("testCert",
+    certificate_body=(lambda path: open(path).read())("self-ca-cert.pem"),
+    name_prefix="example-cert",
+    private_key=(lambda path: open(path).read())("test-key.pem"))
+ourapp = aws.elb.LoadBalancer("ourapp",
+    availability_zones=["us-west-2a"],
+    cross_zone_load_balancing=True,
+    listeners=[{
+        "instancePort": 8000,
+        "instanceProtocol": "http",
+        "lbPort": 443,
+        "lbProtocol": "https",
+        "sslCertificateId": test_cert.arn,
+    }])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a ServerCertificate Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -628,7 +708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ServerCertificate Resource {#look-up}
 
 Get an existing ServerCertificate resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#ServerCertificateState">ServerCertificateState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#ServerCertificate">ServerCertificate</a></span></code></pre></div>

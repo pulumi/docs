@@ -12,26 +12,12 @@ meta_desc: "Explore the Trigger resource of the glue module, including examples,
 
 Manages a Glue Trigger resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### Conditional Trigger
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -49,22 +35,27 @@ const example = new aws.glue.Trigger("example", {
     type: "CONDITIONAL",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example = aws.glue.Trigger("example",
+    actions=[{
+        "jobName": aws_glue_job["example1"]["name"],
+    }],
+    predicate={
+        "conditions": [{
+            "jobName": aws_glue_job["example2"]["name"],
+            "state": "SUCCEEDED",
+        }],
+    },
+    type="CONDITIONAL")
+```
+
+{{% /example %}}
+{{% example %}}
 ### On-Demand Trigger
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -76,22 +67,21 @@ const example = new aws.glue.Trigger("example", {
     type: "ON_DEMAND",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example = aws.glue.Trigger("example",
+    actions=[{
+        "jobName": aws_glue_job["example"]["name"],
+    }],
+    type="ON_DEMAND")
+```
+
+{{% /example %}}
+{{% example %}}
 ### Scheduled Trigger
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -104,22 +94,24 @@ const example = new aws.glue.Trigger("example", {
     type: "SCHEDULED",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example = aws.glue.Trigger("example",
+    actions=[{
+        "jobName": aws_glue_job["example"]["name"],
+    }],
+    schedule="cron(15 12 * * ? *)",
+    type="SCHEDULED")
+```
+
+{{% /example %}}
+{{% example %}}
 ### Conditional Trigger with Crawler Action
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
+**Note:** Triggers can have both a crawler action and a crawler condition, just no example provided.
 
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -137,22 +129,29 @@ const example = new aws.glue.Trigger("example", {
     type: "CONDITIONAL",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example = aws.glue.Trigger("example",
+    actions=[{
+        "crawlerName": aws_glue_crawler["example1"]["name"],
+    }],
+    predicate={
+        "conditions": [{
+            "jobName": aws_glue_job["example2"]["name"],
+            "state": "SUCCEEDED",
+        }],
+    },
+    type="CONDITIONAL")
+```
+
+{{% /example %}}
+{{% example %}}
 ### Conditional Trigger with Crawler Condition 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
+**Note:** Triggers can have both a crawler action and a crawler condition, just no example provided.
 
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -170,13 +169,30 @@ const example = new aws.glue.Trigger("example", {
     type: "CONDITIONAL",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example = aws.glue.Trigger("example",
+    actions=[{
+        "jobName": aws_glue_job["example1"]["name"],
+    }],
+    predicate={
+        "conditions": [{
+            "crawlState": "SUCCEEDED",
+            "crawlerName": aws_glue_crawler["example2"]["name"],
+        }],
+    },
+    type="CONDITIONAL")
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a Trigger Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -820,7 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Trigger Resource {#look-up}
 
 Get an existing Trigger resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#TriggerState">TriggerState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#Trigger">Trigger</a></span></code></pre></div>
@@ -1345,9 +1361,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#TriggerActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#TriggerActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.TriggerActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.TriggerAction.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1535,9 +1548,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#TriggerPredicateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#TriggerPredicateOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.TriggerPredicateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.TriggerPredicate.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1652,9 +1662,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#TriggerPredicateConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#TriggerPredicateConditionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.TriggerPredicateConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.TriggerPredicateCondition.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -12,26 +12,10 @@ meta_desc: "Explore the GetFileSystem function of the efs module, including exam
 
 Provides information about an Elastic File System (EFS).
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -43,14 +27,25 @@ const byId = pulumi.output(aws.efs.getFileSystem({
     fileSystemId: fileSystemId,
 }, { async: true }));
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+config = pulumi.Config()
+file_system_id = config.get("fileSystemId")
+if file_system_id is None:
+    file_system_id = ""
+by_id = aws.efs.get_file_system(file_system_id=file_system_id)
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetFileSystem {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -319,6 +314,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Size<wbr>In<wbr>Bytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The current byte count used by the file system.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
@@ -428,6 +432,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The throughput, measured in MiB/s, that you want to provision for the file system.
 * `tags` -A map of tags to assign to the file system.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Size<wbr>In<wbr>Bytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The current byte count used by the file system.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -545,6 +558,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>size<wbr>In<wbr>Bytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The current byte count used by the file system.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
@@ -658,6 +680,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>size_<wbr>in_<wbr>bytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The current byte count used by the file system.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
@@ -693,9 +724,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/efs?tab=doc#GetFileSystemLifecyclePolicy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Efs.Outputs.GetFileSystemLifecyclePolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -765,16 +793,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

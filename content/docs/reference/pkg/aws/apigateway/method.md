@@ -12,7 +12,47 @@ meta_desc: "Explore the Method resource of the apigateway module, including exam
 
 Provides a HTTP Method for an API Gateway Resource.
 
+{{% examples %}}
+## Example Usage
+{{% example %}}
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const myDemoAPI = new aws.apigateway.RestApi("MyDemoAPI", {
+    description: "This is my API for demonstration purposes",
+});
+const myDemoResource = new aws.apigateway.Resource("MyDemoResource", {
+    parentId: myDemoAPI.rootResourceId,
+    pathPart: "mydemoresource",
+    restApi: myDemoAPI.id,
+});
+const myDemoMethod = new aws.apigateway.Method("MyDemoMethod", {
+    authorization: "NONE",
+    httpMethod: "GET",
+    resourceId: myDemoResource.id,
+    restApi: myDemoAPI.id,
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+my_demo_api = aws.apigateway.RestApi("myDemoAPI", description="This is my API for demonstration purposes")
+my_demo_resource = aws.apigateway.Resource("myDemoResource",
+    parent_id=my_demo_api.root_resource_id,
+    path_part="mydemoresource",
+    rest_api=my_demo_api.id)
+my_demo_method = aws.apigateway.Method("myDemoMethod",
+    authorization="NONE",
+    http_method="GET",
+    resource_id=my_demo_resource.id,
+    rest_api=my_demo_api.id)
+```
+
+{{% /example %}}
+{{% /examples %}}
 ## Usage with Cognito User Pool Authorizer
 
 ```typescript
@@ -47,51 +87,37 @@ const any = new aws.apigateway.Method("any", {
     restApi: thisRestApi.id,
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const myDemoAPI = new aws.apigateway.RestApi("MyDemoAPI", {
-    description: "This is my API for demonstration purposes",
-});
-const myDemoResource = new aws.apigateway.Resource("MyDemoResource", {
-    parentId: myDemoAPI.rootResourceId,
-    pathPart: "mydemoresource",
-    restApi: myDemoAPI.id,
-});
-const myDemoMethod = new aws.apigateway.Method("MyDemoMethod", {
-    authorization: "NONE",
-    httpMethod: "GET",
-    resourceId: myDemoResource.id,
-    restApi: myDemoAPI.id,
-});
+config = pulumi.Config()
+cognito_user_pool_name = config.require_object("cognitoUserPoolName")
+this_user_pools = aws.cognito.get_user_pools(name=cognito_user_pool_name)
+this_rest_api = aws.apigateway.RestApi("thisRestApi")
+this_resource = aws.apigateway.Resource("thisResource",
+    parent_id=this_rest_api.root_resource_id,
+    path_part="{proxy+}",
+    rest_api=this_rest_api.id)
+this_authorizer = aws.apigateway.Authorizer("thisAuthorizer",
+    provider_arns=this_user_pools.arns,
+    rest_api=this_rest_api.id,
+    type="COGNITO_USER_POOLS")
+any = aws.apigateway.Method("any",
+    authorization="COGNITO_USER_POOLS",
+    authorizer_id=this_authorizer.id,
+    http_method="ANY",
+    request_parameters={
+        "method.request.path.proxy": True,
+    },
+    resource_id=this_resource.id,
+    rest_api=this_rest_api.id)
 ```
-{{% /example %}}
 
-{{% /examples %}}
 
 
 ## Create a Method Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -747,7 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Method Resource {#look-up}
 
 Get an existing Method resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#MethodState">MethodState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#Method">Method</a></span></code></pre></div>

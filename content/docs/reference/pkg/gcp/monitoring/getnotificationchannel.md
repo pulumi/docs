@@ -24,10 +24,62 @@ To get more information about NotificationChannel, see:
     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
 
 
+## Example Usage - Notification Channel Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const basic = gcp.monitoring.getNotificationChannel({
+    displayName: "Test Notification Channel",
+});
+const alertPolicy = new gcp.monitoring.AlertPolicy("alertPolicy", {
+    displayName: "My Alert Policy",
+    notificationChannels: [basic.then(basic => basic.name)],
+    combiner: "OR",
+    conditions: [{
+        displayName: "test condition",
+        condition_threshold: {
+            filter: "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"",
+            duration: "60s",
+            comparison: "COMPARISON_GT",
+            aggregations: [{
+                alignmentPeriod: "60s",
+                perSeriesAligner: "ALIGN_RATE",
+            }],
+        },
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+basic = gcp.monitoring.get_notification_channel(display_name="Test Notification Channel")
+alert_policy = gcp.monitoring.AlertPolicy("alertPolicy",
+    display_name="My Alert Policy",
+    notification_channels=[basic.name],
+    combiner="OR",
+    conditions=[{
+        "displayName": "test condition",
+        "condition_threshold": {
+            "filter": "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"",
+            "duration": "60s",
+            "comparison": "COMPARISON_GT",
+            "aggregations": [{
+                "alignmentPeriod": "60s",
+                "perSeriesAligner": "ALIGN_RATE",
+            }],
+        },
+    }])
+```
+
+
 
 ## Using GetNotificationChannel {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -687,9 +739,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#GetNotificationChannelSensitiveLabel">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.GetNotificationChannelSensitiveLabel.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -822,16 +871,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

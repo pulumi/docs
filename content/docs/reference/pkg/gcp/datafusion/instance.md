@@ -18,10 +18,73 @@ To get more information about Instance, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/data-fusion/docs/)
 
+## Example Usage - Data Fusion Instance Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const basicInstance = new gcp.datafusion.Instance("basicInstance", {
+    region: "us-central1",
+    type: "BASIC",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+basic_instance = gcp.datafusion.Instance("basicInstance",
+    region="us-central1",
+    type="BASIC")
+```
+## Example Usage - Data Fusion Instance Full
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const extendedInstance = new gcp.datafusion.Instance("extendedInstance", {
+    description: "My Data Fusion instance",
+    region: "us-central1",
+    type: "BASIC",
+    enableStackdriverLogging: true,
+    enableStackdriverMonitoring: true,
+    labels: {
+        example_key: "example_value",
+    },
+    privateInstance: true,
+    network_config: {
+        network: "default",
+        ipAllocation: "10.89.48.0/22",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+extended_instance = gcp.datafusion.Instance("extendedInstance",
+    description="My Data Fusion instance",
+    region="us-central1",
+    type="BASIC",
+    enable_stackdriver_logging=True,
+    enable_stackdriver_monitoring=True,
+    labels={
+        "example_key": "example_value",
+    },
+    private_instance=True,
+    network_config={
+        "network": "default",
+        "ipAllocation": "10.89.48.0/22",
+    })
+```
+
 
 
 ## Create a Instance Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1001,7 +1064,7 @@ being upgraded - RESTARTING: Instance is being restarted
 ## Look up an Existing Instance Resource {#look-up}
 
 Get an existing Instance resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/datafusion/#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/datafusion/#Instance">Instance</a></span></code></pre></div>
@@ -1861,9 +1924,6 @@ available, such as support for streaming pipelines, higher number of concurrent 
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datafusion?tab=doc#InstanceNetworkConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datafusion?tab=doc#InstanceNetworkConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataFusion.Inputs.InstanceNetworkConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataFusion.Outputs.InstanceNetworkConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

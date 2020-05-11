@@ -15,33 +15,10 @@ The `vsphere..ContentLibraryItem` data source can be used to discover the ID of 
 > **NOTE:** This resource requires vCenter and is not available on direct ESXi
 connections.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_vsphere as vsphere
-
-library = vsphere.get_content_library(name="Content Library Test")
-item = vsphere.get_content_library_item(name="Ubuntu Bionic 18.04",
-    library_id=library.id)
-```
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -54,14 +31,23 @@ const item = library.then(library => vsphere.getContentLibraryItem({
     libraryId: library.id,
 }));
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_vsphere as vsphere
 
+library = vsphere.get_content_library(name="Content Library Test")
+item = vsphere.get_content_library_item(name="Ubuntu Bionic 18.04",
+    library_id=library.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetContentLibraryItem {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -336,16 +322,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
-</dl>
 

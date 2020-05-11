@@ -19,13 +19,51 @@ its component zones, and not all zones in a region are guaranteed to
 support the same version.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const central1b = gcp.container.getEngineVersions({
+    location: "us-central1-b",
+    versionPrefix: "1.12.",
+});
+const foo = new gcp.container.Cluster("foo", {
+    location: "us-central1-b",
+    nodeVersion: central1b.then(central1b => central1b.latestNodeVersion),
+    initialNodeCount: 1,
+    master_auth: {
+        username: "mr.yoda",
+        password: "adoy.rm",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+central1b = gcp.container.get_engine_versions(location="us-central1-b",
+    version_prefix="1.12.")
+foo = gcp.container.Cluster("foo",
+    location="us-central1-b",
+    node_version=central1b.latest_node_version,
+    initial_node_count=1,
+    master_auth={
+        "username": "mr.yoda",
+        "password": "adoy.rm",
+    })
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Using GetEngineVersions {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -584,16 +622,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

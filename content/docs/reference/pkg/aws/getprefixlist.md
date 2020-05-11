@@ -18,26 +18,10 @@ and to obtain the CIDR blocks (IP address ranges) for the associated
 AWS service. The latter may be useful e.g. for adding network ACL
 rules.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -63,22 +47,30 @@ const privateS3NetworkAclRule = new aws.ec2.NetworkAclRule("private_s3", {
     toPort: 443,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+private_s3_vpc_endpoint = aws.ec2.VpcEndpoint("privateS3VpcEndpoint",
+    service_name="com.amazonaws.us-west-2.s3",
+    vpc_id=aws_vpc["foo"]["id"])
+private_s3_prefix_list = private_s3_vpc_endpoint.prefix_list_id.apply(lambda prefix_list_id: aws.get_prefix_list(prefix_list_id=prefix_list_id))
+bar = aws.ec2.NetworkAcl("bar", vpc_id=aws_vpc["foo"]["id"])
+private_s3_network_acl_rule = aws.ec2.NetworkAclRule("privateS3NetworkAclRule",
+    cidr_block=private_s3_prefix_list.cidr_blocks[0],
+    egress=False,
+    from_port=443,
+    network_acl_id=bar.id,
+    protocol="tcp",
+    rule_action="allow",
+    rule_number=200,
+    to_port=443)
+```
+
+{{% /example %}}
+{{% example %}}
 ### Filter
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -90,14 +82,24 @@ const test = pulumi.output(aws.getPrefixList({
     }],
 }, { async: true }));
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+test = aws.get_prefix_list(filters=[{
+    "name": "prefix-list-id",
+    "values": ["pl-68a54001"],
+}])
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetPrefixList {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -493,9 +495,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/?tab=doc#GetPrefixListFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/?tab=doc#GetPrefixListFilter">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Inputs.GetPrefixListFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Outputs.GetPrefixListFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -604,16 +603,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

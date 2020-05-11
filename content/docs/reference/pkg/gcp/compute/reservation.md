@@ -44,11 +44,25 @@ const gceReservation = new gcp.compute.Reservation("gce_reservation", {
     zone: "us-central1-a",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+gce_reservation = gcp.compute.Reservation("gceReservation",
+    specific_reservation={
+        "count": 1,
+        "instanceProperties": {
+            "machineType": "n2-standard-2",
+            "minCpuPlatform": "Intel Cascade Lake",
+        },
+    },
+    zone="us-central1-a")
+```
 
 
 
 ## Create a Reservation Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -728,7 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Reservation Resource {#look-up}
 
 Get an existing Reservation resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ReservationState">ReservationState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#Reservation">Reservation</a></span></code></pre></div>
@@ -1289,9 +1303,6 @@ affinity for any reservation. Defaults to false.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ReservationSpecificReservationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ReservationSpecificReservationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ReservationSpecificReservationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ReservationSpecificReservation.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1446,9 +1457,6 @@ How many instances are in use.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ReservationSpecificReservationInstancePropertiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ReservationSpecificReservationInstancePropertiesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ReservationSpecificReservationInstancePropertiesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ReservationSpecificReservationInstanceProperties.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1653,9 +1661,6 @@ for information on available CPU platforms.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ReservationSpecificReservationInstancePropertiesGuestAcceleratorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ReservationSpecificReservationInstancePropertiesGuestAcceleratorOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ReservationSpecificReservationInstancePropertiesGuestAcceleratorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ReservationSpecificReservationInstancePropertiesGuestAccelerator.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1787,9 +1792,6 @@ If you are creating an instance template, specify only the accelerator name.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ReservationSpecificReservationInstancePropertiesLocalSsdArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ReservationSpecificReservationInstancePropertiesLocalSsdOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ReservationSpecificReservationInstancePropertiesLocalSsdArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ReservationSpecificReservationInstancePropertiesLocalSsd.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1812,8 +1814,7 @@ If you are creating an instance template, specify only the accelerator name.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The disk interface to use for attaching this disk, one
-of `SCSI` or `NVME`. The default is `SCSI`.
+    <dd>{{% md %}}The disk interface to use for attaching this disk.
 {{% /md %}}</dd>
 
 </dl>
@@ -1838,8 +1839,7 @@ of `SCSI` or `NVME`. The default is `SCSI`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The disk interface to use for attaching this disk, one
-of `SCSI` or `NVME`. The default is `SCSI`.
+    <dd>{{% md %}}The disk interface to use for attaching this disk.
 {{% /md %}}</dd>
 
 </dl>
@@ -1864,8 +1864,7 @@ of `SCSI` or `NVME`. The default is `SCSI`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The disk interface to use for attaching this disk, one
-of `SCSI` or `NVME`. The default is `SCSI`.
+    <dd>{{% md %}}The disk interface to use for attaching this disk.
 {{% /md %}}</dd>
 
 </dl>
@@ -1890,8 +1889,7 @@ of `SCSI` or `NVME`. The default is `SCSI`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The disk interface to use for attaching this disk, one
-of `SCSI` or `NVME`. The default is `SCSI`.
+    <dd>{{% md %}}The disk interface to use for attaching this disk.
 {{% /md %}}</dd>
 
 </dl>

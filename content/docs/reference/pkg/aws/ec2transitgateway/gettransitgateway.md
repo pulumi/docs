@@ -12,26 +12,12 @@ meta_desc: "Explore the GetTransitGateway function of the ec2transitgateway modu
 
 Get information on an EC2 Transit Gateway.
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### By Filter
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -43,22 +29,20 @@ const example = pulumi.output(aws.ec2transitgateway.getTransitGateway({
     }],
 }, { async: true }));
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example = aws.ec2transitgateway.get_transit_gateway(filters=[{
+    "name": "options.amazon-side-asn",
+    "values": ["64512"],
+}])
+```
+
+{{% /example %}}
+{{% example %}}
 ### By Identifier
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -67,14 +51,21 @@ const example = pulumi.output(aws.ec2transitgateway.getTransitGateway({
     id: "tgw-12345678",
 }, { async: true }));
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example = aws.ec2transitgateway.get_transit_gateway(id="tgw-12345678")
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetTransitGateway {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -798,9 +789,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway?tab=doc#GetTransitGatewayFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway?tab=doc#GetTransitGatewayFilter">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2TransitGateway.Inputs.GetTransitGatewayFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2TransitGateway.Outputs.GetTransitGatewayFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -909,16 +897,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

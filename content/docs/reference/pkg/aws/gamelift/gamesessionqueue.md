@@ -12,26 +12,10 @@ meta_desc: "Explore the GameSessionQueue resource of the gamelift module, includ
 
 Provides an Gamelift Game Session Queue resource.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -53,13 +37,34 @@ const test = new aws.gamelift.GameSessionQueue("test", {
     timeoutInSeconds: 60,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+test = aws.gamelift.GameSessionQueue("test",
+    destinations=[
+        aws_gamelift_fleet["us_west_2_fleet"]["arn"],
+        aws_gamelift_fleet["eu_central_1_fleet"]["arn"],
+    ],
+    player_latency_policies=[
+        {
+            "maximumIndividualPlayerLatencyMilliseconds": 100,
+            "policyDurationSeconds": 5,
+        },
+        {
+            "maximumIndividualPlayerLatencyMilliseconds": 200,
+        },
+    ],
+    timeout_in_seconds=60)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a GameSessionQueue Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -559,7 +564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing GameSessionQueue Resource {#look-up}
 
 Get an existing GameSessionQueue resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/gamelift/#GameSessionQueueState">GameSessionQueueState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/gamelift/#GameSessionQueue">GameSessionQueue</a></span></code></pre></div>
@@ -939,9 +944,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift?tab=doc#GameSessionQueuePlayerLatencyPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift?tab=doc#GameSessionQueuePlayerLatencyPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GameLift.Inputs.GameSessionQueuePlayerLatencyPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GameLift.Outputs.GameSessionQueuePlayerLatencyPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

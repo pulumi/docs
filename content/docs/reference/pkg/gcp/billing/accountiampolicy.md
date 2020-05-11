@@ -23,12 +23,44 @@ by use of this resource. The safest alternative is to use multiple `gcp.billing.
    or they will fight over what your policy should be.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/billing.viewer",
+        members: ["user:jane@example.com"],
+    }],
+});
+const policy = new gcp.billing.AccountIamPolicy("policy", {
+    billingAccountId: "00AA00-000AAA-00AA0A",
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/billing.viewer",
+    "members": ["user:jane@example.com"],
+}])
+policy = gcp.billing.AccountIamPolicy("policy",
+    billing_account_id="00AA00-000AAA-00AA0A",
+    policy_data=admin.policy_data)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Create a AccountIamPolicy Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -424,7 +456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing AccountIamPolicy Resource {#look-up}
 
 Get an existing AccountIamPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/billing/#AccountIamPolicyState">AccountIamPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/billing/#AccountIamPolicy">AccountIamPolicy</a></span></code></pre></div>

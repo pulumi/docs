@@ -16,26 +16,10 @@ Manages [DynamoDB Global Tables V1 (version 2017.11.29)](https://docs.aws.amazon
 
 > Note: There are many restrictions before you can properly create DynamoDB Global Tables in multiple regions. See the [AWS DynamoDB Global Table Requirements](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables_reqs_bestpractices.html) for more information.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -79,13 +63,50 @@ const myTable = new aws.dynamodb.GlobalTable("myTable", {
     ],
 }, { provider: us_east_1, dependsOn: [us_east_1Table, us_west_2Table] });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_pulumi as pulumi
 
+us_east_1 = pulumi.providers.Aws("us-east-1", region="us-east-1")
+us_west_2 = pulumi.providers.Aws("us-west-2", region="us-west-2")
+us_east_1_table = aws.dynamodb.Table("us-east-1Table",
+    attributes=[{
+        "name": "myAttribute",
+        "type": "S",
+    }],
+    hash_key="myAttribute",
+    read_capacity=1,
+    stream_enabled=True,
+    stream_view_type="NEW_AND_OLD_IMAGES",
+    write_capacity=1)
+us_west_2_table = aws.dynamodb.Table("us-west-2Table",
+    attributes=[{
+        "name": "myAttribute",
+        "type": "S",
+    }],
+    hash_key="myAttribute",
+    read_capacity=1,
+    stream_enabled=True,
+    stream_view_type="NEW_AND_OLD_IMAGES",
+    write_capacity=1)
+my_table = aws.dynamodb.GlobalTable("myTable", replicas=[
+    {
+        "regionName": "us-east-1",
+    },
+    {
+        "regionName": "us-west-2",
+    },
+])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a GlobalTable Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -477,7 +498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing GlobalTable Resource {#look-up}
 
 Get an existing GlobalTable resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dynamodb/#GlobalTableState">GlobalTableState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dynamodb/#GlobalTable">GlobalTable</a></span></code></pre></div>
@@ -749,9 +770,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GlobalTableReplicaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GlobalTableReplicaOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Inputs.GlobalTableReplicaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Outputs.GlobalTableReplica.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

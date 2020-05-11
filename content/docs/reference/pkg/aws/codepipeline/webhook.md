@@ -12,26 +12,10 @@ meta_desc: "Explore the Webhook resource of the codepipeline module, including e
 
 Provides a CodePipeline Webhook.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -105,13 +89,84 @@ const barRepositoryWebhook = new github.RepositoryWebhook("bar", {
     repository: github_repository_repo.name,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_github as github
 
+bar_pipeline = aws.codepipeline.Pipeline("barPipeline",
+    artifact_store={
+        "encryptionKey": {
+            "id": data["aws.kms.Alias"]["s3kmskey"]["arn"],
+            "type": "KMS",
+        },
+        "location": aws_s3_bucket["bar"]["bucket"],
+        "type": "S3",
+    },
+    role_arn=aws_iam_role["bar"]["arn"],
+    stages=[
+        {
+            "action": [{
+                "category": "Source",
+                "configuration": {
+                    "Branch": "master",
+                    "Owner": "my-organization",
+                    "Repo": "test",
+                },
+                "name": "Source",
+                "outputArtifacts": ["test"],
+                "owner": "ThirdParty",
+                "provider": "GitHub",
+                "version": "1",
+            }],
+            "name": "Source",
+        },
+        {
+            "action": [{
+                "category": "Build",
+                "configuration": {
+                    "ProjectName": "test",
+                },
+                "inputArtifacts": ["test"],
+                "name": "Build",
+                "owner": "AWS",
+                "provider": "CodeBuild",
+                "version": "1",
+            }],
+            "name": "Build",
+        },
+    ])
+webhook_secret = "super-secret"
+bar_webhook = aws.codepipeline.Webhook("barWebhook",
+    authentication="GITHUB_HMAC",
+    authentication_configuration={
+        "secretToken": webhook_secret,
+    },
+    filters=[{
+        "jsonPath": "$$.ref",
+        "matchEquals": "refs/heads/{Branch}",
+    }],
+    target_action="Source",
+    target_pipeline=bar_pipeline.name)
+# Wire the CodePipeline webhook into a GitHub repository.
+bar_repository_webhook = github.RepositoryWebhook("barRepositoryWebhook",
+    configuration={
+        "contentType": "json",
+        "insecureSsl": True,
+        "secret": webhook_secret,
+        "url": bar_webhook.url,
+    },
+    events=["push"],
+    repository=github_repository["repo"]["name"])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a Webhook Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -683,7 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Webhook Resource {#look-up}
 
 Get an existing Webhook resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codepipeline/#WebhookState">WebhookState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codepipeline/#Webhook">Webhook</a></span></code></pre></div>
@@ -1136,9 +1191,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#WebhookAuthenticationConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#WebhookAuthenticationConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Inputs.WebhookAuthenticationConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Outputs.WebhookAuthenticationConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1253,9 +1305,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#WebhookFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#WebhookFilterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Inputs.WebhookFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Outputs.WebhookFilter.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

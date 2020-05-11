@@ -24,12 +24,18 @@ const example = pulumi.output(azuread.getGroup({
     name: "A-AD-Group",
 }, { async: true }));
 ```
+```python
+import pulumi
+import pulumi_azuread as azuread
+
+example = azuread.get_group(name="A-AD-Group")
+```
 
 
 
 ## Using GetGroup {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -416,16 +422,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-azuread">https://github.com/pulumi/pulumi-azuread</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread).</dd>
-</dl>
 

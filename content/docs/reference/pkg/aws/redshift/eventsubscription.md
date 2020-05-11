@@ -12,33 +12,10 @@ meta_desc: "Explore the EventSubscription resource of the redshift module, inclu
 
 Provides a Redshift event subscription resource.
 
-
-## Attributes
-
-The following additional atttributes are provided:
-
-* `arn` - Amazon Resource Name (ARN) of the Redshift event notification subscription
-* `id` - The name of the Redshift event notification subscription
-* `customer_aws_id` - The AWS customer account associated with the Redshift event notification subscription
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -64,13 +41,44 @@ const defaultEventSubscription = new aws.redshift.EventSubscription("default", {
     },
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+default_cluster = aws.redshift.Cluster("defaultCluster",
+    cluster_identifier="default",
+    database_name="default")
+default_topic = aws.sns.Topic("defaultTopic")
+default_event_subscription = aws.redshift.EventSubscription("defaultEventSubscription",
+    event_categories=[
+        "configuration",
+        "management",
+        "monitoring",
+        "security",
+    ],
+    severity="INFO",
+    sns_topic_arn=default_topic.arn,
+    source_ids=[default_cluster.id],
+    source_type="cluster",
+    tags={
+        "Name": "default",
+    })
+```
+
+{{% /example %}}
 {{% /examples %}}
+## Attributes
+
+The following additional atttributes are provided:
+
+* `arn` - Amazon Resource Name (ARN) of the Redshift event notification subscription
+* `id` - The name of the Redshift event notification subscription
+* `customer_aws_id` - The AWS customer account associated with the Redshift event notification subscription
+
 
 
 ## Create a EventSubscription Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -738,7 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing EventSubscription Resource {#look-up}
 
 Get an existing EventSubscription resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/redshift/#EventSubscriptionState">EventSubscriptionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/redshift/#EventSubscription">EventSubscription</a></span></code></pre></div>

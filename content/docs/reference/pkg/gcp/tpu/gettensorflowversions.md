@@ -12,40 +12,56 @@ meta_desc: "Explore the GetTensorflowVersions function of the tpu module, includ
 
 Get TensorFlow versions available for a project. For more information see the [official documentation](https://cloud.google.com/tpu/docs/) and [API](https://cloud.google.com/tpu/docs/reference/rest/v1/projects.locations.tensorflowVersions).
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const available = pulumi.output(gcp.tpu.getTensorflowVersions({ async: true }));
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
 
+available = gcp.tpu.get_tensorflow_versions()
+```
+
+{{% /example %}}
 {{% /examples %}}
+## Example Usage: Configure Basic TPU Node with available version
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const available = gcp.tpu.getTensorflowVersions({});
+const tpu = new gcp.tpu.Node("tpu", {
+    zone: "us-central1-b",
+    acceleratorType: "v3-8",
+    tensorflowVersion: available.then(available => available.versions[0]),
+    cidrBlock: "10.2.0.0/29",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+available = gcp.tpu.get_tensorflow_versions()
+tpu = gcp.tpu.Node("tpu",
+    zone="us-central1-b",
+    accelerator_type="v3-8",
+    tensorflow_version=available.versions[0],
+    cidr_block="10.2.0.0/29")
+```
+
 
 
 ## Using GetTensorflowVersions {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -364,16 +380,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

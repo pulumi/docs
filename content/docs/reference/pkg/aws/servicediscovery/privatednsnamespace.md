@@ -12,26 +12,10 @@ meta_desc: "Explore the PrivateDnsNamespace resource of the servicediscovery mod
 
 Provides a Service Discovery Private DNS Namespace resource.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -44,13 +28,23 @@ const examplePrivateDnsNamespace = new aws.servicediscovery.PrivateDnsNamespace(
     vpc: exampleVpc.id,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example_vpc = aws.ec2.Vpc("exampleVpc", cidr_block="10.0.0.0/16")
+example_private_dns_namespace = aws.servicediscovery.PrivateDnsNamespace("examplePrivateDnsNamespace",
+    description="example",
+    vpc=example_vpc.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a PrivateDnsNamespace Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -514,7 +508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing PrivateDnsNamespace Resource {#look-up}
 
 Get an existing PrivateDnsNamespace resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/servicediscovery/#PrivateDnsNamespaceState">PrivateDnsNamespaceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/servicediscovery/#PrivateDnsNamespace">PrivateDnsNamespace</a></span></code></pre></div>

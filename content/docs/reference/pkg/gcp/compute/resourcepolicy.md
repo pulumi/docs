@@ -33,6 +33,21 @@ const foo = new gcp.compute.ResourcePolicy("foo", {
     },
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+foo = gcp.compute.ResourcePolicy("foo",
+    region="us-central1",
+    snapshot_schedule_policy={
+        "schedule": {
+            "dailySchedule": {
+                "daysInCycle": 1,
+                "startTime": "04:00",
+            },
+        },
+    })
+```
 ## Example Usage - Resource Policy Full
 
 
@@ -63,6 +78,32 @@ const bar = new gcp.compute.ResourcePolicy("bar", {
     },
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bar = gcp.compute.ResourcePolicy("bar",
+    region="us-central1",
+    snapshot_schedule_policy={
+        "retentionPolicy": {
+            "maxRetentionDays": 10,
+            "onSourceDiskDelete": "KEEP_AUTO_SNAPSHOTS",
+        },
+        "schedule": {
+            "hourlySchedule": {
+                "hoursInCycle": 20,
+                "startTime": "23:00",
+            },
+        },
+        "snapshotProperties": {
+            "guestFlush": True,
+            "labels": {
+                "myLabel": "value",
+            },
+            "storageLocations": "us",
+        },
+    })
+```
 ## Example Usage - Resource Policy Placement Policy
 
 
@@ -78,11 +119,22 @@ const baz = new gcp.compute.ResourcePolicy("baz", {
     region: "us-central1",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+baz = gcp.compute.ResourcePolicy("baz",
+    group_placement_policy={
+        "collocation": "COLLOCATED",
+        "vmCount": 2,
+    },
+    region="us-central1")
+```
 
 
 
 ## Create a ResourcePolicy Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -610,7 +662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ResourcePolicy Resource {#look-up}
 
 Get an existing ResourcePolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ResourcePolicyState">ResourcePolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ResourcePolicy">ResourcePolicy</a></span></code></pre></div>
@@ -1019,9 +1071,6 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicyGroupPlacementPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicyGroupPlacementPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicyGroupPlacementPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicyGroupPlacementPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1189,9 +1238,6 @@ attached.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1343,9 +1389,6 @@ attached.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyRetentionPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicyRetentionPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1370,7 +1413,6 @@ attached.
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when
 the source disk is deleted.
-Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY
 {{% /md %}}</dd>
 
 </dl>
@@ -1397,7 +1439,6 @@ Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when
 the source disk is deleted.
-Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY
 {{% /md %}}</dd>
 
 </dl>
@@ -1424,7 +1465,6 @@ Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when
 the source disk is deleted.
-Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY
 {{% /md %}}</dd>
 
 </dl>
@@ -1451,7 +1491,6 @@ Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when
 the source disk is deleted.
-Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY
 {{% /md %}}</dd>
 
 </dl>
@@ -1468,9 +1507,6 @@ Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicySchedule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1623,9 +1659,6 @@ Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1744,9 +1777,6 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1867,9 +1897,6 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1948,9 +1975,6 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2070,9 +2094,6 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicySnapshotPropertiesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicySnapshotProperties.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

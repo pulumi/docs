@@ -12,26 +12,12 @@ meta_desc: "Explore the ConfigurationAggregator resource of the cfg module, incl
 
 Manages an AWS Config Configuration Aggregator
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### Account Based Aggregation
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -43,22 +29,20 @@ const account = new aws.cfg.ConfigurationAggregator("account", {
     },
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+account = aws.cfg.ConfigurationAggregator("account", account_aggregation_source={
+    "accountIds": ["123456789012"],
+    "regions": ["us-west-2"],
+})
+```
+
+{{% /example %}}
+{{% example %}}
 ### Organization Based Aggregation
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -90,13 +74,41 @@ const organizationConfigurationAggregator = new aws.cfg.ConfigurationAggregator(
     },
 }, { dependsOn: [organizationRolePolicyAttachment] });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+organization_role = aws.iam.Role("organizationRole", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "config.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+
+""")
+organization_configuration_aggregator = aws.cfg.ConfigurationAggregator("organizationConfigurationAggregator", organization_aggregation_source={
+    "allRegions": True,
+    "roleArn": organization_role.arn,
+})
+organization_role_policy_attachment = aws.iam.RolePolicyAttachment("organizationRolePolicyAttachment",
+    policy_arn="arn:aws:iam::aws:policy/service-role/AWSConfigRoleForOrganizations",
+    role=organization_role.name)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a ConfigurationAggregator Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -560,7 +572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ConfigurationAggregator Resource {#look-up}
 
 Get an existing ConfigurationAggregator resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cfg/#ConfigurationAggregatorState">ConfigurationAggregatorState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cfg/#ConfigurationAggregator">ConfigurationAggregator</a></span></code></pre></div>
@@ -905,9 +917,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#ConfigurationAggregatorAccountAggregationSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#ConfigurationAggregatorAccountAggregationSourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.Inputs.ConfigurationAggregatorAccountAggregationSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.Outputs.ConfigurationAggregatorAccountAggregationSource.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1019,7 +1028,7 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>account_<wbr>ids</span>
+        <span>account<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1058,9 +1067,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#ConfigurationAggregatorOrganizationAggregationSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#ConfigurationAggregatorOrganizationAggregationSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.Inputs.ConfigurationAggregatorOrganizationAggregationSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.Outputs.ConfigurationAggregatorOrganizationAggregationSource.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

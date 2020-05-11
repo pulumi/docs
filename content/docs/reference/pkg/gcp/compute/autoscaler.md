@@ -23,10 +23,231 @@ To get more information about Autoscaler, see:
 * How-to Guides
     * [Autoscaling Groups of Instances](https://cloud.google.com/compute/docs/autoscaler/)
 
+## Example Usage - Autoscaler Single Instance
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const debian9 = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const defaultInstanceTemplate = new gcp.compute.InstanceTemplate("defaultInstanceTemplate", {
+    machineType: "n1-standard-1",
+    canIpForward: false,
+    tags: [
+        "foo",
+        "bar",
+    ],
+    disk: [{
+        sourceImage: debian9.then(debian9 => debian9.selfLink),
+    }],
+    network_interface: [{
+        network: "default",
+    }],
+    metadata: {
+        foo: "bar",
+    },
+    service_account: {
+        scopes: [
+            "userinfo-email",
+            "compute-ro",
+            "storage-ro",
+        ],
+    },
+});
+const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {});
+const defaultInstanceGroupManager = new gcp.compute.InstanceGroupManager("defaultInstanceGroupManager", {
+    zone: "us-central1-f",
+    version: [{
+        instanceTemplate: defaultInstanceTemplate.id,
+        name: "primary",
+    }],
+    targetPools: [defaultTargetPool.id],
+    baseInstanceName: "autoscaler-sample",
+});
+const defaultAutoscaler = new gcp.compute.Autoscaler("defaultAutoscaler", {
+    zone: "us-central1-f",
+    target: defaultInstanceGroupManager.id,
+    autoscaling_policy: {
+        maxReplicas: 5,
+        minReplicas: 1,
+        cooldownPeriod: 60,
+        metric: [{
+            name: "pubsub.googleapis.com/subscription/num_undelivered_messages",
+            filter: "resource.type = pubsub_subscription AND resource.label.subscription_id = our-subscription",
+            singleInstanceAssignment: 65535,
+        }],
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+debian9 = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+default_instance_template = gcp.compute.InstanceTemplate("defaultInstanceTemplate",
+    machine_type="n1-standard-1",
+    can_ip_forward=False,
+    tags=[
+        "foo",
+        "bar",
+    ],
+    disk=[{
+        "sourceImage": debian9.self_link,
+    }],
+    network_interface=[{
+        "network": "default",
+    }],
+    metadata={
+        "foo": "bar",
+    },
+    service_account={
+        "scopes": [
+            "userinfo-email",
+            "compute-ro",
+            "storage-ro",
+        ],
+    })
+default_target_pool = gcp.compute.TargetPool("defaultTargetPool")
+default_instance_group_manager = gcp.compute.InstanceGroupManager("defaultInstanceGroupManager",
+    zone="us-central1-f",
+    version=[{
+        "instanceTemplate": default_instance_template.id,
+        "name": "primary",
+    }],
+    target_pools=[default_target_pool.id],
+    base_instance_name="autoscaler-sample")
+default_autoscaler = gcp.compute.Autoscaler("defaultAutoscaler",
+    zone="us-central1-f",
+    target=default_instance_group_manager.id,
+    autoscaling_policy={
+        "maxReplicas": 5,
+        "minReplicas": 1,
+        "cooldownPeriod": 60,
+        "metric": [{
+            "name": "pubsub.googleapis.com/subscription/num_undelivered_messages",
+            "filter": "resource.type = pubsub_subscription AND resource.label.subscription_id = our-subscription",
+            "singleInstanceAssignment": 65535,
+        }],
+    })
+```
+## Example Usage - Autoscaler Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const debian9 = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const foobarInstanceTemplate = new gcp.compute.InstanceTemplate("foobarInstanceTemplate", {
+    machineType: "n1-standard-1",
+    canIpForward: false,
+    tags: [
+        "foo",
+        "bar",
+    ],
+    disk: [{
+        sourceImage: debian9.then(debian9 => debian9.selfLink),
+    }],
+    network_interface: [{
+        network: "default",
+    }],
+    metadata: {
+        foo: "bar",
+    },
+    service_account: {
+        scopes: [
+            "userinfo-email",
+            "compute-ro",
+            "storage-ro",
+        ],
+    },
+});
+const foobarTargetPool = new gcp.compute.TargetPool("foobarTargetPool", {});
+const foobarInstanceGroupManager = new gcp.compute.InstanceGroupManager("foobarInstanceGroupManager", {
+    zone: "us-central1-f",
+    version: [{
+        instanceTemplate: foobarInstanceTemplate.id,
+        name: "primary",
+    }],
+    targetPools: [foobarTargetPool.id],
+    baseInstanceName: "foobar",
+});
+const foobarAutoscaler = new gcp.compute.Autoscaler("foobarAutoscaler", {
+    zone: "us-central1-f",
+    target: foobarInstanceGroupManager.id,
+    autoscaling_policy: {
+        maxReplicas: 5,
+        minReplicas: 1,
+        cooldownPeriod: 60,
+        cpu_utilization: {
+            target: 0.5,
+        },
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+debian9 = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+foobar_instance_template = gcp.compute.InstanceTemplate("foobarInstanceTemplate",
+    machine_type="n1-standard-1",
+    can_ip_forward=False,
+    tags=[
+        "foo",
+        "bar",
+    ],
+    disk=[{
+        "sourceImage": debian9.self_link,
+    }],
+    network_interface=[{
+        "network": "default",
+    }],
+    metadata={
+        "foo": "bar",
+    },
+    service_account={
+        "scopes": [
+            "userinfo-email",
+            "compute-ro",
+            "storage-ro",
+        ],
+    })
+foobar_target_pool = gcp.compute.TargetPool("foobarTargetPool")
+foobar_instance_group_manager = gcp.compute.InstanceGroupManager("foobarInstanceGroupManager",
+    zone="us-central1-f",
+    version=[{
+        "instanceTemplate": foobar_instance_template.id,
+        "name": "primary",
+    }],
+    target_pools=[foobar_target_pool.id],
+    base_instance_name="foobar")
+foobar_autoscaler = gcp.compute.Autoscaler("foobarAutoscaler",
+    zone="us-central1-f",
+    target=foobar_instance_group_manager.id,
+    autoscaling_policy={
+        "maxReplicas": 5,
+        "minReplicas": 1,
+        "cooldownPeriod": 60,
+        "cpu_utilization": {
+            "target": 0.5,
+        },
+    })
+```
+
 
 
 ## Create a Autoscaler Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -634,7 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Autoscaler Resource {#look-up}
 
 Get an existing Autoscaler resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#AutoscalerState">AutoscalerState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#Autoscaler">Autoscaler</a></span></code></pre></div>
@@ -1123,9 +1344,6 @@ be a positive float value. If not defined, the default is 0.8.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#AutoscalerAutoscalingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#AutoscalerAutoscalingPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.AutoscalerAutoscalingPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.AutoscalerAutoscalingPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1449,9 +1667,6 @@ group.  Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#AutoscalerAutoscalingPolicyCpuUtilizationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#AutoscalerAutoscalingPolicyCpuUtilizationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.AutoscalerAutoscalingPolicyCpuUtilizationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.AutoscalerAutoscalingPolicyCpuUtilization.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1538,9 +1753,6 @@ be a positive float value. If not defined, the default is 0.8.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#AutoscalerAutoscalingPolicyLoadBalancingUtilizationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#AutoscalerAutoscalingPolicyLoadBalancingUtilizationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.AutoscalerAutoscalingPolicyLoadBalancingUtilizationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.AutoscalerAutoscalingPolicyLoadBalancingUtilization.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1629,9 +1841,6 @@ be a positive float value. If not defined, the default is 0.8.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#AutoscalerAutoscalingPolicyMetricArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#AutoscalerAutoscalingPolicyMetricOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.AutoscalerAutoscalingPolicyMetricArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.AutoscalerAutoscalingPolicyMetric.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1725,8 +1934,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Defines how target utilization value is expressed for a
-Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND,
-or DELTA_PER_MINUTE.
+Stackdriver Monitoring metric.
 {{% /md %}}</dd>
 
 </dl>
@@ -1822,8 +2030,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Defines how target utilization value is expressed for a
-Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND,
-or DELTA_PER_MINUTE.
+Stackdriver Monitoring metric.
 {{% /md %}}</dd>
 
 </dl>
@@ -1919,8 +2126,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Defines how target utilization value is expressed for a
-Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND,
-or DELTA_PER_MINUTE.
+Stackdriver Monitoring metric.
 {{% /md %}}</dd>
 
 </dl>
@@ -2016,8 +2222,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Defines how target utilization value is expressed for a
-Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND,
-or DELTA_PER_MINUTE.
+Stackdriver Monitoring metric.
 {{% /md %}}</dd>
 
 </dl>

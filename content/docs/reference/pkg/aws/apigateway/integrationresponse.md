@@ -15,26 +15,10 @@ Provides an HTTP Method Integration Response for an API Gateway Resource.
 > **Note:** Depends on having `aws.apigateway.Integration` inside your rest api. To ensure this
 you might need to add an explicit `depends_on` for clean runs.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -81,13 +65,53 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("MyDemo
     statusCode: response200.statusCode,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+my_demo_api = aws.apigateway.RestApi("myDemoAPI", description="This is my API for demonstration purposes")
+my_demo_resource = aws.apigateway.Resource("myDemoResource",
+    parent_id=my_demo_api.root_resource_id,
+    path_part="mydemoresource",
+    rest_api=my_demo_api.id)
+my_demo_method = aws.apigateway.Method("myDemoMethod",
+    authorization="NONE",
+    http_method="GET",
+    resource_id=my_demo_resource.id,
+    rest_api=my_demo_api.id)
+my_demo_integration = aws.apigateway.Integration("myDemoIntegration",
+    http_method=my_demo_method.http_method,
+    resource_id=my_demo_resource.id,
+    rest_api=my_demo_api.id,
+    type="MOCK")
+response200 = aws.apigateway.MethodResponse("response200",
+    http_method=my_demo_method.http_method,
+    resource_id=my_demo_resource.id,
+    rest_api=my_demo_api.id,
+    status_code="200")
+my_demo_integration_response = aws.apigateway.IntegrationResponse("myDemoIntegrationResponse",
+    http_method=my_demo_method.http_method,
+    resource_id=my_demo_resource.id,
+    response_templates={
+        "application/xml": """#set($$inputRoot = $$input.path('$$'))
+<?xml version="1.0" encoding="UTF-8"?>
+<message>
+    $$inputRoot.body
+</message>
+
+""",
+    },
+    rest_api=my_demo_api.id,
+    status_code=response200.status_code)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a IntegrationResponse Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -675,7 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing IntegrationResponse Resource {#look-up}
 
 Get an existing IntegrationResponse resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#IntegrationResponseState">IntegrationResponseState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#IntegrationResponse">IntegrationResponse</a></span></code></pre></div>

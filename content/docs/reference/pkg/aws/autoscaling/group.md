@@ -14,39 +14,217 @@ Provides an AutoScaling Group resource.
 
 > **Note:** You must specify either `launch_configuration`, `launch_template`, or `mixed_instances_policy`.
 
-
-## Interpolated tags
+{{% examples %}}
+## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const config = new pulumi.Config();
-const extraTags = config.get("extraTags") || [
-    {
-        key: "Foo",
-        propagateAtLaunch: true,
-        value: "Bar",
-    },
-    {
-        key: "Baz",
-        propagateAtLaunch: true,
-        value: "Bam",
-    },
-];
-
+const test = new aws.ec2.PlacementGroup("test", {
+    strategy: "cluster",
+});
 const bar = new aws.autoscaling.Group("bar", {
+    desiredCapacity: 4,
+    forceDelete: true,
+    healthCheckGracePeriod: 300,
+    healthCheckType: "ELB",
+    initialLifecycleHooks: [{
+        defaultResult: "CONTINUE",
+        heartbeatTimeout: 2000,
+        lifecycleTransition: "autoscaling:EC2_INSTANCE_LAUNCHING",
+        name: "foobar",
+        notificationMetadata: `{
+  "foo": "bar"
+}
+`,
+        notificationTargetArn: "arn:aws:sqs:us-east-1:444455556666:queue1*",
+        roleArn: "arn:aws:iam::123456789012:role/S3Access",
+    }],
     launchConfiguration: aws_launch_configuration_foobar.name,
     maxSize: 5,
     minSize: 2,
-    tagsCollection: [{"key": "interpolation1", "value": "value3", "propagate_at_launch": true}, {"key": "interpolation2", "value": "value4", "propagate_at_launch": true}].concat(extraTags),
+    placementGroup: test.id,
+    tags: [
+        {
+            key: "foo",
+            propagateAtLaunch: true,
+            value: "bar",
+        },
+        {
+            key: "lorem",
+            propagateAtLaunch: false,
+            value: "ipsum",
+        },
+    ],
     vpcZoneIdentifiers: [
         aws_subnet_example1.id,
         aws_subnet_example2.id,
     ],
-});
+}, { timeouts: {
+    delete: "15m",
+} });
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+test = aws.ec2.PlacementGroup("test", strategy="cluster")
+bar = aws.autoscaling.Group("bar",
+    desired_capacity=4,
+    force_delete=True,
+    health_check_grace_period=300,
+    health_check_type="ELB",
+    initial_lifecycle_hooks=[{
+        "defaultResult": "CONTINUE",
+        "heartbeatTimeout": 2000,
+        "lifecycleTransition": "autoscaling:EC2_INSTANCE_LAUNCHING",
+        "name": "foobar",
+        "notificationMetadata": """{
+  "foo": "bar"
+}
+
+""",
+        "notificationTargetArn": "arn:aws:sqs:us-east-1:444455556666:queue1*",
+        "roleArn": "arn:aws:iam::123456789012:role/S3Access",
+    }],
+    launch_configuration=aws_launch_configuration["foobar"]["name"],
+    max_size=5,
+    min_size=2,
+    placement_group=test.id,
+    tags=[
+        {
+            "key": "foo",
+            "propagateAtLaunch": True,
+            "value": "bar",
+        },
+        {
+            "key": "lorem",
+            "propagateAtLaunch": False,
+            "value": "ipsum",
+        },
+    ],
+    vpc_zone_identifiers=[
+        aws_subnet["example1"]["id"],
+        aws_subnet["example2"]["id"],
+    ])
 ```
 
+{{% /example %}}
+{{% example %}}
+### With Latest Version Of Launch Template
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const foobar = new aws.ec2.LaunchTemplate("foobar", {
+    imageId: "ami-1a2b3c",
+    instanceType: "t2.micro",
+    namePrefix: "foobar",
+});
+const bar = new aws.autoscaling.Group("bar", {
+    availabilityZones: ["us-east-1a"],
+    desiredCapacity: 1,
+    launchTemplate: {
+        id: foobar.id,
+        version: "$Latest",
+    },
+    maxSize: 1,
+    minSize: 1,
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+foobar = aws.ec2.LaunchTemplate("foobar",
+    image_id="ami-1a2b3c",
+    instance_type="t2.micro",
+    name_prefix="foobar")
+bar = aws.autoscaling.Group("bar",
+    availability_zones=["us-east-1a"],
+    desired_capacity=1,
+    launch_template={
+        "id": foobar.id,
+        "version": "$$Latest",
+    },
+    max_size=1,
+    min_size=1)
+```
+
+{{% /example %}}
+{{% example %}}
+### Mixed Instances Policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleLaunchTemplate = new aws.ec2.LaunchTemplate("example", {
+    imageId: aws_ami_example.id,
+    instanceType: "c5.large",
+    namePrefix: "example",
+});
+const exampleGroup = new aws.autoscaling.Group("example", {
+    availabilityZones: ["us-east-1a"],
+    desiredCapacity: 1,
+    maxSize: 1,
+    minSize: 1,
+    mixedInstancesPolicy: {
+        launchTemplate: {
+            launchTemplateSpecification: {
+                launchTemplateId: exampleLaunchTemplate.id,
+            },
+            overrides: [
+                {
+                    instanceType: "c4.large",
+                    weightedCapacity: "3",
+                },
+                {
+                    instanceType: "c3.large",
+                    weightedCapacity: "2",
+                },
+            ],
+        },
+    },
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_launch_template = aws.ec2.LaunchTemplate("exampleLaunchTemplate",
+    image_id=data["aws.ec2.Ami"]["example"]["id"],
+    instance_type="c5.large",
+    name_prefix="example")
+example_group = aws.autoscaling.Group("exampleGroup",
+    availability_zones=["us-east-1a"],
+    desired_capacity=1,
+    max_size=1,
+    min_size=1,
+    mixed_instances_policy={
+        "launchTemplate": {
+            "launchTemplateSpecification": {
+                "launchTemplateId": example_launch_template.id,
+            },
+            "override": [
+                {
+                    "instanceType": "c4.large",
+                    "weightedCapacity": "3",
+                },
+                {
+                    "instanceType": "c3.large",
+                    "weightedCapacity": "2",
+                },
+            ],
+        },
+    })
+```
+
+{{% /example %}}
+{{% /examples %}}
 ## Waiting for Capacity
 
 A newly-created ASG is initially empty and begins to scale to `min_size` (or
@@ -109,164 +287,10 @@ number of configuration problems. See the [AWS Docs on Load Balancer
 Troubleshooting](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/elb-troubleshooting.html)
 for more information.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const test = new aws.ec2.PlacementGroup("test", {
-    strategy: "cluster",
-});
-const bar = new aws.autoscaling.Group("bar", {
-    desiredCapacity: 4,
-    forceDelete: true,
-    healthCheckGracePeriod: 300,
-    healthCheckType: "ELB",
-    initialLifecycleHooks: [{
-        defaultResult: "CONTINUE",
-        heartbeatTimeout: 2000,
-        lifecycleTransition: "autoscaling:EC2_INSTANCE_LAUNCHING",
-        name: "foobar",
-        notificationMetadata: `{
-  "foo": "bar"
-}
-`,
-        notificationTargetArn: "arn:aws:sqs:us-east-1:444455556666:queue1*",
-        roleArn: "arn:aws:iam::123456789012:role/S3Access",
-    }],
-    launchConfiguration: aws_launch_configuration_foobar.name,
-    maxSize: 5,
-    minSize: 2,
-    placementGroup: test.id,
-    tags: [
-        {
-            key: "foo",
-            propagateAtLaunch: true,
-            value: "bar",
-        },
-        {
-            key: "lorem",
-            propagateAtLaunch: false,
-            value: "ipsum",
-        },
-    ],
-    vpcZoneIdentifiers: [
-        aws_subnet_example1.id,
-        aws_subnet_example2.id,
-    ],
-}, { timeouts: {
-    delete: "15m",
-} });
-```
-{{% /example %}}
-
-### With Latest Version Of Launch Template
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const foobar = new aws.ec2.LaunchTemplate("foobar", {
-    imageId: "ami-1a2b3c",
-    instanceType: "t2.micro",
-    namePrefix: "foobar",
-});
-const bar = new aws.autoscaling.Group("bar", {
-    availabilityZones: ["us-east-1a"],
-    desiredCapacity: 1,
-    launchTemplate: {
-        id: foobar.id,
-        version: "$Latest",
-    },
-    maxSize: 1,
-    minSize: 1,
-});
-```
-{{% /example %}}
-
-### Mixed Instances Policy
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const exampleLaunchTemplate = new aws.ec2.LaunchTemplate("example", {
-    imageId: aws_ami_example.id,
-    instanceType: "c5.large",
-    namePrefix: "example",
-});
-const exampleGroup = new aws.autoscaling.Group("example", {
-    availabilityZones: ["us-east-1a"],
-    desiredCapacity: 1,
-    maxSize: 1,
-    minSize: 1,
-    mixedInstancesPolicy: {
-        launchTemplate: {
-            launchTemplateSpecification: {
-                launchTemplateId: exampleLaunchTemplate.id,
-            },
-            overrides: [
-                {
-                    instanceType: "c4.large",
-                    weightedCapacity: "3",
-                },
-                {
-                    instanceType: "c3.large",
-                    weightedCapacity: "2",
-                },
-            ],
-        },
-    },
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Group Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1782,7 +1806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Group Resource {#look-up}
 
 Get an existing Group resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/autoscaling/#GroupState">GroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/autoscaling/#Group">Group</a></span></code></pre></div>
@@ -3179,9 +3203,6 @@ precedence over `min_elb_capacity` behavior.)
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupInitialLifecycleHookArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupInitialLifecycleHookOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupInitialLifecycleHookArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupInitialLifecycleHook.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3453,9 +3474,6 @@ precedence over `min_elb_capacity` behavior.)
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupLaunchTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupLaunchTemplateOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupLaunchTemplateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupLaunchTemplate.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3607,9 +3625,6 @@ precedence over `min_elb_capacity` behavior.)
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupMixedInstancesPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3724,9 +3739,6 @@ precedence over `min_elb_capacity` behavior.)
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyInstancesDistributionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyInstancesDistributionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyInstancesDistributionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupMixedInstancesPolicyInstancesDistribution.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3987,9 +3999,6 @@ precedence over `min_elb_capacity` behavior.)
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyLaunchTemplateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupMixedInstancesPolicyLaunchTemplate.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4104,9 +4113,6 @@ precedence over `min_elb_capacity` behavior.)
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4259,9 +4265,6 @@ precedence over `min_elb_capacity` behavior.)
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateOverrideArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateOverrideOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyLaunchTemplateOverrideArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupMixedInstancesPolicyLaunchTemplateOverride.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4376,9 +4379,6 @@ precedence over `min_elb_capacity` behavior.)
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupTagArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupTagOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupTagArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupTag.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

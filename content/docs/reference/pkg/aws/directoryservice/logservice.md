@@ -12,26 +12,10 @@ meta_desc: "Explore the LogService resource of the directoryservice module, incl
 
 Provides a Log subscription for AWS Directory Service that pushes logs to cloudwatch.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -62,13 +46,38 @@ const exampleLogService = new aws.directoryservice.LogService("example", {
     logGroupName: exampleLogGroup.name,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example_log_group = aws.cloudwatch.LogGroup("exampleLogGroup", retention_in_days=14)
+ad_log_policy_policy_document = example_log_group.arn.apply(lambda arn: aws.iam.get_policy_document(statements=[{
+    "actions": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
+    ],
+    "effect": "Allow",
+    "principals": [{
+        "identifiers": ["ds.amazonaws.com"],
+        "type": "Service",
+    }],
+    "resources": [arn],
+}]))
+ad_log_policy_log_resource_policy = aws.cloudwatch.LogResourcePolicy("ad-log-policyLogResourcePolicy",
+    policy_document=ad_log_policy_policy_document.json,
+    policy_name="ad-log-policy")
+example_log_service = aws.directoryservice.LogService("exampleLogService",
+    directory_id=aws_directory_service_directory["example"]["id"],
+    log_group_name=example_log_group.name)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a LogService Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -424,7 +433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing LogService Resource {#look-up}
 
 Get an existing LogService resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directoryservice/#LogServiceState">LogServiceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directoryservice/#LogService">LogService</a></span></code></pre></div>

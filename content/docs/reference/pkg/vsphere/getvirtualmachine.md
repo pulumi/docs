@@ -18,33 +18,10 @@ reads the guest ID so that can be supplied as well.
 
 [docs-virtual-machine-resource]: /docs/providers/vsphere/r/virtual_machine.html
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_vsphere as vsphere
-
-datacenter = vsphere.get_datacenter(name="dc1")
-template = vsphere.get_virtual_machine(datacenter_id=datacenter.id,
-    name="test-vm-template")
-```
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -57,14 +34,23 @@ const template = datacenter.apply(datacenter => vsphere.getVirtualMachine({
     name: "test-vm-template",
 }, { async: true }));
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_vsphere as vsphere
 
+datacenter = vsphere.get_datacenter(name="dc1")
+template = vsphere.get_virtual_machine(datacenter_id=datacenter.id,
+    name="test-vm-template")
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetVirtualMachine {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -796,9 +782,6 @@ defined by `scsi_controller_scan_count` are scanned.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#GetVirtualMachineDisk">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.GetVirtualMachineDisk.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -943,16 +926,4 @@ defined by `scsi_controller_scan_count` are scanned.
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
-</dl>
 

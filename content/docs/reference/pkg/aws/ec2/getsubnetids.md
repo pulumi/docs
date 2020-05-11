@@ -15,13 +15,79 @@ meta_desc: "Explore the GetSubnetIds function of the ec2 module, including examp
 This resource can be useful for getting back a set of subnet ids for a vpc.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+The following shows outputing all cidr blocks for every subnet id in a vpc.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleSubnetIds = aws.ec2.getSubnetIds({
+    vpcId: var.vpc_id,
+});
+const exampleSubnet = exampleSubnetIds.then(exampleSubnetIds => exampleSubnetIds.ids.map((v, k) => [k, v]).map(([, ]) => aws.ec2.getSubnet({
+    id: __value,
+})));
+export const subnetCidrBlocks = exampleSubnet.map(s => s.cidrBlock);
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_subnet_ids = aws.ec2.get_subnet_ids(vpc_id=var["vpc_id"])
+example_subnet = [aws.ec2.get_subnet(id=__value) for __key, __value in example_subnet_ids.ids]
+pulumi.export("subnetCidrBlocks", [s.cidr_block for s in example_subnet])
+```
+
+The following example retrieves a set of all subnets in a VPC with a custom
+tag of `Tier` set to a value of "Private" so that the `aws.ec2.Instance` resource
+can loop through the subnets, putting instances across availability zones.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const private = aws.ec2.getSubnetIds({
+    vpcId: var.vpc_id,
+    tags: {
+        Tier: "Private",
+    },
+});
+const app: aws.ec2.Instance[];
+for (const range = {value: 0}; range.value < data.aws_subnet_ids.example.ids; range.value++) {
+    app.push(new aws.ec2.Instance(`app-${range.value}`, {
+        ami: var.ami,
+        instanceType: "t2.micro",
+        subnetId: range.value,
+    }));
+}
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+private = aws.ec2.get_subnet_ids(vpc_id=var["vpc_id"],
+    tags={
+        "Tier": "Private",
+    })
+app = []
+for range in [{"value": i} for i in range(0, data.aws_subnet_ids.example.ids)]:
+    app.append(aws.ec2.Instance(f"app-{range['value']}",
+        ami=var["ami"],
+        instance_type="t2.micro",
+        subnet_id=range["value"]))
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Using GetSubnetIds {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -417,9 +483,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetSubnetIdsFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetSubnetIdsFilter">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetSubnetIdsFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetSubnetIdsFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -540,16 +603,4 @@ Subnet IDs will be selected if any one of the given values match.
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

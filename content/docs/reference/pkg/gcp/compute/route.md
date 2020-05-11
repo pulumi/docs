@@ -40,10 +40,107 @@ To get more information about Route, see:
 * How-to Guides
     * [Using Routes](https://cloud.google.com/vpc/docs/using-routes)
 
+## Example Usage - Route Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultNetwork = new gcp.compute.Network("defaultNetwork", {});
+const defaultRoute = new gcp.compute.Route("defaultRoute", {
+    destRange: "15.0.0.0/24",
+    network: defaultNetwork.name,
+    nextHopIp: "10.132.1.5",
+    priority: 100,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_network = gcp.compute.Network("defaultNetwork")
+default_route = gcp.compute.Route("defaultRoute",
+    dest_range="15.0.0.0/24",
+    network=default_network.name,
+    next_hop_ip="10.132.1.5",
+    priority=100)
+```
+## Example Usage - Route Ilb
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultNetwork = new gcp.compute.Network("defaultNetwork", {autoCreateSubnetworks: false});
+const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
+    ipCidrRange: "10.0.1.0/24",
+    region: "us-central1",
+    network: defaultNetwork.selfLink,
+});
+const hc = new gcp.compute.HealthCheck("hc", {
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+    tcp_health_check: {
+        port: "80",
+    },
+});
+const backend = new gcp.compute.RegionBackendService("backend", {
+    region: "us-central1",
+    healthChecks: [hc.selfLink],
+});
+const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingRule", {
+    region: "us-central1",
+    loadBalancingScheme: "INTERNAL",
+    backendService: backend.selfLink,
+    allPorts: true,
+    network: defaultNetwork.name,
+    subnetwork: defaultSubnetwork.name,
+});
+const route-ilb = new gcp.compute.Route("route-ilb", {
+    destRange: "0.0.0.0/0",
+    network: defaultNetwork.name,
+    nextHopIlb: defaultForwardingRule.selfLink,
+    priority: 2000,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_network = gcp.compute.Network("defaultNetwork", auto_create_subnetworks=False)
+default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
+    ip_cidr_range="10.0.1.0/24",
+    region="us-central1",
+    network=default_network.self_link)
+hc = gcp.compute.HealthCheck("hc",
+    check_interval_sec=1,
+    timeout_sec=1,
+    tcp_health_check={
+        "port": "80",
+    })
+backend = gcp.compute.RegionBackendService("backend",
+    region="us-central1",
+    health_checks=[hc.self_link])
+default_forwarding_rule = gcp.compute.ForwardingRule("defaultForwardingRule",
+    region="us-central1",
+    load_balancing_scheme="INTERNAL",
+    backend_service=backend.self_link,
+    all_ports=True,
+    network=default_network.name,
+    subnetwork=default_subnetwork.name)
+route_ilb = gcp.compute.Route("route-ilb",
+    dest_range="0.0.0.0/0",
+    network=default_network.name,
+    next_hop_ilb=default_forwarding_rule.self_link,
+    priority=2000)
+```
+
 
 
 ## Create a Route Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -991,7 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Route Resource {#look-up}
 
 Get an existing Route resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouteState">RouteState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#Route">Route</a></span></code></pre></div>

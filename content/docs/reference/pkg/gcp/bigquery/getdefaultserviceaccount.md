@@ -21,13 +21,39 @@ For more information see
 [the API reference](https://cloud.google.com/bigquery/docs/reference/rest/v2/projects/getServiceAccount).
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bqSa = gcp.bigquery.getDefaultServiceAccount({});
+const keySaUser = new gcp.kms.CryptoKeyIAMMember("keySaUser", {
+    cryptoKeyId: google_kms_crypto_key.key.id,
+    role: "roles/cloudkms.cryptoKeyEncrypterDecrypter",
+    member: bqSa.then(bqSa => `serviceAccount:${bqSa.email}`),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bq_sa = gcp.bigquery.get_default_service_account()
+key_sa_user = gcp.kms.CryptoKeyIAMMember("keySaUser",
+    crypto_key_id=google_kms_crypto_key["key"]["id"],
+    role="roles/cloudkms.cryptoKeyEncrypterDecrypter",
+    member=f"serviceAccount:{bq_sa.email}")
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Using GetDefaultServiceAccount {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -274,16 +300,4 @@ in order to grant IAM permissions.
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

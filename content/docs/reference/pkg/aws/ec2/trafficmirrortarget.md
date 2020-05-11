@@ -13,26 +13,12 @@ meta_desc: "Explore the TrafficMirrorTarget resource of the ec2 module, includin
 Provides an Traffic mirror target.  
 Read [limits and considerations](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html) for traffic mirroring
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+To create a basic traffic mirror session
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -46,13 +32,25 @@ const eni = new aws.ec2.TrafficMirrorTarget("eni", {
     networkInterfaceId: aws_instance_test.primaryNetworkInterfaceId,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+nlb = aws.ec2.TrafficMirrorTarget("nlb",
+    description="NLB target",
+    network_load_balancer_arn=aws_lb["lb"]["arn"])
+eni = aws.ec2.TrafficMirrorTarget("eni",
+    description="ENI target",
+    network_interface_id=aws_instance["test"]["primary_network_interface_id"])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a TrafficMirrorTarget Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -480,7 +478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing TrafficMirrorTarget Resource {#look-up}
 
 Get an existing TrafficMirrorTarget resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#TrafficMirrorTargetState">TrafficMirrorTargetState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#TrafficMirrorTarget">TrafficMirrorTarget</a></span></code></pre></div>

@@ -21,10 +21,44 @@ To get more information about GlobalNetworkEndpoint, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/load-balancing/docs/negs/)
 
+## Example Usage - Global Network Endpoint
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default-endpoint = new gcp.compute.GlobalNetworkEndpoint("default-endpoint", {
+    globalNetworkEndpointGroup: google_compute_network_endpoint_group.neg.name,
+    fqdn: "www.example.com",
+    port: google_compute_network_endpoint_group.neg.default_port,
+    ipAddress: google_compute_instance["endpoint-instance"].network_interface[0].network_ip,
+});
+const default = new gcp.compute.Network("default", {autoCreateSubnetworks: false});
+const group = new gcp.compute.GlobalNetworkEndpointGroup("group", {
+    network: default.selfLink,
+    defaultPort: "90",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_endpoint = gcp.compute.GlobalNetworkEndpoint("default-endpoint",
+    global_network_endpoint_group=google_compute_network_endpoint_group["neg"]["name"],
+    fqdn="www.example.com",
+    port=google_compute_network_endpoint_group["neg"]["default_port"],
+    ip_address=google_compute_instance["endpoint-instance"]["network_interface"][0]["network_ip"])
+default = gcp.compute.Network("default", auto_create_subnetworks=False)
+group = gcp.compute.GlobalNetworkEndpointGroup("group",
+    network=default.self_link,
+    default_port="90")
+```
+
 
 
 ## Create a GlobalNetworkEndpoint Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -496,7 +530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing GlobalNetworkEndpoint Resource {#look-up}
 
 Get an existing GlobalNetworkEndpoint resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#GlobalNetworkEndpointState">GlobalNetworkEndpointState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#GlobalNetworkEndpoint">GlobalNetworkEndpoint</a></span></code></pre></div>

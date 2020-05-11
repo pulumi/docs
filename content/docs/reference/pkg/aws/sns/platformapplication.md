@@ -12,26 +12,12 @@ meta_desc: "Explore the PlatformApplication resource of the sns module, includin
 
 Provides an SNS platform application resource
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### Apple Push Notification Service (APNS)
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -42,22 +28,20 @@ const apnsApplication = new aws.sns.PlatformApplication("apns_application", {
     platformPrincipal: "<APNS CERTIFICATE>",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+apns_application = aws.sns.PlatformApplication("apnsApplication",
+    platform="APNS",
+    platform_credential="<APNS PRIVATE KEY>",
+    platform_principal="<APNS CERTIFICATE>")
+```
+
+{{% /example %}}
+{{% example %}}
 ### Google Cloud Messaging (GCM)
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -67,13 +51,22 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
     platformCredential: "<GCM API KEY>",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+gcm_application = aws.sns.PlatformApplication("gcmApplication",
+    platform="GCM",
+    platform_credential="<GCM API KEY>")
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a PlatformApplication Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -789,7 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing PlatformApplication Resource {#look-up}
 
 Get an existing PlatformApplication resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#PlatformApplicationState">PlatformApplicationState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#PlatformApplication">PlatformApplication</a></span></code></pre></div>

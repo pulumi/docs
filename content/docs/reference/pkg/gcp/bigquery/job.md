@@ -15,8 +15,245 @@ Once a BigQuery job is created, it cannot be changed or deleted.
 
 
 
+## Example Usage - Bigquery Job Query
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bar = new gcp.bigquery.Dataset("bar", {
+    datasetId: "job_query_dataset",
+    friendlyName: "test",
+    description: "This is a test description",
+    location: "US",
+});
+const foo = new gcp.bigquery.Table("foo", {
+    datasetId: bar.datasetId,
+    tableId: "job_query_table",
+});
+const job = new gcp.bigquery.Job("job", {
+    jobId: "job_query",
+    labels: {
+        "example-label": "example-value",
+    },
+    query: {
+        query: "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
+        destination_table: {
+            projectId: foo.project,
+            datasetId: foo.datasetId,
+            tableId: foo.tableId,
+        },
+        allowLargeResults: true,
+        flattenResults: true,
+        script_options: {
+            keyResultStatement: "LAST",
+        },
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bar = gcp.bigquery.Dataset("bar",
+    dataset_id="job_query_dataset",
+    friendly_name="test",
+    description="This is a test description",
+    location="US")
+foo = gcp.bigquery.Table("foo",
+    dataset_id=bar.dataset_id,
+    table_id="job_query_table")
+job = gcp.bigquery.Job("job",
+    job_id="job_query",
+    labels={
+        "example-label": "example-value",
+    },
+    query={
+        "query": "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
+        "destination_table": {
+            "projectId": foo.project,
+            "datasetId": foo.dataset_id,
+            "tableId": foo.table_id,
+        },
+        "allowLargeResults": True,
+        "flattenResults": True,
+        "script_options": {
+            "keyResultStatement": "LAST",
+        },
+    })
+```
+## Example Usage - Bigquery Job Load
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bar = new gcp.bigquery.Dataset("bar", {
+    datasetId: "job_load_dataset",
+    friendlyName: "test",
+    description: "This is a test description",
+    location: "US",
+});
+const foo = new gcp.bigquery.Table("foo", {
+    datasetId: bar.datasetId,
+    tableId: "job_load_table",
+});
+const job = new gcp.bigquery.Job("job", {
+    jobId: "job_load",
+    labels: {
+        my_job: "load",
+    },
+    load: {
+        sourceUris: ["gs://cloud-samples-data/bigquery/us-states/us-states-by-date.csv"],
+        destination_table: {
+            projectId: foo.project,
+            datasetId: foo.datasetId,
+            tableId: foo.tableId,
+        },
+        skipLeadingRows: 1,
+        schemaUpdateOptions: [
+            "ALLOW_FIELD_RELAXATION",
+            "ALLOW_FIELD_ADDITION",
+        ],
+        writeDisposition: "WRITE_APPEND",
+        autodetect: true,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bar = gcp.bigquery.Dataset("bar",
+    dataset_id="job_load_dataset",
+    friendly_name="test",
+    description="This is a test description",
+    location="US")
+foo = gcp.bigquery.Table("foo",
+    dataset_id=bar.dataset_id,
+    table_id="job_load_table")
+job = gcp.bigquery.Job("job",
+    job_id="job_load",
+    labels={
+        "my_job": "load",
+    },
+    load={
+        "sourceUris": ["gs://cloud-samples-data/bigquery/us-states/us-states-by-date.csv"],
+        "destination_table": {
+            "projectId": foo.project,
+            "datasetId": foo.dataset_id,
+            "tableId": foo.table_id,
+        },
+        "skipLeadingRows": 1,
+        "schemaUpdateOptions": [
+            "ALLOW_FIELD_RELAXATION",
+            "ALLOW_FIELD_ADDITION",
+        ],
+        "writeDisposition": "WRITE_APPEND",
+        "autodetect": True,
+    })
+```
+## Example Usage - Bigquery Job Extract
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const source-oneDataset = new gcp.bigquery.Dataset("source-oneDataset", {
+    datasetId: "job_extract_dataset",
+    friendlyName: "test",
+    description: "This is a test description",
+    location: "US",
+});
+const source-oneTable = new gcp.bigquery.Table("source-oneTable", {
+    datasetId: source-oneDataset.datasetId,
+    tableId: "job_extract_table",
+    schema: `[
+  {
+    "name": "name",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "post_abbr",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "date",
+    "type": "DATE",
+    "mode": "NULLABLE"
+  }
+]
+`,
+});
+const dest = new gcp.storage.Bucket("dest", {forceDestroy: true});
+const job = new gcp.bigquery.Job("job", {
+    jobId: "job_extract",
+    extract: {
+        destinationUris: [pulumi.interpolate`${dest.url}/extract`],
+        source_table: {
+            projectId: source-oneTable.project,
+            datasetId: source-oneTable.datasetId,
+            tableId: source-oneTable.tableId,
+        },
+        destinationFormat: "NEWLINE_DELIMITED_JSON",
+        compression: "GZIP",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+source_one_dataset = gcp.bigquery.Dataset("source-oneDataset",
+    dataset_id="job_extract_dataset",
+    friendly_name="test",
+    description="This is a test description",
+    location="US")
+source_one_table = gcp.bigquery.Table("source-oneTable",
+    dataset_id=source_one_dataset.dataset_id,
+    table_id="job_extract_table",
+    schema="""[
+  {
+    "name": "name",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "post_abbr",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "date",
+    "type": "DATE",
+    "mode": "NULLABLE"
+  }
+]
+""")
+dest = gcp.storage.Bucket("dest", force_destroy=True)
+job = gcp.bigquery.Job("job",
+    job_id="job_extract",
+    extract={
+        "destinationUris": [dest.url.apply(lambda url: f"{url}/extract")],
+        "source_table": {
+            "projectId": source_one_table.project,
+            "datasetId": source_one_table.dataset_id,
+            "tableId": source_one_table.table_id,
+        },
+        "destinationFormat": "NEWLINE_DELIMITED_JSON",
+        "compression": "GZIP",
+    })
+```
+
+
+
 ## Create a Job Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -700,7 +937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Job Resource {#look-up}
 
 Get an existing Job resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#JobState">JobState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#Job">Job</a></span></code></pre></div>
@@ -1265,9 +1502,6 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobCopyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobCopyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobCopyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobCopy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1293,7 +1527,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1324,7 +1558,7 @@ The default value is CREATE_IF_NEEDED. Creation, truncation and append actions o
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -1353,7 +1587,7 @@ Creation, truncation and append actions occur as one atomic update upon job comp
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1384,7 +1618,7 @@ The default value is CREATE_IF_NEEDED. Creation, truncation and append actions o
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -1413,7 +1647,7 @@ Creation, truncation and append actions occur as one atomic update upon job comp
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1444,7 +1678,7 @@ The default value is CREATE_IF_NEEDED. Creation, truncation and append actions o
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -1473,7 +1707,7 @@ Creation, truncation and append actions occur as one atomic update upon job comp
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1504,7 +1738,7 @@ The default value is CREATE_IF_NEEDED. Creation, truncation and append actions o
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -1522,9 +1756,6 @@ Creation, truncation and append actions occur as one atomic update upon job comp
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobCopyDestinationEncryptionConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobCopyDestinationEncryptionConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobCopyDestinationEncryptionConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobCopyDestinationEncryptionConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1608,9 +1839,6 @@ The BigQuery Service Account associated with your project requires access to thi
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobCopyDestinationTableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobCopyDestinationTableOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobCopyDestinationTableArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobCopyDestinationTable.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1763,9 +1991,6 @@ The BigQuery Service Account associated with your project requires access to thi
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobCopySourceTableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobCopySourceTableOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobCopySourceTableArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobCopySourceTable.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1916,9 +2141,6 @@ The BigQuery Service Account associated with your project requires access to thi
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobExtractArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobExtractOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobExtractArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobExtract.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2267,9 +2489,6 @@ Default is ','
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobExtractSourceModelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobExtractSourceModelOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobExtractSourceModelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobExtractSourceModel.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2420,9 +2639,6 @@ Default is ','
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobExtractSourceTableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobExtractSourceTableOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobExtractSourceTableArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobExtractSourceTable.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2575,9 +2791,6 @@ Default is ','
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobLoadArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobLoadOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobLoadArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobLoad.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2647,7 +2860,7 @@ The default value is false.
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2799,7 +3012,7 @@ For orc, specify "ORC". The default value is CSV.
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -2872,7 +3085,7 @@ The default value is false.
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3024,7 +3237,7 @@ For orc, specify "ORC". The default value is CSV.
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -3097,7 +3310,7 @@ The default value is false.
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3249,7 +3462,7 @@ For orc, specify "ORC". The default value is CSV.
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -3322,7 +3535,7 @@ The default value is false.
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3474,7 +3687,7 @@ For orc, specify "ORC". The default value is CSV.
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -3492,9 +3705,6 @@ Creation, truncation and append actions occur as one atomic update upon job comp
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobLoadDestinationEncryptionConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobLoadDestinationEncryptionConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobLoadDestinationEncryptionConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobLoadDestinationEncryptionConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3578,9 +3788,6 @@ The BigQuery Service Account associated with your project requires access to thi
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobLoadDestinationTableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobLoadDestinationTableOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobLoadDestinationTableArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobLoadDestinationTable.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3732,9 +3939,6 @@ The BigQuery Service Account associated with your project requires access to thi
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobLoadTimePartitioningArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobLoadTimePartitioningOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobLoadTimePartitioningArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobLoadTimePartitioning.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3899,9 +4103,6 @@ A wrapper is used here because an empty string is an invalid value.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobQueryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobQuery.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3938,7 +4139,7 @@ However, you must still set destinationTable when result size exceeds the allowe
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4013,7 +4214,7 @@ If unspecified, this will be set to your project default.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a priority for the query. Possible values include INTERACTIVE and BATCH. The default value is INTERACTIVE.
+    <dd>{{% md %}}Specifies a priority for the query.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4079,7 +4280,7 @@ The default value is true.
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -4119,7 +4320,7 @@ However, you must still set destinationTable when result size exceeds the allowe
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4194,7 +4395,7 @@ If unspecified, this will be set to your project default.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a priority for the query. Possible values include INTERACTIVE and BATCH. The default value is INTERACTIVE.
+    <dd>{{% md %}}Specifies a priority for the query.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4260,7 +4461,7 @@ The default value is true.
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -4300,7 +4501,7 @@ However, you must still set destinationTable when result size exceeds the allowe
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4375,7 +4576,7 @@ If unspecified, this will be set to your project default.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a priority for the query. Possible values include INTERACTIVE and BATCH. The default value is INTERACTIVE.
+    <dd>{{% md %}}Specifies a priority for the query.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4441,7 +4642,7 @@ The default value is true.
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -4481,7 +4682,7 @@ However, you must still set destinationTable when result size exceeds the allowe
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4556,7 +4757,7 @@ If unspecified, this will be set to your project default.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a priority for the query. Possible values include INTERACTIVE and BATCH. The default value is INTERACTIVE.
+    <dd>{{% md %}}Specifies a priority for the query.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4622,7 +4823,7 @@ The default value is true.
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -4640,9 +4841,6 @@ Creation, truncation and append actions occur as one atomic update upon job comp
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryDefaultDatasetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryDefaultDatasetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobQueryDefaultDatasetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobQueryDefaultDataset.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4759,9 +4957,6 @@ Creation, truncation and append actions occur as one atomic update upon job comp
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryDestinationEncryptionConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryDestinationEncryptionConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobQueryDestinationEncryptionConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobQueryDestinationEncryptionConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4844,9 +5039,6 @@ The BigQuery Service Account associated with your project requires access to thi
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryDestinationTableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryDestinationTableOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobQueryDestinationTableArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobQueryDestinationTable.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4999,9 +5191,6 @@ The BigQuery Service Account associated with your project requires access to thi
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryScriptOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryScriptOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobQueryScriptOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobQueryScriptOptions.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -5016,7 +5205,7 @@ The BigQuery Service Account associated with your project requires access to thi
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Determines which statement in the script represents the "key result",
-used to populate the schema and query results of the script job. Default is LAST.
+used to populate the schema and query results of the script job.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5051,7 +5240,7 @@ used to populate the schema and query results of the script job. Default is LAST
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Determines which statement in the script represents the "key result",
-used to populate the schema and query results of the script job. Default is LAST.
+used to populate the schema and query results of the script job.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5086,7 +5275,7 @@ used to populate the schema and query results of the script job. Default is LAST
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Determines which statement in the script represents the "key result",
-used to populate the schema and query results of the script job. Default is LAST.
+used to populate the schema and query results of the script job.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5121,7 +5310,7 @@ used to populate the schema and query results of the script job. Default is LAST
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Determines which statement in the script represents the "key result",
-used to populate the schema and query results of the script job. Default is LAST.
+used to populate the schema and query results of the script job.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5156,9 +5345,6 @@ used to populate the schema and query results of the script job. Default is LAST
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryUserDefinedFunctionResourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryUserDefinedFunctionResourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobQueryUserDefinedFunctionResourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobQueryUserDefinedFunctionResource.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

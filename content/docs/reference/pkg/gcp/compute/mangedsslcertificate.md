@@ -11,13 +11,13 @@ meta_desc: "Explore the MangedSslCertificate resource of the compute module, inc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-Deprecated: gcp.MangedSslCertificate has been deprecated in favour of gcp.ManagedSslCertificate
+Deprecated: gcp.compute.MangedSslCertificate has been deprecated in favour of gcp.compute.ManagedSslCertificate
 
-<p class="resource-deprecated">Deprecated: {{% md %}}gcp.MangedSslCertificate has been deprecated in favour of gcp.ManagedSslCertificate{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}gcp.compute.MangedSslCertificate has been deprecated in favour of gcp.compute.ManagedSslCertificate{{% /md %}}</p>
 
 
 ## Create a MangedSslCertificate Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -252,7 +252,8 @@ namespace as the managed SSL certificates.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is.
+    <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is. Default value: "MANAGED"
+Possible values: ["MANAGED"]
 {{% /md %}}</dd>
 
 </dl>
@@ -317,7 +318,8 @@ namespace as the managed SSL certificates.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is.
+    <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is. Default value: "MANAGED"
+Possible values: ["MANAGED"]
 {{% /md %}}</dd>
 
 </dl>
@@ -382,7 +384,8 @@ namespace as the managed SSL certificates.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is.
+    <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is. Default value: "MANAGED"
+Possible values: ["MANAGED"]
 {{% /md %}}</dd>
 
 </dl>
@@ -447,7 +450,8 @@ namespace as the managed SSL certificates.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is.
+    <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is. Default value: "MANAGED"
+Possible values: ["MANAGED"]
 {{% /md %}}</dd>
 
 </dl>
@@ -673,7 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing MangedSslCertificate Resource {#look-up}
 
 Get an existing MangedSslCertificate resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#MangedSslCertificateState">MangedSslCertificateState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#MangedSslCertificate">MangedSslCertificate</a></span></code></pre></div>
@@ -884,7 +888,8 @@ namespace as the managed SSL certificates.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is.
+    <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is. Default value: "MANAGED"
+Possible values: ["MANAGED"]
 {{% /md %}}</dd>
 
 </dl>
@@ -984,7 +989,8 @@ namespace as the managed SSL certificates.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is.
+    <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is. Default value: "MANAGED"
+Possible values: ["MANAGED"]
 {{% /md %}}</dd>
 
 </dl>
@@ -1084,7 +1090,8 @@ namespace as the managed SSL certificates.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is.
+    <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is. Default value: "MANAGED"
+Possible values: ["MANAGED"]
 {{% /md %}}</dd>
 
 </dl>
@@ -1184,7 +1191,8 @@ namespace as the managed SSL certificates.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is.
+    <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is. Default value: "MANAGED"
+Possible values: ["MANAGED"]
 {{% /md %}}</dd>
 
 </dl>
@@ -1209,9 +1217,6 @@ namespace as the managed SSL certificates.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#MangedSslCertificateManagedArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#MangedSslCertificateManagedOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.MangedSslCertificateManagedArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.MangedSslCertificateManaged.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

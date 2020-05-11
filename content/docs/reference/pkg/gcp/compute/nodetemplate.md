@@ -21,10 +21,71 @@ To get more information about NodeTemplate, see:
 * How-to Guides
     * [Sole-Tenant Nodes](https://cloud.google.com/compute/docs/nodes/)
 
+## Example Usage - Node Template Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const central1a = gcp.compute.getNodeTypes({
+    zone: "us-central1-a",
+});
+const template = new gcp.compute.NodeTemplate("template", {
+    region: "us-central1",
+    nodeType: central1a.then(central1a => central1a.names[0]),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+central1a = gcp.compute.get_node_types(zone="us-central1-a")
+template = gcp.compute.NodeTemplate("template",
+    region="us-central1",
+    node_type=central1a.names[0])
+```
+## Example Usage - Node Template Server Binding
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const central1a = gcp.compute.getNodeTypes({
+    zone: "us-central1-a",
+});
+const template = new gcp.compute.NodeTemplate("template", {
+    region: "us-central1",
+    nodeType: central1a.then(central1a => central1a.names[0]),
+    nodeAffinityLabels: {
+        foo: "baz",
+    },
+    server_binding: {
+        type: "RESTART_NODE_ON_MINIMAL_SERVERS",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+central1a = gcp.compute.get_node_types(zone="us-central1-a")
+template = gcp.compute.NodeTemplate("template",
+    region="us-central1",
+    node_type=central1a.names[0],
+    node_affinity_labels={
+        "foo": "baz",
+    },
+    server_binding={
+        "type": "RESTART_NODE_ON_MINIMAL_SERVERS",
+    })
+```
+
 
 
 ## Create a NodeTemplate Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -700,7 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing NodeTemplate Resource {#look-up}
 
 Get an existing NodeTemplate resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#NodeTemplateState">NodeTemplateState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#NodeTemplate">NodeTemplate</a></span></code></pre></div>
@@ -1257,9 +1318,6 @@ where the nodes should restart following a maintenance event.  Structure is docu
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeTemplateNodeTypeFlexibilityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeTemplateNodeTypeFlexibilityOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.NodeTemplateNodeTypeFlexibilityArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.NodeTemplateNodeTypeFlexibility.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1414,9 +1472,6 @@ Use local SSD
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeTemplateServerBindingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeTemplateServerBindingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.NodeTemplateServerBindingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.NodeTemplateServerBinding.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

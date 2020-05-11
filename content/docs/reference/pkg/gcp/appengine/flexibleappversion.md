@@ -25,10 +25,126 @@ To get more information about FlexibleAppVersion, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/appengine/docs/flexible)
 
+## Example Usage - App Engine Flexible App Version
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myProject = new gcp.organizations.Project("myProject", {
+    projectId: "appeng-flex",
+    orgId: "123456789",
+    billingAccount: "000000-0000000-0000000-000000",
+});
+const app = new gcp.appengine.Application("app", {
+    project: myProject.projectId,
+    locationId: "us-central",
+});
+const service = new gcp.projects.Service("service", {
+    project: myProject.projectId,
+    service: "appengineflex.googleapis.com",
+    disableDependentServices: false,
+});
+const gaeApi = new gcp.projects.IAMMember("gaeApi", {
+    project: service.project,
+    role: "roles/compute.networkUser",
+    member: pulumi.interpolate`serviceAccount:service-${myProject.number}@gae-api-prod.google.com.iam.gserviceaccount.com`,
+});
+const bucket = new gcp.storage.Bucket("bucket", {project: myProject.projectId});
+const object = new gcp.storage.BucketObject("object", {
+    bucket: bucket.name,
+    source: new pulumi.asset.FileAsset("./test-fixtures/appengine/hello-world.zip"),
+});
+const myappV1 = new gcp.appengine.FlexibleAppVersion("myappV1", {
+    versionId: "v1",
+    project: gaeApi.project,
+    service: "default",
+    runtime: "nodejs",
+    entrypoint: {
+        shell: "node ./app.js",
+    },
+    deployment: {
+        zip: {
+            sourceUrl: pulumi.interpolate`https://storage.googleapis.com/${bucket.name}/${object.name}`,
+        },
+    },
+    liveness_check: {
+        path: "/",
+    },
+    readiness_check: {
+        path: "/",
+    },
+    envVariables: {
+        port: "8080",
+    },
+    automatic_scaling: {
+        coolDownPeriod: "120s",
+        cpu_utilization: {
+            targetUtilization: 0.5,
+        },
+    },
+    noopOnDestroy: true,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_project = gcp.organizations.Project("myProject",
+    project_id="appeng-flex",
+    org_id="123456789",
+    billing_account="000000-0000000-0000000-000000")
+app = gcp.appengine.Application("app",
+    project=my_project.project_id,
+    location_id="us-central")
+service = gcp.projects.Service("service",
+    project=my_project.project_id,
+    service="appengineflex.googleapis.com",
+    disable_dependent_services=False)
+gae_api = gcp.projects.IAMMember("gaeApi",
+    project=service.project,
+    role="roles/compute.networkUser",
+    member=my_project.number.apply(lambda number: f"serviceAccount:service-{number}@gae-api-prod.google.com.iam.gserviceaccount.com"))
+bucket = gcp.storage.Bucket("bucket", project=my_project.project_id)
+object = gcp.storage.BucketObject("object",
+    bucket=bucket.name,
+    source=pulumi.FileAsset("./test-fixtures/appengine/hello-world.zip"))
+myapp_v1 = gcp.appengine.FlexibleAppVersion("myappV1",
+    version_id="v1",
+    project=gae_api.project,
+    service="default",
+    runtime="nodejs",
+    entrypoint={
+        "shell": "node ./app.js",
+    },
+    deployment={
+        "zip": {
+            "sourceUrl": pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
+        },
+    },
+    liveness_check={
+        "path": "/",
+    },
+    readiness_check={
+        "path": "/",
+    },
+    env_variables={
+        "port": "8080",
+    },
+    automatic_scaling={
+        "coolDownPeriod": "120s",
+        "cpu_utilization": {
+            "targetUtilization": 0.5,
+        },
+    },
+    noop_on_destroy=True)
+```
+
 
 
 ## Create a FlexibleAppVersion Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -437,7 +553,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
-Defaults to SERVING.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -695,7 +810,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
-Defaults to SERVING.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -953,7 +1067,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
-Defaults to SERVING.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1211,7 +1324,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
-Defaults to SERVING.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1352,7 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing FlexibleAppVersion Resource {#look-up}
 
 Get an existing FlexibleAppVersion resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#FlexibleAppVersionState">FlexibleAppVersionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#FlexibleAppVersion">FlexibleAppVersion</a></span></code></pre></div>
@@ -1711,7 +1823,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
-Defaults to SERVING.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1978,7 +2089,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
-Defaults to SERVING.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2245,7 +2355,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
-Defaults to SERVING.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2512,7 +2621,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
-Defaults to SERVING.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2557,9 +2665,6 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionApiConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionApiConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionApiConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionApiConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2582,7 +2687,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Action to take when users access resources that require authentication. Defaults to "AUTH_FAIL_ACTION_REDIRECT".
+    <dd>{{% md %}}Action to take when users access resources that require authentication.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2591,7 +2696,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Level of login required to access this resource. Defaults to "LOGIN_OPTIONAL".
+    <dd>{{% md %}}Level of login required to access this resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2634,7 +2739,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Action to take when users access resources that require authentication. Defaults to "AUTH_FAIL_ACTION_REDIRECT".
+    <dd>{{% md %}}Action to take when users access resources that require authentication.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2643,7 +2748,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Level of login required to access this resource. Defaults to "LOGIN_OPTIONAL".
+    <dd>{{% md %}}Level of login required to access this resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2686,7 +2791,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Action to take when users access resources that require authentication. Defaults to "AUTH_FAIL_ACTION_REDIRECT".
+    <dd>{{% md %}}Action to take when users access resources that require authentication.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2695,7 +2800,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Level of login required to access this resource. Defaults to "LOGIN_OPTIONAL".
+    <dd>{{% md %}}Level of login required to access this resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2738,7 +2843,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Action to take when users access resources that require authentication. Defaults to "AUTH_FAIL_ACTION_REDIRECT".
+    <dd>{{% md %}}Action to take when users access resources that require authentication.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2747,7 +2852,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Level of login required to access this resource. Defaults to "LOGIN_OPTIONAL".
+    <dd>{{% md %}}Level of login required to access this resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2782,9 +2887,6 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionAutomaticScaling.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3273,9 +3375,6 @@ Defaults to a runtime-specific value.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingCpuUtilizationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingCpuUtilizationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingCpuUtilizationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionAutomaticScalingCpuUtilization.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3390,9 +3489,6 @@ Defaults to a runtime-specific value.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingDiskUtilizationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingDiskUtilizationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingDiskUtilizationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionAutomaticScalingDiskUtilization.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3581,9 +3677,6 @@ Defaults to a runtime-specific value.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingNetworkUtilizationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionAutomaticScalingNetworkUtilization.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3771,9 +3864,6 @@ Defaults to a runtime-specific value.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingRequestUtilizationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingRequestUtilizationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingRequestUtilizationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionAutomaticScalingRequestUtilization.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3888,9 +3978,6 @@ Defaults to a runtime-specific value.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionDeploymentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionDeployment.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4083,9 +4170,6 @@ All files must be readable using the credentials supplied with this call.  Struc
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentCloudBuildOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentCloudBuildOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionDeploymentCloudBuildOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionDeploymentCloudBuildOptions.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4205,9 +4289,6 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentContainerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentContainerOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionDeploymentContainerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionDeploymentContainer.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4290,9 +4371,6 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentFileOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionDeploymentFileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionDeploymentFile.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4445,9 +4523,6 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentZipArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentZipOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionDeploymentZipArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionDeploymentZip.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4563,9 +4638,6 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionEndpointsApiServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionEndpointsApiServiceOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionEndpointsApiServiceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionEndpointsApiService.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4611,7 +4683,7 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted. Default is "FIXED".
+    <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.
 {{% /md %}}</dd>
 
 </dl>
@@ -4659,7 +4731,7 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted. Default is "FIXED".
+    <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.
 {{% /md %}}</dd>
 
 </dl>
@@ -4707,7 +4779,7 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted. Default is "FIXED".
+    <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.
 {{% /md %}}</dd>
 
 </dl>
@@ -4755,7 +4827,7 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted. Default is "FIXED".
+    <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.
 {{% /md %}}</dd>
 
 </dl>
@@ -4772,9 +4844,6 @@ the configuration ID. In this case, configId must be omitted.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionEntrypointArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionEntrypointOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionEntrypointArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionEntrypoint.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4854,9 +4923,6 @@ the configuration ID. In this case, configId must be omitted.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionLivenessCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionLivenessCheckOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionLivenessCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionLivenessCheck.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5153,9 +5219,6 @@ the configuration ID. In this case, configId must be omitted.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionManualScalingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionManualScalingOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionManualScalingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionManualScaling.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -5169,7 +5232,9 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of instances to assign to the service at the start. This number can later be altered by using the Modules API set_num_instances() function.
+    <dd>{{% md %}}Number of instances to assign to the service at the start.
+**Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manual_scaling"[0].instances]` to prevent drift detection.
 {{% /md %}}</dd>
 
 </dl>
@@ -5185,7 +5250,9 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of instances to assign to the service at the start. This number can later be altered by using the Modules API set_num_instances() function.
+    <dd>{{% md %}}Number of instances to assign to the service at the start.
+**Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manual_scaling"[0].instances]` to prevent drift detection.
 {{% /md %}}</dd>
 
 </dl>
@@ -5201,7 +5268,9 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Number of instances to assign to the service at the start. This number can later be altered by using the Modules API set_num_instances() function.
+    <dd>{{% md %}}Number of instances to assign to the service at the start.
+**Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manual_scaling"[0].instances]` to prevent drift detection.
 {{% /md %}}</dd>
 
 </dl>
@@ -5217,7 +5286,9 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Number of instances to assign to the service at the start. This number can later be altered by using the Modules API set_num_instances() function.
+    <dd>{{% md %}}Number of instances to assign to the service at the start.
+**Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manual_scaling"[0].instances]` to prevent drift detection.
 {{% /md %}}</dd>
 
 </dl>
@@ -5234,9 +5305,6 @@ the configuration ID. In this case, configId must be omitted.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionNetworkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionNetworkOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionNetworkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionNetwork.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5476,9 +5544,6 @@ If specified, the subnetwork must exist in the same region as the App Engine fle
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionReadinessCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionReadinessCheckOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionReadinessCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionReadinessCheck.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5779,9 +5844,6 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionResourcesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionResourcesOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionResourcesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionResources.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -5969,9 +6031,6 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionResourcesVolumeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionResourcesVolumeOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionResourcesVolumeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionResourcesVolume.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -6122,9 +6181,6 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionVpcAccessConnectorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionVpcAccessConnectorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionVpcAccessConnectorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionVpcAccessConnector.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

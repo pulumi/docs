@@ -13,26 +13,10 @@ meta_desc: "Explore the GetSSLPolicy function of the compute module, including e
 Gets an SSL Policy within GCE from its name, for use with Target HTTPS and Target SSL Proxies.
     For more information see [the official documentation](https://cloud.google.com/compute/docs/load-balancing/ssl-policies).
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -41,14 +25,21 @@ const my_ssl_policy = pulumi.output(gcp.compute.getSSLPolicy({
     name: "production-ssl-policy",
 }, { async: true }));
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
 
+my_ssl_policy = gcp.compute.get_ssl_policy(name="production-ssl-policy")
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetSSLPolicy {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -619,16 +610,4 @@ attribute will be empty.
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

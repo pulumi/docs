@@ -22,26 +22,14 @@ actual modification has not yet taken place. You can use the
 immediately. Using `apply_immediately` can result in a brief downtime as
 servers reboots.
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### Redis Cluster Mode Disabled
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
+To create a single shard primary with single read replica:
 
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -59,22 +47,75 @@ const example = new aws.elasticache.ReplicationGroup("example", {
     replicationGroupDescription: "test description",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example = aws.elasticache.ReplicationGroup("example",
+    automatic_failover_enabled=True,
+    availability_zones=[
+        "us-west-2a",
+        "us-west-2b",
+    ],
+    node_type="cache.m4.large",
+    number_cache_clusters=2,
+    parameter_group_name="default.redis3.2",
+    port=6379,
+    replication_group_description="test description")
+```
+
+You have two options for adjusting the number of replicas:
+
+* Adjusting `number_cache_clusters` directly. This will attempt to automatically add or remove replicas, but provides no granular control (e.g. preferred availability zone, cache cluster ID) for the added or removed replicas. This also currently expects cache cluster IDs in the form of `replication_group_id-00#`.
+* Otherwise for fine grained control of the underlying cache clusters, they can be added or removed with the [`aws.elasticache.Cluster` resource](https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html) and its `replication_group_id` attribute. In this situation, you will need to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to prevent perpetual differences with the `number_cache_cluster` attribute.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.elasticache.ReplicationGroup("example", {
+    automaticFailoverEnabled: true,
+    availabilityZones: [
+        "us-west-2a",
+        "us-west-2b",
+    ],
+    nodeType: "cache.m4.large",
+    numberCacheClusters: 2,
+    parameterGroupName: "default.redis3.2",
+    port: 6379,
+    replicationGroupDescription: "test description",
+}, { ignoreChanges: ["numberCacheClusters"] });
+const replica = new aws.elasticache.Cluster("replica", {
+    replicationGroupId: example.id,
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.elasticache.ReplicationGroup("example",
+    automatic_failover_enabled=True,
+    availability_zones=[
+        "us-west-2a",
+        "us-west-2b",
+    ],
+    lifecycle={
+        "ignoreChanges": ["numberCacheClusters"],
+    },
+    node_type="cache.m4.large",
+    number_cache_clusters=2,
+    parameter_group_name="default.redis3.2",
+    port=6379,
+    replication_group_description="test description")
+replica = aws.elasticache.Cluster("replica", replication_group_id=example.id)
+```
+
+{{% /example %}}
+{{% example %}}
 ### Redis Cluster Mode Enabled
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
+To create two shards with a primary and a single read replica each:
 
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -91,13 +132,35 @@ const baz = new aws.elasticache.ReplicationGroup("baz", {
     replicationGroupDescription: "test description",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+baz = aws.elasticache.ReplicationGroup("baz",
+    automatic_failover_enabled=True,
+    cluster_mode={
+        "numNodeGroups": 2,
+        "replicasPerNodeGroup": 1,
+    },
+    node_type="cache.t2.small",
+    parameter_group_name="default.redis3.2.cluster.on",
+    port=6379,
+    replication_group_description="test description")
+```
+
+> **Note:** We currently do not support passing a `primary_cluster_id` in order to create the Replication Group.
+
+> **Note:** Automatic Failover is unavailable for Redis versions earlier than 2.8.6,
+and unavailable on T1 node types. For T2 node types, it is only available on Redis version 3.2.4 or later with cluster mode enabled. See the [High Availability Using Replication Groups](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Replication.html) guide
+for full details on using Replication Groups.
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a ReplicationGroup Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1505,7 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ReplicationGroup Resource {#look-up}
 
 Get an existing ReplicationGroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticache/#ReplicationGroupState">ReplicationGroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticache/#ReplicationGroup">ReplicationGroup</a></span></code></pre></div>
@@ -2793,9 +2856,6 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticache?tab=doc#ReplicationGroupClusterModeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticache?tab=doc#ReplicationGroupClusterModeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElastiCache.Inputs.ReplicationGroupClusterModeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElastiCache.Outputs.ReplicationGroupClusterMode.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

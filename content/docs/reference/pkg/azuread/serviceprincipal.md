@@ -14,26 +14,10 @@ Manages a Service Principal associated with an Application within Azure Active D
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API. Please see The Granting a Service Principal permission to manage AAD for the required steps.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
@@ -55,13 +39,33 @@ const exampleServicePrincipal = new azuread.ServicePrincipal("example", {
     ],
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_azuread as azuread
 
+example_application = azuread.Application("exampleApplication",
+    available_to_other_tenants=False,
+    homepage="http://homepage",
+    identifier_uris=["http://uri"],
+    oauth2_allow_implicit_flow=True,
+    reply_urls=["http://replyurl"])
+example_service_principal = azuread.ServicePrincipal("exampleServicePrincipal",
+    app_role_assignment_required=False,
+    application_id=example_application.application_id,
+    tags=[
+        "example",
+        "tags",
+        "here",
+    ])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a ServicePrincipal Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -561,7 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ServicePrincipal Resource {#look-up}
 
 Get an existing ServicePrincipal resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#ServicePrincipalState">ServicePrincipalState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#ServicePrincipal">ServicePrincipal</a></span></code></pre></div>
@@ -941,9 +945,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ServicePrincipalOauth2PermissionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ServicePrincipalOauth2PermissionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.AzureAD.Inputs.ServicePrincipalOauth2PermissionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.AzureAD.Outputs.ServicePrincipalOauth2Permission.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -24,10 +24,126 @@ To get more information about BackendService, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/http/backend-service)
 
+> **Warning:** All arguments including `iap.oauth2_client_secret` and `iap.oauth2_client_secret_sha256` will be stored in the raw
+state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
+
+## Example Usage - Backend Service Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultHttpHealthCheck = new gcp.compute.HttpHealthCheck("defaultHttpHealthCheck", {
+    requestPath: "/",
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+});
+const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {healthChecks: [defaultHttpHealthCheck.selfLink]});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_http_health_check = gcp.compute.HttpHealthCheck("defaultHttpHealthCheck",
+    request_path="/",
+    check_interval_sec=1,
+    timeout_sec=1)
+default_backend_service = gcp.compute.BackendService("defaultBackendService", health_checks=[default_http_health_check.self_link])
+```
+## Example Usage - Backend Service Traffic Director Round Robin
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const healthCheck = new gcp.compute.HealthCheck("healthCheck", {http_health_check: {
+    port: 80,
+}});
+const default = new gcp.compute.BackendService("default", {
+    healthChecks: [healthCheck.selfLink],
+    loadBalancingScheme: "INTERNAL_SELF_MANAGED",
+    localityLbPolicy: "ROUND_ROBIN",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+health_check = gcp.compute.HealthCheck("healthCheck", http_health_check={
+    "port": 80,
+})
+default = gcp.compute.BackendService("default",
+    health_checks=[health_check.self_link],
+    load_balancing_scheme="INTERNAL_SELF_MANAGED",
+    locality_lb_policy="ROUND_ROBIN")
+```
+## Example Usage - Backend Service Traffic Director Ring Hash
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const healthCheck = new gcp.compute.HealthCheck("healthCheck", {http_health_check: {
+    port: 80,
+}});
+const default = new gcp.compute.BackendService("default", {
+    healthChecks: [healthCheck.selfLink],
+    loadBalancingScheme: "INTERNAL_SELF_MANAGED",
+    localityLbPolicy: "RING_HASH",
+    sessionAffinity: "HTTP_COOKIE",
+    circuit_breakers: {
+        maxConnections: 10,
+    },
+    consistent_hash: {
+        http_cookie: {
+            ttl: {
+                seconds: 11,
+                nanos: 1111,
+            },
+            name: "mycookie",
+        },
+    },
+    outlier_detection: {
+        consecutiveErrors: 2,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+health_check = gcp.compute.HealthCheck("healthCheck", http_health_check={
+    "port": 80,
+})
+default = gcp.compute.BackendService("default",
+    health_checks=[health_check.self_link],
+    load_balancing_scheme="INTERNAL_SELF_MANAGED",
+    locality_lb_policy="RING_HASH",
+    session_affinity="HTTP_COOKIE",
+    circuit_breakers={
+        "maxConnections": 10,
+    },
+    consistent_hash={
+        "http_cookie": {
+            "ttl": {
+                "seconds": 11,
+                "nanos": 1111,
+            },
+            "name": "mycookie",
+        },
+    },
+    outlier_detection={
+        "consecutiveErrors": 2,
+    })
+```
+
 
 
 ## Create a BackendService Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -334,8 +450,7 @@ Provide this property when you create the resource.
     </dt>
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
-load balancing cannot be used with the other. Must be `EXTERNAL` or
-`INTERNAL_SELF_MANAGED` for a global backend service. Defaults to `EXTERNAL`.
+load balancing cannot be used with the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -426,8 +541,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, TCP, and SSL. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -594,8 +708,7 @@ Provide this property when you create the resource.
     </dt>
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
-load balancing cannot be used with the other. Must be `EXTERNAL` or
-`INTERNAL_SELF_MANAGED` for a global backend service. Defaults to `EXTERNAL`.
+load balancing cannot be used with the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -686,8 +799,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, TCP, and SSL. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -854,8 +966,7 @@ Provide this property when you create the resource.
     </dt>
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
-load balancing cannot be used with the other. Must be `EXTERNAL` or
-`INTERNAL_SELF_MANAGED` for a global backend service. Defaults to `EXTERNAL`.
+load balancing cannot be used with the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -946,8 +1057,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, TCP, and SSL. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -1114,8 +1224,7 @@ Provide this property when you create the resource.
     </dt>
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
-load balancing cannot be used with the other. Must be `EXTERNAL` or
-`INTERNAL_SELF_MANAGED` for a global backend service. Defaults to `EXTERNAL`.
+load balancing cannot be used with the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1206,8 +1315,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, TCP, and SSL. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -1431,7 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing BackendService Resource {#look-up}
 
 Get an existing BackendService resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#BackendServiceState">BackendServiceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#BackendService">BackendService</a></span></code></pre></div>
@@ -1697,8 +1805,7 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
     </dt>
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
-load balancing cannot be used with the other. Must be `EXTERNAL` or
-`INTERNAL_SELF_MANAGED` for a global backend service. Defaults to `EXTERNAL`.
+load balancing cannot be used with the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1789,8 +1896,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, TCP, and SSL. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -1984,8 +2090,7 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
     </dt>
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
-load balancing cannot be used with the other. Must be `EXTERNAL` or
-`INTERNAL_SELF_MANAGED` for a global backend service. Defaults to `EXTERNAL`.
+load balancing cannot be used with the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2076,8 +2181,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, TCP, and SSL. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -2271,8 +2375,7 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
     </dt>
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
-load balancing cannot be used with the other. Must be `EXTERNAL` or
-`INTERNAL_SELF_MANAGED` for a global backend service. Defaults to `EXTERNAL`.
+load balancing cannot be used with the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2363,8 +2466,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, TCP, and SSL. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -2558,8 +2660,7 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
     </dt>
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
-load balancing cannot be used with the other. Must be `EXTERNAL` or
-`INTERNAL_SELF_MANAGED` for a global backend service. Defaults to `EXTERNAL`.
+load balancing cannot be used with the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2650,8 +2751,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, TCP, and SSL. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -2715,9 +2815,6 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceBackendArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceBackendOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceBackend.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3338,9 +3435,6 @@ range is [0.0, 1.0].
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceCdnPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceCdnPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceCdnPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceCdnPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3487,9 +3581,6 @@ responses will not be altered.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceCdnPolicyCacheKeyPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceCdnPolicyCacheKeyPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceCdnPolicyCacheKeyPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceCdnPolicyCacheKeyPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3765,9 +3856,6 @@ delimiters.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceCircuitBreakersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceCircuitBreakersOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceCircuitBreakersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceCircuitBreakers.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4056,9 +4144,6 @@ Defaults to 3.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceCircuitBreakersConnectTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceCircuitBreakersConnectTimeoutOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceCircuitBreakersConnectTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceCircuitBreakersConnectTimeout.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4185,9 +4270,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceConsistentHashArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceConsistentHashOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceConsistentHashArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceConsistentHash.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4376,9 +4458,6 @@ Defaults to 1024.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceConsistentHashHttpCookieArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceConsistentHashHttpCookieOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceConsistentHashHttpCookieArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceConsistentHashHttpCookie.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4530,9 +4609,6 @@ Defaults to 1024.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceConsistentHashHttpCookieTtlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceConsistentHashHttpCookieTtlOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceConsistentHashHttpCookieTtlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceConsistentHashHttpCookieTtl.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4660,9 +4736,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceIapArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceIapOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceIapArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceIap.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4685,7 +4758,7 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}OAuth2 Client Secret for IAP
+    <dd>{{% md %}}OAuth2 Client Secret for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4695,7 +4768,7 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}-
-OAuth2 Client Secret SHA-256 for IAP
+OAuth2 Client Secret SHA-256 for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -4720,7 +4793,7 @@ OAuth2 Client Secret SHA-256 for IAP
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}OAuth2 Client Secret for IAP
+    <dd>{{% md %}}OAuth2 Client Secret for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4730,7 +4803,7 @@ OAuth2 Client Secret SHA-256 for IAP
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}-
-OAuth2 Client Secret SHA-256 for IAP
+OAuth2 Client Secret SHA-256 for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -4755,7 +4828,7 @@ OAuth2 Client Secret SHA-256 for IAP
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}OAuth2 Client Secret for IAP
+    <dd>{{% md %}}OAuth2 Client Secret for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4765,7 +4838,7 @@ OAuth2 Client Secret SHA-256 for IAP
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}-
-OAuth2 Client Secret SHA-256 for IAP
+OAuth2 Client Secret SHA-256 for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -4790,7 +4863,7 @@ OAuth2 Client Secret SHA-256 for IAP
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}OAuth2 Client Secret for IAP
+    <dd>{{% md %}}OAuth2 Client Secret for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4800,7 +4873,7 @@ OAuth2 Client Secret SHA-256 for IAP
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}-
-OAuth2 Client Secret SHA-256 for IAP
+OAuth2 Client Secret SHA-256 for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -4817,9 +4890,6 @@ OAuth2 Client Secret SHA-256 for IAP
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceLogConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceLogConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceLogConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceLogConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4947,9 +5017,6 @@ The default value is 1.0.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceOutlierDetectionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceOutlierDetectionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceOutlierDetectionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceOutlierDetection.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5494,9 +5561,6 @@ runtime value should be 1900. Defaults to 1900.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceOutlierDetectionBaseEjectionTimeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceOutlierDetectionBaseEjectionTimeOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceOutlierDetectionBaseEjectionTimeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceOutlierDetectionBaseEjectionTime.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -5623,9 +5687,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceOutlierDetectionIntervalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceOutlierDetectionIntervalOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceOutlierDetectionIntervalArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceOutlierDetectionInterval.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -20,6 +20,36 @@ Three different resources help you manage your IAM policy for Healthcare HL7v2 s
 
 > **Note:** `gcp.healthcare.Hl7StoreIamBinding` resources **can be** used in conjunction with `gcp.healthcare.Hl7StoreIamMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_healthcare\_hl7\_v2\_store\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const hl7V2Store = new gcp.healthcare.Hl7StoreIamPolicy("hl7V2Store", {
+    hl7V2StoreId: "your-hl7-v2-store-id",
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/editor",
+    "members": ["user:jane@example.com"],
+}])
+hl7_v2_store = gcp.healthcare.Hl7StoreIamPolicy("hl7V2Store",
+    hl7_v2_store_id="your-hl7-v2-store-id",
+    policy_data=admin.policy_data)
+```
+
 ## google\_healthcare\_hl7\_v2\_store\_iam\_binding
 
 ```typescript
@@ -31,6 +61,15 @@ const hl7V2Store = new gcp.healthcare.Hl7StoreIamBinding("hl7_v2_store", {
     members: ["user:jane@example.com"],
     role: "roles/editor",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+hl7_v2_store = gcp.healthcare.Hl7StoreIamBinding("hl7V2Store",
+    hl7_v2_store_id="your-hl7-v2-store-id",
+    members=["user:jane@example.com"],
+    role="roles/editor")
 ```
 
 ## google\_healthcare\_hl7\_v2\_store\_iam\_member
@@ -45,11 +84,20 @@ const hl7V2Store = new gcp.healthcare.Hl7StoreIamMember("hl7_v2_store", {
     role: "roles/editor",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+hl7_v2_store = gcp.healthcare.Hl7StoreIamMember("hl7V2Store",
+    hl7_v2_store_id="your-hl7-v2-store-id",
+    member="user:jane@example.com",
+    role="roles/editor")
+```
 
 
 
 ## Create a Hl7StoreIamBinding Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -525,7 +573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Hl7StoreIamBinding Resource {#look-up}
 
 Get an existing Hl7StoreIamBinding resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#Hl7StoreIamBindingState">Hl7StoreIamBindingState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#Hl7StoreIamBinding">Hl7StoreIamBinding</a></span></code></pre></div>
@@ -881,9 +929,6 @@ project setting will be used as a fallback.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#Hl7StoreIamBindingConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#Hl7StoreIamBindingConditionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Inputs.Hl7StoreIamBindingConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Outputs.Hl7StoreIamBindingCondition.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

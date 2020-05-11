@@ -23,12 +23,53 @@ and
 role entity pairs.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+Create an object ACL with one owner and one reader.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const image-store = new gcp.storage.Bucket("image-store", {location: "EU"});
+const image = new gcp.storage.BucketObject("image", {
+    bucket: image-store.name,
+    source: new pulumi.asset.FileAsset("image1.jpg"),
+});
+const image-store-acl = new gcp.storage.ObjectACL("image-store-acl", {
+    bucket: image-store.name,
+    object: image.outputName,
+    roleEntities: [
+        "OWNER:user-my.email@gmail.com",
+        "READER:group-mygroup",
+    ],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+image_store = gcp.storage.Bucket("image-store", location="EU")
+image = gcp.storage.BucketObject("image",
+    bucket=image_store.name,
+    source=pulumi.FileAsset("image1.jpg"))
+image_store_acl = gcp.storage.ObjectACL("image-store-acl",
+    bucket=image_store.name,
+    object=image.output_name,
+    role_entities=[
+        "OWNER:user-my.email@gmail.com",
+        "READER:group-mygroup",
+    ])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Create a ObjectACL Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -460,7 +501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ObjectACL Resource {#look-up}
 
 Get an existing ObjectACL resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#ObjectACLState">ObjectACLState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#ObjectACL">ObjectACL</a></span></code></pre></div>

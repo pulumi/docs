@@ -22,8 +22,96 @@ Three different resources help you manage your IAM policy for Cloud Functions Cl
 
 
 
+## google\_cloudfunctions\_function\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/viewer",
+        members: ["user:jane@example.com"],
+    }],
+});
+const policy = new gcp.cloudfunctions.FunctionIamPolicy("policy", {
+    project: google_cloudfunctions_function["function"].project,
+    region: google_cloudfunctions_function["function"].region,
+    cloudFunction: google_cloudfunctions_function["function"].name,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/viewer",
+    "members": ["user:jane@example.com"],
+}])
+policy = gcp.cloudfunctions.FunctionIamPolicy("policy",
+    project=google_cloudfunctions_function["function"]["project"],
+    region=google_cloudfunctions_function["function"]["region"],
+    cloud_function=google_cloudfunctions_function["function"]["name"],
+    policy_data=admin.policy_data)
+```
+
+## google\_cloudfunctions\_function\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const binding = new gcp.cloudfunctions.FunctionIamBinding("binding", {
+    project: google_cloudfunctions_function["function"].project,
+    region: google_cloudfunctions_function["function"].region,
+    cloudFunction: google_cloudfunctions_function["function"].name,
+    role: "roles/viewer",
+    members: ["user:jane@example.com"],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+binding = gcp.cloudfunctions.FunctionIamBinding("binding",
+    project=google_cloudfunctions_function["function"]["project"],
+    region=google_cloudfunctions_function["function"]["region"],
+    cloud_function=google_cloudfunctions_function["function"]["name"],
+    role="roles/viewer",
+    members=["user:jane@example.com"])
+```
+
+## google\_cloudfunctions\_function\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const member = new gcp.cloudfunctions.FunctionIamMember("member", {
+    project: google_cloudfunctions_function["function"].project,
+    region: google_cloudfunctions_function["function"].region,
+    cloudFunction: google_cloudfunctions_function["function"].name,
+    role: "roles/viewer",
+    member: "user:jane@example.com",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+member = gcp.cloudfunctions.FunctionIamMember("member",
+    project=google_cloudfunctions_function["function"]["project"],
+    region=google_cloudfunctions_function["function"]["region"],
+    cloud_function=google_cloudfunctions_function["function"]["name"],
+    role="roles/viewer",
+    member="user:jane@example.com")
+```
+
+
+
 ## Create a FunctionIamPolicy Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -503,7 +591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing FunctionIamPolicy Resource {#look-up}
 
 Get an existing FunctionIamPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#FunctionIamPolicyState">FunctionIamPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#FunctionIamPolicy">FunctionIamPolicy</a></span></code></pre></div>

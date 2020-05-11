@@ -29,73 +29,24 @@ resource.
 > **NOTE:** This resource requires vCenter and is not available on direct ESXi
 connections.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+The example below creates two virtual machine in a cluster using the
+[`vsphere..VirtualMachine`][tf-vsphere-vm-resource] resource in a cluster
+looked up by the [`vsphere..ComputeCluster`][tf-vsphere-cluster-data-source]
+data source. It then creates a group with this virtual machine. Two groups are created, each with one of the created VMs. Finally, a rule is created to ensure that `vm1` starts before `vm2`.
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
+[tf-vsphere-vm-resource]: /docs/providers/vsphere/r/virtual_machine.html
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
+> Note how `dependency_vm_group_name` and
+`vm_group_name` are sourced off of the `name` attributes from
+the [`vsphere..ComputeClusterVmGroup`][tf-vsphere-cluster-vm-group-resource]
+resource. This is to ensure that the rule is not created before the groups
+exist, which may not possibly happen in the event that the names came from a
+"static" source such as a variable.
 
-{{% example python %}}
-```python
-import pulumi
-import pulumi_vsphere as vsphere
-
-dc = vsphere.get_datacenter(name="dc1")
-datastore = vsphere.get_datastore(datacenter_id=dc.id,
-    name="datastore1")
-cluster = vsphere.get_compute_cluster(datacenter_id=dc.id,
-    name="cluster1")
-network = vsphere.get_network(datacenter_id=dc.id,
-    name="network1")
-vm1 = vsphere.VirtualMachine("vm1",
-    datastore_id=datastore.id,
-    disks=[{
-        "label": "disk0",
-        "size": 20,
-    }],
-    guest_id="other3xLinux64Guest",
-    memory=2048,
-    network_interfaces=[{
-        "networkId": network.id,
-    }],
-    num_cpus=2,
-    resource_pool_id=cluster.resource_pool_id)
-vm2 = vsphere.VirtualMachine("vm2",
-    datastore_id=datastore.id,
-    disks=[{
-        "label": "disk0",
-        "size": 20,
-    }],
-    guest_id="other3xLinux64Guest",
-    memory=2048,
-    network_interfaces=[{
-        "networkId": network.id,
-    }],
-    num_cpus=2,
-    resource_pool_id=cluster.resource_pool_id)
-cluster_vm_group1 = vsphere.ComputeClusterVmGroup("clusterVmGroup1",
-    compute_cluster_id=cluster.id,
-    virtual_machine_ids=[vm1.id])
-cluster_vm_group2 = vsphere.ComputeClusterVmGroup("clusterVmGroup2",
-    compute_cluster_id=cluster.id,
-    virtual_machine_ids=[vm2.id])
-cluster_vm_dependency_rule = vsphere.ComputeClusterVmDependencyRule("clusterVmDependencyRule",
-    compute_cluster_id=cluster.id,
-    dependency_vm_group_name=cluster_vm_group1.name,
-    vm_group_name=cluster_vm_group2.name)
-```
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -157,13 +108,62 @@ const clusterVmDependencyRule = new vsphere.ComputeClusterVmDependencyRule("clus
     vmGroupName: clusterVmGroup2.name,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_vsphere as vsphere
 
+dc = vsphere.get_datacenter(name="dc1")
+datastore = vsphere.get_datastore(datacenter_id=dc.id,
+    name="datastore1")
+cluster = vsphere.get_compute_cluster(datacenter_id=dc.id,
+    name="cluster1")
+network = vsphere.get_network(datacenter_id=dc.id,
+    name="network1")
+vm1 = vsphere.VirtualMachine("vm1",
+    datastore_id=datastore.id,
+    disks=[{
+        "label": "disk0",
+        "size": 20,
+    }],
+    guest_id="other3xLinux64Guest",
+    memory=2048,
+    network_interfaces=[{
+        "networkId": network.id,
+    }],
+    num_cpus=2,
+    resource_pool_id=cluster.resource_pool_id)
+vm2 = vsphere.VirtualMachine("vm2",
+    datastore_id=datastore.id,
+    disks=[{
+        "label": "disk0",
+        "size": 20,
+    }],
+    guest_id="other3xLinux64Guest",
+    memory=2048,
+    network_interfaces=[{
+        "networkId": network.id,
+    }],
+    num_cpus=2,
+    resource_pool_id=cluster.resource_pool_id)
+cluster_vm_group1 = vsphere.ComputeClusterVmGroup("clusterVmGroup1",
+    compute_cluster_id=cluster.id,
+    virtual_machine_ids=[vm1.id])
+cluster_vm_group2 = vsphere.ComputeClusterVmGroup("clusterVmGroup2",
+    compute_cluster_id=cluster.id,
+    virtual_machine_ids=[vm2.id])
+cluster_vm_dependency_rule = vsphere.ComputeClusterVmDependencyRule("clusterVmDependencyRule",
+    compute_cluster_id=cluster.id,
+    dependency_vm_group_name=cluster_vm_group1.name,
+    vm_group_name=cluster_vm_group2.name)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a ComputeClusterVmDependencyRule Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -703,7 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ComputeClusterVmDependencyRule Resource {#look-up}
 
 Get an existing ComputeClusterVmDependencyRule resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ComputeClusterVmDependencyRuleState">ComputeClusterVmDependencyRuleState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ComputeClusterVmDependencyRule">ComputeClusterVmDependencyRule</a></span></code></pre></div>

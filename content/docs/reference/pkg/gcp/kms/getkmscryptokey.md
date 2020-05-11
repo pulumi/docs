@@ -19,13 +19,40 @@ A CryptoKey is an interface to key material which can be used to encrypt and dec
 Google Cloud KMS KeyRing.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myKeyRing = gcp.kms.getKMSKeyRing({
+    name: "my-key-ring",
+    location: "us-central1",
+});
+const myCryptoKey = myKeyRing.then(myKeyRing => gcp.kms.getKMSCryptoKey({
+    name: "my-crypto-key",
+    keyRing: myKeyRing.selfLink,
+}));
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_key_ring = gcp.kms.get_kms_key_ring(name="my-key-ring",
+    location="us-central1")
+my_crypto_key = gcp.kms.get_kms_crypto_key(name="my-crypto-key",
+    key_ring=my_key_ring.self_link)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Using GetKMSCryptoKey {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -497,9 +524,6 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#GetKMSCryptoKeyVersionTemplate">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.Outputs.GetKMSCryptoKeyVersionTemplate.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -600,16 +624,4 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

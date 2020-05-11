@@ -12,36 +12,10 @@ meta_desc: "Explore the License resource of the vSphere package, including examp
 
 Provides a VMware vSphere license resource. This can be used to add and remove license keys.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_vsphere as vsphere
-
-license_key = vsphere.License("licenseKey",
-    labels={
-        "VpxClientLicenseLabel": "Hello World",
-        "Workflow": "Hello World",
-    },
-    license_key="452CQ-2EK54-K8742-00000-00000")
-```
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -54,13 +28,25 @@ const licenseKey = new vsphere.License("licenseKey", {
     licenseKey: "452CQ-2EK54-K8742-00000-00000",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_vsphere as vsphere
 
+license_key = vsphere.License("licenseKey",
+    labels={
+        "VpxClientLicenseLabel": "Hello World",
+        "Workflow": "Hello World",
+    },
+    license_key="452CQ-2EK54-K8742-00000-00000")
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a License Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -560,7 +546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing License Resource {#look-up}
 
 Get an existing License resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#LicenseState">LicenseState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#License">License</a></span></code></pre></div>

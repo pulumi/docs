@@ -28,10 +28,61 @@ To get more information about CryptoKey, see:
 * How-to Guides
     * [Creating a key](https://cloud.google.com/kms/docs/creating-keys#create_a_key)
 
+## Example Usage - Kms Crypto Key Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const example-key = new gcp.kms.CryptoKey("example-key", {
+    keyRing: keyring.selfLink,
+    rotationPeriod: "100000s",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+keyring = gcp.kms.KeyRing("keyring", location="global")
+example_key = gcp.kms.CryptoKey("example-key",
+    key_ring=keyring.self_link,
+    rotation_period="100000s")
+```
+## Example Usage - Kms Crypto Key Asymmetric Sign
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const example-asymmetric-sign-key = new gcp.kms.CryptoKey("example-asymmetric-sign-key", {
+    keyRing: keyring.selfLink,
+    purpose: "ASYMMETRIC_SIGN",
+    version_template: {
+        algorithm: "EC_SIGN_P384_SHA384",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+keyring = gcp.kms.KeyRing("keyring", location="global")
+example_asymmetric_sign_key = gcp.kms.CryptoKey("example-asymmetric-sign-key",
+    key_ring=keyring.self_link,
+    purpose="ASYMMETRIC_SIGN",
+    version_template={
+        "algorithm": "EC_SIGN_P384_SHA384",
+    })
+```
+
 
 
 ## Create a CryptoKey Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -587,7 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing CryptoKey Resource {#look-up}
 
 Get an existing CryptoKey resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#CryptoKeyState">CryptoKeyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#CryptoKey">CryptoKey</a></span></code></pre></div>
@@ -1023,9 +1074,6 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKeyVersionTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKeyVersionTemplateOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.Inputs.CryptoKeyVersionTemplateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.Outputs.CryptoKeyVersionTemplate.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

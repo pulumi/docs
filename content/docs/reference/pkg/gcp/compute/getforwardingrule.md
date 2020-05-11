@@ -12,26 +12,10 @@ meta_desc: "Explore the GetForwardingRule function of the compute module, includ
 
 Get a forwarding rule within GCE from its name.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -40,14 +24,21 @@ const my_forwarding_rule = pulumi.output(gcp.compute.getForwardingRule({
     name: "forwarding-rule-us-east1",
 }, { async: true }));
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
 
+my_forwarding_rule = gcp.compute.get_forwarding_rule(name="forwarding-rule-us-east1")
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetForwardingRule {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -798,16 +789,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

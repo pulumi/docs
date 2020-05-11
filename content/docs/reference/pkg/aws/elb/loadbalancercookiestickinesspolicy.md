@@ -12,26 +12,10 @@ meta_desc: "Explore the LoadBalancerCookieStickinessPolicy resource of the elb m
 
 Provides a load balancer cookie stickiness policy, which allows an ELB to control the sticky session lifetime of the browser.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -51,13 +35,31 @@ const foo = new aws.elb.LoadBalancerCookieStickinessPolicy("foo", {
     loadBalancer: lb.id,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+lb = aws.elb.LoadBalancer("lb",
+    availability_zones=["us-east-1a"],
+    listeners=[{
+        "instancePort": 8000,
+        "instanceProtocol": "http",
+        "lbPort": 80,
+        "lbProtocol": "http",
+    }])
+foo = aws.elb.LoadBalancerCookieStickinessPolicy("foo",
+    cookie_expiration_period=600,
+    lb_port=80,
+    load_balancer=lb.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a LoadBalancerCookieStickinessPolicy Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -501,7 +503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing LoadBalancerCookieStickinessPolicy Resource {#look-up}
 
 Get an existing LoadBalancerCookieStickinessPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elb/#LoadBalancerCookieStickinessPolicyState">LoadBalancerCookieStickinessPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elb/#LoadBalancerCookieStickinessPolicy">LoadBalancerCookieStickinessPolicy</a></span></code></pre></div>

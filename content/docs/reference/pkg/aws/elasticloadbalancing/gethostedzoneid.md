@@ -13,28 +13,10 @@ meta_desc: "Explore the GetHostedZoneId function of the elasticloadbalancing mod
 Use this data source to get the HostedZoneId of the AWS Elastic Load Balancing HostedZoneId
 in a given region for the purpose of using in an AWS Route53 Alias.
 
-
-
-Deprecated: aws.elasticloadbalancing.getHostedZoneId has been deprecated in favour of aws.elb.getHostedZoneId
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -51,15 +33,33 @@ const www = new aws.route53.Record("www", {
     zoneId: aws_route53_zone_primary.zoneId,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+main = aws.elb.get_hosted_zone_id()
+www = aws.route53.Record("www",
+    aliases=[{
+        "evaluateTargetHealth": True,
+        "name": aws_elb["main"]["dns_name"],
+        "zoneId": main.id,
+    }],
+    name="example.com",
+    type="A",
+    zone_id=aws_route53_zone["primary"]["zone_id"])
+```
+
+{{% /example %}}
 {{% /examples %}}
+
+Deprecated: aws.elasticloadbalancing.getHostedZoneId has been deprecated in favour of aws.elb.getHostedZoneId
+
 <p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancing.getHostedZoneId has been deprecated in favour of aws.elb.getHostedZoneId{{% /md %}}</p>
 
 
 ## Using GetHostedZoneId {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -270,16 +270,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

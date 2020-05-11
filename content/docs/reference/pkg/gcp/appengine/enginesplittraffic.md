@@ -17,10 +17,120 @@ To get more information about ServiceSplitTraffic, see:
 
 * [API documentation](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services)
 
+## Example Usage - App Engine Service Split Traffic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bucket = new gcp.storage.Bucket("bucket", {});
+const object = new gcp.storage.BucketObject("object", {
+    bucket: bucket.name,
+    source: new pulumi.asset.FileAsset("./test-fixtures/appengine/hello-world.zip"),
+});
+const liveappV1 = new gcp.appengine.StandardAppVersion("liveappV1", {
+    versionId: "v1",
+    service: "liveapp",
+    deleteServiceOnDestroy: true,
+    runtime: "nodejs10",
+    entrypoint: {
+        shell: "node ./app.js",
+    },
+    deployment: {
+        zip: {
+            sourceUrl: pulumi.interpolate`https://storage.googleapis.com/${bucket.name}/${object.name}`,
+        },
+    },
+    envVariables: {
+        port: "8080",
+    },
+});
+const liveappV2 = new gcp.appengine.StandardAppVersion("liveappV2", {
+    versionId: "v2",
+    service: "liveapp",
+    noopOnDestroy: true,
+    runtime: "nodejs10",
+    entrypoint: {
+        shell: "node ./app.js",
+    },
+    deployment: {
+        zip: {
+            sourceUrl: pulumi.interpolate`https://storage.googleapis.com/${bucket.name}/${object.name}`,
+        },
+    },
+    envVariables: {
+        port: "8080",
+    },
+});
+const liveapp = new gcp.appengine.EngineSplitTraffic("liveapp", {
+    service: liveappV2.service,
+    migrateTraffic: false,
+    split: {
+        shardBy: "IP",
+        allocations: pulumi.all([liveappV1.versionId, liveappV2.versionId]).apply(([liveappV1VersionId, liveappV2VersionId]) => {
+            [liveappV1VersionId]: 0.75,
+            [liveappV2VersionId]: 0.25,
+        }),
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bucket = gcp.storage.Bucket("bucket")
+object = gcp.storage.BucketObject("object",
+    bucket=bucket.name,
+    source=pulumi.FileAsset("./test-fixtures/appengine/hello-world.zip"))
+liveapp_v1 = gcp.appengine.StandardAppVersion("liveappV1",
+    version_id="v1",
+    service="liveapp",
+    delete_service_on_destroy=True,
+    runtime="nodejs10",
+    entrypoint={
+        "shell": "node ./app.js",
+    },
+    deployment={
+        "zip": {
+            "sourceUrl": pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
+        },
+    },
+    env_variables={
+        "port": "8080",
+    })
+liveapp_v2 = gcp.appengine.StandardAppVersion("liveappV2",
+    version_id="v2",
+    service="liveapp",
+    noop_on_destroy=True,
+    runtime="nodejs10",
+    entrypoint={
+        "shell": "node ./app.js",
+    },
+    deployment={
+        "zip": {
+            "sourceUrl": pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
+        },
+    },
+    env_variables={
+        "port": "8080",
+    })
+liveapp = gcp.appengine.EngineSplitTraffic("liveapp",
+    service=liveapp_v2.service,
+    migrate_traffic=False,
+    split={
+        "shardBy": "IP",
+        "allocations": pulumi.Output.all(liveapp_v1.version_id, liveapp_v2.version_id).apply(lambda liveappV1Version_id, liveappV2Version_id: {
+            liveapp_v1_version_id: 0.75,
+            liveapp_v2_version_id: 0.25,
+        }),
+    })
+```
+
 
 
 ## Create a EngineSplitTraffic Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -452,7 +562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing EngineSplitTraffic Resource {#look-up}
 
 Get an existing EngineSplitTraffic resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#EngineSplitTrafficState">EngineSplitTrafficState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#EngineSplitTraffic">EngineSplitTraffic</a></span></code></pre></div>
@@ -764,9 +874,6 @@ If it is not provided, the provider project is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#EngineSplitTrafficSplitArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#EngineSplitTrafficSplitOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.EngineSplitTrafficSplitArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.EngineSplitTrafficSplit.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

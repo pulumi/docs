@@ -12,26 +12,10 @@ meta_desc: "Explore the EventRule resource of the cloudwatch module, including e
 
 Provides a CloudWatch Event Rule resource.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -66,13 +50,44 @@ const defaultTopicPolicy = new aws.sns.TopicPolicy("default", {
     policy: snsTopicPolicy.json,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+console = aws.cloudwatch.EventRule("console",
+    description="Capture each AWS Console Sign In",
+    event_pattern="""{
+  "detail-type": [
+    "AWS Console Sign In via CloudTrail"
+  ]
+}
+
+""")
+aws_logins = aws.sns.Topic("awsLogins")
+sns = aws.cloudwatch.EventTarget("sns",
+    arn=aws_logins.arn,
+    rule=console.name)
+sns_topic_policy = aws_logins.arn.apply(lambda arn: aws.iam.get_policy_document(statements=[{
+    "actions": ["SNS:Publish"],
+    "effect": "Allow",
+    "principals": [{
+        "identifiers": ["events.amazonaws.com"],
+        "type": "Service",
+    }],
+    "resources": [arn],
+}]))
+default = aws.sns.TopicPolicy("default",
+    arn=aws_logins.arn,
+    policy=sns_topic_policy.json)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a EventRule Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -692,7 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing EventRule Resource {#look-up}
 
 Get an existing EventRule resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#EventRuleState">EventRuleState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#EventRule">EventRule</a></span></code></pre></div>

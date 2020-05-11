@@ -12,7 +12,56 @@ meta_desc: "Explore the LaunchConfiguration resource of the ec2 module, includin
 
 Provides a resource to create a new launch configuration, used for autoscaling groups.
 
+{{% examples %}}
+## Example Usage
+{{% example %}}
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const ubuntu = pulumi.output(aws.getAmi({
+    filters: [
+        {
+            name: "name",
+            values: ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"],
+        },
+        {
+            name: "virtualization-type",
+            values: ["hvm"],
+        },
+    ],
+    mostRecent: true,
+    owners: ["099720109477"], // Canonical
+}, { async: true }));
+const asConf = new aws.ec2.LaunchConfiguration("as_conf", {
+    imageId: ubuntu.id,
+    instanceType: "t2.micro",
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+ubuntu = aws.get_ami(filters=[
+        {
+            "name": "name",
+            "values": ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"],
+        },
+        {
+            "name": "virtualization-type",
+            "values": ["hvm"],
+        },
+    ],
+    most_recent=True,
+    owners=["099720109477"])
+as_conf = aws.ec2.LaunchConfiguration("asConf",
+    image_id=ubuntu.id,
+    instance_type="t2.micro")
+```
+
+{{% /example %}}
+{{% /examples %}}
 ## Using with AutoScaling Groups
 
 Launch Configurations cannot be updated after creation with the Amazon
@@ -51,6 +100,31 @@ const bar = new aws.autoscaling.Group("bar", {
     maxSize: 2,
     minSize: 1,
 });
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+ubuntu = aws.get_ami(filters=[
+        {
+            "name": "name",
+            "values": ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"],
+        },
+        {
+            "name": "virtualization-type",
+            "values": ["hvm"],
+        },
+    ],
+    most_recent=True,
+    owners=["099720109477"])
+as_conf = aws.ec2.LaunchConfiguration("asConf",
+    image_id=ubuntu.id,
+    instance_type="t2.micro",
+    name_prefix="lc-example-")
+bar = aws.autoscaling.Group("bar",
+    launch_configuration=as_conf.name,
+    max_size=2,
+    min_size=1)
 ```
 
 With this setup this provider generates a unique name for your Launch
@@ -92,6 +166,28 @@ const asConf = new aws.ec2.LaunchConfiguration("as_conf", {
 const bar = new aws.autoscaling.Group("bar", {
     launchConfiguration: asConf.name,
 });
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+ubuntu = aws.get_ami(filters=[
+        {
+            "name": "name",
+            "values": ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"],
+        },
+        {
+            "name": "virtualization-type",
+            "values": ["hvm"],
+        },
+    ],
+    most_recent=True,
+    owners=["099720109477"])
+as_conf = aws.ec2.LaunchConfiguration("asConf",
+    image_id=ubuntu.id,
+    instance_type="m4.large",
+    spot_price="0.001")
+bar = aws.autoscaling.Group("bar", launch_configuration=as_conf.name)
 ```
 
 ## Block devices
@@ -150,54 +246,10 @@ cannot currently be detected by this provider. After updating to block device
 configuration, resource recreation can be manually triggered by using the
 [`up` command with the --replace argument](https://www.pulumi.com/docs/reference/cli/pulumi_up/).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const ubuntu = pulumi.output(aws.getAmi({
-    filters: [
-        {
-            name: "name",
-            values: ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"],
-        },
-        {
-            name: "virtualization-type",
-            values: ["hvm"],
-        },
-    ],
-    mostRecent: true,
-    owners: ["099720109477"], // Canonical
-}, { async: true }));
-const asConf = new aws.ec2.LaunchConfiguration("as_conf", {
-    imageId: ubuntu.id,
-    instanceType: "t2.micro",
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a LaunchConfiguration Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1233,7 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing LaunchConfiguration Resource {#look-up}
 
 Get an existing LaunchConfiguration resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#LaunchConfigurationState">LaunchConfigurationState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#LaunchConfiguration">LaunchConfiguration</a></span></code></pre></div>
@@ -2150,9 +2202,6 @@ device of the instance. See Block Devices below for details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfigurationEbsBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfigurationEbsBlockDeviceOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchConfigurationEbsBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchConfigurationEbsBlockDevice.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2452,9 +2501,6 @@ device of the instance. See Block Devices below for details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfigurationEphemeralBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfigurationEphemeralBlockDeviceOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchConfigurationEphemeralBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchConfigurationEphemeralBlockDevice.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2561,9 +2607,6 @@ device of the instance. See Block Devices below for details.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfigurationRootBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfigurationRootBlockDeviceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchConfigurationRootBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchConfigurationRootBlockDevice.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

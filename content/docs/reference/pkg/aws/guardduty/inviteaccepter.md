@@ -13,12 +13,49 @@ meta_desc: "Explore the InviteAccepter resource of the guardduty module, includi
 Provides a resource to accept a pending GuardDuty invite on creation, ensure the detector has the correct master account on read, and disassociate with the master account upon removal.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const master = new aws.guardduty.Detector("master", {});
+const memberDetector = new aws.guardduty.Detector("memberDetector", {});
+const dev = new aws.guardduty.Member("dev", {
+    accountId: memberDetector.accountId,
+    detectorId: master.id,
+    email: "required@example.com",
+    invite: true,
+});
+const memberInviteAccepter = new aws.guardduty.InviteAccepter("memberInviteAccepter", {
+    detectorId: memberDetector.id,
+    masterAccountId: master.accountId,
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+master = aws.guardduty.Detector("master")
+member_detector = aws.guardduty.Detector("memberDetector")
+dev = aws.guardduty.Member("dev",
+    account_id=member_detector.account_id,
+    detector_id=master.id,
+    email="required@example.com",
+    invite=True)
+member_invite_accepter = aws.guardduty.InviteAccepter("memberInviteAccepter",
+    detector_id=member_detector.id,
+    master_account_id=master.account_id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Create a InviteAccepter Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -374,7 +411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing InviteAccepter Resource {#look-up}
 
 Get an existing InviteAccepter resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/guardduty/#InviteAccepterState">InviteAccepterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/guardduty/#InviteAccepter">InviteAccepter</a></span></code></pre></div>

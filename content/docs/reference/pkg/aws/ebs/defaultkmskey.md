@@ -19,26 +19,10 @@ By using the `aws.ebs.DefaultKmsKey` resource, you can specify a customer-manage
 
 > **NOTE:** Destroying this resource will reset the default CMK to the account's AWS-managed default CMK for EBS.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -47,13 +31,20 @@ const example = new aws.ebs.DefaultKmsKey("example", {
     keyArn: aws_kms_key_example.arn,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example = aws.ebs.DefaultKmsKey("example", key_arn=aws_kms_key["example"]["arn"])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a DefaultKmsKey Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -373,7 +364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DefaultKmsKey Resource {#look-up}
 
 Get an existing DefaultKmsKey resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ebs/#DefaultKmsKeyState">DefaultKmsKeyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ebs/#DefaultKmsKey">DefaultKmsKey</a></span></code></pre></div>

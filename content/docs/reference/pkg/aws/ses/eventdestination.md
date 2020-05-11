@@ -12,26 +12,12 @@ meta_desc: "Explore the EventDestination resource of the ses module, including e
 
 Provides an SES event destination
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### CloudWatch Destination
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -50,22 +36,28 @@ const cloudwatch = new aws.ses.EventDestination("cloudwatch", {
     ],
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+cloudwatch = aws.ses.EventDestination("cloudwatch",
+    cloudwatch_destinations=[{
+        "defaultValue": "default",
+        "dimensionName": "dimension",
+        "valueSource": "emailHeader",
+    }],
+    configuration_set_name=aws_ses_configuration_set["example"]["name"],
+    enabled=True,
+    matching_types=[
+        "bounce",
+        "send",
+    ])
+```
+
+{{% /example %}}
+{{% example %}}
 ### Kinesis Destination
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,22 +75,27 @@ const kinesis = new aws.ses.EventDestination("kinesis", {
     ],
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+kinesis = aws.ses.EventDestination("kinesis",
+    configuration_set_name=aws_ses_configuration_set["example"]["name"],
+    enabled=True,
+    kinesis_destination={
+        "roleArn": aws_iam_role["example"]["arn"],
+        "streamArn": aws_kinesis_firehose_delivery_stream["example"]["arn"],
+    },
+    matching_types=[
+        "bounce",
+        "send",
+    ])
+```
+
+{{% /example %}}
+{{% example %}}
 ### SNS Destination
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -115,13 +112,29 @@ const sns = new aws.ses.EventDestination("sns", {
     },
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+sns = aws.ses.EventDestination("sns",
+    configuration_set_name=aws_ses_configuration_set["example"]["name"],
+    enabled=True,
+    matching_types=[
+        "bounce",
+        "send",
+    ],
+    sns_destination={
+        "topicArn": aws_sns_topic["example"]["arn"],
+    })
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a EventDestination Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -657,7 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing EventDestination Resource {#look-up}
 
 Get an existing EventDestination resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ses/#EventDestinationState">EventDestinationState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ses/#EventDestination">EventDestination</a></span></code></pre></div>
@@ -1074,9 +1087,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#EventDestinationCloudwatchDestinationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#EventDestinationCloudwatchDestinationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ses.Inputs.EventDestinationCloudwatchDestinationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ses.Outputs.EventDestinationCloudwatchDestination.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1228,9 +1238,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#EventDestinationKinesisDestinationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#EventDestinationKinesisDestinationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ses.Inputs.EventDestinationKinesisDestinationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ses.Outputs.EventDestinationKinesisDestination.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1345,9 +1352,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#EventDestinationSnsDestinationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#EventDestinationSnsDestinationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ses.Inputs.EventDestinationSnsDestinationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ses.Outputs.EventDestinationSnsDestination.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -19,26 +19,10 @@ meta-parameter to make multiple instances and join them all to the same DocDB
 Cluster, or you may specify different Cluster Instance resources with various
 `instance_class` sizes.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -62,13 +46,34 @@ for (let i = 0; i < 2; i++) {
     }));
 }
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+default = aws.docdb.Cluster("default",
+    availability_zones=[
+        "us-west-2a",
+        "us-west-2b",
+        "us-west-2c",
+    ],
+    cluster_identifier="docdb-cluster-demo",
+    master_password="barbut8chars",
+    master_username="foo")
+cluster_instances = []
+for range in [{"value": i} for i in range(0, 2)]:
+    cluster_instances.append(aws.docdb.ClusterInstance(f"clusterInstances-{range['value']}",
+        cluster_identifier=default.id,
+        identifier=f"docdb-cluster-demo-{range['value']}",
+        instance_class="db.r5.large"))
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a ClusterInstance Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1212,7 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ClusterInstance Resource {#look-up}
 
 Get an existing ClusterInstance resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/docdb/#ClusterInstanceState">ClusterInstanceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/docdb/#ClusterInstance">ClusterInstance</a></span></code></pre></div>

@@ -13,13 +13,38 @@ meta_desc: "Explore the GetCertificate function of the compute module, including
 Get info about a Google Compute SSL Certificate from its name.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myCert = gcp.compute.getCertificate({
+    name: "my-cert",
+});
+export const certificate = myCert.then(myCert => myCert.certificate);
+export const certificateId = myCert.then(myCert => myCert.certificateId);
+export const selfLink = myCert.then(myCert => myCert.selfLink);
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_cert = gcp.compute.get_certificate(name="my-cert")
+pulumi.export("certificate", my_cert.certificate)
+pulumi.export("certificateId", my_cert.certificate_id)
+pulumi.export("selfLink", my_cert.self_link)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Using GetCertificate {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -522,16 +547,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

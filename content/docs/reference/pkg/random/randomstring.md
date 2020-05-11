@@ -20,26 +20,10 @@ used it in a password. For backwards compatibility it will
 continue to exist. For unique ids please use random_id, for sensitive
 random values please use random_password.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as random from "@pulumi/random";
@@ -50,13 +34,23 @@ const randomRandomString = new random.RandomString("random", {
     special: true,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_random as random
 
+random = random.RandomString("random",
+    length=16,
+    override_special="/@£$$",
+    special=True)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a RandomString Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -824,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing RandomString Resource {#look-up}
 
 Get an existing RandomString resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/random/#RandomStringState">RandomStringState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/random/#RandomString">RandomString</a></span></code></pre></div>

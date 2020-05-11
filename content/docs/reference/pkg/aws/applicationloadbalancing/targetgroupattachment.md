@@ -14,7 +14,36 @@ Provides the ability to register instances and containers with an Application Lo
 
 > **Note:** `aws.alb.TargetGroupAttachment` is known as `aws.lb.TargetGroupAttachment`. The functionality is identical.
 
+{{% examples %}}
+## Example Usage
+{{% example %}}
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const testTargetGroup = new aws.lb.TargetGroup("test", {});
+const testInstance = new aws.ec2.Instance("test", {});
+const testTargetGroupAttachment = new aws.lb.TargetGroupAttachment("test", {
+    port: 80,
+    targetGroupArn: testTargetGroup.arn,
+    targetId: testInstance.id,
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_target_group = aws.lb.TargetGroup("testTargetGroup")
+test_instance = aws.ec2.Instance("testInstance")
+test_target_group_attachment = aws.lb.TargetGroupAttachment("testTargetGroupAttachment",
+    port=80,
+    target_group_arn=test_target_group.arn,
+    target_id=test_instance.id)
+```
+
+{{% /example %}}
+{{% /examples %}}
 ## Usage with lambda
 
 ```typescript
@@ -36,47 +65,29 @@ const testTargetGroupAttachment = new aws.lb.TargetGroupAttachment("test", {
     targetId: testFunction.arn,
 }, { dependsOn: [withLb] });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_target_group = aws.lb.TargetGroup("testTargetGroup", target_type="lambda")
+test_function = aws.lambda_.Function("testFunction")
+with_lb = aws.lambda_.Permission("withLb",
+    action="lambda:InvokeFunction",
+    function=test_function.arn,
+    principal="elasticloadbalancing.amazonaws.com",
+    source_arn=test_target_group.arn)
+test_target_group_attachment = aws.lb.TargetGroupAttachment("testTargetGroupAttachment",
+    target_group_arn=test_target_group.arn,
+    target_id=test_function.arn)
+```
 
 Deprecated: aws.applicationloadbalancing.TargetGroupAttachment has been deprecated in favour of aws.alb.TargetGroupAttachment
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const testTargetGroup = new aws.lb.TargetGroup("test", {});
-const testInstance = new aws.ec2.Instance("test", {});
-const testTargetGroupAttachment = new aws.lb.TargetGroupAttachment("test", {
-    port: 80,
-    targetGroupArn: testTargetGroup.arn,
-    targetId: testInstance.id,
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
 <p class="resource-deprecated">Deprecated: {{% md %}}aws.applicationloadbalancing.TargetGroupAttachment has been deprecated in favour of aws.alb.TargetGroupAttachment{{% /md %}}</p>
 
 
 ## Create a TargetGroupAttachment Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -504,7 +515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing TargetGroupAttachment Resource {#look-up}
 
 Get an existing TargetGroupAttachment resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/applicationloadbalancing/#TargetGroupAttachmentState">TargetGroupAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/applicationloadbalancing/#TargetGroupAttachment">TargetGroupAttachment</a></span></code></pre></div>

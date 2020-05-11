@@ -12,26 +12,12 @@ meta_desc: "Explore the DeploymentConfig resource of the codedeploy module, incl
 
 Provides a CodeDeploy deployment config for an application
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### Server Usage
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -68,22 +54,45 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("foo", {
     }],
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+foo_deployment_config = aws.codedeploy.DeploymentConfig("fooDeploymentConfig",
+    deployment_config_name="test-deployment-config",
+    minimum_healthy_hosts={
+        "type": "HOST_COUNT",
+        "value": 2,
+    })
+foo_deployment_group = aws.codedeploy.DeploymentGroup("fooDeploymentGroup",
+    alarm_configuration={
+        "alarms": ["my-alarm-name"],
+        "enabled": True,
+    },
+    app_name=aws_codedeploy_app["foo_app"]["name"],
+    auto_rollback_configuration={
+        "enabled": True,
+        "events": ["DEPLOYMENT_FAILURE"],
+    },
+    deployment_config_name=foo_deployment_config.id,
+    deployment_group_name="bar",
+    ec2_tag_filters=[{
+        "key": "filterkey",
+        "type": "KEY_AND_VALUE",
+        "value": "filtervalue",
+    }],
+    service_role_arn=aws_iam_role["foo_role"]["arn"],
+    trigger_configurations=[{
+        "triggerEvents": ["DeploymentFailure"],
+        "triggerName": "foo-trigger",
+        "triggerTargetArn": "foo-topic-arn",
+    }])
+```
+
+{{% /example %}}
+{{% example %}}
 ### Lambda Usage
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -114,13 +123,42 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("foo", {
     serviceRoleArn: aws_iam_role_foo_role.arn,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+foo_deployment_config = aws.codedeploy.DeploymentConfig("fooDeploymentConfig",
+    compute_platform="Lambda",
+    deployment_config_name="test-deployment-config",
+    traffic_routing_config={
+        "timeBasedLinear": {
+            "interval": 10,
+            "percentage": 10,
+        },
+        "type": "TimeBasedLinear",
+    })
+foo_deployment_group = aws.codedeploy.DeploymentGroup("fooDeploymentGroup",
+    alarm_configuration={
+        "alarms": ["my-alarm-name"],
+        "enabled": True,
+    },
+    app_name=aws_codedeploy_app["foo_app"]["name"],
+    auto_rollback_configuration={
+        "enabled": True,
+        "events": ["DEPLOYMENT_STOP_ON_ALARM"],
+    },
+    deployment_config_name=foo_deployment_config.id,
+    deployment_group_name="bar",
+    service_role_arn=aws_iam_role["foo_role"]["arn"])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a DeploymentConfig Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -584,7 +622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DeploymentConfig Resource {#look-up}
 
 Get an existing DeploymentConfig resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentConfigState">DeploymentConfigState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentConfig">DeploymentConfig</a></span></code></pre></div>
@@ -929,9 +967,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentConfigMinimumHealthyHostsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentConfigMinimumHealthyHostsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentConfigMinimumHealthyHostsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentConfigMinimumHealthyHosts.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1058,9 +1093,6 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentConfigTrafficRoutingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentConfigTrafficRoutingConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1213,9 +1245,6 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigTimeBasedCanaryOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentConfigTrafficRoutingConfigTimeBasedCanary.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1330,9 +1359,6 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigTimeBasedLinearOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentConfigTrafficRoutingConfigTimeBasedLinear.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

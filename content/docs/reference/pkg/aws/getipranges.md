@@ -13,13 +13,65 @@ meta_desc: "Explore the GetIpRanges function of the AWS package, including examp
 Use this data source to get the IP ranges of various AWS products and services. For more information about the contents of this data source and required JSON syntax if referencing a custom URL, see the [AWS IP Address Ranges documention](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html).
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const europeanEc2 = aws.getIpRanges({
+    regions: [
+        "eu-west-1",
+        "eu-central-1",
+    ],
+    services: ["ec2"],
+});
+const fromEurope = new aws.ec2.SecurityGroup("fromEurope", {
+    ingress: [{
+        fromPort: "443",
+        toPort: "443",
+        protocol: "tcp",
+        cidrBlocks: europeanEc2.then(europeanEc2 => europeanEc2.cidrBlocks),
+        ipv6CidrBlocks: europeanEc2.then(europeanEc2 => europeanEc2.ipv6CidrBlocks),
+    }],
+    tags: {
+        CreateDate: europeanEc2.then(europeanEc2 => europeanEc2.createDate),
+        SyncToken: europeanEc2.then(europeanEc2 => europeanEc2.syncToken),
+    },
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+european_ec2 = aws.get_ip_ranges(regions=[
+        "eu-west-1",
+        "eu-central-1",
+    ],
+    services=["ec2"])
+from_europe = aws.ec2.SecurityGroup("fromEurope",
+    ingress=[{
+        "fromPort": "443",
+        "toPort": "443",
+        "protocol": "tcp",
+        "cidrBlocks": european_ec2.cidr_blocks,
+        "ipv6CidrBlocks": european_ec2.ipv6_cidr_blocks,
+    }],
+    tags={
+        "CreateDate": european_ec2.create_date,
+        "SyncToken": european_ec2.sync_token,
+    })
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Using GetIpRanges {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -534,16 +586,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

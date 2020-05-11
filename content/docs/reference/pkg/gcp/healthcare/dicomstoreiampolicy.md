@@ -20,6 +20,36 @@ Three different resources help you manage your IAM policy for Healthcare DICOM s
 
 > **Note:** `gcp.healthcare.DicomStoreIamBinding` resources **can be** used in conjunction with `gcp.healthcare.DicomStoreIamMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_healthcare\_dicom\_store\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const dicomStore = new gcp.healthcare.DicomStoreIamPolicy("dicomStore", {
+    dicomStoreId: "your-dicom-store-id",
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/editor",
+    "members": ["user:jane@example.com"],
+}])
+dicom_store = gcp.healthcare.DicomStoreIamPolicy("dicomStore",
+    dicom_store_id="your-dicom-store-id",
+    policy_data=admin.policy_data)
+```
+
 ## google\_healthcare\_dicom\_store\_iam\_binding
 
 ```typescript
@@ -31,6 +61,15 @@ const dicomStore = new gcp.healthcare.DicomStoreIamBinding("dicom_store", {
     members: ["user:jane@example.com"],
     role: "roles/editor",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+dicom_store = gcp.healthcare.DicomStoreIamBinding("dicomStore",
+    dicom_store_id="your-dicom-store-id",
+    members=["user:jane@example.com"],
+    role="roles/editor")
 ```
 
 ## google\_healthcare\_dicom\_store\_iam\_member
@@ -45,11 +84,20 @@ const dicomStore = new gcp.healthcare.DicomStoreIamMember("dicom_store", {
     role: "roles/editor",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+dicom_store = gcp.healthcare.DicomStoreIamMember("dicomStore",
+    dicom_store_id="your-dicom-store-id",
+    member="user:jane@example.com",
+    role="roles/editor")
+```
 
 
 
 ## Create a DicomStoreIamPolicy Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -457,7 +505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DicomStoreIamPolicy Resource {#look-up}
 
 Get an existing DicomStoreIamPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#DicomStoreIamPolicyState">DicomStoreIamPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#DicomStoreIamPolicy">DicomStoreIamPolicy</a></span></code></pre></div>

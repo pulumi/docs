@@ -17,33 +17,10 @@ that you want to use to create virtual machines in using the
 
 [docs-virtual-machine-resource]: /docs/providers/vsphere/r/virtual_machine.html
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_vsphere as vsphere
-
-datacenter = vsphere.get_datacenter(name="dc1")
-pool = vsphere.get_resource_pool(datacenter_id=datacenter.id,
-    name="resource-pool-1")
-```
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -56,28 +33,30 @@ const pool = datacenter.apply(datacenter => vsphere.getResourcePool({
     name: "resource-pool-1",
 }, { async: true }));
 ```
-{{% /example %}}
-
-### Specifying the root resource pool for a standalone host
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
 ```python
 import pulumi
 import pulumi_vsphere as vsphere
 
-pool = vsphere.get_resource_pool(datacenter_id=data["vsphere..Datacenter"]["dc"]["id"],
-    name="esxi1/Resources")
+datacenter = vsphere.get_datacenter(name="dc1")
+pool = vsphere.get_resource_pool(datacenter_id=datacenter.id,
+    name="resource-pool-1")
 ```
-{{% /example %}}
 
-{{% example typescript %}}
+{{% /example %}}
+{{% example %}}
+### Specifying the root resource pool for a standalone host
+
+> **NOTE:** Fetching the root resource pool for a cluster can now be done
+directly via the [`vsphere..ComputeCluster`][docs-compute-cluster-data-source]
+data source.
+
+[docs-compute-cluster-data-source]: /docs/providers/vsphere/d/compute_cluster.html
+
+All compute resources in vSphere (clusters, standalone hosts, and standalone
+ESXi) have a resource pool, even if one has not been explicitly created. This
+resource pool is referred to as the _root resource pool_ and can be looked up
+by specifying the path as per the example below:
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -87,14 +66,27 @@ const pool = vsphere_datacenter_dc.id.apply(id => vsphere.getResourcePool({
     name: "esxi1/Resources",
 }, { async: true }));
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_vsphere as vsphere
 
+pool = vsphere.get_resource_pool(datacenter_id=data["vsphere..Datacenter"]["dc"]["id"],
+    name="esxi1/Resources")
+```
+
+For more information on the root resource pool, see [Managing Resource
+Pools][vmware-docs-resource-pools] in the vSphere documentation.
+
+[vmware-docs-resource-pools]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-60077B40-66FF-4625-934A-641703ED7601.html
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetResourcePool {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -389,16 +381,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
-</dl>
 

@@ -12,26 +12,12 @@ meta_desc: "Explore the ScheduledAction resource of the appautoscaling module, i
 
 Provides an Application AutoScaling ScheduledAction resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### DynamoDB Table Autoscaling
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -54,22 +40,31 @@ const dynamodbScheduledAction = new aws.appautoscaling.ScheduledAction("dynamodb
     serviceNamespace: dynamodbTarget.serviceNamespace,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+dynamodb_target = aws.appautoscaling.Target("dynamodbTarget",
+    max_capacity=100,
+    min_capacity=5,
+    resource_id="table/tableName",
+    scalable_dimension="dynamodb:table:ReadCapacityUnits",
+    service_namespace="dynamodb")
+dynamodb_scheduled_action = aws.appautoscaling.ScheduledAction("dynamodbScheduledAction",
+    resource_id=dynamodb_target.resource_id,
+    scalable_dimension=dynamodb_target.scalable_dimension,
+    scalable_target_action={
+        "maxCapacity": 200,
+        "minCapacity": 1,
+    },
+    schedule="at(2006-01-02T15:04:05)",
+    service_namespace=dynamodb_target.service_namespace)
+```
+
+{{% /example %}}
+{{% example %}}
 ### ECS Service Autoscaling
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -92,13 +87,34 @@ const ecsScheduledAction = new aws.appautoscaling.ScheduledAction("ecs", {
     serviceNamespace: ecsTarget.serviceNamespace,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+ecs_target = aws.appautoscaling.Target("ecsTarget",
+    max_capacity=4,
+    min_capacity=1,
+    resource_id="service/clusterName/serviceName",
+    scalable_dimension="ecs:service:DesiredCount",
+    service_namespace="ecs")
+ecs_scheduled_action = aws.appautoscaling.ScheduledAction("ecsScheduledAction",
+    resource_id=ecs_target.resource_id,
+    scalable_dimension=ecs_target.scalable_dimension,
+    scalable_target_action={
+        "maxCapacity": 10,
+        "minCapacity": 1,
+    },
+    schedule="at(2006-01-02T15:04:05)",
+    service_namespace=ecs_target.service_namespace)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a ScheduledAction Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -706,7 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ScheduledAction Resource {#look-up}
 
 Get an existing ScheduledAction resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appautoscaling/#ScheduledActionState">ScheduledActionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appautoscaling/#ScheduledAction">ScheduledAction</a></span></code></pre></div>
@@ -1194,9 +1210,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#ScheduledActionScalableTargetActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#ScheduledActionScalableTargetActionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.ScheduledActionScalableTargetActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Outputs.ScheduledActionScalableTargetAction.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

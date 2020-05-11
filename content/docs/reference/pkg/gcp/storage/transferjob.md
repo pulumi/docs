@@ -20,12 +20,130 @@ To get more information about Google Cloud Storage Transfer, see:
     * [Configuring Access to Data Sources and Sinks](https://cloud.google.com/storage-transfer/docs/configure-access)
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+Example creating a nightly Transfer Job from an AWS S3 Bucket to a GCS bucket.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default = gcp.storage.getTransferProjectServieAccount({
+    project: var.project,
+});
+const s3-backup-bucketBucket = new gcp.storage.Bucket("s3-backup-bucketBucket", {
+    storageClass: "NEARLINE",
+    project: var.project,
+});
+const s3-backup-bucketBucketIAMMember = new gcp.storage.BucketIAMMember("s3-backup-bucketBucketIAMMember", {
+    bucket: s3-backup-bucketBucket.name,
+    role: "roles/storage.admin",
+    member: default.then(_default => `serviceAccount:${_default.email}`),
+});
+const s3-bucket-nightly-backup = new gcp.storage.TransferJob("s3-bucket-nightly-backup", {
+    description: "Nightly backup of S3 bucket",
+    project: var.project,
+    transfer_spec: {
+        object_conditions: {
+            maxTimeElapsedSinceLastModification: "600s",
+            excludePrefixes: ["requests.gz"],
+        },
+        transfer_options: {
+            deleteObjectsUniqueInSink: false,
+        },
+        aws_s3_data_source: {
+            bucketName: var.aws_s3_bucket,
+            aws_access_key: {
+                accessKeyId: var.aws_access_key,
+                secretAccessKey: var.aws_secret_key,
+            },
+        },
+        gcs_data_sink: {
+            bucketName: s3-backup-bucketBucket.name,
+        },
+    },
+    schedule: {
+        schedule_start_date: {
+            year: 2018,
+            month: 10,
+            day: 1,
+        },
+        schedule_end_date: {
+            year: 2019,
+            month: 1,
+            day: 15,
+        },
+        start_time_of_day: {
+            hours: 23,
+            minutes: 30,
+            seconds: 0,
+            nanos: 0,
+        },
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.storage.get_transfer_project_servie_account(project=var["project"])
+s3_backup_bucket_bucket = gcp.storage.Bucket("s3-backup-bucketBucket",
+    storage_class="NEARLINE",
+    project=var["project"])
+s3_backup_bucket_bucket_iam_member = gcp.storage.BucketIAMMember("s3-backup-bucketBucketIAMMember",
+    bucket=s3_backup_bucket_bucket.name,
+    role="roles/storage.admin",
+    member=f"serviceAccount:{default.email}")
+s3_bucket_nightly_backup = gcp.storage.TransferJob("s3-bucket-nightly-backup",
+    description="Nightly backup of S3 bucket",
+    project=var["project"],
+    transfer_spec={
+        "object_conditions": {
+            "maxTimeElapsedSinceLastModification": "600s",
+            "excludePrefixes": ["requests.gz"],
+        },
+        "transfer_options": {
+            "deleteObjectsUniqueInSink": False,
+        },
+        "aws_s3_data_source": {
+            "bucketName": var["aws_s3_bucket"],
+            "aws_access_key": {
+                "accessKeyId": var["aws_access_key"],
+                "secretAccessKey": var["aws_secret_key"],
+            },
+        },
+        "gcs_data_sink": {
+            "bucketName": s3_backup_bucket_bucket.name,
+        },
+    },
+    schedule={
+        "schedule_start_date": {
+            "year": 2018,
+            "month": 10,
+            "day": 1,
+        },
+        "schedule_end_date": {
+            "year": 2019,
+            "month": 1,
+            "day": 15,
+        },
+        "start_time_of_day": {
+            "hours": 23,
+            "minutes": 30,
+            "seconds": 0,
+            "nanos": 0,
+        },
+    })
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Create a TransferJob Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -637,7 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing TransferJob Resource {#look-up}
 
 Get an existing TransferJob resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#TransferJobState">TransferJobState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#TransferJob">TransferJob</a></span></code></pre></div>
@@ -1130,9 +1248,6 @@ is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobScheduleOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Inputs.TransferJobScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Outputs.TransferJobSchedule.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1283,9 +1398,6 @@ is not provided, the provider project is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobScheduleScheduleEndDateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobScheduleScheduleEndDateOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Inputs.TransferJobScheduleScheduleEndDateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Outputs.TransferJobScheduleScheduleEndDate.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1438,9 +1550,6 @@ is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobScheduleScheduleStartDateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobScheduleScheduleStartDateOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Inputs.TransferJobScheduleScheduleStartDateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Outputs.TransferJobScheduleScheduleStartDate.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1591,9 +1700,6 @@ is not provided, the provider project is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobScheduleStartTimeOfDayArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobScheduleStartTimeOfDayOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Inputs.TransferJobScheduleStartTimeOfDayArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Outputs.TransferJobScheduleStartTimeOfDay.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1781,9 +1887,6 @@ is not provided, the provider project is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Inputs.TransferJobTransferSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Outputs.TransferJobTransferSpec.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2044,9 +2147,6 @@ is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecAwsS3DataSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecAwsS3DataSourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Inputs.TransferJobTransferSpecAwsS3DataSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Outputs.TransferJobTransferSpecAwsS3DataSource.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2161,9 +2261,6 @@ is not provided, the provider project is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Inputs.TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Outputs.TransferJobTransferSpecAwsS3DataSourceAwsAccessKey.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2280,9 +2377,6 @@ is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecGcsDataSinkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecGcsDataSinkOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Inputs.TransferJobTransferSpecGcsDataSinkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Outputs.TransferJobTransferSpecGcsDataSink.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2361,9 +2455,6 @@ is not provided, the provider project is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecGcsDataSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecGcsDataSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Inputs.TransferJobTransferSpecGcsDataSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Outputs.TransferJobTransferSpecGcsDataSource.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2444,9 +2535,6 @@ is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecHttpDataSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecHttpDataSourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Inputs.TransferJobTransferSpecHttpDataSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Outputs.TransferJobTransferSpecHttpDataSource.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2525,9 +2613,6 @@ is not provided, the provider project is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecObjectConditionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecObjectConditionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Inputs.TransferJobTransferSpecObjectConditionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Outputs.TransferJobTransferSpecObjectConditions.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2719,9 +2804,6 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecTransferOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecTransferOptionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Inputs.TransferJobTransferSpecTransferOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Outputs.TransferJobTransferSpecTransferOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

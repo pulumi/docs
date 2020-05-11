@@ -16,12 +16,71 @@ meta_desc: "Explore the Registry resource of the iot module, including examples,
 
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const default-devicestatus = new gcp.pubsub.Topic("default-devicestatus", {});
+const default-telemetry = new gcp.pubsub.Topic("default-telemetry", {});
+const default-registry = new gcp.iot.Registry("default-registry", {
+    event_notification_configs: [{
+        pubsubTopicName: default-telemetry.id,
+    }],
+    stateNotificationConfig: {
+        pubsub_topic_name: default-devicestatus.id,
+    },
+    httpConfig: {
+        http_enabled_state: "HTTP_ENABLED",
+    },
+    mqttConfig: {
+        mqtt_enabled_state: "MQTT_ENABLED",
+    },
+    credentials: [{
+        publicKeyCertificate: {
+            format: "X509_CERTIFICATE_PEM",
+            certificate: fs.readFileSync("rsa_cert.pem"),
+        },
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_devicestatus = gcp.pubsub.Topic("default-devicestatus")
+default_telemetry = gcp.pubsub.Topic("default-telemetry")
+default_registry = gcp.iot.Registry("default-registry",
+    event_notification_configs=[{
+        "pubsubTopicName": default_telemetry.id,
+    }],
+    state_notification_config={
+        "pubsub_topic_name": default_devicestatus.id,
+    },
+    http_config={
+        "http_enabled_state": "HTTP_ENABLED",
+    },
+    mqtt_config={
+        "mqtt_enabled_state": "MQTT_ENABLED",
+    },
+    credentials=[{
+        "publicKeyCertificate": {
+            "format": "X509_CERTIFICATE_PEM",
+            "certificate": (lambda path: open(path).read())("rsa_cert.pem"),
+        },
+    }])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Create a Registry Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -633,7 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Registry Resource {#look-up}
 
 Get an existing Registry resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/iot/#RegistryState">RegistryState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/iot/#Registry">Registry</a></span></code></pre></div>
@@ -1126,9 +1185,6 @@ Changing this forces a new resource to be created.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryCredentialArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryCredentialOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Inputs.RegistryCredentialArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Outputs.RegistryCredential.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1207,9 +1263,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryCredentialPublicKeyCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryCredentialPublicKeyCertificateOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Inputs.RegistryCredentialPublicKeyCertificateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Outputs.RegistryCredentialPublicKeyCertificate.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1325,9 +1378,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryEventNotificationConfigItemArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryEventNotificationConfigItemOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Inputs.RegistryEventNotificationConfigItemArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Outputs.RegistryEventNotificationConfigItem.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1456,9 +1506,6 @@ only be used for the last `event_notification_configs` item.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryHttpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryHttpConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Inputs.RegistryHttpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Outputs.RegistryHttpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1538,9 +1585,6 @@ only be used for the last `event_notification_configs` item.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryMqttConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryMqttConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Inputs.RegistryMqttConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Outputs.RegistryMqttConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1619,9 +1663,6 @@ only be used for the last `event_notification_configs` item.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryStateNotificationConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryStateNotificationConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Inputs.RegistryStateNotificationConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Outputs.RegistryStateNotificationConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -14,26 +14,10 @@ Manages a RDS Global Cluster, which is an Aurora global database spread across m
 
 More information about Aurora global databases can be found in the [Aurora User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database-creating).
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -66,13 +50,31 @@ const secondaryClusterInstance = new aws.rds.ClusterInstance("secondary", {
     clusterIdentifier: secondaryCluster.id,
 }, { provider: secondary });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_pulumi as pulumi
 
+primary = pulumi.providers.Aws("primary", region="us-east-2")
+secondary = pulumi.providers.Aws("secondary", region="us-west-2")
+example = aws.rds.GlobalCluster("example", global_cluster_identifier="example")
+primary_cluster = aws.rds.Cluster("primaryCluster",
+    engine_mode="global",
+    global_cluster_identifier=example.id)
+primary_cluster_instance = aws.rds.ClusterInstance("primaryClusterInstance", cluster_identifier=primary_cluster.id)
+secondary_cluster = aws.rds.Cluster("secondaryCluster",
+    engine_mode="global",
+    global_cluster_identifier=example.id)
+secondary_cluster_instance = aws.rds.ClusterInstance("secondaryClusterInstance", cluster_identifier=secondary_cluster.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a GlobalCluster Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -648,7 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing GlobalCluster Resource {#look-up}
 
 Get an existing GlobalCluster resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#GlobalClusterState">GlobalClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#GlobalCluster">GlobalCluster</a></span></code></pre></div>

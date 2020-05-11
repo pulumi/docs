@@ -35,6 +35,101 @@ result in diffs being shown. For these reasons, this resource is incompatible wi
 For more information about Network ACLs, see the AWS Documentation on
 [Network ACLs][aws-network-acls].
 
+## Basic Example Usage, with default rules
+
+The following config gives the Default Network ACL the same rules that AWS
+includes, but pulls the resource under management by this provider. This means that
+any ACL rules added or changed will be detected as drift.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const mainvpc = new aws.ec2.Vpc("mainvpc", {cidrBlock: "10.1.0.0/16"});
+const default = new aws.ec2.DefaultNetworkAcl("default", {
+    defaultNetworkAclId: mainvpc.defaultNetworkAclId,
+    ingress: [{
+        protocol: -1,
+        ruleNo: 100,
+        action: "allow",
+        cidrBlock: mainvpc.cidrBlock,
+        fromPort: 0,
+        toPort: 0,
+    }],
+    egress: [{
+        protocol: -1,
+        ruleNo: 100,
+        action: "allow",
+        cidrBlock: "0.0.0.0/0",
+        fromPort: 0,
+        toPort: 0,
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+mainvpc = aws.ec2.Vpc("mainvpc", cidr_block="10.1.0.0/16")
+default = aws.ec2.DefaultNetworkAcl("default",
+    default_network_acl_id=mainvpc.default_network_acl_id,
+    ingress=[{
+        "protocol": -1,
+        "ruleNo": 100,
+        "action": "allow",
+        "cidrBlock": mainvpc.cidr_block,
+        "fromPort": 0,
+        "toPort": 0,
+    }],
+    egress=[{
+        "protocol": -1,
+        "ruleNo": 100,
+        "action": "allow",
+        "cidrBlock": "0.0.0.0/0",
+        "fromPort": 0,
+        "toPort": 0,
+    }])
+```
+
+## Example config to deny all Egress traffic, allowing Ingress
+
+The following denies all Egress traffic by omitting any `egress` rules, while
+including the default `ingress` rule to allow all traffic.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const mainvpc = new aws.ec2.Vpc("mainvpc", {cidrBlock: "10.1.0.0/16"});
+const default = new aws.ec2.DefaultNetworkAcl("default", {
+    defaultNetworkAclId: mainvpc.defaultNetworkAclId,
+    ingress: [{
+        protocol: -1,
+        ruleNo: 100,
+        action: "allow",
+        cidrBlock: mainvpc.cidrBlock,
+        fromPort: 0,
+        toPort: 0,
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+mainvpc = aws.ec2.Vpc("mainvpc", cidr_block="10.1.0.0/16")
+default = aws.ec2.DefaultNetworkAcl("default",
+    default_network_acl_id=mainvpc.default_network_acl_id,
+    ingress=[{
+        "protocol": -1,
+        "ruleNo": 100,
+        "action": "allow",
+        "cidrBlock": mainvpc.cidr_block,
+        "fromPort": 0,
+        "toPort": 0,
+    }])
+```
+
 ## Example config to deny all traffic to any Subnet in the Default Network ACL
 
 This config denies all traffic in the Default ACL. This can be useful if you
@@ -52,11 +147,18 @@ const defaultDefaultNetworkAcl = new aws.ec2.DefaultNetworkAcl("default", {
     defaultNetworkAclId: mainvpc.defaultNetworkAclId,
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+mainvpc = aws.ec2.Vpc("mainvpc", cidr_block="10.1.0.0/16")
+default = aws.ec2.DefaultNetworkAcl("default", default_network_acl_id=mainvpc.default_network_acl_id)
+```
 
 
 
 ## Create a DefaultNetworkAcl Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -600,7 +702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DefaultNetworkAcl Resource {#look-up}
 
 Get an existing DefaultNetworkAcl resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#DefaultNetworkAclState">DefaultNetworkAclState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#DefaultNetworkAcl">DefaultNetworkAcl</a></span></code></pre></div>
@@ -1025,9 +1127,6 @@ notes below on managing Subnets in the Default Network ACL
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#DefaultNetworkAclEgressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#DefaultNetworkAclEgressOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.DefaultNetworkAclEgressArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.DefaultNetworkAclEgress.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1402,9 +1501,6 @@ valid network mask.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#DefaultNetworkAclIngressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#DefaultNetworkAclIngressOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.DefaultNetworkAclIngressArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.DefaultNetworkAclIngress.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

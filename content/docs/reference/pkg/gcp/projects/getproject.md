@@ -14,11 +14,32 @@ Retrieve information about a set of projects based on a filter. See the
 [REST API](https://cloud.google.com/resource-manager/reference/rest/v1/projects/list)
 for more details.
 
+## Example Usage - searching for projects about to be deleted in an org
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my-org-projects = gcp.projects.getProject({
+    filter: "parent.id:012345678910 lifecycleState:DELETE_REQUESTED",
+});
+const deletion-candidate = my-org-projects.then(my_org_projects => gcp.organizations.getProject({
+    projectId: my_org_projects.projects[0].projectId,
+}));
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_org_projects = gcp.projects.get_project(filter="parent.id:012345678910 lifecycleState:DELETE_REQUESTED")
+deletion_candidate = gcp.organizations.get_project(project_id=my_org_projects.projects[0]["project_id"])
+```
+
 
 
 ## Using GetProject {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -274,9 +295,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#GetProjectProject">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.Outputs.GetProjectProject.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -349,16 +367,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

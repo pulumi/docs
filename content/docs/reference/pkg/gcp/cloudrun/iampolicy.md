@@ -22,8 +22,96 @@ Three different resources help you manage your IAM policy for Cloud Run Service.
 
 
 
+## google\_cloud\_run\_service\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/viewer",
+        members: ["user:jane@example.com"],
+    }],
+});
+const policy = new gcp.cloudrun.IamPolicy("policy", {
+    location: google_cloud_run_service["default"].location,
+    project: google_cloud_run_service["default"].project,
+    service: google_cloud_run_service["default"].name,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/viewer",
+    "members": ["user:jane@example.com"],
+}])
+policy = gcp.cloudrun.IamPolicy("policy",
+    location=google_cloud_run_service["default"]["location"],
+    project=google_cloud_run_service["default"]["project"],
+    service=google_cloud_run_service["default"]["name"],
+    policy_data=admin.policy_data)
+```
+
+## google\_cloud\_run\_service\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const binding = new gcp.cloudrun.IamBinding("binding", {
+    location: google_cloud_run_service["default"].location,
+    project: google_cloud_run_service["default"].project,
+    service: google_cloud_run_service["default"].name,
+    role: "roles/viewer",
+    members: ["user:jane@example.com"],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+binding = gcp.cloudrun.IamBinding("binding",
+    location=google_cloud_run_service["default"]["location"],
+    project=google_cloud_run_service["default"]["project"],
+    service=google_cloud_run_service["default"]["name"],
+    role="roles/viewer",
+    members=["user:jane@example.com"])
+```
+
+## google\_cloud\_run\_service\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const member = new gcp.cloudrun.IamMember("member", {
+    location: google_cloud_run_service["default"].location,
+    project: google_cloud_run_service["default"].project,
+    service: google_cloud_run_service["default"].name,
+    role: "roles/viewer",
+    member: "user:jane@example.com",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+member = gcp.cloudrun.IamMember("member",
+    location=google_cloud_run_service["default"]["location"],
+    project=google_cloud_run_service["default"]["project"],
+    service=google_cloud_run_service["default"]["name"],
+    role="roles/viewer",
+    member="user:jane@example.com")
+```
+
+
+
 ## Create a IamPolicy Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -495,7 +583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing IamPolicy Resource {#look-up}
 
 Get an existing IamPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#IamPolicyState">IamPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#IamPolicy">IamPolicy</a></span></code></pre></div>

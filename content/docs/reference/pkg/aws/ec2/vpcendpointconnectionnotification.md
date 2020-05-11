@@ -13,26 +13,10 @@ meta_desc: "Explore the VpcEndpointConnectionNotification resource of the ec2 mo
 Provides a VPC Endpoint connection notification resource.
 Connection notifications notify subscribers of VPC Endpoint events.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -64,13 +48,42 @@ const fooVpcEndpointConnectionNotification = new aws.ec2.VpcEndpointConnectionNo
     vpcEndpointServiceId: fooVpcEndpointService.id,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+topic = aws.sns.Topic("topic", policy="""{
+    "Version":"2012-10-17",
+    "Statement":[{
+        "Effect": "Allow",
+        "Principal": {
+            "Service": "vpce.amazonaws.com"
+        },
+        "Action": "SNS:Publish",
+        "Resource": "arn:aws:sns:*:*:vpce-notification-topic"
+    }]
+}
+
+""")
+foo_vpc_endpoint_service = aws.ec2.VpcEndpointService("fooVpcEndpointService",
+    acceptance_required=False,
+    network_load_balancer_arns=[aws_lb["test"]["arn"]])
+foo_vpc_endpoint_connection_notification = aws.ec2.VpcEndpointConnectionNotification("fooVpcEndpointConnectionNotification",
+    connection_events=[
+        "Accept",
+        "Reject",
+    ],
+    connection_notification_arn=topic.arn,
+    vpc_endpoint_service_id=foo_vpc_endpoint_service.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a VpcEndpointConnectionNotification Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -570,7 +583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing VpcEndpointConnectionNotification Resource {#look-up}
 
 Get an existing VpcEndpointConnectionNotification resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#VpcEndpointConnectionNotificationState">VpcEndpointConnectionNotificationState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#VpcEndpointConnectionNotification">VpcEndpointConnectionNotification</a></span></code></pre></div>

@@ -22,8 +22,90 @@ Three different resources help you manage your IAM policy for Binary Authorizati
 
 
 
+## google\_binary\_authorization\_attestor\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/viewer",
+        members: ["user:jane@example.com"],
+    }],
+});
+const policy = new gcp.binaryauthorization.AttestorIamPolicy("policy", {
+    project: google_binary_authorization_attestor.attestor.project,
+    attestor: google_binary_authorization_attestor.attestor.name,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/viewer",
+    "members": ["user:jane@example.com"],
+}])
+policy = gcp.binaryauthorization.AttestorIamPolicy("policy",
+    project=google_binary_authorization_attestor["attestor"]["project"],
+    attestor=google_binary_authorization_attestor["attestor"]["name"],
+    policy_data=admin.policy_data)
+```
+
+## google\_binary\_authorization\_attestor\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const binding = new gcp.binaryauthorization.AttestorIamBinding("binding", {
+    project: google_binary_authorization_attestor.attestor.project,
+    attestor: google_binary_authorization_attestor.attestor.name,
+    role: "roles/viewer",
+    members: ["user:jane@example.com"],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+binding = gcp.binaryauthorization.AttestorIamBinding("binding",
+    project=google_binary_authorization_attestor["attestor"]["project"],
+    attestor=google_binary_authorization_attestor["attestor"]["name"],
+    role="roles/viewer",
+    members=["user:jane@example.com"])
+```
+
+## google\_binary\_authorization\_attestor\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const member = new gcp.binaryauthorization.AttestorIamMember("member", {
+    project: google_binary_authorization_attestor.attestor.project,
+    attestor: google_binary_authorization_attestor.attestor.name,
+    role: "roles/viewer",
+    member: "user:jane@example.com",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+member = gcp.binaryauthorization.AttestorIamMember("member",
+    project=google_binary_authorization_attestor["attestor"]["project"],
+    attestor=google_binary_authorization_attestor["attestor"]["name"],
+    role="roles/viewer",
+    member="user:jane@example.com")
+```
+
+
+
 ## Create a AttestorIamBinding Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -527,7 +609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing AttestorIamBinding Resource {#look-up}
 
 Get an existing AttestorIamBinding resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/binaryauthorization/#AttestorIamBindingState">AttestorIamBindingState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/binaryauthorization/#AttestorIamBinding">AttestorIamBinding</a></span></code></pre></div>
@@ -911,9 +993,6 @@ If it is not provided, the project will be parsed from the identifier of the par
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#AttestorIamBindingConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#AttestorIamBindingConditionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Inputs.AttestorIamBindingConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Outputs.AttestorIamBindingCondition.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

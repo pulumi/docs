@@ -12,26 +12,31 @@ meta_desc: "Explore the GetOrganization function of the organizations module, in
 
 Get information about the organization that the user's account belongs to
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
+### List all account IDs for the organization
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = aws.organizations.getOrganization({});
+export const accountIds = example.then(example => example.accounts.map(__item => __item.id));
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.organizations.get_organization()
+pulumi.export("accountIds", [__item["id"] for __item in example.accounts])
+```
+
+{{% /example %}}
+{{% example %}}
 ### SNS topic that can be interacted by the organization only
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -62,14 +67,42 @@ const snsTopicPolicyTopicPolicy = new aws.sns.TopicPolicy("sns_topic_policy", {
     policy: snsTopicPolicyPolicyDocument.json,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example = aws.organizations.get_organization()
+sns_topic = aws.sns.Topic("snsTopic")
+sns_topic_policy_policy_document = sns_topic.arn.apply(lambda arn: aws.iam.get_policy_document(statements=[{
+    "actions": [
+        "SNS:Subscribe",
+        "SNS:Publish",
+    ],
+    "condition": [{
+        "test": "StringEquals",
+        "values": [example.id],
+        "variable": "aws:PrincipalOrgID",
+    }],
+    "effect": "Allow",
+    "principals": [{
+        "identifiers": ["*"],
+        "type": "AWS",
+    }],
+    "resources": [arn],
+}]))
+sns_topic_policy_topic_policy = aws.sns.TopicPolicy("snsTopicPolicyTopicPolicy",
+    arn=sns_topic.arn,
+    policy=sns_topic_policy_policy_document.json)
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetOrganization {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -544,9 +577,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/organizations?tab=doc#GetOrganizationAccount">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.Outputs.GetOrganizationAccount.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -769,9 +799,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/organizations?tab=doc#GetOrganizationNonMasterAccount">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.Outputs.GetOrganizationNonMasterAccount.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -996,9 +1023,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/organizations?tab=doc#GetOrganizationRoot">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.Outputs.GetOrganizationRoot.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1186,9 +1210,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/organizations?tab=doc#GetOrganizationRootPolicyType">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.Outputs.GetOrganizationRootPolicyType.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1293,16 +1314,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

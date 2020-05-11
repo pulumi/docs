@@ -16,26 +16,12 @@ Provides an Elastic IP resource.
 
 > **Note:** Do not use `network_interface` to associate the EIP to `aws.lb.LoadBalancer` or `aws.ec2.NatGateway` resources. Instead use the `allocation_id` available in those resources to allow AWS to manage the association, otherwise you will see `AuthFailure` errors.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+Single EIP associated with an instance:
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -45,13 +31,140 @@ const lb = new aws.ec2.Eip("lb", {
     vpc: true,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+lb = aws.ec2.Eip("lb",
+    instance=aws_instance["web"]["id"],
+    vpc=True)
+```
+
+Multiple EIPs associated with a single network interface:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const multi_ip = new aws.ec2.NetworkInterface("multi-ip", {
+    privateIps: [
+        "10.0.0.10",
+        "10.0.0.11",
+    ],
+    subnetId: aws_subnet_main.id,
+});
+const one = new aws.ec2.Eip("one", {
+    associateWithPrivateIp: "10.0.0.10",
+    networkInterface: multi_ip.id,
+    vpc: true,
+});
+const two = new aws.ec2.Eip("two", {
+    associateWithPrivateIp: "10.0.0.11",
+    networkInterface: multi_ip.id,
+    vpc: true,
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+multi_ip = aws.ec2.NetworkInterface("multi-ip",
+    private_ips=[
+        "10.0.0.10",
+        "10.0.0.11",
+    ],
+    subnet_id=aws_subnet["main"]["id"])
+one = aws.ec2.Eip("one",
+    associate_with_private_ip="10.0.0.10",
+    network_interface=multi_ip.id,
+    vpc=True)
+two = aws.ec2.Eip("two",
+    associate_with_private_ip="10.0.0.11",
+    network_interface=multi_ip.id,
+    vpc=True)
+```
+
+Attaching an EIP to an Instance with a pre-assigned private ip (VPC Only):
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const defaultVpc = new aws.ec2.Vpc("default", {
+    cidrBlock: "10.0.0.0/16",
+    enableDnsHostnames: true,
+});
+const gw = new aws.ec2.InternetGateway("gw", {
+    vpcId: defaultVpc.id,
+});
+const tfTestSubnet = new aws.ec2.Subnet("tf_test_subnet", {
+    cidrBlock: "10.0.0.0/24",
+    mapPublicIpOnLaunch: true,
+    vpcId: defaultVpc.id,
+}, { dependsOn: [gw] });
+const foo = new aws.ec2.Instance("foo", {
+    // us-west-2
+    ami: "ami-5189a661",
+    instanceType: "t2.micro",
+    privateIp: "10.0.0.12",
+    subnetId: tfTestSubnet.id,
+});
+const bar = new aws.ec2.Eip("bar", {
+    associateWithPrivateIp: "10.0.0.12",
+    instance: foo.id,
+    vpc: true,
+}, { dependsOn: [gw] });
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+default = aws.ec2.Vpc("default",
+    cidr_block="10.0.0.0/16",
+    enable_dns_hostnames=True)
+gw = aws.ec2.InternetGateway("gw", vpc_id=default.id)
+tf_test_subnet = aws.ec2.Subnet("tfTestSubnet",
+    cidr_block="10.0.0.0/24",
+    map_public_ip_on_launch=True,
+    vpc_id=default.id)
+foo = aws.ec2.Instance("foo",
+    ami="ami-5189a661",
+    instance_type="t2.micro",
+    private_ip="10.0.0.12",
+    subnet_id=tf_test_subnet.id)
+bar = aws.ec2.Eip("bar",
+    associate_with_private_ip="10.0.0.12",
+    instance=foo.id,
+    vpc=True)
+```
+
+Allocating EIP from the BYOIP pool:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const byoip_ip = new aws.ec2.Eip("byoip-ip", {
+    publicIpv4Pool: "ipv4pool-ec2-012345",
+    vpc: true,
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+byoip_ip = aws.ec2.Eip("byoip-ip",
+    public_ipv4_pool="ipv4pool-ec2-012345",
+    vpc=True)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a Eip Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -59,7 +172,7 @@ const lb = new aws.ec2.Eip("lb", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Eip</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>associate_with_private_ip=None<span class="p">, </span>instance=None<span class="p">, </span>network_interface=None<span class="p">, </span>public_ipv4_pool=None<span class="p">, </span>tags=None<span class="p">, </span>vpc=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Eip</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>associate_with_private_ip=None<span class="p">, </span>customer_owned_ipv4_pool=None<span class="p">, </span>instance=None<span class="p">, </span>network_interface=None<span class="p">, </span>public_ipv4_pool=None<span class="p">, </span>tags=None<span class="p">, </span>vpc=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -244,6 +357,15 @@ the Elastic IP address is associated with the primary private IP address.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Customer<wbr>Owned<wbr>Ipv4Pool</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Instance</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -303,6 +425,15 @@ the Elastic IP address is associated with the primary private IP address.
     <dd>{{% md %}}A user specified primary or secondary private IP address to
 associate with the Elastic IP address. If no private IP address is specified,
 the Elastic IP address is associated with the primary private IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Customer<wbr>Owned<wbr>Ipv4Pool</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -370,6 +501,15 @@ the Elastic IP address is associated with the primary private IP address.
 
     <dt class="property-optional"
             title="Optional">
+        <span>customer<wbr>Owned<wbr>Ipv4Pool</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>instance</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -429,6 +569,15 @@ the Elastic IP address is associated with the primary private IP address.
     <dd>{{% md %}}A user specified primary or secondary private IP address to
 associate with the Elastic IP address. If no private IP address is specified,
 the Elastic IP address is associated with the primary private IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>customer_<wbr>owned_<wbr>ipv4_<wbr>pool</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -512,6 +661,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span>Customer<wbr>Owned<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Customer owned IP.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Domain</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -584,6 +742,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Customer<wbr>Owned<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Customer owned IP.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -662,6 +829,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span>customer<wbr>Owned<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Customer owned IP.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>domain</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -737,6 +913,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span>customer_<wbr>owned_<wbr>ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Customer owned IP.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>domain</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -799,14 +984,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Eip Resource {#look-up}
 
 Get an existing Eip resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#EipState">EipState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Eip">Eip</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allocation_id=None<span class="p">, </span>associate_with_private_ip=None<span class="p">, </span>association_id=None<span class="p">, </span>domain=None<span class="p">, </span>instance=None<span class="p">, </span>network_interface=None<span class="p">, </span>private_dns=None<span class="p">, </span>private_ip=None<span class="p">, </span>public_dns=None<span class="p">, </span>public_ip=None<span class="p">, </span>public_ipv4_pool=None<span class="p">, </span>tags=None<span class="p">, </span>vpc=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allocation_id=None<span class="p">, </span>associate_with_private_ip=None<span class="p">, </span>association_id=None<span class="p">, </span>customer_owned_ip=None<span class="p">, </span>customer_owned_ipv4_pool=None<span class="p">, </span>domain=None<span class="p">, </span>instance=None<span class="p">, </span>network_interface=None<span class="p">, </span>private_dns=None<span class="p">, </span>private_ip=None<span class="p">, </span>public_dns=None<span class="p">, </span>public_ip=None<span class="p">, </span>public_ipv4_pool=None<span class="p">, </span>tags=None<span class="p">, </span>vpc=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -949,6 +1134,24 @@ the Elastic IP address is associated with the primary private IP address.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Customer<wbr>Owned<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Customer owned IP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Customer<wbr>Owned<wbr>Ipv4Pool</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Domain</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -1069,6 +1272,24 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Customer<wbr>Owned<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Customer owned IP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Customer<wbr>Owned<wbr>Ipv4Pool</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1195,6 +1416,24 @@ the Elastic IP address is associated with the primary private IP address.
 
     <dt class="property-optional"
             title="Optional">
+        <span>customer<wbr>Owned<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Customer owned IP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>customer<wbr>Owned<wbr>Ipv4Pool</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>domain</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1315,6 +1554,24 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>customer_<wbr>owned_<wbr>ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Customer owned IP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>customer_<wbr>owned_<wbr>ipv4_<wbr>pool</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

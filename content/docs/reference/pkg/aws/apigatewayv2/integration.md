@@ -13,26 +13,12 @@ meta_desc: "Explore the Integration resource of the apigatewayv2 module, includi
 Manages an Amazon API Gateway Version 2 integration.
 More information can be found in the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html).
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### Basic
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -42,22 +28,19 @@ const example = new aws.apigatewayv2.Integration("example", {
     integrationType: "MOCK",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example = aws.apigatewayv2.Integration("example",
+    api_id=aws_apigatewayv2_api["example"]["id"],
+    integration_type="MOCK")
+```
+
+{{% /example %}}
+{{% example %}}
 ### Lambda Integration
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -79,13 +62,33 @@ const exampleIntegration = new aws.apigatewayv2.Integration("example", {
     passthroughBehavior: "WHEN_NO_MATCH",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example_function = aws.lambda_.Function("exampleFunction",
+    code=pulumi.FileArchive("example.zip"),
+    handler="index.handler",
+    role=aws_iam_role["example"]["arn"],
+    runtime="nodejs10.x")
+example_integration = aws.apigatewayv2.Integration("exampleIntegration",
+    api_id=aws_apigatewayv2_api["example"]["id"],
+    connection_type="INTERNET",
+    content_handling_strategy="CONVERT_TO_TEXT",
+    description="Lambda example",
+    integration_method="POST",
+    integration_type="AWS",
+    integration_uri=example_function.invoke_arn,
+    passthrough_behavior="WHEN_NO_MATCH")
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a Integration Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -921,7 +924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Integration Resource {#look-up}
 
 Get an existing Integration resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigatewayv2/#IntegrationState">IntegrationState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigatewayv2/#Integration">Integration</a></span></code></pre></div>

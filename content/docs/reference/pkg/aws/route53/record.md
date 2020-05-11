@@ -12,26 +12,12 @@ meta_desc: "Explore the Record resource of the route53 module, including example
 
 Provides a Route53 record resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### Simple routing policy
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -44,22 +30,23 @@ const www = new aws.route53.Record("www", {
     zoneId: aws_route53_zone_primary.zoneId,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+www = aws.route53.Record("www",
+    name="www.example.com",
+    records=[aws_eip["lb"]["public_ip"]],
+    ttl="300",
+    type="A",
+    zone_id=aws_route53_zone["primary"]["zone_id"])
+```
+
+{{% /example %}}
+{{% example %}}
 ### Weighted routing policy
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
+Other routing policies are configured similarly. See [AWS Route53 Developer Guide](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html) for details.
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -87,22 +74,41 @@ const www_live = new aws.route53.Record("www-live", {
     zoneId: aws_route53_zone_primary.zoneId,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+www_dev = aws.route53.Record("www-dev",
+    name="www",
+    records=["dev.example.com"],
+    set_identifier="dev",
+    ttl="5",
+    type="CNAME",
+    weighted_routing_policies=[{
+        "weight": 10,
+    }],
+    zone_id=aws_route53_zone["primary"]["zone_id"])
+www_live = aws.route53.Record("www-live",
+    name="www",
+    records=["live.example.com"],
+    set_identifier="live",
+    ttl="5",
+    type="CNAME",
+    weighted_routing_policies=[{
+        "weight": 90,
+    }],
+    zone_id=aws_route53_zone["primary"]["zone_id"])
+```
+
+{{% /example %}}
+{{% example %}}
 ### Alias record
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
+See [related part of AWS Route53 Developer Guide](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html)
+to understand differences between alias and non-alias records.
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
+TTL for all alias records is [60 seconds](https://aws.amazon.com/route53/faqs/#dns_failover_do_i_need_to_adjust),
+you cannot change this, therefore `ttl` has to be omitted in alias records.
 
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -127,22 +133,35 @@ const www = new aws.route53.Record("www", {
     zoneId: aws_route53_zone_primary.zoneId,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+main = aws.elb.LoadBalancer("main",
+    availability_zones=["us-east-1c"],
+    listeners=[{
+        "instancePort": 80,
+        "instanceProtocol": "http",
+        "lbPort": 80,
+        "lbProtocol": "http",
+    }])
+www = aws.route53.Record("www",
+    aliases=[{
+        "evaluateTargetHealth": True,
+        "name": main.dns_name,
+        "zoneId": main.zone_id,
+    }],
+    name="example.com",
+    type="A",
+    zone_id=aws_route53_zone["primary"]["zone_id"])
+```
+
+{{% /example %}}
+{{% example %}}
 ### NS and SOA Record Management
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
+When creating Route 53 zones, the `NS` and `SOA` records for the zone are automatically created. Enabling the `allow_overwrite` argument will allow managing these records in a single deployment without the requirement for `import`.
 
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -162,13 +181,32 @@ const exampleRecord = new aws.route53.Record("example", {
     zoneId: exampleZone.zoneId,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example_zone = aws.route53.Zone("exampleZone")
+example_record = aws.route53.Record("exampleRecord",
+    allow_overwrite=True,
+    name="test.example.com",
+    records=[
+        example_zone.name_servers[0],
+        example_zone.name_servers[1],
+        example_zone.name_servers[2],
+        example_zone.name_servers[3],
+    ],
+    ttl=30,
+    type="NS",
+    zone_id=example_zone.zone_id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a Record Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -996,7 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Record Resource {#look-up}
 
 Get an existing Record resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#RecordState">RecordState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#Record">Record</a></span></code></pre></div>
@@ -1705,9 +1743,6 @@ Alias record documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordAliasArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordAliasOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.RecordAliasArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.RecordAlias.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1859,9 +1894,6 @@ Alias record documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordFailoverRoutingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordFailoverRoutingPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.RecordFailoverRoutingPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.RecordFailoverRoutingPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1940,9 +1972,6 @@ Alias record documented below.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordGeolocationRoutingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordGeolocationRoutingPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.RecordGeolocationRoutingPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.RecordGeolocationRoutingPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2095,9 +2124,6 @@ Alias record documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordLatencyRoutingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordLatencyRoutingPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.RecordLatencyRoutingPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.RecordLatencyRoutingPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2176,9 +2202,6 @@ Alias record documented below.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordWeightedRoutingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordWeightedRoutingPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.RecordWeightedRoutingPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.RecordWeightedRoutingPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

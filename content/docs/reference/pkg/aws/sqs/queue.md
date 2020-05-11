@@ -11,6 +11,47 @@ meta_desc: "Explore the Queue resource of the sqs module, including examples, in
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const queue = new aws.sqs.Queue("queue", {
+    delaySeconds: 90,
+    maxMessageSize: 2048,
+    messageRetentionSeconds: 86400,
+    receiveWaitTimeSeconds: 10,
+    redrivePolicy: JSON.stringify({
+        deadLetterTargetArn: aws_sqs_queue.queue_deadletter.arn,
+        maxReceiveCount: 4,
+    }),
+    tags: {
+        Environment: "production",
+    },
+});
+```
+```python
+import pulumi
+import json
+import pulumi_aws as aws
+
+queue = aws.sqs.Queue("queue",
+    delay_seconds=90,
+    max_message_size=2048,
+    message_retention_seconds=86400,
+    receive_wait_time_seconds=10,
+    redrive_policy=json.dumps({
+        "deadLetterTargetArn": aws_sqs_queue["queue_deadletter"]["arn"],
+        "maxReceiveCount": 4,
+    }),
+    tags={
+        "Environment": "production",
+    })
+```
+
+{{% /example %}}
 {{% /examples %}}
 ## FIFO queue
 
@@ -22,6 +63,14 @@ const queue = new aws.sqs.Queue("queue", {
     contentBasedDeduplication: true,
     fifoQueue: true,
 });
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+queue = aws.sqs.Queue("queue",
+    content_based_deduplication=True,
+    fifo_queue=True)
 ```
 
 ## Server-side encryption (SSE)
@@ -35,11 +84,19 @@ const queue = new aws.sqs.Queue("queue", {
     kmsMasterKeyId: "alias/aws/sqs",
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+queue = aws.sqs.Queue("queue",
+    kms_data_key_reuse_period_seconds=300,
+    kms_master_key_id="alias/aws/sqs")
+```
 
 
 
 ## Create a Queue Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -863,7 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Queue Resource {#look-up}
 
 Get an existing Queue resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sqs/#QueueState">QueueState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sqs/#Queue">Queue</a></span></code></pre></div>

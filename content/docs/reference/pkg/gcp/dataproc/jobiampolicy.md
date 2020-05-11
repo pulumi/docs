@@ -20,6 +20,40 @@ Three different resources help you manage IAM policies on dataproc jobs. Each of
 
 > **Note:** `gcp.dataproc.JobIAMBinding` resources **can be** used in conjunction with `gcp.dataproc.JobIAMMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_pubsub\_subscription\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const editor = new gcp.dataproc.JobIAMPolicy("editor", {
+    project: "your-project",
+    region: "your-region",
+    jobId: "your-dataproc-job",
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/editor",
+    "members": ["user:jane@example.com"],
+}])
+editor = gcp.dataproc.JobIAMPolicy("editor",
+    project="your-project",
+    region="your-region",
+    job_id="your-dataproc-job",
+    policy_data=admin.policy_data)
+```
+
 ## google\_pubsub\_subscription\_iam\_binding
 
 ```typescript
@@ -31,6 +65,15 @@ const editor = new gcp.dataproc.JobIAMBinding("editor", {
     members: ["user:jane@example.com"],
     role: "roles/editor",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+editor = gcp.dataproc.JobIAMBinding("editor",
+    job_id="your-dataproc-job",
+    members=["user:jane@example.com"],
+    role="roles/editor")
 ```
 
 ## google\_pubsub\_subscription\_iam\_member
@@ -45,11 +88,20 @@ const editor = new gcp.dataproc.JobIAMMember("editor", {
     role: "roles/editor",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+editor = gcp.dataproc.JobIAMMember("editor",
+    job_id="your-dataproc-job",
+    member="user:jane@example.com",
+    role="roles/editor")
+```
 
 
 
 ## Create a JobIAMPolicy Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -517,7 +569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing JobIAMPolicy Resource {#look-up}
 
 Get an existing JobIAMPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#JobIAMPolicyState">JobIAMPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#JobIAMPolicy">JobIAMPolicy</a></span></code></pre></div>

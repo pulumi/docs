@@ -14,26 +14,10 @@ Manages status (recording / stopped) of an AWS Config Configuration Recorder.
 
 > **Note:** Starting Configuration Recorder requires a [Delivery Channel](https://www.terraform.io/docs/providers/aws/r/config_delivery_channel.html) to be present. Use of `depends_on` (as shown below) is recommended to avoid race conditions.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -88,13 +72,60 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
     role: role.id,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+foo_recorder_status = aws.cfg.RecorderStatus("fooRecorderStatus", is_enabled=True)
+role = aws.iam.Role("role", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "config.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+
+""")
+role_policy_attachment = aws.iam.RolePolicyAttachment("rolePolicyAttachment",
+    policy_arn="arn:aws:iam::aws:policy/service-role/AWSConfigRole",
+    role=role.name)
+bucket = aws.s3.Bucket("bucket")
+foo_delivery_channel = aws.cfg.DeliveryChannel("fooDeliveryChannel", s3_bucket_name=bucket.bucket)
+foo_recorder = aws.cfg.Recorder("fooRecorder", role_arn=role.arn)
+role_policy = aws.iam.RolePolicy("rolePolicy",
+    policy=pulumi.Output.all(bucket.arn, bucket.arn).apply(lambda bucketArn, bucketArn1: f"""{{
+  "Version": "2012-10-17",
+  "Statement": [
+    {{
+      "Action": [
+        "s3:*"
+      ],
+      "Effect": "Allow",
+      "Resource": [
+        "{bucket_arn}",
+        "{bucket_arn1}/*"
+      ]
+    }}
+  ]
+}}
+
+"""),
+    role=role.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a RecorderStatus Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -450,7 +481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing RecorderStatus Resource {#look-up}
 
 Get an existing RecorderStatus resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cfg/#RecorderStatusState">RecorderStatusState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cfg/#RecorderStatus">RecorderStatus</a></span></code></pre></div>

@@ -30,26 +30,12 @@ for more information.
 > **Note:** All arguments including the username and password will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### Aurora MySQL 2.x (MySQL 5.7)
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -70,22 +56,30 @@ const defaultCluster = new aws.rds.Cluster("default", {
     preferredBackupWindow: "07:00-09:00",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+default = aws.rds.Cluster("default",
+    availability_zones=[
+        "us-west-2a",
+        "us-west-2b",
+        "us-west-2c",
+    ],
+    backup_retention_period=5,
+    cluster_identifier="aurora-cluster-demo",
+    database_name="mydb",
+    engine="aurora-mysql",
+    engine_version="5.7.mysql_aurora.2.03.2",
+    master_password="bar",
+    master_username="foo",
+    preferred_backup_window="07:00-09:00")
+```
+
+{{% /example %}}
+{{% example %}}
 ### Aurora MySQL 1.x (MySQL 5.6)
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -104,22 +98,28 @@ const defaultCluster = new aws.rds.Cluster("default", {
     preferredBackupWindow: "07:00-09:00",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+default = aws.rds.Cluster("default",
+    availability_zones=[
+        "us-west-2a",
+        "us-west-2b",
+        "us-west-2c",
+    ],
+    backup_retention_period=5,
+    cluster_identifier="aurora-cluster-demo",
+    database_name="mydb",
+    master_password="bar",
+    master_username="foo",
+    preferred_backup_window="07:00-09:00")
+```
+
+{{% /example %}}
+{{% example %}}
 ### Aurora with PostgreSQL engine
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -139,22 +139,31 @@ const postgresql = new aws.rds.Cluster("postgresql", {
     preferredBackupWindow: "07:00-09:00",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+postgresql = aws.rds.Cluster("postgresql",
+    availability_zones=[
+        "us-west-2a",
+        "us-west-2b",
+        "us-west-2c",
+    ],
+    backup_retention_period=5,
+    cluster_identifier="aurora-cluster-demo",
+    database_name="mydb",
+    engine="aurora-postgresql",
+    master_password="bar",
+    master_username="foo",
+    preferred_backup_window="07:00-09:00")
+```
+
+{{% /example %}}
+{{% example %}}
 ### Aurora Multi-Master Cluster
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
+> More information about Aurora Multi-Master Clusters can be found in the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html).
 
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -168,13 +177,26 @@ const example = new aws.rds.Cluster("example", {
     skipFinalSnapshot: true,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example = aws.rds.Cluster("example",
+    cluster_identifier="example",
+    db_subnet_group_name=aws_db_subnet_group["example"]["name"],
+    engine_mode="multimaster",
+    master_password="barbarbarbar",
+    master_username="foo",
+    skip_final_snapshot=True)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a Cluster Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1966,7 +1988,7 @@ load-balanced across replicas
 ## Look up an Existing Cluster Resource {#look-up}
 
 Get an existing Cluster resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#Cluster">Cluster</a></span></code></pre></div>
@@ -3639,9 +3661,6 @@ with the Cluster
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#ClusterS3ImportArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#ClusterS3ImportOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.Inputs.ClusterS3ImportArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.Outputs.ClusterS3Import.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3864,9 +3883,6 @@ with the Cluster
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#ClusterScalingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#ClusterScalingConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.Inputs.ClusterScalingConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.Outputs.ClusterScalingConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

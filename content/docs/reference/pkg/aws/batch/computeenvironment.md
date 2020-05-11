@@ -18,26 +18,10 @@ For information about compute environment, see [Compute Environments](http://doc
 > **Note:** To prevent a race condition during environment deletion, make sure to set `depends_on` to the related `aws.iam.RolePolicyAttachment`;
 otherwise, the policy may be destroyed too soon and the compute environment will then get stuck in the `DELETING` state, see [Troubleshooting AWS Batch](http://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html) .
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -113,13 +97,77 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
     type: "MANAGED",
 }, { dependsOn: [awsBatchServiceRoleRolePolicyAttachment] });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+ecs_instance_role_role = aws.iam.Role("ecsInstanceRoleRole", assume_role_policy="""{
+    "Version": "2012-10-17",
+    "Statement": [
+	{
+	    "Action": "sts:AssumeRole",
+	    "Effect": "Allow",
+	    "Principal": {
+		"Service": "ec2.amazonaws.com"
+	    }
+	}
+    ]
+}
+
+""")
+ecs_instance_role_role_policy_attachment = aws.iam.RolePolicyAttachment("ecsInstanceRoleRolePolicyAttachment",
+    policy_arn="arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role",
+    role=ecs_instance_role_role.name)
+ecs_instance_role_instance_profile = aws.iam.InstanceProfile("ecsInstanceRoleInstanceProfile", role=ecs_instance_role_role.name)
+aws_batch_service_role_role = aws.iam.Role("awsBatchServiceRoleRole", assume_role_policy="""{
+    "Version": "2012-10-17",
+    "Statement": [
+	{
+	    "Action": "sts:AssumeRole",
+	    "Effect": "Allow",
+	    "Principal": {
+		"Service": "batch.amazonaws.com"
+	    }
+	}
+    ]
+}
+
+""")
+aws_batch_service_role_role_policy_attachment = aws.iam.RolePolicyAttachment("awsBatchServiceRoleRolePolicyAttachment",
+    policy_arn="arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole",
+    role=aws_batch_service_role_role.name)
+sample_security_group = aws.ec2.SecurityGroup("sampleSecurityGroup", egress=[{
+    "cidrBlocks": ["0.0.0.0/0"],
+    "fromPort": 0,
+    "protocol": "-1",
+    "toPort": 0,
+}])
+sample_vpc = aws.ec2.Vpc("sampleVpc", cidr_block="10.1.0.0/16")
+sample_subnet = aws.ec2.Subnet("sampleSubnet",
+    cidr_block="10.1.1.0/24",
+    vpc_id=sample_vpc.id)
+sample_compute_environment = aws.batch.ComputeEnvironment("sampleComputeEnvironment",
+    compute_environment_name="sample",
+    compute_resources={
+        "instanceRole": ecs_instance_role_instance_profile.arn,
+        "instanceType": ["c4.large"],
+        "maxVcpus": 16,
+        "minVcpus": 0,
+        "securityGroupIds": [sample_security_group.id],
+        "subnets": [sample_subnet.id],
+        "type": "EC2",
+    },
+    service_role=aws_batch_service_role_role.arn,
+    type="MANAGED")
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a ComputeEnvironment Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -763,7 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ComputeEnvironment Resource {#look-up}
 
 Get an existing ComputeEnvironment resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/batch/#ComputeEnvironmentState">ComputeEnvironmentState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/batch/#ComputeEnvironment">ComputeEnvironment</a></span></code></pre></div>
@@ -1287,9 +1335,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#ComputeEnvironmentComputeResourcesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#ComputeEnvironmentComputeResourcesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.Inputs.ComputeEnvironmentComputeResourcesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.Outputs.ComputeEnvironmentComputeResources.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1873,9 +1918,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#ComputeEnvironmentComputeResourcesLaunchTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#ComputeEnvironmentComputeResourcesLaunchTemplateOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.Inputs.ComputeEnvironmentComputeResourcesLaunchTemplateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.Outputs.ComputeEnvironmentComputeResourcesLaunchTemplate.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

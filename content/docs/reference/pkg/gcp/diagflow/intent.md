@@ -20,10 +20,35 @@ To get more information about Intent, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/dialogflow/docs/)
 
+## Example Usage - Dialogflow Intent Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const basicAgent = new gcp.diagflow.Agent("basicAgent", {
+    displayName: "example_agent",
+    defaultLanguageCode: "en",
+    timeZone: "America/New_York",
+});
+const basicIntent = new gcp.diagflow.Intent("basicIntent", {displayName: "basic-intent"});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+basic_agent = gcp.diagflow.Agent("basicAgent",
+    display_name="example_agent",
+    default_language_code="en",
+    time_zone="America/New_York")
+basic_intent = gcp.diagflow.Intent("basicIntent", display_name="basic-intent")
+```
+
 
 
 ## Create a Intent Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -915,7 +940,7 @@ chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 ## Look up an Existing Intent Resource {#look-up}
 
 Get an existing Intent resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/diagflow/#IntentState">IntentState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/diagflow/#Intent">Intent</a></span></code></pre></div>
@@ -1687,9 +1712,6 @@ filling prompt is forwarded to the webhook.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/diagflow?tab=doc#IntentFollowupIntentInfoOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Diagflow.Outputs.IntentFollowupIntentInfo.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -12,69 +12,60 @@ meta_desc: "Explore the GetPeeringAttachment function of the ec2transitgateway m
 
 Get information on an EC2 Transit Gateway Peering Attachment.
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### By Filter
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.Ec2TransitGatewayPeeringAttachment({
-    filter: [{
+const example = pulumi.output(aws.ec2transitgateway.getPeeringAttachment({
+    filters: [{
         name: "transit-gateway-attachment-id",
         values: ["tgw-attach-12345678"],
     }],
 }, { async: true }));
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example = aws.ec2transitgateway.get_peering_attachment(filters=[{
+    "name": "transit-gateway-attachment-id",
+    "values": ["tgw-attach-12345678"],
+}])
+```
+
+{{% /example %}}
+{{% example %}}
 ### By Identifier
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const attachment = pulumi.output(aws.Ec2TransitGatewayPeeringAttachment({
+const attachment = pulumi.output(aws.ec2transitgateway.getPeeringAttachment({
     id: "tgw-attach-12345678",
 }, { async: true }));
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+attachment = aws.ec2transitgateway.get_peering_attachment(id="tgw-attach-12345678")
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetPeeringAttachment {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -542,9 +533,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway?tab=doc#GetPeeringAttachmentFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway?tab=doc#GetPeeringAttachmentFilter">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2TransitGateway.Inputs.GetPeeringAttachmentFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2TransitGateway.Outputs.GetPeeringAttachmentFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -661,16 +649,4 @@ An EC2 Transit Gateway Peering Attachment be selected if any one of the given va
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

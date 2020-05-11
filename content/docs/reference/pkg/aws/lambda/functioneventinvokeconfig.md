@@ -13,12 +13,148 @@ meta_desc: "Explore the FunctionEventInvokeConfig resource of the lambda module,
 Manages an asynchronous invocation configuration for a Lambda Function or Alias. More information about asynchronous invocations and the configurable values can be found in the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html).
 
 {{% examples %}}
+## Example Usage
+
+{{% example %}}
+### Destination Configuration
+
+> **NOTE:** Ensure the Lambda Function IAM Role has necessary permissions for the destination, such as `sqs:SendMessage` or `sns:Publish`, otherwise the API will return a generic `InvalidParameterValueException: The destination ARN arn:PARTITION:SERVICE:REGION:ACCOUNT:RESOURCE is invalid.` error.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.lambda.FunctionEventInvokeConfig("example", {
+    functionName: aws_lambda_alias.example.function_name,
+    destination_config: {
+        on_failure: {
+            destination: aws_sqs_queue.example.arn,
+        },
+        on_success: {
+            destination: aws_sns_topic.example.arn,
+        },
+    },
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.lambda_.FunctionEventInvokeConfig("example",
+    function_name=aws_lambda_alias["example"]["function_name"],
+    destination_config={
+        "on_failure": {
+            "destination": aws_sqs_queue["example"]["arn"],
+        },
+        "on_success": {
+            "destination": aws_sns_topic["example"]["arn"],
+        },
+    })
+```
+
+{{% /example %}}
+{{% example %}}
+### Error Handling Configuration
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.lambda.FunctionEventInvokeConfig("example", {
+    functionName: aws_lambda_alias.example.function_name,
+    maximumEventAgeInSeconds: 60,
+    maximumRetryAttempts: 0,
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.lambda_.FunctionEventInvokeConfig("example",
+    function_name=aws_lambda_alias["example"]["function_name"],
+    maximum_event_age_in_seconds=60,
+    maximum_retry_attempts=0)
+```
+
+{{% /example %}}
+{{% example %}}
+### Configuration for Alias Name
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.lambda.FunctionEventInvokeConfig("example", {
+    functionName: aws_lambda_alias.example.function_name,
+    qualifier: aws_lambda_alias.example.name,
+});
+// ... other configuration ...
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.lambda_.FunctionEventInvokeConfig("example",
+    function_name=aws_lambda_alias["example"]["function_name"],
+    qualifier=aws_lambda_alias["example"]["name"])
+# ... other configuration ...
+```
+
+{{% /example %}}
+{{% example %}}
+### Configuration for Function Latest Unpublished Version
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.lambda.FunctionEventInvokeConfig("example", {
+    functionName: aws_lambda_function.example.function_name,
+    qualifier: `$LATEST`,
+});
+// ... other configuration ...
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.lambda_.FunctionEventInvokeConfig("example",
+    function_name=aws_lambda_function["example"]["function_name"],
+    qualifier="$LATEST")
+# ... other configuration ...
+```
+
+{{% /example %}}
+{{% example %}}
+### Configuration for Function Published Version
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.lambda.FunctionEventInvokeConfig("example", {
+    functionName: aws_lambda_function.example.function_name,
+    qualifier: aws_lambda_function.example.version,
+});
+// ... other configuration ...
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.lambda_.FunctionEventInvokeConfig("example",
+    function_name=aws_lambda_function["example"]["function_name"],
+    qualifier=aws_lambda_function["example"]["version"])
+# ... other configuration ...
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Create a FunctionEventInvokeConfig Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -482,7 +618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing FunctionEventInvokeConfig Resource {#look-up}
 
 Get an existing FunctionEventInvokeConfig resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#FunctionEventInvokeConfigState">FunctionEventInvokeConfigState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#FunctionEventInvokeConfig">FunctionEventInvokeConfig</a></span></code></pre></div>
@@ -827,9 +963,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Inputs.FunctionEventInvokeConfigDestinationConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Outputs.FunctionEventInvokeConfigDestinationConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -945,9 +1078,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOnFailureArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOnFailureOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Inputs.FunctionEventInvokeConfigDestinationConfigOnFailureArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Outputs.FunctionEventInvokeConfigDestinationConfigOnFailure.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1026,9 +1156,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOnSuccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOnSuccessOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Inputs.FunctionEventInvokeConfigDestinationConfigOnSuccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Outputs.FunctionEventInvokeConfigDestinationConfigOnSuccess.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

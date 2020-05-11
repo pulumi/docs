@@ -20,6 +20,36 @@ Three different resources help you manage your IAM policy for pubsub subscriptio
 
 > **Note:** `gcp.pubsub.SubscriptionIAMBinding` resources **can be** used in conjunction with `gcp.pubsub.SubscriptionIAMMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_pubsub\_subscription\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const editor = new gcp.pubsub.SubscriptionIAMPolicy("editor", {
+    subscription: "your-subscription-name",
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/editor",
+    "members": ["user:jane@example.com"],
+}])
+editor = gcp.pubsub.SubscriptionIAMPolicy("editor",
+    subscription="your-subscription-name",
+    policy_data=admin.policy_data)
+```
+
 ## google\_pubsub\_subscription\_iam\_binding
 
 ```typescript
@@ -31,6 +61,15 @@ const editor = new gcp.pubsub.SubscriptionIAMBinding("editor", {
     role: "roles/editor",
     subscription: "your-subscription-name",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+editor = gcp.pubsub.SubscriptionIAMBinding("editor",
+    members=["user:jane@example.com"],
+    role="roles/editor",
+    subscription="your-subscription-name")
 ```
 
 ## google\_pubsub\_subscription\_iam\_member
@@ -45,11 +84,20 @@ const editor = new gcp.pubsub.SubscriptionIAMMember("editor", {
     subscription: "your-subscription-name",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+editor = gcp.pubsub.SubscriptionIAMMember("editor",
+    member="user:jane@example.com",
+    role="roles/editor",
+    subscription="your-subscription-name")
+```
 
 
 
 ## Create a SubscriptionIAMBinding Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -553,7 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing SubscriptionIAMBinding Resource {#look-up}
 
 Get an existing SubscriptionIAMBinding resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/pubsub/#SubscriptionIAMBindingState">SubscriptionIAMBindingState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/pubsub/#SubscriptionIAMBinding">SubscriptionIAMBinding</a></span></code></pre></div>
@@ -937,9 +985,6 @@ is not provided, the provider project is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionIAMBindingConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionIAMBindingConditionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Inputs.SubscriptionIAMBindingConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Outputs.SubscriptionIAMBindingCondition.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

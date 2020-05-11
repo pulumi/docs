@@ -25,12 +25,44 @@ and
 to control individual role entity pairs.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+Example creating a default object ACL on a bucket with one owner, and one reader.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const image-store = new gcp.storage.Bucket("image-store", {location: "EU"});
+const image-store-default-acl = new gcp.storage.DefaultObjectACL("image-store-default-acl", {
+    bucket: image-store.name,
+    roleEntities: [
+        "OWNER:user-my.email@gmail.com",
+        "READER:group-mygroup",
+    ],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+image_store = gcp.storage.Bucket("image-store", location="EU")
+image_store_default_acl = gcp.storage.DefaultObjectACL("image-store-default-acl",
+    bucket=image_store.name,
+    role_entities=[
+        "OWNER:user-my.email@gmail.com",
+        "READER:group-mygroup",
+    ])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Create a DefaultObjectACL Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -394,7 +426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DefaultObjectACL Resource {#look-up}
 
 Get an existing DefaultObjectACL resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#DefaultObjectACLState">DefaultObjectACLState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#DefaultObjectACL">DefaultObjectACL</a></span></code></pre></div>

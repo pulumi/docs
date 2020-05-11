@@ -33,11 +33,21 @@ const domainMapping = new gcp.appengine.DomainMapping("domain_mapping", {
     },
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+domain_mapping = gcp.appengine.DomainMapping("domainMapping",
+    domain_name="verified-domain.com",
+    ssl_settings={
+        "sslManagementType": "AUTOMATIC",
+    })
+```
 
 
 
 ## Create a DomainMapping Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -549,7 +559,7 @@ configuration in order to serve the application via this domain mapping.
 ## Look up an Existing DomainMapping Resource {#look-up}
 
 Get an existing DomainMapping resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#DomainMappingState">DomainMappingState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#DomainMapping">DomainMapping</a></span></code></pre></div>
@@ -942,9 +952,6 @@ configuration in order to serve the application via this domain mapping.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#DomainMappingResourceRecordOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.DomainMappingResourceRecord.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1083,9 +1090,6 @@ configuration in order to serve the application via this domain mapping.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#DomainMappingSslSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#DomainMappingSslSettingsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.DomainMappingSslSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.DomainMappingSslSettings.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

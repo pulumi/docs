@@ -12,10 +12,51 @@ meta_desc: "Explore the SecretVersion resource of the secretmanager module, incl
 
 A secret version resource.
 
+> **Warning:** All arguments including `payload.secret_data` will be stored in the raw
+state as plain-text.
+
+## Example Usage - Secret Version Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const secret-basic = new gcp.secretmanager.Secret("secret-basic", {
+    secretId: "secret-version",
+    labels: {
+        label: "my-label",
+    },
+    replication: {
+        automatic: true,
+    },
+});
+const secret-version-basic = new gcp.secretmanager.SecretVersion("secret-version-basic", {
+    secret: secret-basic.id,
+    secretData: "secret-data",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+secret_basic = gcp.secretmanager.Secret("secret-basic",
+    secret_id="secret-version",
+    labels={
+        "label": "my-label",
+    },
+    replication={
+        "automatic": True,
+    })
+secret_version_basic = gcp.secretmanager.SecretVersion("secret-version-basic",
+    secret=secret_basic.id,
+    secret_data="secret-data")
+```
+
 
 
 ## Create a SecretVersion Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -219,7 +260,7 @@ The SecretVersion resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
+    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -253,7 +294,7 @@ The SecretVersion resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
+    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -287,7 +328,7 @@ The SecretVersion resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
+    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -321,7 +362,7 @@ The SecretVersion resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
+    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -515,7 +556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing SecretVersion Resource {#look-up}
 
 Get an existing SecretVersion resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/secretmanager/#SecretVersionState">SecretVersionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/secretmanager/#SecretVersion">SecretVersion</a></span></code></pre></div>
@@ -687,7 +728,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
+    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -748,7 +789,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
+    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -809,7 +850,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
+    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -870,7 +911,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
+    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>

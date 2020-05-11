@@ -12,11 +12,37 @@ meta_desc: "Explore the GetBillingAccount function of the organizations module, 
 
 Use this data source to get information about a Google Billing Account.
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const acct = gcp.organizations.getBillingAccount({
+    displayName: "My Billing Account",
+    open: true,
+});
+const myProject = new gcp.organizations.Project("myProject", {
+    projectId: "your-project-id",
+    orgId: "1234567",
+    billingAccount: acct.then(acct => acct.id),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+acct = gcp.organizations.get_billing_account(display_name="My Billing Account",
+    open=True)
+my_project = gcp.organizations.Project("myProject",
+    project_id="your-project-id",
+    org_id="1234567",
+    billing_account=acct.id)
+```
+
 
 
 ## Using GetBillingAccount {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -431,16 +457,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

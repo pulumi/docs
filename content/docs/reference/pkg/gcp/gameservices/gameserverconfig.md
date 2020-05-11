@@ -18,10 +18,133 @@ To get more information about GameServerConfig, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/game-servers/docs)
 
+## Example Usage - Game Service Config Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultGameServerDeployment = new gcp.gameservices.GameServerDeployment("defaultGameServerDeployment", {
+    deploymentId: "tf-test-deployment",
+    description: "a deployment description",
+});
+const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGameServerConfig", {
+    configId: "tf-test-config",
+    deploymentId: defaultGameServerDeployment.deploymentId,
+    description: "a config description",
+    fleet_configs: [{
+        name: "something-unique",
+        fleetSpec: JSON.stringify({
+            replicas: 1,
+            scheduling: "Packed",
+            template: {
+                metadata: {
+                    name: "tf-test-game-server-template",
+                },
+                spec: {
+                    template: {
+                        spec: {
+                            containers: [{
+                                name: "simple-udp-server",
+                                image: "gcr.io/agones-images/udp-server:0.14",
+                            }],
+                        },
+                    },
+                },
+            },
+        }),
+    }],
+    scaling_configs: [{
+        name: "scaling-config-name",
+        fleetAutoscalerSpec: JSON.stringify({
+            policy: {
+                type: "Webhook",
+                webhook: {
+                    service: {
+                        name: "autoscaler-webhook-service",
+                        namespace: "default",
+                        path: "scale",
+                    },
+                },
+            },
+        }),
+        selectors: [{
+            labels: {
+                one: "two",
+            },
+        }],
+        schedules: [{
+            cronJobDuration: "3.500s",
+            cronSpec: "0 0 * * 0",
+        }],
+    }],
+});
+```
+```python
+import pulumi
+import json
+import pulumi_gcp as gcp
+
+default_game_server_deployment = gcp.gameservices.GameServerDeployment("defaultGameServerDeployment",
+    deployment_id="tf-test-deployment",
+    description="a deployment description")
+default_game_server_config = gcp.gameservices.GameServerConfig("defaultGameServerConfig",
+    config_id="tf-test-config",
+    deployment_id=default_game_server_deployment.deployment_id,
+    description="a config description",
+    fleet_configs=[{
+        "name": "something-unique",
+        "fleetSpec": json.dumps({
+            "replicas": 1,
+            "scheduling": "Packed",
+            "template": {
+                "metadata": {
+                    "name": "tf-test-game-server-template",
+                },
+                "spec": {
+                    "template": {
+                        "spec": {
+                            "containers": [{
+                                "name": "simple-udp-server",
+                                "image": "gcr.io/agones-images/udp-server:0.14",
+                            }],
+                        },
+                    },
+                },
+            },
+        }),
+    }],
+    scaling_configs=[{
+        "name": "scaling-config-name",
+        "fleetAutoscalerSpec": json.dumps({
+            "policy": {
+                "type": "Webhook",
+                "webhook": {
+                    "service": {
+                        "name": "autoscaler-webhook-service",
+                        "namespace": "default",
+                        "path": "scale",
+                    },
+                },
+            },
+        }),
+        "selectors": [{
+            "labels": {
+                "one": "two",
+            },
+        }],
+        "schedules": [{
+            "cronJobDuration": "3.500s",
+            "cronSpec": "0 0 * * 0",
+        }],
+    }])
+```
+
 
 
 ## Create a GameServerConfig Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -637,7 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing GameServerConfig Resource {#look-up}
 
 Get an existing GameServerConfig resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerConfigState">GameServerConfigState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerConfig">GameServerConfig</a></span></code></pre></div>
@@ -1134,9 +1257,6 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerConfigFleetConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerConfigFleetConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Inputs.GameServerConfigFleetConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Outputs.GameServerConfigFleetConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1275,9 +1395,6 @@ The format of the spec can be found :
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Inputs.GameServerConfigScalingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Outputs.GameServerConfigScalingConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1481,9 +1598,6 @@ any of the selector entries.  Structure is documented below.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigScheduleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Inputs.GameServerConfigScalingConfigScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Outputs.GameServerConfigScalingConfigSchedule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1695,9 +1809,6 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigSelectorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigSelectorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Inputs.GameServerConfigScalingConfigSelectorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Outputs.GameServerConfigScalingConfigSelector.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -43,11 +43,27 @@ const custom_ssl_policy = new gcp.compute.SSLPolicy("custom-ssl-policy", {
     profile: "CUSTOM",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+prod_ssl_policy = gcp.compute.SSLPolicy("prod-ssl-policy", profile="MODERN")
+nonprod_ssl_policy = gcp.compute.SSLPolicy("nonprod-ssl-policy",
+    min_tls_version="TLS_1_2",
+    profile="MODERN")
+custom_ssl_policy = gcp.compute.SSLPolicy("custom-ssl-policy",
+    custom_features=[
+        "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+        "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+    ],
+    min_tls_version="TLS_1_2",
+    profile="CUSTOM")
+```
 
 
 
 ## Create a SSLPolicy Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -260,9 +276,7 @@ for which ciphers are available to use. **Note**: this argument
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The minimum version of SSL protocol that can be used by the clients
-to establish a connection with the load balancer. This can be one of
-`TLS_1_0`, `TLS_1_1`, `TLS_1_2`.
-Default is `TLS_1_0`.
+to establish a connection with the load balancer.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -287,14 +301,12 @@ character, which cannot be a dash.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Profile specifies the set of SSL features that can be used by the
-load balancer when negotiating SSL with clients. This can be one of
-`COMPATIBLE`, `MODERN`, `RESTRICTED`, or `CUSTOM`. If using `CUSTOM`,
+load balancer when negotiating SSL with clients. If using `CUSTOM`,
 the set of SSL features to enable must be specified in the
 `customFeatures` field.
 See the [official documentation](https://cloud.google.com/compute/docs/load-balancing/ssl-policies#profilefeaturesupport)
 for information on what cipher suites each profile provides. If
 `CUSTOM` is used, the `custom_features` attribute **must be set**.
-Default is `COMPATIBLE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -347,9 +359,7 @@ for which ciphers are available to use. **Note**: this argument
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The minimum version of SSL protocol that can be used by the clients
-to establish a connection with the load balancer. This can be one of
-`TLS_1_0`, `TLS_1_1`, `TLS_1_2`.
-Default is `TLS_1_0`.
+to establish a connection with the load balancer.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -374,14 +384,12 @@ character, which cannot be a dash.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Profile specifies the set of SSL features that can be used by the
-load balancer when negotiating SSL with clients. This can be one of
-`COMPATIBLE`, `MODERN`, `RESTRICTED`, or `CUSTOM`. If using `CUSTOM`,
+load balancer when negotiating SSL with clients. If using `CUSTOM`,
 the set of SSL features to enable must be specified in the
 `customFeatures` field.
 See the [official documentation](https://cloud.google.com/compute/docs/load-balancing/ssl-policies#profilefeaturesupport)
 for information on what cipher suites each profile provides. If
 `CUSTOM` is used, the `custom_features` attribute **must be set**.
-Default is `COMPATIBLE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -434,9 +442,7 @@ for which ciphers are available to use. **Note**: this argument
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The minimum version of SSL protocol that can be used by the clients
-to establish a connection with the load balancer. This can be one of
-`TLS_1_0`, `TLS_1_1`, `TLS_1_2`.
-Default is `TLS_1_0`.
+to establish a connection with the load balancer.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -461,14 +467,12 @@ character, which cannot be a dash.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Profile specifies the set of SSL features that can be used by the
-load balancer when negotiating SSL with clients. This can be one of
-`COMPATIBLE`, `MODERN`, `RESTRICTED`, or `CUSTOM`. If using `CUSTOM`,
+load balancer when negotiating SSL with clients. If using `CUSTOM`,
 the set of SSL features to enable must be specified in the
 `customFeatures` field.
 See the [official documentation](https://cloud.google.com/compute/docs/load-balancing/ssl-policies#profilefeaturesupport)
 for information on what cipher suites each profile provides. If
 `CUSTOM` is used, the `custom_features` attribute **must be set**.
-Default is `COMPATIBLE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -521,9 +525,7 @@ for which ciphers are available to use. **Note**: this argument
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The minimum version of SSL protocol that can be used by the clients
-to establish a connection with the load balancer. This can be one of
-`TLS_1_0`, `TLS_1_1`, `TLS_1_2`.
-Default is `TLS_1_0`.
+to establish a connection with the load balancer.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -548,14 +550,12 @@ character, which cannot be a dash.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Profile specifies the set of SSL features that can be used by the
-load balancer when negotiating SSL with clients. This can be one of
-`COMPATIBLE`, `MODERN`, `RESTRICTED`, or `CUSTOM`. If using `CUSTOM`,
+load balancer when negotiating SSL with clients. If using `CUSTOM`,
 the set of SSL features to enable must be specified in the
 `customFeatures` field.
 See the [official documentation](https://cloud.google.com/compute/docs/load-balancing/ssl-policies#profilefeaturesupport)
 for information on what cipher suites each profile provides. If
 `CUSTOM` is used, the `custom_features` attribute **must be set**.
-Default is `COMPATIBLE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -795,7 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing SSLPolicy Resource {#look-up}
 
 Get an existing SSLPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#SSLPolicyState">SSLPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#SSLPolicy">SSLPolicy</a></span></code></pre></div>
@@ -976,9 +976,7 @@ for which ciphers are available to use. **Note**: this argument
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The minimum version of SSL protocol that can be used by the clients
-to establish a connection with the load balancer. This can be one of
-`TLS_1_0`, `TLS_1_1`, `TLS_1_2`.
-Default is `TLS_1_0`.
+to establish a connection with the load balancer.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1003,14 +1001,12 @@ character, which cannot be a dash.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Profile specifies the set of SSL features that can be used by the
-load balancer when negotiating SSL with clients. This can be one of
-`COMPATIBLE`, `MODERN`, `RESTRICTED`, or `CUSTOM`. If using `CUSTOM`,
+load balancer when negotiating SSL with clients. If using `CUSTOM`,
 the set of SSL features to enable must be specified in the
 `customFeatures` field.
 See the [official documentation](https://cloud.google.com/compute/docs/load-balancing/ssl-policies#profilefeaturesupport)
 for information on what cipher suites each profile provides. If
 `CUSTOM` is used, the `custom_features` attribute **must be set**.
-Default is `COMPATIBLE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1099,9 +1095,7 @@ for which ciphers are available to use. **Note**: this argument
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The minimum version of SSL protocol that can be used by the clients
-to establish a connection with the load balancer. This can be one of
-`TLS_1_0`, `TLS_1_1`, `TLS_1_2`.
-Default is `TLS_1_0`.
+to establish a connection with the load balancer.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1126,14 +1120,12 @@ character, which cannot be a dash.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Profile specifies the set of SSL features that can be used by the
-load balancer when negotiating SSL with clients. This can be one of
-`COMPATIBLE`, `MODERN`, `RESTRICTED`, or `CUSTOM`. If using `CUSTOM`,
+load balancer when negotiating SSL with clients. If using `CUSTOM`,
 the set of SSL features to enable must be specified in the
 `customFeatures` field.
 See the [official documentation](https://cloud.google.com/compute/docs/load-balancing/ssl-policies#profilefeaturesupport)
 for information on what cipher suites each profile provides. If
 `CUSTOM` is used, the `custom_features` attribute **must be set**.
-Default is `COMPATIBLE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1222,9 +1214,7 @@ for which ciphers are available to use. **Note**: this argument
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The minimum version of SSL protocol that can be used by the clients
-to establish a connection with the load balancer. This can be one of
-`TLS_1_0`, `TLS_1_1`, `TLS_1_2`.
-Default is `TLS_1_0`.
+to establish a connection with the load balancer.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1249,14 +1239,12 @@ character, which cannot be a dash.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Profile specifies the set of SSL features that can be used by the
-load balancer when negotiating SSL with clients. This can be one of
-`COMPATIBLE`, `MODERN`, `RESTRICTED`, or `CUSTOM`. If using `CUSTOM`,
+load balancer when negotiating SSL with clients. If using `CUSTOM`,
 the set of SSL features to enable must be specified in the
 `customFeatures` field.
 See the [official documentation](https://cloud.google.com/compute/docs/load-balancing/ssl-policies#profilefeaturesupport)
 for information on what cipher suites each profile provides. If
 `CUSTOM` is used, the `custom_features` attribute **must be set**.
-Default is `COMPATIBLE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1345,9 +1333,7 @@ for which ciphers are available to use. **Note**: this argument
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The minimum version of SSL protocol that can be used by the clients
-to establish a connection with the load balancer. This can be one of
-`TLS_1_0`, `TLS_1_1`, `TLS_1_2`.
-Default is `TLS_1_0`.
+to establish a connection with the load balancer.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1372,14 +1358,12 @@ character, which cannot be a dash.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Profile specifies the set of SSL features that can be used by the
-load balancer when negotiating SSL with clients. This can be one of
-`COMPATIBLE`, `MODERN`, `RESTRICTED`, or `CUSTOM`. If using `CUSTOM`,
+load balancer when negotiating SSL with clients. If using `CUSTOM`,
 the set of SSL features to enable must be specified in the
 `customFeatures` field.
 See the [official documentation](https://cloud.google.com/compute/docs/load-balancing/ssl-policies#profilefeaturesupport)
 for information on what cipher suites each profile provides. If
 `CUSTOM` is used, the `custom_features` attribute **must be set**.
-Default is `COMPATIBLE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

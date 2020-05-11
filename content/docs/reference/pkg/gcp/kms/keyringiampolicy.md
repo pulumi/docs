@@ -20,6 +20,80 @@ Three different resources help you manage your IAM policy for KMS key ring. Each
 
 > **Note:** `gcp.kms.KeyRingIAMBinding` resources **can be** used in conjunction with `gcp.kms.KeyRingIAMMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_kms\_key\_ring\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const keyRing = new gcp.kms.KeyRingIAMPolicy("keyRing", {
+    keyRingId: keyring.id,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+keyring = gcp.kms.KeyRing("keyring", location="global")
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/editor",
+    "members": ["user:jane@example.com"],
+}])
+key_ring = gcp.kms.KeyRingIAMPolicy("keyRing",
+    key_ring_id=keyring.id,
+    policy_data=admin.policy_data)
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+        condition: {
+            title: "expires_after_2019_12_31",
+            description: "Expiring at midnight of 2019-12-31",
+            expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        },
+    }],
+});
+const keyRing = new gcp.kms.KeyRingIAMPolicy("keyRing", {
+    keyRingId: keyring.id,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+keyring = gcp.kms.KeyRing("keyring", location="global")
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/editor",
+    "members": ["user:jane@example.com"],
+    "condition": {
+        "title": "expires_after_2019_12_31",
+        "description": "Expiring at midnight of 2019-12-31",
+        "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    },
+}])
+key_ring = gcp.kms.KeyRingIAMPolicy("keyRing",
+    key_ring_id=keyring.id,
+    policy_data=admin.policy_data)
+```
+
 ## google\_kms\_key\_ring\_iam\_binding
 
 ```typescript
@@ -31,6 +105,15 @@ const keyRing = new gcp.kms.KeyRingIAMBinding("key_ring", {
     members: ["user:jane@example.com"],
     role: "roles/editor",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+key_ring = gcp.kms.KeyRingIAMBinding("keyRing",
+    key_ring_id="your-key-ring-id",
+    members=["user:jane@example.com"],
+    role="roles/editor")
 ```
 
 With IAM Conditions:
@@ -49,6 +132,20 @@ const keyRing = new gcp.kms.KeyRingIAMBinding("key_ring", {
     members: ["user:jane@example.com"],
     role: "roles/editor",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+key_ring = gcp.kms.KeyRingIAMBinding("keyRing",
+    condition={
+        "description": "Expiring at midnight of 2019-12-31",
+        "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        "title": "expires_after_2019_12_31",
+    },
+    key_ring_id="your-key-ring-id",
+    members=["user:jane@example.com"],
+    role="roles/editor")
 ```
 
 ## google\_kms\_key\_ring\_iam\_member
@@ -63,6 +160,15 @@ const keyRing = new gcp.kms.KeyRingIAMMember("key_ring", {
     role: "roles/editor",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+key_ring = gcp.kms.KeyRingIAMMember("keyRing",
+    key_ring_id="your-key-ring-id",
+    member="user:jane@example.com",
+    role="roles/editor")
+```
 
 With IAM Conditions:
 
@@ -81,11 +187,25 @@ const keyRing = new gcp.kms.KeyRingIAMMember("key_ring", {
     role: "roles/editor",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+key_ring = gcp.kms.KeyRingIAMMember("keyRing",
+    condition={
+        "description": "Expiring at midnight of 2019-12-31",
+        "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        "title": "expires_after_2019_12_31",
+    },
+    key_ring_id="your-key-ring-id",
+    member="user:jane@example.com",
+    role="roles/editor")
+```
 
 
 
 ## Create a KeyRingIAMPolicy Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -493,7 +613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing KeyRingIAMPolicy Resource {#look-up}
 
 Get an existing KeyRingIAMPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#KeyRingIAMPolicyState">KeyRingIAMPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#KeyRingIAMPolicy">KeyRingIAMPolicy</a></span></code></pre></div>

@@ -62,6 +62,43 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
     valueExtractor: "EXTRACT(jsonPayload.request)",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+logging_metric = gcp.logging.Metric("loggingMetric",
+    bucket_options={
+        "linearBuckets": {
+            "numFiniteBuckets": 3,
+            "offset": 1,
+            "width": 1,
+        },
+    },
+    filter="resource.type=gae_app AND severity>=ERROR",
+    label_extractors={
+        "mass": "EXTRACT(jsonPayload.request)",
+        "sku": "EXTRACT(jsonPayload.id)",
+    },
+    metric_descriptor={
+        "displayName": "My metric",
+        "labels": [
+            {
+                "description": "amount of matter",
+                "key": "mass",
+                "valueType": "STRING",
+            },
+            {
+                "description": "Identifying number for item",
+                "key": "sku",
+                "valueType": "INT64",
+            },
+        ],
+        "metricKind": "DELTA",
+        "unit": "1",
+        "valueType": "DISTRIBUTION",
+    },
+    value_extractor="EXTRACT(jsonPayload.request)")
+```
 ## Example Usage - Logging Metric Counter Basic
 
 
@@ -76,6 +113,17 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
         valueType: "INT64",
     },
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+logging_metric = gcp.logging.Metric("loggingMetric",
+    filter="resource.type=gae_app AND severity>=ERROR",
+    metric_descriptor={
+        "metricKind": "DELTA",
+        "valueType": "INT64",
+    })
 ```
 ## Example Usage - Logging Metric Counter Labels
 
@@ -100,11 +148,30 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
     },
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+logging_metric = gcp.logging.Metric("loggingMetric",
+    filter="resource.type=gae_app AND severity>=ERROR",
+    label_extractors={
+        "mass": "EXTRACT(jsonPayload.request)",
+    },
+    metric_descriptor={
+        "labels": [{
+            "description": "amount of matter",
+            "key": "mass",
+            "valueType": "STRING",
+        }],
+        "metricKind": "DELTA",
+        "valueType": "INT64",
+    })
+```
 
 
 
 ## Create a Metric Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -744,7 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Metric Resource {#look-up}
 
 Get an existing Metric resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#MetricState">MetricState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#Metric">Metric</a></span></code></pre></div>
@@ -1265,9 +1332,6 @@ error to specify a regex that does not include exactly one capture group.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Inputs.MetricBucketOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Outputs.MetricBucketOptions.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1427,9 +1491,6 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsExplicitBucketsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsExplicitBucketsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Inputs.MetricBucketOptionsExplicitBucketsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Outputs.MetricBucketOptionsExplicitBuckets.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1508,9 +1569,6 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsExponentialBucketsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsExponentialBucketsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Inputs.MetricBucketOptionsExponentialBucketsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Outputs.MetricBucketOptionsExponentialBuckets.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1663,9 +1721,6 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsLinearBucketsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsLinearBucketsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Inputs.MetricBucketOptionsLinearBucketsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Outputs.MetricBucketOptionsLinearBuckets.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1816,9 +1871,6 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricMetricDescriptorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricMetricDescriptorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Inputs.MetricMetricDescriptorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Outputs.MetricMetricDescriptor.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2078,9 +2130,6 @@ or just for responses that failed.  Structure is documented below.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricMetricDescriptorLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricMetricDescriptorLabelOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Inputs.MetricMetricDescriptorLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Outputs.MetricMetricDescriptorLabel.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

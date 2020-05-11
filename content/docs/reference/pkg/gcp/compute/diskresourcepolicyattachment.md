@@ -17,8 +17,69 @@ which will be applied to this disk for scheduling snapshot creation.
 
 
 
+## Example Usage - Disk Resource Policy Attachment Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myImage = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const ssd = new gcp.compute.Disk("ssd", {
+    image: myImage.then(myImage => myImage.selfLink),
+    size: 50,
+    type: "pd-ssd",
+    zone: "us-central1-a",
+});
+const attachment = new gcp.compute.DiskResourcePolicyAttachment("attachment", {
+    disk: ssd.name,
+    zone: "us-central1-a",
+});
+const policy = new gcp.compute.ResourcePolicy("policy", {
+    region: "us-central1",
+    snapshot_schedule_policy: {
+        schedule: {
+            daily_schedule: {
+                daysInCycle: 1,
+                startTime: "04:00",
+            },
+        },
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_image = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+ssd = gcp.compute.Disk("ssd",
+    image=my_image.self_link,
+    size=50,
+    type="pd-ssd",
+    zone="us-central1-a")
+attachment = gcp.compute.DiskResourcePolicyAttachment("attachment",
+    disk=ssd.name,
+    zone="us-central1-a")
+policy = gcp.compute.ResourcePolicy("policy",
+    region="us-central1",
+    snapshot_schedule_policy={
+        "schedule": {
+            "daily_schedule": {
+                "daysInCycle": 1,
+                "startTime": "04:00",
+            },
+        },
+    })
+```
+
+
+
 ## Create a DiskResourcePolicyAttachment Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -454,7 +515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DiskResourcePolicyAttachment Resource {#look-up}
 
 Get an existing DiskResourcePolicyAttachment resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#DiskResourcePolicyAttachmentState">DiskResourcePolicyAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#DiskResourcePolicyAttachment">DiskResourcePolicyAttachment</a></span></code></pre></div>

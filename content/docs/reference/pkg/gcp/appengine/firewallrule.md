@@ -20,10 +20,49 @@ To get more information about FirewallRule, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/appengine/docs/standard/python/creating-firewalls#creating_firewall_rules)
 
+## Example Usage - App Engine Firewall Rule Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myProject = new gcp.organizations.Project("myProject", {
+    projectId: "ae-project",
+    orgId: "123456789",
+});
+const app = new gcp.appengine.Application("app", {
+    project: myProject.projectId,
+    locationId: "us-central",
+});
+const rule = new gcp.appengine.FirewallRule("rule", {
+    project: app.project,
+    priority: 1000,
+    action: "ALLOW",
+    sourceRange: "*",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_project = gcp.organizations.Project("myProject",
+    project_id="ae-project",
+    org_id="123456789")
+app = gcp.appengine.Application("app",
+    project=my_project.project_id,
+    location_id="us-central")
+rule = gcp.appengine.FirewallRule("rule",
+    project=app.project,
+    priority=1000,
+    action="ALLOW",
+    source_range="*")
+```
+
 
 
 ## Create a FirewallRule Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -507,7 +546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing FirewallRule Resource {#look-up}
 
 Get an existing FirewallRule resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#FirewallRuleState">FirewallRuleState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#FirewallRule">FirewallRule</a></span></code></pre></div>

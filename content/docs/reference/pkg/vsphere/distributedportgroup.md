@@ -30,46 +30,25 @@ portgroups, see [this page][ref-vsphere-dvportgroup].
 > **NOTE:** This resource requires vCenter and is not available on direct ESXi
 connections.
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### Overriding DVS policies
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
+All of the [default port policies][dvs-default-port-policies] available in the
+`vsphere..DistributedVirtualSwitch` resource can be overridden on the port
+group level by specifying new settings for them.
 
-{{% example python %}}
-```python
-import pulumi
-import pulumi_vsphere as vsphere
+[dvs-default-port-policies]: /docs/providers/vsphere/r/distributed_virtual_switch.html#default-port-group-policy-arguments
 
-dvs = vsphere.DistributedVirtualSwitch("dvs",
-    active_uplinks=["tfup1"],
-    datacenter_id=data["vsphere..Datacenter"]["dc"]["id"],
-    standby_uplinks=["tfup2"],
-    uplinks=[
-        "tfup1",
-        "tfup2",
-    ])
-pg = vsphere.DistributedPortGroup("pg",
-    active_uplinks=[
-        "tfup1",
-        "tfup2",
-    ],
-    distributed_virtual_switch_uuid=dvs.id,
-    standby_uplinks=[],
-    vlan_id=1000)
-```
-{{% /example %}}
+As an example, we also take this example from the
+`vsphere..DistributedVirtualSwitch` resource where we manually specify our
+uplink count and uplink order. While the DVS has a default policy of using the
+first uplink as an active uplink and the second one as a standby, the
+overridden port group policy means that both uplinks will be used as active
+uplinks in this specific port group.
 
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -93,13 +72,35 @@ const pg = new vsphere.DistributedPortGroup("pg", {
     vlanId: 1000,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_vsphere as vsphere
 
+dvs = vsphere.DistributedVirtualSwitch("dvs",
+    active_uplinks=["tfup1"],
+    datacenter_id=data["vsphere..Datacenter"]["dc"]["id"],
+    standby_uplinks=["tfup2"],
+    uplinks=[
+        "tfup1",
+        "tfup2",
+    ])
+pg = vsphere.DistributedPortGroup("pg",
+    active_uplinks=[
+        "tfup1",
+        "tfup2",
+    ],
+    distributed_virtual_switch_uuid=dvs.id,
+    standby_uplinks=[],
+    vlan_id=1000)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a DistributedPortGroup Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -2219,7 +2220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DistributedPortGroup Resource {#look-up}
 
 Get an existing DistributedPortGroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DistributedPortGroupState">DistributedPortGroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DistributedPortGroup">DistributedPortGroup</a></span></code></pre></div>
@@ -4219,9 +4220,6 @@ on this port group to be overridden on an individual port.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedPortGroupVlanRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedPortGroupVlanRangeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Inputs.DistributedPortGroupVlanRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.DistributedPortGroupVlanRange.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

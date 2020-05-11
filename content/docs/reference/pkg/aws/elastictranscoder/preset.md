@@ -12,26 +12,10 @@ meta_desc: "Explore the Preset resource of the elastictranscoder module, includi
 
 Provides an Elastic Transcoder preset resource.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -91,13 +75,72 @@ const bar = new aws.elastictranscoder.Preset("bar", {
     }],
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+bar = aws.elastictranscoder.Preset("bar",
+    audio={
+        "audioPackingMode": "SingleTrack",
+        "bitRate": 96,
+        "channels": 2,
+        "codec": "AAC",
+        "sampleRate": 44100,
+    },
+    audio_codec_options={
+        "profile": "AAC-LC",
+    },
+    container="mp4",
+    description="Sample Preset",
+    thumbnails={
+        "format": "png",
+        "interval": 120,
+        "maxHeight": "auto",
+        "maxWidth": "auto",
+        "paddingPolicy": "Pad",
+        "sizingPolicy": "Fit",
+    },
+    video={
+        "bitRate": "1600",
+        "codec": "H.264",
+        "displayAspectRatio": "16:9",
+        "fixedGop": "false",
+        "frameRate": "auto",
+        "keyframesMaxDist": 240,
+        "maxFrameRate": "60",
+        "maxHeight": "auto",
+        "maxWidth": "auto",
+        "paddingPolicy": "Pad",
+        "sizingPolicy": "Fit",
+    },
+    video_codec_options={
+        "ColorSpaceConversionMode": "None",
+        "InterlacedMode": "Progressive",
+        "Level": "2.2",
+        "MaxReferenceFrames": 3,
+        "Profile": "main",
+    },
+    video_watermarks=[{
+        "horizontalAlign": "Right",
+        "horizontalOffset": "10px",
+        "id": "Test",
+        "maxHeight": "20%",
+        "maxWidth": "20%",
+        "opacity": "55.5",
+        "sizingPolicy": "ShrinkToFit",
+        "target": "Content",
+        "verticalAlign": "Bottom",
+        "verticalOffset": "10px",
+    }])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a Preset Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -769,7 +812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Preset Resource {#look-up}
 
 Get an existing Preset resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elastictranscoder/#PresetState">PresetState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elastictranscoder/#Preset">Preset</a></span></code></pre></div>
@@ -1322,9 +1365,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elastictranscoder?tab=doc#PresetAudioArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elastictranscoder?tab=doc#PresetAudioOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Inputs.PresetAudioArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Outputs.PresetAudio.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1548,9 +1588,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elastictranscoder?tab=doc#PresetAudioCodecOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elastictranscoder?tab=doc#PresetAudioCodecOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Inputs.PresetAudioCodecOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Outputs.PresetAudioCodecOptions.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1737,9 +1774,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elastictranscoder?tab=doc#PresetThumbnailsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elastictranscoder?tab=doc#PresetThumbnailsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Inputs.PresetThumbnailsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Outputs.PresetThumbnails.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2071,9 +2105,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elastictranscoder?tab=doc#PresetVideoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elastictranscoder?tab=doc#PresetVideoOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Inputs.PresetVideoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Outputs.PresetVideo.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2585,9 +2616,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elastictranscoder?tab=doc#PresetVideoWatermarkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elastictranscoder?tab=doc#PresetVideoWatermarkOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Inputs.PresetVideoWatermarkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Outputs.PresetVideoWatermark.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

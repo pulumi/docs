@@ -32,6 +32,14 @@ const neg = new gcp.compute.GlobalNetworkEndpointGroup("neg", {
     networkEndpointType: "INTERNET_FQDN_PORT",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+neg = gcp.compute.GlobalNetworkEndpointGroup("neg",
+    default_port="90",
+    network_endpoint_type="INTERNET_FQDN_PORT")
+```
 ## Example Usage - Global Network Endpoint Group Ip Address
 
 
@@ -44,11 +52,19 @@ const neg = new gcp.compute.GlobalNetworkEndpointGroup("neg", {
     networkEndpointType: "INTERNET_IP_PORT",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+neg = gcp.compute.GlobalNetworkEndpointGroup("neg",
+    default_port=90,
+    network_endpoint_type="INTERNET_IP_PORT")
+```
 
 
 
 ## Create a GlobalNetworkEndpointGroup Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -234,9 +250,7 @@ The GlobalNetworkEndpointGroup resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Supported values are:
-* INTERNET_IP_PORT
-* INTERNET_FQDN_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -297,9 +311,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Supported values are:
-* INTERNET_IP_PORT
-* INTERNET_FQDN_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -360,9 +372,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Supported values are:
-* INTERNET_IP_PORT
-* INTERNET_FQDN_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -423,9 +433,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Supported values are:
-* INTERNET_IP_PORT
-* INTERNET_FQDN_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -592,7 +600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing GlobalNetworkEndpointGroup Resource {#look-up}
 
 Get an existing GlobalNetworkEndpointGroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#GlobalNetworkEndpointGroupState">GlobalNetworkEndpointGroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#GlobalNetworkEndpointGroup">GlobalNetworkEndpointGroup</a></span></code></pre></div>
@@ -754,9 +762,7 @@ character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Supported values are:
-* INTERNET_IP_PORT
-* INTERNET_FQDN_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -826,9 +832,7 @@ character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Supported values are:
-* INTERNET_IP_PORT
-* INTERNET_FQDN_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -898,9 +902,7 @@ character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Supported values are:
-* INTERNET_IP_PORT
-* INTERNET_FQDN_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -970,9 +972,7 @@ character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Supported values are:
-* INTERNET_IP_PORT
-* INTERNET_FQDN_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -19,10 +19,92 @@ To get more information about GameServerDeploymentRollout, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/game-servers/docs)
 
+## Example Usage - Game Service Deployment Rollout Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultGameServerDeployment = new gcp.gameservices.GameServerDeployment("defaultGameServerDeployment", {
+    deploymentId: "tf-test-deployment",
+    description: "a deployment description",
+});
+const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGameServerConfig", {
+    configId: "tf-test-config",
+    deploymentId: defaultGameServerDeployment.deploymentId,
+    description: "a config description",
+    fleet_configs: [{
+        name: "some-non-guid",
+        fleetSpec: JSON.stringify({
+            replicas: 1,
+            scheduling: "Packed",
+            template: {
+                metadata: {
+                    name: "tf-test-game-server-template",
+                },
+                spec: {
+                    template: {
+                        spec: {
+                            containers: [{
+                                name: "simple-udp-server",
+                                image: "gcr.io/agones-images/udp-server:0.14",
+                            }],
+                        },
+                    },
+                },
+            },
+        }),
+    }],
+});
+const defaultGameServerDeploymentRollout = new gcp.gameservices.GameServerDeploymentRollout("defaultGameServerDeploymentRollout", {
+    deploymentId: defaultGameServerDeployment.deploymentId,
+    defaultGameServerConfig: defaultGameServerConfig.name,
+});
+```
+```python
+import pulumi
+import json
+import pulumi_gcp as gcp
+
+default_game_server_deployment = gcp.gameservices.GameServerDeployment("defaultGameServerDeployment",
+    deployment_id="tf-test-deployment",
+    description="a deployment description")
+default_game_server_config = gcp.gameservices.GameServerConfig("defaultGameServerConfig",
+    config_id="tf-test-config",
+    deployment_id=default_game_server_deployment.deployment_id,
+    description="a config description",
+    fleet_configs=[{
+        "name": "some-non-guid",
+        "fleetSpec": json.dumps({
+            "replicas": 1,
+            "scheduling": "Packed",
+            "template": {
+                "metadata": {
+                    "name": "tf-test-game-server-template",
+                },
+                "spec": {
+                    "template": {
+                        "spec": {
+                            "containers": [{
+                                "name": "simple-udp-server",
+                                "image": "gcr.io/agones-images/udp-server:0.14",
+                            }],
+                        },
+                    },
+                },
+            },
+        }),
+    }])
+default_game_server_deployment_rollout = gcp.gameservices.GameServerDeploymentRollout("defaultGameServerDeploymentRollout",
+    deployment_id=default_game_server_deployment.deployment_id,
+    default_game_server_config=default_game_server_config.name)
+```
+
 
 
 ## Create a GameServerDeploymentRollout Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -514,7 +596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing GameServerDeploymentRollout Resource {#look-up}
 
 Get an existing GameServerDeploymentRollout resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerDeploymentRolloutState">GameServerDeploymentRolloutState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerDeploymentRollout">GameServerDeploymentRollout</a></span></code></pre></div>
@@ -887,9 +969,6 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerDeploymentRolloutGameServerConfigOverrideArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerDeploymentRolloutGameServerConfigOverrideOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Inputs.GameServerDeploymentRolloutGameServerConfigOverrideArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Outputs.GameServerDeploymentRolloutGameServerConfigOverride.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1004,9 +1083,6 @@ If it is not provided, the provider project is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Inputs.GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Outputs.GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

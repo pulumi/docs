@@ -22,26 +22,12 @@ after creation or modification. During this time, deletes to resources will be
 blocked. If you need to delete a distribution that is enabled and you do not
 want to wait, you need to use the `retain_on_delete` flag.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+The following example below creates a CloudFront distribution with an S3 origin.
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -174,13 +160,235 @@ const s3Distribution = new aws.cloudfront.Distribution("s3_distribution", {
     },
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+bucket = aws.s3.Bucket("bucket",
+    acl="private",
+    tags={
+        "Name": "My bucket",
+    })
+s3_origin_id = "myS3Origin"
+s3_distribution = aws.cloudfront.Distribution("s3Distribution",
+    aliases=[
+        "mysite.example.com",
+        "yoursite.example.com",
+    ],
+    comment="Some comment",
+    default_cache_behavior={
+        "allowedMethods": [
+            "DELETE",
+            "GET",
+            "HEAD",
+            "OPTIONS",
+            "PATCH",
+            "POST",
+            "PUT",
+        ],
+        "cachedMethods": [
+            "GET",
+            "HEAD",
+        ],
+        "defaultTtl": 3600,
+        "forwardedValues": {
+            "cookies": {
+                "forward": "none",
+            },
+            "queryString": False,
+        },
+        "maxTtl": 86400,
+        "minTtl": 0,
+        "targetOriginId": s3_origin_id,
+        "viewerProtocolPolicy": "allow-all",
+    },
+    default_root_object="index.html",
+    enabled=True,
+    is_ipv6_enabled=True,
+    logging_config={
+        "bucket": "mylogs.s3.amazonaws.com",
+        "includeCookies": False,
+        "prefix": "myprefix",
+    },
+    ordered_cache_behaviors=[
+        {
+            "allowedMethods": [
+                "GET",
+                "HEAD",
+                "OPTIONS",
+            ],
+            "cachedMethods": [
+                "GET",
+                "HEAD",
+                "OPTIONS",
+            ],
+            "compress": True,
+            "defaultTtl": 86400,
+            "forwardedValues": {
+                "cookies": {
+                    "forward": "none",
+                },
+                "headers": ["Origin"],
+                "queryString": False,
+            },
+            "maxTtl": 31536000,
+            "minTtl": 0,
+            "pathPattern": "/content/immutable/*",
+            "targetOriginId": s3_origin_id,
+            "viewerProtocolPolicy": "redirect-to-https",
+        },
+        {
+            "allowedMethods": [
+                "GET",
+                "HEAD",
+                "OPTIONS",
+            ],
+            "cachedMethods": [
+                "GET",
+                "HEAD",
+            ],
+            "compress": True,
+            "defaultTtl": 3600,
+            "forwardedValues": {
+                "cookies": {
+                    "forward": "none",
+                },
+                "queryString": False,
+            },
+            "maxTtl": 86400,
+            "minTtl": 0,
+            "pathPattern": "/content/*",
+            "targetOriginId": s3_origin_id,
+            "viewerProtocolPolicy": "redirect-to-https",
+        },
+    ],
+    origins=[{
+        "domainName": bucket.bucket_regional_domain_name,
+        "originId": s3_origin_id,
+        "s3OriginConfig": {
+            "originAccessIdentity": "origin-access-identity/cloudfront/ABCDEFG1234567",
+        },
+    }],
+    price_class="PriceClass_200",
+    restrictions={
+        "geoRestriction": {
+            "locations": [
+                "US",
+                "CA",
+                "GB",
+                "DE",
+            ],
+            "restrictionType": "whitelist",
+        },
+    },
+    tags={
+        "Environment": "production",
+    },
+    viewer_certificate={
+        "cloudfrontDefaultCertificate": True,
+    })
+```
+
+The following example below creates a Cloudfront distribution with an origin group for failover routing:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const s3Distribution = new aws.cloudfront.Distribution("s3_distribution", {
+    defaultCacheBehavior: {
+        // ... other configuration ...
+        targetOriginId: "groupS3",
+    },
+    origins: [
+        {
+            domainName: aws_s3_bucket_primary.bucketRegionalDomainName,
+            originId: "primaryS3",
+            s3OriginConfig: {
+                originAccessIdentity: aws_cloudfront_origin_access_identity_default.cloudfrontAccessIdentityPath,
+            },
+        },
+        {
+            domainName: aws_s3_bucket_failover.bucketRegionalDomainName,
+            originId: "failoverS3",
+            s3OriginConfig: {
+                originAccessIdentity: aws_cloudfront_origin_access_identity_default.cloudfrontAccessIdentityPath,
+            },
+        },
+    ],
+    originGroups: [{
+        failoverCriteria: {
+            statusCodes: [
+                403,
+                404,
+                500,
+                502,
+            ],
+        },
+        members: [
+            {
+                originId: "primaryS3",
+            },
+            {
+                originId: "failoverS3",
+            },
+        ],
+        originId: "groupS3",
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+s3_distribution = aws.cloudfront.Distribution("s3Distribution",
+    default_cache_behavior={
+        "targetOriginId": "groupS3",
+    },
+    origins=[
+        {
+            "domainName": aws_s3_bucket["primary"]["bucket_regional_domain_name"],
+            "originId": "primaryS3",
+            "s3OriginConfig": {
+                "originAccessIdentity": aws_cloudfront_origin_access_identity["default"]["cloudfront_access_identity_path"],
+            },
+        },
+        {
+            "domainName": aws_s3_bucket["failover"]["bucket_regional_domain_name"],
+            "originId": "failoverS3",
+            "s3OriginConfig": {
+                "originAccessIdentity": aws_cloudfront_origin_access_identity["default"]["cloudfront_access_identity_path"],
+            },
+        },
+    ],
+    origin_groups=[{
+        "failoverCriteria": {
+            "statusCodes": [
+                403,
+                404,
+                500,
+                502,
+            ],
+        },
+        "member": [
+            {
+                "originId": "primaryS3",
+            },
+            {
+                "originId": "failoverS3",
+            },
+        ],
+        "originId": "groupS3",
+    }])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a Distribution Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1612,7 +1820,7 @@ CloudFront system.
 ## Look up an Existing Distribution Resource {#look-up}
 
 Get an existing Distribution resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#DistributionState">DistributionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#Distribution">Distribution</a></span></code></pre></div>
@@ -2925,9 +3133,6 @@ region and the credentials configuring this argument must have
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionCustomErrorResponseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionCustomErrorResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionCustomErrorResponseArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionCustomErrorResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3134,9 +3339,6 @@ example, `/custom_404.html`).
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionDefaultCacheBehaviorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionDefaultCacheBehavior.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3741,9 +3943,6 @@ allow to create signed URLs for private content.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionDefaultCacheBehaviorForwardedValuesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionDefaultCacheBehaviorForwardedValues.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3959,9 +4158,6 @@ value of `true` for `query_string`, all query string keys are cached.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesCookiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesCookiesOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionDefaultCacheBehaviorForwardedValuesCookiesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionDefaultCacheBehaviorForwardedValuesCookies.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4096,9 +4292,6 @@ your origin.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorLambdaFunctionAssociationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionDefaultCacheBehaviorLambdaFunctionAssociation.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4258,9 +4451,6 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionLoggingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionLoggingConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionLoggingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionLoggingConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4424,9 +4614,6 @@ to the access log filenames for this distribution, for example, `myprefix/`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOrderedCacheBehaviorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOrderedCacheBehavior.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5071,9 +5258,6 @@ allow to create signed URLs for private content.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOrderedCacheBehaviorForwardedValuesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOrderedCacheBehaviorForwardedValues.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -5289,9 +5473,6 @@ value of `true` for `query_string`, all query string keys are cached.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesCookiesOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOrderedCacheBehaviorForwardedValuesCookies.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -5426,9 +5607,6 @@ your origin.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorLambdaFunctionAssociationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOrderedCacheBehaviorLambdaFunctionAssociation.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5588,9 +5766,6 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOriginArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOrigin.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5887,9 +6062,6 @@ configuration information. If a custom origin is required, use
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginCustomHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginCustomHeaderOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOriginCustomHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOriginCustomHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -5996,9 +6168,6 @@ configuration information. If a custom origin is required, use
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginCustomOriginConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginCustomOriginConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOriginCustomOriginConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOriginCustomOriginConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6271,9 +6440,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginGroupOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOriginGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOriginGroup.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -6425,9 +6591,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginGroupFailoverCriteriaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginGroupFailoverCriteriaOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOriginGroupFailoverCriteriaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOriginGroupFailoverCriteria.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -6507,9 +6670,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginGroupMemberArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginGroupMemberOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOriginGroupMemberArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOriginGroupMember.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -6588,9 +6748,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginS3OriginConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginS3OriginConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOriginS3OriginConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOriginS3OriginConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6675,9 +6832,6 @@ identity][5] to associate with the origin.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionRestrictionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionRestrictionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionRestrictionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionRestrictions.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -6752,9 +6906,6 @@ identity][5] to associate with the origin.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionRestrictionsGeoRestrictionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionRestrictionsGeoRestrictionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionRestrictionsGeoRestrictionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionRestrictionsGeoRestriction.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6886,9 +7037,6 @@ distribute your content (`blacklist`).
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionViewerCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionViewerCertificateOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionViewerCertificateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionViewerCertificate.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

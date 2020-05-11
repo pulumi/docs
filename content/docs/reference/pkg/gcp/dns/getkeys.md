@@ -16,13 +16,47 @@ and [API](https://cloud.google.com/dns/docs/reference/v1/dnsKeys).
 
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const foo = new gcp.dns.ManagedZone("foo", {
+    dnsName: "foo.bar.",
+    dnssec_config: {
+        state: "on",
+        nonExistence: "nsec3",
+    },
+});
+const fooDnsKeys = foo.id.apply(id => gcp.dns.getKeys({
+    managedZone: id,
+}));
+export const fooDnsDsRecord = fooDnsKeys.keySigningKeys[0].dsRecord;
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+foo = gcp.dns.ManagedZone("foo",
+    dns_name="foo.bar.",
+    dnssec_config={
+        "state": "on",
+        "nonExistence": "nsec3",
+    })
+foo_dns_keys = foo.id.apply(lambda id: gcp.dns.get_keys(managed_zone=id))
+pulumi.export("fooDnsDsRecord", foo_dns_keys.key_signing_keys[0]["dsRecord"])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Using GetKeys {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -381,9 +415,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#GetKeysKeySigningKey">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Outputs.GetKeysKeySigningKey.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -796,9 +827,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#GetKeysKeySigningKeyDigest">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Outputs.GetKeysKeySigningKeyDigest.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -905,9 +933,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#GetKeysZoneSigningKey">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Outputs.GetKeysZoneSigningKey.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1284,9 +1309,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#GetKeysZoneSigningKeyDigest">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Outputs.GetKeysZoneSigningKeyDigest.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1387,16 +1409,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

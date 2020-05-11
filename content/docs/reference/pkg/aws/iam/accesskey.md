@@ -13,12 +13,90 @@ meta_desc: "Explore the AccessKey resource of the iam module, including examples
 Provides an IAM access key. This is a set of credentials that allow API requests to be made as an IAM user.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const lbUser = new aws.iam.User("lb", {
+    path: "/system/",
+});
+const lbAccessKey = new aws.iam.AccessKey("lb", {
+    pgpKey: "keybase:some_person_that_exists",
+    user: lbUser.name,
+});
+const lbRo = new aws.iam.UserPolicy("lb_ro", {
+    policy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "ec2:Describe*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+`,
+    user: lbUser.name,
+});
+
+export const secret = lbAccessKey.encryptedSecret;
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+lb_user = aws.iam.User("lbUser", path="/system/")
+lb_access_key = aws.iam.AccessKey("lbAccessKey",
+    pgp_key="keybase:some_person_that_exists",
+    user=lb_user.name)
+lb_ro = aws.iam.UserPolicy("lbRo",
+    policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "ec2:Describe*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+
+""",
+    user=lb_user.name)
+pulumi.export("secret", lb_access_key.encrypted_secret)
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const testUser = new aws.iam.User("testUser", {path: "/test/"});
+const testAccessKey = new aws.iam.AccessKey("testAccessKey", {user: testUser.name});
+export const awsIamSmtpPasswordV4 = testAccessKey.sesSmtpPasswordV4;
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_user = aws.iam.User("testUser", path="/test/")
+test_access_key = aws.iam.AccessKey("testAccessKey", user=test_user.name)
+pulumi.export("awsIamSmtpPasswordV4", test_access_key.ses_smtp_password_v4)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Create a AccessKey Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -646,7 +724,7 @@ As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southe
 ## Look up an Existing AccessKey Resource {#look-up}
 
 Get an existing AccessKey resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#AccessKeyState">AccessKeyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#AccessKey">AccessKey</a></span></code></pre></div>

@@ -33,26 +33,11 @@ To get more information about Environments, see:
   * **Environments create Google Cloud Storage buckets that do not get cleaned up automatically** on environment 
     deletion. [More about Composer's use of Cloud Storage](https://cloud.google.com/composer/docs/concepts/cloud-storage).
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### Basic Usage
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -61,22 +46,85 @@ const test = new gcp.composer.Environment("test", {
     region: "us-central1",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
 
+test = gcp.composer.Environment("test", region="us-central1")
+```
+
+{{% /example %}}
+{{% example %}}
+### With GKE and Compute Resource Dependencies
+
+**NOTE** To use service accounts, you need to give `role/composer.worker` to the service account on any resources that may be created for the environment
+(i.e. at a project level). This will probably require an explicit dependency
+on the IAM policy binding (see `gcp.projects.IAMMember` below).
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const testNetwork = new gcp.compute.Network("testNetwork", {autoCreateSubnetworks: false});
+const testSubnetwork = new gcp.compute.Subnetwork("testSubnetwork", {
+    ipCidrRange: "10.2.0.0/16",
+    region: "us-central1",
+    network: testNetwork.id,
+});
+const testAccount = new gcp.serviceAccount.Account("testAccount", {
+    accountId: "composer-env-account",
+    displayName: "Test Service Account for Composer Environment",
+});
+const composer-worker = new gcp.projects.IAMMember("composer-worker", {
+    role: "roles/composer.worker",
+    member: pulumi.interpolate`serviceAccount:${testAccount.email}`,
+});
+const testEnvironment = new gcp.composer.Environment("testEnvironment", {
+    region: "us-central1",
+    config: {
+        nodeCount: 4,
+        node_config: {
+            zone: "us-central1-a",
+            machineType: "n1-standard-1",
+            network: testNetwork.id,
+            subnetwork: testSubnetwork.id,
+            serviceAccount: testAccount.name,
+        },
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+test_network = gcp.compute.Network("testNetwork", auto_create_subnetworks=False)
+test_subnetwork = gcp.compute.Subnetwork("testSubnetwork",
+    ip_cidr_range="10.2.0.0/16",
+    region="us-central1",
+    network=test_network.id)
+test_account = gcp.service_account.Account("testAccount",
+    account_id="composer-env-account",
+    display_name="Test Service Account for Composer Environment")
+composer_worker = gcp.projects.IAMMember("composer-worker",
+    role="roles/composer.worker",
+    member=test_account.email.apply(lambda email: f"serviceAccount:{email}"))
+test_environment = gcp.composer.Environment("testEnvironment",
+    region="us-central1",
+    config={
+        "nodeCount": 4,
+        "node_config": {
+            "zone": "us-central1-a",
+            "machineType": "n1-standard-1",
+            "network": test_network.id,
+            "subnetwork": test_subnetwork.id,
+            "serviceAccount": test_account.name,
+        },
+    })
+```
+
+{{% /example %}}
+{{% example %}}
 ### With Software (Airflow) Config
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -99,13 +147,35 @@ const test = new gcp.composer.Environment("test", {
     region: "us-central1",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
 
+test = gcp.composer.Environment("test",
+    config={
+        "softwareConfig": {
+            "airflowConfigOverrides": {
+                "core-loadExample": "True",
+            },
+            "envVariables": {
+                "FOO": "bar",
+            },
+            "pypiPackages": {
+                "numpy": "",
+                "scipy": "==1.1.0",
+            },
+        },
+    },
+    region="us-central1")
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a Environment Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -605,7 +675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Environment Resource {#look-up}
 
 Get an existing Environment resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/composer/#EnvironmentState">EnvironmentState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/composer/#Environment">Environment</a></span></code></pre></div>
@@ -986,9 +1056,6 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer?tab=doc#EnvironmentConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer?tab=doc#EnvironmentConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Inputs.EnvironmentConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.EnvironmentConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1275,9 +1342,6 @@ will be used to run this environment.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer?tab=doc#EnvironmentConfigNodeConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer?tab=doc#EnvironmentConfigNodeConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Inputs.EnvironmentConfigNodeConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.EnvironmentConfigNodeConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1738,9 +1802,6 @@ Cannot be updated.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer?tab=doc#EnvironmentConfigNodeConfigIpAllocationPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer?tab=doc#EnvironmentConfigNodeConfigIpAllocationPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Inputs.EnvironmentConfigNodeConfigIpAllocationPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.EnvironmentConfigNodeConfigIpAllocationPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2024,9 +2085,6 @@ This field is applicable only when `use_ip_aliases` is true.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer?tab=doc#EnvironmentConfigPrivateEnvironmentConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer?tab=doc#EnvironmentConfigPrivateEnvironmentConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Inputs.EnvironmentConfigPrivateEnvironmentConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.EnvironmentConfigPrivateEnvironmentConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2161,9 +2219,6 @@ If left blank, the default value of '172.16.0.0/28' is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer?tab=doc#EnvironmentConfigSoftwareConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer?tab=doc#EnvironmentConfigSoftwareConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Inputs.EnvironmentConfigSoftwareConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.EnvironmentConfigSoftwareConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

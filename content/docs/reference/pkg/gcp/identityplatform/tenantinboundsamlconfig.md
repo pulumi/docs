@@ -18,8 +18,58 @@ the marketplace prior to using this resource.
 
 
 
+## Example Usage - Identity Platform Tenant Inbound Saml Config Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const tenant = new gcp.identityplatform.Tenant("tenant", {displayName: "tenant"});
+const tenantSamlConfig = new gcp.identityplatform.TenantInboundSamlConfig("tenantSamlConfig", {
+    displayName: "Display Name",
+    tenant: tenant.name,
+    idp_config: {
+        idpEntityId: "tf-idp",
+        signRequest: true,
+        ssoUrl: "https://example.com",
+        idp_certificates: [{
+            x509Certificate: fs.readFileSync("test-fixtures/rsa_cert.pem"),
+        }],
+    },
+    sp_config: {
+        spEntityId: "tf-sp",
+        callbackUri: "https://example.com",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+tenant = gcp.identityplatform.Tenant("tenant", display_name="tenant")
+tenant_saml_config = gcp.identityplatform.TenantInboundSamlConfig("tenantSamlConfig",
+    display_name="Display Name",
+    tenant=tenant.name,
+    idp_config={
+        "idpEntityId": "tf-idp",
+        "signRequest": True,
+        "ssoUrl": "https://example.com",
+        "idp_certificates": [{
+            "x509Certificate": (lambda path: open(path).read())("test-fixtures/rsa_cert.pem"),
+        }],
+    },
+    sp_config={
+        "spEntityId": "tf-sp",
+        "callbackUri": "https://example.com",
+    })
+```
+
+
+
 ## Create a TenantInboundSamlConfig Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -571,7 +621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing TenantInboundSamlConfig Resource {#look-up}
 
 Get an existing TenantInboundSamlConfig resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/identityplatform/#TenantInboundSamlConfigState">TenantInboundSamlConfigState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/identityplatform/#TenantInboundSamlConfig">TenantInboundSamlConfig</a></span></code></pre></div>
@@ -1004,9 +1054,6 @@ and accept an authentication assertion issued by a SAML identity provider.  Stru
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/identityplatform?tab=doc#TenantInboundSamlConfigIdpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/identityplatform?tab=doc#TenantInboundSamlConfigIdpConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.IdentityPlatform.Inputs.TenantInboundSamlConfigIdpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.IdentityPlatform.Outputs.TenantInboundSamlConfigIdpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1194,9 +1241,6 @@ and accept an authentication assertion issued by a SAML identity provider.  Stru
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/identityplatform?tab=doc#TenantInboundSamlConfigIdpConfigIdpCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/identityplatform?tab=doc#TenantInboundSamlConfigIdpConfigIdpCertificateOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.IdentityPlatform.Inputs.TenantInboundSamlConfigIdpConfigIdpCertificateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.IdentityPlatform.Outputs.TenantInboundSamlConfigIdpConfigIdpCertificate.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1279,9 +1323,6 @@ The x509 certificate
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/identityplatform?tab=doc#TenantInboundSamlConfigSpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/identityplatform?tab=doc#TenantInboundSamlConfigSpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.IdentityPlatform.Inputs.TenantInboundSamlConfigSpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.IdentityPlatform.Outputs.TenantInboundSamlConfigSpConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1437,9 +1478,6 @@ The IDP's certificate data to verify the signature in the SAMLResponse issued by
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/identityplatform?tab=doc#TenantInboundSamlConfigSpConfigSpCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/identityplatform?tab=doc#TenantInboundSamlConfigSpConfigSpCertificateOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.IdentityPlatform.Inputs.TenantInboundSamlConfigSpConfigSpCertificateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.IdentityPlatform.Outputs.TenantInboundSamlConfigSpConfigSpCertificate.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -20,10 +20,90 @@ To get more information about TargetHttpsProxy, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/http/target-proxies)
 
+## Example Usage - Target Https Proxy Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const defaultSSLCertificate = new gcp.compute.SSLCertificate("defaultSSLCertificate", {
+    privateKey: fs.readFileSync("path/to/private.key"),
+    certificate: fs.readFileSync("path/to/certificate.crt"),
+});
+const defaultHttpHealthCheck = new gcp.compute.HttpHealthCheck("defaultHttpHealthCheck", {
+    requestPath: "/",
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+});
+const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {
+    portName: "http",
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [defaultHttpHealthCheck.selfLink],
+});
+const defaultURLMap = new gcp.compute.URLMap("defaultURLMap", {
+    description: "a description",
+    defaultService: defaultBackendService.selfLink,
+    host_rule: [{
+        hosts: ["mysite.com"],
+        pathMatcher: "allpaths",
+    }],
+    path_matcher: [{
+        name: "allpaths",
+        defaultService: defaultBackendService.selfLink,
+        path_rule: [{
+            paths: ["/*"],
+            service: defaultBackendService.selfLink,
+        }],
+    }],
+});
+const defaultTargetHttpsProxy = new gcp.compute.TargetHttpsProxy("defaultTargetHttpsProxy", {
+    urlMap: defaultURLMap.selfLink,
+    sslCertificates: [defaultSSLCertificate.selfLink],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_ssl_certificate = gcp.compute.SSLCertificate("defaultSSLCertificate",
+    private_key=(lambda path: open(path).read())("path/to/private.key"),
+    certificate=(lambda path: open(path).read())("path/to/certificate.crt"))
+default_http_health_check = gcp.compute.HttpHealthCheck("defaultHttpHealthCheck",
+    request_path="/",
+    check_interval_sec=1,
+    timeout_sec=1)
+default_backend_service = gcp.compute.BackendService("defaultBackendService",
+    port_name="http",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default_http_health_check.self_link])
+default_url_map = gcp.compute.URLMap("defaultURLMap",
+    description="a description",
+    default_service=default_backend_service.self_link,
+    host_rule=[{
+        "hosts": ["mysite.com"],
+        "pathMatcher": "allpaths",
+    }],
+    path_matcher=[{
+        "name": "allpaths",
+        "defaultService": default_backend_service.self_link,
+        "path_rule": [{
+            "paths": ["/*"],
+            "service": default_backend_service.self_link,
+        }],
+    }])
+default_target_https_proxy = gcp.compute.TargetHttpsProxy("defaultTargetHttpsProxy",
+    url_map=default_url_map.self_link,
+    ssl_certificates=[default_ssl_certificate.self_link])
+```
+
 
 
 ## Create a TargetHttpsProxy Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -268,8 +348,7 @@ If it is not provided, the provider project is used.
 whether the load balancer will attempt to negotiate QUIC with clients
 or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is
 specified, uses the QUIC policy with no user overrides, which is
-equivalent to DISABLE. Not specifying this field is equivalent to
-specifying NONE.
+equivalent to DISABLE.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -355,8 +434,7 @@ If it is not provided, the provider project is used.
 whether the load balancer will attempt to negotiate QUIC with clients
 or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is
 specified, uses the QUIC policy with no user overrides, which is
-equivalent to DISABLE. Not specifying this field is equivalent to
-specifying NONE.
+equivalent to DISABLE.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -442,8 +520,7 @@ If it is not provided, the provider project is used.
 whether the load balancer will attempt to negotiate QUIC with clients
 or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is
 specified, uses the QUIC policy with no user overrides, which is
-equivalent to DISABLE. Not specifying this field is equivalent to
-specifying NONE.
+equivalent to DISABLE.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -529,8 +606,7 @@ If it is not provided, the provider project is used.
 whether the load balancer will attempt to negotiate QUIC with clients
 or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is
 specified, uses the QUIC policy with no user overrides, which is
-equivalent to DISABLE. Not specifying this field is equivalent to
-specifying NONE.
+equivalent to DISABLE.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -735,7 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing TargetHttpsProxy Resource {#look-up}
 
 Get an existing TargetHttpsProxy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#TargetHttpsProxyState">TargetHttpsProxyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#TargetHttpsProxy">TargetHttpsProxy</a></span></code></pre></div>
@@ -918,8 +994,7 @@ If it is not provided, the provider project is used.
 whether the load balancer will attempt to negotiate QUIC with clients
 or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is
 specified, uses the QUIC policy with no user overrides, which is
-equivalent to DISABLE. Not specifying this field is equivalent to
-specifying NONE.
+equivalent to DISABLE.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1032,8 +1107,7 @@ If it is not provided, the provider project is used.
 whether the load balancer will attempt to negotiate QUIC with clients
 or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is
 specified, uses the QUIC policy with no user overrides, which is
-equivalent to DISABLE. Not specifying this field is equivalent to
-specifying NONE.
+equivalent to DISABLE.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1146,8 +1220,7 @@ If it is not provided, the provider project is used.
 whether the load balancer will attempt to negotiate QUIC with clients
 or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is
 specified, uses the QUIC policy with no user overrides, which is
-equivalent to DISABLE. Not specifying this field is equivalent to
-specifying NONE.
+equivalent to DISABLE.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1260,8 +1333,7 @@ If it is not provided, the provider project is used.
 whether the load balancer will attempt to negotiate QUIC with clients
 or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is
 specified, uses the QUIC policy with no user overrides, which is
-equivalent to DISABLE. Not specifying this field is equivalent to
-specifying NONE.
+equivalent to DISABLE.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

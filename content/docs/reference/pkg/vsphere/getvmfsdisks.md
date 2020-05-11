@@ -17,36 +17,10 @@ datastores based off a set of discovered disks.
 
 [data-source-vmfs-datastore]: /docs/providers/vsphere/r/vmfs_datastore.html
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_vsphere as vsphere
-
-datacenter = vsphere.get_datacenter(name="dc1")
-host = vsphere.get_host(datacenter_id=datacenter.id,
-    name="esxi1")
-available = vsphere.get_vmfs_disks(filter="mpx.vmhba1:C0:T[12]:L0",
-    host_system_id=host.id,
-    rescan=True)
-```
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -64,14 +38,26 @@ const available = host.apply(host => vsphere.getVmfsDisks({
     rescan: true,
 }, { async: true }));
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_vsphere as vsphere
 
+datacenter = vsphere.get_datacenter(name="dc1")
+host = vsphere.get_host(datacenter_id=datacenter.id,
+    name="esxi1")
+available = vsphere.get_vmfs_disks(filter="mpx.vmhba1:C0:T[12]:L0",
+    host_system_id=host.id,
+    rescan=True)
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetVmfsDisks {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -470,16 +456,4 @@ operation, matching the supplied `filter`, if provided.
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
-</dl>
 

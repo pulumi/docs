@@ -14,26 +14,12 @@ This resource can be useful for getting back a list of VPC Ids for a region.
 
 The following example retrieves a list of VPC Ids with a custom tag of `service` set to a value of "production".
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+The following shows outputing all VPC Ids.
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -46,14 +32,51 @@ const fooVpcs = pulumi.output(aws.ec2.getVpcs({
 
 export const foo = fooVpcs.ids;
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+foo_vpcs = aws.ec2.get_vpcs(tags={
+    "service": "production",
+})
+pulumi.export("foo", foo_vpcs.ids)
+```
+
+An example use case would be interpolate the `aws.ec2.getVpcs` output into `count` of an aws.ec2.FlowLog resource.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const fooVpcs = pulumi.output(aws.ec2.getVpcs({ async: true }));
+const testFlowLog: aws.ec2.FlowLog[] = [];
+for (let i = 0; i < fooVpcs.apply(fooVpcs => fooVpcs.ids.length); i++) {
+    testFlowLog.push(new aws.ec2.FlowLog(`test_flow_log-${i}`, {
+        vpcId: fooVpcs.apply(fooVpcs => fooVpcs.ids[i]),
+    }));
+}
+
+export const foo = fooVpcs.ids;
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+foo_vpcs = aws.ec2.get_vpcs()
+test_flow_log = []
+for range in [{"value": i} for i in range(0, len(foo_vpcs.ids))]:
+    test_flow_log.append(aws.ec2.FlowLog(f"testFlowLog-{range['value']}", vpc_id=foo_vpcs.ids[range["value"]]))
+pulumi.export("foo", foo_vpcs.ids)
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetVpcs {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -381,9 +404,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetVpcsFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetVpcsFilter">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetVpcsFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetVpcsFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -500,16 +520,4 @@ A VPC will be selected if any one of the given values matches.
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

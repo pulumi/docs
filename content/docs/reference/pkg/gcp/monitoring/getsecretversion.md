@@ -13,16 +13,35 @@ meta_desc: "Explore the GetSecretVersion function of the monitoring module, incl
 Get a Secret Manager secret's version. For more information see the [official documentation](https://cloud.google.com/secret-manager/docs/) and [API](https://cloud.google.com/secret-manager/docs/reference/rest/v1beta1/projects.secrets.versions).
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const basic = gcp.secretmanager.getSecretVersion({
+    secret: "my-secret",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+basic = gcp.secretmanager.get_secret_version(secret="my-secret")
+```
+
+{{% /example %}}
 {{% /examples %}}
 
-Deprecated: gcp.getSecretVersion has been deprecated in favour of gcp.getSecretVersion
+Deprecated: gcp.monitoring.getSecretVersion has been deprecated in favour of gcp.secretmanager.getSecretVersion
 
-<p class="resource-deprecated">Deprecated: {{% md %}}gcp.getSecretVersion has been deprecated in favour of gcp.getSecretVersion{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}gcp.monitoring.getSecretVersion has been deprecated in favour of gcp.secretmanager.getSecretVersion{{% /md %}}</p>
 
 
 ## Using GetSecretVersion {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -557,16 +576,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

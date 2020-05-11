@@ -17,10 +17,123 @@ and [API](https://cloud.google.com/compute/docs/reference/latest/instanceGroupMa
 
 > **Note:** Use [gcp.compute.RegionInstanceGroupManager](https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html) to create a regional (multi-zone) instance group manager.
 
+## Example Usage with top level instance template (`google` provider)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const autohealing = new gcp.compute.HealthCheck("autohealing", {
+    checkIntervalSec: 5,
+    timeoutSec: 5,
+    healthyThreshold: 2,
+    unhealthyThreshold: 10,
+    http_health_check: {
+        requestPath: "/healthz",
+        port: "8080",
+    },
+});
+const appserver = new gcp.compute.InstanceGroupManager("appserver", {
+    baseInstanceName: "app",
+    zone: "us-central1-a",
+    version: [{
+        instanceTemplate: google_compute_instance_template.appserver.self_link,
+    }],
+    targetPools: [google_compute_target_pool.appserver.self_link],
+    targetSize: 2,
+    named_port: [{
+        name: "customHTTP",
+        port: 8888,
+    }],
+    auto_healing_policies: {
+        healthCheck: autohealing.selfLink,
+        initialDelaySec: 300,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+autohealing = gcp.compute.HealthCheck("autohealing",
+    check_interval_sec=5,
+    timeout_sec=5,
+    healthy_threshold=2,
+    unhealthy_threshold=10,
+    http_health_check={
+        "requestPath": "/healthz",
+        "port": "8080",
+    })
+appserver = gcp.compute.InstanceGroupManager("appserver",
+    base_instance_name="app",
+    zone="us-central1-a",
+    version=[{
+        "instanceTemplate": google_compute_instance_template["appserver"]["self_link"],
+    }],
+    target_pools=[google_compute_target_pool["appserver"]["self_link"]],
+    target_size=2,
+    named_port=[{
+        "name": "customHTTP",
+        "port": 8888,
+    }],
+    auto_healing_policies={
+        "healthCheck": autohealing.self_link,
+        "initialDelaySec": 300,
+    })
+```
+
+## Example Usage with multiple versions (`google-beta` provider)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const appserver = new gcp.compute.InstanceGroupManager("appserver", {
+    baseInstanceName: "app",
+    zone: "us-central1-a",
+    targetSize: 5,
+    version: [
+        {
+            name: "appserver",
+            instanceTemplate: google_compute_instance_template.appserver.self_link,
+        },
+        {
+            name: "appserver-canary",
+            instanceTemplate: google_compute_instance_template["appserver-canary"].self_link,
+            target_size: {
+                fixed: 1,
+            },
+        },
+    ],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+appserver = gcp.compute.InstanceGroupManager("appserver",
+    base_instance_name="app",
+    zone="us-central1-a",
+    target_size=5,
+    version=[
+        {
+            "name": "appserver",
+            "instanceTemplate": google_compute_instance_template["appserver"]["self_link"],
+        },
+        {
+            "name": "appserver-canary",
+            "instanceTemplate": google_compute_instance_template["appserver-canary"]["self_link"],
+            "target_size": {
+                "fixed": 1,
+            },
+        },
+    ])
+```
+
 
 
 ## Create a InstanceGroupManager Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -28,7 +141,7 @@ and [API](https://cloud.google.com/compute/docs/reference/latest/instanceGroupMa
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">InstanceGroupManager</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_healing_policies=None<span class="p">, </span>base_instance_name=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>named_ports=None<span class="p">, </span>project=None<span class="p">, </span>target_pools=None<span class="p">, </span>target_size=None<span class="p">, </span>update_policy=None<span class="p">, </span>versions=None<span class="p">, </span>wait_for_instances=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">InstanceGroupManager</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_healing_policies=None<span class="p">, </span>base_instance_name=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>named_ports=None<span class="p">, </span>project=None<span class="p">, </span>stateful_disks=None<span class="p">, </span>target_pools=None<span class="p">, </span>target_size=None<span class="p">, </span>update_policy=None<span class="p">, </span>versions=None<span class="p">, </span>wait_for_instances=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -276,6 +389,15 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Stateful<wbr>Disks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">List&lt;Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Target<wbr>Pools</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
@@ -301,7 +423,6 @@ not affect existing instances.
         <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers/patch)
-- - -
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -408,6 +529,15 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Stateful<wbr>Disks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">[]Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk</a></span>
+    </dt>
+    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Target<wbr>Pools</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
@@ -433,7 +563,6 @@ not affect existing instances.
         <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers/patch)
-- - -
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -540,6 +669,15 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>stateful<wbr>Disks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk[]</a></span>
+    </dt>
+    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>target<wbr>Pools</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
@@ -565,7 +703,6 @@ not affect existing instances.
         <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers/patch)
-- - -
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -672,6 +809,15 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>stateful_<wbr>disks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">List[Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk]</a></span>
+    </dt>
+    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>target_<wbr>pools</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -697,7 +843,6 @@ not affect existing instances.
         <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">Dict[Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers/patch)
-- - -
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -912,14 +1057,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing InstanceGroupManager Resource {#look-up}
 
 Get an existing InstanceGroupManager resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#InstanceGroupManagerState">InstanceGroupManagerState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#InstanceGroupManager">InstanceGroupManager</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_healing_policies=None<span class="p">, </span>base_instance_name=None<span class="p">, </span>description=None<span class="p">, </span>fingerprint=None<span class="p">, </span>instance_group=None<span class="p">, </span>name=None<span class="p">, </span>named_ports=None<span class="p">, </span>project=None<span class="p">, </span>self_link=None<span class="p">, </span>target_pools=None<span class="p">, </span>target_size=None<span class="p">, </span>update_policy=None<span class="p">, </span>versions=None<span class="p">, </span>wait_for_instances=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_healing_policies=None<span class="p">, </span>base_instance_name=None<span class="p">, </span>description=None<span class="p">, </span>fingerprint=None<span class="p">, </span>instance_group=None<span class="p">, </span>name=None<span class="p">, </span>named_ports=None<span class="p">, </span>project=None<span class="p">, </span>self_link=None<span class="p">, </span>stateful_disks=None<span class="p">, </span>target_pools=None<span class="p">, </span>target_size=None<span class="p">, </span>update_policy=None<span class="p">, </span>versions=None<span class="p">, </span>wait_for_instances=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1125,6 +1270,15 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Stateful<wbr>Disks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">List&lt;Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Target<wbr>Pools</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
@@ -1150,7 +1304,6 @@ not affect existing instances.
         <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers/patch)
-- - -
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1284,6 +1437,15 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Stateful<wbr>Disks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">[]Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk</a></span>
+    </dt>
+    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Target<wbr>Pools</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
@@ -1309,7 +1471,6 @@ not affect existing instances.
         <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers/patch)
-- - -
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1443,6 +1604,15 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>stateful<wbr>Disks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk[]</a></span>
+    </dt>
+    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>target<wbr>Pools</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
@@ -1468,7 +1638,6 @@ not affect existing instances.
         <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers/patch)
-- - -
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1602,6 +1771,15 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>stateful_<wbr>disks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">List[Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk]</a></span>
+    </dt>
+    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>target_<wbr>pools</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1627,7 +1805,6 @@ not affect existing instances.
         <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">Dict[Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers/patch)
-- - -
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1684,9 +1861,6 @@ in.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceGroupManagerAutoHealingPoliciesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceGroupManagerAutoHealingPoliciesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceGroupManagerAutoHealingPoliciesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceGroupManagerAutoHealingPolicies.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1807,9 +1981,6 @@ it applies autohealing policies to new instances or recently recreated instances
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceGroupManagerNamedPortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceGroupManagerNamedPortOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceGroupManagerNamedPortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceGroupManagerNamedPort.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1921,6 +2092,121 @@ it applies autohealing policies to new instances or recently recreated instances
 
 
 
+<h4 id="instancegroupmanagerstatefuldisk">Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGroupManagerStatefulDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceGroupManagerStatefulDisk">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceGroupManagerStatefulDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceGroupManagerStatefulDiskOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Device<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}, The device name of the disk to be attached.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Delete<wbr>Rule</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}, A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`. `NEVER` detatch the disk when the VM is deleted, but not delete the disk. `ON_PERMANENT_INSTANCE_DELETION` will delete the stateful disk when the VM is permanently deleted from the instance group. The default is `NEVER`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Device<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}, The device name of the disk to be attached.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Delete<wbr>Rule</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}, A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`. `NEVER` detatch the disk when the VM is deleted, but not delete the disk. `ON_PERMANENT_INSTANCE_DELETION` will delete the stateful disk when the VM is permanently deleted from the instance group. The default is `NEVER`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>device<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}, The device name of the disk to be attached.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>delete<wbr>Rule</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}, A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`. `NEVER` detatch the disk when the VM is deleted, but not delete the disk. `ON_PERMANENT_INSTANCE_DELETION` will delete the stateful disk when the VM is permanently deleted from the instance group. The default is `NEVER`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>device_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}, The device name of the disk to be attached.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>delete<wbr>Rule</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}, A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`. `NEVER` detatch the disk when the VM is deleted, but not delete the disk. `ON_PERMANENT_INSTANCE_DELETION` will delete the stateful disk when the VM is permanently deleted from the instance group. The default is `NEVER`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="instancegroupmanagerupdatepolicy">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGroupManagerUpdatePolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceGroupManagerUpdatePolicy">output</a> API doc for this type.
@@ -1928,9 +2214,6 @@ it applies autohealing policies to new instances or recently recreated instances
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceGroupManagerUpdatePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceGroupManagerUpdatePolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceGroupManagerUpdatePolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceGroupManagerUpdatePolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2231,9 +2514,6 @@ it applies autohealing policies to new instances or recently recreated instances
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceGroupManagerVersionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceGroupManagerVersionOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceGroupManagerVersionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceGroupManagerVersion.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2384,9 +2664,6 @@ it applies autohealing policies to new instances or recently recreated instances
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceGroupManagerVersionTargetSizeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceGroupManagerVersionTargetSizeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceGroupManagerVersionTargetSizeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceGroupManagerVersionTargetSize.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -12,26 +12,12 @@ meta_desc: "Explore the UserPoolClient resource of the cognito module, including
 
 Provides a Cognito User Pool Client resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### Create a basic user pool client
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -41,22 +27,18 @@ const client = new aws.cognito.UserPoolClient("client", {
     userPoolId: pool.id,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+pool = aws.cognito.UserPool("pool")
+client = aws.cognito.UserPoolClient("client", user_pool_id=pool.id)
+```
+
+{{% /example %}}
+{{% example %}}
 ### Create a user pool client with no SRP authentication
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -68,22 +50,21 @@ const client = new aws.cognito.UserPoolClient("client", {
     userPoolId: pool.id,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+pool = aws.cognito.UserPool("pool")
+client = aws.cognito.UserPoolClient("client",
+    explicit_auth_flows=["ADMIN_NO_SRP_AUTH"],
+    generate_secret=True,
+    user_pool_id=pool.id)
+```
+
+{{% /example %}}
+{{% example %}}
 ### Create a user pool client with pinpoint analytics
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -134,13 +115,62 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("test", {
     userPoolId: testUserPool.id,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+current = aws.get_caller_identity()
+test_user_pool = aws.cognito.UserPool("testUserPool")
+test_app = aws.pinpoint.App("testApp")
+test_role = aws.iam.Role("testRole", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "cognito-idp.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+
+""")
+test_role_policy = aws.iam.RolePolicy("testRolePolicy",
+    policy=test_app.application_id.apply(lambda application_id: f"""{{
+  "Version": "2012-10-17",
+  "Statement": [
+    {{
+      "Action": [
+        "mobiletargeting:UpdateEndpoint",
+        "mobiletargeting:PutItems"
+      ],
+      "Effect": "Allow",
+      "Resource": "arn:aws:mobiletargeting:*:{current.account_id}:apps/{application_id}*"
+    }}
+  ]
+}}
+
+"""),
+    role=test_role.id)
+test_user_pool_client = aws.cognito.UserPoolClient("testUserPoolClient",
+    analytics_configuration={
+        "applicationId": test_app.application_id,
+        "externalId": "some_id",
+        "roleArn": test_role.arn,
+        "userDataShared": True,
+    },
+    user_pool_id=test_user_pool.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a UserPoolClient Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1036,7 +1066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing UserPoolClient Resource {#look-up}
 
 Get an existing UserPoolClient resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#UserPoolClientState">UserPoolClientState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#UserPoolClient">UserPoolClient</a></span></code></pre></div>
@@ -1812,9 +1842,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolClientAnalyticsConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolClientAnalyticsConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.UserPoolClientAnalyticsConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.UserPoolClientAnalyticsConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

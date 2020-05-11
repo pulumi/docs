@@ -42,6 +42,20 @@ const job = new gcp.cloudscheduler.Job("job", {
     timeZone: "America/New_York",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+job = gcp.cloudscheduler.Job("job",
+    attempt_deadline="320s",
+    description="test http job",
+    http_target={
+        "httpMethod": "POST",
+        "uri": "https://example.com/ping",
+    },
+    schedule="*/8 * * * *",
+    time_zone="America/New_York")
+```
 ## Example Usage - Scheduler Job App Engine
 
 
@@ -65,11 +79,110 @@ const job = new gcp.cloudscheduler.Job("job", {
     timeZone: "Europe/London",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+job = gcp.cloudscheduler.Job("job",
+    app_engine_http_target={
+        "appEngineRouting": {
+            "instance": "my-instance-001",
+            "service": "web",
+            "version": "prod",
+        },
+        "httpMethod": "POST",
+        "relativeUri": "/ping",
+    },
+    attempt_deadline="320s",
+    description="test app engine job",
+    schedule="*/4 * * * *",
+    time_zone="Europe/London")
+```
+## Example Usage - Scheduler Job Oauth
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default = gcp.compute.getDefaultServiceAccount({});
+const job = new gcp.cloudscheduler.Job("job", {
+    description: "test http job",
+    schedule: "*/8 * * * *",
+    timeZone: "America/New_York",
+    attemptDeadline: "320s",
+    http_target: {
+        httpMethod: "GET",
+        uri: "https://cloudscheduler.googleapis.com/v1/projects/my-project-name/locations/us-west1/jobs",
+        oauth_token: {
+            serviceAccountEmail: default.then(_default => _default.email),
+        },
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.get_default_service_account()
+job = gcp.cloudscheduler.Job("job",
+    description="test http job",
+    schedule="*/8 * * * *",
+    time_zone="America/New_York",
+    attempt_deadline="320s",
+    http_target={
+        "httpMethod": "GET",
+        "uri": "https://cloudscheduler.googleapis.com/v1/projects/my-project-name/locations/us-west1/jobs",
+        "oauth_token": {
+            "serviceAccountEmail": default.email,
+        },
+    })
+```
+## Example Usage - Scheduler Job Oidc
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default = gcp.compute.getDefaultServiceAccount({});
+const job = new gcp.cloudscheduler.Job("job", {
+    description: "test http job",
+    schedule: "*/8 * * * *",
+    timeZone: "America/New_York",
+    attemptDeadline: "320s",
+    http_target: {
+        httpMethod: "GET",
+        uri: "https://example.com/ping",
+        oidc_token: {
+            serviceAccountEmail: default.then(_default => _default.email),
+        },
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.get_default_service_account()
+job = gcp.cloudscheduler.Job("job",
+    description="test http job",
+    schedule="*/8 * * * *",
+    time_zone="America/New_York",
+    attempt_deadline="320s",
+    http_target={
+        "httpMethod": "GET",
+        "uri": "https://example.com/ping",
+        "oidc_token": {
+            "serviceAccountEmail": default.email,
+        },
+    })
+```
 
 
 
 ## Create a Job Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -817,7 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Job Resource {#look-up}
 
 Get an existing Job resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudscheduler/#JobState">JobState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudscheduler/#Job">Job</a></span></code></pre></div>
@@ -1446,9 +1559,6 @@ The value of this field must be a time zone name from the tz database.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobAppEngineHttpTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobAppEngineHttpTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Inputs.JobAppEngineHttpTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Outputs.JobAppEngineHttpTarget.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1700,9 +1810,6 @@ Repeated headers are not supported, but a header value can contain commas.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobAppEngineHttpTargetAppEngineRoutingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobAppEngineHttpTargetAppEngineRoutingOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Inputs.JobAppEngineHttpTargetAppEngineRoutingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Outputs.JobAppEngineHttpTargetAppEngineRouting.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1865,9 +1972,6 @@ By default, the job is sent to the version which is the default version when the
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobHttpTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobHttpTargetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Inputs.JobHttpTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Outputs.JobHttpTarget.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2148,9 +2252,6 @@ This type of authorization should be used when sending requests to third party e
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobHttpTargetOauthTokenArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobHttpTargetOauthTokenOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Inputs.JobHttpTargetOauthTokenArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Outputs.JobHttpTargetOauthToken.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2274,9 +2375,6 @@ The service account must be within the same project as the job.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobHttpTargetOidcTokenArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobHttpTargetOidcTokenOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Inputs.JobHttpTargetOidcTokenArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Outputs.JobHttpTargetOidcToken.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2399,9 +2497,6 @@ the URI specified in target will be used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobPubsubTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobPubsubTargetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Inputs.JobPubsubTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Outputs.JobPubsubTarget.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2573,9 +2668,6 @@ Pubsub message must contain either non-empty data, or at least one attribute.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobRetryConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobRetryConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Inputs.JobRetryConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Outputs.JobRetryConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

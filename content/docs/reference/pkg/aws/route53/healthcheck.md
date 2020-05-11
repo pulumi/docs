@@ -12,26 +12,12 @@ meta_desc: "Explore the HealthCheck resource of the route53 module, including ex
 
 Provides a Route53 health check.
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### Connectivity and HTTP Status Code Check
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -48,22 +34,26 @@ const example = new aws.route53.HealthCheck("example", {
     type: "HTTP",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example = aws.route53.HealthCheck("example",
+    failure_threshold="5",
+    fqdn="example.com",
+    port=80,
+    request_interval="30",
+    resource_path="/",
+    tags={
+        "Name": "tf-test-health-check",
+    },
+    type="HTTP")
+```
+
+{{% /example %}}
+{{% example %}}
 ### Connectivity and String Matching Check
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -78,22 +68,24 @@ const example = new aws.route53.HealthCheck("example", {
     type: "HTTPS_STR_MATCH",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example = aws.route53.HealthCheck("example",
+    failure_threshold="5",
+    fqdn="example.com",
+    port=443,
+    request_interval="30",
+    resource_path="/",
+    search_string="example",
+    type="HTTPS_STR_MATCH")
+```
+
+{{% /example %}}
+{{% example %}}
 ### Aggregate Check
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -107,22 +99,23 @@ const parent = new aws.route53.HealthCheck("parent", {
     type: "CALCULATED",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+parent = aws.route53.HealthCheck("parent",
+    child_health_threshold=1,
+    child_healthchecks=[aws_route53_health_check["child"]["id"]],
+    tags={
+        "Name": "tf-test-calculated-health-check",
+    },
+    type="CALCULATED")
+```
+
+{{% /example %}}
+{{% example %}}
 ### CloudWatch Alarm Check
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -144,13 +137,33 @@ const foo = new aws.route53.HealthCheck("foo", {
     type: "CLOUDWATCH_METRIC",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+foobar = aws.cloudwatch.MetricAlarm("foobar",
+    alarm_description="This metric monitors ec2 cpu utilization",
+    comparison_operator="GreaterThanOrEqualToThreshold",
+    evaluation_periods="2",
+    metric_name="CPUUtilization",
+    namespace="AWS/EC2",
+    period="120",
+    statistic="Average",
+    threshold="80")
+foo = aws.route53.HealthCheck("foo",
+    cloudwatch_alarm_name=foobar.name,
+    cloudwatch_alarm_region="us-west-2",
+    insufficient_data_health_status="Healthy",
+    type="CLOUDWATCH_METRIC")
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a HealthCheck Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1122,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing HealthCheck Resource {#look-up}
 
 Get an existing HealthCheck resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#HealthCheckState">HealthCheckState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#HealthCheck">HealthCheck</a></span></code></pre></div>

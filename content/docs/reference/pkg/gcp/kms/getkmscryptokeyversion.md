@@ -18,13 +18,44 @@ and
 A CryptoKeyVersion represents an individual cryptographic key, and the associated key material.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myKeyRing = gcp.kms.getKMSKeyRing({
+    name: "my-key-ring",
+    location: "us-central1",
+});
+const myCryptoKey = myKeyRing.then(myKeyRing => gcp.kms.getKMSCryptoKey({
+    name: "my-crypto-key",
+    keyRing: myKeyRing.selfLink,
+}));
+const myCryptoKeyVersion = gcp.kms.getKMSCryptoKeyVersion({
+    cryptoKey: data.google_kms_key.my_key.self_link,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_key_ring = gcp.kms.get_kms_key_ring(name="my-key-ring",
+    location="us-central1")
+my_crypto_key = gcp.kms.get_kms_crypto_key(name="my-crypto-key",
+    key_ring=my_key_ring.self_link)
+my_crypto_key_version = gcp.kms.get_kms_crypto_key_version(crypto_key=data["google_kms_key"]["my_key"]["self_link"])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Using GetKMSCryptoKeyVersion {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -456,9 +487,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#GetKMSCryptoKeyVersionPublicKey">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.Outputs.GetKMSCryptoKeyVersionPublicKey.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -567,16 +595,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

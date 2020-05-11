@@ -15,26 +15,10 @@ by using an AWS KMS customer master key. The value returned by this data source
 changes every apply. For a stable ciphertext value, see the [`aws.kms.Ciphertext`
 resource](https://www.terraform.io/docs/providers/aws/r/kms_ciphertext.html).
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -52,14 +36,30 @@ const oauth = oauthConfig.keyId.apply(keyId => aws.kms.getCipherText({
 `,
 }, { async: true }));
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+oauth_config = aws.kms.Key("oauthConfig",
+    description="oauth config",
+    is_enabled=True)
+oauth = oauth_config.key_id.apply(lambda key_id: aws.kms.get_cipher_text(key_id=key_id,
+    plaintext="""{
+  "client_id": "e587dbae22222f55da22",
+  "client_secret": "8289575d00000ace55e1815ec13673955721b8a5"
+}
+
+"""))
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetCipherText {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -438,16 +438,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

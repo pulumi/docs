@@ -20,26 +20,12 @@ deploy the required validation records and wait for validation to complete.
 > **WARNING:** This resource implements a part of the validation workflow. It does not represent a real-world entity in AWS, therefore changing or deleting this resource on its own has no immediate effect.
 
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### DNS Validation with Route 53
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -68,22 +54,31 @@ const frontEnd = new aws.lb.Listener("front_end", {
     certificateArn: certCertificateValidation.certificateArn,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+cert_certificate = aws.acm.Certificate("certCertificate",
+    domain_name="example.com",
+    validation_method="DNS")
+zone = aws.route53.get_zone(name="example.com.",
+    private_zone=False)
+cert_validation = aws.route53.Record("certValidation",
+    name=cert_certificate.domain_validation_options[0]["resourceRecordName"],
+    records=[cert_certificate.domain_validation_options[0]["resourceRecordValue"]],
+    ttl=60,
+    type=cert_certificate.domain_validation_options[0]["resourceRecordType"],
+    zone_id=zone.zone_id)
+cert_certificate_validation = aws.acm.CertificateValidation("certCertificateValidation",
+    certificate_arn=cert_certificate.arn,
+    validation_record_fqdns=[cert_validation.fqdn])
+front_end = aws.lb.Listener("frontEnd", certificate_arn=cert_certificate_validation.certificate_arn)
+```
+
+{{% /example %}}
+{{% example %}}
 ### Alternative Domains DNS Validation with Route 53
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -138,22 +133,55 @@ const frontEnd = new aws.lb.Listener("front_end", {
     certificateArn: certCertificateValidation.certificateArn,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+cert_certificate = aws.acm.Certificate("certCertificate",
+    domain_name="example.com",
+    subject_alternative_names=[
+        "www.example.com",
+        "example.org",
+    ],
+    validation_method="DNS")
+zone = aws.route53.get_zone(name="example.com.",
+    private_zone=False)
+zone_alt = aws.route53.get_zone(name="example.org.",
+    private_zone=False)
+cert_validation = aws.route53.Record("certValidation",
+    name=cert_certificate.domain_validation_options[0]["resourceRecordName"],
+    records=[cert_certificate.domain_validation_options[0]["resourceRecordValue"]],
+    ttl=60,
+    type=cert_certificate.domain_validation_options[0]["resourceRecordType"],
+    zone_id=zone.zone_id)
+cert_validation_alt1 = aws.route53.Record("certValidationAlt1",
+    name=cert_certificate.domain_validation_options[1]["resourceRecordName"],
+    records=[cert_certificate.domain_validation_options[1]["resourceRecordValue"]],
+    ttl=60,
+    type=cert_certificate.domain_validation_options[1]["resourceRecordType"],
+    zone_id=zone.zone_id)
+cert_validation_alt2 = aws.route53.Record("certValidationAlt2",
+    name=cert_certificate.domain_validation_options[2]["resourceRecordName"],
+    records=[cert_certificate.domain_validation_options[2]["resourceRecordValue"]],
+    ttl=60,
+    type=cert_certificate.domain_validation_options[2]["resourceRecordType"],
+    zone_id=zone_alt.zone_id)
+cert_certificate_validation = aws.acm.CertificateValidation("certCertificateValidation",
+    certificate_arn=cert_certificate.arn,
+    validation_record_fqdns=[
+        cert_validation.fqdn,
+        cert_validation_alt1.fqdn,
+        cert_validation_alt2.fqdn,
+    ])
+front_end = aws.lb.Listener("frontEnd", certificate_arn=cert_certificate_validation.certificate_arn)
+```
+
+{{% /example %}}
+{{% example %}}
 ### Email Validation
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
+In this situation, the resource is simply a waiter for manual email approval of ACM certificates.
 
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -166,13 +194,23 @@ const certCertificateValidation = new aws.acm.CertificateValidation("cert", {
     certificateArn: certCertificate.arn,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+cert_certificate = aws.acm.Certificate("certCertificate",
+    domain_name="example.com",
+    validation_method="EMAIL")
+cert_certificate_validation = aws.acm.CertificateValidation("certCertificateValidation", certificate_arn=cert_certificate.arn)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a CertificateValidation Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -528,7 +566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing CertificateValidation Resource {#look-up}
 
 Get an existing CertificateValidation resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/acm/#CertificateValidationState">CertificateValidationState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/acm/#CertificateValidation">CertificateValidation</a></span></code></pre></div>

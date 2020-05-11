@@ -19,10 +19,44 @@ To get more information about Database, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/spanner/)
 
+## Example Usage - Spanner Database Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const main = new gcp.spanner.Instance("main", {
+    config: "regional-europe-west1",
+    displayName: "main-instance",
+});
+const database = new gcp.spanner.Database("database", {
+    instance: main.name,
+    ddls: [
+        "CREATE TABLE t1 (t1 INT64 NOT NULL,) PRIMARY KEY(t1)",
+        "CREATE TABLE t2 (t2 INT64 NOT NULL,) PRIMARY KEY(t2)",
+    ],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+main = gcp.spanner.Instance("main",
+    config="regional-europe-west1",
+    display_name="main-instance")
+database = gcp.spanner.Database("database",
+    instance=main.name,
+    ddls=[
+        "CREATE TABLE t1 (t1 INT64 NOT NULL,) PRIMARY KEY(t1)",
+        "CREATE TABLE t2 (t2 INT64 NOT NULL,) PRIMARY KEY(t2)",
+    ])
+```
+
 
 
 ## Create a Database Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -506,7 +540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Database Resource {#look-up}
 
 Get an existing Database resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/spanner/#DatabaseState">DatabaseState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/spanner/#Database">Database</a></span></code></pre></div>

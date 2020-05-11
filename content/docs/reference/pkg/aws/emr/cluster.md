@@ -18,26 +18,10 @@ To configure [Instance Groups](https://docs.aws.amazon.com/emr/latest/Management
 
 > Support for [Instance Fleets](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-fleets) will be made available in an upcoming release.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -148,22 +132,135 @@ const cluster = new aws.emr.Cluster("cluster", {
     terminationProtection: false,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+cluster = aws.emr.Cluster("cluster",
+    additional_info="""{
+  "instanceAwsClientConfiguration": {
+    "proxyPort": 8099,
+    "proxyHost": "myproxy.example.com"
+  }
+}
+
+""",
+    applications=["Spark"],
+    bootstrap_actions=[{
+        "args": [
+            "instance.isMaster=true",
+            "echo running on master node",
+        ],
+        "name": "runif",
+        "path": "s3://elasticmapreduce/bootstrap-actions/run-if",
+    }],
+    configurations_json="""  [
+    {
+      "Classification": "hadoop-env",
+      "Configurations": [
+        {
+          "Classification": "export",
+          "Properties": {
+            "JAVA_HOME": "/usr/lib/jvm/java-1.8.0"
+          }
+        }
+      ],
+      "Properties": {}
+    },
+    {
+      "Classification": "spark-env",
+      "Configurations": [
+        {
+          "Classification": "export",
+          "Properties": {
+            "JAVA_HOME": "/usr/lib/jvm/java-1.8.0"
+          }
+        }
+      ],
+      "Properties": {}
+    }
+  ]
+
+""",
+    core_instance_group={
+        "autoscalingPolicy": """{
+"Constraints": {
+  "MinCapacity": 1,
+  "MaxCapacity": 2
+},
+"Rules": [
+  {
+    "Name": "ScaleOutMemoryPercentage",
+    "Description": "Scale out if YARNMemoryAvailablePercentage is less than 15",
+    "Action": {
+      "SimpleScalingPolicyConfiguration": {
+        "AdjustmentType": "CHANGE_IN_CAPACITY",
+        "ScalingAdjustment": 1,
+        "CoolDown": 300
+      }
+    },
+    "Trigger": {
+      "CloudWatchAlarmDefinition": {
+        "ComparisonOperator": "LESS_THAN",
+        "EvaluationPeriods": 1,
+        "MetricName": "YARNMemoryAvailablePercentage",
+        "Namespace": "AWS/ElasticMapReduce",
+        "Period": 300,
+        "Statistic": "AVERAGE",
+        "Threshold": 15.0,
+        "Unit": "PERCENT"
+      }
+    }
+  }
+]
+}
+
+""",
+        "bidPrice": "0.30",
+        "ebsConfig": [{
+            "size": "40",
+            "type": "gp2",
+            "volumesPerInstance": 1,
+        }],
+        "instanceCount": 1,
+        "instanceType": "c4.large",
+    },
+    ebs_root_volume_size=100,
+    ec2_attributes={
+        "emrManagedMasterSecurityGroup": aws_security_group["sg"]["id"],
+        "emrManagedSlaveSecurityGroup": aws_security_group["sg"]["id"],
+        "instanceProfile": aws_iam_instance_profile["emr_profile"]["arn"],
+        "subnetId": aws_subnet["main"]["id"],
+    },
+    keep_job_flow_alive_when_no_steps=True,
+    master_instance_group={
+        "instanceType": "m4.large",
+    },
+    release_label="emr-4.6.0",
+    service_role=aws_iam_role["iam_emr_service_role"]["arn"],
+    tags={
+        "env": "env",
+        "role": "rolename",
+    },
+    termination_protection=False)
+```
+
+The `aws.emr.Cluster` resource typically requires two IAM roles, one for the EMR Cluster
+to use as a service, and another to place on your Cluster Instances to interact
+with AWS from those instances. The suggested role policy template for the EMR service is `AmazonElasticMapReduceRole`,
+and `AmazonElasticMapReduceforEC2Role` for the EC2 profile. See the [Getting
+Started](https://docs.aws.amazon.com/ElasticMapReduce/latest/ManagementGuide/emr-gs-launch-sample-cluster.html)
+guide for more information on these IAM roles. There is also a fully-bootable
+example this provider configuration at the bottom of this page.
+
+{{% /example %}}
+{{% example %}}
 ### Enable Debug Logging
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
+[Debug logging in EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-debugging.html)
+is implemented as a step. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other
+steps are being managed outside of this provider.
 
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -179,22 +276,33 @@ const example = new aws.emr.Cluster("example", {
     }],
 }, { ignoreChanges: ["stepConcurrencyLevel", "steps"] });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example = aws.emr.Cluster("example",
+    lifecycle={
+        "ignoreChanges": [
+            "stepConcurrencyLevel",
+            "steps",
+        ],
+    },
+    steps=[{
+        "actionOnFailure": "TERMINATE_CLUSTER",
+        "hadoopJarStep": {
+            "args": ["state-pusher-script"],
+            "jar": "command-runner.jar",
+        },
+        "name": "Setup Hadoop Debugging",
+    }])
+```
+
+{{% /example %}}
+{{% example %}}
 ### Multiple Node Master Instance Group
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
+Available in EMR version 5.23.0 and later, an EMR Cluster can be launched with three master nodes for high availability. Additional information about this functionality and its requirements can be found in the [EMR Management Guide](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-ha.html).
 
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -220,13 +328,505 @@ const exampleCluster = new aws.emr.Cluster("example", {
     terminationProtection: true,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+# Map public IP on launch must be enabled for public (Internet accessible) subnets
+example_subnet = aws.ec2.Subnet("exampleSubnet", map_public_ip_on_launch=True)
+example_cluster = aws.emr.Cluster("exampleCluster",
+    core_instance_group={},
+    ec2_attributes={
+        "subnetId": example_subnet.id,
+    },
+    master_instance_group={
+        "instanceCount": 3,
+    },
+    release_label="emr-5.24.1",
+    termination_protection=True)
+```
+
+{{% /example %}}
 {{% /examples %}}
+## Example bootable config
+
+**NOTE:** This configuration demonstrates a minimal configuration needed to
+boot an example EMR Cluster. It is not meant to display best practices. Please
+use at your own risk.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const mainVpc = new aws.ec2.Vpc("mainVpc", {
+    cidrBlock: "168.31.0.0/16",
+    enableDnsHostnames: true,
+    tags: {
+        name: "emr_test",
+    },
+});
+const mainSubnet = new aws.ec2.Subnet("mainSubnet", {
+    vpcId: mainVpc.id,
+    cidrBlock: "168.31.0.0/20",
+    tags: {
+        name: "emr_test",
+    },
+});
+// IAM role for EMR Service
+const iamEmrServiceRole = new aws.iam.Role("iamEmrServiceRole", {assumeRolePolicy: `{
+  "Version": "2008-10-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "elasticmapreduce.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+`});
+// IAM Role for EC2 Instance Profile
+const iamEmrProfileRole = new aws.iam.Role("iamEmrProfileRole", {assumeRolePolicy: `{
+  "Version": "2008-10-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "ec2.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+`});
+const emrProfile = new aws.iam.InstanceProfile("emrProfile", {roles: [iamEmrProfileRole.name]});
+const cluster = new aws.emr.Cluster("cluster", {
+    releaseLabel: "emr-4.6.0",
+    applications: ["Spark"],
+    ec2_attributes: {
+        subnetId: mainSubnet.id,
+        emrManagedMasterSecurityGroup: aws_security_group.allow_all.id,
+        emrManagedSlaveSecurityGroup: aws_security_group.allow_all.id,
+        instanceProfile: emrProfile.arn,
+    },
+    masterInstanceType: "m5.xlarge",
+    coreInstanceType: "m5.xlarge",
+    coreInstanceCount: 1,
+    tags: {
+        role: "rolename",
+        dns_zone: "env_zone",
+        env: "env",
+        name: "name-env",
+    },
+    bootstrap_action: [{
+        path: "s3://elasticmapreduce/bootstrap-actions/run-if",
+        name: "runif",
+        args: [
+            "instance.isMaster=true",
+            "echo running on master node",
+        ],
+    }],
+    configurationsJson: `  [
+    {
+      "Classification": "hadoop-env",
+      "Configurations": [
+        {
+          "Classification": "export",
+          "Properties": {
+            "JAVA_HOME": "/usr/lib/jvm/java-1.8.0"
+          }
+        }
+      ],
+      "Properties": {}
+    },
+    {
+      "Classification": "spark-env",
+      "Configurations": [
+        {
+          "Classification": "export",
+          "Properties": {
+            "JAVA_HOME": "/usr/lib/jvm/java-1.8.0"
+          }
+        }
+      ],
+      "Properties": {}
+    }
+  ]
+`,
+    serviceRole: iamEmrServiceRole.arn,
+});
+const allowAccess = new aws.ec2.SecurityGroup("allowAccess", {
+    description: "Allow inbound traffic",
+    vpcId: mainVpc.id,
+    ingress: [{
+        fromPort: 0,
+        toPort: 0,
+        protocol: "-1",
+        cidrBlocks: mainVpc.cidrBlock,
+    }],
+    egress: [{
+        fromPort: 0,
+        toPort: 0,
+        protocol: "-1",
+        cidrBlocks: ["0.0.0.0/0"],
+    }],
+    tags: {
+        name: "emr_test",
+    },
+});
+const gw = new aws.ec2.InternetGateway("gw", {vpcId: mainVpc.id});
+const routeTable = new aws.ec2.RouteTable("routeTable", {
+    vpcId: mainVpc.id,
+    route: [{
+        cidrBlock: "0.0.0.0/0",
+        gatewayId: gw.id,
+    }],
+});
+const mainRouteTableAssociation = new aws.ec2.MainRouteTableAssociation("mainRouteTableAssociation", {
+    vpcId: mainVpc.id,
+    routeTableId: routeTable.id,
+});
+//##
+const iamEmrServicePolicy = new aws.iam.RolePolicy("iamEmrServicePolicy", {
+    role: iamEmrServiceRole.id,
+    policy: `{
+    "Version": "2012-10-17",
+    "Statement": [{
+        "Effect": "Allow",
+        "Resource": "*",
+        "Action": [
+            "ec2:AuthorizeSecurityGroupEgress",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CancelSpotInstanceRequests",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateSecurityGroup",
+            "ec2:CreateTags",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteSecurityGroup",
+            "ec2:DeleteTags",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeDhcpOptions",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstances",
+            "ec2:DescribeKeyPairs",
+            "ec2:DescribeNetworkAcls",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribePrefixLists",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSpotInstanceRequests",
+            "ec2:DescribeSpotPriceHistory",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcAttribute",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcEndpointServices",
+            "ec2:DescribeVpcs",
+            "ec2:DetachNetworkInterface",
+            "ec2:ModifyImageAttribute",
+            "ec2:ModifyInstanceAttribute",
+            "ec2:RequestSpotInstances",
+            "ec2:RevokeSecurityGroupEgress",
+            "ec2:RunInstances",
+            "ec2:TerminateInstances",
+            "ec2:DeleteVolume",
+            "ec2:DescribeVolumeStatus",
+            "ec2:DescribeVolumes",
+            "ec2:DetachVolume",
+            "iam:GetRole",
+            "iam:GetRolePolicy",
+            "iam:ListInstanceProfiles",
+            "iam:ListRolePolicies",
+            "iam:PassRole",
+            "s3:CreateBucket",
+            "s3:Get*",
+            "s3:List*",
+            "sdb:BatchPutAttributes",
+            "sdb:Select",
+            "sqs:CreateQueue",
+            "sqs:Delete*",
+            "sqs:GetQueue*",
+            "sqs:PurgeQueue",
+            "sqs:ReceiveMessage"
+        ]
+    }]
+}
+`,
+});
+const iamEmrProfilePolicy = new aws.iam.RolePolicy("iamEmrProfilePolicy", {
+    role: iamEmrProfileRole.id,
+    policy: `{
+    "Version": "2012-10-17",
+    "Statement": [{
+        "Effect": "Allow",
+        "Resource": "*",
+        "Action": [
+            "cloudwatch:*",
+            "dynamodb:*",
+            "ec2:Describe*",
+            "elasticmapreduce:Describe*",
+            "elasticmapreduce:ListBootstrapActions",
+            "elasticmapreduce:ListClusters",
+            "elasticmapreduce:ListInstanceGroups",
+            "elasticmapreduce:ListInstances",
+            "elasticmapreduce:ListSteps",
+            "kinesis:CreateStream",
+            "kinesis:DeleteStream",
+            "kinesis:DescribeStream",
+            "kinesis:GetRecords",
+            "kinesis:GetShardIterator",
+            "kinesis:MergeShards",
+            "kinesis:PutRecord",
+            "kinesis:SplitShard",
+            "rds:Describe*",
+            "s3:*",
+            "sdb:*",
+            "sns:*",
+            "sqs:*"
+        ]
+    }]
+}
+`,
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+main_vpc = aws.ec2.Vpc("mainVpc",
+    cidr_block="168.31.0.0/16",
+    enable_dns_hostnames=True,
+    tags={
+        "name": "emr_test",
+    })
+main_subnet = aws.ec2.Subnet("mainSubnet",
+    vpc_id=main_vpc.id,
+    cidr_block="168.31.0.0/20",
+    tags={
+        "name": "emr_test",
+    })
+# IAM role for EMR Service
+iam_emr_service_role = aws.iam.Role("iamEmrServiceRole", assume_role_policy="""{
+  "Version": "2008-10-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "elasticmapreduce.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+""")
+# IAM Role for EC2 Instance Profile
+iam_emr_profile_role = aws.iam.Role("iamEmrProfileRole", assume_role_policy="""{
+  "Version": "2008-10-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "ec2.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+""")
+emr_profile = aws.iam.InstanceProfile("emrProfile", roles=[iam_emr_profile_role.name])
+cluster = aws.emr.Cluster("cluster",
+    release_label="emr-4.6.0",
+    applications=["Spark"],
+    ec2_attributes={
+        "subnetId": main_subnet.id,
+        "emrManagedMasterSecurityGroup": aws_security_group["allow_all"]["id"],
+        "emrManagedSlaveSecurityGroup": aws_security_group["allow_all"]["id"],
+        "instanceProfile": emr_profile.arn,
+    },
+    master_instance_type="m5.xlarge",
+    core_instance_type="m5.xlarge",
+    core_instance_count=1,
+    tags={
+        "role": "rolename",
+        "dns_zone": "env_zone",
+        "env": "env",
+        "name": "name-env",
+    },
+    bootstrap_action=[{
+        "path": "s3://elasticmapreduce/bootstrap-actions/run-if",
+        "name": "runif",
+        "args": [
+            "instance.isMaster=true",
+            "echo running on master node",
+        ],
+    }],
+    configurations_json="""  [
+    {
+      "Classification": "hadoop-env",
+      "Configurations": [
+        {
+          "Classification": "export",
+          "Properties": {
+            "JAVA_HOME": "/usr/lib/jvm/java-1.8.0"
+          }
+        }
+      ],
+      "Properties": {}
+    },
+    {
+      "Classification": "spark-env",
+      "Configurations": [
+        {
+          "Classification": "export",
+          "Properties": {
+            "JAVA_HOME": "/usr/lib/jvm/java-1.8.0"
+          }
+        }
+      ],
+      "Properties": {}
+    }
+  ]
+""",
+    service_role=iam_emr_service_role.arn)
+allow_access = aws.ec2.SecurityGroup("allowAccess",
+    description="Allow inbound traffic",
+    vpc_id=main_vpc.id,
+    ingress=[{
+        "fromPort": 0,
+        "toPort": 0,
+        "protocol": "-1",
+        "cidrBlocks": main_vpc.cidr_block,
+    }],
+    egress=[{
+        "fromPort": 0,
+        "toPort": 0,
+        "protocol": "-1",
+        "cidrBlocks": ["0.0.0.0/0"],
+    }],
+    tags={
+        "name": "emr_test",
+    })
+gw = aws.ec2.InternetGateway("gw", vpc_id=main_vpc.id)
+route_table = aws.ec2.RouteTable("routeTable",
+    vpc_id=main_vpc.id,
+    route=[{
+        "cidrBlock": "0.0.0.0/0",
+        "gatewayId": gw.id,
+    }])
+main_route_table_association = aws.ec2.MainRouteTableAssociation("mainRouteTableAssociation",
+    vpc_id=main_vpc.id,
+    route_table_id=route_table.id)
+###
+iam_emr_service_policy = aws.iam.RolePolicy("iamEmrServicePolicy",
+    role=iam_emr_service_role.id,
+    policy="""{
+    "Version": "2012-10-17",
+    "Statement": [{
+        "Effect": "Allow",
+        "Resource": "*",
+        "Action": [
+            "ec2:AuthorizeSecurityGroupEgress",
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CancelSpotInstanceRequests",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateSecurityGroup",
+            "ec2:CreateTags",
+            "ec2:DeleteNetworkInterface",
+            "ec2:DeleteSecurityGroup",
+            "ec2:DeleteTags",
+            "ec2:DescribeAvailabilityZones",
+            "ec2:DescribeAccountAttributes",
+            "ec2:DescribeDhcpOptions",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeInstances",
+            "ec2:DescribeKeyPairs",
+            "ec2:DescribeNetworkAcls",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:DescribePrefixLists",
+            "ec2:DescribeRouteTables",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSpotInstanceRequests",
+            "ec2:DescribeSpotPriceHistory",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeVpcAttribute",
+            "ec2:DescribeVpcEndpoints",
+            "ec2:DescribeVpcEndpointServices",
+            "ec2:DescribeVpcs",
+            "ec2:DetachNetworkInterface",
+            "ec2:ModifyImageAttribute",
+            "ec2:ModifyInstanceAttribute",
+            "ec2:RequestSpotInstances",
+            "ec2:RevokeSecurityGroupEgress",
+            "ec2:RunInstances",
+            "ec2:TerminateInstances",
+            "ec2:DeleteVolume",
+            "ec2:DescribeVolumeStatus",
+            "ec2:DescribeVolumes",
+            "ec2:DetachVolume",
+            "iam:GetRole",
+            "iam:GetRolePolicy",
+            "iam:ListInstanceProfiles",
+            "iam:ListRolePolicies",
+            "iam:PassRole",
+            "s3:CreateBucket",
+            "s3:Get*",
+            "s3:List*",
+            "sdb:BatchPutAttributes",
+            "sdb:Select",
+            "sqs:CreateQueue",
+            "sqs:Delete*",
+            "sqs:GetQueue*",
+            "sqs:PurgeQueue",
+            "sqs:ReceiveMessage"
+        ]
+    }]
+}
+""")
+iam_emr_profile_policy = aws.iam.RolePolicy("iamEmrProfilePolicy",
+    role=iam_emr_profile_role.id,
+    policy="""{
+    "Version": "2012-10-17",
+    "Statement": [{
+        "Effect": "Allow",
+        "Resource": "*",
+        "Action": [
+            "cloudwatch:*",
+            "dynamodb:*",
+            "ec2:Describe*",
+            "elasticmapreduce:Describe*",
+            "elasticmapreduce:ListBootstrapActions",
+            "elasticmapreduce:ListClusters",
+            "elasticmapreduce:ListInstanceGroups",
+            "elasticmapreduce:ListInstances",
+            "elasticmapreduce:ListSteps",
+            "kinesis:CreateStream",
+            "kinesis:DeleteStream",
+            "kinesis:DescribeStream",
+            "kinesis:GetRecords",
+            "kinesis:GetShardIterator",
+            "kinesis:MergeShards",
+            "kinesis:PutRecord",
+            "kinesis:SplitShard",
+            "rds:Describe*",
+            "s3:*",
+            "sdb:*",
+            "sns:*",
+            "sqs:*"
+        ]
+    }]
+}
+""")
+```
+
 
 
 ## Create a Cluster Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1622,7 +2222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Cluster Resource {#look-up}
 
 Get an existing Cluster resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/emr/#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/emr/#Cluster">Cluster</a></span></code></pre></div>
@@ -2899,9 +3499,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterBootstrapActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterBootstrapActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterBootstrapActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterBootstrapAction.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3052,9 +3649,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterCoreInstanceGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterCoreInstanceGroupOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterCoreInstanceGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterCoreInstanceGroup.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3351,9 +3945,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterCoreInstanceGroupEbsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterCoreInstanceGroupEbsConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterCoreInstanceGroupEbsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterCoreInstanceGroupEbsConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3540,9 +4131,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterEc2AttributesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterEc2AttributesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterEc2AttributesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterEc2Attributes.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3875,9 +4463,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterInstanceGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterInstanceGroupOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterInstanceGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterInstanceGroup.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4209,9 +4794,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterInstanceGroupEbsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterInstanceGroupEbsConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterInstanceGroupEbsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterInstanceGroupEbsConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4398,9 +4980,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterKerberosAttributesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterKerberosAttributesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterKerberosAttributesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterKerberosAttributes.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4624,9 +5203,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterMasterInstanceGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterMasterInstanceGroupOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterMasterInstanceGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterMasterInstanceGroup.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4887,9 +5463,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterMasterInstanceGroupEbsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterMasterInstanceGroupEbsConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterMasterInstanceGroupEbsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterMasterInstanceGroupEbsConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -5077,9 +5650,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterStepOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterStepArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterStep.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -5230,9 +5800,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterStepHadoopJarStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterStepHadoopJarStepOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterStepHadoopJarStepArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterStepHadoopJarStep.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

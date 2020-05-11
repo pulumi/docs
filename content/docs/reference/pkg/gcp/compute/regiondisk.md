@@ -33,14 +33,64 @@ To get more information about RegionDisk, see:
 * How-to Guides
     * [Adding or Resizing Regional Persistent Disks](https://cloud.google.com/compute/docs/disks/regional-persistent-disk)
 
-> **Warning:** All arguments including the disk encryption key will be stored in the raw
-state as plain-text.
-[Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
+> **Warning:** All arguments including `disk_encryption_key.raw_key` will be stored in the raw
+state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
+
+## Example Usage - Region Disk Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const disk = new gcp.compute.Disk("disk", {
+    image: "debian-cloud/debian-9",
+    size: 50,
+    type: "pd-ssd",
+    zone: "us-central1-a",
+});
+const snapdisk = new gcp.compute.Snapshot("snapdisk", {
+    sourceDisk: disk.name,
+    zone: "us-central1-a",
+});
+const regiondisk = new gcp.compute.RegionDisk("regiondisk", {
+    snapshot: snapdisk.selfLink,
+    type: "pd-ssd",
+    region: "us-central1",
+    physicalBlockSizeBytes: 4096,
+    replicaZones: [
+        "us-central1-a",
+        "us-central1-f",
+    ],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+disk = gcp.compute.Disk("disk",
+    image="debian-cloud/debian-9",
+    size=50,
+    type="pd-ssd",
+    zone="us-central1-a")
+snapdisk = gcp.compute.Snapshot("snapdisk",
+    source_disk=disk.name,
+    zone="us-central1-a")
+regiondisk = gcp.compute.RegionDisk("regiondisk",
+    snapshot=snapdisk.self_link,
+    type="pd-ssd",
+    region="us-central1",
+    physical_block_size_bytes=4096,
+    replica_zones=[
+        "us-central1-a",
+        "us-central1-f",
+    ])
+```
 
 
 
 ## Create a RegionDisk Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1156,7 +1206,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
 ## Look up an Existing RegionDisk Resource {#look-up}
 
 Get an existing RegionDisk resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionDiskState">RegionDiskState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionDisk">RegionDisk</a></span></code></pre></div>
@@ -2153,9 +2203,6 @@ create the disk. Provide this when creating the disk.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionDiskDiskEncryptionKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionDiskDiskEncryptionKeyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionDiskDiskEncryptionKeyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionDiskDiskEncryptionKey.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2318,9 +2365,6 @@ encryption key that protects this resource.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionDiskSourceSnapshotEncryptionKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionDiskSourceSnapshotEncryptionKeyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionDiskSourceSnapshotEncryptionKeyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionDiskSourceSnapshotEncryptionKey.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

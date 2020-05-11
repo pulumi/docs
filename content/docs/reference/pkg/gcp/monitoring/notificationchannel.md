@@ -35,6 +35,9 @@ To get more information about NotificationChannel, see:
     * [Notification Options](https://cloud.google.com/monitoring/support/notification-options)
     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
 
+> **Warning:** All arguments including `sensitive_labels.auth_token`, `sensitive_labels.password`, and `sensitive_labels.service_key` will be stored in the raw
+state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
+
 ## Example Usage - Notification Channel Basic
 
 
@@ -49,6 +52,17 @@ const basic = new gcp.monitoring.NotificationChannel("basic", {
     },
     type: "email",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+basic = gcp.monitoring.NotificationChannel("basic",
+    display_name="Test Notification Channel",
+    labels={
+        "email_address": "fake_email@blahblah.com",
+    },
+    type="email")
 ```
 ## Example Usage - Notification Channel Sensitive
 
@@ -68,11 +82,25 @@ const defaultNotificationChannel = new gcp.monitoring.NotificationChannel("defau
     type: "slack",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.monitoring.NotificationChannel("default",
+    display_name="Test Slack Channel",
+    labels={
+        "channel_name": "#foobar",
+    },
+    sensitive_labels={
+        "authToken": "one",
+    },
+    type="slack")
+```
 
 
 
 ## Create a NotificationChannel Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -788,7 +816,7 @@ UpdateNotificationChannel operation. To change the value of this field, you must
 ## Look up an Existing NotificationChannel Resource {#look-up}
 
 Get an existing NotificationChannel resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#NotificationChannelState">NotificationChannelState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#NotificationChannel">NotificationChannel</a></span></code></pre></div>
@@ -1385,9 +1413,6 @@ UpdateNotificationChannel operation. To change the value of this field, you must
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#NotificationChannelSensitiveLabelsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#NotificationChannelSensitiveLabelsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.NotificationChannelSensitiveLabelsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.NotificationChannelSensitiveLabels.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1401,7 +1426,7 @@ UpdateNotificationChannel operation. To change the value of this field, you must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An authorization token for a notification channel. Channel types that support this field include: slack
+    <dd>{{% md %}}An authorization token for a notification channel. Channel types that support this field include: slack  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1410,7 +1435,7 @@ UpdateNotificationChannel operation. To change the value of this field, you must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An password for a notification channel. Channel types that support this field include: webhook_basicauth
+    <dd>{{% md %}}An password for a notification channel. Channel types that support this field include: webhook_basicauth  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1419,7 +1444,7 @@ UpdateNotificationChannel operation. To change the value of this field, you must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An servicekey token for a notification channel. Channel types that support this field include: pagerduty
+    <dd>{{% md %}}An servicekey token for a notification channel. Channel types that support this field include: pagerduty  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -1435,7 +1460,7 @@ UpdateNotificationChannel operation. To change the value of this field, you must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An authorization token for a notification channel. Channel types that support this field include: slack
+    <dd>{{% md %}}An authorization token for a notification channel. Channel types that support this field include: slack  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1444,7 +1469,7 @@ UpdateNotificationChannel operation. To change the value of this field, you must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An password for a notification channel. Channel types that support this field include: webhook_basicauth
+    <dd>{{% md %}}An password for a notification channel. Channel types that support this field include: webhook_basicauth  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1453,7 +1478,7 @@ UpdateNotificationChannel operation. To change the value of this field, you must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An servicekey token for a notification channel. Channel types that support this field include: pagerduty
+    <dd>{{% md %}}An servicekey token for a notification channel. Channel types that support this field include: pagerduty  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -1469,7 +1494,7 @@ UpdateNotificationChannel operation. To change the value of this field, you must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An authorization token for a notification channel. Channel types that support this field include: slack
+    <dd>{{% md %}}An authorization token for a notification channel. Channel types that support this field include: slack  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1478,7 +1503,7 @@ UpdateNotificationChannel operation. To change the value of this field, you must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An password for a notification channel. Channel types that support this field include: webhook_basicauth
+    <dd>{{% md %}}An password for a notification channel. Channel types that support this field include: webhook_basicauth  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1487,7 +1512,7 @@ UpdateNotificationChannel operation. To change the value of this field, you must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An servicekey token for a notification channel. Channel types that support this field include: pagerduty
+    <dd>{{% md %}}An servicekey token for a notification channel. Channel types that support this field include: pagerduty  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -1503,7 +1528,7 @@ UpdateNotificationChannel operation. To change the value of this field, you must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An authorization token for a notification channel. Channel types that support this field include: slack
+    <dd>{{% md %}}An authorization token for a notification channel. Channel types that support this field include: slack  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1512,7 +1537,7 @@ UpdateNotificationChannel operation. To change the value of this field, you must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An password for a notification channel. Channel types that support this field include: webhook_basicauth
+    <dd>{{% md %}}An password for a notification channel. Channel types that support this field include: webhook_basicauth  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1521,7 +1546,7 @@ UpdateNotificationChannel operation. To change the value of this field, you must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An servicekey token for a notification channel. Channel types that support this field include: pagerduty
+    <dd>{{% md %}}An servicekey token for a notification channel. Channel types that support this field include: pagerduty  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>

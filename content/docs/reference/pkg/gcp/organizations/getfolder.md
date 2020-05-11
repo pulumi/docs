@@ -12,11 +12,36 @@ meta_desc: "Explore the GetFolder function of the organizations module, includin
 
 Use this data source to get information about a Google Cloud Folder.
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myFolder1 = gcp.organizations.getFolder({
+    folder: "folders/12345",
+    lookupOrganization: true,
+});
+const myFolder2 = gcp.organizations.getFolder({
+    folder: "folders/23456",
+});
+export const myFolder1Organization = myFolder1.then(myFolder1 => myFolder1.organization);
+export const myFolder2Parent = myFolder2.then(myFolder2 => myFolder2.parent);
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_folder1 = gcp.organizations.get_folder(folder="folders/12345",
+    lookup_organization=True)
+my_folder2 = gcp.organizations.get_folder(folder="folders/23456")
+pulumi.export("myFolder1Organization", my_folder1.organization)
+pulumi.export("myFolder2Parent", my_folder2.parent)
+```
+
 
 
 ## Using GetFolder {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -507,16 +532,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

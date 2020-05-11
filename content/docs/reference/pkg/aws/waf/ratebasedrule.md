@@ -12,26 +12,10 @@ meta_desc: "Explore the RateBasedRule resource of the waf module, including exam
 
 Provides a WAF Rate Based Rule Resource
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -53,13 +37,32 @@ const wafrule = new aws.waf.RateBasedRule("wafrule", {
     rateLimit: 100,
 }, { dependsOn: [ipset] });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+ipset = aws.waf.IpSet("ipset", ip_set_descriptors=[{
+    "type": "IPV4",
+    "value": "192.0.7.0/24",
+}])
+wafrule = aws.waf.RateBasedRule("wafrule",
+    metric_name="tfWAFRule",
+    predicates=[{
+        "dataId": ipset.id,
+        "negated": False,
+        "type": "IPMatch",
+    }],
+    rate_key="IP",
+    rate_limit=100)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a RateBasedRule Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -595,7 +598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing RateBasedRule Resource {#look-up}
 
 Get an existing RateBasedRule resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/waf/#RateBasedRuleState">RateBasedRuleState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/waf/#RateBasedRule">RateBasedRule</a></span></code></pre></div>
@@ -1011,9 +1014,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/waf?tab=doc#RateBasedRulePredicateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/waf?tab=doc#RateBasedRulePredicateOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Waf.Inputs.RateBasedRulePredicateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Waf.Outputs.RateBasedRulePredicate.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -16,11 +16,37 @@ For more information see
 and
 [API](https://cloud.google.com/dns/api/v1/managedZones).
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const envDnsZone = gcp.dns.getManagedZone({
+    name: "qa-zone",
+});
+const dns = new gcp.dns.RecordSet("dns", {
+    type: "TXT",
+    ttl: 300,
+    managedZone: envDnsZone.then(envDnsZone => envDnsZone.name),
+    rrdatas: ["test"],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+env_dns_zone = gcp.dns.get_managed_zone(name="qa-zone")
+dns = gcp.dns.RecordSet("dns",
+    type="TXT",
+    ttl=300,
+    managed_zone=env_dns_zone.name,
+    rrdatas=["test"])
+```
+
 
 
 ## Using GetManagedZone {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -451,16 +477,4 @@ while private zones are visible only to Virtual Private Cloud resources.
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

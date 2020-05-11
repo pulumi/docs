@@ -36,11 +36,233 @@ const example_zone = new gcp.dns.ManagedZone("example-zone", {
     },
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_zone = gcp.dns.ManagedZone("example-zone",
+    description="Example DNS zone",
+    dns_name="my-domain.com.",
+    labels={
+        "foo": "bar",
+    })
+```
+## Example Usage - Dns Managed Zone Private
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const network-1 = new gcp.compute.Network("network-1", {autoCreateSubnetworks: false});
+const network-2 = new gcp.compute.Network("network-2", {autoCreateSubnetworks: false});
+const private-zone = new gcp.dns.ManagedZone("private-zone", {
+    dnsName: "private.example.com.",
+    description: "Example private DNS zone",
+    labels: {
+        foo: "bar",
+    },
+    visibility: "private",
+    private_visibility_config: {
+        networks: [
+            {
+                networkUrl: network-1.selfLink,
+            },
+            {
+                networkUrl: network-2.selfLink,
+            },
+        ],
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network_1 = gcp.compute.Network("network-1", auto_create_subnetworks=False)
+network_2 = gcp.compute.Network("network-2", auto_create_subnetworks=False)
+private_zone = gcp.dns.ManagedZone("private-zone",
+    dns_name="private.example.com.",
+    description="Example private DNS zone",
+    labels={
+        "foo": "bar",
+    },
+    visibility="private",
+    private_visibility_config={
+        "networks": [
+            {
+                "networkUrl": network_1.self_link,
+            },
+            {
+                "networkUrl": network_2.self_link,
+            },
+        ],
+    })
+```
+## Example Usage - Dns Managed Zone Private Forwarding
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const network-1 = new gcp.compute.Network("network-1", {autoCreateSubnetworks: false});
+const network-2 = new gcp.compute.Network("network-2", {autoCreateSubnetworks: false});
+const private-zone = new gcp.dns.ManagedZone("private-zone", {
+    dnsName: "private.example.com.",
+    description: "Example private DNS zone",
+    labels: {
+        foo: "bar",
+    },
+    visibility: "private",
+    private_visibility_config: {
+        networks: [
+            {
+                networkUrl: network-1.selfLink,
+            },
+            {
+                networkUrl: network-2.selfLink,
+            },
+        ],
+    },
+    forwarding_config: {
+        target_name_servers: [
+            {
+                ipv4Address: "172.16.1.10",
+            },
+            {
+                ipv4Address: "172.16.1.20",
+            },
+        ],
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network_1 = gcp.compute.Network("network-1", auto_create_subnetworks=False)
+network_2 = gcp.compute.Network("network-2", auto_create_subnetworks=False)
+private_zone = gcp.dns.ManagedZone("private-zone",
+    dns_name="private.example.com.",
+    description="Example private DNS zone",
+    labels={
+        "foo": "bar",
+    },
+    visibility="private",
+    private_visibility_config={
+        "networks": [
+            {
+                "networkUrl": network_1.self_link,
+            },
+            {
+                "networkUrl": network_2.self_link,
+            },
+        ],
+    },
+    forwarding_config={
+        "target_name_servers": [
+            {
+                "ipv4Address": "172.16.1.10",
+            },
+            {
+                "ipv4Address": "172.16.1.20",
+            },
+        ],
+    })
+```
+## Example Usage - Dns Managed Zone Private Peering
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const network-source = new gcp.compute.Network("network-source", {autoCreateSubnetworks: false});
+const network-target = new gcp.compute.Network("network-target", {autoCreateSubnetworks: false});
+const peering-zone = new gcp.dns.ManagedZone("peering-zone", {
+    dnsName: "peering.example.com.",
+    description: "Example private DNS peering zone",
+    visibility: "private",
+    private_visibility_config: {
+        networks: [{
+            networkUrl: network-source.selfLink,
+        }],
+    },
+    peering_config: {
+        target_network: {
+            networkUrl: network-target.selfLink,
+        },
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network_source = gcp.compute.Network("network-source", auto_create_subnetworks=False)
+network_target = gcp.compute.Network("network-target", auto_create_subnetworks=False)
+peering_zone = gcp.dns.ManagedZone("peering-zone",
+    dns_name="peering.example.com.",
+    description="Example private DNS peering zone",
+    visibility="private",
+    private_visibility_config={
+        "networks": [{
+            "networkUrl": network_source.self_link,
+        }],
+    },
+    peering_config={
+        "target_network": {
+            "networkUrl": network_target.self_link,
+        },
+    })
+```
+## Example Usage - Dns Managed Zone Service Directory
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example = new gcp.servicedirectory.Namespace("example", {
+    namespaceId: "example",
+    location: "us-central1",
+});
+const sd-zone = new gcp.dns.ManagedZone("sd-zone", {
+    dnsName: "services.example.com.",
+    description: "Example private DNS Service Directory zone",
+    visibility: "private",
+    service_directory_config: {
+        namespace: {
+            namespaceUrl: example.id,
+        },
+    },
+});
+const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example = gcp.servicedirectory.Namespace("example",
+    namespace_id="example",
+    location="us-central1")
+sd_zone = gcp.dns.ManagedZone("sd-zone",
+    dns_name="services.example.com.",
+    description="Example private DNS Service Directory zone",
+    visibility="private",
+    service_directory_config={
+        "namespace": {
+            "namespaceUrl": example.id,
+        },
+    })
+network = gcp.compute.Network("network", auto_create_subnetworks=False)
+```
 
 
 
 ## Create a ManagedZone Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -48,7 +270,7 @@ const example_zone = new gcp.dns.ManagedZone("example-zone", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ManagedZone</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>dns_name=None<span class="p">, </span>dnssec_config=None<span class="p">, </span>forwarding_config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>peering_config=None<span class="p">, </span>private_visibility_config=None<span class="p">, </span>project=None<span class="p">, </span>reverse_lookup=None<span class="p">, </span>visibility=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ManagedZone</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>dns_name=None<span class="p">, </span>dnssec_config=None<span class="p">, </span>forwarding_config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>peering_config=None<span class="p">, </span>private_visibility_config=None<span class="p">, </span>project=None<span class="p">, </span>reverse_lookup=None<span class="p">, </span>service_directory_config=None<span class="p">, </span>visibility=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -320,13 +542,22 @@ to networks listed under `private_visibility_config`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Service<wbr>Directory<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
+information related to the namespace associated with the zone.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Visibility</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.
-Must be one of: `public`, `private`.
 {{% /md %}}</dd>
 
 </dl>
@@ -436,13 +667,22 @@ to networks listed under `private_visibility_config`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Service<wbr>Directory<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
+information related to the namespace associated with the zone.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Visibility</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.
-Must be one of: `public`, `private`.
 {{% /md %}}</dd>
 
 </dl>
@@ -552,13 +792,22 @@ to networks listed under `private_visibility_config`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>service<wbr>Directory<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
+information related to the namespace associated with the zone.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>visibility</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.
-Must be one of: `public`, `private`.
 {{% /md %}}</dd>
 
 </dl>
@@ -668,13 +917,22 @@ to networks listed under `private_visibility_config`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>service_<wbr>directory_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Dict[Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
+information related to the namespace associated with the zone.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>visibility</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.
-Must be one of: `public`, `private`.
 {{% /md %}}</dd>
 
 </dl>
@@ -796,14 +1054,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ManagedZone Resource {#look-up}
 
 Get an existing ManagedZone resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dns/#ManagedZoneState">ManagedZoneState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dns/#ManagedZone">ManagedZone</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>dns_name=None<span class="p">, </span>dnssec_config=None<span class="p">, </span>forwarding_config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>name_servers=None<span class="p">, </span>peering_config=None<span class="p">, </span>private_visibility_config=None<span class="p">, </span>project=None<span class="p">, </span>reverse_lookup=None<span class="p">, </span>visibility=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>dns_name=None<span class="p">, </span>dnssec_config=None<span class="p">, </span>forwarding_config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>name_servers=None<span class="p">, </span>peering_config=None<span class="p">, </span>private_visibility_config=None<span class="p">, </span>project=None<span class="p">, </span>reverse_lookup=None<span class="p">, </span>service_directory_config=None<span class="p">, </span>visibility=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1026,13 +1284,22 @@ to networks listed under `private_visibility_config`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Service<wbr>Directory<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
+information related to the namespace associated with the zone.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Visibility</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.
-Must be one of: `public`, `private`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1151,13 +1418,22 @@ to networks listed under `private_visibility_config`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Service<wbr>Directory<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
+information related to the namespace associated with the zone.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Visibility</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.
-Must be one of: `public`, `private`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1276,13 +1552,22 @@ to networks listed under `private_visibility_config`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>service<wbr>Directory<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
+information related to the namespace associated with the zone.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>visibility</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.
-Must be one of: `public`, `private`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1401,13 +1686,22 @@ to networks listed under `private_visibility_config`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>service_<wbr>directory_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Dict[Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
+information related to the namespace associated with the zone.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>visibility</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.
-Must be one of: `public`, `private`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1432,9 +1726,6 @@ Must be one of: `public`, `private`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneDnssecConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneDnssecConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Inputs.ManagedZoneDnssecConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Outputs.ManagedZoneDnssecConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1638,9 +1929,6 @@ non_existence can only be updated when the state is `off`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneDnssecConfigDefaultKeySpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneDnssecConfigDefaultKeySpecOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Inputs.ManagedZoneDnssecConfigDefaultKeySpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Outputs.ManagedZoneDnssecConfigDefaultKeySpec.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1849,9 +2137,6 @@ to sign all other types of resource record sets.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneForwardingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneForwardingConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Inputs.ManagedZoneForwardingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Outputs.ManagedZoneForwardingConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1938,9 +2223,6 @@ one target is given.  Structure is documented below.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneForwardingConfigTargetNameServerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneForwardingConfigTargetNameServerOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Inputs.ManagedZoneForwardingConfigTargetNameServerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Outputs.ManagedZoneForwardingConfigTargetNameServer.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2065,9 +2347,6 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZonePeeringConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZonePeeringConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Inputs.ManagedZonePeeringConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Outputs.ManagedZonePeeringConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2146,9 +2425,6 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZonePeeringConfigTargetNetworkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZonePeeringConfigTargetNetworkOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Inputs.ManagedZonePeeringConfigTargetNetworkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Outputs.ManagedZonePeeringConfigTargetNetwork.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2237,9 +2513,6 @@ This should be formatted like
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZonePrivateVisibilityConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZonePrivateVisibilityConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Inputs.ManagedZonePrivateVisibilityConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Outputs.ManagedZonePrivateVisibilityConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2319,9 +2592,6 @@ This should be formatted like
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZonePrivateVisibilityConfigNetworkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZonePrivateVisibilityConfigNetworkOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Inputs.ManagedZonePrivateVisibilityConfigNetworkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Outputs.ManagedZonePrivateVisibilityConfigNetwork.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2392,6 +2662,180 @@ This should be formatted like
     <dd>{{% md %}}The fully qualified URL of the VPC network to forward queries to.
 This should be formatted like
 `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneServiceDirectoryConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZoneServiceDirectoryConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneServiceDirectoryConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneServiceDirectoryConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The namespace associated with the zone.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace</a></span>
+    </dt>
+    <dd>{{% md %}}The namespace associated with the zone.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace</a></span>
+    </dt>
+    <dd>{{% md %}}The namespace associated with the zone.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Dict[Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace]</a></span>
+    </dt>
+    <dd>{{% md %}}The namespace associated with the zone.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="managedzoneservicedirectoryconfignamespace">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneServiceDirectoryConfigNamespace">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZoneServiceDirectoryConfigNamespace">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneServiceDirectoryConfigNamespaceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneServiceDirectoryConfigNamespaceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Namespace<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The fully qualified or partial URL of the service directory namespace that should be
+associated with the zone. This should be formatted like
+`https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace_id}`
+or simply `projects/{project}/locations/{location}/namespaces/{namespace_id}`
+Ignored for `public` visibility zones.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Namespace<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The fully qualified or partial URL of the service directory namespace that should be
+associated with the zone. This should be formatted like
+`https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace_id}`
+or simply `projects/{project}/locations/{location}/namespaces/{namespace_id}`
+Ignored for `public` visibility zones.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>namespace<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The fully qualified or partial URL of the service directory namespace that should be
+associated with the zone. This should be formatted like
+`https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace_id}`
+or simply `projects/{project}/locations/{location}/namespaces/{namespace_id}`
+Ignored for `public` visibility zones.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>namespace<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The fully qualified or partial URL of the service directory namespace that should be
+associated with the zone. This should be formatted like
+`https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace_id}`
+or simply `projects/{project}/locations/{location}/namespaces/{namespace_id}`
+Ignored for `public` visibility zones.
 {{% /md %}}</dd>
 
 </dl>

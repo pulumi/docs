@@ -18,10 +18,117 @@ To get more information about Budget, see:
 * How-to Guides
     * [Creating a budget](https://cloud.google.com/billing/docs/how-to/budgets)
 
+## Example Usage - Billing Budget Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const account = gcp.organizations.getBillingAccount({
+    billingAccount: "000000-0000000-0000000-000000",
+});
+const budget = new gcp.billing.Budget("budget", {
+    billingAccount: account.then(account => account.id),
+    displayName: "Example Billing Budget",
+    amount: {
+        specified_amount: {
+            currencyCode: "USD",
+            units: "100000",
+        },
+    },
+    threshold_rules: [{
+        thresholdPercent: 0.5,
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+account = gcp.organizations.get_billing_account(billing_account="000000-0000000-0000000-000000")
+budget = gcp.billing.Budget("budget",
+    billing_account=account.id,
+    display_name="Example Billing Budget",
+    amount={
+        "specified_amount": {
+            "currencyCode": "USD",
+            "units": "100000",
+        },
+    },
+    threshold_rules=[{
+        "thresholdPercent": 0.5,
+    }])
+```
+## Example Usage - Billing Budget Filter
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const account = gcp.organizations.getBillingAccount({
+    billingAccount: "000000-0000000-0000000-000000",
+});
+const budget = new gcp.billing.Budget("budget", {
+    billingAccount: account.then(account => account.id),
+    displayName: "Example Billing Budget",
+    budget_filter: {
+        projects: ["projects/my-project-name"],
+        creditTypesTreatment: "EXCLUDE_ALL_CREDITS",
+        services: ["services/24E6-581D-38E5"],
+    },
+    amount: {
+        specified_amount: {
+            currencyCode: "USD",
+            units: "100000",
+        },
+    },
+    threshold_rules: [
+        {
+            thresholdPercent: 0.5,
+        },
+        {
+            thresholdPercent: 0.9,
+            spendBasis: "FORECASTED_SPEND",
+        },
+    ],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+account = gcp.organizations.get_billing_account(billing_account="000000-0000000-0000000-000000")
+budget = gcp.billing.Budget("budget",
+    billing_account=account.id,
+    display_name="Example Billing Budget",
+    budget_filter={
+        "projects": ["projects/my-project-name"],
+        "creditTypesTreatment": "EXCLUDE_ALL_CREDITS",
+        "services": ["services/24E6-581D-38E5"],
+    },
+    amount={
+        "specified_amount": {
+            "currencyCode": "USD",
+            "units": "100000",
+        },
+    },
+    threshold_rules=[
+        {
+            "thresholdPercent": 0.5,
+        },
+        {
+            "thresholdPercent": 0.9,
+            "spendBasis": "FORECASTED_SPEND",
+        },
+    ])
+```
+
 
 
 ## Create a Budget Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -581,7 +688,7 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.
 ## Look up an Existing Budget Resource {#look-up}
 
 Get an existing Budget resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/billing/#BudgetState">BudgetState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/billing/#Budget">Budget</a></span></code></pre></div>
@@ -1022,9 +1129,6 @@ budget.  Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/billing?tab=doc#BudgetAllUpdatesRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/billing?tab=doc#BudgetAllUpdatesRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Inputs.BudgetAllUpdatesRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Outputs.BudgetAllUpdatesRule.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1160,9 +1264,6 @@ https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/billing?tab=doc#BudgetAmountArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/billing?tab=doc#BudgetAmountOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Inputs.BudgetAmountArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Outputs.BudgetAmount.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1249,9 +1350,6 @@ billing account. The currencyCode is provided on output.  Structure is documente
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/billing?tab=doc#BudgetAmountSpecifiedAmountArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/billing?tab=doc#BudgetAmountSpecifiedAmountOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Inputs.BudgetAmountSpecifiedAmountArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Outputs.BudgetAmountSpecifiedAmount.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1431,9 +1529,6 @@ is "USD", then 1 unit is one US dollar.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/billing?tab=doc#BudgetBudgetFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/billing?tab=doc#BudgetBudgetFilterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Inputs.BudgetBudgetFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Outputs.BudgetBudgetFilter.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1629,9 +1724,6 @@ https://cloud.google.com/billing/v1/how-tos/catalog-api.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/billing?tab=doc#BudgetThresholdRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/billing?tab=doc#BudgetThresholdRuleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Inputs.BudgetThresholdRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Outputs.BudgetThresholdRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

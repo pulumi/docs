@@ -18,12 +18,45 @@ Note that you must have the "Logs Configuration Writer" IAM role (`roles/logging
 granted to the credentials used with this provider.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const log-bucket = new gcp.storage.Bucket("log-bucket", {});
+const my-sink = new gcp.logging.OrganizationSink("my-sink", {
+    orgId: "123456789",
+    destination: pulumi.interpolate`storage.googleapis.com/${log-bucket.name}`,
+    filter: "resource.type = gce_instance AND severity >= WARN",
+});
+const log-writer = new gcp.projects.IAMMember("log-writer", {
+    role: "roles/storage.objectCreator",
+    member: my-sink.writerIdentity,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+log_bucket = gcp.storage.Bucket("log-bucket")
+my_sink = gcp.logging.OrganizationSink("my-sink",
+    org_id="123456789",
+    destination=log_bucket.name.apply(lambda name: f"storage.googleapis.com/{name}"),
+    filter="resource.type = gce_instance AND severity >= WARN")
+log_writer = gcp.projects.IAMMember("log-writer",
+    role="roles/storage.objectCreator",
+    member=my_sink.writer_identity)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Create a OrganizationSink Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -214,6 +247,9 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -282,6 +318,9 @@ associated with child projects are also exported; otherwise only logs relating t
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
@@ -352,6 +391,9 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -420,6 +462,9 @@ associated with child projects are also exported; otherwise only logs relating t
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
@@ -595,7 +640,7 @@ configured `destination`.
 ## Look up an Existing OrganizationSink Resource {#look-up}
 
 Get an existing OrganizationSink resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#OrganizationSinkState">OrganizationSinkState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#OrganizationSink">OrganizationSink</a></span></code></pre></div>
@@ -736,6 +781,9 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -814,6 +862,9 @@ configured `destination`.
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
@@ -894,6 +945,9 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -973,6 +1027,9 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -1047,9 +1104,6 @@ configured `destination`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#OrganizationSinkBigqueryOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#OrganizationSinkBigqueryOptionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Inputs.OrganizationSinkBigqueryOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Outputs.OrganizationSinkBigqueryOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

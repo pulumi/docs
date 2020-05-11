@@ -19,6 +19,9 @@ To get more information about UptimeCheckConfig, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/monitoring/uptime-checks/)
 
+> **Warning:** All arguments including `http_check.auth_info.password` will be stored in the raw
+state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
+
 ## Example Usage - Uptime Check Config Http
 
 
@@ -44,6 +47,28 @@ const http = new gcp.monitoring.UptimeCheckConfig("http", {
     },
     timeout: "60s",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+http = gcp.monitoring.UptimeCheckConfig("http",
+    content_matchers=[{
+        "content": "example",
+    }],
+    display_name="http-uptime-check",
+    http_check={
+        "path": "/some-path",
+        "port": "8010",
+    },
+    monitored_resource={
+        "labels": {
+            "host": "192.168.1.1",
+            "project_id": "my-project-name",
+        },
+        "type": "uptime_url",
+    },
+    timeout="60s")
 ```
 ## Example Usage - Uptime Check Config Https
 
@@ -73,11 +98,76 @@ const https = new gcp.monitoring.UptimeCheckConfig("https", {
     timeout: "60s",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+https = gcp.monitoring.UptimeCheckConfig("https",
+    content_matchers=[{
+        "content": "example",
+    }],
+    display_name="https-uptime-check",
+    http_check={
+        "path": "/some-path",
+        "port": "443",
+        "useSsl": True,
+        "validateSsl": True,
+    },
+    monitored_resource={
+        "labels": {
+            "host": "192.168.1.1",
+            "project_id": "my-project-name",
+        },
+        "type": "uptime_url",
+    },
+    timeout="60s")
+```
+## Example Usage - Uptime Check Tcp
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const check = new gcp.monitoring.Group("check", {
+    displayName: "uptime-check-group",
+    filter: "resource.metadata.name=has_substring(\"foo\")",
+});
+const tcpGroup = new gcp.monitoring.UptimeCheckConfig("tcpGroup", {
+    displayName: "tcp-uptime-check",
+    timeout: "60s",
+    tcp_check: {
+        port: 888,
+    },
+    resource_group: {
+        resourceType: "INSTANCE",
+        groupId: check.name,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+check = gcp.monitoring.Group("check",
+    display_name="uptime-check-group",
+    filter="resource.metadata.name=has_substring(\"foo\")")
+tcp_group = gcp.monitoring.UptimeCheckConfig("tcpGroup",
+    display_name="tcp-uptime-check",
+    timeout="60s",
+    tcp_check={
+        "port": 888,
+    },
+    resource_group={
+        "resourceType": "INSTANCE",
+        "groupId": check.name,
+    })
+```
 
 
 
 ## Create a UptimeCheckConfig Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -801,7 +891,7 @@ projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
 ## Look up an Existing UptimeCheckConfig Resource {#look-up}
 
 Get an existing UptimeCheckConfig resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#UptimeCheckConfigState">UptimeCheckConfigState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#UptimeCheckConfig">UptimeCheckConfig</a></span></code></pre></div>
@@ -1406,9 +1496,6 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#UptimeCheckConfigContentMatcherArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#UptimeCheckConfigContentMatcherOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.UptimeCheckConfigContentMatcherArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigContentMatcher.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1487,9 +1574,6 @@ If it is not provided, the provider project is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#UptimeCheckConfigHttpCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#UptimeCheckConfigHttpCheckOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.UptimeCheckConfigHttpCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigHttpCheck.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1786,9 +1870,6 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#UptimeCheckConfigHttpCheckAuthInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#UptimeCheckConfigHttpCheckAuthInfoOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.UptimeCheckConfigHttpCheckAuthInfoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigHttpCheckAuthInfo.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1802,7 +1883,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The password to authenticate.
+    <dd>{{% md %}}The password to authenticate.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1827,7 +1908,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The password to authenticate.
+    <dd>{{% md %}}The password to authenticate.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1852,7 +1933,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The password to authenticate.
+    <dd>{{% md %}}The password to authenticate.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1877,7 +1958,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The password to authenticate.
+    <dd>{{% md %}}The password to authenticate.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1903,9 +1984,6 @@ If it is not provided, the provider project is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#UptimeCheckConfigMonitoredResourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#UptimeCheckConfigMonitoredResourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.UptimeCheckConfigMonitoredResourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigMonitoredResource.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2022,9 +2100,6 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#UptimeCheckConfigResourceGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#UptimeCheckConfigResourceGroupOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.UptimeCheckConfigResourceGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigResourceGroup.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2139,9 +2214,6 @@ If it is not provided, the provider project is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#UptimeCheckConfigTcpCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#UptimeCheckConfigTcpCheckOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.UptimeCheckConfigTcpCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigTcpCheck.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

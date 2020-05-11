@@ -13,26 +13,10 @@ meta_desc: "Explore the GetServiceAccount function of the redshift module, inclu
 Use this data source to get the Account ID of the [AWS Redshift Service Account](http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging)
 in a given region for the purpose of allowing Redshift to store audit data in S3.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -66,14 +50,48 @@ const bucket = new aws.s3.Bucket("bucket", {
 `,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+main = aws.redshift.get_service_account()
+bucket = aws.s3.Bucket("bucket",
+    force_destroy=True,
+    policy=f"""{{
+	"Version": "2008-10-17",
+	"Statement": [
+		{{
+        			"Sid": "Put bucket policy needed for audit logging",
+        			"Effect": "Allow",
+        			"Principal": {{
+						"AWS": "{main.arn}"
+        			}},
+        			"Action": "s3:PutObject",
+        			"Resource": "arn:aws:s3:::tf-redshift-logging-test-bucket/*"
+        		}},
+        		{{
+        			"Sid": "Get bucket policy needed for audit logging ",
+        			"Effect": "Allow",
+        			"Principal": {{
+						"AWS": "{main.arn}"
+        			}},
+        			"Action": "s3:GetBucketAcl",
+        			"Resource": "arn:aws:s3:::tf-redshift-logging-test-bucket"
+        		}}
+	]
+}}
+
+""")
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetServiceAccount {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -320,16 +338,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

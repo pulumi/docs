@@ -26,12 +26,57 @@ To get more information about attaching disks, see:
 **Note:** When using `gcp.compute.AttachedDisk` you **must** use `lifecycle.ignore_changes = ["attached_disk"]` on the `gcp.compute.Instance` resource that has the disks attached. Otherwise the two resources will fight for control of the attached disk block.
 
 {{% examples %}}
+## Example Usage
+
+{{% example %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultInstance = new gcp.compute.Instance("defaultInstance", {
+    machineType: "n1-standard-1",
+    zone: "us-west1-a",
+    boot_disk: {
+        initialize_params: {
+            image: "debian-cloud/debian-9",
+        },
+    },
+    network_interface: [{
+        network: "default",
+    }],
+});
+const defaultAttachedDisk = new gcp.compute.AttachedDisk("defaultAttachedDisk", {
+    disk: google_compute_disk["default"].id,
+    instance: defaultInstance.id,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_instance = gcp.compute.Instance("defaultInstance",
+    machine_type="n1-standard-1",
+    zone="us-west1-a",
+    boot_disk={
+        "initialize_params": {
+            "image": "debian-cloud/debian-9",
+        },
+    },
+    network_interface=[{
+        "network": "default",
+    }])
+default_attached_disk = gcp.compute.AttachedDisk("defaultAttachedDisk",
+    disk=google_compute_disk["default"]["id"],
+    instance=default_instance.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Create a AttachedDisk Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -575,7 +620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing AttachedDisk Resource {#look-up}
 
 Get an existing AttachedDisk resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#AttachedDiskState">AttachedDiskState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#AttachedDisk">AttachedDisk</a></span></code></pre></div>

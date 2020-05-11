@@ -23,6 +23,36 @@ Three different resources help you manage your IAM policy for a Spanner instance
 
 > **Note:** `gcp.spanner.InstanceIAMBinding` resources **can be** used in conjunction with `gcp.spanner.InstanceIAMMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_spanner\_instance\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const instance = new gcp.spanner.InstanceIAMPolicy("instance", {
+    instance: "your-instance-name",
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/editor",
+    "members": ["user:jane@example.com"],
+}])
+instance = gcp.spanner.InstanceIAMPolicy("instance",
+    instance="your-instance-name",
+    policy_data=admin.policy_data)
+```
+
 ## google\_spanner\_instance\_iam\_binding
 
 ```typescript
@@ -34,6 +64,15 @@ const instance = new gcp.spanner.InstanceIAMBinding("instance", {
     members: ["user:jane@example.com"],
     role: "roles/compute.networkUser",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.spanner.InstanceIAMBinding("instance",
+    instance="your-instance-name",
+    members=["user:jane@example.com"],
+    role="roles/compute.networkUser")
 ```
 
 ## google\_spanner\_instance\_iam\_member
@@ -48,11 +87,20 @@ const instance = new gcp.spanner.InstanceIAMMember("instance", {
     role: "roles/compute.networkUser",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.spanner.InstanceIAMMember("instance",
+    instance="your-instance-name",
+    member="user:jane@example.com",
+    role="roles/compute.networkUser")
+```
 
 
 
 ## Create a InstanceIAMMember Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -556,7 +604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing InstanceIAMMember Resource {#look-up}
 
 Get an existing InstanceIAMMember resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/spanner/#InstanceIAMMemberState">InstanceIAMMemberState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/spanner/#InstanceIAMMember">InstanceIAMMember</a></span></code></pre></div>
@@ -940,9 +988,6 @@ is not provided, the provider project is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/spanner?tab=doc#InstanceIAMMemberConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/spanner?tab=doc#InstanceIAMMemberConditionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Spanner.Inputs.InstanceIAMMemberConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Spanner.Outputs.InstanceIAMMemberCondition.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

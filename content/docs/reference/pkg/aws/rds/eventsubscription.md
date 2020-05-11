@@ -12,33 +12,10 @@ meta_desc: "Explore the EventSubscription resource of the rds module, including 
 
 Provides a DB event subscription resource.
 
-
-## Attributes
-
-The following additional atttributes are provided:
-
-* `id` - The name of the RDS event notification subscription
-* `arn` - The Amazon Resource Name of the RDS event notification subscription
-* `customer_aws_id` - The AWS customer account associated with the RDS event notification subscription
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -73,13 +50,53 @@ const defaultEventSubscription = new aws.rds.EventSubscription("default", {
     sourceType: "db-instance",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+default_instance = aws.rds.Instance("defaultInstance",
+    allocated_storage=10,
+    db_subnet_group_name="my_database_subnet_group",
+    engine="mysql",
+    engine_version="5.6.17",
+    instance_class="db.t2.micro",
+    name="mydb",
+    parameter_group_name="default.mysql5.6",
+    password="bar",
+    username="foo")
+default_topic = aws.sns.Topic("defaultTopic")
+default_event_subscription = aws.rds.EventSubscription("defaultEventSubscription",
+    event_categories=[
+        "availability",
+        "deletion",
+        "failover",
+        "failure",
+        "low storage",
+        "maintenance",
+        "notification",
+        "read replica",
+        "recovery",
+        "restoration",
+    ],
+    sns_topic=default_topic.arn,
+    source_ids=[default_instance.id],
+    source_type="db-instance")
+```
+
+{{% /example %}}
 {{% /examples %}}
+## Attributes
+
+The following additional atttributes are provided:
+
+* `id` - The name of the RDS event notification subscription
+* `arn` - The Amazon Resource Name of the RDS event notification subscription
+* `customer_aws_id` - The AWS customer account associated with the RDS event notification subscription
+
 
 
 ## Create a EventSubscription Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -715,7 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing EventSubscription Resource {#look-up}
 
 Get an existing EventSubscription resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#EventSubscriptionState">EventSubscriptionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#EventSubscription">EventSubscription</a></span></code></pre></div>

@@ -32,11 +32,21 @@ const instance = new gcp.sql.SourceRepresentationInstance("instance", {
     region: "us-central1",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.sql.SourceRepresentationInstance("instance",
+    database_version="MYSQL_5_7",
+    host="10.20.30.40",
+    port=3306,
+    region="us-central1")
+```
 
 
 
 ## Create a SourceRepresentationInstance Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -222,7 +232,7 @@ The SourceRepresentationInstance resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.
+    <dd>{{% md %}}The MySQL version running on your source database server.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -286,7 +296,7 @@ If it is not provided, the provider region is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.
+    <dd>{{% md %}}The MySQL version running on your source database server.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -350,7 +360,7 @@ If it is not provided, the provider region is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.
+    <dd>{{% md %}}The MySQL version running on your source database server.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -414,7 +424,7 @@ If it is not provided, the provider region is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.
+    <dd>{{% md %}}The MySQL version running on your source database server.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -548,7 +558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing SourceRepresentationInstance Resource {#look-up}
 
 Get an existing SourceRepresentationInstance resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/sql/#SourceRepresentationInstanceState">SourceRepresentationInstanceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/sql/#SourceRepresentationInstance">SourceRepresentationInstance</a></span></code></pre></div>
@@ -675,7 +685,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.
+    <dd>{{% md %}}The MySQL version running on your source database server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -739,7 +749,7 @@ If it is not provided, the provider region is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.
+    <dd>{{% md %}}The MySQL version running on your source database server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -803,7 +813,7 @@ If it is not provided, the provider region is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.
+    <dd>{{% md %}}The MySQL version running on your source database server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -867,7 +877,7 @@ If it is not provided, the provider region is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.
+    <dd>{{% md %}}The MySQL version running on your source database server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

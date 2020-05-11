@@ -19,6 +19,30 @@ in conjunction with any Route resources. Doing so will cause
 a conflict of rule settings and will overwrite rules.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const route = new aws.ec2.Route("route", {
+    routeTableId: "rtb-4fbb3ac4",
+    destinationCidrBlock: "10.0.1.0/22",
+    vpcPeeringConnectionId: "pcx-45ff3dc1",
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+route = aws.ec2.Route("route",
+    route_table_id="rtb-4fbb3ac4",
+    destination_cidr_block="10.0.1.0/22",
+    vpc_peering_connection_id="pcx-45ff3dc1")
+```
+
+{{% /example %}}
 {{% /examples %}}
 ## Example IPv6 Usage
 
@@ -39,11 +63,24 @@ const route = new aws.ec2.Route("r", {
     routeTableId: "rtb-4fbb3ac4",
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+vpc = aws.ec2.Vpc("vpc",
+    assign_generated_ipv6_cidr_block=True,
+    cidr_block="10.1.0.0/16")
+egress = aws.ec2.EgressOnlyInternetGateway("egress", vpc_id=vpc.id)
+route = aws.ec2.Route("route",
+    destination_ipv6_cidr_block="::/0",
+    egress_only_gateway_id=egress.id,
+    route_table_id="rtb-4fbb3ac4")
+```
 
 
 
 ## Create a Route Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -815,7 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Route Resource {#look-up}
 
 Get an existing Route resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#RouteState">RouteState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Route">Route</a></span></code></pre></div>

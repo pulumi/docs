@@ -15,26 +15,10 @@ Use this data source to get information about a DB Cluster Snapshot for use when
 > **NOTE:** This data source does not apply to snapshots created on DB Instances. 
 See the [`aws.rds.Snapshot` data source](https://www.terraform.io/docs/providers/aws/d/db_snapshot.html) for DB Instance snapshots.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -56,14 +40,35 @@ const auroraClusterInstance = new aws.rds.ClusterInstance("aurora", {
     instanceClass: "db.t2.small",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+development_final_snapshot = aws.rds.get_cluster_snapshot(db_cluster_identifier="development_cluster",
+    most_recent=True)
+# Use the last snapshot of the dev database before it was destroyed to create
+# a new dev database.
+aurora_cluster = aws.rds.Cluster("auroraCluster",
+    cluster_identifier="development_cluster",
+    db_subnet_group_name="my_db_subnet_group",
+    lifecycle={
+        "ignoreChanges": ["snapshotIdentifier"],
+    },
+    snapshot_identifier=development_final_snapshot.id)
+aurora_cluster_instance = aws.rds.ClusterInstance("auroraClusterInstance",
+    cluster_identifier=aurora_cluster.id,
+    db_subnet_group_name="my_db_subnet_group",
+    instance_class="db.t2.small")
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetClusterSnapshot {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1170,16 +1175,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

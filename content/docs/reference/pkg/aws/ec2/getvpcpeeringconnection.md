@@ -13,26 +13,10 @@ meta_desc: "Explore the GetVpcPeeringConnection function of the ec2 module, incl
 The VPC Peering Connection data source provides details about
 a specific VPC peering connection.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -53,14 +37,29 @@ const route = new aws.ec2.Route("r", {
     vpcPeeringConnectionId: pc.id!,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+pc = aws.ec2.get_vpc_peering_connection(peer_cidr_block="10.0.1.0/22",
+    vpc_id=aws_vpc["foo"]["id"])
+# Create a route table
+rt = aws.ec2.RouteTable("rt", vpc_id=aws_vpc["foo"]["id"])
+# Create a route
+route = aws.ec2.Route("route",
+    destination_cidr_block=pc.peer_cidr_block,
+    route_table_id=rt.id,
+    vpc_peering_connection_id=pc.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetVpcPeeringConnection {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1076,9 +1075,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetVpcPeeringConnectionFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetVpcPeeringConnectionFilter">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetVpcPeeringConnectionFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetVpcPeeringConnectionFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1195,16 +1191,4 @@ A VPC Peering Connection will be selected if any one of the given values matches
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

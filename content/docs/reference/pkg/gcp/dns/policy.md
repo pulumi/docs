@@ -19,10 +19,71 @@ To get more information about Policy, see:
 * How-to Guides
     * [Using DNS server policies](https://cloud.google.com/dns/zones/#using-dns-server-policies)
 
+## Example Usage - Dns Policy Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const network-1 = new gcp.compute.Network("network-1", {autoCreateSubnetworks: false});
+const network-2 = new gcp.compute.Network("network-2", {autoCreateSubnetworks: false});
+const example-policy = new gcp.dns.Policy("example-policy", {
+    enableInboundForwarding: true,
+    enableLogging: true,
+    alternative_name_server_config: {
+        target_name_servers: [
+            {
+                ipv4Address: "172.16.1.10",
+            },
+            {
+                ipv4Address: "172.16.1.20",
+            },
+        ],
+    },
+    networks: [
+        {
+            networkUrl: network-1.selfLink,
+        },
+        {
+            networkUrl: network-2.selfLink,
+        },
+    ],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network_1 = gcp.compute.Network("network-1", auto_create_subnetworks=False)
+network_2 = gcp.compute.Network("network-2", auto_create_subnetworks=False)
+example_policy = gcp.dns.Policy("example-policy",
+    enable_inbound_forwarding=True,
+    enable_logging=True,
+    alternative_name_server_config={
+        "target_name_servers": [
+            {
+                "ipv4Address": "172.16.1.10",
+            },
+            {
+                "ipv4Address": "172.16.1.20",
+            },
+        ],
+    },
+    networks=[
+        {
+            "networkUrl": network_1.self_link,
+        },
+        {
+            "networkUrl": network_2.self_link,
+        },
+    ])
+```
+
 
 
 ## Create a Policy Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -586,7 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Policy Resource {#look-up}
 
 Get an existing Policy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dns/#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dns/#Policy">Policy</a></span></code></pre></div>
@@ -1031,9 +1092,6 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#PolicyAlternativeNameServerConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#PolicyAlternativeNameServerConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Inputs.PolicyAlternativeNameServerConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Outputs.PolicyAlternativeNameServerConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1121,9 +1179,6 @@ are not available when an alternative name server is specified.  Structure is do
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#PolicyAlternativeNameServerConfigTargetNameServerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#PolicyAlternativeNameServerConfigTargetNameServerOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Inputs.PolicyAlternativeNameServerConfigTargetNameServerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Outputs.PolicyAlternativeNameServerConfigTargetNameServer.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1202,9 +1257,6 @@ are not available when an alternative name server is specified.  Structure is do
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#PolicyNetworkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#PolicyNetworkOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Inputs.PolicyNetworkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Outputs.PolicyNetwork.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

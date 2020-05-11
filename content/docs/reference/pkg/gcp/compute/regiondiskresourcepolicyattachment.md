@@ -17,8 +17,95 @@ which will be applied to this disk for scheduling snapshot creation.
 
 
 
+## Example Usage - Region Disk Resource Policy Attachment Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const disk = new gcp.compute.Disk("disk", {
+    image: "debian-cloud/debian-9",
+    size: 50,
+    type: "pd-ssd",
+    zone: "us-central1-a",
+});
+const snapdisk = new gcp.compute.Snapshot("snapdisk", {
+    sourceDisk: disk.name,
+    zone: "us-central1-a",
+});
+const ssd = new gcp.compute.RegionDisk("ssd", {
+    replicaZones: [
+        "us-central1-a",
+        "us-central1-f",
+    ],
+    snapshot: snapdisk.selfLink,
+    size: 50,
+    type: "pd-ssd",
+    region: "us-central1",
+});
+const attachment = new gcp.compute.RegionDiskResourcePolicyAttachment("attachment", {
+    disk: ssd.name,
+    region: "us-central1",
+});
+const policy = new gcp.compute.ResourcePolicy("policy", {
+    region: "us-central1",
+    snapshot_schedule_policy: {
+        schedule: {
+            daily_schedule: {
+                daysInCycle: 1,
+                startTime: "04:00",
+            },
+        },
+    },
+});
+const myImage = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+disk = gcp.compute.Disk("disk",
+    image="debian-cloud/debian-9",
+    size=50,
+    type="pd-ssd",
+    zone="us-central1-a")
+snapdisk = gcp.compute.Snapshot("snapdisk",
+    source_disk=disk.name,
+    zone="us-central1-a")
+ssd = gcp.compute.RegionDisk("ssd",
+    replica_zones=[
+        "us-central1-a",
+        "us-central1-f",
+    ],
+    snapshot=snapdisk.self_link,
+    size=50,
+    type="pd-ssd",
+    region="us-central1")
+attachment = gcp.compute.RegionDiskResourcePolicyAttachment("attachment",
+    disk=ssd.name,
+    region="us-central1")
+policy = gcp.compute.ResourcePolicy("policy",
+    region="us-central1",
+    snapshot_schedule_policy={
+        "schedule": {
+            "daily_schedule": {
+                "daysInCycle": 1,
+                "startTime": "04:00",
+            },
+        },
+    })
+my_image = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+```
+
+
+
 ## Create a RegionDiskResourcePolicyAttachment Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -454,7 +541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing RegionDiskResourcePolicyAttachment Resource {#look-up}
 
 Get an existing RegionDiskResourcePolicyAttachment resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionDiskResourcePolicyAttachmentState">RegionDiskResourcePolicyAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionDiskResourcePolicyAttachment">RegionDiskResourcePolicyAttachment</a></span></code></pre></div>

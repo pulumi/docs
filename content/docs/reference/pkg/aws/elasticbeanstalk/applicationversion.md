@@ -22,26 +22,10 @@ Elastic Beanstalk Environments it is possible that an error may be returned
 when attempting to delete an Application Version while it is still in use by a different environment.
 To work around this you can either create each environment in a separate AWS account or create your `aws.elasticbeanstalk.ApplicationVersion` resources with a unique names in your Elastic Beanstalk Application. For example &lt;revision&gt;-&lt;environment&gt;.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -62,13 +46,30 @@ const defaultApplicationVersion = new aws.elasticbeanstalk.ApplicationVersion("d
     key: defaultBucketObject.id,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+default_bucket = aws.s3.Bucket("defaultBucket")
+default_bucket_object = aws.s3.BucketObject("defaultBucketObject",
+    bucket=default_bucket.id,
+    key="beanstalk/go-v1.zip",
+    source=pulumi.FileAsset("go-v1.zip"))
+default_application = aws.elasticbeanstalk.Application("defaultApplication", description="tf-test-desc")
+default_application_version = aws.elasticbeanstalk.ApplicationVersion("defaultApplicationVersion",
+    application="tf-test-name",
+    bucket=default_bucket.id,
+    description="application version",
+    key=default_bucket_object.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a ApplicationVersion Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -644,7 +645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ApplicationVersion Resource {#look-up}
 
 Get an existing ApplicationVersion resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticbeanstalk/#ApplicationVersionState">ApplicationVersionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticbeanstalk/#ApplicationVersion">ApplicationVersion</a></span></code></pre></div>

@@ -24,10 +24,91 @@ number of nodes in a node group and changes to node group size either
 through provider config or through external changes will cause
 the provider to delete and recreate the node group.
 
+## Example Usage - Node Group Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const central1a = gcp.compute.getNodeTypes({
+    zone: "us-central1-a",
+});
+const soletenant-tmpl = new gcp.compute.NodeTemplate("soletenant-tmpl", {
+    region: "us-central1",
+    nodeType: central1a.then(central1a => central1a.names[0]),
+});
+const nodes = new gcp.compute.NodeGroup("nodes", {
+    zone: "us-central1-a",
+    description: "example gcp.compute.NodeGroup for the Google Provider",
+    size: 1,
+    nodeTemplate: soletenant-tmpl.selfLink,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+central1a = gcp.compute.get_node_types(zone="us-central1-a")
+soletenant_tmpl = gcp.compute.NodeTemplate("soletenant-tmpl",
+    region="us-central1",
+    node_type=central1a.names[0])
+nodes = gcp.compute.NodeGroup("nodes",
+    zone="us-central1-a",
+    description="example gcp.compute.NodeGroup for the Google Provider",
+    size=1,
+    node_template=soletenant_tmpl.self_link)
+```
+## Example Usage - Node Group Autoscaling Policy
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const central1a = gcp.compute.getNodeTypes({
+    zone: "us-central1-a",
+});
+const soletenant-tmpl = new gcp.compute.NodeTemplate("soletenant-tmpl", {
+    region: "us-central1",
+    nodeType: central1a.then(central1a => central1a.names[0]),
+});
+const nodes = new gcp.compute.NodeGroup("nodes", {
+    zone: "us-central1-a",
+    description: "example gcp.compute.NodeGroup for the Google Provider",
+    size: 1,
+    nodeTemplate: soletenant-tmpl.selfLink,
+    autoscaling_policy: {
+        mode: "ON",
+        minNodes: 1,
+        maxNodes: 10,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+central1a = gcp.compute.get_node_types(zone="us-central1-a")
+soletenant_tmpl = gcp.compute.NodeTemplate("soletenant-tmpl",
+    region="us-central1",
+    node_type=central1a.names[0])
+nodes = gcp.compute.NodeGroup("nodes",
+    zone="us-central1-a",
+    description="example gcp.compute.NodeGroup for the Google Provider",
+    size=1,
+    node_template=soletenant_tmpl.self_link,
+    autoscaling_policy={
+        "mode": "ON",
+        "minNodes": 1,
+        "maxNodes": 10,
+    })
+```
+
 
 
 ## Create a NodeGroup Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -647,7 +728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing NodeGroup Resource {#look-up}
 
 Get an existing NodeGroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#NodeGroupState">NodeGroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#NodeGroup">NodeGroup</a></span></code></pre></div>
@@ -1147,9 +1228,6 @@ If it is not provided, the provider project is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeGroupAutoscalingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeGroupAutoscalingPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.NodeGroupAutoscalingPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.NodeGroupAutoscalingPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

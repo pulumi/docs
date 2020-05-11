@@ -24,10 +24,55 @@ To get more information about TargetInstance, see:
 * How-to Guides
     * [Using Protocol Forwarding](https://cloud.google.com/compute/docs/protocol-forwarding)
 
+## Example Usage - Target Instance Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const vmimage = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const target-vm = new gcp.compute.Instance("target-vm", {
+    machineType: "n1-standard-1",
+    zone: "us-central1-a",
+    boot_disk: {
+        initialize_params: {
+            image: vmimage.then(vmimage => vmimage.selfLink),
+        },
+    },
+    network_interface: [{
+        network: "default",
+    }],
+});
+const default = new gcp.compute.TargetInstance("default", {instance: target-vm.selfLink});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+vmimage = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+target_vm = gcp.compute.Instance("target-vm",
+    machine_type="n1-standard-1",
+    zone="us-central1-a",
+    boot_disk={
+        "initialize_params": {
+            "image": vmimage.self_link,
+        },
+    },
+    network_interface=[{
+        "network": "default",
+    }])
+default = gcp.compute.TargetInstance("default", instance=target_vm.self_link)
+```
+
 
 
 ## Create a TargetInstance Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -651,7 +696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing TargetInstance Resource {#look-up}
 
 Get an existing TargetInstance resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#TargetInstanceState">TargetInstanceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#TargetInstance">TargetInstance</a></span></code></pre></div>

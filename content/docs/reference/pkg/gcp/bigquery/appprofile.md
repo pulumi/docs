@@ -14,8 +14,89 @@ App profile is a configuration object describing how Cloud Bigtable should treat
 
 
 
+## Example Usage - Bigtable App Profile Multicluster
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.bigtable.Instance("instance", {cluster: [{
+    clusterId: "bt-instance",
+    zone: "us-central1-b",
+    numNodes: 3,
+    storageType: "HDD",
+}]});
+const ap = new gcp.bigquery.AppProfile("ap", {
+    instance: instance.name,
+    appProfileId: "bt-profile",
+    multiClusterRoutingUseAny: true,
+    ignoreWarnings: true,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.bigtable.Instance("instance", cluster=[{
+    "clusterId": "bt-instance",
+    "zone": "us-central1-b",
+    "numNodes": 3,
+    "storageType": "HDD",
+}])
+ap = gcp.bigquery.AppProfile("ap",
+    instance=instance.name,
+    app_profile_id="bt-profile",
+    multi_cluster_routing_use_any=True,
+    ignore_warnings=True)
+```
+## Example Usage - Bigtable App Profile Singlecluster
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.bigtable.Instance("instance", {cluster: [{
+    clusterId: "bt-instance",
+    zone: "us-central1-b",
+    numNodes: 3,
+    storageType: "HDD",
+}]});
+const ap = new gcp.bigquery.AppProfile("ap", {
+    instance: instance.name,
+    appProfileId: "bt-profile",
+    single_cluster_routing: {
+        clusterId: "bt-instance",
+        allowTransactionalWrites: true,
+    },
+    ignoreWarnings: true,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.bigtable.Instance("instance", cluster=[{
+    "clusterId": "bt-instance",
+    "zone": "us-central1-b",
+    "numNodes": 3,
+    "storageType": "HDD",
+}])
+ap = gcp.bigquery.AppProfile("ap",
+    instance=instance.name,
+    app_profile_id="bt-profile",
+    single_cluster_routing={
+        "clusterId": "bt-instance",
+        "allowTransactionalWrites": True,
+    },
+    ignore_warnings=True)
+```
+
+
+
 ## Create a AppProfile Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -603,7 +684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing AppProfile Resource {#look-up}
 
 Get an existing AppProfile resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#AppProfileState">AppProfileState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#AppProfile">AppProfile</a></span></code></pre></div>
@@ -1071,9 +1152,6 @@ If it is not provided, the provider project is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#AppProfileSingleClusterRoutingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#AppProfileSingleClusterRoutingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.AppProfileSingleClusterRoutingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.AppProfileSingleClusterRouting.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

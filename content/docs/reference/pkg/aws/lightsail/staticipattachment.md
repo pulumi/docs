@@ -14,26 +14,10 @@ Provides a static IP address attachment - relationship between a Lightsail stati
 
 > **Note:** Lightsail is currently only supported in a limited number of AWS Regions, please see ["Regions and Availability Zones in Amazon Lightsail"](https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail) for more details
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -50,13 +34,28 @@ const testStaticIpAttachment = new aws.lightsail.StaticIpAttachment("test", {
     staticIpName: testStaticIp.id,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+test_static_ip = aws.lightsail.StaticIp("testStaticIp")
+test_instance = aws.lightsail.Instance("testInstance",
+    availability_zone="us-east-1b",
+    blueprint_id="string",
+    bundle_id="string",
+    key_pair_name="some_key_name")
+test_static_ip_attachment = aws.lightsail.StaticIpAttachment("testStaticIpAttachment",
+    instance_name=test_instance.id,
+    static_ip_name=test_static_ip.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a StaticIpAttachment Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -448,7 +447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing StaticIpAttachment Resource {#look-up}
 
 Get an existing StaticIpAttachment resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lightsail/#StaticIpAttachmentState">StaticIpAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lightsail/#StaticIpAttachment">StaticIpAttachment</a></span></code></pre></div>

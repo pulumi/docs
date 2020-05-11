@@ -12,7 +12,29 @@ meta_desc: "Explore the GetResourceShare function of the ram module, including e
 
 `aws.ram.ResourceShare` Retrieve information about a RAM Resource Share.
 
+{{% examples %}}
+## Example Usage
+{{% example %}}
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = pulumi.output(aws.ram.getResourceShare({
+    name: "example",
+    resourceOwner: "SELF",
+}, { async: true }));
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ram.get_resource_share(name="example",
+    resource_owner="SELF")
+```
+
+{{% /example %}}
+{{% /examples %}}
 ## Search by filters
 
 ```typescript
@@ -28,42 +50,23 @@ const tagFilter = pulumi.output(aws.ram.getResourceShare({
     resourceOwner: "SELF",
 }, { async: true }));
 ```
+```python
+import pulumi
+import pulumi_aws as aws
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = pulumi.output(aws.ram.getResourceShare({
-    name: "example",
-    resourceOwner: "SELF",
-}, { async: true }));
+tag_filter = aws.ram.get_resource_share(filters=[{
+        "name": "NameOfTag",
+        "values": ["exampleNameTagValue"],
+    }],
+    name="MyResourceName",
+    resource_owner="SELF")
 ```
-{{% /example %}}
 
-{{% /examples %}}
 
 
 ## Using GetResourceShare {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -563,9 +566,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ram?tab=doc#GetResourceShareFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ram?tab=doc#GetResourceShareFilter">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ram.Inputs.GetResourceShareFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ram.Outputs.GetResourceShareFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -674,16 +674,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

@@ -14,26 +14,12 @@ Provides a resource to manage AWS Certificate Manager Private Certificate Author
 
 > **NOTE:** Creating this resource will leave the certificate authority in a `PENDING_CERTIFICATE` status, which means it cannot yet issue certificates. To complete this setup, you must fully sign the certificate authority CSR available in the `certificate_signing_request` attribute and import the signed certificate using the AWS SDK, CLI or Console. This provider can support another resource to manage that workflow automatically in the future.
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### Basic
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -49,22 +35,25 @@ const example = new aws.acmpca.CertificateAuthority("example", {
     permanentDeletionTimeInDays: 7,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example = aws.acmpca.CertificateAuthority("example",
+    certificate_authority_configuration={
+        "keyAlgorithm": "RSA_4096",
+        "signingAlgorithm": "SHA512WITHRSA",
+        "subject": {
+            "commonName": "example.com",
+        },
+    },
+    permanent_deletion_time_in_days=7)
+```
+
+{{% /example %}}
+{{% example %}}
 ### Enable Certificate Revocation List
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -110,13 +99,55 @@ const exampleCertificateAuthority = new aws.acmpca.CertificateAuthority("example
     },
 }, { dependsOn: [exampleBucketPolicy] });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example_bucket = aws.s3.Bucket("exampleBucket")
+acmpca_bucket_access = pulumi.Output.all(example_bucket.arn, example_bucket.arn).apply(lambda exampleBucketArn, exampleBucketArn1: aws.iam.get_policy_document(statements=[{
+    "actions": [
+        "s3:GetBucketAcl",
+        "s3:GetBucketLocation",
+        "s3:PutObject",
+        "s3:PutObjectAcl",
+    ],
+    "principals": [{
+        "identifiers": ["acm-pca.amazonaws.com"],
+        "type": "Service",
+    }],
+    "resources": [
+        example_bucket_arn,
+        f"{example_bucket_arn1}/*",
+    ],
+}]))
+example_bucket_policy = aws.s3.BucketPolicy("exampleBucketPolicy",
+    bucket=example_bucket.id,
+    policy=acmpca_bucket_access.json)
+example_certificate_authority = aws.acmpca.CertificateAuthority("exampleCertificateAuthority",
+    certificate_authority_configuration={
+        "keyAlgorithm": "RSA_4096",
+        "signingAlgorithm": "SHA512WITHRSA",
+        "subject": {
+            "commonName": "example.com",
+        },
+    },
+    revocation_configuration={
+        "crlConfiguration": {
+            "customCname": "crl.example.com",
+            "enabled": True,
+            "expirationInDays": 7,
+            "s3BucketName": example_bucket.id,
+        },
+    })
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a CertificateAuthority Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -904,7 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing CertificateAuthority Resource {#look-up}
 
 Get an existing CertificateAuthority resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/acmpca/#CertificateAuthorityState">CertificateAuthorityState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/acmpca/#CertificateAuthority">CertificateAuthority</a></span></code></pre></div>
@@ -1573,9 +1604,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acmpca?tab=doc#CertificateAuthorityCertificateAuthorityConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acmpca?tab=doc#CertificateAuthorityCertificateAuthorityConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acmpca.Inputs.CertificateAuthorityCertificateAuthorityConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acmpca.Outputs.CertificateAuthorityCertificateAuthorityConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1726,9 +1754,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acmpca?tab=doc#CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acmpca?tab=doc#CertificateAuthorityCertificateAuthorityConfigurationSubjectOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acmpca.Inputs.CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acmpca.Outputs.CertificateAuthorityCertificateAuthorityConfigurationSubject.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2241,9 +2266,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acmpca?tab=doc#CertificateAuthorityRevocationConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acmpca?tab=doc#CertificateAuthorityRevocationConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acmpca.Inputs.CertificateAuthorityRevocationConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acmpca.Outputs.CertificateAuthorityRevocationConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2322,9 +2344,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acmpca?tab=doc#CertificateAuthorityRevocationConfigurationCrlConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acmpca?tab=doc#CertificateAuthorityRevocationConfigurationCrlConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acmpca.Inputs.CertificateAuthorityRevocationConfigurationCrlConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acmpca.Outputs.CertificateAuthorityRevocationConfigurationCrlConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

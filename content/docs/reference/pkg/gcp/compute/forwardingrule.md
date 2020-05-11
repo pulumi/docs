@@ -58,11 +58,399 @@ const defaultForwardingRule = new gcp.compute.ForwardingRule("default", {
     subnetwork: defaultSubnetwork.name,
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+hc = gcp.compute.HealthCheck("hc",
+    check_interval_sec=1,
+    tcp_health_check={
+        "port": "80",
+    },
+    timeout_sec=1)
+backend = gcp.compute.RegionBackendService("backend",
+    health_checks=hc.self_link,
+    region="us-central1")
+default_network = gcp.compute.Network("defaultNetwork", auto_create_subnetworks=False)
+default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
+    ip_cidr_range="10.0.0.0/16",
+    network=default_network.self_link,
+    region="us-central1")
+# Forwarding rule for Internal Load Balancing
+default_forwarding_rule = gcp.compute.ForwardingRule("defaultForwardingRule",
+    all_ports=True,
+    allow_global_access=True,
+    backend_service=backend.self_link,
+    load_balancing_scheme="INTERNAL",
+    network=default_network.name,
+    region="us-central1",
+    subnetwork=default_subnetwork.name)
+```
+## Example Usage - Forwarding Rule Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {});
+const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingRule", {
+    target: defaultTargetPool.selfLink,
+    portRange: "80",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_target_pool = gcp.compute.TargetPool("defaultTargetPool")
+default_forwarding_rule = gcp.compute.ForwardingRule("defaultForwardingRule",
+    target=default_target_pool.self_link,
+    port_range="80")
+```
+## Example Usage - Forwarding Rule Internallb
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const hc = new gcp.compute.HealthCheck("hc", {
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+    tcp_health_check: {
+        port: "80",
+    },
+});
+const backend = new gcp.compute.RegionBackendService("backend", {
+    region: "us-central1",
+    healthChecks: [hc.selfLink],
+});
+const defaultNetwork = new gcp.compute.Network("defaultNetwork", {autoCreateSubnetworks: false});
+const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
+    ipCidrRange: "10.0.0.0/16",
+    region: "us-central1",
+    network: defaultNetwork.selfLink,
+});
+// Forwarding rule for Internal Load Balancing
+const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingRule", {
+    region: "us-central1",
+    loadBalancingScheme: "INTERNAL",
+    backendService: backend.selfLink,
+    allPorts: true,
+    network: defaultNetwork.name,
+    subnetwork: defaultSubnetwork.name,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+hc = gcp.compute.HealthCheck("hc",
+    check_interval_sec=1,
+    timeout_sec=1,
+    tcp_health_check={
+        "port": "80",
+    })
+backend = gcp.compute.RegionBackendService("backend",
+    region="us-central1",
+    health_checks=[hc.self_link])
+default_network = gcp.compute.Network("defaultNetwork", auto_create_subnetworks=False)
+default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
+    ip_cidr_range="10.0.0.0/16",
+    region="us-central1",
+    network=default_network.self_link)
+# Forwarding rule for Internal Load Balancing
+default_forwarding_rule = gcp.compute.ForwardingRule("defaultForwardingRule",
+    region="us-central1",
+    load_balancing_scheme="INTERNAL",
+    backend_service=backend.self_link,
+    all_ports=True,
+    network=default_network.name,
+    subnetwork=default_subnetwork.name)
+```
+## Example Usage - Forwarding Rule Http Lb
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const debianImage = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const defaultNetwork = new gcp.compute.Network("defaultNetwork", {
+    autoCreateSubnetworks: false,
+    routingMode: "REGIONAL",
+});
+const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
+    ipCidrRange: "10.1.2.0/24",
+    region: "us-central1",
+    network: defaultNetwork.selfLink,
+});
+const instanceTemplate = new gcp.compute.InstanceTemplate("instanceTemplate", {
+    machineType: "n1-standard-1",
+    network_interface: [{
+        network: defaultNetwork.selfLink,
+        subnetwork: defaultSubnetwork.selfLink,
+    }],
+    disk: [{
+        sourceImage: debianImage.then(debianImage => debianImage.selfLink),
+        autoDelete: true,
+        boot: true,
+    }],
+    tags: [
+        "allow-ssh",
+        "load-balanced-backend",
+    ],
+});
+const rigm = new gcp.compute.RegionInstanceGroupManager("rigm", {
+    region: "us-central1",
+    version: [{
+        instanceTemplate: instanceTemplate.selfLink,
+        name: "primary",
+    }],
+    baseInstanceName: "internal-glb",
+    targetSize: 1,
+});
+const fw1 = new gcp.compute.Firewall("fw1", {
+    network: defaultNetwork.selfLink,
+    sourceRanges: ["10.1.2.0/24"],
+    allow: [
+        {
+            protocol: "tcp",
+        },
+        {
+            protocol: "udp",
+        },
+        {
+            protocol: "icmp",
+        },
+    ],
+    direction: "INGRESS",
+});
+const fw2 = new gcp.compute.Firewall("fw2", {
+    network: defaultNetwork.selfLink,
+    sourceRanges: ["0.0.0.0/0"],
+    allow: [{
+        protocol: "tcp",
+        ports: ["22"],
+    }],
+    targetTags: ["allow-ssh"],
+    direction: "INGRESS",
+});
+const fw3 = new gcp.compute.Firewall("fw3", {
+    network: defaultNetwork.selfLink,
+    sourceRanges: [
+        "130.211.0.0/22",
+        "35.191.0.0/16",
+    ],
+    allow: [{
+        protocol: "tcp",
+    }],
+    targetTags: ["load-balanced-backend"],
+    direction: "INGRESS",
+});
+const fw4 = new gcp.compute.Firewall("fw4", {
+    network: defaultNetwork.selfLink,
+    sourceRanges: ["10.129.0.0/26"],
+    targetTags: ["load-balanced-backend"],
+    allow: [
+        {
+            protocol: "tcp",
+            ports: ["80"],
+        },
+        {
+            protocol: "tcp",
+            ports: ["443"],
+        },
+        {
+            protocol: "tcp",
+            ports: ["8000"],
+        },
+    ],
+    direction: "INGRESS",
+});
+const defaultRegionHealthCheck = new gcp.compute.RegionHealthCheck("defaultRegionHealthCheck", {
+    region: "us-central1",
+    http_health_check: {
+        portSpecification: "USE_SERVING_PORT",
+    },
+});
+const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaultRegionBackendService", {
+    loadBalancingScheme: "INTERNAL_MANAGED",
+    backend: [{
+        group: rigm.instanceGroup,
+        balancingMode: "UTILIZATION",
+        capacityScaler: 1,
+    }],
+    region: "us-central1",
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [defaultRegionHealthCheck.selfLink],
+});
+const defaultRegionUrlMap = new gcp.compute.RegionUrlMap("defaultRegionUrlMap", {
+    region: "us-central1",
+    defaultService: defaultRegionBackendService.selfLink,
+});
+const defaultRegionTargetHttpProxy = new gcp.compute.RegionTargetHttpProxy("defaultRegionTargetHttpProxy", {
+    region: "us-central1",
+    urlMap: defaultRegionUrlMap.selfLink,
+});
+const proxy = new gcp.compute.Subnetwork("proxy", {
+    ipCidrRange: "10.129.0.0/26",
+    region: "us-central1",
+    network: defaultNetwork.selfLink,
+    purpose: "INTERNAL_HTTPS_LOAD_BALANCER",
+    role: "ACTIVE",
+});
+// Forwarding rule for Internal Load Balancing
+const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingRule", {
+    region: "us-central1",
+    ipProtocol: "TCP",
+    loadBalancingScheme: "INTERNAL_MANAGED",
+    portRange: "80",
+    target: defaultRegionTargetHttpProxy.selfLink,
+    network: defaultNetwork.selfLink,
+    subnetwork: defaultSubnetwork.selfLink,
+    networkTier: "PREMIUM",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+debian_image = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+default_network = gcp.compute.Network("defaultNetwork",
+    auto_create_subnetworks=False,
+    routing_mode="REGIONAL")
+default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
+    ip_cidr_range="10.1.2.0/24",
+    region="us-central1",
+    network=default_network.self_link)
+instance_template = gcp.compute.InstanceTemplate("instanceTemplate",
+    machine_type="n1-standard-1",
+    network_interface=[{
+        "network": default_network.self_link,
+        "subnetwork": default_subnetwork.self_link,
+    }],
+    disk=[{
+        "sourceImage": debian_image.self_link,
+        "autoDelete": True,
+        "boot": True,
+    }],
+    tags=[
+        "allow-ssh",
+        "load-balanced-backend",
+    ])
+rigm = gcp.compute.RegionInstanceGroupManager("rigm",
+    region="us-central1",
+    version=[{
+        "instanceTemplate": instance_template.self_link,
+        "name": "primary",
+    }],
+    base_instance_name="internal-glb",
+    target_size=1)
+fw1 = gcp.compute.Firewall("fw1",
+    network=default_network.self_link,
+    source_ranges=["10.1.2.0/24"],
+    allow=[
+        {
+            "protocol": "tcp",
+        },
+        {
+            "protocol": "udp",
+        },
+        {
+            "protocol": "icmp",
+        },
+    ],
+    direction="INGRESS")
+fw2 = gcp.compute.Firewall("fw2",
+    network=default_network.self_link,
+    source_ranges=["0.0.0.0/0"],
+    allow=[{
+        "protocol": "tcp",
+        "ports": ["22"],
+    }],
+    target_tags=["allow-ssh"],
+    direction="INGRESS")
+fw3 = gcp.compute.Firewall("fw3",
+    network=default_network.self_link,
+    source_ranges=[
+        "130.211.0.0/22",
+        "35.191.0.0/16",
+    ],
+    allow=[{
+        "protocol": "tcp",
+    }],
+    target_tags=["load-balanced-backend"],
+    direction="INGRESS")
+fw4 = gcp.compute.Firewall("fw4",
+    network=default_network.self_link,
+    source_ranges=["10.129.0.0/26"],
+    target_tags=["load-balanced-backend"],
+    allow=[
+        {
+            "protocol": "tcp",
+            "ports": ["80"],
+        },
+        {
+            "protocol": "tcp",
+            "ports": ["443"],
+        },
+        {
+            "protocol": "tcp",
+            "ports": ["8000"],
+        },
+    ],
+    direction="INGRESS")
+default_region_health_check = gcp.compute.RegionHealthCheck("defaultRegionHealthCheck",
+    region="us-central1",
+    http_health_check={
+        "portSpecification": "USE_SERVING_PORT",
+    })
+default_region_backend_service = gcp.compute.RegionBackendService("defaultRegionBackendService",
+    load_balancing_scheme="INTERNAL_MANAGED",
+    backend=[{
+        "group": rigm.instance_group,
+        "balancingMode": "UTILIZATION",
+        "capacityScaler": 1,
+    }],
+    region="us-central1",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default_region_health_check.self_link])
+default_region_url_map = gcp.compute.RegionUrlMap("defaultRegionUrlMap",
+    region="us-central1",
+    default_service=default_region_backend_service.self_link)
+default_region_target_http_proxy = gcp.compute.RegionTargetHttpProxy("defaultRegionTargetHttpProxy",
+    region="us-central1",
+    url_map=default_region_url_map.self_link)
+proxy = gcp.compute.Subnetwork("proxy",
+    ip_cidr_range="10.129.0.0/26",
+    region="us-central1",
+    network=default_network.self_link,
+    purpose="INTERNAL_HTTPS_LOAD_BALANCER",
+    role="ACTIVE")
+# Forwarding rule for Internal Load Balancing
+default_forwarding_rule = gcp.compute.ForwardingRule("defaultForwardingRule",
+    region="us-central1",
+    ip_protocol="TCP",
+    load_balancing_scheme="INTERNAL_MANAGED",
+    port_range="80",
+    target=default_region_target_http_proxy.self_link,
+    network=default_network.self_link,
+    subnetwork=default_subnetwork.self_link,
+    network_tier="PREMIUM")
+```
 
 
 
 ## Create a ForwardingRule Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -319,8 +707,7 @@ or unnecessary diffs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP protocol to which this rule applies. Valid options are TCP,
-UDP, ESP, AH, SCTP or ICMP.
+    <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
 {{% /md %}}</dd>
@@ -396,8 +783,7 @@ This field is only used for INTERNAL load balancing.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The networking tier used for configuring this address. This field can
-take the following values: PREMIUM or STANDARD. If this field is not
+    <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 {{% /md %}}</dd>
 
@@ -587,8 +973,7 @@ or unnecessary diffs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP protocol to which this rule applies. Valid options are TCP,
-UDP, ESP, AH, SCTP or ICMP.
+    <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
 {{% /md %}}</dd>
@@ -664,8 +1049,7 @@ This field is only used for INTERNAL load balancing.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The networking tier used for configuring this address. This field can
-take the following values: PREMIUM or STANDARD. If this field is not
+    <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 {{% /md %}}</dd>
 
@@ -855,8 +1239,7 @@ or unnecessary diffs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP protocol to which this rule applies. Valid options are TCP,
-UDP, ESP, AH, SCTP or ICMP.
+    <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
 {{% /md %}}</dd>
@@ -932,8 +1315,7 @@ This field is only used for INTERNAL load balancing.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The networking tier used for configuring this address. This field can
-take the following values: PREMIUM or STANDARD. If this field is not
+    <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 {{% /md %}}</dd>
 
@@ -1123,8 +1505,7 @@ or unnecessary diffs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The IP protocol to which this rule applies. Valid options are TCP,
-UDP, ESP, AH, SCTP or ICMP.
+    <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
 {{% /md %}}</dd>
@@ -1200,8 +1581,7 @@ This field is only used for INTERNAL load balancing.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The networking tier used for configuring this address. This field can
-take the following values: PREMIUM or STANDARD. If this field is not
+    <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 {{% /md %}}</dd>
 
@@ -1534,7 +1914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ForwardingRule Resource {#look-up}
 
 Get an existing ForwardingRule resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ForwardingRuleState">ForwardingRuleState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ForwardingRule">ForwardingRule</a></span></code></pre></div>
@@ -1741,8 +2121,7 @@ or unnecessary diffs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP protocol to which this rule applies. Valid options are TCP,
-UDP, ESP, AH, SCTP or ICMP.
+    <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
 {{% /md %}}</dd>
@@ -1827,8 +2206,7 @@ This field is only used for INTERNAL load balancing.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The networking tier used for configuring this address. This field can
-take the following values: PREMIUM or STANDARD. If this field is not
+    <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 {{% /md %}}</dd>
 
@@ -2045,8 +2423,7 @@ or unnecessary diffs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP protocol to which this rule applies. Valid options are TCP,
-UDP, ESP, AH, SCTP or ICMP.
+    <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
 {{% /md %}}</dd>
@@ -2131,8 +2508,7 @@ This field is only used for INTERNAL load balancing.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The networking tier used for configuring this address. This field can
-take the following values: PREMIUM or STANDARD. If this field is not
+    <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 {{% /md %}}</dd>
 
@@ -2349,8 +2725,7 @@ or unnecessary diffs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP protocol to which this rule applies. Valid options are TCP,
-UDP, ESP, AH, SCTP or ICMP.
+    <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
 {{% /md %}}</dd>
@@ -2435,8 +2810,7 @@ This field is only used for INTERNAL load balancing.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The networking tier used for configuring this address. This field can
-take the following values: PREMIUM or STANDARD. If this field is not
+    <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 {{% /md %}}</dd>
 
@@ -2653,8 +3027,7 @@ or unnecessary diffs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The IP protocol to which this rule applies. Valid options are TCP,
-UDP, ESP, AH, SCTP or ICMP.
+    <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
 {{% /md %}}</dd>
@@ -2739,8 +3112,7 @@ This field is only used for INTERNAL load balancing.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The networking tier used for configuring this address. This field can
-take the following values: PREMIUM or STANDARD. If this field is not
+    <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 {{% /md %}}</dd>
 

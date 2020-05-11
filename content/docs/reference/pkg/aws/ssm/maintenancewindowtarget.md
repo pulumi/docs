@@ -33,6 +33,23 @@ const target1 = new aws.ssm.MaintenanceWindowTarget("target1", {
     windowId: window.id,
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+window = aws.ssm.MaintenanceWindow("window",
+    cutoff=1,
+    duration=3,
+    schedule="cron(0 16 ? * TUE *)")
+target1 = aws.ssm.MaintenanceWindowTarget("target1",
+    description="This is a maintenance window target",
+    resource_type="INSTANCE",
+    targets=[{
+        "key": "tag:Name",
+        "values": ["acceptance_test"],
+    }],
+    window_id=window.id)
+```
 
 ## Resource Group Target Example Usage
 
@@ -58,11 +75,31 @@ const target1 = new aws.ssm.MaintenanceWindowTarget("target1", {
     windowId: window.id,
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+window = aws.ssm.MaintenanceWindow("window",
+    cutoff=1,
+    duration=3,
+    schedule="cron(0 16 ? * TUE *)")
+target1 = aws.ssm.MaintenanceWindowTarget("target1",
+    description="This is a maintenance window target",
+    resource_type="RESOURCE_GROUP",
+    targets=[{
+        "key": "resource-groups:ResourceTypeFilters",
+        "values": [
+            "AWS::EC2::INSTANCE",
+            "AWS::EC2::VPC",
+        ],
+    }],
+    window_id=window.id)
+```
 
 
 
 ## Create a MaintenanceWindowTarget Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -566,7 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing MaintenanceWindowTarget Resource {#look-up}
 
 Get an existing MaintenanceWindowTarget resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#MaintenanceWindowTargetState">MaintenanceWindowTargetState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#MaintenanceWindowTarget">MaintenanceWindowTarget</a></span></code></pre></div>
@@ -950,9 +987,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTargetTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTargetTargetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTargetTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTargetTarget.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

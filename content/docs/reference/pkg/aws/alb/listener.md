@@ -14,26 +14,12 @@ Provides a Load Balancer Listener resource.
 
 > **Note:** `aws.alb.Listener` is known as `aws.lb.Listener`. The functionality is identical.
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### Forward Action
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -52,22 +38,28 @@ const frontEndListener = new aws.lb.Listener("front_end", {
     sslPolicy: "ELBSecurityPolicy-2016-08",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+front_end_load_balancer = aws.lb.LoadBalancer("frontEndLoadBalancer")
+front_end_target_group = aws.lb.TargetGroup("frontEndTargetGroup")
+front_end_listener = aws.lb.Listener("frontEndListener",
+    certificate_arn="arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4",
+    default_actions=[{
+        "targetGroupArn": front_end_target_group.arn,
+        "type": "forward",
+    }],
+    load_balancer_arn=front_end_load_balancer.arn,
+    port="443",
+    protocol="HTTPS",
+    ssl_policy="ELBSecurityPolicy-2016-08")
+```
+
+{{% /example %}}
+{{% example %}}
 ### Redirect Action
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -87,22 +79,29 @@ const frontEndListener = new aws.lb.Listener("front_end", {
     protocol: "HTTP",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+front_end_load_balancer = aws.lb.LoadBalancer("frontEndLoadBalancer")
+front_end_listener = aws.lb.Listener("frontEndListener",
+    default_actions=[{
+        "redirect": {
+            "port": "443",
+            "protocol": "HTTPS",
+            "statusCode": "HTTP_301",
+        },
+        "type": "redirect",
+    }],
+    load_balancer_arn=front_end_load_balancer.arn,
+    port="80",
+    protocol="HTTP")
+```
+
+{{% /example %}}
+{{% example %}}
 ### Fixed-response Action
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -122,22 +121,29 @@ const frontEndListener = new aws.lb.Listener("front_end", {
     protocol: "HTTP",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+front_end_load_balancer = aws.lb.LoadBalancer("frontEndLoadBalancer")
+front_end_listener = aws.lb.Listener("frontEndListener",
+    default_actions=[{
+        "fixedResponse": {
+            "contentType": "text/plain",
+            "messageBody": "Fixed response content",
+            "statusCode": "200",
+        },
+        "type": "fixed-response",
+    }],
+    load_balancer_arn=front_end_load_balancer.arn,
+    port="80",
+    protocol="HTTP")
+```
+
+{{% /example %}}
+{{% example %}}
 ### Authenticate-cognito Action
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -167,22 +173,39 @@ const frontEndListener = new aws.lb.Listener("front_end", {
     protocol: "HTTP",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+front_end_load_balancer = aws.lb.LoadBalancer("frontEndLoadBalancer")
+front_end_target_group = aws.lb.TargetGroup("frontEndTargetGroup")
+pool = aws.cognito.UserPool("pool")
+client = aws.cognito.UserPoolClient("client")
+domain = aws.cognito.UserPoolDomain("domain")
+front_end_listener = aws.lb.Listener("frontEndListener",
+    default_actions=[
+        {
+            "authenticateCognito": {
+                "userPoolArn": pool.arn,
+                "userPoolClientId": client.id,
+                "userPoolDomain": domain.domain,
+            },
+            "type": "authenticate-cognito",
+        },
+        {
+            "targetGroupArn": front_end_target_group.arn,
+            "type": "forward",
+        },
+    ],
+    load_balancer_arn=front_end_load_balancer.arn,
+    port="80",
+    protocol="HTTP")
+```
+
+{{% /example %}}
+{{% example %}}
 ### Authenticate-oidc Action
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -212,13 +235,43 @@ const frontEndListener = new aws.lb.Listener("front_end", {
     protocol: "HTTP",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+front_end_load_balancer = aws.lb.LoadBalancer("frontEndLoadBalancer")
+front_end_target_group = aws.lb.TargetGroup("frontEndTargetGroup")
+front_end_listener = aws.lb.Listener("frontEndListener",
+    default_actions=[
+        {
+            "authenticateOidc": {
+                "authorizationEndpoint": "https://example.com/authorization_endpoint",
+                "clientId": "client_id",
+                "clientSecret": "client_secret",
+                "issuer": "https://example.com",
+                "tokenEndpoint": "https://example.com/token_endpoint",
+                "userInfoEndpoint": "https://example.com/user_info_endpoint",
+            },
+            "type": "authenticate-oidc",
+        },
+        {
+            "targetGroupArn": front_end_target_group.arn,
+            "type": "forward",
+        },
+    ],
+    load_balancer_arn=front_end_load_balancer.arn,
+    port="80",
+    protocol="HTTP")
+```
+
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a Listener Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -754,7 +807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Listener Resource {#look-up}
 
 Get an existing Listener resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/alb/#ListenerState">ListenerState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/alb/#Listener">Listener</a></span></code></pre></div>
@@ -1171,9 +1224,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/alb?tab=doc#ListenerDefaultActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/alb?tab=doc#ListenerDefaultActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Inputs.ListenerDefaultActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Outputs.ListenerDefaultAction.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1456,9 +1506,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/alb?tab=doc#ListenerDefaultActionAuthenticateCognitoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/alb?tab=doc#ListenerDefaultActionAuthenticateCognitoOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Inputs.ListenerDefaultActionAuthenticateCognitoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Outputs.ListenerDefaultActionAuthenticateCognito.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1790,9 +1837,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/alb?tab=doc#ListenerDefaultActionAuthenticateOidcArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/alb?tab=doc#ListenerDefaultActionAuthenticateOidcOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Inputs.ListenerDefaultActionAuthenticateOidcArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Outputs.ListenerDefaultActionAuthenticateOidc.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2233,9 +2277,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/alb?tab=doc#ListenerDefaultActionFixedResponseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/alb?tab=doc#ListenerDefaultActionFixedResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Inputs.ListenerDefaultActionFixedResponseArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Outputs.ListenerDefaultActionFixedResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2386,9 +2427,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/alb?tab=doc#ListenerDefaultActionRedirectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/alb?tab=doc#ListenerDefaultActionRedirectOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Inputs.ListenerDefaultActionRedirectArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Outputs.ListenerDefaultActionRedirect.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

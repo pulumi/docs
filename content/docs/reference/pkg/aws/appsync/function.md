@@ -12,26 +12,10 @@ meta_desc: "Explore the Function resource of the appsync module, including examp
 
 Provides an AppSync Function.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -85,13 +69,67 @@ const testFunction = new aws.appsync.Function("test", {
 `,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+test_graph_ql_api = aws.appsync.GraphQLApi("testGraphQLApi",
+    authentication_type="API_KEY",
+    schema="""type Mutation {
+    putPost(id: ID!, title: String!): Post
+}
+
+type Post {
+    id: ID!
+    title: String!
+}
+
+type Query {
+    singlePost(id: ID!): Post
+}
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+""")
+test_data_source = aws.appsync.DataSource("testDataSource",
+    api_id=test_graph_ql_api.id,
+    http_config={
+        "endpoint": "http://example.com",
+    },
+    type="HTTP")
+test_function = aws.appsync.Function("testFunction",
+    api_id=test_graph_ql_api.id,
+    data_source=test_data_source.name,
+    name="tf_example",
+    request_mapping_template="""{
+    "version": "2018-05-29",
+    "method": "GET",
+    "resourcePath": "/",
+    "params":{
+        "headers": $$utils.http.copyheaders($$ctx.request.headers)
+    }
+}
+
+""",
+    response_mapping_template="""#if($$ctx.result.statusCode == 200)
+    $$ctx.result.body
+#else
+    $$utils.appendError($$ctx.result.body, $$ctx.result.statusCode)
+#end
+
+""")
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a Function Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -699,7 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Function Resource {#look-up}
 
 Get an existing Function resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appsync/#FunctionState">FunctionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appsync/#Function">Function</a></span></code></pre></div>

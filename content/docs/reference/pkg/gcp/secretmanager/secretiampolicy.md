@@ -20,10 +20,90 @@ Three different resources help you manage your IAM policy for Secret Manager Sec
 
 > **Note:** `gcp.secretmanager.SecretIamBinding` resources **can be** used in conjunction with `gcp.secretmanager.SecretIamMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_secret\_manager\_secret\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/viewer",
+        members: ["user:jane@example.com"],
+    }],
+});
+const policy = new gcp.secretmanager.SecretIamPolicy("policy", {
+    project: google_secret_manager_secret["secret-basic"].project,
+    secretId: google_secret_manager_secret["secret-basic"].secret_id,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/viewer",
+    "members": ["user:jane@example.com"],
+}])
+policy = gcp.secretmanager.SecretIamPolicy("policy",
+    project=google_secret_manager_secret["secret-basic"]["project"],
+    secret_id=google_secret_manager_secret["secret-basic"]["secret_id"],
+    policy_data=admin.policy_data)
+```
+
+## google\_secret\_manager\_secret\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const binding = new gcp.secretmanager.SecretIamBinding("binding", {
+    project: google_secret_manager_secret["secret-basic"].project,
+    secretId: google_secret_manager_secret["secret-basic"].secret_id,
+    role: "roles/viewer",
+    members: ["user:jane@example.com"],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+binding = gcp.secretmanager.SecretIamBinding("binding",
+    project=google_secret_manager_secret["secret-basic"]["project"],
+    secret_id=google_secret_manager_secret["secret-basic"]["secret_id"],
+    role="roles/viewer",
+    members=["user:jane@example.com"])
+```
+
+## google\_secret\_manager\_secret\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const member = new gcp.secretmanager.SecretIamMember("member", {
+    project: google_secret_manager_secret["secret-basic"].project,
+    secretId: google_secret_manager_secret["secret-basic"].secret_id,
+    role: "roles/viewer",
+    member: "user:jane@example.com",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+member = gcp.secretmanager.SecretIamMember("member",
+    project=google_secret_manager_secret["secret-basic"]["project"],
+    secret_id=google_secret_manager_secret["secret-basic"]["secret_id"],
+    role="roles/viewer",
+    member="user:jane@example.com")
+```
+
 
 
 ## Create a SecretIamPolicy Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -455,7 +535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing SecretIamPolicy Resource {#look-up}
 
 Get an existing SecretIamPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/secretmanager/#SecretIamPolicyState">SecretIamPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/secretmanager/#SecretIamPolicy">SecretIamPolicy</a></span></code></pre></div>

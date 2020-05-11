@@ -23,6 +23,38 @@ Three different resources help you manage your IAM policy for a Spanner database
 
 > **Note:** `gcp.spanner.DatabaseIAMBinding` resources **can be** used in conjunction with `gcp.spanner.DatabaseIAMMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_spanner\_database\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const database = new gcp.spanner.DatabaseIAMPolicy("database", {
+    instance: "your-instance-name",
+    database: "your-database-name",
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/editor",
+    "members": ["user:jane@example.com"],
+}])
+database = gcp.spanner.DatabaseIAMPolicy("database",
+    instance="your-instance-name",
+    database="your-database-name",
+    policy_data=admin.policy_data)
+```
+
 ## google\_spanner\_database\_iam\_binding
 
 ```typescript
@@ -35,6 +67,16 @@ const database = new gcp.spanner.DatabaseIAMBinding("database", {
     members: ["user:jane@example.com"],
     role: "roles/compute.networkUser",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+database = gcp.spanner.DatabaseIAMBinding("database",
+    database="your-database-name",
+    instance="your-instance-name",
+    members=["user:jane@example.com"],
+    role="roles/compute.networkUser")
 ```
 
 ## google\_spanner\_database\_iam\_member
@@ -50,11 +92,21 @@ const database = new gcp.spanner.DatabaseIAMMember("database", {
     role: "roles/compute.networkUser",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+database = gcp.spanner.DatabaseIAMMember("database",
+    database="your-database-name",
+    instance="your-instance-name",
+    member="user:jane@example.com",
+    role="roles/compute.networkUser")
+```
 
 
 
 ## Create a DatabaseIAMPolicy Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -526,7 +578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DatabaseIAMPolicy Resource {#look-up}
 
 Get an existing DatabaseIAMPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/spanner/#DatabaseIAMPolicyState">DatabaseIAMPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/spanner/#DatabaseIAMPolicy">DatabaseIAMPolicy</a></span></code></pre></div>

@@ -15,26 +15,10 @@ Use this data source to get information about a DB Snapshot for use when provisi
 > **NOTE:** This data source does not apply to snapshots created on Aurora DB clusters.
 See the [`aws.rds.ClusterSnapshot` data source](https://www.terraform.io/docs/providers/aws/d/db_cluster_snapshot.html) for DB Cluster snapshots.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -61,14 +45,40 @@ const dev = new aws.rds.Instance("dev", {
     snapshotIdentifier: latestProdSnapshot.id,
 }, { ignoreChanges: ["snapshotIdentifier"] });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+prod = aws.rds.Instance("prod",
+    allocated_storage=10,
+    db_subnet_group_name="my_database_subnet_group",
+    engine="mysql",
+    engine_version="5.6.17",
+    instance_class="db.t2.micro",
+    name="mydb",
+    parameter_group_name="default.mysql5.6",
+    password="bar",
+    username="foo")
+latest_prod_snapshot = prod.id.apply(lambda id: aws.rds.get_snapshot(db_instance_identifier=id,
+    most_recent=True))
+# Use the latest production snapshot to create a dev instance.
+dev = aws.rds.Instance("dev",
+    instance_class="db.t2.micro",
+    lifecycle={
+        "ignoreChanges": ["snapshotIdentifier"],
+    },
+    name="mydbdev",
+    snapshot_identifier=latest_prod_snapshot.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetSnapshot {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1247,16 +1257,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

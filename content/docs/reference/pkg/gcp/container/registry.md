@@ -16,12 +16,63 @@ This resource can be used to ensure that the GCS bucket exists prior to assignin
 
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const registry = new gcp.container.Registry("registry", {
+    location: "EU",
+    project: "my-project",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+registry = gcp.container.Registry("registry",
+    location="EU",
+    project="my-project")
+```
+
+The `id` field of the `gcp.container.Registry` is the identifier of the storage bucket that backs GCR and can be used to assign permissions to the bucket.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const registry = new gcp.container.Registry("registry", {
+    project: "my-project",
+    location: "EU",
+});
+const viewer = new gcp.storage.BucketIAMMember("viewer", {
+    bucket: registry.id,
+    role: "roles/storage.objectViewer",
+    member: "user:jane@example.com",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+registry = gcp.container.Registry("registry",
+    project="my-project",
+    location="EU")
+viewer = gcp.storage.BucketIAMMember("viewer",
+    bucket=registry.id,
+    role="roles/storage.objectViewer",
+    member="user:jane@example.com")
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Create a Registry Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -413,7 +464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Registry Resource {#look-up}
 
 Get an existing Registry resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/container/#RegistryState">RegistryState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/container/#Registry">Registry</a></span></code></pre></div>

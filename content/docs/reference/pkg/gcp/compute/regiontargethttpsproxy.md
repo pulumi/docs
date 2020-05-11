@@ -19,10 +19,98 @@ To get more information about RegionTargetHttpsProxy, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/http/target-proxies)
 
+## Example Usage - Region Target Https Proxy Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const defaultRegionSslCertificate = new gcp.compute.RegionSslCertificate("defaultRegionSslCertificate", {
+    region: "us-central1",
+    privateKey: fs.readFileSync("path/to/private.key"),
+    certificate: fs.readFileSync("path/to/certificate.crt"),
+});
+const defaultRegionHealthCheck = new gcp.compute.RegionHealthCheck("defaultRegionHealthCheck", {
+    region: "us-central1",
+    http_health_check: {
+        port: 80,
+    },
+});
+const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaultRegionBackendService", {
+    region: "us-central1",
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [defaultRegionHealthCheck.selfLink],
+});
+const defaultRegionUrlMap = new gcp.compute.RegionUrlMap("defaultRegionUrlMap", {
+    region: "us-central1",
+    description: "a description",
+    defaultService: defaultRegionBackendService.selfLink,
+    host_rule: [{
+        hosts: ["mysite.com"],
+        pathMatcher: "allpaths",
+    }],
+    path_matcher: [{
+        name: "allpaths",
+        defaultService: defaultRegionBackendService.selfLink,
+        path_rule: [{
+            paths: ["/*"],
+            service: defaultRegionBackendService.selfLink,
+        }],
+    }],
+});
+const defaultRegionTargetHttpsProxy = new gcp.compute.RegionTargetHttpsProxy("defaultRegionTargetHttpsProxy", {
+    region: "us-central1",
+    urlMap: defaultRegionUrlMap.selfLink,
+    sslCertificates: [defaultRegionSslCertificate.selfLink],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_region_ssl_certificate = gcp.compute.RegionSslCertificate("defaultRegionSslCertificate",
+    region="us-central1",
+    private_key=(lambda path: open(path).read())("path/to/private.key"),
+    certificate=(lambda path: open(path).read())("path/to/certificate.crt"))
+default_region_health_check = gcp.compute.RegionHealthCheck("defaultRegionHealthCheck",
+    region="us-central1",
+    http_health_check={
+        "port": 80,
+    })
+default_region_backend_service = gcp.compute.RegionBackendService("defaultRegionBackendService",
+    region="us-central1",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default_region_health_check.self_link])
+default_region_url_map = gcp.compute.RegionUrlMap("defaultRegionUrlMap",
+    region="us-central1",
+    description="a description",
+    default_service=default_region_backend_service.self_link,
+    host_rule=[{
+        "hosts": ["mysite.com"],
+        "pathMatcher": "allpaths",
+    }],
+    path_matcher=[{
+        "name": "allpaths",
+        "defaultService": default_region_backend_service.self_link,
+        "path_rule": [{
+            "paths": ["/*"],
+            "service": default_region_backend_service.self_link,
+        }],
+    }])
+default_region_target_https_proxy = gcp.compute.RegionTargetHttpsProxy("defaultRegionTargetHttpsProxy",
+    region="us-central1",
+    url_map=default_region_url_map.self_link,
+    ssl_certificates=[default_region_ssl_certificate.self_link])
+```
+
 
 
 ## Create a RegionTargetHttpsProxy Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -674,7 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing RegionTargetHttpsProxy Resource {#look-up}
 
 Get an existing RegionTargetHttpsProxy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionTargetHttpsProxyState">RegionTargetHttpsProxyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionTargetHttpsProxy">RegionTargetHttpsProxy</a></span></code></pre></div>

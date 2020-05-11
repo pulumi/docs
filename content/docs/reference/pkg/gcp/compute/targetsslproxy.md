@@ -21,10 +21,59 @@ To get more information about TargetSslProxy, see:
 * How-to Guides
     * [Setting Up SSL proxy for Google Cloud Load Balancing](https://cloud.google.com/compute/docs/load-balancing/tcp-ssl/)
 
+## Example Usage - Target Ssl Proxy Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const defaultSSLCertificate = new gcp.compute.SSLCertificate("defaultSSLCertificate", {
+    privateKey: fs.readFileSync("path/to/private.key"),
+    certificate: fs.readFileSync("path/to/certificate.crt"),
+});
+const defaultHealthCheck = new gcp.compute.HealthCheck("defaultHealthCheck", {
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+    tcp_health_check: {
+        port: "443",
+    },
+});
+const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {
+    protocol: "SSL",
+    healthChecks: [defaultHealthCheck.selfLink],
+});
+const defaultTargetSSLProxy = new gcp.compute.TargetSSLProxy("defaultTargetSSLProxy", {
+    backendService: defaultBackendService.selfLink,
+    sslCertificates: [defaultSSLCertificate.selfLink],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_ssl_certificate = gcp.compute.SSLCertificate("defaultSSLCertificate",
+    private_key=(lambda path: open(path).read())("path/to/private.key"),
+    certificate=(lambda path: open(path).read())("path/to/certificate.crt"))
+default_health_check = gcp.compute.HealthCheck("defaultHealthCheck",
+    check_interval_sec=1,
+    timeout_sec=1,
+    tcp_health_check={
+        "port": "443",
+    })
+default_backend_service = gcp.compute.BackendService("defaultBackendService",
+    protocol="SSL",
+    health_checks=[default_health_check.self_link])
+default_target_ssl_proxy = gcp.compute.TargetSSLProxy("defaultTargetSSLProxy",
+    backend_service=default_backend_service.self_link,
+    ssl_certificates=[default_ssl_certificate.self_link])
+```
+
 
 
 ## Create a TargetSSLProxy Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -265,7 +314,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to
-the backend, either NONE or PROXY_V1. The default is NONE.
+the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -347,7 +396,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to
-the backend, either NONE or PROXY_V1. The default is NONE.
+the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -429,7 +478,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to
-the backend, either NONE or PROXY_V1. The default is NONE.
+the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -511,7 +560,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to
-the backend, either NONE or PROXY_V1. The default is NONE.
+the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -716,7 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing TargetSSLProxy Resource {#look-up}
 
 Get an existing TargetSSLProxy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#TargetSSLProxyState">TargetSSLProxyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#TargetSSLProxy">TargetSSLProxy</a></span></code></pre></div>
@@ -896,7 +945,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to
-the backend, either NONE or PROXY_V1. The default is NONE.
+the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1005,7 +1054,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to
-the backend, either NONE or PROXY_V1. The default is NONE.
+the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1114,7 +1163,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to
-the backend, either NONE or PROXY_V1. The default is NONE.
+the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1223,7 +1272,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to
-the backend, either NONE or PROXY_V1. The default is NONE.
+the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -28,26 +28,12 @@ of this provider.
 It's recommended to specify `create_before_destroy = true` in a [lifecycle](https://www.terraform.io/docs/configuration/resources.html#lifecycle) block to replace a certificate
 which is currently in use (eg, by `aws.lb.Listener`).
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### Certificate creation
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -60,22 +46,22 @@ const cert = new aws.acm.Certificate("cert", {
     validationMethod: "DNS",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+cert = aws.acm.Certificate("cert",
+    domain_name="example.com",
+    tags={
+        "Environment": "test",
+    },
+    validation_method="DNS")
+```
+
+{{% /example %}}
+{{% example %}}
 ### Importing an existing certificate
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -103,13 +89,37 @@ const cert = new aws.acm.Certificate("cert", {
     privateKey: examplePrivateKey.privateKeyPem,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_tls as tls
 
+example_private_key = tls.PrivateKey("examplePrivateKey", algorithm="RSA")
+example_self_signed_cert = tls.SelfSignedCert("exampleSelfSignedCert",
+    allowed_uses=[
+        "key_encipherment",
+        "digital_signature",
+        "server_auth",
+    ],
+    key_algorithm="RSA",
+    private_key_pem=example_private_key.private_key_pem,
+    subjects=[{
+        "commonName": "example.com",
+        "organization": "ACME Examples, Inc",
+    }],
+    validity_period_hours=12)
+cert = aws.acm.Certificate("cert",
+    certificate_body=example_self_signed_cert.cert_pem,
+    private_key=example_private_key.private_key_pem)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a Certificate Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -829,7 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Certificate Resource {#look-up}
 
 Get an existing Certificate resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/acm/#CertificateState">CertificateState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/acm/#Certificate">Certificate</a></span></code></pre></div>
@@ -1430,9 +1440,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acm?tab=doc#CertificateDomainValidationOptionOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acm.Outputs.CertificateDomainValidationOption.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1619,9 +1626,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acm?tab=doc#CertificateOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acm?tab=doc#CertificateOptionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acm.Inputs.CertificateOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acm.Outputs.CertificateOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

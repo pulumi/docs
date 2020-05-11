@@ -20,10 +20,46 @@ To get more information about ConsumerQuotaOverride, see:
     * [Getting Started](https://cloud.google.com/service-usage/docs/getting-started)
     * [REST API documentation](https://cloud.google.com/service-usage/docs/reference/rest/v1beta1/services.consumerQuotaMetrics.limits.consumerOverrides)
 
+## Example Usage - Consumer Quota Override
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myProject = new gcp.organizations.Project("myProject", {
+    projectId: "quota",
+    orgId: "123456789",
+});
+const override = new gcp.serviceusage.ConsumerQuotaOverride("override", {
+    project: myProject.projectId,
+    service: "servicemanagement.googleapis.com",
+    metric: `servicemanagement.googleapis.com%2Fdefault_requests`,
+    limit: `%2Fmin%2Fproject`,
+    overrideValue: "95",
+    force: true,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_project = gcp.organizations.Project("myProject",
+    project_id="quota",
+    org_id="123456789")
+override = gcp.serviceusage.ConsumerQuotaOverride("override",
+    project=my_project.project_id,
+    service="servicemanagement.googleapis.com",
+    metric="servicemanagement.googleapis.com%2Fdefault_requests",
+    limit="%2Fmin%2Fproject",
+    override_value="95",
+    force=True)
+```
+
 
 
 ## Create a ConsumerQuotaOverride Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -603,7 +639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ConsumerQuotaOverride Resource {#look-up}
 
 Get an existing ConsumerQuotaOverride resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/serviceusage/#ConsumerQuotaOverrideState">ConsumerQuotaOverrideState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/serviceusage/#ConsumerQuotaOverride">ConsumerQuotaOverride</a></span></code></pre></div>

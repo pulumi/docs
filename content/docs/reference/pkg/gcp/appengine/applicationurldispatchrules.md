@@ -17,10 +17,90 @@ To get more information about ApplicationUrlDispatchRules, see:
 
 * [API documentation](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps#UrlDispatchRule)
 
+## Example Usage - App Engine Application Url Dispatch Rules Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bucket = new gcp.storage.Bucket("bucket", {});
+const object = new gcp.storage.BucketObject("object", {
+    bucket: bucket.name,
+    source: new pulumi.asset.FileAsset("./test-fixtures/appengine/hello-world.zip"),
+});
+const adminV3 = new gcp.appengine.StandardAppVersion("adminV3", {
+    versionId: "v3",
+    service: "admin",
+    runtime: "nodejs10",
+    entrypoint: {
+        shell: "node ./app.js",
+    },
+    deployment: {
+        zip: {
+            sourceUrl: pulumi.interpolate`https://storage.googleapis.com/${bucket.name}/${object.name}`,
+        },
+    },
+    envVariables: {
+        port: "8080",
+    },
+    noopOnDestroy: true,
+});
+const webService = new gcp.appengine.ApplicationUrlDispatchRules("webService", {dispatch_rules: [
+    {
+        domain: "*",
+        path: "/*",
+        service: "default",
+    },
+    {
+        domain: "*",
+        path: "/admin/*",
+        service: adminV3.service,
+    },
+]});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bucket = gcp.storage.Bucket("bucket")
+object = gcp.storage.BucketObject("object",
+    bucket=bucket.name,
+    source=pulumi.FileAsset("./test-fixtures/appengine/hello-world.zip"))
+admin_v3 = gcp.appengine.StandardAppVersion("adminV3",
+    version_id="v3",
+    service="admin",
+    runtime="nodejs10",
+    entrypoint={
+        "shell": "node ./app.js",
+    },
+    deployment={
+        "zip": {
+            "sourceUrl": pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
+        },
+    },
+    env_variables={
+        "port": "8080",
+    },
+    noop_on_destroy=True)
+web_service = gcp.appengine.ApplicationUrlDispatchRules("webService", dispatch_rules=[
+    {
+        "domain": "*",
+        "path": "/*",
+        "service": "default",
+    },
+    {
+        "domain": "*",
+        "path": "/admin/*",
+        "service": admin_v3.service,
+    },
+])
+```
+
 
 
 ## Create a ApplicationUrlDispatchRules Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -380,7 +460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ApplicationUrlDispatchRules Resource {#look-up}
 
 Get an existing ApplicationUrlDispatchRules resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#ApplicationUrlDispatchRulesState">ApplicationUrlDispatchRulesState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#ApplicationUrlDispatchRules">ApplicationUrlDispatchRules</a></span></code></pre></div>
@@ -620,9 +700,6 @@ If it is not provided, the provider project is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#ApplicationUrlDispatchRulesDispatchRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#ApplicationUrlDispatchRulesDispatchRuleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.ApplicationUrlDispatchRulesDispatchRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.ApplicationUrlDispatchRulesDispatchRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

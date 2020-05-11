@@ -21,12 +21,106 @@ and
 > **Note** You must [enable the Cloud Resource Manager API](https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com)
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my_sink = new gcp.logging.ProjectSink("my-sink", {
+    // Can export to pubsub, cloud storage, or bigquery
+    destination: "pubsub.googleapis.com/projects/my-project/topics/instance-activity",
+    // Log all WARN or higher severity messages relating to instances
+    filter: "resource.type = gce_instance AND severity >= WARN",
+    // Use a unique writer (creates a unique service account used for writing)
+    uniqueWriterIdentity: true,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_sink = gcp.logging.ProjectSink("my-sink",
+    destination="pubsub.googleapis.com/projects/my-project/topics/instance-activity",
+    filter="resource.type = gce_instance AND severity >= WARN",
+    unique_writer_identity=True)
+```
+
+A more complete example follows: this creates a compute instance, as well as a log sink that logs all activity to a
+cloud storage bucket. Because we are using `unique_writer_identity`, we must grant it access to the bucket. Note that
+this grant requires the "Project IAM Admin" IAM role (`roles/resourcemanager.projectIamAdmin`) granted to the credentials
+used with this provider.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+// Our logged compute instance
+const my-logged-instance = new gcp.compute.Instance("my-logged-instance", {
+    machineType: "n1-standard-1",
+    zone: "us-central1-a",
+    boot_disk: {
+        initialize_params: {
+            image: "debian-cloud/debian-9",
+        },
+    },
+    network_interface: [{
+        network: "default",
+        access_config: [{}],
+    }],
+});
+// A bucket to store logs in
+const log-bucket = new gcp.storage.Bucket("log-bucket", {});
+// Our sink; this logs all activity related to our "my-logged-instance" instance
+const instance-sink = new gcp.logging.ProjectSink("instance-sink", {
+    destination: pulumi.interpolate`storage.googleapis.com/${log-bucket.name}`,
+    filter: pulumi.interpolate`resource.type = gce_instance AND resource.labels.instance_id = "${my-logged-instance.instanceId}"`,
+    uniqueWriterIdentity: true,
+});
+// Because our sink uses a unique_writer, we must grant that writer access to the bucket.
+const log-writer = new gcp.projects.IAMBinding("log-writer", {
+    role: "roles/storage.objectCreator",
+    members: [instance-sink.writerIdentity],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+# Our logged compute instance
+my_logged_instance = gcp.compute.Instance("my-logged-instance",
+    machine_type="n1-standard-1",
+    zone="us-central1-a",
+    boot_disk={
+        "initialize_params": {
+            "image": "debian-cloud/debian-9",
+        },
+    },
+    network_interface=[{
+        "network": "default",
+        "access_config": [{}],
+    }])
+# A bucket to store logs in
+log_bucket = gcp.storage.Bucket("log-bucket")
+# Our sink; this logs all activity related to our "my-logged-instance" instance
+instance_sink = gcp.logging.ProjectSink("instance-sink",
+    destination=log_bucket.name.apply(lambda name: f"storage.googleapis.com/{name}"),
+    filter=my_logged_instance.instance_id.apply(lambda instance_id: f"resource.type = gce_instance AND resource.labels.instance_id = \"{instance_id}\""),
+    unique_writer_identity=True)
+# Because our sink uses a unique_writer, we must grant that writer access to the bucket.
+log_writer = gcp.projects.IAMBinding("log-writer",
+    role="roles/storage.objectCreator",
+    members=[instance_sink.writer_identity])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Create a ProjectSink Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -217,6 +311,9 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -288,6 +385,9 @@ must set `unique_writer_identity` to true.
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
@@ -361,6 +461,9 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -432,6 +535,9 @@ must set `unique_writer_identity` to true.
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
@@ -610,7 +716,7 @@ configured `destination`.
 ## Look up an Existing ProjectSink Resource {#look-up}
 
 Get an existing ProjectSink resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#ProjectSinkState">ProjectSinkState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#ProjectSink">ProjectSink</a></span></code></pre></div>
@@ -751,6 +857,9 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -832,6 +941,9 @@ configured `destination`.
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
@@ -915,6 +1027,9 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -997,6 +1112,9 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -1074,9 +1192,6 @@ configured `destination`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#ProjectSinkBigqueryOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#ProjectSinkBigqueryOptionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Inputs.ProjectSinkBigqueryOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Outputs.ProjectSinkBigqueryOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

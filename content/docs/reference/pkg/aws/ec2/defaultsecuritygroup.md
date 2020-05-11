@@ -65,6 +65,26 @@ const defaultDefaultSecurityGroup = new aws.ec2.DefaultSecurityGroup("default", 
     vpcId: mainvpc.id,
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+mainvpc = aws.ec2.Vpc("mainvpc", cidr_block="10.1.0.0/16")
+default = aws.ec2.DefaultSecurityGroup("default",
+    egress=[{
+        "cidrBlocks": ["0.0.0.0/0"],
+        "fromPort": 0,
+        "protocol": "-1",
+        "toPort": 0,
+    }],
+    ingress=[{
+        "fromPort": 0,
+        "protocol": -1,
+        "self": True,
+        "toPort": 0,
+    }],
+    vpc_id=mainvpc.id)
+```
 
 ## Example config to deny all Egress traffic, allowing Ingress
 
@@ -88,6 +108,20 @@ const defaultDefaultSecurityGroup = new aws.ec2.DefaultSecurityGroup("default", 
     vpcId: mainvpc.id,
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+mainvpc = aws.ec2.Vpc("mainvpc", cidr_block="10.1.0.0/16")
+default = aws.ec2.DefaultSecurityGroup("default",
+    ingress=[{
+        "fromPort": 0,
+        "protocol": -1,
+        "self": True,
+        "toPort": 0,
+    }],
+    vpc_id=mainvpc.id)
+```
 
 ## Usage
 
@@ -107,7 +141,7 @@ they are at the time of removal. You can resume managing them via the AWS Consol
 
 
 ## Create a DefaultSecurityGroup Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -723,7 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DefaultSecurityGroup Resource {#look-up}
 
 Get an existing DefaultSecurityGroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#DefaultSecurityGroupState">DefaultSecurityGroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#DefaultSecurityGroup">DefaultSecurityGroup</a></span></code></pre></div>
@@ -1220,9 +1254,6 @@ modified, added, or removed.** It will be left in its current state
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#DefaultSecurityGroupEgressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#DefaultSecurityGroupEgressOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.DefaultSecurityGroupEgressArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.DefaultSecurityGroupEgress.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1557,9 +1588,6 @@ modified, added, or removed.** It will be left in its current state
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#DefaultSecurityGroupIngressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#DefaultSecurityGroupIngressOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.DefaultSecurityGroupIngressArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.DefaultSecurityGroupIngress.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

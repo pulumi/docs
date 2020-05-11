@@ -13,9 +13,37 @@ meta_desc: "Explore the Key resource of the serviceAccount module, including exa
 Creates and manages service account key-pairs, which allow the user to establish identity of a service account outside of GCP. For more information, see [the official documentation](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) and [API](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys).
 
 
+## Example Usage, creating a new Key Pair
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myaccount = new gcp.serviceAccount.Account("myaccount", {
+    accountId: "myaccount",
+    displayName: "My Service Account",
+});
+const mykey = new gcp.serviceAccount.Key("mykey", {
+    serviceAccountId: myaccount.name,
+    publicKeyType: "TYPE_X509_PEM_FILE",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+myaccount = gcp.service_account.Account("myaccount",
+    account_id="myaccount",
+    display_name="My Service Account")
+mykey = gcp.service_account.Key("mykey",
+    service_account_id=myaccount.name,
+    public_key_type="TYPE_X509_PEM_FILE")
+```
+
+
 
 ## Create a Key Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -651,7 +679,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 ## Look up an Existing Key Resource {#look-up}
 
 Get an existing Key resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/serviceAccount/#KeyState">KeyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/serviceAccount/#Key">Key</a></span></code></pre></div>

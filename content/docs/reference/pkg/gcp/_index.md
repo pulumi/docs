@@ -16,6 +16,7 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
 <ul class="api">
     <li><a href="accesscontextmanager/" title="accesscontextmanager"><span class="symbol module"></span>accesscontextmanager</a></li>
     <li><a href="appengine/" title="appengine"><span class="symbol module"></span>appengine</a></li>
+    <li><a href="artifactregistry/" title="artifactregistry"><span class="symbol module"></span>artifactregistry</a></li>
     <li><a href="bigquery/" title="bigquery"><span class="symbol module"></span>bigquery</a></li>
     <li><a href="bigtable/" title="bigtable"><span class="symbol module"></span>bigtable</a></li>
     <li><a href="billing/" title="billing"><span class="symbol module"></span>billing</a></li>
@@ -86,6 +87,6 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.3.0</dd>
+	<dd>3.4.0</dd>
 </dl>
 

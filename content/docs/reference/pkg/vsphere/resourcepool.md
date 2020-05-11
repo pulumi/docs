@@ -18,41 +18,14 @@ page][ref-vsphere-resource_pools].
 
 [ref-vsphere-resource_pools]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-60077B40-66FF-4625-934A-641703ED7601.html
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+The following example sets up a resource pool in a compute cluster which uses
+the default settings for CPU and memory reservations, shares, and limits. The
+compute cluster needs to already exist in vSphere.  
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_vsphere as vsphere
-
-config = pulumi.Config()
-datacenter = config.get("datacenter")
-if datacenter is None:
-    datacenter = "dc1"
-cluster = config.get("cluster")
-if cluster is None:
-    cluster = "cluster1"
-dc = vsphere.get_datacenter(name=datacenter)
-compute_cluster = vsphere.get_compute_cluster(datacenter_id=dc.id,
-    name=cluster)
-resource_pool = vsphere.ResourcePool("resourcePool", parent_resource_pool_id=compute_cluster.resource_pool_id)
-```
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -72,13 +45,30 @@ const resourcePool = new vsphere.ResourcePool("resource_pool", {
     parentResourcePoolId: computeCluster.resourcePoolId,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_vsphere as vsphere
 
+config = pulumi.Config()
+datacenter = config.get("datacenter")
+if datacenter is None:
+    datacenter = "dc1"
+cluster = config.get("cluster")
+if cluster is None:
+    cluster = "cluster1"
+dc = vsphere.get_datacenter(name=datacenter)
+compute_cluster = vsphere.get_compute_cluster(datacenter_id=dc.id,
+    name=cluster)
+resource_pool = vsphere.ResourcePool("resourcePool", parent_resource_pool_id=compute_cluster.resource_pool_id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a ResourcePool Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -974,7 +964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ResourcePool Resource {#look-up}
 
 Get an existing ResourcePool resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ResourcePoolState">ResourcePoolState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ResourcePool">ResourcePool</a></span></code></pre></div>

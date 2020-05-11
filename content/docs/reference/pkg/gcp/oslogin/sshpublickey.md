@@ -19,10 +19,34 @@ To get more information about SSHPublicKey, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/oslogin)
 
+## Example Usage - Os Login Ssh Key Provided User
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const me = gcp.organizations.getClientOpenIdUserInfo({});
+const cache = new gcp.oslogin.SshPublicKey("cache", {
+    user: me.then(me => me.email),
+    key: fs.readFileSync("path/to/id_rsa.pub"),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+me = gcp.organizations.get_client_open_id_user_info()
+cache = gcp.oslogin.SshPublicKey("cache",
+    user=me.email,
+    key=(lambda path: open(path).read())("path/to/id_rsa.pub"))
+```
+
 
 
 ## Create a SshPublicKey Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -450,7 +474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing SshPublicKey Resource {#look-up}
 
 Get an existing SshPublicKey resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/oslogin/#SshPublicKeyState">SshPublicKeyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/oslogin/#SshPublicKey">SshPublicKey</a></span></code></pre></div>

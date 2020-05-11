@@ -18,10 +18,57 @@ To get more information about Endpoint, see:
 * How-to Guides
     * [Configuring an endpoint](https://cloud.google.com/service-directory/docs/configuring-service-directory#configuring_an_endpoint)
 
+## Example Usage - Service Directory Endpoint Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleNamespace = new gcp.servicedirectory.Namespace("exampleNamespace", {
+    namespaceId: "example-namespace",
+    location: "us-central1",
+});
+const exampleService = new gcp.servicedirectory.Service("exampleService", {
+    serviceId: "example-service",
+    namespace: exampleNamespace.id,
+});
+const exampleEndpoint = new gcp.servicedirectory.Endpoint("exampleEndpoint", {
+    endpointId: "example-endpoint",
+    service: exampleService.id,
+    metadata: {
+        stage: "prod",
+        region: "us-central1",
+    },
+    address: "1.2.3.4",
+    port: 5353,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_namespace = gcp.servicedirectory.Namespace("exampleNamespace",
+    namespace_id="example-namespace",
+    location="us-central1")
+example_service = gcp.servicedirectory.Service("exampleService",
+    service_id="example-service",
+    namespace=example_namespace.id)
+example_endpoint = gcp.servicedirectory.Endpoint("exampleEndpoint",
+    endpoint_id="example-endpoint",
+    service=example_service.id,
+    metadata={
+        "stage": "prod",
+        "region": "us-central1",
+    },
+    address="1.2.3.4",
+    port=5353)
+```
+
 
 
 ## Create a Endpoint Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -541,7 +588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Endpoint Resource {#look-up}
 
 Get an existing Endpoint resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/servicedirectory/#EndpointState">EndpointState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/servicedirectory/#Endpoint">Endpoint</a></span></code></pre></div>

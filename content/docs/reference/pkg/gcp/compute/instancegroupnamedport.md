@@ -22,10 +22,72 @@ To get more information about InstanceGroupNamedPort, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/instance-groups/)
 
+## Example Usage - Instance Group Named Port Gke
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const containerNetwork = new gcp.compute.Network("containerNetwork", {autoCreateSubnetworks: false});
+const containerSubnetwork = new gcp.compute.Subnetwork("containerSubnetwork", {
+    region: "us-central1",
+    network: containerNetwork.name,
+    ipCidrRange: "10.0.36.0/24",
+});
+const myCluster = new gcp.container.Cluster("myCluster", {
+    location: "us-central1-a",
+    initialNodeCount: 1,
+    network: containerNetwork.name,
+    subnetwork: containerSubnetwork.name,
+    ip_allocation_policy: {
+        clusterIpv4CidrBlock: "/19",
+        servicesIpv4CidrBlock: "/22",
+    },
+});
+const myPort = new gcp.compute.InstanceGroupNamedPort("myPort", {
+    group: myCluster.instanceGroupUrls[0],
+    zone: "us-central1-a",
+    port: 8080,
+});
+const myPorts = new gcp.compute.InstanceGroupNamedPort("myPorts", {
+    group: myCluster.instanceGroupUrls[0],
+    zone: "us-central1-a",
+    port: 4443,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+container_network = gcp.compute.Network("containerNetwork", auto_create_subnetworks=False)
+container_subnetwork = gcp.compute.Subnetwork("containerSubnetwork",
+    region="us-central1",
+    network=container_network.name,
+    ip_cidr_range="10.0.36.0/24")
+my_cluster = gcp.container.Cluster("myCluster",
+    location="us-central1-a",
+    initial_node_count=1,
+    network=container_network.name,
+    subnetwork=container_subnetwork.name,
+    ip_allocation_policy={
+        "clusterIpv4CidrBlock": "/19",
+        "servicesIpv4CidrBlock": "/22",
+    })
+my_port = gcp.compute.InstanceGroupNamedPort("myPort",
+    group=my_cluster.instance_group_urls[0],
+    zone="us-central1-a",
+    port=8080)
+my_ports = gcp.compute.InstanceGroupNamedPort("myPorts",
+    group=my_cluster.instance_group_urls[0],
+    zone="us-central1-a",
+    port=4443)
+```
+
 
 
 ## Create a InstanceGroupNamedPort Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -497,7 +559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing InstanceGroupNamedPort Resource {#look-up}
 
 Get an existing InstanceGroupNamedPort resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#InstanceGroupNamedPortState">InstanceGroupNamedPortState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#InstanceGroupNamedPort">InstanceGroupNamedPort</a></span></code></pre></div>

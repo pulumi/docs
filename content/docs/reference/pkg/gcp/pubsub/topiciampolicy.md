@@ -22,8 +22,90 @@ Three different resources help you manage your IAM policy for Cloud Pub/Sub Topi
 
 
 
+## google\_pubsub\_topic\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/viewer",
+        members: ["user:jane@example.com"],
+    }],
+});
+const policy = new gcp.pubsub.TopicIAMPolicy("policy", {
+    project: google_pubsub_topic.example.project,
+    topic: google_pubsub_topic.example.name,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/viewer",
+    "members": ["user:jane@example.com"],
+}])
+policy = gcp.pubsub.TopicIAMPolicy("policy",
+    project=google_pubsub_topic["example"]["project"],
+    topic=google_pubsub_topic["example"]["name"],
+    policy_data=admin.policy_data)
+```
+
+## google\_pubsub\_topic\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const binding = new gcp.pubsub.TopicIAMBinding("binding", {
+    project: google_pubsub_topic.example.project,
+    topic: google_pubsub_topic.example.name,
+    role: "roles/viewer",
+    members: ["user:jane@example.com"],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+binding = gcp.pubsub.TopicIAMBinding("binding",
+    project=google_pubsub_topic["example"]["project"],
+    topic=google_pubsub_topic["example"]["name"],
+    role="roles/viewer",
+    members=["user:jane@example.com"])
+```
+
+## google\_pubsub\_topic\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const member = new gcp.pubsub.TopicIAMMember("member", {
+    project: google_pubsub_topic.example.project,
+    topic: google_pubsub_topic.example.name,
+    role: "roles/viewer",
+    member: "user:jane@example.com",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+member = gcp.pubsub.TopicIAMMember("member",
+    project=google_pubsub_topic["example"]["project"],
+    topic=google_pubsub_topic["example"]["name"],
+    role="roles/viewer",
+    member="user:jane@example.com")
+```
+
+
+
 ## Create a TopicIAMPolicy Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -459,7 +541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing TopicIAMPolicy Resource {#look-up}
 
 Get an existing TopicIAMPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/pubsub/#TopicIAMPolicyState">TopicIAMPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/pubsub/#TopicIAMPolicy">TopicIAMPolicy</a></span></code></pre></div>

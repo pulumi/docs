@@ -33,38 +33,10 @@ limitation of virtual machine snapshots, see [here][ext-vm-snap-limitations].
 [docs-vsphere-virtual-machine-disk-attach]: /docs/providers/vsphere/r/virtual_machine.html#attach
 [ext-vm-snap-limitations]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-53F65726-A23B-4CF0-A7D5-48E584B88613.html
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_vsphere as vsphere
-
-demo1 = vsphere.VirtualMachineSnapshot("demo1",
-    consolidate="true",
-    description="This is Demo Snapshot",
-    memory="true",
-    quiesce="true",
-    remove_children="false",
-    snapshot_name="Snapshot Name",
-    virtual_machine_uuid="9aac5551-a351-4158-8c5c-15a71e8ec5c9")
-```
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -79,13 +51,27 @@ const demo1 = new vsphere.VirtualMachineSnapshot("demo1", {
     virtualMachineUuid: "9aac5551-a351-4158-8c5c-15a71e8ec5c9",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_vsphere as vsphere
 
+demo1 = vsphere.VirtualMachineSnapshot("demo1",
+    consolidate="true",
+    description="This is Demo Snapshot",
+    memory="true",
+    quiesce="true",
+    remove_children="false",
+    snapshot_name="Snapshot Name",
+    virtual_machine_uuid="9aac5551-a351-4158-8c5c-15a71e8ec5c9")
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a VirtualMachineSnapshot Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -645,7 +631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing VirtualMachineSnapshot Resource {#look-up}
 
 Get an existing VirtualMachineSnapshot resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachineSnapshotState">VirtualMachineSnapshotState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachineSnapshot">VirtualMachineSnapshot</a></span></code></pre></div>

@@ -25,6 +25,38 @@ a conflict of rule settings and will overwrite rules.
 > **NOTE:** Referencing Security Groups across VPC peering has certain restrictions. More information is available in the [VPC Peering User Guide](https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html).
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+Basic usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.ec2.SecurityGroupRule("example", {
+    type: "ingress",
+    fromPort: 0,
+    toPort: 65535,
+    protocol: "tcp",
+    cidrBlocks: aws_vpc.example.cidr_block,
+    securityGroupId: "sg-123456",
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ec2.SecurityGroupRule("example",
+    type="ingress",
+    from_port=0,
+    to_port=65535,
+    protocol="tcp",
+    cidr_blocks=aws_vpc["example"]["cidr_block"],
+    security_group_id="sg-123456")
+```
+
+{{% /example %}}
 {{% /examples %}}
 ## Usage with prefix list IDs
 
@@ -47,11 +79,25 @@ const allowAll = new aws.ec2.SecurityGroupRule("allow_all", {
     type: "egress",
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+# ...
+my_endpoint = aws.ec2.VpcEndpoint("myEndpoint")
+allow_all = aws.ec2.SecurityGroupRule("allowAll",
+    from_port=0,
+    prefix_list_ids=[my_endpoint.prefix_list_id],
+    protocol="-1",
+    security_group_id="sg-123456",
+    to_port=0,
+    type="egress")
+```
 
 
 
 ## Create a SecurityGroupRule Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -747,7 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing SecurityGroupRule Resource {#look-up}
 
 Get an existing SecurityGroupRule resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SecurityGroupRuleState">SecurityGroupRuleState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SecurityGroupRule">SecurityGroupRule</a></span></code></pre></div>

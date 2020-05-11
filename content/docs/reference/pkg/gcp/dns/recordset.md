@@ -19,12 +19,195 @@ In addition, the Google Cloud DNS API requires NS records to be present at all t
 will not actually remove NS records during destroy but will report that it did.
 
 {{% examples %}}
+## Example Usage
+
+{{% example %}}
+### Binding a DNS name to the ephemeral IP of a new instance:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const frontendInstance = new gcp.compute.Instance("frontendInstance", {
+    machineType: "g1-small",
+    zone: "us-central1-b",
+    boot_disk: {
+        initialize_params: {
+            image: "debian-cloud/debian-9",
+        },
+    },
+    network_interface: [{
+        network: "default",
+        access_config: [{}],
+    }],
+});
+const prod = new gcp.dns.ManagedZone("prod", {dnsName: "prod.mydomain.com."});
+const frontendRecordSet = new gcp.dns.RecordSet("frontendRecordSet", {
+    type: "A",
+    ttl: 300,
+    managedZone: prod.name,
+    rrdatas: [frontendInstance.networkInterfaces.apply(networkInterfaces => networkInterfaces[0].accessConfigs?[0]?.natIp)],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+frontend_instance = gcp.compute.Instance("frontendInstance",
+    machine_type="g1-small",
+    zone="us-central1-b",
+    boot_disk={
+        "initialize_params": {
+            "image": "debian-cloud/debian-9",
+        },
+    },
+    network_interface=[{
+        "network": "default",
+        "access_config": [{}],
+    }])
+prod = gcp.dns.ManagedZone("prod", dns_name="prod.mydomain.com.")
+frontend_record_set = gcp.dns.RecordSet("frontendRecordSet",
+    type="A",
+    ttl=300,
+    managed_zone=prod.name,
+    rrdatas=[frontend_instance.network_interfaces[0]["accessConfigs"][0]["natIp"]])
+```
+
+{{% /example %}}
+{{% example %}}
+### Adding an A record
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const prod = new gcp.dns.ManagedZone("prod", {dnsName: "prod.mydomain.com."});
+const recordSet = new gcp.dns.RecordSet("recordSet", {
+    managedZone: prod.name,
+    type: "A",
+    ttl: 300,
+    rrdatas: ["8.8.8.8"],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+prod = gcp.dns.ManagedZone("prod", dns_name="prod.mydomain.com.")
+record_set = gcp.dns.RecordSet("recordSet",
+    managed_zone=prod.name,
+    type="A",
+    ttl=300,
+    rrdatas=["8.8.8.8"])
+```
+
+{{% /example %}}
+{{% example %}}
+### Adding an MX record
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const prod = new gcp.dns.ManagedZone("prod", {dnsName: "prod.mydomain.com."});
+const mx = new gcp.dns.RecordSet("mx", {
+    managedZone: prod.name,
+    type: "MX",
+    ttl: 3600,
+    rrdatas: [
+        "1 aspmx.l.google.com.",
+        "5 alt1.aspmx.l.google.com.",
+        "5 alt2.aspmx.l.google.com.",
+        "10 alt3.aspmx.l.google.com.",
+        "10 alt4.aspmx.l.google.com.",
+    ],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+prod = gcp.dns.ManagedZone("prod", dns_name="prod.mydomain.com.")
+mx = gcp.dns.RecordSet("mx",
+    managed_zone=prod.name,
+    type="MX",
+    ttl=3600,
+    rrdatas=[
+        "1 aspmx.l.google.com.",
+        "5 alt1.aspmx.l.google.com.",
+        "5 alt2.aspmx.l.google.com.",
+        "10 alt3.aspmx.l.google.com.",
+        "10 alt4.aspmx.l.google.com.",
+    ])
+```
+
+{{% /example %}}
+{{% example %}}
+### Adding an SPF record
+
+Quotes (`""`) must be added around your `rrdatas` for a SPF record. Otherwise `rrdatas` string gets split on spaces.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const prod = new gcp.dns.ManagedZone("prod", {dnsName: "prod.mydomain.com."});
+const spf = new gcp.dns.RecordSet("spf", {
+    managedZone: prod.name,
+    type: "TXT",
+    ttl: 300,
+    rrdatas: ["\"v=spf1 ip4:111.111.111.111 include:backoff.email-example.com -all\""],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+prod = gcp.dns.ManagedZone("prod", dns_name="prod.mydomain.com.")
+spf = gcp.dns.RecordSet("spf",
+    managed_zone=prod.name,
+    type="TXT",
+    ttl=300,
+    rrdatas=["\"v=spf1 ip4:111.111.111.111 include:backoff.email-example.com -all\""])
+```
+
+{{% /example %}}
+{{% example %}}
+### Adding a CNAME record
+
+ The list of `rrdatas` should only contain a single string corresponding to the Canonical Name intended.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const prod = new gcp.dns.ManagedZone("prod", {dnsName: "prod.mydomain.com."});
+const cname = new gcp.dns.RecordSet("cname", {
+    managedZone: prod.name,
+    type: "CNAME",
+    ttl: 300,
+    rrdatas: ["frontend.mydomain.com."],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+prod = gcp.dns.ManagedZone("prod", dns_name="prod.mydomain.com.")
+cname = gcp.dns.RecordSet("cname",
+    managed_zone=prod.name,
+    type="CNAME",
+    ttl=300,
+    rrdatas=["frontend.mydomain.com."])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Create a RecordSet Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -536,7 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing RecordSet Resource {#look-up}
 
 Get an existing RecordSet resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dns/#RecordSetState">RecordSetState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dns/#RecordSet">RecordSet</a></span></code></pre></div>

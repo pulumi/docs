@@ -15,9 +15,169 @@ For more information, see [the official documentation](https://cloud.google.com/
 and [API](https://cloud.google.com/compute/docs/reference/latest/instanceGroups)
 
 
+## Example Usage - Empty instance group
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const test = new gcp.compute.InstanceGroup("test", {
+    description: "Test instance group",
+    zone: "us-central1-a",
+    network: google_compute_network["default"].self_link,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+test = gcp.compute.InstanceGroup("test",
+    description="Test instance group",
+    zone="us-central1-a",
+    network=google_compute_network["default"]["self_link"])
+```
+
+### Example Usage - With instances and named ports
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const webservers = new gcp.compute.InstanceGroup("webservers", {
+    description: "Test instance group",
+    instances: [
+        google_compute_instance.test.self_link,
+        google_compute_instance.test2.self_link,
+    ],
+    named_port: [
+        {
+            name: "http",
+            port: "8080",
+        },
+        {
+            name: "https",
+            port: "8443",
+        },
+    ],
+    zone: "us-central1-a",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+webservers = gcp.compute.InstanceGroup("webservers",
+    description="Test instance group",
+    instances=[
+        google_compute_instance["test"]["self_link"],
+        google_compute_instance["test2"]["self_link"],
+    ],
+    named_port=[
+        {
+            "name": "http",
+            "port": "8080",
+        },
+        {
+            "name": "https",
+            "port": "8443",
+        },
+    ],
+    zone="us-central1-a")
+```
+
+### Example Usage - Recreating an instance group in use
+Recreating an instance group that's in use by another resource will give a
+`resourceInUseByAnotherResource` error. Use `lifecycle.create_before_destroy`
+as shown in this example to avoid this type of error.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const debianImage = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const stagingVm = new gcp.compute.Instance("stagingVm", {
+    machineType: "n1-standard-1",
+    zone: "us-central1-c",
+    boot_disk: {
+        initialize_params: {
+            image: debianImage.then(debianImage => debianImage.selfLink),
+        },
+    },
+    network_interface: [{
+        network: "default",
+    }],
+});
+const stagingGroup = new gcp.compute.InstanceGroup("stagingGroup", {
+    zone: "us-central1-c",
+    instances: [stagingVm.selfLink],
+    named_port: [
+        {
+            name: "http",
+            port: "8080",
+        },
+        {
+            name: "https",
+            port: "8443",
+        },
+    ],
+});
+const stagingHealth = new gcp.compute.HttpsHealthCheck("stagingHealth", {requestPath: "/health_check"});
+const stagingService = new gcp.compute.BackendService("stagingService", {
+    portName: "https",
+    protocol: "HTTPS",
+    backend: [{
+        group: stagingGroup.selfLink,
+    }],
+    healthChecks: [stagingHealth.selfLink],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+debian_image = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+staging_vm = gcp.compute.Instance("stagingVm",
+    machine_type="n1-standard-1",
+    zone="us-central1-c",
+    boot_disk={
+        "initialize_params": {
+            "image": debian_image.self_link,
+        },
+    },
+    network_interface=[{
+        "network": "default",
+    }])
+staging_group = gcp.compute.InstanceGroup("stagingGroup",
+    zone="us-central1-c",
+    instances=[staging_vm.self_link],
+    named_port=[
+        {
+            "name": "http",
+            "port": "8080",
+        },
+        {
+            "name": "https",
+            "port": "8443",
+        },
+    ])
+staging_health = gcp.compute.HttpsHealthCheck("stagingHealth", request_path="/health_check")
+staging_service = gcp.compute.BackendService("stagingService",
+    port_name="https",
+    protocol="HTTPS",
+    backend=[{
+        "group": staging_group.self_link,
+    }],
+    health_checks=[staging_health.self_link])
+```
+
+
 
 ## Create a InstanceGroup Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -657,7 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing InstanceGroup Resource {#look-up}
 
 Get an existing InstanceGroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#InstanceGroupState">InstanceGroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#InstanceGroup">InstanceGroup</a></span></code></pre></div>
@@ -1177,9 +1337,6 @@ is not provided, the provider project is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceGroupNamedPortTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceGroupNamedPortTypeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceGroupNamedPortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceGroupNamedPort.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

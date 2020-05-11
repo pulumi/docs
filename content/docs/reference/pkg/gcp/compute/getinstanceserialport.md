@@ -14,13 +14,121 @@ Get the serial port output from a Compute Instance. For more information see
 the official [API](https://cloud.google.com/compute/docs/instances/viewing-serial-port-output) documentation.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const serial = gcp.compute.getInstanceSerialPort({
+    instance: "my-instance",
+    zone: "us-central1-a",
+    port: 1,
+});
+export const serialOut = serial.then(serial => serial.contents);
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+serial = gcp.compute.get_instance_serial_port(instance="my-instance",
+    zone="us-central1-a",
+    port=1)
+pulumi.export("serialOut", serial.contents)
+```
+
+Using the serial port output to generate a windows password, derived from the [official guide](https://cloud.google.com/compute/docs/instances/windows/automate-pw-generation):
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const windows = new gcp.compute.Instance("windows", {
+    machineType: "n1-standard-1",
+    zone: "us-central1-a",
+    boot_disk: {
+        initialize_params: {
+            image: "gce-uefi-images/windows-2019",
+        },
+    },
+    network_interface: [{
+        network: "default",
+        access_config: [{}],
+    }],
+    metadata: {
+        "serial-port-logging-enable": "TRUE",
+        "windows-keys": JSON.stringify({
+            email: "example.user@example.com",
+            expireOn: "2020-04-14T01:37:19Z",
+            exponent: "AQAB",
+            modulus: "wgsquN4IBNPqIUnu+h/5Za1kujb2YRhX1vCQVQAkBwnWigcCqOBVfRa5JoZfx6KIvEXjWqa77jPvlsxM4WPqnDIM2qiK36up3SKkYwFjff6F2ni/ry8vrwXCX3sGZ1hbIHlK0O012HpA3ISeEswVZmX2X67naOvJXfY5v0hGPWqCADao+xVxrmxsZD4IWnKl1UaZzI5lhAzr8fw6utHwx1EZ/MSgsEki6tujcZfN+GUDRnmJGQSnPTXmsf7Q4DKreTZk49cuyB3prV91S0x3DYjCUpSXrkVy1Ha5XicGD/q+ystuFsJnrrhbNXJbpSjM6sjo/aduAkZJl4FmOt0R7Q==",
+            userName: "example-user",
+        }),
+    },
+    service_account: {
+        scopes: [
+            "userinfo-email",
+            "compute-ro",
+            "storage-ro",
+        ],
+    },
+});
+const serial = pulumi.all([windows.name, windows.zone]).apply(([name, zone]) => gcp.compute.getInstanceSerialPort({
+    instance: name,
+    zone: zone,
+    port: 4,
+}));
+export const serialOut = serial.contents;
+```
+```python
+import pulumi
+import json
+import pulumi_gcp as gcp
+
+windows = gcp.compute.Instance("windows",
+    machine_type="n1-standard-1",
+    zone="us-central1-a",
+    boot_disk={
+        "initialize_params": {
+            "image": "gce-uefi-images/windows-2019",
+        },
+    },
+    network_interface=[{
+        "network": "default",
+        "access_config": [{}],
+    }],
+    metadata={
+        "serial-port-logging-enable": "TRUE",
+        "windows-keys": json.dumps({
+            "email": "example.user@example.com",
+            "expireOn": "2020-04-14T01:37:19Z",
+            "exponent": "AQAB",
+            "modulus": "wgsquN4IBNPqIUnu+h/5Za1kujb2YRhX1vCQVQAkBwnWigcCqOBVfRa5JoZfx6KIvEXjWqa77jPvlsxM4WPqnDIM2qiK36up3SKkYwFjff6F2ni/ry8vrwXCX3sGZ1hbIHlK0O012HpA3ISeEswVZmX2X67naOvJXfY5v0hGPWqCADao+xVxrmxsZD4IWnKl1UaZzI5lhAzr8fw6utHwx1EZ/MSgsEki6tujcZfN+GUDRnmJGQSnPTXmsf7Q4DKreTZk49cuyB3prV91S0x3DYjCUpSXrkVy1Ha5XicGD/q+ystuFsJnrrhbNXJbpSjM6sjo/aduAkZJl4FmOt0R7Q==",
+            "userName": "example-user",
+        }),
+    },
+    service_account={
+        "scopes": [
+            "userinfo-email",
+            "compute-ro",
+            "storage-ro",
+        ],
+    })
+serial = pulumi.Output.all(windows.name, windows.zone).apply(lambda name, zone: gcp.compute.get_instance_serial_port(instance=name,
+    zone=zone,
+    port=4))
+pulumi.export("serialOut", serial.contents)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Using GetInstanceSerialPort {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -475,16 +583,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

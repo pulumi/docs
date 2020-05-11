@@ -19,26 +19,12 @@ a VPC Endpoint resource with `route_table_ids` and `subnet_ids` attributes.
 Do not use the same resource ID in both a VPC Endpoint resource and a VPC Endpoint Association resource.
 Doing so will cause a conflict of associations and will overwrite the association.
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### Basic
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -48,22 +34,19 @@ const s3 = new aws.ec2.VpcEndpoint("s3", {
     vpcId: aws_vpc_main.id,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+s3 = aws.ec2.VpcEndpoint("s3",
+    service_name="com.amazonaws.us-west-2.s3",
+    vpc_id=aws_vpc["main"]["id"])
+```
+
+{{% /example %}}
+{{% example %}}
 ### Basic w/ Tags
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -76,22 +59,22 @@ const s3 = new aws.ec2.VpcEndpoint("s3", {
     vpcId: aws_vpc_main.id,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+s3 = aws.ec2.VpcEndpoint("s3",
+    service_name="com.amazonaws.us-west-2.s3",
+    tags={
+        "Environment": "test",
+    },
+    vpc_id=aws_vpc["main"]["id"])
+```
+
+{{% /example %}}
+{{% example %}}
 ### Interface Endpoint Type
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -104,22 +87,22 @@ const ec2 = new aws.ec2.VpcEndpoint("ec2", {
     vpcId: aws_vpc_main.id,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+ec2 = aws.ec2.VpcEndpoint("ec2",
+    private_dns_enabled=True,
+    security_group_ids=[aws_security_group["sg1"]["id"]],
+    service_name="com.amazonaws.us-west-2.ec2",
+    vpc_endpoint_type="Interface",
+    vpc_id=aws_vpc["main"]["id"])
+```
+
+{{% /example %}}
+{{% example %}}
 ### Non-AWS Service
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -145,13 +128,37 @@ const ptfeServiceRecord = new aws.route53.Record("ptfe_service", {
     zoneId: internal.zoneId!,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+ptfe_service_vpc_endpoint = aws.ec2.VpcEndpoint("ptfeServiceVpcEndpoint",
+    private_dns_enabled=False,
+    security_group_ids=[aws_security_group["ptfe_service"]["id"]],
+    service_name=var["ptfe_service"],
+    subnet_ids=[local["subnet_ids"]],
+    vpc_endpoint_type="Interface",
+    vpc_id=var["vpc_id"])
+internal = aws.route53.get_zone(name="vpc.internal.",
+    private_zone=True,
+    vpc_id=var["vpc_id"])
+ptfe_service_record = aws.route53.Record("ptfeServiceRecord",
+    name=f"ptfe.{internal.name}",
+    records=[ptfe_service_vpc_endpoint.dns_entries[0]["dns_name"]],
+    ttl="300",
+    type="CNAME",
+    zone_id=internal.zone_id)
+```
+
+> **NOTE The `dns_entry` output is a list of maps:** This provider interpolation support for lists of maps requires the `lookup` and `[]` until full support of lists of maps is available
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a VpcEndpoint Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1051,7 +1058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing VpcEndpoint Resource {#look-up}
 
 Get an existing VpcEndpoint resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#VpcEndpointState">VpcEndpointState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#VpcEndpoint">VpcEndpoint</a></span></code></pre></div>
@@ -1831,9 +1838,6 @@ Defaults to `false`.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpcEndpointDnsEntryOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.VpcEndpointDnsEntry.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

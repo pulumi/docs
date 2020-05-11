@@ -47,6 +47,14 @@ const example = new gcp.compute.Image("example", {
     },
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example = gcp.compute.Image("example", raw_disk={
+    "source": "https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz",
+})
+```
 ## Example Usage - Image Guest Os
 
 
@@ -68,11 +76,28 @@ const example = new gcp.compute.Image("example", {
     },
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example = gcp.compute.Image("example",
+    guest_os_features=[
+        {
+            "type": "SECURE_BOOT",
+        },
+        {
+            "type": "MULTI_IP_SUBNET",
+        },
+    ],
+    raw_disk={
+        "source": "https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz",
+    })
+```
 
 
 
 ## Create a Image Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -920,7 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Image Resource {#look-up}
 
 Get an existing Image resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ImageState">ImageState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#Image">Image</a></span></code></pre></div>
@@ -1649,9 +1674,6 @@ rawDisk.source property but not both to create an image.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ImageGuestOsFeatureArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ImageGuestOsFeatureOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ImageGuestOsFeatureArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ImageGuestOsFeature.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1730,9 +1752,6 @@ rawDisk.source property but not both to create an image.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ImageRawDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ImageRawDiskOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ImageRawDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ImageRawDisk.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

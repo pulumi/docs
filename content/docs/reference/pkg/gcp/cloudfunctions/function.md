@@ -21,10 +21,132 @@ to be invoked. See below examples for how to set up the appropriate permissions,
 or view the [Cloud Functions IAM resources](https://www.terraform.io/docs/providers/google/r/cloudfunctions_cloud_function_iam.html)
 for Cloud Functions.
 
+## Example Usage - Public Function
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bucket = new gcp.storage.Bucket("bucket", {});
+const archive = new gcp.storage.BucketObject("archive", {
+    bucket: bucket.name,
+    source: new pulumi.asset.FileAsset("./path/to/zip/file/which/contains/code"),
+});
+const function = new gcp.cloudfunctions.Function("function", {
+    description: "My function",
+    runtime: "nodejs10",
+    availableMemoryMb: 128,
+    sourceArchiveBucket: bucket.name,
+    sourceArchiveObject: archive.name,
+    triggerHttp: true,
+    entryPoint: "helloGET",
+});
+// IAM entry for all users to invoke the function
+const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
+    project: function.project,
+    region: function.region,
+    cloudFunction: function.name,
+    role: "roles/cloudfunctions.invoker",
+    member: "allUsers",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bucket = gcp.storage.Bucket("bucket")
+archive = gcp.storage.BucketObject("archive",
+    bucket=bucket.name,
+    source=pulumi.FileAsset("./path/to/zip/file/which/contains/code"))
+function = gcp.cloudfunctions.Function("function",
+    description="My function",
+    runtime="nodejs10",
+    available_memory_mb=128,
+    source_archive_bucket=bucket.name,
+    source_archive_object=archive.name,
+    trigger_http=True,
+    entry_point="helloGET")
+# IAM entry for all users to invoke the function
+invoker = gcp.cloudfunctions.FunctionIamMember("invoker",
+    project=function.project,
+    region=function.region,
+    cloud_function=function.name,
+    role="roles/cloudfunctions.invoker",
+    member="allUsers")
+```
+
+## Example Usage - Single User
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bucket = new gcp.storage.Bucket("bucket", {});
+const archive = new gcp.storage.BucketObject("archive", {
+    bucket: bucket.name,
+    source: new pulumi.asset.FileAsset("./path/to/zip/file/which/contains/code"),
+});
+const function = new gcp.cloudfunctions.Function("function", {
+    description: "My function",
+    runtime: "nodejs10",
+    availableMemoryMb: 128,
+    sourceArchiveBucket: bucket.name,
+    sourceArchiveObject: archive.name,
+    triggerHttp: true,
+    timeout: 60,
+    entryPoint: "helloGET",
+    labels: {
+        "my-label": "my-label-value",
+    },
+    environmentVariables: {
+        MY_ENV_VAR: "my-env-var-value",
+    },
+});
+// IAM entry for a single user to invoke the function
+const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
+    project: function.project,
+    region: function.region,
+    cloudFunction: function.name,
+    role: "roles/cloudfunctions.invoker",
+    member: "user:myFunctionInvoker@example.com",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bucket = gcp.storage.Bucket("bucket")
+archive = gcp.storage.BucketObject("archive",
+    bucket=bucket.name,
+    source=pulumi.FileAsset("./path/to/zip/file/which/contains/code"))
+function = gcp.cloudfunctions.Function("function",
+    description="My function",
+    runtime="nodejs10",
+    available_memory_mb=128,
+    source_archive_bucket=bucket.name,
+    source_archive_object=archive.name,
+    trigger_http=True,
+    timeout=60,
+    entry_point="helloGET",
+    labels={
+        "my-label": "my-label-value",
+    },
+    environment_variables={
+        "MY_ENV_VAR": "my-env-var-value",
+    })
+# IAM entry for a single user to invoke the function
+invoker = gcp.cloudfunctions.FunctionIamMember("invoker",
+    project=function.project,
+    region=function.region,
+    cloud_function=function.name,
+    role="roles/cloudfunctions.invoker",
+    member="user:myFunctionInvoker@example.com")
+```
+
 
 
 ## Create a Function Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -283,7 +405,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the function.
+    <dd>{{% md %}}A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -481,7 +603,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the function.
+    <dd>{{% md %}}A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -679,7 +801,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the function.
+    <dd>{{% md %}}A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -877,7 +999,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the function.
+    <dd>{{% md %}}A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1072,7 +1194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Function Resource {#look-up}
 
 Get an existing Function resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#FunctionState">FunctionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#Function">Function</a></span></code></pre></div>
@@ -1262,7 +1384,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the function.
+    <dd>{{% md %}}A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1460,7 +1582,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the function.
+    <dd>{{% md %}}A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1658,7 +1780,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the function.
+    <dd>{{% md %}}A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1856,7 +1978,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the function.
+    <dd>{{% md %}}A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2000,9 +2122,6 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#FunctionEventTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#FunctionEventTriggerOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.Inputs.FunctionEventTriggerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.Outputs.FunctionEventTrigger.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2167,9 +2286,6 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#FunctionEventTriggerFailurePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#FunctionEventTriggerFailurePolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.Inputs.FunctionEventTriggerFailurePolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.Outputs.FunctionEventTriggerFailurePolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2248,9 +2364,6 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#FunctionSourceRepositoryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#FunctionSourceRepositoryOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.Inputs.FunctionSourceRepositoryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.Outputs.FunctionSourceRepository.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

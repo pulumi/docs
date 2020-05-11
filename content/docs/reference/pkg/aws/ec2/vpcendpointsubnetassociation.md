@@ -18,26 +18,12 @@ and a single `subnet_id`) and a VPC Endpoint resource with a `subnet_ids`
 attribute. Do not use the same subnet ID in both a VPC Endpoint resource and a VPC Endpoint Subnet
 Association resource. Doing so will cause a conflict of associations and will overwrite the association.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+Basic usage:
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -47,13 +33,22 @@ const snEc2 = new aws.ec2.VpcEndpointSubnetAssociation("sn_ec2", {
     vpcEndpointId: aws_vpc_endpoint_ec2.id,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+sn_ec2 = aws.ec2.VpcEndpointSubnetAssociation("snEc2",
+    subnet_id=aws_subnet["sn"]["id"],
+    vpc_endpoint_id=aws_vpc_endpoint["ec2"]["id"])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a VpcEndpointSubnetAssociation Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -409,7 +404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing VpcEndpointSubnetAssociation Resource {#look-up}
 
 Get an existing VpcEndpointSubnetAssociation resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#VpcEndpointSubnetAssociationState">VpcEndpointSubnetAssociationState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#VpcEndpointSubnetAssociation">VpcEndpointSubnetAssociation</a></span></code></pre></div>

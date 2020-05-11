@@ -24,12 +24,301 @@ probably be SQS queues.
 > **NOTE:** If SNS topic and SQS queue are in different AWS accounts and different AWS regions it is important to recognize that the subscription needs to be initiated from the account with the SQS queue but in the region of the SNS topic.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+You can directly supply a topic and ARN by hand in the `topic_arn` property along with the queue ARN:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const userUpdatesSqsTarget = new aws.sns.TopicSubscription("user_updates_sqs_target", {
+    endpoint: "arn:aws:sqs:us-west-2:432981146916:queue-too",
+    protocol: "sqs",
+    topic: "arn:aws:sns:us-west-2:432981146916:user-updates-topic",
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+user_updates_sqs_target = aws.sns.TopicSubscription("userUpdatesSqsTarget",
+    endpoint="arn:aws:sqs:us-west-2:432981146916:queue-too",
+    protocol="sqs",
+    topic="arn:aws:sns:us-west-2:432981146916:user-updates-topic")
+```
+
+Alternatively you can use the ARN properties of a managed SNS topic and SQS queue:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const userUpdates = new aws.sns.Topic("userUpdates", {});
+const userUpdatesQueue = new aws.sqs.Queue("userUpdatesQueue", {});
+const userUpdatesSqsTarget = new aws.sns.TopicSubscription("userUpdatesSqsTarget", {
+    topic: userUpdates.arn,
+    protocol: "sqs",
+    endpoint: userUpdatesQueue.arn,
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+user_updates = aws.sns.Topic("userUpdates")
+user_updates_queue = aws.sqs.Queue("userUpdatesQueue")
+user_updates_sqs_target = aws.sns.TopicSubscription("userUpdatesSqsTarget",
+    topic=user_updates.arn,
+    protocol="sqs",
+    endpoint=user_updates_queue.arn)
+```
+
+You can subscribe SNS topics to SQS queues in different Amazon accounts and regions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const config = new pulumi.Config();
+const sns = config.getObject("sns") || {
+    "account-id": "111111111111",
+    "role-name": "service/service",
+    name: "example-sns-topic",
+    display_name: "example",
+    region: "us-west-1",
+};
+const sqs = config.getObject("sqs") || {
+    "account-id": "222222222222",
+    "role-name": "service/service",
+    name: "example-sqs-queue",
+    region: "us-east-1",
+};
+const sns-topic-policy = aws.iam.getPolicyDocument({
+    policyId: "__default_policy_ID",
+    statement: [
+        {
+            actions: [
+                "SNS:Subscribe",
+                "SNS:SetTopicAttributes",
+                "SNS:RemovePermission",
+                "SNS:Receive",
+                "SNS:Publish",
+                "SNS:ListSubscriptionsByTopic",
+                "SNS:GetTopicAttributes",
+                "SNS:DeleteTopic",
+                "SNS:AddPermission",
+            ],
+            condition: [{
+                test: "StringEquals",
+                variable: "AWS:SourceOwner",
+                values: [sns["account-id"]],
+            }],
+            effect: "Allow",
+            principals: [{
+                type: "AWS",
+                identifiers: ["*"],
+            }],
+            resources: [`arn:aws:sns:${sns.region}:${sns["account-id"]}:${sns.name}`],
+            sid: "__default_statement_ID",
+        },
+        {
+            actions: [
+                "SNS:Subscribe",
+                "SNS:Receive",
+            ],
+            condition: [{
+                test: "StringLike",
+                variable: "SNS:Endpoint",
+                values: [`arn:aws:sqs:${sqs.region}:${sqs["account-id"]}:${sqs.name}`],
+            }],
+            effect: "Allow",
+            principals: [{
+                type: "AWS",
+                identifiers: ["*"],
+            }],
+            resources: [`arn:aws:sns:${sns.region}:${sns["account-id"]}:${sns.name}`],
+            sid: "__console_sub_0",
+        },
+    ],
+});
+const sqs-queue-policy = aws.iam.getPolicyDocument({
+    policyId: `arn:aws:sqs:${sqs.region}:${sqs["account-id"]}:${sqs.name}/SQSDefaultPolicy`,
+    statement: [{
+        sid: "example-sns-topic",
+        effect: "Allow",
+        principals: [{
+            type: "AWS",
+            identifiers: ["*"],
+        }],
+        actions: ["SQS:SendMessage"],
+        resources: [`arn:aws:sqs:${sqs.region}:${sqs["account-id"]}:${sqs.name}`],
+        condition: [{
+            test: "ArnEquals",
+            variable: "aws:SourceArn",
+            values: [`arn:aws:sns:${sns.region}:${sns["account-id"]}:${sns.name}`],
+        }],
+    }],
+});
+// provider to manage SNS topics
+const awsSns = new aws.Provider("awsSns", {
+    region: sns.region,
+    assume_role: {
+        roleArn: `arn:aws:iam::${sns["account-id"]}:role/${sns["role-name"]}`,
+        sessionName: `sns-${sns.region}`,
+    },
+});
+// provider to manage SQS queues
+const awsSqs = new aws.Provider("awsSqs", {
+    region: sqs.region,
+    assume_role: {
+        roleArn: `arn:aws:iam::${sqs["account-id"]}:role/${sqs["role-name"]}`,
+        sessionName: `sqs-${sqs.region}`,
+    },
+});
+// provider to subscribe SQS to SNS (using the SQS account but the SNS region)
+const sns2sqs = new aws.Provider("sns2sqs", {
+    region: sns.region,
+    assume_role: {
+        roleArn: `arn:aws:iam::${sqs["account-id"]}:role/${sqs["role-name"]}`,
+        sessionName: `sns2sqs-${sns.region}`,
+    },
+});
+const sns-topicTopic = new aws.sns.Topic("sns-topicTopic", {
+    displayName: sns.display_name,
+    policy: sns-topic-policy.then(sns_topic_policy => sns_topic_policy.json),
+});
+const sqs-queue = new aws.sqs.Queue("sqs-queue", {policy: sqs-queue-policy.then(sqs_queue_policy => sqs_queue_policy.json)});
+const sns-topicTopicSubscription = new aws.sns.TopicSubscription("sns-topicTopicSubscription", {
+    topic: sns-topicTopic.arn,
+    protocol: "sqs",
+    endpoint: sqs-queue.arn,
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_pulumi as pulumi
+
+config = pulumi.Config()
+sns = config.get_object("sns")
+if sns is None:
+    sns = {
+        "account-id": "111111111111",
+        "role-name": "service/service",
+        "name": "example-sns-topic",
+        "display_name": "example",
+        "region": "us-west-1",
+    }
+sqs = config.get_object("sqs")
+if sqs is None:
+    sqs = {
+        "account-id": "222222222222",
+        "role-name": "service/service",
+        "name": "example-sqs-queue",
+        "region": "us-east-1",
+    }
+sns_topic_policy = aws.iam.get_policy_document(policy_id="__default_policy_ID",
+    statement=[
+        {
+            "actions": [
+                "SNS:Subscribe",
+                "SNS:SetTopicAttributes",
+                "SNS:RemovePermission",
+                "SNS:Receive",
+                "SNS:Publish",
+                "SNS:ListSubscriptionsByTopic",
+                "SNS:GetTopicAttributes",
+                "SNS:DeleteTopic",
+                "SNS:AddPermission",
+            ],
+            "condition": [{
+                "test": "StringEquals",
+                "variable": "AWS:SourceOwner",
+                "values": [sns["account-id"]],
+            }],
+            "effect": "Allow",
+            "principals": [{
+                "type": "AWS",
+                "identifiers": ["*"],
+            }],
+            "resources": [f"arn:aws:sns:{sns['region']}:{sns['account-id']}:{sns['name']}"],
+            "sid": "__default_statement_ID",
+        },
+        {
+            "actions": [
+                "SNS:Subscribe",
+                "SNS:Receive",
+            ],
+            "condition": [{
+                "test": "StringLike",
+                "variable": "SNS:Endpoint",
+                "values": [f"arn:aws:sqs:{sqs['region']}:{sqs['account-id']}:{sqs['name']}"],
+            }],
+            "effect": "Allow",
+            "principals": [{
+                "type": "AWS",
+                "identifiers": ["*"],
+            }],
+            "resources": [f"arn:aws:sns:{sns['region']}:{sns['account-id']}:{sns['name']}"],
+            "sid": "__console_sub_0",
+        },
+    ])
+sqs_queue_policy = aws.iam.get_policy_document(policy_id=f"arn:aws:sqs:{sqs['region']}:{sqs['account-id']}:{sqs['name']}/SQSDefaultPolicy",
+    statement=[{
+        "sid": "example-sns-topic",
+        "effect": "Allow",
+        "principals": [{
+            "type": "AWS",
+            "identifiers": ["*"],
+        }],
+        "actions": ["SQS:SendMessage"],
+        "resources": [f"arn:aws:sqs:{sqs['region']}:{sqs['account-id']}:{sqs['name']}"],
+        "condition": [{
+            "test": "ArnEquals",
+            "variable": "aws:SourceArn",
+            "values": [f"arn:aws:sns:{sns['region']}:{sns['account-id']}:{sns['name']}"],
+        }],
+    }])
+# provider to manage SNS topics
+aws_sns = pulumi.providers.Aws("awsSns",
+    region=sns["region"],
+    assume_role={
+        "roleArn": f"arn:aws:iam::{sns['account-id']}:role/{sns['role-name']}",
+        "sessionName": f"sns-{sns['region']}",
+    })
+# provider to manage SQS queues
+aws_sqs = pulumi.providers.Aws("awsSqs",
+    region=sqs["region"],
+    assume_role={
+        "roleArn": f"arn:aws:iam::{sqs['account-id']}:role/{sqs['role-name']}",
+        "sessionName": f"sqs-{sqs['region']}",
+    })
+# provider to subscribe SQS to SNS (using the SQS account but the SNS region)
+sns2sqs = pulumi.providers.Aws("sns2sqs",
+    region=sns["region"],
+    assume_role={
+        "roleArn": f"arn:aws:iam::{sqs['account-id']}:role/{sqs['role-name']}",
+        "sessionName": f"sns2sqs-{sns['region']}",
+    })
+sns_topic_topic = aws.sns.Topic("sns-topicTopic",
+    display_name=sns["display_name"],
+    policy=sns_topic_policy.json)
+sqs_queue = aws.sqs.Queue("sqs-queue", policy=sqs_queue_policy.json)
+sns_topic_topic_subscription = aws.sns.TopicSubscription("sns-topicTopicSubscription",
+    topic=sns_topic_topic.arn,
+    protocol="sqs",
+    endpoint=sqs_queue.arn)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Create a TopicSubscription Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -637,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing TopicSubscription Resource {#look-up}
 
 Get an existing TopicSubscription resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#TopicSubscriptionState">TopicSubscriptionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#TopicSubscription">TopicSubscription</a></span></code></pre></div>

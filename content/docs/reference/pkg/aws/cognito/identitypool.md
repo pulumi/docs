@@ -12,26 +12,10 @@ meta_desc: "Explore the IdentityPool resource of the cognito module, including e
 
 Provides an AWS Cognito Identity Pool.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -63,13 +47,41 @@ const main = new aws.cognito.IdentityPool("main", {
     },
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+default = aws.iam.SamlProvider("default", saml_metadata_document=(lambda path: open(path).read())("saml-metadata.xml"))
+main = aws.cognito.IdentityPool("main",
+    allow_unauthenticated_identities=False,
+    cognito_identity_providers=[
+        {
+            "clientId": "6lhlkkfbfb4q5kpp90urffae",
+            "providerName": "cognito-idp.us-east-1.amazonaws.com/us-east-1_Tv0493apJ",
+            "serverSideTokenCheck": False,
+        },
+        {
+            "clientId": "7kodkvfqfb4qfkp39eurffae",
+            "providerName": "cognito-idp.us-east-1.amazonaws.com/eu-west-1_Zr231apJu",
+            "serverSideTokenCheck": False,
+        },
+    ],
+    identity_pool_name="identity pool",
+    openid_connect_provider_arns=["arn:aws:iam::123456789012:oidc-provider/foo.example.com"],
+    saml_provider_arns=[default.arn],
+    supported_login_providers={
+        "accounts.google.com": "123456789012.apps.googleusercontent.com",
+        "graph.facebook.com": "7346241598935552",
+    })
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a IdentityPool Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -681,7 +693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing IdentityPool Resource {#look-up}
 
 Get an existing IdentityPool resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#IdentityPoolState">IdentityPoolState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#IdentityPool">IdentityPool</a></span></code></pre></div>
@@ -1173,9 +1185,6 @@ backend and the Cognito service to communicate about the developer provider.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#IdentityPoolCognitoIdentityProviderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#IdentityPoolCognitoIdentityProviderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.IdentityPoolCognitoIdentityProviderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.IdentityPoolCognitoIdentityProvider.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

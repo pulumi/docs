@@ -18,26 +18,12 @@ Manages an EC2 VPN connection. These objects can be connected to customer gatewa
 > **Note:** The CIDR blocks in the arguments `tunnel1_inside_cidr` and `tunnel2_inside_cidr` must have a prefix of /30 and be a part of a specific range.
 [Read more about this in the AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnTunnelOptionsSpecification.html).
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### EC2 Transit Gateway
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -54,22 +40,25 @@ const exampleVpnConnection = new aws.ec2.VpnConnection("example", {
     type: exampleCustomerGateway.type,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example_transit_gateway = aws.ec2transitgateway.TransitGateway("exampleTransitGateway")
+example_customer_gateway = aws.ec2.CustomerGateway("exampleCustomerGateway",
+    bgp_asn=65000,
+    ip_address="172.0.0.1",
+    type="ipsec.1")
+example_vpn_connection = aws.ec2.VpnConnection("exampleVpnConnection",
+    customer_gateway_id=example_customer_gateway.id,
+    transit_gateway_id=example_transit_gateway.id,
+    type=example_customer_gateway.type)
+```
+
+{{% /example %}}
+{{% example %}}
 ### Virtual Private Gateway
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -92,13 +81,30 @@ const main = new aws.ec2.VpnConnection("main", {
     vpnGatewayId: vpnGateway.id,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+vpc = aws.ec2.Vpc("vpc", cidr_block="10.0.0.0/16")
+vpn_gateway = aws.ec2.VpnGateway("vpnGateway", vpc_id=vpc.id)
+customer_gateway = aws.ec2.CustomerGateway("customerGateway",
+    bgp_asn=65000,
+    ip_address="172.0.0.1",
+    type="ipsec.1")
+main = aws.ec2.VpnConnection("main",
+    customer_gateway_id=customer_gateway.id,
+    static_routes_only=True,
+    type="ipsec.1",
+    vpn_gateway_id=vpn_gateway.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a VpnConnection Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1238,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing VpnConnection Resource {#look-up}
 
 Get an existing VpnConnection resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#VpnConnectionState">VpnConnectionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#VpnConnection">VpnConnection</a></span></code></pre></div>
@@ -2259,9 +2265,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpnConnectionRouteTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.VpnConnectionRoute.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2400,9 +2403,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpnConnectionVgwTelemetryOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.VpnConnectionVgwTelemetry.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

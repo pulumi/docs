@@ -16,10 +16,168 @@ To get more information about ExternalVpnGateway, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/beta/externalVpnGateways)
 
+## Example Usage - External Vpn Gateway
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const network = new gcp.compute.Network("network", {
+    routingMode: "GLOBAL",
+    autoCreateSubnetworks: false,
+});
+const haGateway = new gcp.compute.HaVpnGateway("haGateway", {
+    region: "us-central1",
+    network: network.selfLink,
+});
+const externalGateway = new gcp.compute.ExternalVpnGateway("externalGateway", {
+    redundancyType: "SINGLE_IP_INTERNALLY_REDUNDANT",
+    description: "An externally managed VPN gateway",
+    "interface": [{
+        id: 0,
+        ipAddress: "8.8.8.8",
+    }],
+});
+const networkSubnet1 = new gcp.compute.Subnetwork("networkSubnet1", {
+    ipCidrRange: "10.0.1.0/24",
+    region: "us-central1",
+    network: network.selfLink,
+});
+const networkSubnet2 = new gcp.compute.Subnetwork("networkSubnet2", {
+    ipCidrRange: "10.0.2.0/24",
+    region: "us-west1",
+    network: network.selfLink,
+});
+const router1 = new gcp.compute.Router("router1", {
+    network: network.name,
+    bgp: {
+        asn: 64514,
+    },
+});
+const tunnel1 = new gcp.compute.VPNTunnel("tunnel1", {
+    region: "us-central1",
+    vpnGateway: haGateway.selfLink,
+    peerExternalGateway: externalGateway.selfLink,
+    peerExternalGatewayInterface: 0,
+    sharedSecret: "a secret message",
+    router: router1.selfLink,
+    vpnGatewayInterface: 0,
+});
+const tunnel2 = new gcp.compute.VPNTunnel("tunnel2", {
+    region: "us-central1",
+    vpnGateway: haGateway.selfLink,
+    peerExternalGateway: externalGateway.selfLink,
+    peerExternalGatewayInterface: 0,
+    sharedSecret: "a secret message",
+    router: pulumi.interpolate` ${router1.selfLink}`,
+    vpnGatewayInterface: 1,
+});
+const router1Interface1 = new gcp.compute.RouterInterface("router1Interface1", {
+    router: router1.name,
+    region: "us-central1",
+    ipRange: "169.254.0.1/30",
+    vpnTunnel: tunnel1.name,
+});
+const router1Peer1 = new gcp.compute.RouterPeer("router1Peer1", {
+    router: router1.name,
+    region: "us-central1",
+    peerIpAddress: "169.254.0.2",
+    peerAsn: 64515,
+    advertisedRoutePriority: 100,
+    "interface": router1Interface1.name,
+});
+const router1Interface2 = new gcp.compute.RouterInterface("router1Interface2", {
+    router: router1.name,
+    region: "us-central1",
+    ipRange: "169.254.1.1/30",
+    vpnTunnel: tunnel2.name,
+});
+const router1Peer2 = new gcp.compute.RouterPeer("router1Peer2", {
+    router: router1.name,
+    region: "us-central1",
+    peerIpAddress: "169.254.1.2",
+    peerAsn: 64515,
+    advertisedRoutePriority: 100,
+    "interface": router1Interface2.name,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network = gcp.compute.Network("network",
+    routing_mode="GLOBAL",
+    auto_create_subnetworks=False)
+ha_gateway = gcp.compute.HaVpnGateway("haGateway",
+    region="us-central1",
+    network=network.self_link)
+external_gateway = gcp.compute.ExternalVpnGateway("externalGateway",
+    redundancy_type="SINGLE_IP_INTERNALLY_REDUNDANT",
+    description="An externally managed VPN gateway",
+    interface=[{
+        "id": 0,
+        "ipAddress": "8.8.8.8",
+    }])
+network_subnet1 = gcp.compute.Subnetwork("networkSubnet1",
+    ip_cidr_range="10.0.1.0/24",
+    region="us-central1",
+    network=network.self_link)
+network_subnet2 = gcp.compute.Subnetwork("networkSubnet2",
+    ip_cidr_range="10.0.2.0/24",
+    region="us-west1",
+    network=network.self_link)
+router1 = gcp.compute.Router("router1",
+    network=network.name,
+    bgp={
+        "asn": 64514,
+    })
+tunnel1 = gcp.compute.VPNTunnel("tunnel1",
+    region="us-central1",
+    vpn_gateway=ha_gateway.self_link,
+    peer_external_gateway=external_gateway.self_link,
+    peer_external_gateway_interface=0,
+    shared_secret="a secret message",
+    router=router1.self_link,
+    vpn_gateway_interface=0)
+tunnel2 = gcp.compute.VPNTunnel("tunnel2",
+    region="us-central1",
+    vpn_gateway=ha_gateway.self_link,
+    peer_external_gateway=external_gateway.self_link,
+    peer_external_gateway_interface=0,
+    shared_secret="a secret message",
+    router=router1.self_link.apply(lambda self_link: f" {self_link}"),
+    vpn_gateway_interface=1)
+router1_interface1 = gcp.compute.RouterInterface("router1Interface1",
+    router=router1.name,
+    region="us-central1",
+    ip_range="169.254.0.1/30",
+    vpn_tunnel=tunnel1.name)
+router1_peer1 = gcp.compute.RouterPeer("router1Peer1",
+    router=router1.name,
+    region="us-central1",
+    peer_ip_address="169.254.0.2",
+    peer_asn=64515,
+    advertised_route_priority=100,
+    interface=router1_interface1.name)
+router1_interface2 = gcp.compute.RouterInterface("router1Interface2",
+    router=router1.name,
+    region="us-central1",
+    ip_range="169.254.1.1/30",
+    vpn_tunnel=tunnel2.name)
+router1_peer2 = gcp.compute.RouterPeer("router1Peer2",
+    router=router1.name,
+    region="us-central1",
+    peer_ip_address="169.254.1.2",
+    peer_asn=64515,
+    advertised_route_priority=100,
+    interface=router1_interface2.name)
+```
+
 
 
 ## Create a ExternalVpnGateway Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -547,7 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ExternalVpnGateway Resource {#look-up}
 
 Get an existing ExternalVpnGateway resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ExternalVpnGatewayState">ExternalVpnGatewayState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ExternalVpnGateway">ExternalVpnGateway</a></span></code></pre></div>
@@ -955,9 +1113,6 @@ If it is not provided, the provider project is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ExternalVpnGatewayInterfaceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ExternalVpnGatewayInterfaceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ExternalVpnGatewayInterfaceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ExternalVpnGatewayInterface.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

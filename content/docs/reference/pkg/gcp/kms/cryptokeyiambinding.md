@@ -20,6 +20,43 @@ Three different resources help you manage your IAM policy for KMS crypto key. Ea
 
 > **Note:** `gcp.kms.CryptoKeyIAMBinding` resources **can be** used in conjunction with `gcp.kms.CryptoKeyIAMMember` resources **only if** they do not grant privilege to the same role.
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const key = new gcp.kms.CryptoKey("key", {
+    keyRing: keyring.id,
+    rotationPeriod: "100000s",
+});
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/cloudkms.cryptoKeyEncrypter",
+        members: ["user:jane@example.com"],
+    }],
+});
+const cryptoKey = new gcp.kms.CryptoKeyIAMPolicy("cryptoKey", {
+    cryptoKeyId: key.id,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+keyring = gcp.kms.KeyRing("keyring", location="global")
+key = gcp.kms.CryptoKey("key",
+    key_ring=keyring.id,
+    rotation_period="100000s")
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/cloudkms.cryptoKeyEncrypter",
+    "members": ["user:jane@example.com"],
+}])
+crypto_key = gcp.kms.CryptoKeyIAMPolicy("cryptoKey",
+    crypto_key_id=key.id,
+    policy_data=admin.policy_data)
+```
+
 With IAM Conditions:
 
 ```typescript
@@ -38,16 +75,129 @@ const admin = pulumi.output(gcp.organizations.getIAMPolicy({
     }],
 }, { async: true }));
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(bindings=[{
+    "condition": {
+        "description": "Expiring at midnight of 2019-12-31",
+        "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        "title": "expires_after_2019_12_31",
+    },
+    "members": ["user:jane@example.com"],
+    "role": "roles/cloudkms.cryptoKeyEncrypter",
+}])
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const cryptoKey = new gcp.kms.CryptoKeyIAMBinding("cryptoKey", {
+    cryptoKeyId: google_kms_crypto_key.key.id,
+    role: "roles/cloudkms.cryptoKeyEncrypter",
+    members: ["user:jane@example.com"],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+crypto_key = gcp.kms.CryptoKeyIAMBinding("cryptoKey",
+    crypto_key_id=google_kms_crypto_key["key"]["id"],
+    role="roles/cloudkms.cryptoKeyEncrypter",
+    members=["user:jane@example.com"])
+```
 
 With IAM Conditions:
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const cryptoKey = new gcp.kms.CryptoKeyIAMBinding("cryptoKey", {
+    cryptoKeyId: google_kms_crypto_key.key.id,
+    role: "roles/cloudkms.cryptoKeyEncrypter",
+    members: ["user:jane@example.com"],
+    condition: {
+        title: "expires_after_2019_12_31",
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+crypto_key = gcp.kms.CryptoKeyIAMBinding("cryptoKey",
+    crypto_key_id=google_kms_crypto_key["key"]["id"],
+    role="roles/cloudkms.cryptoKeyEncrypter",
+    members=["user:jane@example.com"],
+    condition={
+        "title": "expires_after_2019_12_31",
+        "description": "Expiring at midnight of 2019-12-31",
+        "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    })
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const cryptoKey = new gcp.kms.CryptoKeyIAMMember("cryptoKey", {
+    cryptoKeyId: google_kms_crypto_key.key.id,
+    role: "roles/cloudkms.cryptoKeyEncrypter",
+    member: "user:jane@example.com",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+crypto_key = gcp.kms.CryptoKeyIAMMember("cryptoKey",
+    crypto_key_id=google_kms_crypto_key["key"]["id"],
+    role="roles/cloudkms.cryptoKeyEncrypter",
+    member="user:jane@example.com")
+```
 
 With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const cryptoKey = new gcp.kms.CryptoKeyIAMMember("cryptoKey", {
+    cryptoKeyId: google_kms_crypto_key.key.id,
+    role: "roles/cloudkms.cryptoKeyEncrypter",
+    member: "user:jane@example.com",
+    condition: {
+        title: "expires_after_2019_12_31",
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+crypto_key = gcp.kms.CryptoKeyIAMMember("cryptoKey",
+    crypto_key_id=google_kms_crypto_key["key"]["id"],
+    role="roles/cloudkms.cryptoKeyEncrypter",
+    member="user:jane@example.com",
+    condition={
+        "title": "expires_after_2019_12_31",
+        "description": "Expiring at midnight of 2019-12-31",
+        "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    })
+```
 
 
 
 ## Create a CryptoKeyIAMBinding Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -527,7 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing CryptoKeyIAMBinding Resource {#look-up}
 
 Get an existing CryptoKeyIAMBinding resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#CryptoKeyIAMBindingState">CryptoKeyIAMBindingState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#CryptoKeyIAMBinding">CryptoKeyIAMBinding</a></span></code></pre></div>
@@ -887,9 +1037,6 @@ the provider's project setting will be used as a fallback.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKeyIAMBindingConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKeyIAMBindingConditionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.Inputs.CryptoKeyIAMBindingConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.Outputs.CryptoKeyIAMBindingCondition.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

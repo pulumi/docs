@@ -15,13 +15,32 @@ This data source fetches the project name, and provides the appropriate URLs to 
 The URLs are computed entirely offline - as long as the project exists, they will be valid, but this data source does not contact Google Container Registry (GCR) at any point.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const foo = gcp.container.getRegistryRepository({});
+export const gcrLocation = foo.then(foo => foo.repositoryUrl);
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+foo = gcp.container.get_registry_repository()
+pulumi.export("gcrLocation", foo.repository_url)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Using GetRegistryRepository {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -320,16 +339,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

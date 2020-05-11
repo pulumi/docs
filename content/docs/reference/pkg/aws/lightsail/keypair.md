@@ -25,6 +25,13 @@ import * as aws from "@pulumi/aws";
 // Create a new Lightsail Key Pair
 const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {});
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+# Create a new Lightsail Key Pair
+lg_key_pair = aws.lightsail.KeyPair("lgKeyPair")
+```
 
 ## Create new Key Pair, encrypting the private key with a PGP Key
 
@@ -35,6 +42,12 @@ import * as aws from "@pulumi/aws";
 const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {
     pgpKey: "keybase:keybaseusername",
 });
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+lg_key_pair = aws.lightsail.KeyPair("lgKeyPair", pgp_key="keybase:keybaseusername")
 ```
 
 ## Import an existing public key
@@ -48,11 +61,17 @@ const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {
     publicKey: fs.readFileSync("~/.ssh/id_rsa.pub", "utf-8"),
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+lg_key_pair = aws.lightsail.KeyPair("lgKeyPair", public_key=(lambda path: open(path).read())("~/.ssh/id_rsa.pub"))
+```
 
 
 
 ## Create a KeyPair Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -684,7 +703,7 @@ when creating a new key, and when no `pgp_key` is provided
 ## Look up an Existing KeyPair Resource {#look-up}
 
 Get an existing KeyPair resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lightsail/#KeyPairState">KeyPairState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lightsail/#KeyPair">KeyPair</a></span></code></pre></div>

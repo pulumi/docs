@@ -17,7 +17,29 @@ For information about CloudFront distributions, see the
 origin access identities, see
 [Using an Origin Access Identity to Restrict Access to Your Amazon S3 Content][2].
 
+{{% examples %}}
+## Example Usage
+{{% example %}}
 
+The following example below creates a CloudFront origin access identity.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_access_identity", {
+    comment: "Some comment",
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+origin_access_identity = aws.cloudfront.OriginAccessIdentity("originAccessIdentity", comment="Some comment")
+```
+
+{{% /example %}}
+{{% /examples %}}
 ## Using With CloudFront
 
 Normally, when referencing an origin access identity in CloudFront, you need to
@@ -28,6 +50,9 @@ The below snippet demonstrates use with the `s3_origin_config` structure for the
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 
 ### Updating your bucket policy
@@ -66,45 +91,42 @@ const example = new aws.s3.BucketPolicy("example", {
     policy: s3Policy.json,
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+s3_policy = aws.iam.get_policy_document(statements=[
+    {
+        "actions": ["s3:GetObject"],
+        "principals": [{
+            "identifiers": [aws_cloudfront_origin_access_identity["origin_access_identity"]["iam_arn"]],
+            "type": "AWS",
+        }],
+        "resources": [f"{aws_s3_bucket['example']['arn']}/*"],
+    },
+    {
+        "actions": ["s3:ListBucket"],
+        "principals": [{
+            "identifiers": [aws_cloudfront_origin_access_identity["origin_access_identity"]["iam_arn"]],
+            "type": "AWS",
+        }],
+        "resources": [aws_s3_bucket["example"]["arn"]],
+    },
+])
+example = aws.s3.BucketPolicy("example",
+    bucket=aws_s3_bucket["example"]["id"],
+    policy=s3_policy.json)
+```
 
 [1]: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html
 [2]: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html
 [3]: https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html
 [4]: https://www.terraform.io/docs/providers/aws/r/s3_bucket.html
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_access_identity", {
-    comment: "Some comment",
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a OriginAccessIdentity Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -632,7 +654,7 @@ permission to an object in Amazon S3.
 ## Look up an Existing OriginAccessIdentity Resource {#look-up}
 
 Get an existing OriginAccessIdentity resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#OriginAccessIdentityState">OriginAccessIdentityState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#OriginAccessIdentity">OriginAccessIdentity</a></span></code></pre></div>

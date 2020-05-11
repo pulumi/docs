@@ -12,26 +12,10 @@ meta_desc: "Explore the GetCluster function of the redshift module, including ex
 
 Provides details about a specific redshift cluster.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -59,14 +43,39 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
     },
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+test_cluster = aws.redshift.get_cluster(cluster_identifier="test-cluster")
+test_stream = aws.kinesis.FirehoseDeliveryStream("testStream",
+    destination="redshift",
+    redshift_configuration={
+        "clusterJdbcurl": f"jdbc:redshift://{test_cluster.endpoint}/{test_cluster.database_name}",
+        "copyOptions": "delimiter '|'",
+        "dataTableColumns": "test-col",
+        "dataTableName": "test-table",
+        "password": "T3stPass",
+        "roleArn": aws_iam_role["firehose_role"]["arn"],
+        "username": "testuser",
+    },
+    s3_configuration={
+        "bucketArn": aws_s3_bucket["bucket"]["arn"],
+        "bufferInterval": 400,
+        "bufferSize": 10,
+        "compressionFormat": "GZIP",
+        "roleArn": aws_iam_role["firehose_role"]["arn"],
+    })
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetCluster {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1353,16 +1362,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

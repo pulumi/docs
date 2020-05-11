@@ -21,26 +21,10 @@ an existing Google Cloud Platform Billing Account.
     Use `pulumi import` and inspect the output to ensure
     your existing members are preserved.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -51,13 +35,23 @@ const binding = new gcp.billing.AccountIamBinding("binding", {
     role: "roles/billing.viewer",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
 
+binding = gcp.billing.AccountIamBinding("binding",
+    billing_account_id="00AA00-000AAA-00AA0A",
+    members=["user:alice@gmail.com"],
+    role="roles/billing.viewer")
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a AccountIamBinding Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -517,7 +511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing AccountIamBinding Resource {#look-up}
 
 Get an existing AccountIamBinding resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/billing/#AccountIamBindingState">AccountIamBindingState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/billing/#AccountIamBinding">AccountIamBinding</a></span></code></pre></div>
@@ -857,9 +851,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/billing?tab=doc#AccountIamBindingConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/billing?tab=doc#AccountIamBindingConditionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Inputs.AccountIamBindingConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Outputs.AccountIamBindingCondition.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

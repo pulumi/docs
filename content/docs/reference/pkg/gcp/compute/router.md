@@ -19,10 +19,57 @@ To get more information about Router, see:
 * How-to Guides
     * [Google Cloud Router](https://cloud.google.com/router/docs/)
 
+## Example Usage - Router Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const foobarNetwork = new gcp.compute.Network("foobarNetwork", {autoCreateSubnetworks: false});
+const foobarRouter = new gcp.compute.Router("foobarRouter", {
+    network: foobarNetwork.name,
+    bgp: {
+        asn: 64514,
+        advertiseMode: "CUSTOM",
+        advertisedGroups: ["ALL_SUBNETS"],
+        advertised_ip_ranges: [
+            {
+                range: "1.2.3.4",
+            },
+            {
+                range: "6.7.0.0/16",
+            },
+        ],
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+foobar_network = gcp.compute.Network("foobarNetwork", auto_create_subnetworks=False)
+foobar_router = gcp.compute.Router("foobarRouter",
+    network=foobar_network.name,
+    bgp={
+        "asn": 64514,
+        "advertiseMode": "CUSTOM",
+        "advertisedGroups": ["ALL_SUBNETS"],
+        "advertised_ip_ranges": [
+            {
+                "range": "1.2.3.4",
+            },
+            {
+                "range": "6.7.0.0/16",
+            },
+        ],
+    })
+```
+
 
 
 ## Create a Router Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -618,7 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Router Resource {#look-up}
 
 Get an existing Router resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouterState">RouterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#Router">Router</a></span></code></pre></div>
@@ -1095,9 +1142,6 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouterBgpArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouterBgpOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RouterBgpArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RouterBgp.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1124,7 +1168,6 @@ will have the same local ASN.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement.
-Valid values of this enum field are: DEFAULT, CUSTOM
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1180,7 +1223,6 @@ will have the same local ASN.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement.
-Valid values of this enum field are: DEFAULT, CUSTOM
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1236,7 +1278,6 @@ will have the same local ASN.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement.
-Valid values of this enum field are: DEFAULT, CUSTOM
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1292,7 +1333,6 @@ will have the same local ASN.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement.
-Valid values of this enum field are: DEFAULT, CUSTOM
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1336,9 +1376,6 @@ Leave this field blank to advertise no custom IP ranges.  Structure is documente
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouterBgpAdvertisedIpRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouterBgpAdvertisedIpRangeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RouterBgpAdvertisedIpRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RouterBgpAdvertisedIpRange.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

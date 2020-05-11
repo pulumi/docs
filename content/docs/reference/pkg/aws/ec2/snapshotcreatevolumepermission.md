@@ -12,26 +12,10 @@ meta_desc: "Explore the SnapshotCreateVolumePermission resource of the ec2 modul
 
 Adds permission to create volumes off of a given EBS Snapshot.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -48,13 +32,26 @@ const examplePerm = new aws.ec2.SnapshotCreateVolumePermission("example_perm", {
     snapshotId: exampleSnapshot.id,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example = aws.ebs.Volume("example",
+    availability_zone="us-west-2a",
+    size=40)
+example_snapshot = aws.ebs.Snapshot("exampleSnapshot", volume_id=example.id)
+example_perm = aws.ec2.SnapshotCreateVolumePermission("examplePerm",
+    account_id="12345678",
+    snapshot_id=example_snapshot.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a SnapshotCreateVolumePermission Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -410,7 +407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing SnapshotCreateVolumePermission Resource {#look-up}
 
 Get an existing SnapshotCreateVolumePermission resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SnapshotCreateVolumePermissionState">SnapshotCreateVolumePermissionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SnapshotCreateVolumePermission">SnapshotCreateVolumePermission</a></span></code></pre></div>

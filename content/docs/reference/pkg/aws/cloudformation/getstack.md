@@ -13,26 +13,10 @@ meta_desc: "Explore the GetStack function of the cloudformation module, includin
 The CloudFormation Stack data source allows access to stack
 outputs and other useful data including the template body.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -49,14 +33,28 @@ const web = new aws.ec2.Instance("web", {
     },
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+network = aws.cloudformation.get_stack(name="my-network-stack")
+web = aws.ec2.Instance("web",
+    ami="ami-abb07bcb",
+    instance_type="t1.micro",
+    subnet_id=network.outputs["SubnetId"],
+    tags={
+        "Name": "HelloWorld",
+    })
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetStack {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -659,16 +657,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

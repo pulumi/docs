@@ -19,10 +19,45 @@ To get more information about DicomStore, see:
 * How-to Guides
     * [Creating a DICOM store](https://cloud.google.com/healthcare/docs/how-tos/dicom)
 
+## Example Usage - Healthcare Dicom Store Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const topic = new gcp.pubsub.Topic("topic", {});
+const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"});
+const default = new gcp.healthcare.DicomStore("default", {
+    dataset: dataset.id,
+    notification_config: {
+        pubsubTopic: topic.id,
+    },
+    labels: {
+        label1: "labelvalue1",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+topic = gcp.pubsub.Topic("topic")
+dataset = gcp.healthcare.Dataset("dataset", location="us-central1")
+default = gcp.healthcare.DicomStore("default",
+    dataset=dataset.id,
+    notification_config={
+        "pubsubTopic": topic.id,
+    },
+    labels={
+        "label1": "labelvalue1",
+    })
+```
+
 
 
 ## Create a DicomStore Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -522,7 +557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DicomStore Resource {#look-up}
 
 Get an existing DicomStore resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#DicomStoreState">DicomStoreState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#DicomStore">DicomStore</a></span></code></pre></div>
@@ -902,9 +937,6 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#DicomStoreNotificationConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#DicomStoreNotificationConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Inputs.DicomStoreNotificationConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Outputs.DicomStoreNotificationConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

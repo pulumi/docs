@@ -14,26 +14,10 @@ Manages an IAM User Login Profile with limited support for password creation dur
 
 > To reset an IAM User login password via this provider, you can use delete and recreate this resource or change any of the arguments.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -49,13 +33,26 @@ const exampleUserLoginProfile = new aws.iam.UserLoginProfile("example", {
 
 export const password = exampleUserLoginProfile.encryptedPassword;
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+example_user = aws.iam.User("exampleUser",
+    force_destroy=True,
+    path="/")
+example_user_login_profile = aws.iam.UserLoginProfile("exampleUserLoginProfile",
+    pgp_key="keybase:some_person_that_exists",
+    user=example_user.name)
+pulumi.export("password", example_user_login_profile.encrypted_password)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a UserLoginProfile Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -555,7 +552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing UserLoginProfile Resource {#look-up}
 
 Get an existing UserLoginProfile resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#UserLoginProfileState">UserLoginProfileState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#UserLoginProfile">UserLoginProfile</a></span></code></pre></div>

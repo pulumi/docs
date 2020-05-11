@@ -13,26 +13,10 @@ meta_desc: "Explore the HostedPrivateVirtualInterfaceAccepter resource of the di
 Provides a resource to manage the accepter's side of a Direct Connect hosted private virtual interface.
 This resource accepts ownership of a private virtual interface created by another AWS account.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -57,13 +41,37 @@ const accepterHostedPrivateVirtualInterfaceAccepter = new aws.directconnect.Host
     vpnGatewayId: vpnGw.id,
 }, { provider: accepter });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_pulumi as pulumi
 
+accepter = pulumi.providers.Aws("accepter")
+accepter_caller_identity = aws.get_caller_identity()
+# Creator's side of the VIF
+creator = aws.directconnect.HostedPrivateVirtualInterface("creator",
+    address_family="ipv4",
+    bgp_asn=65352,
+    connection_id="dxcon-zzzzzzzz",
+    owner_account_id=accepter_caller_identity.account_id,
+    vlan=4094)
+# Accepter's side of the VIF.
+vpn_gw = aws.ec2.VpnGateway("vpnGw")
+accepter_hosted_private_virtual_interface_accepter = aws.directconnect.HostedPrivateVirtualInterfaceAccepter("accepterHostedPrivateVirtualInterfaceAccepter",
+    tags={
+        "Side": "Accepter",
+    },
+    virtual_interface_id=creator.id,
+    vpn_gateway_id=vpn_gw.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a HostedPrivateVirtualInterfaceAccepter Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -527,7 +535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing HostedPrivateVirtualInterfaceAccepter Resource {#look-up}
 
 Get an existing HostedPrivateVirtualInterfaceAccepter resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directconnect/#HostedPrivateVirtualInterfaceAccepterState">HostedPrivateVirtualInterfaceAccepterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directconnect/#HostedPrivateVirtualInterfaceAccepter">HostedPrivateVirtualInterfaceAccepter</a></span></code></pre></div>

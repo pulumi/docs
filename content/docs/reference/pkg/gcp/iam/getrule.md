@@ -12,11 +12,28 @@ meta_desc: "Explore the GetRule function of the iam module, including examples, 
 
 Use this data source to get information about a Google IAM Role.
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const roleinfo = gcp.iam.getRule({
+    name: "roles/compute.viewer",
+});
+export const theRolePermissions = roleinfo.then(roleinfo => roleinfo.includedPermissions);
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+roleinfo = gcp.iam.get_rule(name="roles/compute.viewer")
+pulumi.export("theRolePermissions", roleinfo.included_permissions)
+```
+
 
 
 ## Using GetRule {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -331,16 +348,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

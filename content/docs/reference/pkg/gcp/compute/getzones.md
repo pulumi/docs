@@ -13,11 +13,42 @@ meta_desc: "Explore the GetZones function of the compute module, including examp
 Provides access to available Google Compute zones in a region for a given project.
 See more about [regions and zones](https://cloud.google.com/compute/docs/regions-zones/regions-zones) in the upstream docs.
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+export = async () => {
+    const available = gcp.compute.getZones({});
+    const foo: gcp.compute.InstanceGroupManager[];
+    for (const range = {value: 0}; range.value < await available.then(available => available.names).length; range.value++) {
+        foo.push(new gcp.compute.InstanceGroupManager(`foo-${range.value}`, {
+            instanceTemplate: google_compute_instance_template.foobar.self_link,
+            baseInstanceName: `foobar-${range.value}`,
+            zone: available.then(available => available.names[range.value]),
+            targetSize: 1,
+        }));
+    }
+}
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+available = gcp.compute.get_zones()
+foo = []
+for range in [{"value": i} for i in range(0, len(available.names))]:
+    foo.append(gcp.compute.InstanceGroupManager(f"foo-{range['value']}",
+        instance_template=google_compute_instance_template["foobar"]["self_link"],
+        base_instance_name=f"foobar-{range['value']}",
+        zone=available.names[range["value"]],
+        target_size=1))
+```
+
 
 
 ## Using GetZones {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -400,16 +431,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

@@ -38,11 +38,23 @@ const peer = new gcp.compute.RouterPeer("peer", {
     router: "my-router",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+peer = gcp.compute.RouterPeer("peer",
+    advertised_route_priority=100,
+    interface="interface-1",
+    peer_asn=65513,
+    peer_ip_address="169.254.1.2",
+    region="us-central1",
+    router="my-router")
+```
 
 
 
 ## Create a RouterPeer Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -886,7 +898,7 @@ of BGP peer when the PARTNER InterconnectAttachment is created, updated, or dele
 ## Look up an Existing RouterPeer Resource {#look-up}
 
 Get an existing RouterPeer resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouterPeerState">RouterPeerState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouterPeer">RouterPeer</a></span></code></pre></div>
@@ -1610,9 +1622,6 @@ If it is not provided, the provider region is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouterPeerAdvertisedIpRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouterPeerAdvertisedIpRangeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RouterPeerAdvertisedIpRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RouterPeerAdvertisedIpRange.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -14,26 +14,10 @@ Manages a Password associated with a Service Principal within Azure Active Direc
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
@@ -54,13 +38,30 @@ const exampleServicePrincipalPassword = new azuread.ServicePrincipalPassword("ex
     value: "VT=uSgbTanZhyz@%nL9Hpd+Tfay_MRV#",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_azuread as azuread
 
+example_application = azuread.Application("exampleApplication",
+    available_to_other_tenants=False,
+    homepage="http://homepage",
+    identifier_uris=["http://uri"],
+    oauth2_allow_implicit_flow=True,
+    reply_urls=["http://replyurl"])
+example_service_principal = azuread.ServicePrincipal("exampleServicePrincipal", application_id=example_application.application_id)
+example_service_principal_password = azuread.ServicePrincipalPassword("exampleServicePrincipalPassword",
+    end_date="2099-01-01T01:02:03Z",
+    service_principal_id=example_service_principal.id,
+    value="VT=uSgbTanZhyz@%nL9Hpd+Tfay_MRV#")
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a ServicePrincipalPassword Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -560,7 +561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ServicePrincipalPassword Resource {#look-up}
 
 Get an existing ServicePrincipalPassword resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#ServicePrincipalPasswordState">ServicePrincipalPasswordState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#ServicePrincipalPassword">ServicePrincipalPassword</a></span></code></pre></div>

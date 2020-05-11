@@ -14,26 +14,10 @@ Provides a CodePipeline.
 
 > **NOTE on `aws.codepipeline.Pipeline`:** - the `GITHUB_TOKEN` environment variable must be set if the GitHub provider is specified.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -152,13 +136,126 @@ const codepipeline = new aws.codepipeline.Pipeline("codepipeline", {
     ],
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+codepipeline_bucket = aws.s3.Bucket("codepipelineBucket", acl="private")
+codepipeline_role = aws.iam.Role("codepipelineRole", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "codepipeline.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+
+""")
+codepipeline_policy = aws.iam.RolePolicy("codepipelinePolicy",
+    policy=pulumi.Output.all(codepipeline_bucket.arn, codepipeline_bucket.arn).apply(lambda codepipelineBucketArn, codepipelineBucketArn1: f"""{{
+  "Version": "2012-10-17",
+  "Statement": [
+    {{
+      "Effect":"Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:GetObjectVersion",
+        "s3:GetBucketVersioning",
+        "s3:PutObject"
+      ],
+      "Resource": [
+        "{codepipeline_bucket_arn}",
+        "{codepipeline_bucket_arn1}/*"
+      ]
+    }},
+    {{
+      "Effect": "Allow",
+      "Action": [
+        "codebuild:BatchGetBuilds",
+        "codebuild:StartBuild"
+      ],
+      "Resource": "*"
+    }}
+  ]
+}}
+
+"""),
+    role=codepipeline_role.id)
+s3kmskey = aws.kms.get_alias(name="alias/myKmsKey")
+codepipeline = aws.codepipeline.Pipeline("codepipeline",
+    artifact_store={
+        "encryptionKey": {
+            "id": s3kmskey.arn,
+            "type": "KMS",
+        },
+        "location": codepipeline_bucket.bucket,
+        "type": "S3",
+    },
+    role_arn=codepipeline_role.arn,
+    stages=[
+        {
+            "action": [{
+                "category": "Source",
+                "configuration": {
+                    "Branch": "master",
+                    "Owner": "my-organization",
+                    "Repo": "test",
+                },
+                "name": "Source",
+                "outputArtifacts": ["source_output"],
+                "owner": "ThirdParty",
+                "provider": "GitHub",
+                "version": "1",
+            }],
+            "name": "Source",
+        },
+        {
+            "action": [{
+                "category": "Build",
+                "configuration": {
+                    "ProjectName": "test",
+                },
+                "inputArtifacts": ["source_output"],
+                "name": "Build",
+                "outputArtifacts": ["build_output"],
+                "owner": "AWS",
+                "provider": "CodeBuild",
+                "version": "1",
+            }],
+            "name": "Build",
+        },
+        {
+            "action": [{
+                "category": "Deploy",
+                "configuration": {
+                    "ActionMode": "REPLACE_ON_FAILURE",
+                    "Capabilities": "CAPABILITY_AUTO_EXPAND,CAPABILITY_IAM",
+                    "OutputFileName": "CreateStackOutput.json",
+                    "StackName": "MyStack",
+                    "TemplatePath": "build_output::sam-templated.yaml",
+                },
+                "inputArtifacts": ["build_output"],
+                "name": "Deploy",
+                "owner": "AWS",
+                "provider": "CloudFormation",
+                "version": "1",
+            }],
+            "name": "Deploy",
+        },
+    ])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a Pipeline Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -658,7 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Pipeline Resource {#look-up}
 
 Get an existing Pipeline resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codepipeline/#PipelineState">PipelineState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codepipeline/#Pipeline">Pipeline</a></span></code></pre></div>
@@ -1039,9 +1136,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#PipelineArtifactStoreArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#PipelineArtifactStoreOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Inputs.PipelineArtifactStoreArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Outputs.PipelineArtifactStore.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1229,9 +1323,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#PipelineArtifactStoreEncryptionKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#PipelineArtifactStoreEncryptionKeyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Inputs.PipelineArtifactStoreEncryptionKeyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Outputs.PipelineArtifactStoreEncryptionKey.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1347,9 +1438,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#PipelineStageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#PipelineStageOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Inputs.PipelineStageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Outputs.PipelineStage.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1464,9 +1552,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#PipelineStageActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#PipelineStageActionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Inputs.PipelineStageActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Outputs.PipelineStageAction.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -13,13 +13,32 @@ meta_desc: "Explore the GetClientConfig function of the Azure AD package, includ
 Use this data source to access the configuration of the AzureRM provider.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azuread from "@pulumi/azuread";
+
+const current = azuread.getClientConfig({});
+export const accountId = current.then(current => current.clientId);
+```
+```python
+import pulumi
+import pulumi_azuread as azuread
+
+current = azuread.get_client_config()
+pulumi.export("accountId", current.client_id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Using GetClientConfig {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -249,16 +268,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-azuread">https://github.com/pulumi/pulumi-azuread</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread).</dd>
-</dl>
 

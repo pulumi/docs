@@ -13,12 +13,71 @@ meta_desc: "Explore the NotificationRule resource of the codestarnotifications m
 Provides a CodeStar Notifications Rule.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const code = new aws.codecommit.Repository("code", {repositoryName: "example-code-repo"});
+const notif = new aws.sns.Topic("notif", {});
+const notifAccess = aws.iam.getPolicyDocument({
+    statement: [{
+        actions: ["sns:Publish"],
+        principals: [{
+            type: "Service",
+            identifiers: ["codestar-notifications.amazonaws.com"],
+        }],
+        resources: [notif.arn],
+    }],
+});
+const default = new aws.sns.TopicPolicy("default", {
+    arn: notif.arn,
+    policy: notifAccess.json,
+});
+const commits = new aws.codestarnotifications.NotificationRule("commits", {
+    detailType: "BASIC",
+    eventTypeIds: ["codecommit-repository-comments-on-commits"],
+    resource: code.arn,
+    target: [{
+        address: notif.arn,
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+code = aws.codecommit.Repository("code", repository_name="example-code-repo")
+notif = aws.sns.Topic("notif")
+notif_access = aws.iam.get_policy_document(statement=[{
+    "actions": ["sns:Publish"],
+    "principals": [{
+        "type": "Service",
+        "identifiers": ["codestar-notifications.amazonaws.com"],
+    }],
+    "resources": [notif.arn],
+}])
+default = aws.sns.TopicPolicy("default",
+    arn=notif.arn,
+    policy=notif_access.json)
+commits = aws.codestarnotifications.NotificationRule("commits",
+    detail_type="BASIC",
+    event_type_ids=["codecommit-repository-comments-on-commits"],
+    resource=code.arn,
+    target=[{
+        "address": notif.arn,
+    }])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Create a NotificationRule Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -594,7 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing NotificationRule Resource {#look-up}
 
 Get an existing NotificationRule resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codestarnotifications/#NotificationRuleState">NotificationRuleState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codestarnotifications/#NotificationRule">NotificationRule</a></span></code></pre></div>
@@ -1050,9 +1109,6 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codestarnotifications?tab=doc#NotificationRuleTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codestarnotifications?tab=doc#NotificationRuleTargetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeStarNotifications.Inputs.NotificationRuleTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeStarNotifications.Outputs.NotificationRuleTarget.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

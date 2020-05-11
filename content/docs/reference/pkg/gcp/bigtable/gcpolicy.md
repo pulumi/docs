@@ -16,12 +16,101 @@ Creates a Google Cloud Bigtable GC Policy inside a family. For more information 
 
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.bigtable.Instance("instance", {cluster: [{
+    clusterId: "tf-instance-cluster",
+    zone: "us-central1-b",
+    numNodes: 3,
+    storageType: "HDD",
+}]});
+const table = new gcp.bigtable.Table("table", {
+    instanceName: instance.name,
+    column_family: [{
+        family: "name",
+    }],
+});
+const policy = new gcp.bigtable.GCPolicy("policy", {
+    instanceName: instance.name,
+    table: table.name,
+    columnFamily: "name",
+    max_age: [{
+        days: 7,
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.bigtable.Instance("instance", cluster=[{
+    "clusterId": "tf-instance-cluster",
+    "zone": "us-central1-b",
+    "numNodes": 3,
+    "storageType": "HDD",
+}])
+table = gcp.bigtable.Table("table",
+    instance_name=instance.name,
+    column_family=[{
+        "family": "name",
+    }])
+policy = gcp.bigtable.GCPolicy("policy",
+    instance_name=instance.name,
+    table=table.name,
+    column_family="name",
+    max_age=[{
+        "days": 7,
+    }])
+```
+
+Multiple conditions is also supported. `UNION` when any of its sub-policies apply (OR). `INTERSECTION` when all its sub-policies apply (AND)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const policy = new gcp.bigtable.GCPolicy("policy", {
+    instanceName: google_bigtable_instance.instance.name,
+    table: google_bigtable_table.table.name,
+    columnFamily: "name",
+    mode: "UNION",
+    max_age: [{
+        days: 7,
+    }],
+    max_version: [{
+        number: 10,
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+policy = gcp.bigtable.GCPolicy("policy",
+    instance_name=google_bigtable_instance["instance"]["name"],
+    table=google_bigtable_table["table"]["name"],
+    column_family="name",
+    mode="UNION",
+    max_age=[{
+        "days": 7,
+    }],
+    max_version=[{
+        "number": 10,
+    }])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Create a GCPolicy Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -557,7 +646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing GCPolicy Resource {#look-up}
 
 Get an existing GCPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigtable/#GCPolicyState">GCPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigtable/#GCPolicy">GCPolicy</a></span></code></pre></div>
@@ -974,9 +1063,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigtable?tab=doc#GCPolicyMaxAgeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigtable?tab=doc#GCPolicyMaxAgeOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigTable.Inputs.GCPolicyMaxAgeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigTable.Outputs.GCPolicyMaxAge.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1055,9 +1141,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigtable?tab=doc#GCPolicyMaxVersionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigtable?tab=doc#GCPolicyMaxVersionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigTable.Inputs.GCPolicyMaxVersionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigTable.Outputs.GCPolicyMaxVersion.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

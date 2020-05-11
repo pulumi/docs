@@ -13,13 +13,32 @@ meta_desc: "Explore the GetClientConfig function of the organizations module, in
 Use this data source to access the configuration of the Google Cloud provider.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const current = gcp.organizations.getClientConfig({});
+export const project = current.then(current => current.project);
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+current = gcp.organizations.get_client_config()
+pulumi.export("project", current.project)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Using GetClientConfig {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -265,16 +284,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

@@ -12,26 +12,12 @@ meta_desc: "Explore the BucketObject resource of the s3 module, including exampl
 
 Provides a S3 bucket object resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### Encrypting with KMS Key
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -50,22 +36,25 @@ const examplebucketObject = new aws.s3.BucketObject("examplebucket_object", {
     source: new pulumi.asset.FileAsset("index.html"),
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+examplekms = aws.kms.Key("examplekms",
+    deletion_window_in_days=7,
+    description="KMS key 1")
+examplebucket = aws.s3.Bucket("examplebucket", acl="private")
+examplebucket_object = aws.s3.BucketObject("examplebucketObject",
+    bucket=examplebucket.id,
+    key="someobject",
+    kms_key_id=examplekms.arn,
+    source=pulumi.FileAsset("index.html"))
+```
+
+{{% /example %}}
+{{% example %}}
 ### Server Side Encryption with S3 Default Master Key
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -80,22 +69,22 @@ const examplebucketObject = new aws.s3.BucketObject("examplebucket_object", {
     source: new pulumi.asset.FileAsset("index.html"),
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+examplebucket = aws.s3.Bucket("examplebucket", acl="private")
+examplebucket_object = aws.s3.BucketObject("examplebucketObject",
+    bucket=examplebucket.id,
+    key="someobject",
+    server_side_encryption="aws:kms",
+    source=pulumi.FileAsset("index.html"))
+```
+
+{{% /example %}}
+{{% example %}}
 ### Server Side Encryption with AWS-Managed Key
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -110,22 +99,22 @@ const examplebucketObject = new aws.s3.BucketObject("examplebucket_object", {
     source: new pulumi.asset.FileAsset("index.html"),
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+examplebucket = aws.s3.Bucket("examplebucket", acl="private")
+examplebucket_object = aws.s3.BucketObject("examplebucketObject",
+    bucket=examplebucket.id,
+    key="someobject",
+    server_side_encryption="AES256",
+    source=pulumi.FileAsset("index.html"))
+```
+
+{{% /example %}}
+{{% example %}}
 ### S3 Object Lock
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -149,13 +138,35 @@ const examplebucketObject = new aws.s3.BucketObject("examplebucket_object", {
     source: new pulumi.asset.FileAsset("important.txt"),
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+examplebucket = aws.s3.Bucket("examplebucket",
+    acl="private",
+    object_lock_configuration={
+        "objectLockEnabled": "Enabled",
+    },
+    versioning={
+        "enabled": True,
+    })
+examplebucket_object = aws.s3.BucketObject("examplebucketObject",
+    bucket=examplebucket.id,
+    force_destroy=True,
+    key="someobject",
+    object_lock_legal_hold_status="ON",
+    object_lock_mode="GOVERNANCE",
+    object_lock_retain_until_date="2021-12-31T23:59:60Z",
+    source=pulumi.FileAsset("important.txt"))
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a BucketObject Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1295,7 +1306,7 @@ is enabled.
 ## Look up an Existing BucketObject Resource {#look-up}
 
 Get an existing BucketObject resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#BucketObjectState">BucketObjectState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#BucketObject">BucketObject</a></span></code></pre></div>

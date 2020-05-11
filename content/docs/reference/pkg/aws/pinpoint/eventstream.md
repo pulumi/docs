@@ -12,26 +12,10 @@ meta_desc: "Explore the EventStream resource of the pinpoint module, including e
 
 Provides a Pinpoint Event Stream resource.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -79,13 +63,58 @@ const testRolePolicy = new aws.iam.RolePolicy("test_role_policy", {
     role: testRole.id,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+app = aws.pinpoint.App("app")
+test_stream = aws.kinesis.Stream("testStream", shard_count=1)
+test_role = aws.iam.Role("testRole", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "pinpoint.us-east-1.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+
+""")
+stream = aws.pinpoint.EventStream("stream",
+    application_id=app.application_id,
+    destination_stream_arn=test_stream.arn,
+    role_arn=test_role.arn)
+test_role_policy = aws.iam.RolePolicy("testRolePolicy",
+    policy="""{
+  "Version": "2012-10-17",
+  "Statement": {
+    "Action": [
+      "kinesis:PutRecords",
+      "kinesis:DescribeStream"
+    ],
+    "Effect": "Allow",
+    "Resource": [
+      "arn:aws:kinesis:us-east-1:*:*/*"
+    ]
+  }
+}
+
+""",
+    role=test_role.id)
+```
+
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a EventStream Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -477,7 +506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing EventStream Resource {#look-up}
 
 Get an existing EventStream resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/pinpoint/#EventStreamState">EventStreamState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/pinpoint/#EventStream">EventStream</a></span></code></pre></div>

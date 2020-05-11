@@ -12,26 +12,12 @@ meta_desc: "Explore the GetDocument function of the ssm module, including exampl
 
 Gets the contents of the specified Systems Manager document.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+To get the contents of the document owned by AWS.
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -43,14 +29,43 @@ const foo = pulumi.output(aws.ssm.getDocument({
 
 export const content = foo.content;
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+foo = aws.ssm.get_document(document_format="YAML",
+    name="AWS-GatherSoftwareInventory")
+pulumi.export("content", foo.content)
+```
+
+To get the contents of the custom document.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const test = aws_ssm_document_test.name.apply(name => aws.ssm.getDocument({
+    documentFormat: "JSON",
+    name: name,
+}, { async: true }));
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+test = aws.ssm.get_document(document_format="JSON",
+    name=aws_ssm_document["test"]["name"])
+```
+
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetDocument {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -501,16 +516,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-</dl>
 

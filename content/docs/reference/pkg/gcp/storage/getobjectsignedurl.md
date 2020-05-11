@@ -14,26 +14,10 @@ The Google Cloud storage signed URL data source generates a signed URL for a giv
 
 For more info about signed URL's is available [here](https://cloud.google.com/storage/docs/access-control/signed-urls).
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -44,14 +28,56 @@ const artifact = pulumi.output(gcp.storage.getObjectSignedUrl({
 }, { async: true }));
 const vm = new gcp.compute.Instance("vm", {});
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
 
+artifact = gcp.storage.get_object_signed_url(bucket="install_binaries",
+    path="path/to/install_file.bin")
+vm = gcp.compute.Instance("vm")
+```
+
+{{% /example %}}
 {{% /examples %}}
+## Full Example
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const getUrl = gcp.storage.getObjectSignedUrl({
+    bucket: "fried_chicken",
+    path: "path/to/file",
+    contentMd5: "pRviqwS4c4OTJRTe03FD1w==",
+    contentType: "text/plain",
+    duration: "2d",
+    credentials: fs.readFileSync("path/to/credentials.json"),
+    extensionHeaders: {
+        "x-goog-if-generation-match": 1,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+get_url = gcp.storage.get_object_signed_url(bucket="fried_chicken",
+    path="path/to/file",
+    content_md5="pRviqwS4c4OTJRTe03FD1w==",
+    content_type="text/plain",
+    duration="2d",
+    credentials=(lambda path: open(path).read())("path/to/credentials.json"),
+    extension_headers={
+        "x-goog-if-generation-match": 1,
+    })
+```
+
 
 
 ## Using GetObjectSignedUrl {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -790,16 +816,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

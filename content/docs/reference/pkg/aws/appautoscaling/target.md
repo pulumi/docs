@@ -14,26 +14,12 @@ Provides an Application AutoScaling ScalableTarget resource. To manage policies 
 
 > **NOTE:** The [Application Auto Scaling service automatically attempts to manage IAM Service-Linked Roles](https://docs.aws.amazon.com/autoscaling/application/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-roles) when registering certain service namespaces for the first time. To manually manage this role, see the [`aws.iam.ServiceLinkedRole` resource](https://www.terraform.io/docs/providers/aws/r/iam_service_linked_role.html).
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### DynamoDB Table Autoscaling
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -46,22 +32,22 @@ const dynamodbTableReadTarget = new aws.appautoscaling.Target("dynamodb_table_re
     serviceNamespace: "dynamodb",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+dynamodb_table_read_target = aws.appautoscaling.Target("dynamodbTableReadTarget",
+    max_capacity=100,
+    min_capacity=5,
+    resource_id=f"table/{aws_dynamodb_table['example']['name']}",
+    scalable_dimension="dynamodb:table:ReadCapacityUnits",
+    service_namespace="dynamodb")
+```
+
+{{% /example %}}
+{{% example %}}
 ### DynamoDB Index Autoscaling
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -74,22 +60,22 @@ const dynamodbIndexReadTarget = new aws.appautoscaling.Target("dynamodb_index_re
     serviceNamespace: "dynamodb",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+dynamodb_index_read_target = aws.appautoscaling.Target("dynamodbIndexReadTarget",
+    max_capacity=100,
+    min_capacity=5,
+    resource_id=f"table/{aws_dynamodb_table['example']['name']}/index/{var['index_name']}",
+    scalable_dimension="dynamodb:index:ReadCapacityUnits",
+    service_namespace="dynamodb")
+```
+
+{{% /example %}}
+{{% example %}}
 ### ECS Service Autoscaling
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -102,22 +88,22 @@ const ecsTarget = new aws.appautoscaling.Target("ecs_target", {
     serviceNamespace: "ecs",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+ecs_target = aws.appautoscaling.Target("ecsTarget",
+    max_capacity=4,
+    min_capacity=1,
+    resource_id=f"service/{aws_ecs_cluster['example']['name']}/{aws_ecs_service['example']['name']}",
+    scalable_dimension="ecs:service:DesiredCount",
+    service_namespace="ecs")
+```
+
+{{% /example %}}
+{{% example %}}
 ### Aurora Read Replica Autoscaling
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -130,13 +116,25 @@ const replicas = new aws.appautoscaling.Target("replicas", {
     serviceNamespace: "rds",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+replicas = aws.appautoscaling.Target("replicas",
+    max_capacity=15,
+    min_capacity=1,
+    resource_id=f"cluster:{aws_rds_cluster['example']['id']}",
+    scalable_dimension="rds:cluster:ReadReplicaCount",
+    service_namespace="rds")
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a Target Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -636,7 +634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Target Resource {#look-up}
 
 Get an existing Target resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appautoscaling/#TargetState">TargetState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appautoscaling/#Target">Target</a></span></code></pre></div>

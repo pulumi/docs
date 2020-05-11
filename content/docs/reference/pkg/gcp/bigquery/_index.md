@@ -12,6 +12,7 @@ Explore the resources and functions of the bigquery module in the GCP package.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="appprofile" title="AppProfile"><span class="symbol resource"></span>AppProfile</a></li>
+    <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
     <li><a href="datatransferconfig" title="DataTransferConfig"><span class="symbol resource"></span>DataTransferConfig</a></li>
     <li><a href="dataset" title="Dataset"><span class="symbol resource"></span>Dataset</a></li>
     <li><a href="datasetaccess" title="DatasetAccess"><span class="symbol resource"></span>DatasetAccess</a></li>
@@ -34,6 +35,6 @@ Explore the resources and functions of the bigquery module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.3.0</dd>
+	<dd>3.4.0</dd>
 </dl>
 

@@ -29,11 +29,17 @@ import * as gcp from "@pulumi/gcp";
 
 const defaultGlobalAddress = new gcp.compute.GlobalAddress("default", {});
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.GlobalAddress("default")
+```
 
 
 
 ## Create a GlobalAddress Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -230,7 +236,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the address to reserve, default is EXTERNAL.
+    <dd>{{% md %}}The type of the address to reserve.
 * EXTERNAL indicates public/external single IP address.
 * INTERNAL indicates internal IP ranges belonging to some network.
 {{% /md %}}</dd>
@@ -250,8 +256,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP Version that will be used by this address. Valid options are
-`IPV4` or `IPV6`. The default value is `IPV4`.
+    <dd>{{% md %}}The IP Version that will be used by this address. The default value is `IPV4`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -346,7 +351,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the address to reserve, default is EXTERNAL.
+    <dd>{{% md %}}The type of the address to reserve.
 * EXTERNAL indicates public/external single IP address.
 * INTERNAL indicates internal IP ranges belonging to some network.
 {{% /md %}}</dd>
@@ -366,8 +371,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP Version that will be used by this address. Valid options are
-`IPV4` or `IPV6`. The default value is `IPV4`.
+    <dd>{{% md %}}The IP Version that will be used by this address. The default value is `IPV4`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -462,7 +466,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the address to reserve, default is EXTERNAL.
+    <dd>{{% md %}}The type of the address to reserve.
 * EXTERNAL indicates public/external single IP address.
 * INTERNAL indicates internal IP ranges belonging to some network.
 {{% /md %}}</dd>
@@ -482,8 +486,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP Version that will be used by this address. Valid options are
-`IPV4` or `IPV6`. The default value is `IPV4`.
+    <dd>{{% md %}}The IP Version that will be used by this address. The default value is `IPV4`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -578,7 +581,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the address to reserve, default is EXTERNAL.
+    <dd>{{% md %}}The type of the address to reserve.
 * EXTERNAL indicates public/external single IP address.
 * INTERNAL indicates internal IP ranges belonging to some network.
 {{% /md %}}</dd>
@@ -598,8 +601,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The IP Version that will be used by this address. Valid options are
-`IPV4` or `IPV6`. The default value is `IPV4`.
+    <dd>{{% md %}}The IP Version that will be used by this address. The default value is `IPV4`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -861,7 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing GlobalAddress Resource {#look-up}
 
 Get an existing GlobalAddress resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#GlobalAddressState">GlobalAddressState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#GlobalAddress">GlobalAddress</a></span></code></pre></div>
@@ -999,7 +1001,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the address to reserve, default is EXTERNAL.
+    <dd>{{% md %}}The type of the address to reserve.
 * EXTERNAL indicates public/external single IP address.
 * INTERNAL indicates internal IP ranges belonging to some network.
 {{% /md %}}</dd>
@@ -1028,8 +1030,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP Version that will be used by this address. Valid options are
-`IPV4` or `IPV6`. The default value is `IPV4`.
+    <dd>{{% md %}}The IP Version that will be used by this address. The default value is `IPV4`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1142,7 +1143,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the address to reserve, default is EXTERNAL.
+    <dd>{{% md %}}The type of the address to reserve.
 * EXTERNAL indicates public/external single IP address.
 * INTERNAL indicates internal IP ranges belonging to some network.
 {{% /md %}}</dd>
@@ -1171,8 +1172,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP Version that will be used by this address. Valid options are
-`IPV4` or `IPV6`. The default value is `IPV4`.
+    <dd>{{% md %}}The IP Version that will be used by this address. The default value is `IPV4`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1285,7 +1285,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the address to reserve, default is EXTERNAL.
+    <dd>{{% md %}}The type of the address to reserve.
 * EXTERNAL indicates public/external single IP address.
 * INTERNAL indicates internal IP ranges belonging to some network.
 {{% /md %}}</dd>
@@ -1314,8 +1314,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP Version that will be used by this address. Valid options are
-`IPV4` or `IPV6`. The default value is `IPV4`.
+    <dd>{{% md %}}The IP Version that will be used by this address. The default value is `IPV4`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1428,7 +1427,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the address to reserve, default is EXTERNAL.
+    <dd>{{% md %}}The type of the address to reserve.
 * EXTERNAL indicates public/external single IP address.
 * INTERNAL indicates internal IP ranges belonging to some network.
 {{% /md %}}</dd>
@@ -1457,8 +1456,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The IP Version that will be used by this address. Valid options are
-`IPV4` or `IPV6`. The default value is `IPV4`.
+    <dd>{{% md %}}The IP Version that will be used by this address. The default value is `IPV4`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

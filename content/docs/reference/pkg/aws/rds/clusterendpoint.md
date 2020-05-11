@@ -14,26 +14,10 @@ Manages a RDS Aurora Cluster Endpoint.
 You can refer to the [User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.Endpoints.html#Aurora.Endpoints.Cluster).
 
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -88,13 +72,62 @@ const static = new aws.rds.ClusterEndpoint("static", {
     ],
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+default = aws.rds.Cluster("default",
+    availability_zones=[
+        "us-west-2a",
+        "us-west-2b",
+        "us-west-2c",
+    ],
+    backup_retention_period=5,
+    cluster_identifier="aurora-cluster-demo",
+    database_name="mydb",
+    master_password="bar",
+    master_username="foo",
+    preferred_backup_window="07:00-09:00")
+test1 = aws.rds.ClusterInstance("test1",
+    apply_immediately=True,
+    cluster_identifier=default.id,
+    identifier="test1",
+    instance_class="db.t2.small")
+test2 = aws.rds.ClusterInstance("test2",
+    apply_immediately=True,
+    cluster_identifier=default.id,
+    identifier="test2",
+    instance_class="db.t2.small")
+test3 = aws.rds.ClusterInstance("test3",
+    apply_immediately=True,
+    cluster_identifier=default.id,
+    identifier="test3",
+    instance_class="db.t2.small")
+eligible = aws.rds.ClusterEndpoint("eligible",
+    cluster_endpoint_identifier="reader",
+    cluster_identifier=default.id,
+    custom_endpoint_type="READER",
+    excluded_members=[
+        test1.id,
+        test2.id,
+    ])
+static = aws.rds.ClusterEndpoint("static",
+    cluster_endpoint_identifier="static",
+    cluster_identifier=default.id,
+    custom_endpoint_type="READER",
+    static_members=[
+        test1.id,
+        test3.id,
+    ])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a ClusterEndpoint Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -666,7 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ClusterEndpoint Resource {#look-up}
 
 Get an existing ClusterEndpoint resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#ClusterEndpointState">ClusterEndpointState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#ClusterEndpoint">ClusterEndpoint</a></span></code></pre></div>

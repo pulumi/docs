@@ -13,13 +13,45 @@ meta_desc: "Explore the GetImageVersions function of the composer module, includ
 Provides access to available Cloud Composer versions in a region for a given project.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const all = gcp.composer.getImageVersions({});
+const test = new gcp.composer.Environment("test", {
+    region: "us-central1",
+    config: {
+        software_config: {
+            imageVersion: all.then(all => all.imageVersions[0].imageVersionId),
+        },
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+all = gcp.composer.get_image_versions()
+test = gcp.composer.Environment("test",
+    region="us-central1",
+    config={
+        "software_config": {
+            "imageVersion": all.image_versions[0]["imageVersionId"],
+        },
+    })
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Using GetImageVersions {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -351,9 +383,6 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer?tab=doc#GetImageVersionsImageVersion">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetImageVersionsImageVersion.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -462,16 +491,4 @@ The following output properties are available:
 
 
 
-
-
-
-<h2 id="package-details">Package Details</h2>
-<dl class="package-details">
-	<dt>Repository</dt>
-	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
-	<dt>License</dt>
-	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-</dl>
 

@@ -41,10 +41,105 @@ To get more information about Subnetwork, see:
     * [Private Google Access](https://cloud.google.com/vpc/docs/configure-private-google-access)
     * [Cloud Networking](https://cloud.google.com/vpc/docs/using-vpc)
 
+## Example Usage - Subnetwork Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const custom-test = new gcp.compute.Network("custom-test", {autoCreateSubnetworks: false});
+const network-with-private-secondary-ip-ranges = new gcp.compute.Subnetwork("network-with-private-secondary-ip-ranges", {
+    ipCidrRange: "10.2.0.0/16",
+    region: "us-central1",
+    network: custom-test.selfLink,
+    secondary_ip_range: [{
+        rangeName: "tf-test-secondary-range-update1",
+        ipCidrRange: "192.168.10.0/24",
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+custom_test = gcp.compute.Network("custom-test", auto_create_subnetworks=False)
+network_with_private_secondary_ip_ranges = gcp.compute.Subnetwork("network-with-private-secondary-ip-ranges",
+    ip_cidr_range="10.2.0.0/16",
+    region="us-central1",
+    network=custom_test.self_link,
+    secondary_ip_range=[{
+        "rangeName": "tf-test-secondary-range-update1",
+        "ipCidrRange": "192.168.10.0/24",
+    }])
+```
+## Example Usage - Subnetwork Logging Config
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const custom-test = new gcp.compute.Network("custom-test", {autoCreateSubnetworks: false});
+const subnet-with-logging = new gcp.compute.Subnetwork("subnet-with-logging", {
+    ipCidrRange: "10.2.0.0/16",
+    region: "us-central1",
+    network: custom-test.selfLink,
+    log_config: {
+        aggregationInterval: "INTERVAL_10_MIN",
+        flowSampling: 0.5,
+        metadata: "INCLUDE_ALL_METADATA",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+custom_test = gcp.compute.Network("custom-test", auto_create_subnetworks=False)
+subnet_with_logging = gcp.compute.Subnetwork("subnet-with-logging",
+    ip_cidr_range="10.2.0.0/16",
+    region="us-central1",
+    network=custom_test.self_link,
+    log_config={
+        "aggregationInterval": "INTERVAL_10_MIN",
+        "flowSampling": 0.5,
+        "metadata": "INCLUDE_ALL_METADATA",
+    })
+```
+## Example Usage - Subnetwork Internal L7lb
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const custom-test = new gcp.compute.Network("custom-test", {autoCreateSubnetworks: false});
+const network-for-l7lb = new gcp.compute.Subnetwork("network-for-l7lb", {
+    ipCidrRange: "10.0.0.0/22",
+    region: "us-central1",
+    purpose: "INTERNAL_HTTPS_LOAD_BALANCER",
+    role: "ACTIVE",
+    network: custom-test.selfLink,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+custom_test = gcp.compute.Network("custom-test", auto_create_subnetworks=False)
+network_for_l7lb = gcp.compute.Subnetwork("network-for-l7lb",
+    ip_cidr_range="10.0.0.0/22",
+    region="us-central1",
+    purpose="INTERNAL_HTTPS_LOAD_BALANCER",
+    role="ACTIVE",
+    network=custom_test.self_link)
+```
+
 
 
 ## Create a Subnetwork Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -980,7 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Subnetwork Resource {#look-up}
 
 Get an existing Subnetwork resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#SubnetworkState">SubnetworkState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#Subnetwork">Subnetwork</a></span></code></pre></div>
@@ -1797,9 +1892,6 @@ to either primary or secondary ranges. Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SubnetworkLogConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SubnetworkLogConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.SubnetworkLogConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.SubnetworkLogConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1842,7 +1934,7 @@ half of all collected logs are reported.
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
 Configures whether metadata fields should be added to the reported VPC
-flow logs. Default is `INCLUDE_ALL_METADATA`.
+flow logs.
 {{% /md %}}</dd>
 
 </dl>
@@ -1887,7 +1979,7 @@ half of all collected logs are reported.
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
 Configures whether metadata fields should be added to the reported VPC
-flow logs. Default is `INCLUDE_ALL_METADATA`.
+flow logs.
 {{% /md %}}</dd>
 
 </dl>
@@ -1932,7 +2024,7 @@ half of all collected logs are reported.
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
 Configures whether metadata fields should be added to the reported VPC
-flow logs. Default is `INCLUDE_ALL_METADATA`.
+flow logs.
 {{% /md %}}</dd>
 
 </dl>
@@ -1977,7 +2069,7 @@ half of all collected logs are reported.
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
 Configures whether metadata fields should be added to the reported VPC
-flow logs. Default is `INCLUDE_ALL_METADATA`.
+flow logs.
 {{% /md %}}</dd>
 
 </dl>
@@ -1994,9 +2086,6 @@ flow logs. Default is `INCLUDE_ALL_METADATA`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SubnetworkSecondaryIpRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SubnetworkSecondaryIpRangeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.SubnetworkSecondaryIpRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.SubnetworkSecondaryIpRange.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -12,26 +12,10 @@ meta_desc: "Explore the ReplicationInstance resource of the dms module, includin
 
 Provides a DMS (Data Migration Service) replication instance resource. DMS replication instances can be created, updated, deleted, and imported.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -86,13 +70,56 @@ const test = new aws.dms.ReplicationInstance("test", {
     vpcSecurityGroupIds: ["sg-12345678"],
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+dms_assume_role = aws.iam.get_policy_document(statements=[{
+    "actions": ["sts:AssumeRole"],
+    "principals": [{
+        "identifiers": ["dms.amazonaws.com"],
+        "type": "Service",
+    }],
+}])
+dms_access_for_endpoint = aws.iam.Role("dms-access-for-endpoint", assume_role_policy=dms_assume_role.json)
+dms_access_for_endpoint__amazon_dms_redshift_s3_role = aws.iam.RolePolicyAttachment("dms-access-for-endpoint-AmazonDMSRedshiftS3Role",
+    policy_arn="arn:aws:iam::aws:policy/service-role/AmazonDMSRedshiftS3Role",
+    role=dms_access_for_endpoint.name)
+dms_cloudwatch_logs_role = aws.iam.Role("dms-cloudwatch-logs-role", assume_role_policy=dms_assume_role.json)
+dms_cloudwatch_logs_role__amazon_dms_cloud_watch_logs_role = aws.iam.RolePolicyAttachment("dms-cloudwatch-logs-role-AmazonDMSCloudWatchLogsRole",
+    policy_arn="arn:aws:iam::aws:policy/service-role/AmazonDMSCloudWatchLogsRole",
+    role=dms_cloudwatch_logs_role.name)
+dms_vpc_role = aws.iam.Role("dms-vpc-role", assume_role_policy=dms_assume_role.json)
+dms_vpc_role__amazon_dmsvpc_management_role = aws.iam.RolePolicyAttachment("dms-vpc-role-AmazonDMSVPCManagementRole",
+    policy_arn="arn:aws:iam::aws:policy/service-role/AmazonDMSVPCManagementRole",
+    role=dms_vpc_role.name)
+# Create a new replication instance
+test = aws.dms.ReplicationInstance("test",
+    allocated_storage=20,
+    apply_immediately=True,
+    auto_minor_version_upgrade=True,
+    availability_zone="us-west-2c",
+    engine_version="3.1.4",
+    kms_key_arn="arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012",
+    multi_az=False,
+    preferred_maintenance_window="sun:10:30-sun:14:30",
+    publicly_accessible=True,
+    replication_instance_class="dms.t2.micro",
+    replication_instance_id="test-dms-replication-instance-tf",
+    replication_subnet_group_id=aws_dms_replication_subnet_group["test-dms-replication-subnet-group-tf"]["id"],
+    tags={
+        "Name": "test",
+    },
+    vpc_security_group_ids=["sg-12345678"])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a ReplicationInstance Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -988,7 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ReplicationInstance Resource {#look-up}
 
 Get an existing ReplicationInstance resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dms/#ReplicationInstanceState">ReplicationInstanceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dms/#ReplicationInstance">ReplicationInstance</a></span></code></pre></div>

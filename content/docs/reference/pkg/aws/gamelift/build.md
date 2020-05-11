@@ -13,12 +13,42 @@ meta_desc: "Explore the Build resource of the gamelift module, including example
 Provides an Gamelift Build resource.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const test = new aws.gamelift.Build("test", {
+    operatingSystem: "WINDOWS_2012",
+    storage_location: {
+        bucket: aws_s3_bucket.test.bucket,
+        key: aws_s3_bucket_object.test.key,
+        roleArn: aws_iam_role.test.arn,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+test = aws.gamelift.Build("test",
+    operating_system="WINDOWS_2012",
+    storage_location={
+        "bucket": aws_s3_bucket["test"]["bucket"],
+        "key": aws_s3_bucket_object["test"]["key"],
+        "roleArn": aws_iam_role["test"]["arn"],
+    })
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
 
 ## Create a Build Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -518,7 +548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Build Resource {#look-up}
 
 Get an existing Build resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/gamelift/#BuildState">BuildState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/gamelift/#Build">Build</a></span></code></pre></div>
@@ -898,9 +928,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift?tab=doc#BuildStorageLocationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift?tab=doc#BuildStorageLocationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GameLift.Inputs.BuildStorageLocationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GameLift.Outputs.BuildStorageLocation.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
