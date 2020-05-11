@@ -29,7 +29,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+network1 = openstack.networking.Network("network1", admin_state_up="true")
+instance1 = openstack.compute.Instance("instance1", security_groups=["default"])
+ai1 = openstack.compute.InterfaceAttach("ai1",
+    instance_id=instance1.id,
+    network_id=openstack_networking_port_v2["network_1"]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -60,7 +69,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+network1 = openstack.networking.Network("network1", admin_state_up="true")
+instance1 = openstack.compute.Instance("instance1", security_groups=["default"])
+ai1 = openstack.compute.InterfaceAttach("ai1",
+    fixed_ip="10.0.10.10",
+    instance_id=instance1.id,
+    network_id=openstack_networking_port_v2["network_1"]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -92,7 +111,19 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+network1 = openstack.networking.Network("network1", admin_state_up="true")
+port1 = openstack.networking.Port("port1",
+    admin_state_up="true",
+    network_id=network1.id)
+instance1 = openstack.compute.Instance("instance1", security_groups=["default"])
+ai1 = openstack.compute.InterfaceAttach("ai1",
+    instance_id=instance1.id,
+    port_id=port1.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -114,47 +145,6 @@ const ai1 = new openstack.compute.InterfaceAttach("ai_1", {
     instanceId: instance1.id,
     portId: port1.id,
 });
-```
-{{% /example %}}
-
-### Attaching Multiple Interfaces
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as openstack from "@pulumi/openstack";
-
-const network1 = new openstack.networking.Network("network_1", {
-    adminStateUp: true,
-});
-const ports: openstack.networking.Port[] = [];
-for (let i = 0; i < 2; i++) {
-    ports.push(new openstack.networking.Port(`ports-${i}`, {
-        adminStateUp: true,
-        networkId: network1.id,
-    }));
-}
-const instance1 = new openstack.compute.Instance("instance_1", {
-    securityGroups: ["default"],
-});
-const attachments: openstack.compute.InterfaceAttach[] = [];
-for (let i = 0; i < 2; i++) {
-    attachments.push(new openstack.compute.InterfaceAttach(`attachments-${i}`, {
-        instanceId: instance1.id,
-        portId: pulumi.all(ports.map(v => v.id)).apply(id => id.map(v => v)[i]),
-    }));
-}
 ```
 {{% /example %}}
 

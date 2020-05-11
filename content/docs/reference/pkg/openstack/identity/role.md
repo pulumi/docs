@@ -31,7 +31,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+role1 = openstack.identity.Role("role1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -92,6 +92,72 @@ const vip1 = new openstack.loadbalancer.Vip("vip_1", {
     subnetId: subnet1.id,
 });
 ```
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+network1 = openstack.networking.Network("network1", admin_state_up="true")
+subnet1 = openstack.networking.Subnet("subnet1",
+    cidr="192.168.199.0/24",
+    ip_version=4,
+    network_id=network1.id)
+secgroup1 = openstack.compute.SecGroup("secgroup1",
+    description="Rules for secgroup_1",
+    rules=[
+        {
+            "cidr": "0.0.0.0/0",
+            "fromPort": -1,
+            "ipProtocol": "icmp",
+            "toPort": -1,
+        },
+        {
+            "cidr": "0.0.0.0/0",
+            "fromPort": 80,
+            "ipProtocol": "tcp",
+            "toPort": 80,
+        },
+    ])
+instance1 = openstack.compute.Instance("instance1",
+    networks=[{
+        "uuid": network1.id,
+    }],
+    security_groups=[
+        "default",
+        secgroup1.name,
+    ])
+instance2 = openstack.compute.Instance("instance2",
+    networks=[{
+        "uuid": network1.id,
+    }],
+    security_groups=[
+        "default",
+        secgroup1.name,
+    ])
+monitor1 = openstack.loadbalancer.MonitorV1("monitor1",
+    admin_state_up="true",
+    delay=30,
+    max_retries=3,
+    timeout=5,
+    type="TCP")
+pool1 = openstack.loadbalancer.PoolV1("pool1",
+    lb_method="ROUND_ROBIN",
+    monitor_ids=[monitor1.id],
+    protocol="TCP",
+    subnet_id=subnet1.id)
+member1 = openstack.loadbalancer.MemberV1("member1",
+    address=instance1.access_ip_v4,
+    pool_id=pool1.id,
+    port=80)
+member2 = openstack.loadbalancer.MemberV1("member2",
+    address=instance2.access_ip_v4,
+    pool_id=pool1.id,
+    port=80)
+vip1 = openstack.loadbalancer.Vip("vip1",
+    pool_id=pool1.id,
+    port=80,
+    protocol="TCP",
+    subnet_id=subnet1.id)
+```
 
 ## Notes
 
@@ -111,7 +177,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+pool1 = openstack.loadbalancer.PoolV1("pool1",
+    lb_method="ROUND_ROBIN",
+    lb_provider="haproxy",
+    monitor_ids=["67890"],
+    protocol="HTTP",
+    subnet_id="12345")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+zones = openstack.blockstorage.get_availability_zones_v3()
+```
 {{% /example %}}
 
 {{% example typescript %}}

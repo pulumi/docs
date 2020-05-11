@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+network = openstack.networking.get_network(name="tf_test_network")
+```
 {{% /example %}}
 
 {{% example typescript %}}

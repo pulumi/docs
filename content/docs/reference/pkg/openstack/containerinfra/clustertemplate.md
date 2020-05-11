@@ -184,7 +184,30 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+clustertemplate1 = openstack.containerinfra.ClusterTemplate("clustertemplate1",
+    coe="kubernetes",
+    dns_nameserver="1.1.1.1",
+    docker_storage_driver="devicemapper",
+    docker_volume_size=10,
+    flavor="m1.small",
+    floating_ip_enabled=False,
+    image="Fedora-Atomic-27",
+    labels={
+        "influx_grafana_dashboard_enabled": "true",
+        "kube_dashboard_enabled": "true",
+        "kube_tag": "1.11.1",
+        "prometheus_monitoring": "true",
+    },
+    master_flavor="m1.medium",
+    master_lb_enabled=True,
+    network_driver="flannel",
+    server_type="vm",
+    volume_driver="cinder")
+```
 {{% /example %}}
 
 {{% example typescript %}}

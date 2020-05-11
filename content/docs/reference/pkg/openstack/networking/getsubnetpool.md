@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+subnetpool1 = openstack.networking.get_subnet_pool(name="subnetpool_1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

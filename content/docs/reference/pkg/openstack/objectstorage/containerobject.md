@@ -28,7 +28,29 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+container1 = openstack.objectstorage.Container("container1",
+    content_type="application/json",
+    metadata={
+        "test": "true",
+    },
+    region="RegionOne")
+doc1 = openstack.objectstorage.ContainerObject("doc1",
+    container_name=container1.name,
+    content="""               {
+                 "foo" : "bar"
+               }
+
+""",
+    content_type="application/json",
+    metadata={
+        "test": "true",
+    },
+    region="RegionOne")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -68,7 +90,25 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+container1 = openstack.objectstorage.Container("container1",
+    content_type="application/json",
+    metadata={
+        "test": "true",
+    },
+    region="RegionOne")
+doc1 = openstack.objectstorage.ContainerObject("doc1",
+    container_name=container1.name,
+    content_type="application/json",
+    metadata={
+        "test": "true",
+    },
+    region="RegionOne",
+    source="./default.json")
+```
 {{% /example %}}
 
 {{% example typescript %}}

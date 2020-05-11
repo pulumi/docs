@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+sharenetwork1 = openstack.sharedfilesystem.get_share_network(name="sharenetwork_1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

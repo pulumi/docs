@@ -17,9 +17,57 @@ Manages a V2 compute quotaset resource within OpenStack.
 > **Note:** This resource has a no-op deletion so no actual actions will be done against the OpenStack API 
     in case of delete call.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+project1 = openstack.identity.Project("project1")
+quotaset1 = openstack.compute.QuotaSetV2("quotaset1",
+    project_id=project1.id,
+    key_pairs=10,
+    ram=40960,
+    cores=32,
+    instances=20,
+    server_groups=4,
+    server_group_members=8)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const project1 = new openstack.identity.Project("project1", {});
+const quotaset1 = new openstack.compute.QuotaSetV2("quotaset1", {
+    projectId: project1.id,
+    keyPairs: 10,
+    ram: 40960,
+    cores: 32,
+    instances: 20,
+    serverGroups: 4,
+    serverGroupMembers: 8,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a QuotaSetV2 Resource {#create}

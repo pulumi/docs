@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+snapshot1 = openstack.blockstorage.get_snapshot_v2(most_recent=True,
+    name="snapshot_1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

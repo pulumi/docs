@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+secgroup = openstack.networking.get_sec_group(name="tf_test_secgroup")
+```
 {{% /example %}}
 
 {{% example typescript %}}

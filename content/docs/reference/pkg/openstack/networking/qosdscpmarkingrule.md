@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+qos_policy1 = openstack.networking.QosPolicy("qosPolicy1", description="dscp_mark")
+dscp_marking_rule1 = openstack.networking.QosDscpMarkingRule("dscpMarkingRule1",
+    dscp_mark=26,
+    qos_policy_id=qos_policy1.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

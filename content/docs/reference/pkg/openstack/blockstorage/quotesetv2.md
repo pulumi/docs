@@ -17,9 +17,59 @@ Manages a V2 block storage quotaset resource within OpenStack.
 > **Note:** This resource has a no-op deletion so no actual actions will be done against the OpenStack API 
     in case of delete call.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+project1 = openstack.identity.Project("project1")
+quotaset1 = openstack.blockstorage.QuoteSetV2("quotaset1",
+    project_id=project1.id,
+    volumes=10,
+    snapshots=4,
+    gigabytes=100,
+    per_volume_gigabytes=10,
+    backups=4,
+    backup_gigabytes=10,
+    groups=100)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const project1 = new openstack.identity.Project("project1", {});
+const quotaset1 = new openstack.blockstorage.QuoteSetV2("quotaset1", {
+    projectId: project1.id,
+    volumes: 10,
+    snapshots: 4,
+    gigabytes: 100,
+    perVolumeGigabytes: 10,
+    backups: 4,
+    backupGigabytes: 10,
+    groups: 100,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a QuoteSetV2 Resource {#create}

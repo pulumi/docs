@@ -26,6 +26,44 @@ project scope and is not visible by an admin or other accounts.
 The Application Credential visibility is similar to
 <code class="docutils literal notranslate"><span class="pre">compute.Keypair</span></code>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">swift</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">ApplicationCredential</span><span class="p">(</span><span class="s2">&quot;swift&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Swift technical application credential&quot;</span><span class="p">,</span>
+    <span class="n">expires_at</span><span class="o">=</span><span class="s2">&quot;2019-02-13T12:12:12Z&quot;</span><span class="p">,</span>
+    <span class="n">roles</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;swiftoperator&quot;</span><span class="p">],</span>
+    <span class="n">secret</span><span class="o">=</span><span class="s2">&quot;supersecret&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">unrestricted</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">ApplicationCredential</span><span class="p">(</span><span class="s2">&quot;unrestricted&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Unrestricted application credential&quot;</span><span class="p">,</span>
+    <span class="n">unrestricted</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;applicationCredentialSecret&quot;</span><span class="p">,</span> <span class="n">unrestricted</span><span class="o">.</span><span class="n">secret</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">monitoring</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">ApplicationCredential</span><span class="p">(</span><span class="s2">&quot;monitoring&quot;</span><span class="p">,</span>
+    <span class="n">access_rules</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/v2.0/metrics&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;monitoring&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;PUT&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/v2.0/metrics&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;monitoring&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">expires_at</span><span class="o">=</span><span class="s2">&quot;2019-02-13T12:12:12Z&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -306,6 +344,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> This usually requires admin privileges.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">service1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">ServiceV3</span><span class="p">(</span><span class="s2">&quot;service1&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;my-service-type&quot;</span><span class="p">)</span>
+<span class="n">endpoint1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">EndpointV3</span><span class="p">(</span><span class="s2">&quot;endpoint1&quot;</span><span class="p">,</span>
+    <span class="n">endpoint_region</span><span class="o">=</span><span class="n">service1</span><span class="o">.</span><span class="n">region</span><span class="p">,</span>
+    <span class="n">service_id</span><span class="o">=</span><span class="n">service1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;http://my-endpoint&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -823,6 +871,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a V3 Project resource within OpenStack Keystone.</p>
 <p>Note: You <em>must</em> have admin privileges in your OpenStack cloud to use
 this resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">project1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;project1&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A project&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -970,6 +1024,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a V3 Role resource within OpenStack Keystone.</p>
 <p>Note: You <em>must</em> have admin privileges in your OpenStack cloud to use
 this resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">role1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;role1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1068,6 +1128,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a V3 Role assignment within OpenStack Keystone.</p>
 <p>Note: You <em>must</em> have admin privileges in your OpenStack cloud to use
 this resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">project1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;project1&quot;</span><span class="p">)</span>
+<span class="n">user1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;user1&quot;</span><span class="p">,</span> <span class="n">default_project_id</span><span class="o">=</span><span class="n">project1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">role1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;role1&quot;</span><span class="p">)</span>
+<span class="n">role_assignment1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">RoleAssignment</span><span class="p">(</span><span class="s2">&quot;roleAssignment1&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">project1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">role_id</span><span class="o">=</span><span class="n">role1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">user_id</span><span class="o">=</span><span class="n">user1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1177,6 +1249,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> This usually requires admin privileges.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">service1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">ServiceV3</span><span class="p">(</span><span class="s2">&quot;service1&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;custom&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1288,6 +1366,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a V3 User resource within OpenStack Keystone.</p>
 <p>Note: You <em>must</em> have admin privileges in your OpenStack cloud to use
 this resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">project1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;project1&quot;</span><span class="p">)</span>
+<span class="n">user1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;user1&quot;</span><span class="p">,</span>
+    <span class="n">default_project_id</span><span class="o">=</span><span class="n">project1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A user&quot;</span><span class="p">,</span>
+    <span class="n">extra</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;user_1@foobar.com&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">ignore_change_password_upon_first_use</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">multi_factor_auth_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">multi_factor_auth_rules</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;rule&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;password&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;totp&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;rule&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;password&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;password123&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1505,6 +1609,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to get authentication information about the current
 auth scope in use. This can be used as self-discovery or introspection of
 the username or project name currently in use.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">scope</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">get_auth_scope</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my_scope&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1525,6 +1635,12 @@ A Identity client is needed to retrieve tokens IDs. If omitted, the
 <blockquote>
 <div><p><strong>Note:</strong> This usually requires admin privileges.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">endpoint1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">get_endpoint</span><span class="p">(</span><span class="n">service_name</span><span class="o">=</span><span class="s2">&quot;demo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1548,6 +1664,12 @@ If omitted, the <code class="docutils literal notranslate"><span class="pre">reg
 <code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">get_group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domain_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an OpenStack group.</p>
 <p>Note: This usually requires admin privileges.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">admins</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;admins&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1564,6 +1686,12 @@ If omitted, the <code class="docutils literal notranslate"><span class="pre">reg
 <dt id="pulumi_openstack.identity.get_project">
 <code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">get_project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domain_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an OpenStack project.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">project1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;demo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1584,6 +1712,12 @@ are <code class="docutils literal notranslate"><span class="pre">true</span></co
 <dt id="pulumi_openstack.identity.get_role">
 <code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">get_role</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domain_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_role" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an OpenStack role.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">get_role</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;admin&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1603,6 +1737,12 @@ If omitted, the <code class="docutils literal notranslate"><span class="pre">reg
 <blockquote>
 <div><p><strong>Note:</strong> This usually requires admin privileges.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">service1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">get_service</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;keystone&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1620,6 +1760,12 @@ If omitted, the <code class="docutils literal notranslate"><span class="pre">reg
 <dt id="pulumi_openstack.identity.get_user">
 <code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">get_user</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domain_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">idp_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password_expires_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">unique_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_user" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an OpenStack user.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">user1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;user_1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

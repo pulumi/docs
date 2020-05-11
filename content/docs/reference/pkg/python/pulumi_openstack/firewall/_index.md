@@ -22,6 +22,28 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_openstack.firewall.Firewall">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.firewall.</code><code class="sig-name descname">Firewall</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_state_up</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">associated_routers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">no_routers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value_specs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.Firewall" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a v1 firewall resource within OpenStack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">rule1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">firewall</span><span class="o">.</span><span class="n">Rule</span><span class="p">(</span><span class="s2">&quot;rule1&quot;</span><span class="p">,</span>
+    <span class="n">action</span><span class="o">=</span><span class="s2">&quot;deny&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;drop TELNET traffic&quot;</span><span class="p">,</span>
+    <span class="n">destination_port</span><span class="o">=</span><span class="s2">&quot;23&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;tcp&quot;</span><span class="p">)</span>
+<span class="n">rule2</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">firewall</span><span class="o">.</span><span class="n">Rule</span><span class="p">(</span><span class="s2">&quot;rule2&quot;</span><span class="p">,</span>
+    <span class="n">action</span><span class="o">=</span><span class="s2">&quot;deny&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;drop NTP traffic&quot;</span><span class="p">,</span>
+    <span class="n">destination_port</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;udp&quot;</span><span class="p">)</span>
+<span class="n">policy1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">firewall</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;policy1&quot;</span><span class="p">,</span> <span class="n">rules</span><span class="o">=</span><span class="p">[</span>
+    <span class="n">rule1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rule2</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+<span class="p">])</span>
+<span class="n">firewall1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">firewall</span><span class="o">.</span><span class="n">Firewall</span><span class="p">(</span><span class="s2">&quot;firewall1&quot;</span><span class="p">,</span> <span class="n">policy_id</span><span class="o">=</span><span class="n">policy1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -262,6 +284,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.firewall.Policy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.firewall.</code><code class="sig-name descname">Policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">audited</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shared</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value_specs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.Policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a v1 firewall policy resource within OpenStack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">rule1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">firewall</span><span class="o">.</span><span class="n">Rule</span><span class="p">(</span><span class="s2">&quot;rule1&quot;</span><span class="p">,</span>
+    <span class="n">action</span><span class="o">=</span><span class="s2">&quot;deny&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;drop TELNET traffic&quot;</span><span class="p">,</span>
+    <span class="n">destination_port</span><span class="o">=</span><span class="s2">&quot;23&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;tcp&quot;</span><span class="p">)</span>
+<span class="n">rule2</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">firewall</span><span class="o">.</span><span class="n">Rule</span><span class="p">(</span><span class="s2">&quot;rule2&quot;</span><span class="p">,</span>
+    <span class="n">action</span><span class="o">=</span><span class="s2">&quot;deny&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;drop NTP traffic&quot;</span><span class="p">,</span>
+    <span class="n">destination_port</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;udp&quot;</span><span class="p">)</span>
+<span class="n">policy1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">firewall</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;policy1&quot;</span><span class="p">,</span> <span class="n">rules</span><span class="o">=</span><span class="p">[</span>
+    <span class="n">rule1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rule2</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+<span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -429,6 +472,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.firewall.Rule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.firewall.</code><code class="sig-name descname">Rule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value_specs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.Rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a v1 firewall rule resource within OpenStack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">rule1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">firewall</span><span class="o">.</span><span class="n">Rule</span><span class="p">(</span><span class="s2">&quot;rule1&quot;</span><span class="p">,</span>
+    <span class="n">action</span><span class="o">=</span><span class="s2">&quot;deny&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;drop TELNET traffic&quot;</span><span class="p">,</span>
+    <span class="n">destination_port</span><span class="o">=</span><span class="s2">&quot;23&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;tcp&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -665,6 +719,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.firewall.get_policy">
 <code class="sig-prename descclassname">pulumi_openstack.firewall.</code><code class="sig-name descname">get_policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.get_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get firewall policy information of an available OpenStack firewall policy.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">policy</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">firewall</span><span class="o">.</span><span class="n">get_policy</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;tf_test_policy&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

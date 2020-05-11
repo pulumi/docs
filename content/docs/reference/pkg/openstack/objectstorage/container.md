@@ -28,7 +28,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+container1 = openstack.objectstorage.Container("container1",
+    content_type="application/json",
+    metadata={
+        "test": "true",
+    },
+    region="RegionOne",
+    versioning={
+        "location": "tf-test-container-versions",
+        "type": "versions",
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -60,7 +74,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+container1 = openstack.objectstorage.Container("container1",
+    container_read=".r:*",
+    region="RegionOne")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -85,7 +106,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+container1 = openstack.objectstorage.Container("container1",
+    container_read=".r:*,.rlistings",
+    region="RegionOne")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -110,7 +138,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+current = openstack.identity.get_auth_scope(name="current")
+container1 = openstack.objectstorage.Container("container1",
+    container_read=f".r:-{var['username']}",
+    container_write=f"{current.project_id}:{var['username']}",
+    region="RegionOne")
+```
 {{% /example %}}
 
 {{% example typescript %}}

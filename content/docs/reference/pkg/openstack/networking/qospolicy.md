@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+qos_policy1 = openstack.networking.QosPolicy("qosPolicy1", description="bw_limit")
+```
 {{% /example %}}
 
 {{% example typescript %}}

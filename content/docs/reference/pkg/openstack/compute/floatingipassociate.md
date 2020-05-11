@@ -29,7 +29,20 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+instance1 = openstack.compute.Instance("instance1",
+    flavor_id=3,
+    image_id="ad091b52-742f-469e-8f3c-fd81cadf0743",
+    key_pair="my_key_pair_name",
+    security_groups=["default"])
+fip1_floating_ip = openstack.networking.FloatingIp("fip1FloatingIp", pool="my_pool")
+fip1_floating_ip_associate = openstack.compute.FloatingIpAssociate("fip1FloatingIpAssociate",
+    floating_ip=fip1_floating_ip.address,
+    instance_id=instance1.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -63,7 +76,29 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+instance1 = openstack.compute.Instance("instance1",
+    flavor_id=3,
+    image_id="ad091b52-742f-469e-8f3c-fd81cadf0743",
+    key_pair="my_key_pair_name",
+    networks=[
+        {
+            "name": "my_network",
+        },
+        {
+            "name": "default",
+        },
+    ],
+    security_groups=["default"])
+fip1_floating_ip = openstack.networking.FloatingIp("fip1FloatingIp", pool="my_pool")
+fip1_floating_ip_associate = openstack.compute.FloatingIpAssociate("fip1FloatingIpAssociate",
+    fixed_ip=instance1.networks[1].fixed_ip_v4,
+    floating_ip=fip1_floating_ip.address,
+    instance_id=instance1.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

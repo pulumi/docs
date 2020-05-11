@@ -114,6 +114,18 @@ the image or image</p>
 <dt id="pulumi_openstack.images.Image">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.images.</code><code class="sig-name descname">Image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_cache_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_source_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_file_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_disk_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_ram_mb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">properties</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protected</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verify_checksum</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_download</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.Image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Image resource within OpenStack Glance.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">rancheros</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">images</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;rancheros&quot;</span><span class="p">,</span>
+    <span class="n">container_format</span><span class="o">=</span><span class="s2">&quot;bare&quot;</span><span class="p">,</span>
+    <span class="n">disk_format</span><span class="o">=</span><span class="s2">&quot;qcow2&quot;</span><span class="p">,</span>
+    <span class="n">image_source_url</span><span class="o">=</span><span class="s2">&quot;https://releases.rancher.com/os/latest/rancheros-openstack.img&quot;</span><span class="p">,</span>
+    <span class="n">properties</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;value&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <p>This resource supports the ability to add properties to a resource during
 creation as well as add, update, and delete properties during an update of this
 resource.</p>
@@ -450,6 +462,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.images.</code><code class="sig-name descname">ImageAccess</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">member_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.ImageAccess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages members for the shared OpenStack Glance V2 Image within the source
 project, which owns the Image.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">rancheros</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">images</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;rancheros&quot;</span><span class="p">,</span>
+    <span class="n">container_format</span><span class="o">=</span><span class="s2">&quot;bare&quot;</span><span class="p">,</span>
+    <span class="n">disk_format</span><span class="o">=</span><span class="s2">&quot;qcow2&quot;</span><span class="p">,</span>
+    <span class="n">image_source_url</span><span class="o">=</span><span class="s2">&quot;https://releases.rancher.com/os/latest/rancheros-openstack.img&quot;</span><span class="p">,</span>
+    <span class="n">properties</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;value&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">visibility</span><span class="o">=</span><span class="s2">&quot;shared&quot;</span><span class="p">)</span>
+<span class="n">rancheros_member</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">images</span><span class="o">.</span><span class="n">ImageAccess</span><span class="p">(</span><span class="s2">&quot;rancherosMember&quot;</span><span class="p">,</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="n">rancheros</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">member_id</span><span class="o">=</span><span class="s2">&quot;bed6b6cbb86a4e2d8dc2735c2f1000e4&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">rancheros</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">images</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;rancheros&quot;</span><span class="p">,</span>
+    <span class="n">container_format</span><span class="o">=</span><span class="s2">&quot;bare&quot;</span><span class="p">,</span>
+    <span class="n">disk_format</span><span class="o">=</span><span class="s2">&quot;qcow2&quot;</span><span class="p">,</span>
+    <span class="n">image_source_url</span><span class="o">=</span><span class="s2">&quot;https://releases.rancher.com/os/latest/rancheros-openstack.img&quot;</span><span class="p">,</span>
+    <span class="n">properties</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;value&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">visibility</span><span class="o">=</span><span class="s2">&quot;shared&quot;</span><span class="p">)</span>
+<span class="n">rancheros_member</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">images</span><span class="o">.</span><span class="n">ImageAccess</span><span class="p">(</span><span class="s2">&quot;rancherosMember&quot;</span><span class="p">,</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="n">rancheros</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">member_id</span><span class="o">=</span><span class="s2">&quot;bed6b6cbb86a4e2d8dc2735c2f1000e4&quot;</span><span class="p">,</span>
+    <span class="n">status</span><span class="o">=</span><span class="s2">&quot;accepted&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -582,6 +627,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.images.</code><code class="sig-name descname">ImageAccessAccept</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">member_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.ImageAccessAccept" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages memberships status for the shared OpenStack Glance V2 Image within the
 destination project, which has a member proposal.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">rancheros</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">images</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">member_status</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;RancherOS&quot;</span><span class="p">,</span>
+    <span class="n">visibility</span><span class="o">=</span><span class="s2">&quot;shared&quot;</span><span class="p">)</span>
+<span class="n">rancheros_member</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">images</span><span class="o">.</span><span class="n">ImageAccessAccept</span><span class="p">(</span><span class="s2">&quot;rancherosMember&quot;</span><span class="p">,</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="n">rancheros</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">status</span><span class="o">=</span><span class="s2">&quot;accepted&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -716,6 +772,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.images.get_image">
 <code class="sig-prename descclassname">pulumi_openstack.images.</code><code class="sig-name descname">get_image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">member_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">most_recent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">properties</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size_max</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size_min</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sort_direction</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sort_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.get_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack image.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">ubuntu</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">images</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">most_recent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Ubuntu 16.04&quot;</span><span class="p">,</span>
+    <span class="n">properties</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;value&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

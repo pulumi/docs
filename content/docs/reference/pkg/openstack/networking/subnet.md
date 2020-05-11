@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+network1 = openstack.networking.Network("network1", admin_state_up="true")
+subnet1 = openstack.networking.Subnet("subnet1",
+    cidr="192.168.199.0/24",
+    network_id=network1.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

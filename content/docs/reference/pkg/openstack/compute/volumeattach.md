@@ -29,7 +29,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+volume1 = openstack.blockstorage.VolumeV2("volume1", size=1)
+instance1 = openstack.compute.Instance("instance1", security_groups=["default"])
+va1 = openstack.compute.VolumeAttach("va1",
+    instance_id=instance1.id,
+    volume_id=volume1.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -50,45 +59,6 @@ const va1 = new openstack.compute.VolumeAttach("va_1", {
 ```
 {{% /example %}}
 
-### Attaching multiple volumes to a single instance
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as openstack from "@pulumi/openstack";
-
-const volumes: openstack.blockstorage.VolumeV2[] = [];
-for (let i = 0; i < 2; i++) {
-    volumes.push(new openstack.blockstorage.VolumeV2(`volumes-${i}`, {
-        size: 1,
-    }));
-}
-const instance1 = new openstack.compute.Instance("instance_1", {
-    securityGroups: ["default"],
-});
-const attachments: openstack.compute.VolumeAttach[] = [];
-for (let i = 0; i < 2; i++) {
-    attachments.push(new openstack.compute.VolumeAttach(`attachments-${i}`, {
-        instanceId: instance1.id,
-        volumeId: pulumi.all(volumes.map(v => v.id)).apply(id => id.map(v => v)[i]),
-    }));
-}
-
-export const volumeDevices = attachments.map(v => v.device);
-```
-{{% /example %}}
-
 ### Using Multiattach-enabled volumes
 {{% example csharp %}}
 Coming soon!
@@ -99,7 +69,24 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+volume1 = openstack.blockstorage.Volume("volume1",
+    multiattach=True,
+    size=1)
+instance1 = openstack.compute.Instance("instance1", security_groups=["default"])
+instance2 = openstack.compute.Instance("instance2", security_groups=["default"])
+va1 = openstack.compute.VolumeAttach("va1",
+    instance_id=instance1.id,
+    multiattach=True,
+    volume_id=openstack_blockstorage_volume_v2["volume_1"]["id"])
+va2 = openstack.compute.VolumeAttach("va2",
+    instance_id=instance2.id,
+    multiattach=True,
+    volume_id=openstack_blockstorage_volume_v2["volume_1"]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

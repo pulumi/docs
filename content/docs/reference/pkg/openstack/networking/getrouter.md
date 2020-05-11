@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+router = openstack.networking.get_router(name="router_1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

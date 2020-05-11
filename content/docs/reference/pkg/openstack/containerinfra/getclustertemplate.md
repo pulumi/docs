@@ -29,7 +29,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+clustertemplate1 = openstack.containerinfra.get_cluster_template(name="clustertemplate_1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

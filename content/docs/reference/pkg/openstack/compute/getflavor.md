@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+small = openstack.compute.get_flavor(ram=512,
+    vcpus=1)
+```
 {{% /example %}}
 
 {{% example typescript %}}

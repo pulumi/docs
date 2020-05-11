@@ -28,7 +28,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+listener1 = openstack.loadbalancer.Listener("listener1",
+    insert_headers={
+        "X-Forwarded-For": "true",
+    },
+    loadbalancer_id="d9415786-5f1a-428b-b35f-2f1523e146d2",
+    protocol="HTTP",
+    protocol_port=8080)
+```
 {{% /example %}}
 
 {{% example typescript %}}

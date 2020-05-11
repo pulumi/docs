@@ -40,7 +40,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+network1 = openstack.networking.Network("network1", admin_state_up="true")
+rbac_policy1 = openstack.networking.RbacPolicyV2("rbacPolicy1",
+    action="access_as_shared",
+    object_id=network1.id,
+    object_type="network",
+    target_tenant="20415a973c9e45d3917f078950644697")
+```
 {{% /example %}}
 
 {{% example typescript %}}

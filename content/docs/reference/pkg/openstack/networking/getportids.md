@@ -29,7 +29,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+ports = openstack.networking.get_port_ids(name="port")
+```
 {{% /example %}}
 
 {{% example typescript %}}

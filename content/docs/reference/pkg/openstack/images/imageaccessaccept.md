@@ -29,7 +29,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+rancheros = openstack.images.get_image(member_status="all",
+    name="RancherOS",
+    visibility="shared")
+rancheros_member = openstack.images.ImageAccessAccept("rancherosMember",
+    image_id=rancheros.id,
+    status="accepted")
+```
 {{% /example %}}
 
 {{% example typescript %}}

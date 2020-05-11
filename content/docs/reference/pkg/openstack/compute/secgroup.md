@@ -28,6 +28,9 @@ When using ICMP as the `ip_protocol`, the `from_port` sets the ICMP _type_ and t
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 
 A list of ICMP types and codes can be found [here](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Control_messages).
 
@@ -46,6 +49,16 @@ const test_server = new openstack.compute.Instance("test-server", {
     securityGroups: [openstack_compute_secgroup_v2_secgroup_1.name],
 });
 ```
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+test_server = openstack.compute.Instance("test-server",
+    flavor_id="3",
+    image_id="ad091b52-742f-469e-8f3c-fd81cadf0743",
+    key_pair="my_key_pair_name",
+    security_groups=[openstack_compute_secgroup_v2["secgroup_1"]["name"]])
+```
 
 {{% examples %}}
 ## Example Usage
@@ -61,7 +74,27 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+secgroup1 = openstack.compute.SecGroup("secgroup1",
+    description="my security group",
+    rules=[
+        {
+            "cidr": "0.0.0.0/0",
+            "fromPort": 22,
+            "ipProtocol": "tcp",
+            "toPort": 22,
+        },
+        {
+            "cidr": "0.0.0.0/0",
+            "fromPort": 80,
+            "ipProtocol": "tcp",
+            "toPort": 80,
+        },
+    ])
+```
 {{% /example %}}
 
 {{% example typescript %}}

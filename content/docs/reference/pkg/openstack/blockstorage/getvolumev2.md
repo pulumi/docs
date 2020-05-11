@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+volume1 = openstack.blockstorage.get_volume_v2(name="volume_1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

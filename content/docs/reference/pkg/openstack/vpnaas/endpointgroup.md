@@ -28,7 +28,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+group1 = openstack.vpnaas.EndpointGroup("group1",
+    endpoints=[
+        "10.2.0.0/24",
+        "10.3.0.0/24",
+    ],
+    type="cidr")
+```
 {{% /example %}}
 
 {{% example typescript %}}

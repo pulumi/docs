@@ -32,6 +32,19 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_openstack.compute.Flavor">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.compute.</code><code class="sig-name descname">Flavor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ephemeral</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extra_specs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_public</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ram</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rx_tx_factor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">swap</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vcpus</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.Flavor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 flavor resource within OpenStack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">test_flavor</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Flavor</span><span class="p">(</span><span class="s2">&quot;test-flavor&quot;</span><span class="p">,</span>
+    <span class="n">disk</span><span class="o">=</span><span class="s2">&quot;20&quot;</span><span class="p">,</span>
+    <span class="n">extra_specs</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;hw:cpu_policy&quot;</span><span class="p">:</span> <span class="s2">&quot;CPU-POLICY&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hw:cpu_thread_policy&quot;</span><span class="p">:</span> <span class="s2">&quot;CPU-THREAD-POLICY&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">ram</span><span class="o">=</span><span class="s2">&quot;8096&quot;</span><span class="p">,</span>
+    <span class="n">vcpus</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -202,6 +215,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a project access for flavor V2 resource within OpenStack.</p>
 <p>Note: You <em>must</em> have admin privileges in your OpenStack cloud to use
 this resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">project1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;project1&quot;</span><span class="p">)</span>
+<span class="n">flavor1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Flavor</span><span class="p">(</span><span class="s2">&quot;flavor1&quot;</span><span class="p">,</span>
+    <span class="n">disk</span><span class="o">=</span><span class="s2">&quot;20&quot;</span><span class="p">,</span>
+    <span class="n">is_public</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">ram</span><span class="o">=</span><span class="s2">&quot;8096&quot;</span><span class="p">,</span>
+    <span class="n">vcpus</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">)</span>
+<span class="n">access1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">FlavorAccess</span><span class="p">(</span><span class="s2">&quot;access1&quot;</span><span class="p">,</span>
+    <span class="n">flavor_id</span><span class="o">=</span><span class="n">flavor1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">tenant_id</span><span class="o">=</span><span class="n">project1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -306,6 +333,12 @@ that can be used for compute instances.</p>
 been deprecated. Unless you are using an older OpenStack environment, it is
 recommended to use the <code class="docutils literal notranslate"><span class="pre">networking.FloatingIp</span></code>
 resource instead, which uses the OpenStack Networking API.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">floatip1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">FloatingIp</span><span class="p">(</span><span class="s2">&quot;floatip1&quot;</span><span class="p">,</span> <span class="n">pool</span><span class="o">=</span><span class="s2">&quot;public&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -425,6 +458,43 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.compute.</code><code class="sig-name descname">FloatingIpAssociate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fixed_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">floating_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_until_associated</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.FloatingIpAssociate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Associate a floating IP to an instance. This can be used instead of the
 <code class="docutils literal notranslate"><span class="pre">floating_ip</span></code> options in <code class="docutils literal notranslate"><span class="pre">compute.Instance</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">instance1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance1&quot;</span><span class="p">,</span>
+    <span class="n">flavor_id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="s2">&quot;ad091b52-742f-469e-8f3c-fd81cadf0743&quot;</span><span class="p">,</span>
+    <span class="n">key_pair</span><span class="o">=</span><span class="s2">&quot;my_key_pair_name&quot;</span><span class="p">,</span>
+    <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">])</span>
+<span class="n">fip1_floating_ip</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">networking</span><span class="o">.</span><span class="n">FloatingIp</span><span class="p">(</span><span class="s2">&quot;fip1FloatingIp&quot;</span><span class="p">,</span> <span class="n">pool</span><span class="o">=</span><span class="s2">&quot;my_pool&quot;</span><span class="p">)</span>
+<span class="n">fip1_floating_ip_associate</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">FloatingIpAssociate</span><span class="p">(</span><span class="s2">&quot;fip1FloatingIpAssociate&quot;</span><span class="p">,</span>
+    <span class="n">floating_ip</span><span class="o">=</span><span class="n">fip1_floating_ip</span><span class="o">.</span><span class="n">address</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">instance1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">instance1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance1&quot;</span><span class="p">,</span>
+    <span class="n">flavor_id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="s2">&quot;ad091b52-742f-469e-8f3c-fd81cadf0743&quot;</span><span class="p">,</span>
+    <span class="n">key_pair</span><span class="o">=</span><span class="s2">&quot;my_key_pair_name&quot;</span><span class="p">,</span>
+    <span class="n">networks</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;my_network&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">])</span>
+<span class="n">fip1_floating_ip</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">networking</span><span class="o">.</span><span class="n">FloatingIp</span><span class="p">(</span><span class="s2">&quot;fip1FloatingIp&quot;</span><span class="p">,</span> <span class="n">pool</span><span class="o">=</span><span class="s2">&quot;my_pool&quot;</span><span class="p">)</span>
+<span class="n">fip1_floating_ip_associate</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">FloatingIpAssociate</span><span class="p">(</span><span class="s2">&quot;fip1FloatingIpAssociate&quot;</span><span class="p">,</span>
+    <span class="n">fixed_ip</span><span class="o">=</span><span class="n">instance1</span><span class="o">.</span><span class="n">networks</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;fixedIpV4&quot;</span><span class="p">],</span>
+    <span class="n">floating_ip</span><span class="o">=</span><span class="n">fip1_floating_ip</span><span class="o">.</span><span class="n">address</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">instance1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -609,23 +679,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_openstack.compute.Instance">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.compute.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_ip_v4</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_ip_v6</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_pass</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone_hints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config_drive</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">flavor_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">flavor_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_delete</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_pair</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">networks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">personalities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">power_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduler_hints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stop_before_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vendor_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.Instance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a V2 VM instance resource within OpenStack.</p>
-<p>Importing instances can be tricky, since the nova api does not offer all
-information provided at creation time for later retrieval.
-Network interface attachment order, and number and sizes of ephemeral
-disks are examples of this.</p>
-<p>The importer cannot read the emphemeral disk configuration
-of an instance, so just specify image_id as in the configuration
-of the basic instance example.</p>
+<dd><p>Create a Instance resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] access_ip_v4: The first detected Fixed IPv4 address.
+:param pulumi.Input[str] access_ip_v6: The first detected Fixed IPv6 address.
+:param pulumi.Input[str] admin_pass: The administrative password to assign to the server.</p>
+<blockquote>
+<div><p>Changing this changes the root password on the existing server.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>access_ip_v4</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The first detected Fixed IPv4 address.</p></li>
-<li><p><strong>access_ip_v6</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The first detected Fixed IPv6 address.</p></li>
-<li><p><strong>admin_pass</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The administrative password to assign to the server.
-Changing this changes the root password on the existing server.</p></li>
 <li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The availability zone in which to create
 the server. Conflicts with <code class="docutils literal notranslate"><span class="pre">availability_zone_hints</span></code>. Changing this creates
 a new server.</p></li>
@@ -1259,6 +1324,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.compute.</code><code class="sig-name descname">InterfaceAttach</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fixed_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.InterfaceAttach" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attaches a Network Interface (a Port) to an Instance using the OpenStack
 Compute (Nova) v2 API.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">network1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">networking</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;network1&quot;</span><span class="p">,</span> <span class="n">admin_state_up</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">)</span>
+<span class="n">instance1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance1&quot;</span><span class="p">,</span> <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">])</span>
+<span class="n">ai1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InterfaceAttach</span><span class="p">(</span><span class="s2">&quot;ai1&quot;</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">instance1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">network_id</span><span class="o">=</span><span class="n">openstack_networking_port_v2</span><span class="p">[</span><span class="s2">&quot;network_1&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">network1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">networking</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;network1&quot;</span><span class="p">,</span> <span class="n">admin_state_up</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">)</span>
+<span class="n">instance1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance1&quot;</span><span class="p">,</span> <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">])</span>
+<span class="n">ai1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InterfaceAttach</span><span class="p">(</span><span class="s2">&quot;ai1&quot;</span><span class="p">,</span>
+    <span class="n">fixed_ip</span><span class="o">=</span><span class="s2">&quot;10.0.10.10&quot;</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">instance1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">network_id</span><span class="o">=</span><span class="n">openstack_networking_port_v2</span><span class="p">[</span><span class="s2">&quot;network_1&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">network1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">networking</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;network1&quot;</span><span class="p">,</span> <span class="n">admin_state_up</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">)</span>
+<span class="n">port1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">networking</span><span class="o">.</span><span class="n">Port</span><span class="p">(</span><span class="s2">&quot;port1&quot;</span><span class="p">,</span>
+    <span class="n">admin_state_up</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="n">network_id</span><span class="o">=</span><span class="n">network1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">instance1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance1&quot;</span><span class="p">,</span> <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">])</span>
+<span class="n">ai1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InterfaceAttach</span><span class="p">(</span><span class="s2">&quot;ai1&quot;</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">instance1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">port_id</span><span class="o">=</span><span class="n">port1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1525,6 +1624,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">project1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;project1&quot;</span><span class="p">)</span>
+<span class="n">quotaset1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">QuotaSetV2</span><span class="p">(</span><span class="s2">&quot;quotaset1&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">project1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">key_pairs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">ram</span><span class="o">=</span><span class="mi">40960</span><span class="p">,</span>
+    <span class="n">cores</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span>
+    <span class="n">instances</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">server_groups</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">server_group_members</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1775,6 +1888,43 @@ has been deprecated. Unless you are using an older OpenStack environment, it is
 recommended to use the <code class="docutils literal notranslate"><span class="pre">networking.SecGroup</span></code>
 and <code class="docutils literal notranslate"><span class="pre">networking.SecGroupRule</span></code>
 resources instead, which uses the OpenStack Networking API.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">secgroup1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">SecGroup</span><span class="p">(</span><span class="s2">&quot;secgroup1&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;my security group&quot;</span><span class="p">,</span>
+    <span class="n">rules</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;cidr&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
+            <span class="s2">&quot;ipProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;cidr&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+            <span class="s2">&quot;ipProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+<p>When using ICMP as the <code class="docutils literal notranslate"><span class="pre">ip_protocol</span></code>, the <code class="docutils literal notranslate"><span class="pre">from_port</span></code> sets the ICMP <em>type</em> and the <code class="docutils literal notranslate"><span class="pre">to_port</span></code> sets the ICMP <em>code</em>. To allow all ICMP types, set each value to <code class="docutils literal notranslate"><span class="pre">-1</span></code>, like so:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p>A list of ICMP types and codes can be found <a class="reference external" href="https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Control_messages">here</a>.</p>
+<p>When referencing a security group in a configuration (for example, a configuration creates a new security group and then needs to apply it to an instance being created in the same configuration), it is currently recommended to reference the security group by name and not by ID, like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">test_server</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;test-server&quot;</span><span class="p">,</span>
+    <span class="n">flavor_id</span><span class="o">=</span><span class="s2">&quot;3&quot;</span><span class="p">,</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="s2">&quot;ad091b52-742f-469e-8f3c-fd81cadf0743&quot;</span><span class="p">,</span>
+    <span class="n">key_pair</span><span class="o">=</span><span class="s2">&quot;my_key_pair_name&quot;</span><span class="p">,</span>
+    <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span><span class="n">openstack_compute_secgroup_v2</span><span class="p">[</span><span class="s2">&quot;secgroup_1&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">]])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1956,6 +2106,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.compute.ServerGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.compute.</code><code class="sig-name descname">ServerGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value_specs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.ServerGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Server Group resource within OpenStack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">test_sg</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ServerGroup</span><span class="p">(</span><span class="s2">&quot;test-sg&quot;</span><span class="p">,</span> <span class="n">policies</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;anti-affinity&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <ul class="simple">
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">affinity</span></code> - All instances/servers launched in this group will be hosted on</dt><dd><p>the same compute node.</p>
@@ -2103,6 +2259,34 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.compute.</code><code class="sig-name descname">VolumeAttach</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">device</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multiattach</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.VolumeAttach" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attaches a Block Storage Volume to an Instance using the OpenStack
 Compute (Nova) v2 API.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">volume1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">blockstorage</span><span class="o">.</span><span class="n">VolumeV2</span><span class="p">(</span><span class="s2">&quot;volume1&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">instance1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance1&quot;</span><span class="p">,</span> <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">])</span>
+<span class="n">va1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VolumeAttach</span><span class="p">(</span><span class="s2">&quot;va1&quot;</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">instance1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">volume_id</span><span class="o">=</span><span class="n">volume1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">volume1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">blockstorage</span><span class="o">.</span><span class="n">Volume</span><span class="p">(</span><span class="s2">&quot;volume1&quot;</span><span class="p">,</span>
+    <span class="n">multiattach</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">instance1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance1&quot;</span><span class="p">,</span> <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">])</span>
+<span class="n">instance2</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance2&quot;</span><span class="p">,</span> <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">])</span>
+<span class="n">va1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VolumeAttach</span><span class="p">(</span><span class="s2">&quot;va1&quot;</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">instance1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">multiattach</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">volume_id</span><span class="o">=</span><span class="n">openstack_blockstorage_volume_v2</span><span class="p">[</span><span class="s2">&quot;volume_1&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">va2</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VolumeAttach</span><span class="p">(</span><span class="s2">&quot;va2&quot;</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">instance2</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">multiattach</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">volume_id</span><span class="o">=</span><span class="n">openstack_blockstorage_volume_v2</span><span class="p">[</span><span class="s2">&quot;volume_1&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2224,6 +2408,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.compute.get_availability_zones">
 <code class="sig-prename descclassname">pulumi_openstack.compute.</code><code class="sig-name descname">get_availability_zones</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.get_availability_zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get a list of availability zones from OpenStack</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">zones</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_availability_zones</span><span class="p">()</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2238,6 +2428,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.compute.get_flavor">
 <code class="sig-prename descclassname">pulumi_openstack.compute.</code><code class="sig-name descname">get_flavor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">disk</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">flavor_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_disk</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_ram</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ram</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rx_tx_factor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">swap</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vcpus</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.get_flavor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack flavor.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">small</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_flavor</span><span class="p">(</span><span class="n">ram</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span>
+    <span class="n">vcpus</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2264,6 +2461,12 @@ If omitted, the <code class="docutils literal notranslate"><span class="pre">reg
 <dt id="pulumi_openstack.compute.get_keypair">
 <code class="sig-prename descclassname">pulumi_openstack.compute.</code><code class="sig-name descname">get_keypair</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.get_keypair" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID and public key of an OpenStack keypair.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">kp</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_keypair</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;sand&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
