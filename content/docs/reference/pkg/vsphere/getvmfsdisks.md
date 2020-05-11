@@ -33,7 +33,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+datacenter = vsphere.get_datacenter(name="dc1")
+host = vsphere.get_host(datacenter_id=datacenter.id,
+    name="esxi1")
+available = vsphere.get_vmfs_disks(filter="mpx.vmhba1:C0:T[12]:L0",
+    host_system_id=host.id,
+    rescan=True)
+```
 {{% /example %}}
 
 {{% example typescript %}}

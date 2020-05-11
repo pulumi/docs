@@ -30,7 +30,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+folder = vsphere.get_folder(path="/dc1/datastore/folder1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

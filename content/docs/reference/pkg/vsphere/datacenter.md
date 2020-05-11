@@ -23,6 +23,12 @@ import * as vsphere from "@pulumi/vsphere";
 
 const prodDatacenter = new vsphere.Datacenter("prod_datacenter", {});
 ```
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+prod_datacenter = vsphere.Datacenter("prodDatacenter")
+```
 
 **Create datacenter on a subfolder:**
 
@@ -33,6 +39,12 @@ import * as vsphere from "@pulumi/vsphere";
 const researchDatacenter = new vsphere.Datacenter("research_datacenter", {
     folder: "/research/",
 });
+```
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+research_datacenter = vsphere.Datacenter("researchDatacenter", folder="/research/")
 ```
 
 

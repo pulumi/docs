@@ -33,7 +33,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+datacenter = vsphere.get_datacenter(name="dc1")
+datastore = vsphere.get_datastore(datacenter_id=datacenter.id,
+    name="datastore1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

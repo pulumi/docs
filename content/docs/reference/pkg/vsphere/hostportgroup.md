@@ -49,6 +49,25 @@ const pg = new vsphere.HostPortGroup("pg", {
     virtualSwitchName: switchHostVirtualSwitch.name,
 });
 ```
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+datacenter = vsphere.get_datacenter(name="dc1")
+esxi_host = vsphere.get_host(datacenter_id=datacenter.id,
+    name="esxi1")
+switch = vsphere.HostVirtualSwitch("switch",
+    active_nics=["vmnic0"],
+    host_system_id=esxi_host.id,
+    network_adapters=[
+        "vmnic0",
+        "vmnic1",
+    ],
+    standby_nics=["vmnic1"])
+pg = vsphere.HostPortGroup("pg",
+    host_system_id=esxi_host.id,
+    virtual_switch_name=switch.name)
+```
 
 **Create a port group with VLAN set and some overrides:**
 
@@ -84,6 +103,27 @@ const pg = new vsphere.HostPortGroup("pg", {
     virtualSwitchName: switchHostVirtualSwitch.name,
     vlanId: 4095,
 });
+```
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+datacenter = vsphere.get_datacenter(name="dc1")
+esxi_host = vsphere.get_host(datacenter_id=datacenter.id,
+    name="esxi1")
+switch = vsphere.HostVirtualSwitch("switch",
+    active_nics=["vmnic0"],
+    host_system_id=esxi_host.id,
+    network_adapters=[
+        "vmnic0",
+        "vmnic1",
+    ],
+    standby_nics=["vmnic1"])
+pg = vsphere.HostPortGroup("pg",
+    allow_promiscuous=True,
+    host_system_id=esxi_host.id,
+    virtual_switch_name=switch.name,
+    vlan_id=4095)
 ```
 
 

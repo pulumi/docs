@@ -34,7 +34,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+my_disk = vsphere.VirtualDisk("myDisk",
+    datacenter="Datacenter",
+    datastore="local",
+    size=2,
+    type="thin",
+    vmdk_path="myDisk.vmdk")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -15,9 +15,48 @@ The `vsphere..ContentLibraryItem` data source can be used to discover the ID of 
 > **NOTE:** This resource requires vCenter and is not available on direct ESXi
 connections.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+library = vsphere.get_content_library(name="Content Library Test")
+item = vsphere.get_content_library_item(name="Ubuntu Bionic 18.04",
+    library_id=library.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const library = vsphere.getContentLibrary({
+    name: "Content Library Test",
+});
+const item = library.then(library => vsphere.getContentLibraryItem({
+    name: "Ubuntu Bionic 18.04",
+    libraryId: library.id,
+}));
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetContentLibraryItem {#using}

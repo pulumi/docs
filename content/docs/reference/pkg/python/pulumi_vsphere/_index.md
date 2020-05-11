@@ -1101,6 +1101,36 @@ resource.</p>
 connections.</p>
 <p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">dc</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;dc1&quot;</span><span class="p">)</span>
+<span class="n">datastore</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datastore</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;datastore1&quot;</span><span class="p">)</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_compute_cluster</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;cluster1&quot;</span><span class="p">)</span>
+<span class="n">network</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_network</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;network1&quot;</span><span class="p">)</span>
+<span class="n">vm</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="nb">range</span> <span class="ow">in</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]:</span>
+    <span class="n">vm</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vsphere</span><span class="o">.</span><span class="n">VirtualMachine</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;vm-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">datastore_id</span><span class="o">=</span><span class="n">datastore</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="n">disks</span><span class="o">=</span><span class="p">[{</span>
+            <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;disk0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+        <span class="p">}],</span>
+        <span class="n">guest_id</span><span class="o">=</span><span class="s2">&quot;other3xLinux64Guest&quot;</span><span class="p">,</span>
+        <span class="n">memory</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span>
+        <span class="n">network_interfaces</span><span class="o">=</span><span class="p">[{</span>
+            <span class="s2">&quot;networkId&quot;</span><span class="p">:</span> <span class="n">network</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="p">}],</span>
+        <span class="n">num_cpus</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">resource_pool_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">resource_pool_id</span><span class="p">))</span>
+<span class="n">cluster_vm_affinity_rule</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">ComputeClusterVmAffinityRule</span><span class="p">(</span><span class="s2">&quot;clusterVmAffinityRule&quot;</span><span class="p">,</span>
+    <span class="n">compute_cluster_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">virtual_machine_ids</span><span class="o">=</span><span class="p">[</span><span class="n">__item</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="n">vm</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1240,6 +1270,36 @@ resource.</p>
 connections.</p>
 <p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">dc</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;dc1&quot;</span><span class="p">)</span>
+<span class="n">datastore</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datastore</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;datastore1&quot;</span><span class="p">)</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_compute_cluster</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;cluster1&quot;</span><span class="p">)</span>
+<span class="n">network</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_network</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;network1&quot;</span><span class="p">)</span>
+<span class="n">vm</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="nb">range</span> <span class="ow">in</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]:</span>
+    <span class="n">vm</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vsphere</span><span class="o">.</span><span class="n">VirtualMachine</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;vm-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">datastore_id</span><span class="o">=</span><span class="n">datastore</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="n">disks</span><span class="o">=</span><span class="p">[{</span>
+            <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;disk0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+        <span class="p">}],</span>
+        <span class="n">guest_id</span><span class="o">=</span><span class="s2">&quot;other3xLinux64Guest&quot;</span><span class="p">,</span>
+        <span class="n">memory</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span>
+        <span class="n">network_interfaces</span><span class="o">=</span><span class="p">[{</span>
+            <span class="s2">&quot;networkId&quot;</span><span class="p">:</span> <span class="n">network</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="p">}],</span>
+        <span class="n">num_cpus</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">resource_pool_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">resource_pool_id</span><span class="p">))</span>
+<span class="n">cluster_vm_anti_affinity_rule</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">ComputeClusterVmAntiAffinityRule</span><span class="p">(</span><span class="s2">&quot;clusterVmAntiAffinityRule&quot;</span><span class="p">,</span>
+    <span class="n">compute_cluster_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">virtual_machine_ids</span><span class="o">=</span><span class="p">[</span><span class="n">__item</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="n">vm</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1370,6 +1430,54 @@ resource.</p>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">dc</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;dc1&quot;</span><span class="p">)</span>
+<span class="n">datastore</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datastore</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;datastore1&quot;</span><span class="p">)</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_compute_cluster</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;cluster1&quot;</span><span class="p">)</span>
+<span class="n">network</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_network</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;network1&quot;</span><span class="p">)</span>
+<span class="n">vm1</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">VirtualMachine</span><span class="p">(</span><span class="s2">&quot;vm1&quot;</span><span class="p">,</span>
+    <span class="n">datastore_id</span><span class="o">=</span><span class="n">datastore</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">disks</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;disk0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">guest_id</span><span class="o">=</span><span class="s2">&quot;other3xLinux64Guest&quot;</span><span class="p">,</span>
+    <span class="n">memory</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span>
+    <span class="n">network_interfaces</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;networkId&quot;</span><span class="p">:</span> <span class="n">network</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">num_cpus</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">resource_pool_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">resource_pool_id</span><span class="p">)</span>
+<span class="n">vm2</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">VirtualMachine</span><span class="p">(</span><span class="s2">&quot;vm2&quot;</span><span class="p">,</span>
+    <span class="n">datastore_id</span><span class="o">=</span><span class="n">datastore</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">disks</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;disk0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">guest_id</span><span class="o">=</span><span class="s2">&quot;other3xLinux64Guest&quot;</span><span class="p">,</span>
+    <span class="n">memory</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span>
+    <span class="n">network_interfaces</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;networkId&quot;</span><span class="p">:</span> <span class="n">network</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">num_cpus</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">resource_pool_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">resource_pool_id</span><span class="p">)</span>
+<span class="n">cluster_vm_group1</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">ComputeClusterVmGroup</span><span class="p">(</span><span class="s2">&quot;clusterVmGroup1&quot;</span><span class="p">,</span>
+    <span class="n">compute_cluster_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">virtual_machine_ids</span><span class="o">=</span><span class="p">[</span><span class="n">vm1</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
+<span class="n">cluster_vm_group2</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">ComputeClusterVmGroup</span><span class="p">(</span><span class="s2">&quot;clusterVmGroup2&quot;</span><span class="p">,</span>
+    <span class="n">compute_cluster_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">virtual_machine_ids</span><span class="o">=</span><span class="p">[</span><span class="n">vm2</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
+<span class="n">cluster_vm_dependency_rule</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">ComputeClusterVmDependencyRule</span><span class="p">(</span><span class="s2">&quot;clusterVmDependencyRule&quot;</span><span class="p">,</span>
+    <span class="n">compute_cluster_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">dependency_vm_group_name</span><span class="o">=</span><span class="n">cluster_vm_group1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">vm_group_name</span><span class="o">=</span><span class="n">cluster_vm_group2</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1527,6 +1635,36 @@ resources. See the individual resource documentation pages for more information.
 connections.</p>
 <p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">dc</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;dc1&quot;</span><span class="p">)</span>
+<span class="n">datastore</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datastore</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;datastore1&quot;</span><span class="p">)</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_compute_cluster</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;cluster1&quot;</span><span class="p">)</span>
+<span class="n">network</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_network</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;network1&quot;</span><span class="p">)</span>
+<span class="n">vm</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="nb">range</span> <span class="ow">in</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]:</span>
+    <span class="n">vm</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vsphere</span><span class="o">.</span><span class="n">VirtualMachine</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;vm-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">datastore_id</span><span class="o">=</span><span class="n">datastore</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="n">disks</span><span class="o">=</span><span class="p">[{</span>
+            <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;disk0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+        <span class="p">}],</span>
+        <span class="n">guest_id</span><span class="o">=</span><span class="s2">&quot;other3xLinux64Guest&quot;</span><span class="p">,</span>
+        <span class="n">memory</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span>
+        <span class="n">network_interfaces</span><span class="o">=</span><span class="p">[{</span>
+            <span class="s2">&quot;networkId&quot;</span><span class="p">:</span> <span class="n">network</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="p">}],</span>
+        <span class="n">num_cpus</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">resource_pool_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">resource_pool_id</span><span class="p">))</span>
+<span class="n">cluster_vm_group</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">ComputeClusterVmGroup</span><span class="p">(</span><span class="s2">&quot;clusterVmGroup&quot;</span><span class="p">,</span>
+    <span class="n">compute_cluster_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">virtual_machine_ids</span><span class="o">=</span><span class="p">[</span><span class="n">__item</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="n">vm</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1644,6 +1782,43 @@ resources.</p>
 connections.</p>
 <p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">dc</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;dc1&quot;</span><span class="p">)</span>
+<span class="n">datastore</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datastore</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;datastore1&quot;</span><span class="p">)</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_compute_cluster</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;cluster1&quot;</span><span class="p">)</span>
+<span class="n">host</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_host</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;esxi1&quot;</span><span class="p">)</span>
+<span class="n">network</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_network</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;network1&quot;</span><span class="p">)</span>
+<span class="n">vm</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">VirtualMachine</span><span class="p">(</span><span class="s2">&quot;vm&quot;</span><span class="p">,</span>
+    <span class="n">datastore_id</span><span class="o">=</span><span class="n">datastore</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">disks</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;disk0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">guest_id</span><span class="o">=</span><span class="s2">&quot;other3xLinux64Guest&quot;</span><span class="p">,</span>
+    <span class="n">memory</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span>
+    <span class="n">network_interfaces</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;networkId&quot;</span><span class="p">:</span> <span class="n">network</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">num_cpus</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">resource_pool_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">resource_pool_id</span><span class="p">)</span>
+<span class="n">cluster_vm_group</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">ComputeClusterVmGroup</span><span class="p">(</span><span class="s2">&quot;clusterVmGroup&quot;</span><span class="p">,</span>
+    <span class="n">compute_cluster_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">virtual_machine_ids</span><span class="o">=</span><span class="p">[</span><span class="n">vm</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
+<span class="n">cluster_host_group</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">ComputeClusterHostGroup</span><span class="p">(</span><span class="s2">&quot;clusterHostGroup&quot;</span><span class="p">,</span>
+    <span class="n">compute_cluster_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">host_system_ids</span><span class="o">=</span><span class="p">[</span><span class="n">host</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
+<span class="n">cluster_vm_host_rule</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">ComputeClusterVmHostRule</span><span class="p">(</span><span class="s2">&quot;clusterVmHostRule&quot;</span><span class="p">,</span>
+    <span class="n">affinity_host_group_name</span><span class="o">=</span><span class="n">cluster_host_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">compute_cluster_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">vm_group_name</span><span class="o">=</span><span class="n">cluster_vm_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1792,23 +1967,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_vsphere.ContentLibrary">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ContentLibrary</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_backings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibrary" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">.ContentLibrary</span></code> resource can be used to manage Content Libraries.</p>
+<dd><p>Create a ContentLibrary resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: A description of the Content Library.
+:param pulumi.Input[str] name: The name of the Content Library.
+:param pulumi.Input[list] storage_backings: The [managed object reference ID][docs-about-morefs] on which to store Content Library</p>
 <blockquote>
-<div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
-connections.</p>
+<div><p>items.</p>
 </div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the Content Library.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Content Library.</p></li>
-<li><p><strong>storage_backings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The [managed object reference ID][docs-about-morefs] on which to store Content Library
-items.</p></li>
-</ul>
-</dd>
-</dl>
 <dl class="py attribute">
 <dt id="pulumi_vsphere.ContentLibrary.description">
 <code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibrary.description" title="Permalink to this definition">¶</a></dt>
@@ -1889,24 +2056,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_vsphere.ContentLibraryItem">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ContentLibraryItem</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file_urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">library_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">.ContentLibraryItem</span></code> resource can be used to create items in a Content Library. Each item can contain 
-multiple files. Each <code class="docutils literal notranslate"><span class="pre">file_url</span></code> must be accessible from the vSphere environment as it will be downloaded from the
-specified location and stored on the Content Library’s storage backing.</p>
-<p>To make a <code class="docutils literal notranslate"><span class="pre">content_library_item</span></code> a functioning template, the template must be in OVF format. The .ovf and .vmdk
-file(s) can then be set as the <code class="docutils literal notranslate"><span class="pre">file_url</span></code> list.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the item.</p></li>
-<li><p><strong>file_urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of files to download for the Content Library item.</p></li>
-<li><p><strong>library_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Content Library the item should be created in.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the item to be created in the Content Library.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of content library item.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ContentLibraryItem resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: A description for the item.
+:param pulumi.Input[list] file_urls: A list of files to download for the Content Library item.
+:param pulumi.Input[str] library_id: The ID of the Content Library the item should be created in.
+:param pulumi.Input[str] name: The name of the item to be created in the Content Library.
+:param pulumi.Input[str] type: Type of content library item.</p>
 <dl class="py attribute">
 <dt id="pulumi_vsphere.ContentLibraryItem.description">
 <code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.description" title="Permalink to this definition">¶</a></dt>
@@ -1999,46 +2156,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_vsphere.CustomAttribute">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">CustomAttribute</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">managed_object_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.CustomAttribute" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">.CustomAttribute</span></code> resource can be used to create and manage custom
-attributes, which allow users to associate user-specific meta-information with 
-vSphere managed objects. Custom attribute values must be strings and are stored 
-on the vCenter Server and not the managed object.</p>
-<p>For more information about custom attributes, click <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vcenterhost.doc/GUID-73606C4C-763C-4E27-A1DA-032E4C46219D.html">here</a>.</p>
+<dd><p>Create a CustomAttribute resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] managed_object_type: The object type that this attribute may be</p>
 <blockquote>
-<div><p><strong>NOTE:</strong> Custom attributes are unsupported on direct ESXi connections 
-and require vCenter.</p>
-</div></blockquote>
-<p>The following table will help you determine what value you need to enter for 
-the managed object type you want the attribute to apply to.</p>
-<p>Note that if you want a attribute to apply to all objects, leave the type 
-unspecified.</p>
-<table>
-<tr><th>Type</th><th>Value</th></tr>
-<tr><td>Folders</td><td>`Folder`</td></tr>
-<tr><td>Clusters</td><td>`ClusterComputeResource`</td></tr>
-<tr><td>Datacenters</td><td>`Datacenter`</td></tr>
-<tr><td>Datastores</td><td>`Datastore`</td></tr>
-<tr><td>Datastore Clusters</td><td>`StoragePod`</td></tr>
-<tr><td>DVS Portgroups</td><td>`DistributedVirtualPortgroup`</td></tr>
-<tr><td>Distributed vSwitches</td><td>`DistributedVirtualSwitch`<br>`VmwareDistributedVirtualSwitch`</td></tr>
-<tr><td>Hosts</td><td>`HostSystem`</td></tr>
-<tr><td>Content Libraries</td><td>`com.vmware.content.Library`</td></tr>
-<tr><td>Content Library Items</td><td>`com.vmware.content.library.Item`</td></tr>
-<tr><td>Networks</td><td>`HostNetwork`<br>`Network`<br>`OpaqueNetwork`</td></tr>
-<tr><td>Resource Pools</td><td>`ResourcePool`</td></tr>
-<tr><td>vApps</td><td>`VirtualApp`</td></tr>
-<tr><td>Virtual Machines</td><td>`VirtualMachine`</td></tr>
-</table><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>managed_object_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object type that this attribute may be
-applied to. If not set, the custom attribute may be applied to any object
+<div><p>applied to. If not set, the custom attribute may be applied to any object
 type. For a full list, click here. Forces a new
-resource if changed.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the custom attribute.</p></li>
-</ul>
+resource if changed.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the custom attribute.</p>
 </dd>
 </dl>
 <dl class="py attribute">
@@ -2120,6 +2249,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Datacenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Datacenter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VMware vSphere datacenter resource. This can be used as the primary
 container of inventory objects such as hosts and virtual machines.</p>
+<p><strong>Create datacenter on the root folder:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">prod_datacenter</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">Datacenter</span><span class="p">(</span><span class="s2">&quot;prodDatacenter&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Create datacenter on a subfolder:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">research_datacenter</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">Datacenter</span><span class="p">(</span><span class="s2">&quot;researchDatacenter&quot;</span><span class="p">,</span> <span class="n">folder</span><span class="o">=</span><span class="s2">&quot;/research/&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2644,6 +2787,36 @@ operation that would keep that from happening, depending on the value of the
 connections.</p>
 <p><strong>NOTE:</strong> Storage DRS requires a vSphere Enterprise Plus license.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">dc</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;dc1&quot;</span><span class="p">)</span>
+<span class="n">datastore_cluster</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datastore_cluster</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;datastore-cluster1&quot;</span><span class="p">)</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_compute_cluster</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;cluster1&quot;</span><span class="p">)</span>
+<span class="n">network</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_network</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;network1&quot;</span><span class="p">)</span>
+<span class="n">vm</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="nb">range</span> <span class="ow">in</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]:</span>
+    <span class="n">vm</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vsphere</span><span class="o">.</span><span class="n">VirtualMachine</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;vm-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">datastore_cluster_id</span><span class="o">=</span><span class="n">datastore_cluster</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="n">disks</span><span class="o">=</span><span class="p">[{</span>
+            <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;disk0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+        <span class="p">}],</span>
+        <span class="n">guest_id</span><span class="o">=</span><span class="s2">&quot;other3xLinux64Guest&quot;</span><span class="p">,</span>
+        <span class="n">memory</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span>
+        <span class="n">network_interfaces</span><span class="o">=</span><span class="p">[{</span>
+            <span class="s2">&quot;networkId&quot;</span><span class="p">:</span> <span class="n">network</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="p">}],</span>
+        <span class="n">num_cpus</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">resource_pool_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">resource_pool_id</span><span class="p">))</span>
+<span class="n">cluster_vm_anti_affinity_rule</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">DatastoreClusterVmAntiAffinityRule</span><span class="p">(</span><span class="s2">&quot;clusterVmAntiAffinityRule&quot;</span><span class="p">,</span>
+    <span class="n">datastore_cluster_id</span><span class="o">=</span><span class="n">datastore_cluster</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">virtual_machine_ids</span><span class="o">=</span><span class="p">[</span><span class="n">__item</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="n">vm</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2775,6 +2948,27 @@ portgroups, see <a class="reference external" href="https://docs.vmware.com/en/V
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">dvs</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">DistributedVirtualSwitch</span><span class="p">(</span><span class="s2">&quot;dvs&quot;</span><span class="p">,</span>
+    <span class="n">active_uplinks</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;tfup1&quot;</span><span class="p">],</span>
+    <span class="n">datacenter_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Datacenter&quot;</span><span class="p">][</span><span class="s2">&quot;dc&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">standby_uplinks</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;tfup2&quot;</span><span class="p">],</span>
+    <span class="n">uplinks</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;tfup1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tfup2&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+<span class="n">pg</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">DistributedPortGroup</span><span class="p">(</span><span class="s2">&quot;pg&quot;</span><span class="p">,</span>
+    <span class="n">active_uplinks</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;tfup1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tfup2&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">distributed_virtual_switch_uuid</span><span class="o">=</span><span class="n">dvs</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">standby_uplinks</span><span class="o">=</span><span class="p">[],</span>
+    <span class="n">vlan_id</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3317,31 +3511,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">DistributedVirtualSwitch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">active_uplinks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_forged_transmits</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_mac_changes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_promiscuous</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">block_all_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_beacon</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">contact_detail</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">contact_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">directpath_gen2_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">egress_shaping_average_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">egress_shaping_burst_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">egress_shaping_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">egress_shaping_peak_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">failback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">faulttolerance_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">faulttolerance_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">faulttolerance_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">faulttolerance_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hbr_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hbr_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hbr_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hbr_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hosts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ingress_shaping_average_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ingress_shaping_burst_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ingress_shaping_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ingress_shaping_peak_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv4_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iscsi_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iscsi_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iscsi_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iscsi_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lacp_api_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lacp_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lacp_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">link_discovery_operation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">link_discovery_protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_mtu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multicast_filtering_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_active_flow_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_collector_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_collector_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_idle_flow_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_internal_flows_only</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_observation_domain_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_sampling_rate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_resource_control_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_resource_control_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nfs_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nfs_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nfs_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nfs_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_switches</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port_private_secondary_vlan_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">standby_uplinks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">teaming_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tx_uplink</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uplinks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vdp_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vdp_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vdp_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vdp_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtualmachine_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtualmachine_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtualmachine_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtualmachine_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlan_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlan_ranges</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vmotion_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vmotion_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vmotion_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vmotion_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vsan_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vsan_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vsan_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vsan_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">.DistributedVirtualSwitch</span></code> resource can be used to manage VMware
-Distributed Virtual Switches.</p>
-<p>An essential component of a distributed, scalable VMware datacenter, the
-vSphere Distributed Virtual Switch (DVS) provides centralized management and
-monitoring of the networking configuration of all the hosts that are associated
-with the switch. In addition to adding port groups (see the
-<cite>`</cite>.DistributedPortGroup`` &lt;/docs/providers/vsphere/r/distributed_port_group.html&gt;`_ resource) that can
-be used as networks for virtual machines, a DVS can be configured to perform
-advanced high availability, traffic shaping, network monitoring, and more.</p>
-<p>For an overview on vSphere networking concepts, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-2B11DBB8-CB3C-4AFF-8885-EFEA0FC562F4.html">this
-page</a>. For more information on vSphere DVS, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-375B45C7-684C-4C51-BA3C-70E48DFABF04.html">this
-page</a>.</p>
+<dd><p>Create a DistributedVirtualSwitch resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] active_uplinks: A list of active uplinks to be used in load</p>
 <blockquote>
-<div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
-connections.</p>
+<div><p>balancing. These uplinks need to match the definitions in the
+<code class="docutils literal notranslate"><span class="pre">uplinks</span></code> DVS argument. See
+here for more details.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>active_uplinks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of active uplinks to be used in load
-balancing. These uplinks need to match the definitions in the
-<code class="docutils literal notranslate"><span class="pre">uplinks</span></code> DVS argument. See
-here for more details.</p></li>
 <li><p><strong>allow_forged_transmits</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls whether or not a virtual
 network adapter is allowed to send network traffic with a different MAC
 address than that of its own.</p></li>
@@ -4501,6 +4682,38 @@ page</a>.</p>
 connections.</p>
 <p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">dc</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;dc1&quot;</span><span class="p">)</span>
+<span class="n">datastore</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datastore</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;datastore1&quot;</span><span class="p">)</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_compute_cluster</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;cluster1&quot;</span><span class="p">)</span>
+<span class="n">host</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_host</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;esxi1&quot;</span><span class="p">)</span>
+<span class="n">network</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_network</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;network1&quot;</span><span class="p">)</span>
+<span class="n">vm</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">VirtualMachine</span><span class="p">(</span><span class="s2">&quot;vm&quot;</span><span class="p">,</span>
+    <span class="n">datastore_id</span><span class="o">=</span><span class="n">datastore</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">disks</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;disk0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">guest_id</span><span class="o">=</span><span class="s2">&quot;other3xLinux64Guest&quot;</span><span class="p">,</span>
+    <span class="n">host_system_id</span><span class="o">=</span><span class="n">host</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">memory</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span>
+    <span class="n">network_interfaces</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;networkId&quot;</span><span class="p">:</span> <span class="n">network</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">num_cpus</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">resource_pool_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">resource_pool_id</span><span class="p">)</span>
+<span class="n">drs_vm_override</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">DrsVmOverride</span><span class="p">(</span><span class="s2">&quot;drsVmOverride&quot;</span><span class="p">,</span>
+    <span class="n">compute_cluster_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">drs_enabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">virtual_machine_id</span><span class="o">=</span><span class="n">vm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4750,22 +4963,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_vsphere.Folder">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Folder</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Folder" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">.Folder</span></code> resource can be used to manage vSphere inventory folders.
-The resource supports creating folders of the 5 major types - datacenter
-folders, host and cluster folders, virtual machine folders, datastore folders,
-and network folders.</p>
-<p>Paths are always relative to the specific type of folder you are creating.
-Subfolders are discovered by parsing the relative path specified in <code class="docutils literal notranslate"><span class="pre">path</span></code>, so
-<code class="docutils literal notranslate"><span class="pre">foo/bar</span></code> will create a folder named <code class="docutils literal notranslate"><span class="pre">bar</span></code> in the parent folder <code class="docutils literal notranslate"><span class="pre">foo</span></code>, as long
-as that folder exists.</p>
+<dd><p>Create a Folder resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] custom_attributes: Map of custom attribute ids to attribute</p>
+<blockquote>
+<div><p>value strings to set for folder. See [here][docs-setting-custom-attributes]
+for a reference on how to set values for custom attributes.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of custom attribute ids to attribute 
-value strings to set for folder. See [here][docs-setting-custom-attributes]
-for a reference on how to set values for custom attributes.</p></li>
 <li><p><strong>datacenter_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the datacenter the folder will be created in.
 Required for all folder types except for datacenter folders. Forces a new
 resource if changed.</p></li>
@@ -5191,6 +5399,35 @@ while not affecting the rest of the cluster.</p>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">dc</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;dc1&quot;</span><span class="p">)</span>
+<span class="n">datastore</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datastore</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;datastore1&quot;</span><span class="p">)</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_compute_cluster</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;cluster1&quot;</span><span class="p">)</span>
+<span class="n">network</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_network</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;network1&quot;</span><span class="p">)</span>
+<span class="n">vm</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">VirtualMachine</span><span class="p">(</span><span class="s2">&quot;vm&quot;</span><span class="p">,</span>
+    <span class="n">datastore_id</span><span class="o">=</span><span class="n">datastore</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">disks</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;disk0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">guest_id</span><span class="o">=</span><span class="s2">&quot;other3xLinux64Guest&quot;</span><span class="p">,</span>
+    <span class="n">memory</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span>
+    <span class="n">network_interfaces</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;networkId&quot;</span><span class="p">:</span> <span class="n">network</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">num_cpus</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">resource_pool_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">resource_pool_id</span><span class="p">)</span>
+<span class="n">ha_vm_override</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">HaVmOverride</span><span class="p">(</span><span class="s2">&quot;haVmOverride&quot;</span><span class="p">,</span>
+    <span class="n">compute_cluster_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">ha_vm_restart_priority</span><span class="o">=</span><span class="s2">&quot;highest&quot;</span><span class="p">,</span>
+    <span class="n">virtual_machine_id</span><span class="o">=</span><span class="n">vm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5510,6 +5747,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Host</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connected</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lockdown</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thumbprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Host" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VMware vSphere host resource. This represents an ESXi host that
 can be used either as part of a Compute Cluster or Standalone.</p>
+<p><strong>Create a standalone host:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">dc</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-datacenter&quot;</span><span class="p">)</span>
+<span class="n">h1</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">Host</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">,</span>
+    <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;10.10.10.1&quot;</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;password&quot;</span><span class="p">,</span>
+    <span class="n">license</span><span class="o">=</span><span class="s2">&quot;00000-00000-00000-00000i-00000&quot;</span><span class="p">,</span>
+    <span class="n">datacenter</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Create host in a compute cluster:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">dc</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;TfDatacenter&quot;</span><span class="p">)</span>
+<span class="n">c1</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_compute_cluster</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;DC0_C0&quot;</span><span class="p">,</span>
+    <span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">h1</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">Host</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">,</span>
+    <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;10.10.10.1&quot;</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;password&quot;</span><span class="p">,</span>
+    <span class="n">license</span><span class="o">=</span><span class="s2">&quot;00000-00000-00000-00000i-00000&quot;</span><span class="p">,</span>
+    <span class="n">cluster</span><span class="o">=</span><span class="n">c1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>An existing host can be <a class="reference external" href="/docs/import/index.html">imported</a> into this resource
+via supplying the host’s ID. An example is below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p>The above would import the host with ID <code class="docutils literal notranslate"><span class="pre">host-123</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5698,6 +5969,53 @@ port groups on an ESXi host. These port groups are connected to standard
 virtual switches, which can be managed by the
 <cite>`</cite>.HostVirtualSwitch`` &lt;/docs/providers/vsphere/r/host_virtual_switch.html&gt;`_ resource.</p>
 <p>For an overview on vSphere networking concepts, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-2B11DBB8-CB3C-4AFF-8885-EFEA0FC562F4.html">this page</a>.</p>
+<p><strong>Create a virtual switch and bind a port group to it:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">datacenter</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;dc1&quot;</span><span class="p">)</span>
+<span class="n">esxi_host</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_host</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">datacenter</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;esxi1&quot;</span><span class="p">)</span>
+<span class="n">switch</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">HostVirtualSwitch</span><span class="p">(</span><span class="s2">&quot;switch&quot;</span><span class="p">,</span>
+    <span class="n">active_nics</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;vmnic0&quot;</span><span class="p">],</span>
+    <span class="n">host_system_id</span><span class="o">=</span><span class="n">esxi_host</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">network_adapters</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;vmnic0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;vmnic1&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">standby_nics</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;vmnic1&quot;</span><span class="p">])</span>
+<span class="n">pg</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">HostPortGroup</span><span class="p">(</span><span class="s2">&quot;pg&quot;</span><span class="p">,</span>
+    <span class="n">host_system_id</span><span class="o">=</span><span class="n">esxi_host</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">virtual_switch_name</span><span class="o">=</span><span class="n">switch</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Create a port group with VLAN set and some overrides:</strong></p>
+<p>This example sets the trunk mode VLAN (<code class="docutils literal notranslate"><span class="pre">4095</span></code>, which passes through all tags)
+and sets
+<cite>``allow_promiscuous`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/vsphere/r/host_virtual_switch.html#allow_promiscuous">https://www.terraform.io/docs/providers/vsphere/r/host_virtual_switch.html#allow_promiscuous</a>&gt;`_
+to ensure that all traffic is seen on the port. The latter setting overrides
+the implicit default of <code class="docutils literal notranslate"><span class="pre">false</span></code> set on the virtual switch.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">datacenter</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;dc1&quot;</span><span class="p">)</span>
+<span class="n">esxi_host</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_host</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">datacenter</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;esxi1&quot;</span><span class="p">)</span>
+<span class="n">switch</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">HostVirtualSwitch</span><span class="p">(</span><span class="s2">&quot;switch&quot;</span><span class="p">,</span>
+    <span class="n">active_nics</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;vmnic0&quot;</span><span class="p">],</span>
+    <span class="n">host_system_id</span><span class="o">=</span><span class="n">esxi_host</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">network_adapters</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;vmnic0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;vmnic1&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">standby_nics</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;vmnic1&quot;</span><span class="p">])</span>
+<span class="n">pg</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">HostPortGroup</span><span class="p">(</span><span class="s2">&quot;pg&quot;</span><span class="p">,</span>
+    <span class="n">allow_promiscuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">host_system_id</span><span class="o">=</span><span class="n">esxi_host</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">virtual_switch_name</span><span class="o">=</span><span class="n">switch</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">vlan_id</span><span class="o">=</span><span class="mi">4095</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5962,19 +6280,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_vsphere.HostVirtualSwitch">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">HostVirtualSwitch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">active_nics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_forged_transmits</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_mac_changes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_promiscuous</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">beacon_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_beacon</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">failback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_system_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">link_discovery_operation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">link_discovery_protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mtu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_adapters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_switches</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">number_of_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shaping_average_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shaping_burst_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shaping_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shaping_peak_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">standby_nics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">teaming_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">.HostVirtualSwitch</span></code> resource can be used to manage vSphere
-standard switches on an ESXi host. These switches can be used as a backing for
-standard port groups, which can be managed by the
-<cite>`</cite>.HostPortGroup`` &lt;/docs/providers/vsphere/r/host_port_group.html&gt;`_ resource.</p>
-<p>For an overview on vSphere networking concepts, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-2B11DBB8-CB3C-4AFF-8885-EFEA0FC562F4.html">this
-page</a>.</p>
+<dd><p>Create a HostVirtualSwitch resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] active_nics: The list of active network adapters used for load</p>
+<blockquote>
+<div><p>balancing.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>active_nics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of active network adapters used for load
-balancing.</p></li>
 <li><p><strong>allow_forged_transmits</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls whether or not the virtual
 network adapter is allowed to send network traffic with a different MAC
 address than that of its own. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
@@ -6286,6 +6601,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vsphere.License">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">License</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.License" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VMware vSphere license resource. This can be used to add and remove license keys.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">license_key</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">License</span><span class="p">(</span><span class="s2">&quot;licenseKey&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;VpxClientLicenseLabel&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello World&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Workflow&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello World&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">license_key</span><span class="o">=</span><span class="s2">&quot;452CQ-2EK54-K8742-00000-00000&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6743,6 +7069,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 resource pools in standalone hosts or on compute clusters.</p>
 <p>For more information on vSphere resource pools, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-60077B40-66FF-4625-934A-641703ED7601.html">this
 page</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">datacenter</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;datacenter&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">datacenter</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">datacenter</span> <span class="o">=</span> <span class="s2">&quot;dc1&quot;</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;cluster&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">cluster</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">cluster</span> <span class="o">=</span> <span class="s2">&quot;cluster1&quot;</span>
+<span class="n">dc</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">datacenter</span><span class="p">)</span>
+<span class="n">compute_cluster</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_compute_cluster</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="n">cluster</span><span class="p">)</span>
+<span class="n">resource_pool</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">ResourcePool</span><span class="p">(</span><span class="s2">&quot;resourcePool&quot;</span><span class="p">,</span> <span class="n">parent_resource_pool_id</span><span class="o">=</span><span class="n">compute_cluster</span><span class="o">.</span><span class="n">resource_pool_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7008,6 +7350,37 @@ level and disk affinity for a single virtual machine without affecting the rest
 of the datastore cluster.</p>
 <p>For more information on vSphere datastore clusters and Storage DRS, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-598DF695-107E-406B-9C95-0AF961FC227A.html">this
 page</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">dc</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;dc1&quot;</span><span class="p">)</span>
+<span class="n">datastore_cluster</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datastore_cluster</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;datastore-cluster1&quot;</span><span class="p">)</span>
+<span class="n">member_datastore</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datastore</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;datastore-cluster1-member1&quot;</span><span class="p">)</span>
+<span class="n">pool</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_resource_pool</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;cluster1/Resources&quot;</span><span class="p">)</span>
+<span class="n">network</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_network</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;public&quot;</span><span class="p">)</span>
+<span class="n">vm</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">VirtualMachine</span><span class="p">(</span><span class="s2">&quot;vm&quot;</span><span class="p">,</span>
+    <span class="n">datastore_id</span><span class="o">=</span><span class="n">member_datastore</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">disks</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;disk0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">guest_id</span><span class="o">=</span><span class="s2">&quot;other3xLinux64Guest&quot;</span><span class="p">,</span>
+    <span class="n">memory</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span>
+    <span class="n">network_interfaces</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;networkId&quot;</span><span class="p">:</span> <span class="n">network</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">num_cpus</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">resource_pool_id</span><span class="o">=</span><span class="n">pool</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">drs_vm_override</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">StorageDrsVmOverride</span><span class="p">(</span><span class="s2">&quot;drsVmOverride&quot;</span><span class="p">,</span>
+    <span class="n">datastore_cluster_id</span><span class="o">=</span><span class="n">datastore_cluster</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">sdrs_enabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">virtual_machine_id</span><span class="o">=</span><span class="n">vm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7149,21 +7522,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_vsphere.Tag">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Tag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">category_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Tag" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">.Tag</span></code> resource can be used to create and manage tags, which allow
-you to attach metadata to objects in the vSphere inventory to make these
-objects more sortable and searchable.</p>
-<p>For more information about tags, click <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vcenterhost.doc/GUID-E8E854DD-AA97-4E0C-8419-CE84F93C4058.html">here</a>.</p>
+<dd><p>Create a Tag resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] category_id: The unique identifier of the parent category in</p>
 <blockquote>
-<div><p><strong>NOTE:</strong> Tagging support is unsupported on direct ESXi connections and
-requires vCenter 6.0 or higher.</p>
+<div><p>which this tag will be created. Forces a new resource if changed.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>category_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier of the parent category in
-which this tag will be created. Forces a new resource if changed.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the tag.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name of the tag. The name must be unique
 within its category.</p></li>
@@ -7252,24 +7620,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_vsphere.TagCategory">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">TagCategory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">associable_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cardinality</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.TagCategory" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">.TagCategory</span></code> resource can be used to create and manage tag
-categories, which determine how tags are grouped together and applied to
-specific objects.</p>
-<p>For more information about tags, click <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vcenterhost.doc/GUID-E8E854DD-AA97-4E0C-8419-CE84F93C4058.html">here</a>. For more
-information about tag categories specifically, click
-<a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vcenterhost.doc/GUID-BA3D1794-28F2-43F3-BCE9-3964CB207FB6.html">here</a>.</p>
+<dd><p>Create a TagCategory resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] associable_types: A list object types that this category is</p>
 <blockquote>
-<div><p><strong>NOTE:</strong> Tagging support is unsupported on direct ESXi connections and
-requires vCenter 6.0 or higher.</p>
+<div><p>valid to be assigned to. For a full list, click
+here.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>associable_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list object types that this category is
-valid to be assigned to. For a full list, click
-here.</p></li>
 <li><p><strong>cardinality</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The number of tags that can be assigned from this
 category to a single object at once. Can be one of <code class="docutils literal notranslate"><span class="pre">SINGLE</span></code> (object can only
 be assigned one tag in this category), to <code class="docutils literal notranslate"><span class="pre">MULTIPLE</span></code> (object can be assigned
@@ -7378,6 +7739,55 @@ a format of their choosing before sending those properties to the Pulumi engine.
 vApps.</p>
 <p>For more information on vSphere vApps, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-2A95EBB8-1779-40FA-B4FB-4D0845750879.html">this
 page</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">datacenter</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;datacenter&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">datacenter</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">datacenter</span> <span class="o">=</span> <span class="s2">&quot;dc1&quot;</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;cluster&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">cluster</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">cluster</span> <span class="o">=</span> <span class="s2">&quot;cluster1&quot;</span>
+<span class="n">dc</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">datacenter</span><span class="p">)</span>
+<span class="n">compute_cluster</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_compute_cluster</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="n">cluster</span><span class="p">)</span>
+<span class="n">vapp_container</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">VappContainer</span><span class="p">(</span><span class="s2">&quot;vappContainer&quot;</span><span class="p">,</span> <span class="n">parent_resource_pool_id</span><span class="o">=</span><span class="n">compute_cluster</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">datacenter</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;datacenter&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">datacenter</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">datacenter</span> <span class="o">=</span> <span class="s2">&quot;dc1&quot;</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;cluster&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">cluster</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">cluster</span> <span class="o">=</span> <span class="s2">&quot;cluster1&quot;</span>
+<span class="n">dc</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">datacenter</span><span class="p">)</span>
+<span class="n">compute_cluster</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_compute_cluster</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="n">cluster</span><span class="p">)</span>
+<span class="n">network</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_network</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;network1&quot;</span><span class="p">)</span>
+<span class="n">datastore</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datastore</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;datastore1&quot;</span><span class="p">)</span>
+<span class="n">vapp_container</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">VappContainer</span><span class="p">(</span><span class="s2">&quot;vappContainer&quot;</span><span class="p">,</span> <span class="n">parent_resource_pool_id</span><span class="o">=</span><span class="n">compute_cluster</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">vm</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">VirtualMachine</span><span class="p">(</span><span class="s2">&quot;vm&quot;</span><span class="p">,</span>
+    <span class="n">datastore_id</span><span class="o">=</span><span class="n">datastore</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">disks</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;disk0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">guest_id</span><span class="o">=</span><span class="s2">&quot;ubuntu64Guest&quot;</span><span class="p">,</span>
+    <span class="n">memory</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span>
+    <span class="n">network_interfaces</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;networkId&quot;</span><span class="p">:</span> <span class="n">network</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">num_cpus</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">resource_pool_id</span><span class="o">=</span><span class="n">vapp_container</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7653,17 +8063,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_vsphere.VappEntity">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">VappEntity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_order</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stop_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stop_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_guest</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VappEntity" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">.VappEntity</span></code> resource can be used to describe the behavior of an
-entity (virtual machine or sub-vApp container) in a vApp container.</p>
-<p>For more information on vSphere vApps, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-2A95EBB8-1779-40FA-B4FB-4D0845750879.html">this
-page</a>.</p>
+<dd><p>Create a VappEntity resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] container_id: [Managed object ID|docs-about-morefs] of the vApp</p>
+<blockquote>
+<div><p>container the entity is a member of.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>container_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – [Managed object ID|docs-about-morefs] of the vApp
-container the entity is a member of.</p></li>
 <li><p><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A list of custom attributes to set on this resource.</p></li>
 <li><p><strong>start_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – How to start the entity. Valid settings are none
 or powerOn. If set to none, then the entity does not participate in auto-start.
@@ -7839,6 +8248,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 of any given <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_
 resource. These disks can be attached to a virtual machine by creating a disk
 block with the <cite>``attach`</cite> &lt;/docs/providers/vsphere/r/virtual_machine.html#attach&gt;`_ parameter.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">my_disk</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">VirtualDisk</span><span class="p">(</span><span class="s2">&quot;myDisk&quot;</span><span class="p">,</span>
+    <span class="n">datacenter</span><span class="o">=</span><span class="s2">&quot;Datacenter&quot;</span><span class="p">,</span>
+    <span class="n">datastore</span><span class="o">=</span><span class="s2">&quot;local&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;thin&quot;</span><span class="p">,</span>
+    <span class="n">vmdk_path</span><span class="o">=</span><span class="s2">&quot;myDisk.vmdk&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9525,6 +9945,19 @@ HashiCorp recommends retaining snapshots for a extended period of time and does
 NOT recommend using them as as backup feature. For more information on the
 limitation of virtual machine snapshots, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-53F65726-A23B-4CF0-A7D5-48E584B88613.html">here</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">demo1</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">VirtualMachineSnapshot</span><span class="p">(</span><span class="s2">&quot;demo1&quot;</span><span class="p">,</span>
+    <span class="n">consolidate</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is Demo Snapshot&quot;</span><span class="p">,</span>
+    <span class="n">memory</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="n">quiesce</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="n">remove_children</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="p">,</span>
+    <span class="n">snapshot_name</span><span class="o">=</span><span class="s2">&quot;Snapshot Name&quot;</span><span class="p">,</span>
+    <span class="n">virtual_machine_uuid</span><span class="o">=</span><span class="s2">&quot;9aac5551-a351-4158-8c5c-15a71e8ec5c9&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9877,6 +10310,64 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vsphere.Vnic">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Vnic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">distributed_port_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">distributed_switch_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv4</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mac</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mtu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netstack</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">portgroup</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Vnic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VMware vSphere vnic resource.</p>
+<p><strong>Create a vnic attached to a distributed virtual switch using the vmotion TCP/IP stack:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">dc</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;mydc&quot;</span><span class="p">)</span>
+<span class="n">h1</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_host</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;esxi1.host.test&quot;</span><span class="p">,</span>
+    <span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">d1</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">DistributedVirtualSwitch</span><span class="p">(</span><span class="s2">&quot;d1&quot;</span><span class="p">,</span>
+    <span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">host</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;hostSystemId&quot;</span><span class="p">:</span> <span class="n">h1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;devices&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;vnic3&quot;</span><span class="p">],</span>
+    <span class="p">}])</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">DistributedPortGroup</span><span class="p">(</span><span class="s2">&quot;p1&quot;</span><span class="p">,</span>
+    <span class="n">vlan_id</span><span class="o">=</span><span class="mi">1234</span><span class="p">,</span>
+    <span class="n">distributed_virtual_switch_uuid</span><span class="o">=</span><span class="n">d1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">v1</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">Vnic</span><span class="p">(</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span>
+    <span class="n">host</span><span class="o">=</span><span class="n">h1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">distributed_switch_port</span><span class="o">=</span><span class="n">d1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">distributed_port_group</span><span class="o">=</span><span class="n">p1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">ipv4</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;dhcp&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">netstack</span><span class="o">=</span><span class="s2">&quot;vmotion&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Create a vnic attached to a portgroup using the default TCP/IP stack:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">dc</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;mydc&quot;</span><span class="p">)</span>
+<span class="n">h1</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_host</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;esxi1.host.test&quot;</span><span class="p">,</span>
+    <span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">hvs1</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">HostVirtualSwitch</span><span class="p">(</span><span class="s2">&quot;hvs1&quot;</span><span class="p">,</span>
+    <span class="n">host_system_id</span><span class="o">=</span><span class="n">h1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">network_adapters</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;vmnic3&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;vmnic4&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">active_nics</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;vmnic3&quot;</span><span class="p">],</span>
+    <span class="n">standby_nics</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;vmnic4&quot;</span><span class="p">])</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">HostPortGroup</span><span class="p">(</span><span class="s2">&quot;p1&quot;</span><span class="p">,</span>
+    <span class="n">virtual_switch_name</span><span class="o">=</span><span class="n">hvs1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">host_system_id</span><span class="o">=</span><span class="n">h1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">v1</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">Vnic</span><span class="p">(</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span>
+    <span class="n">host</span><span class="o">=</span><span class="n">h1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">portgroup</span><span class="o">=</span><span class="n">p1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ipv4</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;dhcp&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<p>An existing vNic can be <a class="reference external" href="/docs/import/index.html">imported</a> into this resource
+via supplying the vNic’s ID. An example is below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p>The above would import the the vnic <code class="docutils literal notranslate"><span class="pre">vmk2</span></code> from host with ID <code class="docutils literal notranslate"><span class="pre">host-123</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10077,6 +10568,12 @@ data source.</p></li>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">library</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_content_library</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Content Library Test&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the Content Library.</p>
@@ -10092,6 +10589,14 @@ connections.</p>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">library</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_content_library</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Content Library Test&quot;</span><span class="p">)</span>
+<span class="n">item</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_content_library_item</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Ubuntu Bionic 18.04&quot;</span><span class="p">,</span>
+    <span class="n">library_id</span><span class="o">=</span><span class="n">library</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10120,6 +10625,12 @@ connections.</p>
 vSphere datacenter. This can then be used with resources or data sources that
 require a datacenter, such as the <cite>`</cite>.Host`` &lt;/docs/providers/vsphere/d/host.html&gt;`_
 data source.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">datacenter</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;dc1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the datacenter. This can be a name or path.
@@ -10135,6 +10646,14 @@ Can be omitted if there is only one datacenter in your inventory.</p>
 datastore in vSphere. This is useful to fetch the ID of a datastore that you
 want to use to create virtual machines in using the
 <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">datacenter</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;dc1&quot;</span><span class="p">)</span>
+<span class="n">datastore</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datastore</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">datacenter</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;datastore1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10159,6 +10678,14 @@ cluster that you want to use to assign datastores to using the
 <cite>`</cite>.VmfsDatastore`` &lt;/docs/providers/vsphere/r/vmfs_datastore.html&gt;`_ resources, or create
 virtual machines in using the
 <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">datacenter</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;dc1&quot;</span><span class="p">)</span>
+<span class="n">datastore_cluster</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datastore_cluster</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Datacenter&quot;</span><span class="p">][</span><span class="s2">&quot;dc&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;datastore-cluster1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10176,15 +10703,7 @@ For default datacenters, use the id attribute from an empty
 <dl class="py function">
 <dt id="pulumi_vsphere.get_distributed_virtual_switch">
 <code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_distributed_virtual_switch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_distributed_virtual_switch" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">.DistributedVirtualSwitch</span></code> data source can be used to discover
-the ID and uplink data of a of a vSphere distributed virtual switch (DVS). This
-can then be used with resources or data sources that require a DVS, such as the
-<cite>`</cite>.DistributedPortGroup`` &lt;/docs/providers/vsphere/r/distributed_port_group.html&gt;`_ resource, for which
-an example is shown below.</p>
-<blockquote>
-<div><p><strong>NOTE:</strong> This data source requires vCenter and is not available on direct
-ESXi connections.</p>
-</div></blockquote>
+<dd><p>Use this data source to access information about an existing resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10206,6 +10725,12 @@ name or path.</p></li>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Folder</span></code> data source can be used to get the general attributes of a
 vSphere inventory folder. Paths are absolute and include must include the
 datacenter.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">folder</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_folder</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s2">&quot;/dc1/datastore/folder1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py function">
@@ -10214,6 +10739,14 @@ datacenter.</p>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Host</span></code> data source can be used to discover the ID of a vSphere
 host. This can then be used with resources or data sources that require a host
 managed object reference ID.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">datacenter</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;dc1&quot;</span><span class="p">)</span>
+<span class="n">host</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_host</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">datacenter</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;esxi1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10229,11 +10762,7 @@ omitted if there is only one host in your inventory.</p></li>
 <dl class="py function">
 <dt id="pulumi_vsphere.get_network">
 <code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_network</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">distributed_virtual_switch_uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_network" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">.getNetwork</span></code> data source can be used to discover the ID of a network
-in vSphere. This can be any network that can be used as the backing for a
-network interface for <code class="docutils literal notranslate"><span class="pre">.VirtualMachine</span></code> or any other vSphere resource
-that requires a network. This includes standard (host-based) port groups, DVS
-port groups, or opaque networks such as those managed by NSX.</p>
+<dd><p>Use this data source to access information about an existing resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10262,6 +10791,12 @@ require a storage policy.</p>
 <div><p><strong>NOTE:</strong> Storage policy support is unsupported on direct ESXi connections and
 requires vCenter 6.0 or higher.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">policy</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_policy</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;policy1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the storage policy.</p>
@@ -10276,6 +10811,21 @@ requires vCenter 6.0 or higher.</p>
 resource pool in vSphere. This is useful to fetch the ID of a resource pool
 that you want to use to create virtual machines in using the
 <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">datacenter</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;dc1&quot;</span><span class="p">)</span>
+<span class="n">pool</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_resource_pool</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">datacenter</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;resource-pool-1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">pool</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_resource_pool</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Datacenter&quot;</span><span class="p">][</span><span class="s2">&quot;dc&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;esxi1/Resources&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10323,6 +10873,14 @@ path. This is required when using vCenter.</p></li>
 vApp container in vSphere. This is useful to fetch the ID of a vApp container
 that you want to use to create virtual machines in using the
 <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">datacenter</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;dc1&quot;</span><span class="p">)</span>
+<span class="n">pool</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_vapp_container</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">datacenter</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;vapp-container-1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10343,6 +10901,14 @@ existing virtual machine or template. Its most relevant purpose is for finding
 the UUID of a template to be used as the source for cloning into a new
 <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource. It also
 reads the guest ID so that can be supplied as well.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">datacenter</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;dc1&quot;</span><span class="p">)</span>
+<span class="n">template</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_virtual_machine</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">datacenter</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;test-vm-template&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10367,6 +10933,17 @@ scan for disk attributes and controller types on. Default: <code class="docutils
 devices available on an ESXi host. This data source can be combined with the
 <cite>`</cite>.VmfsDatastore`` &lt;/docs/providers/vsphere/r/vmfs_datastore.html&gt;`_ resource to create VMFS
 datastores based off a set of discovered disks.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vsphere</span> <span class="k">as</span> <span class="nn">vsphere</span>
+
+<span class="n">datacenter</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_datacenter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;dc1&quot;</span><span class="p">)</span>
+<span class="n">host</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_host</span><span class="p">(</span><span class="n">datacenter_id</span><span class="o">=</span><span class="n">datacenter</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;esxi1&quot;</span><span class="p">)</span>
+<span class="n">available</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">get_vmfs_disks</span><span class="p">(</span><span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;mpx.vmhba1:C0:T[12]:L0&quot;</span><span class="p">,</span>
+    <span class="n">host_system_id</span><span class="o">=</span><span class="n">host</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rescan</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

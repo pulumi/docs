@@ -50,7 +50,43 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+dc = vsphere.get_datacenter(name="dc1")
+datastore = vsphere.get_datastore(datacenter_id=dc.id,
+    name="datastore1")
+cluster = vsphere.get_compute_cluster(datacenter_id=dc.id,
+    name="cluster1")
+host = vsphere.get_host(datacenter_id=dc.id,
+    name="esxi1")
+network = vsphere.get_network(datacenter_id=dc.id,
+    name="network1")
+vm = vsphere.VirtualMachine("vm",
+    datastore_id=datastore.id,
+    disks=[{
+        "label": "disk0",
+        "size": 20,
+    }],
+    guest_id="other3xLinux64Guest",
+    memory=2048,
+    network_interfaces=[{
+        "networkId": network.id,
+    }],
+    num_cpus=2,
+    resource_pool_id=cluster.resource_pool_id)
+cluster_vm_group = vsphere.ComputeClusterVmGroup("clusterVmGroup",
+    compute_cluster_id=cluster.id,
+    virtual_machine_ids=[vm.id])
+cluster_host_group = vsphere.ComputeClusterHostGroup("clusterHostGroup",
+    compute_cluster_id=cluster.id,
+    host_system_ids=[host.id])
+cluster_vm_host_rule = vsphere.ComputeClusterVmHostRule("clusterVmHostRule",
+    affinity_host_group_name=cluster_host_group.name,
+    compute_cluster_id=cluster.id,
+    vm_group_name=cluster_vm_group.name)
+```
 {{% /example %}}
 
 {{% example typescript %}}

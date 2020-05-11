@@ -33,7 +33,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+datacenter = vsphere.get_datacenter(name="dc1")
+pool = vsphere.get_resource_pool(datacenter_id=datacenter.id,
+    name="resource-pool-1")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -61,7 +68,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+pool = vsphere.get_resource_pool(datacenter_id=data["vsphere..Datacenter"]["dc"]["id"],
+    name="esxi1/Resources")
+```
 {{% /example %}}
 
 {{% example typescript %}}

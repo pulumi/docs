@@ -13,6 +13,74 @@ meta_desc: "Explore the Host resource of the vSphere package, including examples
 Provides a VMware vSphere host resource. This represents an ESXi host that
 can be used either as part of a Compute Cluster or Standalone.
 
+## Example Usages
+
+**Create a standalone host:**
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const dc = vsphere.getDatacenter({
+    name: "my-datacenter",
+});
+const h1 = new vsphere.Host("h1", {
+    hostname: "10.10.10.1",
+    username: "root",
+    password: "password",
+    license: "00000-00000-00000-00000i-00000",
+    datacenter: dc.then(dc => dc.id),
+});
+```
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+dc = vsphere.get_datacenter(name="my-datacenter")
+h1 = vsphere.Host("h1",
+    hostname="10.10.10.1",
+    username="root",
+    password="password",
+    license="00000-00000-00000-00000i-00000",
+    datacenter=dc.id)
+```
+
+**Create host in a compute cluster:**
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const dc = vsphere.getDatacenter({
+    name: "TfDatacenter",
+});
+const c1 = dc.then(dc => vsphere.getComputeCluster({
+    name: "DC0_C0",
+    datacenterId: dc.id,
+}));
+const h1 = new vsphere.Host("h1", {
+    hostname: "10.10.10.1",
+    username: "root",
+    password: "password",
+    license: "00000-00000-00000-00000i-00000",
+    cluster: c1.then(c1 => c1.id),
+});
+```
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+dc = vsphere.get_datacenter(name="TfDatacenter")
+c1 = vsphere.get_compute_cluster(name="DC0_C0",
+    datacenter_id=dc.id)
+h1 = vsphere.Host("h1",
+    hostname="10.10.10.1",
+    username="root",
+    password="password",
+    license="00000-00000-00000-00000i-00000",
+    cluster=c1.id)
+```
+
 ## Importing 
 
 An existing host can be [imported][docs-import] into this resource
@@ -22,6 +90,9 @@ via supplying the host's ID. An example is below:
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 
 The above would import the host with ID `host-123`.

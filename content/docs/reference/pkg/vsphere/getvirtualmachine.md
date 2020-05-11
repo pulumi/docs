@@ -34,7 +34,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+datacenter = vsphere.get_datacenter(name="dc1")
+template = vsphere.get_virtual_machine(datacenter_id=datacenter.id,
+    name="test-vm-template")
+```
 {{% /example %}}
 
 {{% example typescript %}}
