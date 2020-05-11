@@ -22,6 +22,50 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.cloudwatch.Dashboard">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">Dashboard</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dashboard_body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dashboard_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.Dashboard" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Dashboard resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">Dashboard</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
+    <span class="n">dashboard_body</span><span class="o">=</span><span class="s2">&quot;&quot;&quot; {</span>
+<span class="s2">   &quot;widgets&quot;: [</span>
+<span class="s2">       {</span>
+<span class="s2">          &quot;type&quot;:&quot;metric&quot;,</span>
+<span class="s2">          &quot;x&quot;:0,</span>
+<span class="s2">          &quot;y&quot;:0,</span>
+<span class="s2">          &quot;width&quot;:12,</span>
+<span class="s2">          &quot;height&quot;:6,</span>
+<span class="s2">          &quot;properties&quot;:{</span>
+<span class="s2">             &quot;metrics&quot;:[</span>
+<span class="s2">                [</span>
+<span class="s2">                   &quot;AWS/EC2&quot;,</span>
+<span class="s2">                   &quot;CPUUtilization&quot;,</span>
+<span class="s2">                   &quot;InstanceId&quot;,</span>
+<span class="s2">                   &quot;i-012345&quot;</span>
+<span class="s2">                ]</span>
+<span class="s2">             ],</span>
+<span class="s2">             &quot;period&quot;:300,</span>
+<span class="s2">             &quot;stat&quot;:&quot;Average&quot;,</span>
+<span class="s2">             &quot;region&quot;:&quot;us-east-1&quot;,</span>
+<span class="s2">             &quot;title&quot;:&quot;EC2 Instance CPU&quot;</span>
+<span class="s2">          }</span>
+<span class="s2">       },</span>
+<span class="s2">       {</span>
+<span class="s2">          &quot;type&quot;:&quot;text&quot;,</span>
+<span class="s2">          &quot;x&quot;:0,</span>
+<span class="s2">          &quot;y&quot;:7,</span>
+<span class="s2">          &quot;width&quot;:3,</span>
+<span class="s2">          &quot;height&quot;:3,</span>
+<span class="s2">          &quot;properties&quot;:{</span>
+<span class="s2">             &quot;markdown&quot;:&quot;Hello world&quot;</span>
+<span class="s2">          }</span>
+<span class="s2">       }</span>
+<span class="s2">   ]</span>
+<span class="s2"> }</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">dashboard_name</span><span class="o">=</span><span class="s2">&quot;my-dashboard&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -112,6 +156,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.EventPermission">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">EventPermission</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">principal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">statement_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.EventPermission" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create a CloudWatch Events permission to support cross-account events in the current account default event bus.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">dev_account_access</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">EventPermission</span><span class="p">(</span><span class="s2">&quot;devAccountAccess&quot;</span><span class="p">,</span>
+    <span class="n">principal</span><span class="o">=</span><span class="s2">&quot;123456789012&quot;</span><span class="p">,</span>
+    <span class="n">statement_id</span><span class="o">=</span><span class="s2">&quot;DevAccountAccess&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">organization_access</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">EventPermission</span><span class="p">(</span><span class="s2">&quot;organizationAccess&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;aws:PrincipalOrgID&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;StringEquals&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">aws_organizations_organization</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">principal</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">,</span>
+    <span class="n">statement_id</span><span class="o">=</span><span class="s2">&quot;OrganizationAccess&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -227,6 +292,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.EventRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">EventRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">event_pattern</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedule_expression</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.EventRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Event Rule resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">console</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">EventRule</span><span class="p">(</span><span class="s2">&quot;console&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Capture each AWS Console Sign In&quot;</span><span class="p">,</span>
+    <span class="n">event_pattern</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;detail-type&quot;: [</span>
+<span class="s2">    &quot;AWS Console Sign In via CloudTrail&quot;</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">aws_logins</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;awsLogins&quot;</span><span class="p">)</span>
+<span class="n">sns</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">EventTarget</span><span class="p">(</span><span class="s2">&quot;sns&quot;</span><span class="p">,</span>
+    <span class="n">arn</span><span class="o">=</span><span class="n">aws_logins</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">rule</span><span class="o">=</span><span class="n">console</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">sns_topic_policy</span> <span class="o">=</span> <span class="n">aws_logins</span><span class="o">.</span><span class="n">arn</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">arn</span><span class="p">:</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;SNS:Publish&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;effect&quot;</span><span class="p">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;principals&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;identifiers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;events.amazonaws.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Service&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">arn</span><span class="p">],</span>
+<span class="p">}]))</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">TopicPolicy</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">arn</span><span class="o">=</span><span class="n">aws_logins</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="n">sns_topic_policy</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -374,6 +469,120 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.EventTarget">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">EventTarget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">batch_target</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ecs_target</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">input</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">input_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">input_transformer</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kinesis_target</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">run_command_targets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sqs_target</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.EventTarget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Event Target resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">console</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">EventRule</span><span class="p">(</span><span class="s2">&quot;console&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Capture all EC2 scaling events&quot;</span><span class="p">,</span>
+    <span class="n">event_pattern</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;source&quot;: [</span>
+<span class="s2">    &quot;aws.autoscaling&quot;</span>
+<span class="s2">  ],</span>
+<span class="s2">  &quot;detail-type&quot;: [</span>
+<span class="s2">    &quot;EC2 Instance Launch Successful&quot;,</span>
+<span class="s2">    &quot;EC2 Instance Terminate Successful&quot;,</span>
+<span class="s2">    &quot;EC2 Instance Launch Unsuccessful&quot;,</span>
+<span class="s2">    &quot;EC2 Instance Terminate Unsuccessful&quot;</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">test_stream</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kinesis</span><span class="o">.</span><span class="n">Stream</span><span class="p">(</span><span class="s2">&quot;testStream&quot;</span><span class="p">,</span> <span class="n">shard_count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">yada</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">EventTarget</span><span class="p">(</span><span class="s2">&quot;yada&quot;</span><span class="p">,</span>
+    <span class="n">arn</span><span class="o">=</span><span class="n">test_stream</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">rule</span><span class="o">=</span><span class="n">console</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">run_command_targets</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;tag:Name&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;FooBar&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;InstanceIds&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;i-162058cd308bffec2&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">ssm_lifecycle_trust</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;sts:AssumeRole&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;principals&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;identifiers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;events.amazonaws.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Service&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+<span class="p">}])</span>
+<span class="n">stop_instance</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ssm</span><span class="o">.</span><span class="n">Document</span><span class="p">(</span><span class="s2">&quot;stopInstance&quot;</span><span class="p">,</span>
+    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;  {</span>
+<span class="s2">    &quot;schemaVersion&quot;: &quot;1.2&quot;,</span>
+<span class="s2">    &quot;description&quot;: &quot;Stop an instance&quot;,</span>
+<span class="s2">    &quot;parameters&quot;: {</span>
+
+<span class="s2">    },</span>
+<span class="s2">    &quot;runtimeConfig&quot;: {</span>
+<span class="s2">      &quot;aws:runShellScript&quot;: {</span>
+<span class="s2">        &quot;properties&quot;: [</span>
+<span class="s2">          {</span>
+<span class="s2">            &quot;id&quot;: &quot;0.aws:runShellScript&quot;,</span>
+<span class="s2">            &quot;runCommand&quot;: [&quot;halt&quot;]</span>
+<span class="s2">          }</span>
+<span class="s2">        ]</span>
+<span class="s2">      }</span>
+<span class="s2">    }</span>
+<span class="s2">  }</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">document_type</span><span class="o">=</span><span class="s2">&quot;Command&quot;</span><span class="p">)</span>
+<span class="n">ssm_lifecycle_policy_document</span> <span class="o">=</span> <span class="n">stop_instance</span><span class="o">.</span><span class="n">arn</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">arn</span><span class="p">:</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ssm:SendCommand&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;condition&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;test&quot;</span><span class="p">:</span> <span class="s2">&quot;StringEquals&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;variable&quot;</span><span class="p">:</span> <span class="s2">&quot;ec2:ResourceTag/Terminate&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;effect&quot;</span><span class="p">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;arn:aws:ec2:eu-west-1:1234567890:instance/*&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ssm:SendCommand&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;effect&quot;</span><span class="p">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">arn</span><span class="p">],</span>
+    <span class="p">},</span>
+<span class="p">]))</span>
+<span class="n">ssm_lifecycle_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;ssmLifecycleRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="n">ssm_lifecycle_trust</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>
+<span class="n">ssm_lifecycle_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;ssmLifecyclePolicy&quot;</span><span class="p">,</span> <span class="n">policy</span><span class="o">=</span><span class="n">ssm_lifecycle_policy_document</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>
+<span class="n">stop_instances_event_rule</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">EventRule</span><span class="p">(</span><span class="s2">&quot;stopInstancesEventRule&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Stop instances nightly&quot;</span><span class="p">,</span>
+    <span class="n">schedule_expression</span><span class="o">=</span><span class="s2">&quot;cron(0 0 * * ? *)&quot;</span><span class="p">)</span>
+<span class="n">stop_instances_event_target</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">EventTarget</span><span class="p">(</span><span class="s2">&quot;stopInstancesEventTarget&quot;</span><span class="p">,</span>
+    <span class="n">arn</span><span class="o">=</span><span class="n">stop_instance</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">role_arn</span><span class="o">=</span><span class="n">ssm_lifecycle_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">rule</span><span class="o">=</span><span class="n">stop_instances_event_rule</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">run_command_targets</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;tag:Terminate&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;midnight&quot;</span><span class="p">],</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">stop_instances_event_rule</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">EventRule</span><span class="p">(</span><span class="s2">&quot;stopInstancesEventRule&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Stop instances nightly&quot;</span><span class="p">,</span>
+    <span class="n">schedule_expression</span><span class="o">=</span><span class="s2">&quot;cron(0 0 * * ? *)&quot;</span><span class="p">)</span>
+<span class="n">stop_instances_event_target</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">EventTarget</span><span class="p">(</span><span class="s2">&quot;stopInstancesEventTarget&quot;</span><span class="p">,</span>
+    <span class="n">arn</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;arn:aws:ssm:</span><span class="si">{</span><span class="n">var</span><span class="p">[</span><span class="s1">&#39;aws_region&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">::document/AWS-RunShellScript&quot;</span><span class="p">,</span>
+    <span class="nb">input</span><span class="o">=</span><span class="s2">&quot;{&quot;</span><span class="n">commands</span><span class="s2">&quot;:[&quot;</span><span class="n">halt</span><span class="s2">&quot;]}&quot;</span><span class="p">,</span>
+    <span class="n">role_arn</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;ssm_lifecycle&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">rule</span><span class="o">=</span><span class="n">stop_instances_event_rule</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">run_command_targets</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;tag:Terminate&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;midnight&quot;</span><span class="p">],</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -696,6 +905,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.LogDestination">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">LogDestination</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogDestination" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Logs destination resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_destination</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">LogDestination</span><span class="p">(</span><span class="s2">&quot;testDestination&quot;</span><span class="p">,</span>
+    <span class="n">role_arn</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;iam_for_cloudwatch&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">target_arn</span><span class="o">=</span><span class="n">aws_kinesis_stream</span><span class="p">[</span><span class="s2">&quot;kinesis_for_cloudwatch&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -793,6 +1010,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.LogDestinationPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">LogDestinationPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogDestinationPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Logs destination policy resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_destination</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">LogDestination</span><span class="p">(</span><span class="s2">&quot;testDestination&quot;</span><span class="p">,</span>
+    <span class="n">role_arn</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;iam_for_cloudwatch&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">target_arn</span><span class="o">=</span><span class="n">aws_kinesis_stream</span><span class="p">[</span><span class="s2">&quot;kinesis_for_cloudwatch&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
+<span class="n">test_destination_policy_policy_document</span> <span class="o">=</span> <span class="n">test_destination</span><span class="o">.</span><span class="n">arn</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">arn</span><span class="p">:</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;logs:PutSubscriptionFilter&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;effect&quot;</span><span class="p">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;principals&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;identifiers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;123456789012&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">arn</span><span class="p">],</span>
+<span class="p">}]))</span>
+<span class="n">test_destination_policy_log_destination_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">LogDestinationPolicy</span><span class="p">(</span><span class="s2">&quot;testDestinationPolicyLogDestinationPolicy&quot;</span><span class="p">,</span>
+    <span class="n">access_policy</span><span class="o">=</span><span class="n">test_destination_policy_policy_document</span><span class="o">.</span><span class="n">json</span><span class="p">,</span>
+    <span class="n">destination_name</span><span class="o">=</span><span class="n">test_destination</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -875,6 +1112,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.LogGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">LogGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_in_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Log Group resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">yada</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">LogGroup</span><span class="p">(</span><span class="s2">&quot;yada&quot;</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;Application&quot;</span><span class="p">:</span> <span class="s2">&quot;serviceA&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;production&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -997,6 +1243,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.LogMetricFilter">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">LogMetricFilter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric_transformation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pattern</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogMetricFilter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Log Metric Filter resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">dada</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">LogGroup</span><span class="p">(</span><span class="s2">&quot;dada&quot;</span><span class="p">)</span>
+<span class="n">yada</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">LogMetricFilter</span><span class="p">(</span><span class="s2">&quot;yada&quot;</span><span class="p">,</span>
+    <span class="n">log_group_name</span><span class="o">=</span><span class="n">dada</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">metric_transformation</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;EventCount&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;namespace&quot;</span><span class="p">:</span> <span class="s2">&quot;YourNamespace&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">pattern</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1122,6 +1382,45 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.LogResourcePolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">LogResourcePolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_document</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogResourcePolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage a CloudWatch log resource policy.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">elasticsearch_log_publishing_policy_policy_document</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;logs:CreateLogStream&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;logs:PutLogEvents&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;logs:PutLogEventsBatch&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;principals&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;identifiers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;es.amazonaws.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Service&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;arn:aws:logs:*&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">elasticsearch_log_publishing_policy_log_resource_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">LogResourcePolicy</span><span class="p">(</span><span class="s2">&quot;elasticsearch-log-publishing-policyLogResourcePolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy_document</span><span class="o">=</span><span class="n">elasticsearch_log_publishing_policy_policy_document</span><span class="o">.</span><span class="n">json</span><span class="p">,</span>
+    <span class="n">policy_name</span><span class="o">=</span><span class="s2">&quot;elasticsearch-log-publishing-policy&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">route53_query_logging_policy_policy_document</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;logs:CreateLogStream&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;logs:PutLogEvents&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;principals&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;identifiers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;route53.amazonaws.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Service&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;arn:aws:logs:*:*:log-group:/aws/route53/*&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">route53_query_logging_policy_log_resource_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">LogResourcePolicy</span><span class="p">(</span><span class="s2">&quot;route53-query-logging-policyLogResourcePolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy_document</span><span class="o">=</span><span class="n">route53_query_logging_policy_policy_document</span><span class="o">.</span><span class="n">json</span><span class="p">,</span>
+    <span class="n">policy_name</span><span class="o">=</span><span class="s2">&quot;route53-query-logging-policy&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1204,6 +1503,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.LogStream">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">LogStream</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogStream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Log Stream resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">yada</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">LogGroup</span><span class="p">(</span><span class="s2">&quot;yada&quot;</span><span class="p">)</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">LogStream</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="n">log_group_name</span><span class="o">=</span><span class="n">yada</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1293,6 +1599,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.LogSubscriptionFilter">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">LogSubscriptionFilter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">distribution</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filter_pattern</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogSubscriptionFilter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Logs subscription filter resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_lambdafunction_logfilter</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">LogSubscriptionFilter</span><span class="p">(</span><span class="s2">&quot;testLambdafunctionLogfilter&quot;</span><span class="p">,</span>
+    <span class="n">destination_arn</span><span class="o">=</span><span class="n">aws_kinesis_stream</span><span class="p">[</span><span class="s2">&quot;test_logstream&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">distribution</span><span class="o">=</span><span class="s2">&quot;Random&quot;</span><span class="p">,</span>
+    <span class="n">filter_pattern</span><span class="o">=</span><span class="s2">&quot;logtype test&quot;</span><span class="p">,</span>
+    <span class="n">log_group</span><span class="o">=</span><span class="s2">&quot;/aws/lambda/example_lambda_name&quot;</span><span class="p">,</span>
+    <span class="n">role_arn</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;iam_for_lambda&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1407,6 +1724,147 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.MetricAlarm">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">MetricAlarm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">actions_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alarm_actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alarm_description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">comparison_operator</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datapoints_to_alarm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dimensions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">evaluate_low_sample_count_percentiles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">evaluation_periods</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extended_statistic</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">insufficient_data_actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric_queries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ok_actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">statistic</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threshold_metric_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">treat_missing_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">unit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.MetricAlarm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Metric Alarm resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">MetricAlarm</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">alarm_description</span><span class="o">=</span><span class="s2">&quot;This metric monitors ec2 cpu utilization&quot;</span><span class="p">,</span>
+    <span class="n">comparison_operator</span><span class="o">=</span><span class="s2">&quot;GreaterThanOrEqualToThreshold&quot;</span><span class="p">,</span>
+    <span class="n">evaluation_periods</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+    <span class="n">insufficient_data_actions</span><span class="o">=</span><span class="p">[],</span>
+    <span class="n">metric_name</span><span class="o">=</span><span class="s2">&quot;CPUUtilization&quot;</span><span class="p">,</span>
+    <span class="n">namespace</span><span class="o">=</span><span class="s2">&quot;AWS/EC2&quot;</span><span class="p">,</span>
+    <span class="n">period</span><span class="o">=</span><span class="s2">&quot;120&quot;</span><span class="p">,</span>
+    <span class="n">statistic</span><span class="o">=</span><span class="s2">&quot;Average&quot;</span><span class="p">,</span>
+    <span class="n">threshold</span><span class="o">=</span><span class="s2">&quot;80&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bat_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">autoscaling</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;batPolicy&quot;</span><span class="p">,</span>
+    <span class="n">adjustment_type</span><span class="o">=</span><span class="s2">&quot;ChangeInCapacity&quot;</span><span class="p">,</span>
+    <span class="n">autoscaling_group_name</span><span class="o">=</span><span class="n">aws_autoscaling_group</span><span class="p">[</span><span class="s2">&quot;bar&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">cooldown</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">scaling_adjustment</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">bat_metric_alarm</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">MetricAlarm</span><span class="p">(</span><span class="s2">&quot;batMetricAlarm&quot;</span><span class="p">,</span>
+    <span class="n">alarm_actions</span><span class="o">=</span><span class="p">[</span><span class="n">bat_policy</span><span class="o">.</span><span class="n">arn</span><span class="p">],</span>
+    <span class="n">alarm_description</span><span class="o">=</span><span class="s2">&quot;This metric monitors ec2 cpu utilization&quot;</span><span class="p">,</span>
+    <span class="n">comparison_operator</span><span class="o">=</span><span class="s2">&quot;GreaterThanOrEqualToThreshold&quot;</span><span class="p">,</span>
+    <span class="n">dimensions</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;AutoScalingGroupName&quot;</span><span class="p">:</span> <span class="n">aws_autoscaling_group</span><span class="p">[</span><span class="s2">&quot;bar&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">evaluation_periods</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+    <span class="n">metric_name</span><span class="o">=</span><span class="s2">&quot;CPUUtilization&quot;</span><span class="p">,</span>
+    <span class="n">namespace</span><span class="o">=</span><span class="s2">&quot;AWS/EC2&quot;</span><span class="p">,</span>
+    <span class="n">period</span><span class="o">=</span><span class="s2">&quot;120&quot;</span><span class="p">,</span>
+    <span class="n">statistic</span><span class="o">=</span><span class="s2">&quot;Average&quot;</span><span class="p">,</span>
+    <span class="n">threshold</span><span class="o">=</span><span class="s2">&quot;80&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">MetricAlarm</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">alarm_description</span><span class="o">=</span><span class="s2">&quot;Request error rate has exceeded 10%&quot;</span><span class="p">,</span>
+    <span class="n">comparison_operator</span><span class="o">=</span><span class="s2">&quot;GreaterThanOrEqualToThreshold&quot;</span><span class="p">,</span>
+    <span class="n">evaluation_periods</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+    <span class="n">insufficient_data_actions</span><span class="o">=</span><span class="p">[],</span>
+    <span class="n">metric_queries</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;m2/m1*100&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;e1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Error Rate&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;returnData&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;m1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;metric&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;dimensions&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;LoadBalancer&quot;</span><span class="p">:</span> <span class="s2">&quot;app/web&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;metricName&quot;</span><span class="p">:</span> <span class="s2">&quot;RequestCount&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;namespace&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS/ApplicationELB&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;period&quot;</span><span class="p">:</span> <span class="s2">&quot;120&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;stat&quot;</span><span class="p">:</span> <span class="s2">&quot;Sum&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;Count&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;m2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;metric&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;dimensions&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;LoadBalancer&quot;</span><span class="p">:</span> <span class="s2">&quot;app/web&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;metricName&quot;</span><span class="p">:</span> <span class="s2">&quot;HTTPCode_ELB_5XX_Count&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;namespace&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS/ApplicationELB&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;period&quot;</span><span class="p">:</span> <span class="s2">&quot;120&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;stat&quot;</span><span class="p">:</span> <span class="s2">&quot;Sum&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;Count&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">threshold</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">xx_anomaly_detection</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">MetricAlarm</span><span class="p">(</span><span class="s2">&quot;xxAnomalyDetection&quot;</span><span class="p">,</span>
+    <span class="n">alarm_description</span><span class="o">=</span><span class="s2">&quot;This metric monitors ec2 cpu utilization&quot;</span><span class="p">,</span>
+    <span class="n">comparison_operator</span><span class="o">=</span><span class="s2">&quot;GreaterThanUpperThreshold&quot;</span><span class="p">,</span>
+    <span class="n">evaluation_periods</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+    <span class="n">insufficient_data_actions</span><span class="o">=</span><span class="p">[],</span>
+    <span class="n">metric_queries</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;expression&quot;</span><span class="p">:</span> <span class="s2">&quot;ANOMALY_DETECTION_BAND(m1)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;e1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;CPUUtilization (Expected)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;returnData&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;m1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;metric&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;dimensions&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;InstanceId&quot;</span><span class="p">:</span> <span class="s2">&quot;i-abc123&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;metricName&quot;</span><span class="p">:</span> <span class="s2">&quot;CPUUtilization&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;namespace&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS/EC2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;period&quot;</span><span class="p">:</span> <span class="s2">&quot;120&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;stat&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;Count&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;returnData&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">threshold_metric_id</span><span class="o">=</span><span class="s2">&quot;e1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">xxx_nlb_healthyhosts</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">MetricAlarm</span><span class="p">(</span><span class="s2">&quot;xxxNlbHealthyhosts&quot;</span><span class="p">,</span>
+    <span class="n">comparison_operator</span><span class="o">=</span><span class="s2">&quot;LessThanThreshold&quot;</span><span class="p">,</span>
+    <span class="n">evaluation_periods</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="n">metric_name</span><span class="o">=</span><span class="s2">&quot;HealthyHostCount&quot;</span><span class="p">,</span>
+    <span class="n">namespace</span><span class="o">=</span><span class="s2">&quot;AWS/NetworkELB&quot;</span><span class="p">,</span>
+    <span class="n">period</span><span class="o">=</span><span class="s2">&quot;60&quot;</span><span class="p">,</span>
+    <span class="n">statistic</span><span class="o">=</span><span class="s2">&quot;Average&quot;</span><span class="p">,</span>
+    <span class="n">threshold</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;logstash_servers_count&quot;</span><span class="p">],</span>
+    <span class="n">alarm_description</span><span class="o">=</span><span class="s2">&quot;Number of XXXX nodes healthy in Target Group&quot;</span><span class="p">,</span>
+    <span class="n">actions_enabled</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="n">alarm_actions</span><span class="o">=</span><span class="p">[</span><span class="n">aws_sns_topic</span><span class="p">[</span><span class="s2">&quot;sns&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">]],</span>
+    <span class="n">ok_actions</span><span class="o">=</span><span class="p">[</span><span class="n">aws_sns_topic</span><span class="p">[</span><span class="s2">&quot;sns&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">]],</span>
+    <span class="n">dimensions</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;TargetGroup&quot;</span><span class="p">:</span> <span class="n">aws_lb_target_group</span><span class="p">[</span><span class="s2">&quot;lb-tg&quot;</span><span class="p">][</span><span class="s2">&quot;arn_suffix&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;LoadBalancer&quot;</span><span class="p">:</span> <span class="n">aws_lb</span><span class="p">[</span><span class="s2">&quot;lb&quot;</span><span class="p">][</span><span class="s2">&quot;arn_suffix&quot;</span><span class="p">],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>NOTE:</strong>  You cannot create a metric alarm consisting of both <code class="docutils literal notranslate"><span class="pre">statistic</span></code> and <code class="docutils literal notranslate"><span class="pre">extended_statistic</span></code> parameters.
+You must choose one or the other</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1743,6 +2201,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.get_log_group">
 <code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">get_log_group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.get_log_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an AWS Cloudwatch Log Group</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">get_log_group</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;MyImportantLogs&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

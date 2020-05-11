@@ -86,6 +86,23 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p><em>NOTE:</em> The AWS Cost and Usage Report service is only available in <code class="docutils literal notranslate"><span class="pre">us-east-1</span></code> currently.</p>
 <p><em>NOTE:</em> If AWS Organizations is enabled, only the master account can use this resource.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_cur_report_definition</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cur</span><span class="o">.</span><span class="n">ReportDefinition</span><span class="p">(</span><span class="s2">&quot;exampleCurReportDefinition&quot;</span><span class="p">,</span>
+    <span class="n">additional_artifacts</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;REDSHIFT&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;QUICKSIGHT&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">additional_schema_elements</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;RESOURCES&quot;</span><span class="p">],</span>
+    <span class="n">compression</span><span class="o">=</span><span class="s2">&quot;GZIP&quot;</span><span class="p">,</span>
+    <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;textORcsv&quot;</span><span class="p">,</span>
+    <span class="n">report_name</span><span class="o">=</span><span class="s2">&quot;example-cur-report-definition&quot;</span><span class="p">,</span>
+    <span class="n">s3_bucket</span><span class="o">=</span><span class="s2">&quot;example-bucket-name&quot;</span><span class="p">,</span>
+    <span class="n">s3_region</span><span class="o">=</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">,</span>
+    <span class="n">time_unit</span><span class="o">=</span><span class="s2">&quot;HOURLY&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -228,6 +245,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><em>NOTE:</em> The AWS Cost and Usage Report service is only available in <code class="docutils literal notranslate"><span class="pre">us-east-1</span></code> currently.</p>
 <p><em>NOTE:</em> If AWS Organizations is enabled, only the master account can use this resource.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">report_definition</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cur</span><span class="o">.</span><span class="n">get_report_definition</span><span class="p">(</span><span class="n">report_name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>report_name</strong> (<em>str</em>) – The name of the report definition to match.</p>

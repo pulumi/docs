@@ -123,6 +123,37 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.cloudformation.Stack">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">Stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_rollback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_arns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_failure</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout_in_minutes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.Stack" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudFormation Stack resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">network</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudformation</span><span class="o">.</span><span class="n">Stack</span><span class="p">(</span><span class="s2">&quot;network&quot;</span><span class="p">,</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;VPCCidr&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">template_body</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Parameters&quot; : {</span>
+<span class="s2">    &quot;VPCCidr&quot; : {</span>
+<span class="s2">      &quot;Type&quot; : &quot;String&quot;,</span>
+<span class="s2">      &quot;Default&quot; : &quot;10.0.0.0/16&quot;,</span>
+<span class="s2">      &quot;Description&quot; : &quot;Enter the CIDR block for the VPC. Default is 10.0.0.0/16.&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  },</span>
+<span class="s2">  &quot;Resources&quot; : {</span>
+<span class="s2">    &quot;myVpc&quot;: {</span>
+<span class="s2">      &quot;Type&quot; : &quot;AWS::EC2::VPC&quot;,</span>
+<span class="s2">      &quot;Properties&quot; : {</span>
+<span class="s2">        &quot;CidrBlock&quot; : { &quot;Ref&quot; : &quot;VPCCidr&quot; },</span>
+<span class="s2">        &quot;Tags&quot; : [</span>
+<span class="s2">          {&quot;Key&quot;: &quot;Name&quot;, &quot;Value&quot;: &quot;Primary_CF_VPC&quot;}</span>
+<span class="s2">        ]</span>
+<span class="s2">      }</span>
+<span class="s2">    }</span>
+<span class="s2">  }</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -319,6 +350,55 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> All template parameters, including those with a <code class="docutils literal notranslate"><span class="pre">Default</span></code>, must be configured or ignored with the <code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">ignore_changes</span></code> argument.</p>
 <p><strong>NOTE:</strong> All <code class="docutils literal notranslate"><span class="pre">NoEcho</span></code> template parameters must be ignored with the <code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">ignore_changes</span></code> argument.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">a_ws_cloud_formation_stack_set_administration_role_assume_role_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;sts:AssumeRole&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;effect&quot;</span><span class="p">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;principals&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;identifiers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;cloudformation.amazonaws.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Service&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+<span class="p">}])</span>
+<span class="n">a_ws_cloud_formation_stack_set_administration_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;aWSCloudFormationStackSetAdministrationRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="n">a_ws_cloud_formation_stack_set_administration_role_assume_role_policy</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudformation</span><span class="o">.</span><span class="n">StackSet</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">administration_role_arn</span><span class="o">=</span><span class="n">a_ws_cloud_formation_stack_set_administration_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;VPCCidr&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">template_body</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Parameters&quot; : {</span>
+<span class="s2">    &quot;VPCCidr&quot; : {</span>
+<span class="s2">      &quot;Type&quot; : &quot;String&quot;,</span>
+<span class="s2">      &quot;Default&quot; : &quot;10.0.0.0/16&quot;,</span>
+<span class="s2">      &quot;Description&quot; : &quot;Enter the CIDR block for the VPC. Default is 10.0.0.0/16.&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  },</span>
+<span class="s2">  &quot;Resources&quot; : {</span>
+<span class="s2">    &quot;myVpc&quot;: {</span>
+<span class="s2">      &quot;Type&quot; : &quot;AWS::EC2::VPC&quot;,</span>
+<span class="s2">      &quot;Properties&quot; : {</span>
+<span class="s2">        &quot;CidrBlock&quot; : { &quot;Ref&quot; : &quot;VPCCidr&quot; },</span>
+<span class="s2">        &quot;Tags&quot; : [</span>
+<span class="s2">          {&quot;Key&quot;: &quot;Name&quot;, &quot;Value&quot;: &quot;Primary_CF_VPC&quot;}</span>
+<span class="s2">        ]</span>
+<span class="s2">      }</span>
+<span class="s2">    }</span>
+<span class="s2">  }</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">a_ws_cloud_formation_stack_set_administration_role_execution_policy_policy_document</span> <span class="o">=</span> <span class="n">example</span><span class="o">.</span><span class="n">execution_role_name</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">execution_role_name</span><span class="p">:</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;sts:AssumeRole&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;effect&quot;</span><span class="p">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;arn:aws:iam::*:role/</span><span class="si">{</span><span class="n">execution_role_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">],</span>
+<span class="p">}]))</span>
+<span class="n">a_ws_cloud_formation_stack_set_administration_role_execution_policy_role_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicy</span><span class="p">(</span><span class="s2">&quot;aWSCloudFormationStackSetAdministrationRoleExecutionPolicyRolePolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="n">a_ws_cloud_formation_stack_set_administration_role_execution_policy_policy_document</span><span class="o">.</span><span class="n">json</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">a_ws_cloud_formation_stack_set_administration_role</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -475,6 +555,41 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> All target accounts must have an IAM Role created that matches the name of the execution role configured in the StackSet (the <code class="docutils literal notranslate"><span class="pre">execution_role_name</span></code> argument in the <code class="docutils literal notranslate"><span class="pre">cloudformation.StackSet</span></code> resource) in a trust relationship with the administrative account or administration IAM Role. The execution role must have appropriate permissions to manage resources defined in the template along with those required for StackSets to operate. See the <a class="reference external" href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">AWS CloudFormation User Guide</a> for more details.</p>
 <p><strong>NOTE:</strong> To retain the Stack during resource destroy, ensure <code class="docutils literal notranslate"><span class="pre">retain_stack</span></code> has been set to <code class="docutils literal notranslate"><span class="pre">true</span></code> in the state first. This must be completed <em>before</em> a deployment that would destroy the resource.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudformation</span><span class="o">.</span><span class="n">StackSetInstance</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;123456789012&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">,</span>
+    <span class="n">stack_set_name</span><span class="o">=</span><span class="n">aws_cloudformation_stack_set</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">a_ws_cloud_formation_stack_set_execution_role_assume_role_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;sts:AssumeRole&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;effect&quot;</span><span class="p">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;principals&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;identifiers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;AWSCloudFormationStackSetAdministrationRole&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">]],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+<span class="p">}])</span>
+<span class="n">a_ws_cloud_formation_stack_set_execution_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;aWSCloudFormationStackSetExecutionRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="n">a_ws_cloud_formation_stack_set_execution_role_assume_role_policy</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>
+<span class="n">a_ws_cloud_formation_stack_set_execution_role_minimum_execution_policy_policy_document</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;cloudformation:*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;s3:*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sns:*&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;effect&quot;</span><span class="p">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">a_ws_cloud_formation_stack_set_execution_role_minimum_execution_policy_role_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicy</span><span class="p">(</span><span class="s2">&quot;aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyRolePolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="n">a_ws_cloud_formation_stack_set_execution_role_minimum_execution_policy_policy_document</span><span class="o">.</span><span class="n">json</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">a_ws_cloud_formation_stack_set_execution_role</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -592,6 +707,16 @@ exports specified in the <a class="reference external" href="http://docs.aws.ama
 <blockquote>
 <div><p>Note: If you are trying to use a value from a Cloudformation Stack in the same deployment please use normal interpolation or Cloudformation Outputs.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">subnet_id</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudformation</span><span class="o">.</span><span class="n">get_export</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;mySubnetIdExportName&quot;</span><span class="p">)</span>
+<span class="n">web</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;web&quot;</span><span class="p">,</span>
+    <span class="n">ami</span><span class="o">=</span><span class="s2">&quot;ami-abb07bcb&quot;</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;t1.micro&quot;</span><span class="p">,</span>
+    <span class="n">subnet_id</span><span class="o">=</span><span class="n">subnet_id</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – <p>The name of the export as it appears in the console or from <a class="reference external" href="http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html">list-exports</a></p>
@@ -605,6 +730,19 @@ exports specified in the <a class="reference external" href="http://docs.aws.ama
 <code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">get_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.get_stack" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CloudFormation Stack data source allows access to stack
 outputs and other useful data including the template body.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">network</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudformation</span><span class="o">.</span><span class="n">get_stack</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-network-stack&quot;</span><span class="p">)</span>
+<span class="n">web</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;web&quot;</span><span class="p">,</span>
+    <span class="n">ami</span><span class="o">=</span><span class="s2">&quot;ami-abb07bcb&quot;</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;t1.micro&quot;</span><span class="p">,</span>
+    <span class="n">subnet_id</span><span class="o">=</span><span class="n">network</span><span class="o">.</span><span class="n">outputs</span><span class="p">[</span><span class="s2">&quot;SubnetId&quot;</span><span class="p">],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;HelloWorld&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

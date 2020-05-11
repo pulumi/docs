@@ -25,6 +25,15 @@ an ELB), and an AutoScaling Group resource with
 load balancers in conjunction with an ASG Attachment resource. Doing so will cause a
 conflict and will overwrite attachments.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="c1"># Create a new load balancer attachment</span>
+<span class="n">asg_attachment_bar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">autoscaling</span><span class="o">.</span><span class="n">Attachment</span><span class="p">(</span><span class="s2">&quot;asgAttachmentBar&quot;</span><span class="p">,</span>
+    <span class="n">autoscaling_group_name</span><span class="o">=</span><span class="n">aws_autoscaling_group</span><span class="p">[</span><span class="s2">&quot;asg&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">elb</span><span class="o">=</span><span class="n">aws_elb</span><span class="p">[</span><span class="s2">&quot;bar&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -231,6 +240,99 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> You must specify either <code class="docutils literal notranslate"><span class="pre">launch_configuration</span></code>, <code class="docutils literal notranslate"><span class="pre">launch_template</span></code>, or <code class="docutils literal notranslate"><span class="pre">mixed_instances_policy</span></code>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">PlacementGroup</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;cluster&quot;</span><span class="p">)</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">autoscaling</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">desired_capacity</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">force_delete</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">health_check_grace_period</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">health_check_type</span><span class="o">=</span><span class="s2">&quot;ELB&quot;</span><span class="p">,</span>
+    <span class="n">initial_lifecycle_hooks</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;defaultResult&quot;</span><span class="p">:</span> <span class="s2">&quot;CONTINUE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;heartbeatTimeout&quot;</span><span class="p">:</span> <span class="mi">2000</span><span class="p">,</span>
+        <span class="s2">&quot;lifecycleTransition&quot;</span><span class="p">:</span> <span class="s2">&quot;autoscaling:EC2_INSTANCE_LAUNCHING&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;notificationMetadata&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;foo&quot;: &quot;bar&quot;</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;notificationTargetArn&quot;</span><span class="p">:</span> <span class="s2">&quot;arn:aws:sqs:us-east-1:444455556666:queue1*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="s2">&quot;arn:aws:iam::123456789012:role/S3Access&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">launch_configuration</span><span class="o">=</span><span class="n">aws_launch_configuration</span><span class="p">[</span><span class="s2">&quot;foobar&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">max_size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">min_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">placement_group</span><span class="o">=</span><span class="n">test</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;propagateAtLaunch&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;lorem&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;propagateAtLaunch&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;ipsum&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">vpc_zone_identifiers</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example1&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example2&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">LaunchTemplate</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="s2">&quot;ami-1a2b3c&quot;</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;t2.micro&quot;</span><span class="p">,</span>
+    <span class="n">name_prefix</span><span class="o">=</span><span class="s2">&quot;foobar&quot;</span><span class="p">)</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">autoscaling</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;us-east-1a&quot;</span><span class="p">],</span>
+    <span class="n">desired_capacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">launch_template</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">foobar</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;$$Latest&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">max_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">min_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_launch_template</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">LaunchTemplate</span><span class="p">(</span><span class="s2">&quot;exampleLaunchTemplate&quot;</span><span class="p">,</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;ec2.Ami&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;c5.large&quot;</span><span class="p">,</span>
+    <span class="n">name_prefix</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+<span class="n">example_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">autoscaling</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;exampleGroup&quot;</span><span class="p">,</span>
+    <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;us-east-1a&quot;</span><span class="p">],</span>
+    <span class="n">desired_capacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">max_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">min_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">mixed_instances_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;launchTemplate&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;launchTemplateSpecification&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;launchTemplateId&quot;</span><span class="p">:</span> <span class="n">example_launch_template</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;override&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;instanceType&quot;</span><span class="p">:</span> <span class="s2">&quot;c4.large&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;weightedCapacity&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;instanceType&quot;</span><span class="p">:</span> <span class="s2">&quot;c3.large&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;weightedCapacity&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <p>A newly-created ASG is initially empty and begins to scale to <code class="docutils literal notranslate"><span class="pre">min_size</span></code> (or
 <code class="docutils literal notranslate"><span class="pre">desired_capacity</span></code>, if specified) by launching instances using the provided
 Launch Configuration. These instances take time to launch and boot.</p>
@@ -841,6 +943,32 @@ behavior. If you need hooks to run on all instances, add them with
 <cite>``autoscaling.Group`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html</a>&gt;`_,
 but take care to not duplicate those hooks with this resource.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foobar_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">autoscaling</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;foobarGroup&quot;</span><span class="p">,</span>
+    <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;us-west-2a&quot;</span><span class="p">],</span>
+    <span class="n">health_check_type</span><span class="o">=</span><span class="s2">&quot;EC2&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;Foo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;propagateAtLaunch&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;foo-bar&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">termination_policies</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;OldestInstance&quot;</span><span class="p">])</span>
+<span class="n">foobar_lifecycle_hook</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">autoscaling</span><span class="o">.</span><span class="n">LifecycleHook</span><span class="p">(</span><span class="s2">&quot;foobarLifecycleHook&quot;</span><span class="p">,</span>
+    <span class="n">autoscaling_group_name</span><span class="o">=</span><span class="n">foobar_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">default_result</span><span class="o">=</span><span class="s2">&quot;CONTINUE&quot;</span><span class="p">,</span>
+    <span class="n">heartbeat_timeout</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span>
+    <span class="n">lifecycle_transition</span><span class="o">=</span><span class="s2">&quot;autoscaling:EC2_INSTANCE_LAUNCHING&quot;</span><span class="p">,</span>
+    <span class="n">notification_metadata</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;foo&quot;: &quot;bar&quot;</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">notification_target_arn</span><span class="o">=</span><span class="s2">&quot;arn:aws:sqs:us-east-1:444455556666:queue1*&quot;</span><span class="p">,</span>
+    <span class="n">role_arn</span><span class="o">=</span><span class="s2">&quot;arn:aws:iam::123456789012:role/S3Access&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -974,6 +1102,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides an AutoScaling Group with Notification support, via SNS Topics. Each of
 the <code class="docutils literal notranslate"><span class="pre">notifications</span></code> map to a <a class="reference external" href="https://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_DescribeNotificationConfigurations.html">Notification Configuration</a> inside Amazon Web
 Services, and are applied to each AutoScaling Group you supply.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">autoscaling</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">)</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">autoscaling</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+<span class="n">example_notifications</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">autoscaling</span><span class="o">.</span><span class="n">Notification</span><span class="p">(</span><span class="s2">&quot;exampleNotifications&quot;</span><span class="p">,</span>
+    <span class="n">group_names</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">bar</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">foo</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">notifications</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;autoscaling:EC2_INSTANCE_LAUNCH&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;autoscaling:EC2_INSTANCE_TERMINATE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;autoscaling:EC2_INSTANCE_LAUNCH_ERROR&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;autoscaling:EC2_INSTANCE_TERMINATE_ERROR&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">topic_arn</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1075,6 +1223,24 @@ when using autoscaling policies. It’s good practice to pick either
 or <a class="reference external" href="https://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-scale-based-on-demand.html">dynamic</a>
 (policy-based) scaling.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">autoscaling</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;us-east-1a&quot;</span><span class="p">],</span>
+    <span class="n">force_delete</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">health_check_grace_period</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">health_check_type</span><span class="o">=</span><span class="s2">&quot;ELB&quot;</span><span class="p">,</span>
+    <span class="n">launch_configuration</span><span class="o">=</span><span class="n">aws_launch_configuration</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">max_size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">min_size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">bat</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">autoscaling</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;bat&quot;</span><span class="p">,</span>
+    <span class="n">adjustment_type</span><span class="o">=</span><span class="s2">&quot;ChangeInCapacity&quot;</span><span class="p">,</span>
+    <span class="n">autoscaling_group_name</span><span class="o">=</span><span class="n">bar</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">cooldown</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">scaling_adjustment</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1349,6 +1515,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.autoscaling.Schedule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.autoscaling.</code><code class="sig-name descname">Schedule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autoscaling_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">recurrence</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduled_action_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AutoScaling Schedule resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foobar_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">autoscaling</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;foobarGroup&quot;</span><span class="p">,</span>
+    <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;us-west-2a&quot;</span><span class="p">],</span>
+    <span class="n">force_delete</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">health_check_grace_period</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">health_check_type</span><span class="o">=</span><span class="s2">&quot;ELB&quot;</span><span class="p">,</span>
+    <span class="n">max_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">min_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">termination_policies</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;OldestInstance&quot;</span><span class="p">])</span>
+<span class="n">foobar_schedule</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">autoscaling</span><span class="o">.</span><span class="n">Schedule</span><span class="p">(</span><span class="s2">&quot;foobarSchedule&quot;</span><span class="p">,</span>
+    <span class="n">autoscaling_group_name</span><span class="o">=</span><span class="n">foobar_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">desired_capacity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">end_time</span><span class="o">=</span><span class="s2">&quot;2016-12-12T06:00:00Z&quot;</span><span class="p">,</span>
+    <span class="n">max_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">min_size</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">scheduled_action_name</span><span class="o">=</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">start_time</span><span class="o">=</span><span class="s2">&quot;2016-12-11T18:00:00Z&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1498,6 +1685,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.autoscaling.get_group">
 <code class="sig-prename descclassname">pulumi_aws.autoscaling.</code><code class="sig-name descname">get_group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.get_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information on an existing autoscaling group.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">autoscaling</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Specify the exact name of the desired autoscaling group.</p>

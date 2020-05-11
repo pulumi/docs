@@ -17,6 +17,19 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.globalaccelerator.Accelerator">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.globalaccelerator.</code><code class="sig-name descname">Accelerator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Global Accelerator accelerator.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">globalaccelerator</span><span class="o">.</span><span class="n">Accelerator</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">attributes</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;flowLogsEnabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;flowLogsS3Bucket&quot;</span><span class="p">:</span> <span class="s2">&quot;example-bucket&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;flowLogsS3Prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;flow-logs/&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">ip_address_type</span><span class="o">=</span><span class="s2">&quot;IPV4&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -179,6 +192,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.globalaccelerator.EndpointGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.globalaccelerator.</code><code class="sig-name descname">EndpointGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_configurations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_group_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_interval_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">listener_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threshold_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">traffic_dial_percentage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Global Accelerator endpoint group.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">globalaccelerator</span><span class="o">.</span><span class="n">EndpointGroup</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">endpoint_configurations</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;endpointId&quot;</span><span class="p">:</span> <span class="n">aws_lb</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">listener_arn</span><span class="o">=</span><span class="n">aws_globalaccelerator_listener</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -331,6 +355,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.globalaccelerator.Listener">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.globalaccelerator.</code><code class="sig-name descname">Listener</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">accelerator_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_affinity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port_ranges</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Listener" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Global Accelerator listener.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_accelerator</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">globalaccelerator</span><span class="o">.</span><span class="n">Accelerator</span><span class="p">(</span><span class="s2">&quot;exampleAccelerator&quot;</span><span class="p">,</span>
+    <span class="n">attributes</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;flowLogsEnabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;flowLogsS3Bucket&quot;</span><span class="p">:</span> <span class="s2">&quot;example-bucket&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;flowLogsS3Prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;flow-logs/&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">ip_address_type</span><span class="o">=</span><span class="s2">&quot;IPV4&quot;</span><span class="p">)</span>
+<span class="n">example_listener</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">globalaccelerator</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="s2">&quot;exampleListener&quot;</span><span class="p">,</span>
+    <span class="n">accelerator_arn</span><span class="o">=</span><span class="n">example_accelerator</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">client_affinity</span><span class="o">=</span><span class="s2">&quot;SOURCE_IP&quot;</span><span class="p">,</span>
+    <span class="n">port_ranges</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;TCP&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

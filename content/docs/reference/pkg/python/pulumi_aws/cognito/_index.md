@@ -40,6 +40,33 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.cognito.IdentityPool">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cognito.</code><code class="sig-name descname">IdentityPool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_unauthenticated_identities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cognito_identity_providers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">developer_provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_pool_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">openid_connect_provider_arns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">saml_provider_arns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">supported_login_providers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.IdentityPool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS Cognito Identity Pool.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">SamlProvider</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">saml_metadata_document</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;saml-metadata.xml&quot;</span><span class="p">))</span>
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">IdentityPool</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
+    <span class="n">allow_unauthenticated_identities</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">cognito_identity_providers</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;clientId&quot;</span><span class="p">:</span> <span class="s2">&quot;6lhlkkfbfb4q5kpp90urffae&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;providerName&quot;</span><span class="p">:</span> <span class="s2">&quot;cognito-idp.us-east-1.amazonaws.com/us-east-1_Tv0493apJ&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;serverSideTokenCheck&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;clientId&quot;</span><span class="p">:</span> <span class="s2">&quot;7kodkvfqfb4qfkp39eurffae&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;providerName&quot;</span><span class="p">:</span> <span class="s2">&quot;cognito-idp.us-east-1.amazonaws.com/eu-west-1_Zr231apJu&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;serverSideTokenCheck&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">identity_pool_name</span><span class="o">=</span><span class="s2">&quot;identity pool&quot;</span><span class="p">,</span>
+    <span class="n">openid_connect_provider_arns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;arn:aws:iam::123456789012:oidc-provider/foo.example.com&quot;</span><span class="p">],</span>
+    <span class="n">saml_provider_arns</span><span class="o">=</span><span class="p">[</span><span class="n">default</span><span class="o">.</span><span class="n">arn</span><span class="p">],</span>
+    <span class="n">supported_login_providers</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;accounts.google.com&quot;</span><span class="p">:</span> <span class="s2">&quot;123456789012.apps.googleusercontent.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;graph.facebook.com&quot;</span><span class="p">:</span> <span class="s2">&quot;7346241598935552&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -197,6 +224,75 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.IdentityPoolRoleAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cognito.</code><code class="sig-name descname">IdentityPoolRoleAttachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_mappings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.IdentityPoolRoleAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS Cognito Identity Pool Roles Attachment.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main_identity_pool</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">IdentityPool</span><span class="p">(</span><span class="s2">&quot;mainIdentityPool&quot;</span><span class="p">,</span>
+    <span class="n">allow_unauthenticated_identities</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">identity_pool_name</span><span class="o">=</span><span class="s2">&quot;identity pool&quot;</span><span class="p">,</span>
+    <span class="n">supported_login_providers</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;graph.facebook.com&quot;</span><span class="p">:</span> <span class="s2">&quot;7346241598935555&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">authenticated_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;authenticatedRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="n">main_identity_pool</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="nb">id</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">        &quot;Federated&quot;: &quot;cognito-identity.amazonaws.com&quot;</span>
+<span class="s2">      </span><span class="se">&#x7D;&#x7D;</span><span class="s2">,</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRoleWithWebIdentity&quot;,</span>
+<span class="s2">      &quot;Condition&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">        &quot;StringEquals&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">          &quot;cognito-identity.amazonaws.com:aud&quot;: &quot;</span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="s2">        </span><span class="se">&#x7D;&#x7D;</span><span class="s2">,</span>
+<span class="s2">        &quot;ForAnyValue:StringLike&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">          &quot;cognito-identity.amazonaws.com:amr&quot;: &quot;authenticated&quot;</span>
+<span class="s2">        </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">      </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">    </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">  ]</span>
+<span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">))</span>
+<span class="n">authenticated_role_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicy</span><span class="p">(</span><span class="s2">&quot;authenticatedRolePolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;mobileanalytics:PutEvents&quot;,</span>
+<span class="s2">        &quot;cognito-sync:*&quot;,</span>
+<span class="s2">        &quot;cognito-identity:*&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Resource&quot;: [</span>
+<span class="s2">        &quot;*&quot;</span>
+<span class="s2">      ]</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">authenticated_role</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">main_identity_pool_role_attachment</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">IdentityPoolRoleAttachment</span><span class="p">(</span><span class="s2">&quot;mainIdentityPoolRoleAttachment&quot;</span><span class="p">,</span>
+    <span class="n">identity_pool_id</span><span class="o">=</span><span class="n">main_identity_pool</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">role_mappings</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;ambiguousRoleResolution&quot;</span><span class="p">:</span> <span class="s2">&quot;AuthenticatedRole&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;identityProvider&quot;</span><span class="p">:</span> <span class="s2">&quot;graph.facebook.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;mappingRule&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;claim&quot;</span><span class="p">:</span> <span class="s2">&quot;isAdmin&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;matchType&quot;</span><span class="p">:</span> <span class="s2">&quot;Equals&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">authenticated_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;paid&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Rules&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">roles</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;authenticated&quot;</span><span class="p">:</span> <span class="n">authenticated_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -221,11 +317,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The role mapping type.</p></li>
-</ul>
-<p>The <strong>roles</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">authenticated</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unauthenticated</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <dl class="py attribute">
 <dt id="pulumi_aws.cognito.IdentityPoolRoleAttachment.identity_pool_id">
@@ -256,10 +347,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.IdentityPoolRoleAttachment.roles">
 <code class="sig-name descname">roles</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.IdentityPoolRoleAttachment.roles" title="Permalink to this definition">¶</a></dt>
 <dd><p>The map of roles associated with this pool. For a given role, the key will be either “authenticated” or “unauthenticated” and the value will be the Role ARN.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">authenticated</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unauthenticated</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-</ul>
 </dd></dl>
 
 <dl class="py method">
@@ -292,11 +379,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The role mapping type.</p></li>
-</ul>
-<p>The <strong>roles</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">authenticated</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unauthenticated</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -342,6 +424,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.IdentityProvider">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cognito.</code><code class="sig-name descname">IdentityProvider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_mapping</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">idp_identifiers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_details</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.IdentityProvider" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cognito User Identity Provider resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserPool</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">auto_verified_attributes</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;email&quot;</span><span class="p">])</span>
+<span class="n">example_provider</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">IdentityProvider</span><span class="p">(</span><span class="s2">&quot;exampleProvider&quot;</span><span class="p">,</span>
+    <span class="n">attribute_mapping</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;email&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;sub&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">provider_details</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;authorize_scopes&quot;</span><span class="p">:</span> <span class="s2">&quot;email&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;client_id&quot;</span><span class="p">:</span> <span class="s2">&quot;your client_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;client_secret&quot;</span><span class="p">:</span> <span class="s2">&quot;your client_secret&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;Google&quot;</span><span class="p">,</span>
+    <span class="n">provider_type</span><span class="o">=</span><span class="s2">&quot;Google&quot;</span><span class="p">,</span>
+    <span class="n">user_pool_id</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -458,6 +559,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.ResourceServer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cognito.</code><code class="sig-name descname">ResourceServer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identifier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scopes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.ResourceServer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cognito Resource Server.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">pool</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserPool</span><span class="p">(</span><span class="s2">&quot;pool&quot;</span><span class="p">)</span>
+<span class="n">resource</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">ResourceServer</span><span class="p">(</span><span class="s2">&quot;resource&quot;</span><span class="p">,</span>
+    <span class="n">identifier</span><span class="o">=</span><span class="s2">&quot;https://example.com&quot;</span><span class="p">,</span>
+    <span class="n">user_pool_id</span><span class="o">=</span><span class="n">pool</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">pool</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserPool</span><span class="p">(</span><span class="s2">&quot;pool&quot;</span><span class="p">)</span>
+<span class="n">resource</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">ResourceServer</span><span class="p">(</span><span class="s2">&quot;resource&quot;</span><span class="p">,</span>
+    <span class="n">identifier</span><span class="o">=</span><span class="s2">&quot;https://example.com&quot;</span><span class="p">,</span>
+    <span class="n">scopes</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;scopeDescription&quot;</span><span class="p">:</span> <span class="s2">&quot;a Sample Scope Description&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;scopeName&quot;</span><span class="p">:</span> <span class="s2">&quot;sample-scope&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">user_pool_id</span><span class="o">=</span><span class="n">pool</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -569,6 +692,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.UserGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cognito.</code><code class="sig-name descname">UserGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">precedence</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cognito User Group resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main_user_pool</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserPool</span><span class="p">(</span><span class="s2">&quot;mainUserPool&quot;</span><span class="p">)</span>
+<span class="n">group_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;groupRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Sid&quot;: &quot;&quot;,</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Federated&quot;: &quot;cognito-identity.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRoleWithWebIdentity&quot;,</span>
+<span class="s2">      &quot;Condition&quot;: {</span>
+<span class="s2">        &quot;StringEquals&quot;: {</span>
+<span class="s2">          &quot;cognito-identity.amazonaws.com:aud&quot;: &quot;us-east-1:12345678-dead-beef-cafe-123456790ab&quot;</span>
+<span class="s2">        },</span>
+<span class="s2">        &quot;ForAnyValue:StringLike&quot;: {</span>
+<span class="s2">          &quot;cognito-identity.amazonaws.com:amr&quot;: &quot;authenticated&quot;</span>
+<span class="s2">        }</span>
+<span class="s2">      }</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">main_user_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserGroup</span><span class="p">(</span><span class="s2">&quot;mainUserGroup&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Managed by Pulumi&quot;</span><span class="p">,</span>
+    <span class="n">precedence</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span>
+    <span class="n">role_arn</span><span class="o">=</span><span class="n">group_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">user_pool_id</span><span class="o">=</span><span class="n">main_user_pool</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -675,6 +832,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.UserPool">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cognito.</code><code class="sig-name descname">UserPool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_create_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alias_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_verified_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">device_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email_verification_message</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email_verification_subject</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lambda_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mfa_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schemas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sms_authentication_message</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sms_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sms_verification_message</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">software_token_mfa_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_pool_add_ons</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verification_message_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserPool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cognito User Pool resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">pool</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserPool</span><span class="p">(</span><span class="s2">&quot;pool&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="c1"># ... other configuration ...</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserPool</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">mfa_configuration</span><span class="o">=</span><span class="s2">&quot;ON&quot;</span><span class="p">,</span>
+    <span class="n">sms_authentication_message</span><span class="o">=</span><span class="s2">&quot;Your code is {####}&quot;</span><span class="p">,</span>
+    <span class="n">sms_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;externalId&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;snsCallerArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">software_token_mfa_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1203,6 +1382,71 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.UserPoolClient">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cognito.</code><code class="sig-name descname">UserPoolClient</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_oauth_flows</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_oauth_flows_user_pool_client</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_oauth_scopes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">analytics_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">callback_urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_redirect_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">explicit_auth_flows</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">generate_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logout_urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">prevent_user_existence_errors</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">refresh_token_validity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">supported_identity_providers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">write_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserPoolClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cognito User Pool Client resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">pool</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserPool</span><span class="p">(</span><span class="s2">&quot;pool&quot;</span><span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserPoolClient</span><span class="p">(</span><span class="s2">&quot;client&quot;</span><span class="p">,</span> <span class="n">user_pool_id</span><span class="o">=</span><span class="n">pool</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">pool</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserPool</span><span class="p">(</span><span class="s2">&quot;pool&quot;</span><span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserPoolClient</span><span class="p">(</span><span class="s2">&quot;client&quot;</span><span class="p">,</span>
+    <span class="n">explicit_auth_flows</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ADMIN_NO_SRP_AUTH&quot;</span><span class="p">],</span>
+    <span class="n">generate_secret</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">user_pool_id</span><span class="o">=</span><span class="n">pool</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">current</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_caller_identity</span><span class="p">()</span>
+<span class="n">test_user_pool</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserPool</span><span class="p">(</span><span class="s2">&quot;testUserPool&quot;</span><span class="p">)</span>
+<span class="n">test_app</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">pinpoint</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="s2">&quot;testApp&quot;</span><span class="p">)</span>
+<span class="n">test_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;testRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;cognito-idp.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Sid&quot;: &quot;&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">test_role_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicy</span><span class="p">(</span><span class="s2">&quot;testRolePolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="n">test_app</span><span class="o">.</span><span class="n">application_id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">application_id</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;mobiletargeting:UpdateEndpoint&quot;,</span>
+<span class="s2">        &quot;mobiletargeting:PutItems&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Resource&quot;: &quot;arn:aws:mobiletargeting:*:</span><span class="si">{</span><span class="n">current</span><span class="o">.</span><span class="n">account_id</span><span class="si">}</span><span class="s2">:apps/</span><span class="si">{</span><span class="n">application_id</span><span class="si">}</span><span class="s2">*&quot;</span>
+<span class="s2">    </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">  ]</span>
+<span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">),</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">test_role</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">test_user_pool_client</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserPoolClient</span><span class="p">(</span><span class="s2">&quot;testUserPoolClient&quot;</span><span class="p">,</span>
+    <span class="n">analytics_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;applicationId&quot;</span><span class="p">:</span> <span class="n">test_app</span><span class="o">.</span><span class="n">application_id</span><span class="p">,</span>
+        <span class="s2">&quot;externalId&quot;</span><span class="p">:</span> <span class="s2">&quot;some_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">test_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+        <span class="s2">&quot;userDataShared&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">user_pool_id</span><span class="o">=</span><span class="n">test_user_pool</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1424,6 +1668,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.UserPoolDomain">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cognito.</code><code class="sig-name descname">UserPoolDomain</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserPoolDomain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cognito User Pool Domain resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserPool</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserPoolDomain</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;example-domain&quot;</span><span class="p">,</span>
+    <span class="n">user_pool_id</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserPool</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserPoolDomain</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
+    <span class="n">certificate_arn</span><span class="o">=</span><span class="n">aws_acm_certificate</span><span class="p">[</span><span class="s2">&quot;cert&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;example-domain.example.com&quot;</span><span class="p">,</span>
+    <span class="n">user_pool_id</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1542,6 +1805,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.get_user_pools">
 <code class="sig-prename descclassname">pulumi_aws.cognito.</code><code class="sig-name descname">get_user_pools</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.get_user_pools" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get a list of cognito user pools.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">selected_rest_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">get_rest_api</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;api_gateway_name&quot;</span><span class="p">])</span>
+<span class="n">selected_user_pools</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">get_user_pools</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;cognito_user_pool_name&quot;</span><span class="p">])</span>
+<span class="n">cognito</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Authorizer</span><span class="p">(</span><span class="s2">&quot;cognito&quot;</span><span class="p">,</span>
+    <span class="n">provider_arns</span><span class="o">=</span><span class="n">selected_user_pools</span><span class="o">.</span><span class="n">arns</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">selected_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;COGNITO_USER_POOLS&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Name of the cognito user pools. Name is not a unique attribute for cognito user pool, so multiple pools might be returned with given name.</p>

@@ -17,6 +17,22 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.elastictranscoder.Pipeline">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elastictranscoder.</code><code class="sig-name descname">Pipeline</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">aws_kms_key_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_config_permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">input_bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notifications</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thumbnail_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thumbnail_config_permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Transcoder pipeline resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elastictranscoder</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">content_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;bucket&quot;</span><span class="p">:</span> <span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s2">&quot;content_bucket&quot;</span><span class="p">][</span><span class="s2">&quot;bucket&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;storageClass&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">input_bucket</span><span class="o">=</span><span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s2">&quot;input_bucket&quot;</span><span class="p">][</span><span class="s2">&quot;bucket&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;test_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">thumbnail_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;bucket&quot;</span><span class="p">:</span> <span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s2">&quot;thumb_bucket&quot;</span><span class="p">][</span><span class="s2">&quot;bucket&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;storageClass&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -245,6 +261,64 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elastictranscoder.Preset">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elastictranscoder.</code><code class="sig-name descname">Preset</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">audio</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">audio_codec_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thumbnails</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">video</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">video_codec_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">video_watermarks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Transcoder preset resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elastictranscoder</span><span class="o">.</span><span class="n">Preset</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">audio</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;audioPackingMode&quot;</span><span class="p">:</span> <span class="s2">&quot;SingleTrack&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bitRate&quot;</span><span class="p">:</span> <span class="mi">96</span><span class="p">,</span>
+        <span class="s2">&quot;channels&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;codec&quot;</span><span class="p">:</span> <span class="s2">&quot;AAC&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sampleRate&quot;</span><span class="p">:</span> <span class="mi">44100</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">audio_codec_options</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;profile&quot;</span><span class="p">:</span> <span class="s2">&quot;AAC-LC&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">container</span><span class="o">=</span><span class="s2">&quot;mp4&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Sample Preset&quot;</span><span class="p">,</span>
+    <span class="n">thumbnails</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;png&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;interval&quot;</span><span class="p">:</span> <span class="mi">120</span><span class="p">,</span>
+        <span class="s2">&quot;maxHeight&quot;</span><span class="p">:</span> <span class="s2">&quot;auto&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxWidth&quot;</span><span class="p">:</span> <span class="s2">&quot;auto&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;paddingPolicy&quot;</span><span class="p">:</span> <span class="s2">&quot;Pad&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sizingPolicy&quot;</span><span class="p">:</span> <span class="s2">&quot;Fit&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">video</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;bitRate&quot;</span><span class="p">:</span> <span class="s2">&quot;1600&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;codec&quot;</span><span class="p">:</span> <span class="s2">&quot;H.264&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;displayAspectRatio&quot;</span><span class="p">:</span> <span class="s2">&quot;16:9&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;fixedGop&quot;</span><span class="p">:</span> <span class="s2">&quot;false&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;frameRate&quot;</span><span class="p">:</span> <span class="s2">&quot;auto&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;keyframesMaxDist&quot;</span><span class="p">:</span> <span class="mi">240</span><span class="p">,</span>
+        <span class="s2">&quot;maxFrameRate&quot;</span><span class="p">:</span> <span class="s2">&quot;60&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxHeight&quot;</span><span class="p">:</span> <span class="s2">&quot;auto&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxWidth&quot;</span><span class="p">:</span> <span class="s2">&quot;auto&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;paddingPolicy&quot;</span><span class="p">:</span> <span class="s2">&quot;Pad&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sizingPolicy&quot;</span><span class="p">:</span> <span class="s2">&quot;Fit&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">video_codec_options</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;ColorSpaceConversionMode&quot;</span><span class="p">:</span> <span class="s2">&quot;None&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;InterlacedMode&quot;</span><span class="p">:</span> <span class="s2">&quot;Progressive&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Level&quot;</span><span class="p">:</span> <span class="s2">&quot;2.2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;MaxReferenceFrames&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;Profile&quot;</span><span class="p">:</span> <span class="s2">&quot;main&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">video_watermarks</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;horizontalAlign&quot;</span><span class="p">:</span> <span class="s2">&quot;Right&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;horizontalOffset&quot;</span><span class="p">:</span> <span class="s2">&quot;10px&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;Test&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxHeight&quot;</span><span class="p">:</span> <span class="s2">&quot;20%&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxWidth&quot;</span><span class="p">:</span> <span class="s2">&quot;20%&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;opacity&quot;</span><span class="p">:</span> <span class="s2">&quot;55.5&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sizingPolicy&quot;</span><span class="p">:</span> <span class="s2">&quot;ShrinkToFit&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;Content&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;verticalAlign&quot;</span><span class="p">:</span> <span class="s2">&quot;Bottom&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;verticalOffset&quot;</span><span class="p">:</span> <span class="s2">&quot;10px&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

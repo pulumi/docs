@@ -23,6 +23,388 @@ for more information.</p>
 <blockquote>
 <div><p>Support for <a class="reference external" href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-fleets">Instance Fleets</a> will be made available in an upcoming release.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">emr</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;cluster&quot;</span><span class="p">,</span>
+    <span class="n">additional_info</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;instanceAwsClientConfiguration&quot;: {</span>
+<span class="s2">    &quot;proxyPort&quot;: 8099,</span>
+<span class="s2">    &quot;proxyHost&quot;: &quot;myproxy.example.com&quot;</span>
+<span class="s2">  }</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">applications</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Spark&quot;</span><span class="p">],</span>
+    <span class="n">bootstrap_actions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;instance.isMaster=true&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;echo running on master node&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;runif&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;s3://elasticmapreduce/bootstrap-actions/run-if&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">configurations_json</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;  [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Classification&quot;: &quot;hadoop-env&quot;,</span>
+<span class="s2">      &quot;Configurations&quot;: [</span>
+<span class="s2">        {</span>
+<span class="s2">          &quot;Classification&quot;: &quot;export&quot;,</span>
+<span class="s2">          &quot;Properties&quot;: {</span>
+<span class="s2">            &quot;JAVA_HOME&quot;: &quot;/usr/lib/jvm/java-1.8.0&quot;</span>
+<span class="s2">          }</span>
+<span class="s2">        }</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Properties&quot;: </span><span class="si">{}</span><span class="s2"></span>
+<span class="s2">    },</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Classification&quot;: &quot;spark-env&quot;,</span>
+<span class="s2">      &quot;Configurations&quot;: [</span>
+<span class="s2">        {</span>
+<span class="s2">          &quot;Classification&quot;: &quot;export&quot;,</span>
+<span class="s2">          &quot;Properties&quot;: {</span>
+<span class="s2">            &quot;JAVA_HOME&quot;: &quot;/usr/lib/jvm/java-1.8.0&quot;</span>
+<span class="s2">          }</span>
+<span class="s2">        }</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Properties&quot;: </span><span class="si">{}</span><span class="s2"></span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">core_instance_group</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;autoscalingPolicy&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">&quot;Constraints&quot;: {</span>
+<span class="s2">  &quot;MinCapacity&quot;: 1,</span>
+<span class="s2">  &quot;MaxCapacity&quot;: 2</span>
+<span class="s2">},</span>
+<span class="s2">&quot;Rules&quot;: [</span>
+<span class="s2">  {</span>
+<span class="s2">    &quot;Name&quot;: &quot;ScaleOutMemoryPercentage&quot;,</span>
+<span class="s2">    &quot;Description&quot;: &quot;Scale out if YARNMemoryAvailablePercentage is less than 15&quot;,</span>
+<span class="s2">    &quot;Action&quot;: {</span>
+<span class="s2">      &quot;SimpleScalingPolicyConfiguration&quot;: {</span>
+<span class="s2">        &quot;AdjustmentType&quot;: &quot;CHANGE_IN_CAPACITY&quot;,</span>
+<span class="s2">        &quot;ScalingAdjustment&quot;: 1,</span>
+<span class="s2">        &quot;CoolDown&quot;: 300</span>
+<span class="s2">      }</span>
+<span class="s2">    },</span>
+<span class="s2">    &quot;Trigger&quot;: {</span>
+<span class="s2">      &quot;CloudWatchAlarmDefinition&quot;: {</span>
+<span class="s2">        &quot;ComparisonOperator&quot;: &quot;LESS_THAN&quot;,</span>
+<span class="s2">        &quot;EvaluationPeriods&quot;: 1,</span>
+<span class="s2">        &quot;MetricName&quot;: &quot;YARNMemoryAvailablePercentage&quot;,</span>
+<span class="s2">        &quot;Namespace&quot;: &quot;AWS/ElasticMapReduce&quot;,</span>
+<span class="s2">        &quot;Period&quot;: 300,</span>
+<span class="s2">        &quot;Statistic&quot;: &quot;AVERAGE&quot;,</span>
+<span class="s2">        &quot;Threshold&quot;: 15.0,</span>
+<span class="s2">        &quot;Unit&quot;: &quot;PERCENT&quot;</span>
+<span class="s2">      }</span>
+<span class="s2">    }</span>
+<span class="s2">  }</span>
+<span class="s2">]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bidPrice&quot;</span><span class="p">:</span> <span class="s2">&quot;0.30&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ebsConfig&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;40&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;gp2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;volumesPerInstance&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;instanceCount&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;instanceType&quot;</span><span class="p">:</span> <span class="s2">&quot;c4.large&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">ebs_root_volume_size</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">ec2_attributes</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;emrManagedMasterSecurityGroup&quot;</span><span class="p">:</span> <span class="n">aws_security_group</span><span class="p">[</span><span class="s2">&quot;sg&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;emrManagedSlaveSecurityGroup&quot;</span><span class="p">:</span> <span class="n">aws_security_group</span><span class="p">[</span><span class="s2">&quot;sg&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;instanceProfile&quot;</span><span class="p">:</span> <span class="n">aws_iam_instance_profile</span><span class="p">[</span><span class="s2">&quot;emr_profile&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">keep_job_flow_alive_when_no_steps</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">master_instance_group</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;instanceType&quot;</span><span class="p">:</span> <span class="s2">&quot;m4.large&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">release_label</span><span class="o">=</span><span class="s2">&quot;emr-4.6.0&quot;</span><span class="p">,</span>
+    <span class="n">service_role</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;iam_emr_service_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;env&quot;</span><span class="p">:</span> <span class="s2">&quot;env&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;rolename&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">termination_protection</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">emr</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">lifecycle</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;ignoreChanges&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;stepConcurrencyLevel&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;steps&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">steps</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;actionOnFailure&quot;</span><span class="p">:</span> <span class="s2">&quot;TERMINATE_CLUSTER&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hadoopJarStep&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;state-pusher-script&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;jar&quot;</span><span class="p">:</span> <span class="s2">&quot;command-runner.jar&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Setup Hadoop Debugging&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="c1"># Map public IP on launch must be enabled for public (Internet accessible) subnets</span>
+<span class="n">example_subnet</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;exampleSubnet&quot;</span><span class="p">,</span> <span class="n">map_public_ip_on_launch</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">example_cluster</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">emr</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;exampleCluster&quot;</span><span class="p">,</span>
+    <span class="n">core_instance_group</span><span class="o">=</span><span class="p">{},</span>
+    <span class="n">ec2_attributes</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">master_instance_group</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;instanceCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">release_label</span><span class="o">=</span><span class="s2">&quot;emr-5.24.1&quot;</span><span class="p">,</span>
+    <span class="n">termination_protection</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>NOTE:</strong> This configuration demonstrates a minimal configuration needed to
+boot an example EMR Cluster. It is not meant to display best practices. Please
+use at your own risk.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main_vpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;mainVpc&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;168.31.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">enable_dns_hostnames</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;emr_test&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">main_subnet</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;mainSubnet&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">main_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;168.31.0.0/20&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;emr_test&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="c1"># IAM role for EMR Service</span>
+<span class="n">iam_emr_service_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;iamEmrServiceRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2008-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Sid&quot;: &quot;&quot;,</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;elasticmapreduce.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="c1"># IAM Role for EC2 Instance Profile</span>
+<span class="n">iam_emr_profile_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;iamEmrProfileRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2008-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Sid&quot;: &quot;&quot;,</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;ec2.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">emr_profile</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">InstanceProfile</span><span class="p">(</span><span class="s2">&quot;emrProfile&quot;</span><span class="p">,</span> <span class="n">roles</span><span class="o">=</span><span class="p">[</span><span class="n">iam_emr_profile_role</span><span class="o">.</span><span class="n">name</span><span class="p">])</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">emr</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;cluster&quot;</span><span class="p">,</span>
+    <span class="n">release_label</span><span class="o">=</span><span class="s2">&quot;emr-4.6.0&quot;</span><span class="p">,</span>
+    <span class="n">applications</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Spark&quot;</span><span class="p">],</span>
+    <span class="n">ec2_attributes</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">main_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;emrManagedMasterSecurityGroup&quot;</span><span class="p">:</span> <span class="n">aws_security_group</span><span class="p">[</span><span class="s2">&quot;allow_all&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;emrManagedSlaveSecurityGroup&quot;</span><span class="p">:</span> <span class="n">aws_security_group</span><span class="p">[</span><span class="s2">&quot;allow_all&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;instanceProfile&quot;</span><span class="p">:</span> <span class="n">emr_profile</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">master_instance_type</span><span class="o">=</span><span class="s2">&quot;m5.xlarge&quot;</span><span class="p">,</span>
+    <span class="n">core_instance_type</span><span class="o">=</span><span class="s2">&quot;m5.xlarge&quot;</span><span class="p">,</span>
+    <span class="n">core_instance_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;rolename&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dns_zone&quot;</span><span class="p">:</span> <span class="s2">&quot;env_zone&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;env&quot;</span><span class="p">:</span> <span class="s2">&quot;env&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name-env&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">bootstrap_action</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;s3://elasticmapreduce/bootstrap-actions/run-if&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;runif&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;instance.isMaster=true&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;echo running on master node&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">configurations_json</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;  [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Classification&quot;: &quot;hadoop-env&quot;,</span>
+<span class="s2">      &quot;Configurations&quot;: [</span>
+<span class="s2">        {</span>
+<span class="s2">          &quot;Classification&quot;: &quot;export&quot;,</span>
+<span class="s2">          &quot;Properties&quot;: {</span>
+<span class="s2">            &quot;JAVA_HOME&quot;: &quot;/usr/lib/jvm/java-1.8.0&quot;</span>
+<span class="s2">          }</span>
+<span class="s2">        }</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Properties&quot;: </span><span class="si">{}</span><span class="s2"></span>
+<span class="s2">    },</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Classification&quot;: &quot;spark-env&quot;,</span>
+<span class="s2">      &quot;Configurations&quot;: [</span>
+<span class="s2">        {</span>
+<span class="s2">          &quot;Classification&quot;: &quot;export&quot;,</span>
+<span class="s2">          &quot;Properties&quot;: {</span>
+<span class="s2">            &quot;JAVA_HOME&quot;: &quot;/usr/lib/jvm/java-1.8.0&quot;</span>
+<span class="s2">          }</span>
+<span class="s2">        }</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Properties&quot;: </span><span class="si">{}</span><span class="s2"></span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">service_role</span><span class="o">=</span><span class="n">iam_emr_service_role</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+<span class="n">allow_access</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;allowAccess&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Allow inbound traffic&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">main_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">ingress</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;-1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cidrBlocks&quot;</span><span class="p">:</span> <span class="n">main_vpc</span><span class="o">.</span><span class="n">cidr_block</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">egress</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;-1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cidrBlocks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;emr_test&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">gw</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">InternetGateway</span><span class="p">(</span><span class="s2">&quot;gw&quot;</span><span class="p">,</span> <span class="n">vpc_id</span><span class="o">=</span><span class="n">main_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">route_table</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">RouteTable</span><span class="p">(</span><span class="s2">&quot;routeTable&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">main_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">route</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;cidrBlock&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;gatewayId&quot;</span><span class="p">:</span> <span class="n">gw</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">main_route_table_association</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">MainRouteTableAssociation</span><span class="p">(</span><span class="s2">&quot;mainRouteTableAssociation&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">main_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">route_table_id</span><span class="o">=</span><span class="n">route_table</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="c1">###</span>
+<span class="n">iam_emr_service_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicy</span><span class="p">(</span><span class="s2">&quot;iamEmrServicePolicy&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">iam_emr_service_role</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">    &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">    &quot;Statement&quot;: [{</span>
+<span class="s2">        &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">        &quot;Resource&quot;: &quot;*&quot;,</span>
+<span class="s2">        &quot;Action&quot;: [</span>
+<span class="s2">            &quot;ec2:AuthorizeSecurityGroupEgress&quot;,</span>
+<span class="s2">            &quot;ec2:AuthorizeSecurityGroupIngress&quot;,</span>
+<span class="s2">            &quot;ec2:CancelSpotInstanceRequests&quot;,</span>
+<span class="s2">            &quot;ec2:CreateNetworkInterface&quot;,</span>
+<span class="s2">            &quot;ec2:CreateSecurityGroup&quot;,</span>
+<span class="s2">            &quot;ec2:CreateTags&quot;,</span>
+<span class="s2">            &quot;ec2:DeleteNetworkInterface&quot;,</span>
+<span class="s2">            &quot;ec2:DeleteSecurityGroup&quot;,</span>
+<span class="s2">            &quot;ec2:DeleteTags&quot;,</span>
+<span class="s2">            &quot;ec2:DescribeAvailabilityZones&quot;,</span>
+<span class="s2">            &quot;ec2:DescribeAccountAttributes&quot;,</span>
+<span class="s2">            &quot;ec2:DescribeDhcpOptions&quot;,</span>
+<span class="s2">            &quot;ec2:DescribeInstanceStatus&quot;,</span>
+<span class="s2">            &quot;ec2:DescribeInstances&quot;,</span>
+<span class="s2">            &quot;ec2:DescribeKeyPairs&quot;,</span>
+<span class="s2">            &quot;ec2:DescribeNetworkAcls&quot;,</span>
+<span class="s2">            &quot;ec2:DescribeNetworkInterfaces&quot;,</span>
+<span class="s2">            &quot;ec2:DescribePrefixLists&quot;,</span>
+<span class="s2">            &quot;ec2:DescribeRouteTables&quot;,</span>
+<span class="s2">            &quot;ec2:DescribeSecurityGroups&quot;,</span>
+<span class="s2">            &quot;ec2:DescribeSpotInstanceRequests&quot;,</span>
+<span class="s2">            &quot;ec2:DescribeSpotPriceHistory&quot;,</span>
+<span class="s2">            &quot;ec2:DescribeSubnets&quot;,</span>
+<span class="s2">            &quot;ec2:DescribeVpcAttribute&quot;,</span>
+<span class="s2">            &quot;ec2:DescribeVpcEndpoints&quot;,</span>
+<span class="s2">            &quot;ec2:DescribeVpcEndpointServices&quot;,</span>
+<span class="s2">            &quot;ec2:DescribeVpcs&quot;,</span>
+<span class="s2">            &quot;ec2:DetachNetworkInterface&quot;,</span>
+<span class="s2">            &quot;ec2:ModifyImageAttribute&quot;,</span>
+<span class="s2">            &quot;ec2:ModifyInstanceAttribute&quot;,</span>
+<span class="s2">            &quot;ec2:RequestSpotInstances&quot;,</span>
+<span class="s2">            &quot;ec2:RevokeSecurityGroupEgress&quot;,</span>
+<span class="s2">            &quot;ec2:RunInstances&quot;,</span>
+<span class="s2">            &quot;ec2:TerminateInstances&quot;,</span>
+<span class="s2">            &quot;ec2:DeleteVolume&quot;,</span>
+<span class="s2">            &quot;ec2:DescribeVolumeStatus&quot;,</span>
+<span class="s2">            &quot;ec2:DescribeVolumes&quot;,</span>
+<span class="s2">            &quot;ec2:DetachVolume&quot;,</span>
+<span class="s2">            &quot;iam:GetRole&quot;,</span>
+<span class="s2">            &quot;iam:GetRolePolicy&quot;,</span>
+<span class="s2">            &quot;iam:ListInstanceProfiles&quot;,</span>
+<span class="s2">            &quot;iam:ListRolePolicies&quot;,</span>
+<span class="s2">            &quot;iam:PassRole&quot;,</span>
+<span class="s2">            &quot;s3:CreateBucket&quot;,</span>
+<span class="s2">            &quot;s3:Get*&quot;,</span>
+<span class="s2">            &quot;s3:List*&quot;,</span>
+<span class="s2">            &quot;sdb:BatchPutAttributes&quot;,</span>
+<span class="s2">            &quot;sdb:Select&quot;,</span>
+<span class="s2">            &quot;sqs:CreateQueue&quot;,</span>
+<span class="s2">            &quot;sqs:Delete*&quot;,</span>
+<span class="s2">            &quot;sqs:GetQueue*&quot;,</span>
+<span class="s2">            &quot;sqs:PurgeQueue&quot;,</span>
+<span class="s2">            &quot;sqs:ReceiveMessage&quot;</span>
+<span class="s2">        ]</span>
+<span class="s2">    }]</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">iam_emr_profile_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicy</span><span class="p">(</span><span class="s2">&quot;iamEmrProfilePolicy&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">iam_emr_profile_role</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">    &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">    &quot;Statement&quot;: [{</span>
+<span class="s2">        &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">        &quot;Resource&quot;: &quot;*&quot;,</span>
+<span class="s2">        &quot;Action&quot;: [</span>
+<span class="s2">            &quot;cloudwatch:*&quot;,</span>
+<span class="s2">            &quot;dynamodb:*&quot;,</span>
+<span class="s2">            &quot;ec2:Describe*&quot;,</span>
+<span class="s2">            &quot;elasticmapreduce:Describe*&quot;,</span>
+<span class="s2">            &quot;elasticmapreduce:ListBootstrapActions&quot;,</span>
+<span class="s2">            &quot;elasticmapreduce:ListClusters&quot;,</span>
+<span class="s2">            &quot;elasticmapreduce:ListInstanceGroups&quot;,</span>
+<span class="s2">            &quot;elasticmapreduce:ListInstances&quot;,</span>
+<span class="s2">            &quot;elasticmapreduce:ListSteps&quot;,</span>
+<span class="s2">            &quot;kinesis:CreateStream&quot;,</span>
+<span class="s2">            &quot;kinesis:DeleteStream&quot;,</span>
+<span class="s2">            &quot;kinesis:DescribeStream&quot;,</span>
+<span class="s2">            &quot;kinesis:GetRecords&quot;,</span>
+<span class="s2">            &quot;kinesis:GetShardIterator&quot;,</span>
+<span class="s2">            &quot;kinesis:MergeShards&quot;,</span>
+<span class="s2">            &quot;kinesis:PutRecord&quot;,</span>
+<span class="s2">            &quot;kinesis:SplitShard&quot;,</span>
+<span class="s2">            &quot;rds:Describe*&quot;,</span>
+<span class="s2">            &quot;s3:*&quot;,</span>
+<span class="s2">            &quot;sdb:*&quot;,</span>
+<span class="s2">            &quot;sns:*&quot;,</span>
+<span class="s2">            &quot;sqs:*&quot;</span>
+<span class="s2">        ]</span>
+<span class="s2">    }]</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -601,6 +983,15 @@ See <a class="reference external" href="https://aws.amazon.com/documentation/emr
 web interface. Instance Groups are destroyed when the EMR Cluster is destroyed.
 this provider will resize any Instance Group to zero when destroying the resource.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">task</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">emr</span><span class="o">.</span><span class="n">InstanceGroup</span><span class="p">(</span><span class="s2">&quot;task&quot;</span><span class="p">,</span>
+    <span class="n">cluster_id</span><span class="o">=</span><span class="n">aws_emr_cluster</span><span class="p">[</span><span class="s2">&quot;tf-test-cluster&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">instance_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;m5.xlarge&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -761,6 +1152,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.emr.SecurityConfiguration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.emr.</code><code class="sig-name descname">SecurityConfiguration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.emr.SecurityConfiguration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage AWS EMR Security Configurations</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">emr</span><span class="o">.</span><span class="n">SecurityConfiguration</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="n">configuration</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;EncryptionConfiguration&quot;: {</span>
+<span class="s2">    &quot;AtRestEncryptionConfiguration&quot;: {</span>
+<span class="s2">      &quot;S3EncryptionConfiguration&quot;: {</span>
+<span class="s2">        &quot;EncryptionMode&quot;: &quot;SSE-S3&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;LocalDiskEncryptionConfiguration&quot;: {</span>
+<span class="s2">        &quot;EncryptionKeyProviderType&quot;: &quot;AwsKms&quot;,</span>
+<span class="s2">        &quot;AwsKmsKey&quot;: &quot;arn:aws:kms:us-west-2:187416307283:alias/tf_emr_test_key&quot;</span>
+<span class="s2">      }</span>
+<span class="s2">    },</span>
+<span class="s2">    &quot;EnableInTransitEncryption&quot;: false,</span>
+<span class="s2">    &quot;EnableAtRestEncryption&quot;: true</span>
+<span class="s2">  }</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

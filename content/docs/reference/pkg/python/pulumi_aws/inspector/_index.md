@@ -17,6 +17,16 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.inspector.AssessmentTarget">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.inspector.</code><code class="sig-name descname">AssessmentTarget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.AssessmentTarget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Inspector assessment target</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">inspector</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;Env&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">inspector</span><span class="o">.</span><span class="n">AssessmentTarget</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="n">resource_group_arn</span><span class="o">=</span><span class="n">bar</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -106,6 +116,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.inspector.AssessmentTemplate">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.inspector.</code><code class="sig-name descname">AssessmentTemplate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">duration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rules_package_arns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.AssessmentTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Inspector assessment template</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">inspector</span><span class="o">.</span><span class="n">AssessmentTemplate</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">duration</span><span class="o">=</span><span class="mi">3600</span><span class="p">,</span>
+    <span class="n">rules_package_arns</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;arn:aws:inspector:us-west-2:758058086616:rulespackage/0-9hgA516p&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;arn:aws:inspector:us-west-2:758058086616:rulespackage/0-H5hpSawc&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;arn:aws:inspector:us-west-2:758058086616:rulespackage/0-JJOtZiqQ&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;arn:aws:inspector:us-west-2:758058086616:rulespackage/0-vg5GGHSD&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">target_arn</span><span class="o">=</span><span class="n">aws_inspector_assessment_target</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -242,6 +266,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.inspector.ResourceGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.inspector.</code><code class="sig-name descname">ResourceGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.ResourceGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Amazon Inspector resource group resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">inspector</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;Env&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -326,6 +359,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The AWS Inspector Rules Packages data source allows access to the list of AWS
 Inspector Rules Packages which can be used by AWS Inspector within the region
 configured in the provider.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">rules</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">inspector</span><span class="o">.</span><span class="n">get_rules_packages</span><span class="p">()</span>
+<span class="c1"># e.g. Use in inspector.AssessmentTemplate</span>
+<span class="n">group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">inspector</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;test&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">assessment_assessment_target</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">inspector</span><span class="o">.</span><span class="n">AssessmentTarget</span><span class="p">(</span><span class="s2">&quot;assessmentAssessmentTarget&quot;</span><span class="p">,</span> <span class="n">resource_group_arn</span><span class="o">=</span><span class="n">group</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+<span class="n">assessment_assessment_template</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">inspector</span><span class="o">.</span><span class="n">AssessmentTemplate</span><span class="p">(</span><span class="s2">&quot;assessmentAssessmentTemplate&quot;</span><span class="p">,</span>
+    <span class="n">duration</span><span class="o">=</span><span class="s2">&quot;60&quot;</span><span class="p">,</span>
+    <span class="n">rules_package_arns</span><span class="o">=</span><span class="n">rules</span><span class="o">.</span><span class="n">arns</span><span class="p">,</span>
+    <span class="n">target_arn</span><span class="o">=</span><span class="n">assessment_assessment_target</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </div>

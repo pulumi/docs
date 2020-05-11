@@ -62,6 +62,23 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p>Organization and Organizational Unit principals cannot be used.</p></li>
 <li><p>For AWS Account ID principals, a resource share invitation is sent and must be accepted before resources become available. See the <cite>``ram.ResourceShareAccepter`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/ram_resource_share_accepter.html">https://www.terraform.io/docs/providers/aws/r/ram_resource_share_accepter.html</a>&gt;`_ to accept these invitations.</p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_resource_share</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">ResourceShare</span><span class="p">(</span><span class="s2">&quot;exampleResourceShare&quot;</span><span class="p">,</span> <span class="n">allow_external_principals</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">example_principal_association</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">PrincipalAssociation</span><span class="p">(</span><span class="s2">&quot;examplePrincipalAssociation&quot;</span><span class="p">,</span>
+    <span class="n">principal</span><span class="o">=</span><span class="s2">&quot;111111111111&quot;</span><span class="p">,</span>
+    <span class="n">resource_share_arn</span><span class="o">=</span><span class="n">example_resource_share</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">PrincipalAssociation</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">principal</span><span class="o">=</span><span class="n">aws_organizations_organization</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">resource_share_arn</span><span class="o">=</span><span class="n">aws_ram_resource_share</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -147,6 +164,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><em>NOTE:</em> Certain AWS resources (e.g. EC2 Subnets) can only be shared in an AWS account that is a member of an AWS Organizations organization with organization-wide Resource Access Manager functionality enabled. See the <a class="reference external" href="https://docs.aws.amazon.com/ram/latest/userguide/what-is.html">Resource Access Manager User Guide</a> and AWS service specific documentation for additional information.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">ResourceAssociation</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">resource_arn</span><span class="o">=</span><span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">resource_share_arn</span><span class="o">=</span><span class="n">aws_ram_resource_share</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -229,6 +254,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ram.ResourceShare">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ram.</code><code class="sig-name descname">ResourceShare</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_external_principals</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ram.ResourceShare" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Resource Access Manager (RAM) Resource Share. To associate principals with the share, see the <cite>``ram.PrincipalAssociation`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/ram_principal_association.html">https://www.terraform.io/docs/providers/aws/r/ram_principal_association.html</a>&gt;`_. To associate resources with the share, see the <cite>``ram.ResourceAssociation`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/ram_resource_association.html">https://www.terraform.io/docs/providers/aws/r/ram_resource_association.html</a>&gt;`_.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">ResourceShare</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">allow_external_principals</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Production&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -329,6 +364,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> If both AWS accounts are in the same Organization and <a class="reference external" href="https://docs.aws.amazon.com/ram/latest/userguide/getting-started-sharing.html#getting-started-sharing-orgs">RAM Sharing with AWS Organizations is enabled</a>, this resource is not necessary as RAM Resource Share invitations are not used.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_pulumi</span> <span class="k">as</span> <span class="nn">pulumi</span>
+
+<span class="n">alternate</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">Aws</span><span class="p">(</span><span class="s2">&quot;alternate&quot;</span><span class="p">,</span> <span class="n">profile</span><span class="o">=</span><span class="s2">&quot;profile1&quot;</span><span class="p">)</span>
+<span class="n">sender_share</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">ResourceShare</span><span class="p">(</span><span class="s2">&quot;senderShare&quot;</span><span class="p">,</span>
+    <span class="n">allow_external_principals</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-test-resource-share&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">receiver</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_caller_identity</span><span class="p">()</span>
+<span class="n">sender_invite</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">PrincipalAssociation</span><span class="p">(</span><span class="s2">&quot;senderInvite&quot;</span><span class="p">,</span>
+    <span class="n">principal</span><span class="o">=</span><span class="n">receiver</span><span class="o">.</span><span class="n">account_id</span><span class="p">,</span>
+    <span class="n">resource_share_arn</span><span class="o">=</span><span class="n">sender_share</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+<span class="n">receiver_accept</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">ResourceShareAccepter</span><span class="p">(</span><span class="s2">&quot;receiverAccept&quot;</span><span class="p">,</span> <span class="n">share_arn</span><span class="o">=</span><span class="n">sender_invite</span><span class="o">.</span><span class="n">resource_share_arn</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -452,6 +504,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ram.get_resource_share">
 <code class="sig-prename descclassname">pulumi_aws.ram.</code><code class="sig-name descname">get_resource_share</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_owner</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ram.get_resource_share" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ram.ResourceShare</span></code> Retrieve information about a RAM Resource Share.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">get_resource_share</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">resource_owner</span><span class="o">=</span><span class="s2">&quot;SELF&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">tag_filter</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">get_resource_share</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;NameOfTag&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;exampleNameTagValue&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;MyResourceName&quot;</span><span class="p">,</span>
+    <span class="n">resource_owner</span><span class="o">=</span><span class="s2">&quot;SELF&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -17,6 +17,24 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.codedeploy.Application">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.codedeploy.</code><code class="sig-name descname">Application</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">unique_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codedeploy.Application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodeDeploy application to be used as a basis for deployments</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codedeploy</span><span class="o">.</span><span class="n">Application</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">compute_platform</span><span class="o">=</span><span class="s2">&quot;ECS&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codedeploy</span><span class="o">.</span><span class="n">Application</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">compute_platform</span><span class="o">=</span><span class="s2">&quot;Lambda&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codedeploy</span><span class="o">.</span><span class="n">Application</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">compute_platform</span><span class="o">=</span><span class="s2">&quot;Server&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -99,6 +117,68 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.codedeploy.DeploymentConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.codedeploy.</code><code class="sig-name descname">DeploymentConfig</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deployment_config_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimum_healthy_hosts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">traffic_routing_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codedeploy.DeploymentConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodeDeploy deployment config for an application</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo_deployment_config</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codedeploy</span><span class="o">.</span><span class="n">DeploymentConfig</span><span class="p">(</span><span class="s2">&quot;fooDeploymentConfig&quot;</span><span class="p">,</span>
+    <span class="n">deployment_config_name</span><span class="o">=</span><span class="s2">&quot;test-deployment-config&quot;</span><span class="p">,</span>
+    <span class="n">minimum_healthy_hosts</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;HOST_COUNT&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">foo_deployment_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codedeploy</span><span class="o">.</span><span class="n">DeploymentGroup</span><span class="p">(</span><span class="s2">&quot;fooDeploymentGroup&quot;</span><span class="p">,</span>
+    <span class="n">alarm_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;alarms&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;my-alarm-name&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">app_name</span><span class="o">=</span><span class="n">aws_codedeploy_app</span><span class="p">[</span><span class="s2">&quot;foo_app&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">auto_rollback_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;events&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;DEPLOYMENT_FAILURE&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">deployment_config_name</span><span class="o">=</span><span class="n">foo_deployment_config</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">deployment_group_name</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">ec2_tag_filters</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;filterkey&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;KEY_AND_VALUE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;filtervalue&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">service_role_arn</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;foo_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">trigger_configurations</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;triggerEvents&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;DeploymentFailure&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;triggerName&quot;</span><span class="p">:</span> <span class="s2">&quot;foo-trigger&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;triggerTargetArn&quot;</span><span class="p">:</span> <span class="s2">&quot;foo-topic-arn&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo_deployment_config</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codedeploy</span><span class="o">.</span><span class="n">DeploymentConfig</span><span class="p">(</span><span class="s2">&quot;fooDeploymentConfig&quot;</span><span class="p">,</span>
+    <span class="n">compute_platform</span><span class="o">=</span><span class="s2">&quot;Lambda&quot;</span><span class="p">,</span>
+    <span class="n">deployment_config_name</span><span class="o">=</span><span class="s2">&quot;test-deployment-config&quot;</span><span class="p">,</span>
+    <span class="n">traffic_routing_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;timeBasedLinear&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;interval&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+            <span class="s2">&quot;percentage&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;TimeBasedLinear&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">foo_deployment_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codedeploy</span><span class="o">.</span><span class="n">DeploymentGroup</span><span class="p">(</span><span class="s2">&quot;fooDeploymentGroup&quot;</span><span class="p">,</span>
+    <span class="n">alarm_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;alarms&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;my-alarm-name&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">app_name</span><span class="o">=</span><span class="n">aws_codedeploy_app</span><span class="p">[</span><span class="s2">&quot;foo_app&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">auto_rollback_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;events&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;DEPLOYMENT_STOP_ON_ALARM&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">deployment_config_name</span><span class="o">=</span><span class="n">foo_deployment_config</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">deployment_group_name</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">service_role_arn</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;foo_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -277,6 +357,140 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE on blue/green deployments:</strong> When using <code class="docutils literal notranslate"><span class="pre">green_fleet_provisioning_option</span></code> with the <code class="docutils literal notranslate"><span class="pre">COPY_AUTO_SCALING_GROUP</span></code> action, CodeDeploy will create a new ASG with a different name. This ASG is <em>not</em> managed by this provider and will conflict with existing configuration and state. You may want to use a different approach to managing deployments that involve multiple ASG, such as <code class="docutils literal notranslate"><span class="pre">DISCOVER_EXISTING</span></code> with separate blue and green ASG.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;exampleRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Sid&quot;: &quot;&quot;,</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;codedeploy.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">a_ws_code_deploy_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicyAttachment</span><span class="p">(</span><span class="s2">&quot;aWSCodeDeployRole&quot;</span><span class="p">,</span>
+    <span class="n">policy_arn</span><span class="o">=</span><span class="s2">&quot;arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">example_role</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_application</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codedeploy</span><span class="o">.</span><span class="n">Application</span><span class="p">(</span><span class="s2">&quot;exampleApplication&quot;</span><span class="p">)</span>
+<span class="n">example_topic</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;exampleTopic&quot;</span><span class="p">)</span>
+<span class="n">example_deployment_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codedeploy</span><span class="o">.</span><span class="n">DeploymentGroup</span><span class="p">(</span><span class="s2">&quot;exampleDeploymentGroup&quot;</span><span class="p">,</span>
+    <span class="n">alarm_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;alarms&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;my-alarm-name&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">app_name</span><span class="o">=</span><span class="n">example_application</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">auto_rollback_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;events&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;DEPLOYMENT_FAILURE&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">deployment_group_name</span><span class="o">=</span><span class="s2">&quot;example-group&quot;</span><span class="p">,</span>
+    <span class="n">ec2_tag_sets</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;ec2TagFilter&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;filterkey1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;KEY_AND_VALUE&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;filtervalue&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;filterkey2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;KEY_AND_VALUE&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;filtervalue&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">service_role_arn</span><span class="o">=</span><span class="n">example_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">trigger_configurations</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;triggerEvents&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;DeploymentFailure&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;triggerName&quot;</span><span class="p">:</span> <span class="s2">&quot;example-trigger&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;triggerTargetArn&quot;</span><span class="p">:</span> <span class="n">example_topic</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_application</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codedeploy</span><span class="o">.</span><span class="n">Application</span><span class="p">(</span><span class="s2">&quot;exampleApplication&quot;</span><span class="p">,</span> <span class="n">compute_platform</span><span class="o">=</span><span class="s2">&quot;ECS&quot;</span><span class="p">)</span>
+<span class="n">example_deployment_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codedeploy</span><span class="o">.</span><span class="n">DeploymentGroup</span><span class="p">(</span><span class="s2">&quot;exampleDeploymentGroup&quot;</span><span class="p">,</span>
+    <span class="n">app_name</span><span class="o">=</span><span class="n">example_application</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">auto_rollback_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;events&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;DEPLOYMENT_FAILURE&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">blue_green_deployment_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;deploymentReadyOption&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;actionOnTimeout&quot;</span><span class="p">:</span> <span class="s2">&quot;CONTINUE_DEPLOYMENT&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;terminateBlueInstancesOnDeploymentSuccess&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;TERMINATE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;terminationWaitTimeInMinutes&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">deployment_config_name</span><span class="o">=</span><span class="s2">&quot;CodeDeployDefault.ECSAllAtOnce&quot;</span><span class="p">,</span>
+    <span class="n">deployment_group_name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">deployment_style</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;deploymentOption&quot;</span><span class="p">:</span> <span class="s2">&quot;WITH_TRAFFIC_CONTROL&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;deploymentType&quot;</span><span class="p">:</span> <span class="s2">&quot;BLUE_GREEN&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">ecs_service</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;clusterName&quot;</span><span class="p">:</span> <span class="n">aws_ecs_cluster</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;serviceName&quot;</span><span class="p">:</span> <span class="n">aws_ecs_service</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">load_balancer_info</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;targetGroupPairInfo&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;prodTrafficRoute&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;listenerArns&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">aws_lb_listener</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">]],</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;targetGroup&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">aws_lb_target_group</span><span class="p">[</span><span class="s2">&quot;blue&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">aws_lb_target_group</span><span class="p">[</span><span class="s2">&quot;green&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+                <span class="p">},</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">service_role_arn</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_application</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codedeploy</span><span class="o">.</span><span class="n">Application</span><span class="p">(</span><span class="s2">&quot;exampleApplication&quot;</span><span class="p">)</span>
+<span class="n">example_deployment_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codedeploy</span><span class="o">.</span><span class="n">DeploymentGroup</span><span class="p">(</span><span class="s2">&quot;exampleDeploymentGroup&quot;</span><span class="p">,</span>
+    <span class="n">app_name</span><span class="o">=</span><span class="n">example_application</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">blue_green_deployment_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;deploymentReadyOption&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;actionOnTimeout&quot;</span><span class="p">:</span> <span class="s2">&quot;STOP_DEPLOYMENT&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;waitTimeInMinutes&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;greenFleetProvisioningOption&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;DISCOVER_EXISTING&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;terminateBlueInstancesOnDeploymentSuccess&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;KEEP_ALIVE&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">deployment_group_name</span><span class="o">=</span><span class="s2">&quot;example-group&quot;</span><span class="p">,</span>
+    <span class="n">deployment_style</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;deploymentOption&quot;</span><span class="p">:</span> <span class="s2">&quot;WITH_TRAFFIC_CONTROL&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;deploymentType&quot;</span><span class="p">:</span> <span class="s2">&quot;BLUE_GREEN&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">load_balancer_info</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;elbInfo&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">aws_elb</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+        <span class="p">}],</span>
+    <span class="p">},</span>
+    <span class="n">service_role_arn</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

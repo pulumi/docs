@@ -21,6 +21,15 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p><strong>Note:</strong> All arguments including the PEM encoded certificate will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="c1"># Create a new certificate</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">dms</span><span class="o">.</span><span class="n">Certificate</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">certificate_id</span><span class="o">=</span><span class="s2">&quot;test-dms-certificate-tf&quot;</span><span class="p">,</span>
+    <span class="n">certificate_pem</span><span class="o">=</span><span class="s2">&quot;...&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -122,6 +131,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 &gt; **Note:** All arguments including the password will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
+## Example Usage
+
+
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+# Create a new endpoint
+test = aws.dms.Endpoint(&quot;test&quot;,
+    certificate_arn=&quot;arn:aws:acm:us-east-1:123456789012:certificate/12345678-1234-1234-1234-123456789012&quot;,
+    database_name=&quot;test&quot;,
+    endpoint_id=&quot;test-dms-endpoint-tf&quot;,
+    endpoint_type=&quot;source&quot;,
+    engine_name=&quot;aurora&quot;,
+    extra_connection_attributes=&quot;&quot;,
+    kms_key_arn=&quot;arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012&quot;,
+    password=&quot;test&quot;,
+    port=3306,
+    server_name=&quot;test&quot;,
+    ssl_mode=&quot;none&quot;,
+    tags={
+        &quot;Name&quot;: &quot;test&quot;,
+    },
+    username=&quot;test&quot;)
+```
 
 
 :param str resource_name: The name of the resource.
@@ -458,6 +493,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.dms.EventSubscription">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.dms.</code><code class="sig-name descname">EventSubscription</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">event_categories</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sns_topic_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dms.EventSubscription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DMS (Data Migration Service) event subscription resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">dms</span><span class="o">.</span><span class="n">EventSubscription</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">event_categories</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;creation&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;failure&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">sns_topic_arn</span><span class="o">=</span><span class="n">aws_sns_topic</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">source_ids</span><span class="o">=</span><span class="p">[</span><span class="n">aws_dms_replication_task</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;replication_task_id&quot;</span><span class="p">]],</span>
+    <span class="n">source_type</span><span class="o">=</span><span class="s2">&quot;replication-task&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -572,6 +624,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.dms.ReplicationInstance">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.dms.</code><code class="sig-name descname">ReplicationInstance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allocated_storage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">apply_immediately</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_minor_version_upgrade</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_key_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multi_az</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">preferred_maintenance_window</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">publicly_accessible</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_instance_class</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_subnet_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_security_group_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dms.ReplicationInstance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DMS (Data Migration Service) replication instance resource. DMS replication instances can be created, updated, deleted, and imported.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">dms_assume_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;sts:AssumeRole&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;principals&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;identifiers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;dms.amazonaws.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Service&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+<span class="p">}])</span>
+<span class="n">dms_access_for_endpoint</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;dms-access-for-endpoint&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="n">dms_assume_role</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>
+<span class="n">dms_access_for_endpoint__amazon_dms_redshift_s3_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicyAttachment</span><span class="p">(</span><span class="s2">&quot;dms-access-for-endpoint-AmazonDMSRedshiftS3Role&quot;</span><span class="p">,</span>
+    <span class="n">policy_arn</span><span class="o">=</span><span class="s2">&quot;arn:aws:iam::aws:policy/service-role/AmazonDMSRedshiftS3Role&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">dms_access_for_endpoint</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">dms_cloudwatch_logs_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;dms-cloudwatch-logs-role&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="n">dms_assume_role</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>
+<span class="n">dms_cloudwatch_logs_role__amazon_dms_cloud_watch_logs_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicyAttachment</span><span class="p">(</span><span class="s2">&quot;dms-cloudwatch-logs-role-AmazonDMSCloudWatchLogsRole&quot;</span><span class="p">,</span>
+    <span class="n">policy_arn</span><span class="o">=</span><span class="s2">&quot;arn:aws:iam::aws:policy/service-role/AmazonDMSCloudWatchLogsRole&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">dms_cloudwatch_logs_role</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">dms_vpc_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;dms-vpc-role&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="n">dms_assume_role</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>
+<span class="n">dms_vpc_role__amazon_dmsvpc_management_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicyAttachment</span><span class="p">(</span><span class="s2">&quot;dms-vpc-role-AmazonDMSVPCManagementRole&quot;</span><span class="p">,</span>
+    <span class="n">policy_arn</span><span class="o">=</span><span class="s2">&quot;arn:aws:iam::aws:policy/service-role/AmazonDMSVPCManagementRole&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">dms_vpc_role</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="c1"># Create a new replication instance</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">dms</span><span class="o">.</span><span class="n">ReplicationInstance</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">allocated_storage</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">apply_immediately</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">auto_minor_version_upgrade</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="s2">&quot;us-west-2c&quot;</span><span class="p">,</span>
+    <span class="n">engine_version</span><span class="o">=</span><span class="s2">&quot;3.1.4&quot;</span><span class="p">,</span>
+    <span class="n">kms_key_arn</span><span class="o">=</span><span class="s2">&quot;arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012&quot;</span><span class="p">,</span>
+    <span class="n">multi_az</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">preferred_maintenance_window</span><span class="o">=</span><span class="s2">&quot;sun:10:30-sun:14:30&quot;</span><span class="p">,</span>
+    <span class="n">publicly_accessible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">replication_instance_class</span><span class="o">=</span><span class="s2">&quot;dms.t2.micro&quot;</span><span class="p">,</span>
+    <span class="n">replication_instance_id</span><span class="o">=</span><span class="s2">&quot;test-dms-replication-instance-tf&quot;</span><span class="p">,</span>
+    <span class="n">replication_subnet_group_id</span><span class="o">=</span><span class="n">aws_dms_replication_subnet_group</span><span class="p">[</span><span class="s2">&quot;test-dms-replication-subnet-group-tf&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vpc_security_group_ids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;sg-12345678&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -771,6 +865,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.dms.ReplicationSubnetGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.dms.</code><code class="sig-name descname">ReplicationSubnetGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_subnet_group_description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_subnet_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dms.ReplicationSubnetGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DMS (Data Migration Service) replication subnet group resource. DMS replication subnet groups can be created, updated, deleted, and imported.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="c1"># Create a new replication subnet group</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">dms</span><span class="o">.</span><span class="n">ReplicationSubnetGroup</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">replication_subnet_group_description</span><span class="o">=</span><span class="s2">&quot;Test replication subnet group&quot;</span><span class="p">,</span>
+    <span class="n">replication_subnet_group_id</span><span class="o">=</span><span class="s2">&quot;test-dms-replication-subnet-group-tf&quot;</span><span class="p">,</span>
+    <span class="n">subnet_ids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;subnet-12345678&quot;</span><span class="p">],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -876,6 +983,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.dms.ReplicationTask">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.dms.</code><code class="sig-name descname">ReplicationTask</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cdc_start_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">migration_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_instance_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_task_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication_task_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_endpoint_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">table_mappings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_endpoint_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dms.ReplicationTask" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DMS (Data Migration Service) replication task resource. DMS replication tasks can be created, updated, deleted, and imported.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="c1"># Create a new replication task</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">dms</span><span class="o">.</span><span class="n">ReplicationTask</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">cdc_start_time</span><span class="o">=</span><span class="mi">1484346880</span><span class="p">,</span>
+    <span class="n">migration_type</span><span class="o">=</span><span class="s2">&quot;full-load&quot;</span><span class="p">,</span>
+    <span class="n">replication_instance_arn</span><span class="o">=</span><span class="n">aws_dms_replication_instance</span><span class="p">[</span><span class="s2">&quot;test-dms-replication-instance-tf&quot;</span><span class="p">][</span><span class="s2">&quot;replication_instance_arn&quot;</span><span class="p">],</span>
+    <span class="n">replication_task_id</span><span class="o">=</span><span class="s2">&quot;test-dms-replication-task-tf&quot;</span><span class="p">,</span>
+    <span class="n">replication_task_settings</span><span class="o">=</span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
+    <span class="n">source_endpoint_arn</span><span class="o">=</span><span class="n">aws_dms_endpoint</span><span class="p">[</span><span class="s2">&quot;test-dms-source-endpoint-tf&quot;</span><span class="p">][</span><span class="s2">&quot;endpoint_arn&quot;</span><span class="p">],</span>
+    <span class="n">table_mappings</span><span class="o">=</span><span class="s2">&quot;{&quot;</span><span class="n">rules</span><span class="s2">&quot;:[{&quot;</span><span class="n">rule</span><span class="o">-</span><span class="nb">type</span><span class="s2">&quot;:&quot;</span><span class="n">selection</span><span class="s2">&quot;,&quot;</span><span class="n">rule</span><span class="o">-</span><span class="nb">id</span><span class="s2">&quot;:&quot;</span><span class="mi">1</span><span class="s2">&quot;,&quot;</span><span class="n">rule</span><span class="o">-</span><span class="n">name</span><span class="s2">&quot;:&quot;</span><span class="mi">1</span><span class="s2">&quot;,&quot;</span><span class="nb">object</span><span class="o">-</span><span class="n">locator</span><span class="s2">&quot;:{&quot;</span><span class="n">schema</span><span class="o">-</span><span class="n">name</span><span class="s2">&quot;:&quot;</span><span class="o">%</span><span class="s2">&quot;,&quot;</span><span class="n">table</span><span class="o">-</span><span class="n">name</span><span class="s2">&quot;:&quot;</span><span class="o">%</span><span class="s2">&quot;},&quot;</span><span class="n">rule</span><span class="o">-</span><span class="n">action</span><span class="s2">&quot;:&quot;</span><span class="n">include</span><span class="s2">&quot;}]}&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">target_endpoint_arn</span><span class="o">=</span><span class="n">aws_dms_endpoint</span><span class="p">[</span><span class="s2">&quot;test-dms-target-endpoint-tf&quot;</span><span class="p">][</span><span class="s2">&quot;endpoint_arn&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

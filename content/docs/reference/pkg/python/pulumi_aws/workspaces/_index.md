@@ -22,6 +22,36 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.workspaces.Directory">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.workspaces.</code><code class="sig-name descname">Directory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">directory_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_service_permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.Directory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a directory registration in AWS WorkSpaces Service</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main_vpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;mainVpc&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">private_a</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;private-a&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="s2">&quot;us-east-1a&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">main_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">private_b</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;private-b&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="s2">&quot;us-east-1b&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">main_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">main_directory</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directoryservice</span><span class="o">.</span><span class="n">Directory</span><span class="p">(</span><span class="s2">&quot;mainDirectory&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;#S1ncerely&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;Small&quot;</span><span class="p">,</span>
+    <span class="n">vpc_settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;subnetIds&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="n">private_a</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="n">private_b</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;vpcId&quot;</span><span class="p">:</span> <span class="n">main_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">main_workspaces_directory_directory</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">workspaces</span><span class="o">.</span><span class="n">Directory</span><span class="p">(</span><span class="s2">&quot;mainWorkspaces/directoryDirectory&quot;</span><span class="p">,</span>
+    <span class="n">directory_id</span><span class="o">=</span><span class="n">main_directory</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">self_service_permissions</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;increaseVolumeSize&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;rebuildWorkspace&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -43,9 +73,57 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">switchRunningMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether WorkSpaces directory users can switch the running mode of their workspace. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <dl class="py attribute">
+<dt id="pulumi_aws.workspaces.Directory.alias">
+<code class="sig-name descname">alias</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Directory.alias" title="Permalink to this definition">¶</a></dt>
+<dd><p>The directory alias.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.workspaces.Directory.customer_user_name">
+<code class="sig-name descname">customer_user_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Directory.customer_user_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The user name for the service account.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_aws.workspaces.Directory.directory_id">
 <code class="sig-name descname">directory_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Directory.directory_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The directory identifier for registration in WorkSpaces service.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.workspaces.Directory.directory_name">
+<code class="sig-name descname">directory_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Directory.directory_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the directory.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.workspaces.Directory.directory_type">
+<code class="sig-name descname">directory_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Directory.directory_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The directory type.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.workspaces.Directory.dns_ip_addresses">
+<code class="sig-name descname">dns_ip_addresses</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Directory.dns_ip_addresses" title="Permalink to this definition">¶</a></dt>
+<dd><p>The IP addresses of the DNS servers for the directory.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.workspaces.Directory.iam_role_id">
+<code class="sig-name descname">iam_role_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Directory.iam_role_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The identifier of the IAM role. This is the role that allows Amazon WorkSpaces to make calls to other services, such as Amazon EC2, on your behalf.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.workspaces.Directory.ip_group_ids">
+<code class="sig-name descname">ip_group_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Directory.ip_group_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>The identifiers of the IP access control groups associated with the directory.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.workspaces.Directory.registration_code">
+<code class="sig-name descname">registration_code</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Directory.registration_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -73,9 +151,15 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>A map of tags assigned to the WorkSpaces directory.</p>
 </dd></dl>
 
+<dl class="py attribute">
+<dt id="pulumi_aws.workspaces.Directory.workspace_security_group_id">
+<code class="sig-name descname">workspace_security_group_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.Directory.workspace_security_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The identifier of the security group that is assigned to new WorkSpaces.</p>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pulumi_aws.workspaces.Directory.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">directory_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_service_permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.Directory.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">customer_user_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">directory_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">directory_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">directory_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_role_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_group_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registration_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_service_permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workspace_security_group_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.Directory.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Directory resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -84,10 +168,19 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>alias</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The directory alias.</p></li>
+<li><p><strong>customer_user_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user name for the service account.</p></li>
 <li><p><strong>directory_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The directory identifier for registration in WorkSpaces service.</p></li>
+<li><p><strong>directory_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the directory.</p></li>
+<li><p><strong>directory_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The directory type.</p></li>
+<li><p><strong>dns_ip_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The IP addresses of the DNS servers for the directory.</p></li>
+<li><p><strong>iam_role_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the IAM role. This is the role that allows Amazon WorkSpaces to make calls to other services, such as Amazon EC2, on your behalf.</p></li>
+<li><p><strong>ip_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The identifiers of the IP access control groups associated with the directory.</p></li>
+<li><p><strong>registration_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.</p></li>
 <li><p><strong>self_service_permissions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The permissions to enable or disable self-service capabilities.</p></li>
 <li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The identifiers of the subnets where the directory resides.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags assigned to the WorkSpaces directory.</p></li>
+<li><p><strong>workspace_security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the security group that is assigned to new WorkSpaces.</p></li>
 </ul>
 </dd>
 </dl>
@@ -191,6 +284,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.workspaces.IpGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.workspaces.</code><code class="sig-name descname">IpGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.IpGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IP access control group in AWS WorkSpaces Service</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">contractors</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">workspaces</span><span class="o">.</span><span class="n">IpGroup</span><span class="p">(</span><span class="s2">&quot;contractors&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Contractors IP access control group&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -295,6 +394,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.workspaces.get_bundle">
 <code class="sig-prename descclassname">pulumi_aws.workspaces.</code><code class="sig-name descname">get_bundle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bundle_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.get_bundle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a WorkSpaces Bundle.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">workspaces</span><span class="o">.</span><span class="n">get_bundle</span><span class="p">(</span><span class="n">bundle_id</span><span class="o">=</span><span class="s2">&quot;wsb-b0s22j3d7&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>bundle_id</strong> (<em>str</em>) – The ID of the bundle.</p>

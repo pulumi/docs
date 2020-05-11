@@ -37,6 +37,20 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.wafregional.ByteMatchSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">ByteMatchSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">byte_match_tuples</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.ByteMatchSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Regional Byte Match Set Resource for use with Application Load Balancer.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">byte_set</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">ByteMatchSet</span><span class="p">(</span><span class="s2">&quot;byteSet&quot;</span><span class="p">,</span> <span class="n">byte_match_tuples</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;fieldToMatch&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="s2">&quot;referer&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;HEADER&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;positionalConstraint&quot;</span><span class="p">:</span> <span class="s2">&quot;CONTAINS&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;targetString&quot;</span><span class="p">:</span> <span class="s2">&quot;badrefer1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;textTransformation&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -154,6 +168,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.GeoMatchSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">GeoMatchSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">geo_match_constraints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.GeoMatchSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Regional Geo Match Set Resource</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">geo_match_set</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">GeoMatchSet</span><span class="p">(</span><span class="s2">&quot;geoMatchSet&quot;</span><span class="p">,</span> <span class="n">geo_match_constraints</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Country&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;US&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Country&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;CA&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -304,6 +333,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.IpSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">IpSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_set_descriptors</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.IpSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Regional IPSet Resource for use with Application Load Balancer.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">ipset</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">IpSet</span><span class="p">(</span><span class="s2">&quot;ipset&quot;</span><span class="p">,</span> <span class="n">ip_set_descriptors</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;IPV4&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;192.0.7.0/24&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;IPV4&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;10.16.16.0/16&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -407,6 +451,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.RateBasedRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">RateBasedRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">predicates</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rate_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rate_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.RateBasedRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Rate Based Rule Resource</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">ipset</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">IpSet</span><span class="p">(</span><span class="s2">&quot;ipset&quot;</span><span class="p">,</span> <span class="n">ip_set_descriptors</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;IPV4&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;192.0.7.0/24&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+<span class="n">wafrule</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">RateBasedRule</span><span class="p">(</span><span class="s2">&quot;wafrule&quot;</span><span class="p">,</span>
+    <span class="n">metric_name</span><span class="o">=</span><span class="s2">&quot;tfWAFRule&quot;</span><span class="p">,</span>
+    <span class="n">predicates</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;dataId&quot;</span><span class="p">:</span> <span class="n">ipset</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;negated&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;IPMatch&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">rate_key</span><span class="o">=</span><span class="s2">&quot;IP&quot;</span><span class="p">,</span>
+    <span class="n">rate_limit</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -554,6 +616,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.RegexMatchSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">RegexMatchSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">regex_match_tuples</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.RegexMatchSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Regional Regex Match Set Resource</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_regex_pattern_set</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">RegexPatternSet</span><span class="p">(</span><span class="s2">&quot;exampleRegexPatternSet&quot;</span><span class="p">,</span> <span class="n">regex_pattern_strings</span><span class="o">=</span><span class="p">[</span>
+    <span class="s2">&quot;one&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;two&quot;</span><span class="p">,</span>
+<span class="p">])</span>
+<span class="n">example_regex_match_set</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">RegexMatchSet</span><span class="p">(</span><span class="s2">&quot;exampleRegexMatchSet&quot;</span><span class="p">,</span> <span class="n">regex_match_tuples</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;fieldToMatch&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="s2">&quot;User-Agent&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;HEADER&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;regexPatternSetId&quot;</span><span class="p">:</span> <span class="n">example_regex_pattern_set</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="s2">&quot;textTransformation&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -692,6 +771,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.RegexPatternSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">RegexPatternSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">regex_pattern_strings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.RegexPatternSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Regional Regex Pattern Set Resource</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">RegexPatternSet</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">regex_pattern_strings</span><span class="o">=</span><span class="p">[</span>
+    <span class="s2">&quot;one&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;two&quot;</span><span class="p">,</span>
+<span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -774,6 +862,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.Rule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">Rule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">predicates</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.Rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an WAF Regional Rule Resource for use with Application Load Balancer.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">ipset</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">IpSet</span><span class="p">(</span><span class="s2">&quot;ipset&quot;</span><span class="p">,</span> <span class="n">ip_set_descriptors</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;IPV4&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;192.0.7.0/24&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+<span class="n">wafrule</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">Rule</span><span class="p">(</span><span class="s2">&quot;wafrule&quot;</span><span class="p">,</span>
+    <span class="n">metric_name</span><span class="o">=</span><span class="s2">&quot;tfWAFRule&quot;</span><span class="p">,</span>
+    <span class="n">predicates</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;dataId&quot;</span><span class="p">:</span> <span class="n">ipset</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;negated&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;IPMatch&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <p>See the <a class="reference external" href="https://docs.aws.amazon.com/waf/latest/APIReference/API_Predicate.html">WAF Documentation</a> for more information.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> - (Required) The type of predicate in a rule. Valid values: <code class="docutils literal notranslate"><span class="pre">ByteMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">GeoMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">IPMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">RegexMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">SizeConstraint</span></code>, <code class="docutils literal notranslate"><span class="pre">SqlInjectionMatch</span></code>, or <code class="docutils literal notranslate"><span class="pre">XssMatch</span></code></p></li>
@@ -902,6 +1006,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.RuleGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">RuleGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">activated_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.RuleGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Regional Rule Group Resource</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_rule</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">Rule</span><span class="p">(</span><span class="s2">&quot;exampleRule&quot;</span><span class="p">,</span> <span class="n">metric_name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+<span class="n">example_rule_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">RuleGroup</span><span class="p">(</span><span class="s2">&quot;exampleRuleGroup&quot;</span><span class="p">,</span>
+    <span class="n">activated_rules</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;COUNT&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="s2">&quot;ruleId&quot;</span><span class="p">:</span> <span class="n">example_rule</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">metric_name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1039,6 +1158,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.SizeConstraintSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">SizeConstraintSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size_constraints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.SizeConstraintSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Regional Size Constraint Set Resource for use with Application Load Balancer.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">size_constraint_set</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">SizeConstraintSet</span><span class="p">(</span><span class="s2">&quot;sizeConstraintSet&quot;</span><span class="p">,</span> <span class="n">size_constraints</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;comparisonOperator&quot;</span><span class="p">:</span> <span class="s2">&quot;EQ&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;fieldToMatch&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;BODY&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;4096&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;textTransformation&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1192,6 +1324,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.SqlInjectionMatchSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">SqlInjectionMatchSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sql_injection_match_tuples</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.SqlInjectionMatchSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Regional SQL Injection Match Set Resource for use with Application Load Balancer.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">sql_injection_match_set</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">SqlInjectionMatchSet</span><span class="p">(</span><span class="s2">&quot;sqlInjectionMatchSet&quot;</span><span class="p">,</span> <span class="n">sql_injection_match_tuples</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;fieldToMatch&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;QUERY_STRING&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;textTransformation&quot;</span><span class="p">:</span> <span class="s2">&quot;URL_DECODE&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1327,6 +1470,72 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.WebAcl">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">WebAcl</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logging_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.WebAcl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Regional Web ACL Resource for use with Application Load Balancer.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">ipset</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">IpSet</span><span class="p">(</span><span class="s2">&quot;ipset&quot;</span><span class="p">,</span> <span class="n">ip_set_descriptors</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;IPV4&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;192.0.7.0/24&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+<span class="n">wafrule</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">Rule</span><span class="p">(</span><span class="s2">&quot;wafrule&quot;</span><span class="p">,</span>
+    <span class="n">metric_name</span><span class="o">=</span><span class="s2">&quot;tfWAFRule&quot;</span><span class="p">,</span>
+    <span class="n">predicates</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;dataId&quot;</span><span class="p">:</span> <span class="n">ipset</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;negated&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;IPMatch&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">wafacl</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">WebAcl</span><span class="p">(</span><span class="s2">&quot;wafacl&quot;</span><span class="p">,</span>
+    <span class="n">default_action</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ALLOW&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">metric_name</span><span class="o">=</span><span class="s2">&quot;tfWebACL&quot;</span><span class="p">,</span>
+    <span class="n">rules</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;BLOCK&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;ruleId&quot;</span><span class="p">:</span> <span class="n">wafrule</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;REGULAR&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">WebAcl</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">default_action</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ALLOW&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">metric_name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">rules</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;overrideAction&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;ruleId&quot;</span><span class="p">:</span> <span class="n">aws_wafregional_rule_group</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;GROUP&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">WebAcl</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">logging_configuration</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;logDestination&quot;</span><span class="p">:</span> <span class="n">aws_kinesis_firehose_delivery_stream</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;redactedFields&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;fieldToMatch&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;URI&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="s2">&quot;referer&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;HEADER&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+    <span class="p">},</span>
+<span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1553,6 +1762,116 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> An Application Load Balancer can only be associated with one WAF Regional WebACL.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">ipset</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">IpSet</span><span class="p">(</span><span class="s2">&quot;ipset&quot;</span><span class="p">,</span> <span class="n">ip_set_descriptors</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;IPV4&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;192.0.7.0/24&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+<span class="n">foo_rule</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">Rule</span><span class="p">(</span><span class="s2">&quot;fooRule&quot;</span><span class="p">,</span>
+    <span class="n">metric_name</span><span class="o">=</span><span class="s2">&quot;tfWAFRule&quot;</span><span class="p">,</span>
+    <span class="n">predicates</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;dataId&quot;</span><span class="p">:</span> <span class="n">ipset</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;negated&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;IPMatch&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">foo_web_acl</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">WebAcl</span><span class="p">(</span><span class="s2">&quot;fooWebAcl&quot;</span><span class="p">,</span>
+    <span class="n">default_action</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ALLOW&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">metric_name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">rules</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;BLOCK&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;ruleId&quot;</span><span class="p">:</span> <span class="n">foo_rule</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">foo_vpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;fooVpc&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.1.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">available</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_availability_zones</span><span class="p">()</span>
+<span class="n">foo_subnet</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;fooSubnet&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">available</span><span class="o">.</span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.1.1.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">foo_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">available</span><span class="o">.</span><span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.1.2.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">foo_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">foo_load_balancer</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">alb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;fooLoadBalancer&quot;</span><span class="p">,</span>
+    <span class="n">internal</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">subnets</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">foo_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="n">bar</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">])</span>
+<span class="n">foo_web_acl_association</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">WebAclAssociation</span><span class="p">(</span><span class="s2">&quot;fooWebAclAssociation&quot;</span><span class="p">,</span>
+    <span class="n">resource_arn</span><span class="o">=</span><span class="n">foo_load_balancer</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">web_acl_id</span><span class="o">=</span><span class="n">foo_web_acl</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">ipset</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">IpSet</span><span class="p">(</span><span class="s2">&quot;ipset&quot;</span><span class="p">,</span> <span class="n">ip_set_descriptors</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;IPV4&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;192.0.7.0/24&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+<span class="n">foo_rule</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">Rule</span><span class="p">(</span><span class="s2">&quot;fooRule&quot;</span><span class="p">,</span>
+    <span class="n">metric_name</span><span class="o">=</span><span class="s2">&quot;tfWAFRule&quot;</span><span class="p">,</span>
+    <span class="n">predicates</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;dataId&quot;</span><span class="p">:</span> <span class="n">ipset</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;negated&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;IPMatch&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">foo_web_acl</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">WebAcl</span><span class="p">(</span><span class="s2">&quot;fooWebAcl&quot;</span><span class="p">,</span>
+    <span class="n">default_action</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ALLOW&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">metric_name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">rules</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;BLOCK&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;ruleId&quot;</span><span class="p">:</span> <span class="n">foo_rule</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">test_rest_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">RestApi</span><span class="p">(</span><span class="s2">&quot;testRestApi&quot;</span><span class="p">)</span>
+<span class="n">test_resource</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="s2">&quot;testResource&quot;</span><span class="p">,</span>
+    <span class="n">parent_id</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">root_resource_id</span><span class="p">,</span>
+    <span class="n">path_part</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">test_method</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Method</span><span class="p">(</span><span class="s2">&quot;testMethod&quot;</span><span class="p">,</span>
+    <span class="n">authorization</span><span class="o">=</span><span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+    <span class="n">http_method</span><span class="o">=</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">test_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">test_method_response</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">MethodResponse</span><span class="p">(</span><span class="s2">&quot;testMethodResponse&quot;</span><span class="p">,</span>
+    <span class="n">http_method</span><span class="o">=</span><span class="n">test_method</span><span class="o">.</span><span class="n">http_method</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">test_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">status_code</span><span class="o">=</span><span class="s2">&quot;400&quot;</span><span class="p">)</span>
+<span class="n">test_integration</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Integration</span><span class="p">(</span><span class="s2">&quot;testIntegration&quot;</span><span class="p">,</span>
+    <span class="n">http_method</span><span class="o">=</span><span class="n">test_method</span><span class="o">.</span><span class="n">http_method</span><span class="p">,</span>
+    <span class="n">integration_http_method</span><span class="o">=</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">test_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">uri</span><span class="o">=</span><span class="s2">&quot;http://www.example.com&quot;</span><span class="p">)</span>
+<span class="n">test_integration_response</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">IntegrationResponse</span><span class="p">(</span><span class="s2">&quot;testIntegrationResponse&quot;</span><span class="p">,</span>
+    <span class="n">http_method</span><span class="o">=</span><span class="n">test_integration</span><span class="o">.</span><span class="n">http_method</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">test_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">status_code</span><span class="o">=</span><span class="n">test_method_response</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+<span class="n">test_deployment</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Deployment</span><span class="p">(</span><span class="s2">&quot;testDeployment&quot;</span><span class="p">,</span> <span class="n">rest_api</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">test_stage</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Stage</span><span class="p">(</span><span class="s2">&quot;testStage&quot;</span><span class="p">,</span>
+    <span class="n">deployment</span><span class="o">=</span><span class="n">test_deployment</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">stage_name</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
+<span class="n">association</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">WebAclAssociation</span><span class="p">(</span><span class="s2">&quot;association&quot;</span><span class="p">,</span>
+    <span class="n">resource_arn</span><span class="o">=</span><span class="n">test_stage</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">web_acl_id</span><span class="o">=</span><span class="n">foo_web_acl</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1635,6 +1954,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.XssMatchSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">XssMatchSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">xss_match_tuples</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.XssMatchSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Regional XSS Match Set Resource for use with Application Load Balancer.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">xss_match_set</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">XssMatchSet</span><span class="p">(</span><span class="s2">&quot;xssMatchSet&quot;</span><span class="p">,</span> <span class="n">xss_match_tuples</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;fieldToMatch&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;URI&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;textTransformation&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;fieldToMatch&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;QUERY_STRING&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;textTransformation&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1746,6 +2084,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.get_ipset">
 <code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">get_ipset</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.get_ipset" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">wafregional.IpSet</span></code> Retrieves a WAF Regional IP Set Resource Id.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">get_ipset</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;tfWAFRegionalIPSet&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the WAF Regional IP set.</p>
@@ -1757,6 +2101,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.get_rate_based_mod">
 <code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">get_rate_based_mod</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.get_rate_based_mod" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">wafregional.RateBasedRule</span></code> Retrieves a WAF Regional Rate Based Rule Resource Id.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">get_rate_based_mod</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;tfWAFRegionalRateBasedRule&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the WAF Regional rate based rule.</p>
@@ -1768,6 +2118,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.get_rule">
 <code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">get_rule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.get_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">wafregional.Rule</span></code> Retrieves a WAF Regional Rule Resource Id.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">get_rule</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;tfWAFRegionalRule&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the WAF Regional rule.</p>
@@ -1779,6 +2135,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.get_web_acl">
 <code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">get_web_acl</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.get_web_acl" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">wafregional.WebAcl</span></code> Retrieves a WAF Regional Web ACL Resource Id.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">wafregional</span><span class="o">.</span><span class="n">get_web_acl</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;tfWAFRegionalWebACL&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the WAF Regional Web ACL.</p>

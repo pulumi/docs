@@ -17,6 +17,28 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.budgets.Budget">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.budgets.</code><code class="sig-name descname">Budget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">budget_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cost_filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cost_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">limit_amount</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">limit_unit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notifications</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">time_period_end</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">time_period_start</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">time_unit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.budgets.Budget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a budgets budget resource. Budgets use the cost visualisation provided by Cost Explorer to show you the status of your budgets, to provide forecasts of your estimated costs, and to track your AWS usage, including your free tier usage.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">ec2</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">budgets</span><span class="o">.</span><span class="n">Budget</span><span class="p">(</span><span class="s2">&quot;ec2&quot;</span><span class="p">,</span>
+    <span class="n">budget_type</span><span class="o">=</span><span class="s2">&quot;COST&quot;</span><span class="p">,</span>
+    <span class="n">cost_filters</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Service&quot;</span><span class="p">:</span> <span class="s2">&quot;Amazon Elastic Compute Cloud - Compute&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">limit_amount</span><span class="o">=</span><span class="s2">&quot;1200&quot;</span><span class="p">,</span>
+    <span class="n">limit_unit</span><span class="o">=</span><span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+    <span class="n">notifications</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;comparisonOperator&quot;</span><span class="p">:</span> <span class="s2">&quot;GREATER_THAN&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;notificationType&quot;</span><span class="p">:</span> <span class="s2">&quot;FORECASTED&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subscriberEmailAddresses&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;test@example.com&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="s2">&quot;thresholdType&quot;</span><span class="p">:</span> <span class="s2">&quot;PERCENTAGE&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">time_period_end</span><span class="o">=</span><span class="s2">&quot;2087-06-15_00:00&quot;</span><span class="p">,</span>
+    <span class="n">time_period_start</span><span class="o">=</span><span class="s2">&quot;2017-07-01_00:00&quot;</span><span class="p">,</span>
+    <span class="n">time_unit</span><span class="o">=</span><span class="s2">&quot;MONTHLY&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

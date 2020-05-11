@@ -22,6 +22,143 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.elasticsearch.Domain">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticsearch.</code><code class="sig-name descname">Domain</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">advanced_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cognito_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_endpoint_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encrypt_at_rest</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_publishing_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_to_node_encryption</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticsearch.Domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Elasticsearch Domain.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticsearch</span><span class="o">.</span><span class="n">Domain</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">cluster_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;clusterConfig&quot;</span><span class="p">:</span> <span class="s2">&quot;r4.large.elasticsearch&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">elasticsearch_version</span><span class="o">=</span><span class="s2">&quot;1.5&quot;</span><span class="p">,</span>
+    <span class="n">snapshot_options</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;snapshotOptions&quot;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Domain&quot;</span><span class="p">:</span> <span class="s2">&quot;TestDomain&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">domain</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;domain&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">domain</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">domain</span> <span class="o">=</span> <span class="s2">&quot;tf-test&quot;</span>
+<span class="n">current_region</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_region</span><span class="p">()</span>
+<span class="n">current_caller_identity</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_caller_identity</span><span class="p">()</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticsearch</span><span class="o">.</span><span class="n">Domain</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">access_policies</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">      &quot;Action&quot;: &quot;es:*&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: &quot;*&quot;,</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Resource&quot;: &quot;arn:aws:es:</span><span class="si">{</span><span class="n">current_region</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">current_caller_identity</span><span class="o">.</span><span class="n">account_id</span><span class="si">}</span><span class="s2">:domain/</span><span class="si">{</span><span class="n">domain</span><span class="si">}</span><span class="s2">/*&quot;,</span>
+<span class="s2">      &quot;Condition&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">        &quot;IpAddress&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2">&quot;aws:SourceIp&quot;: [&quot;66.193.100.22/32&quot;]</span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">      </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">    </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">  ]</span>
+<span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_log_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">LogGroup</span><span class="p">(</span><span class="s2">&quot;exampleLogGroup&quot;</span><span class="p">)</span>
+<span class="n">example_log_resource_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">LogResourcePolicy</span><span class="p">(</span><span class="s2">&quot;exampleLogResourcePolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy_document</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;es.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;logs:PutLogEvents&quot;,</span>
+<span class="s2">        &quot;logs:PutLogEventsBatch&quot;,</span>
+<span class="s2">        &quot;logs:CreateLogStream&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Resource&quot;: &quot;arn:aws:logs:*&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">policy_name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+<span class="n">example_domain</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticsearch</span><span class="o">.</span><span class="n">Domain</span><span class="p">(</span><span class="s2">&quot;exampleDomain&quot;</span><span class="p">,</span> <span class="n">log_publishing_options</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;cloudwatchLogGroupArn&quot;</span><span class="p">:</span> <span class="n">example_log_group</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="s2">&quot;logType&quot;</span><span class="p">:</span> <span class="s2">&quot;INDEX_SLOW_LOGS&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">vpc</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">require_object</span><span class="p">(</span><span class="s2">&quot;vpc&quot;</span><span class="p">)</span>
+<span class="n">domain</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;domain&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">domain</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">domain</span> <span class="o">=</span> <span class="s2">&quot;tf-test&quot;</span>
+<span class="n">selected_vpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_vpc</span><span class="p">(</span><span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="n">vpc</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">selected_subnet_ids</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_subnet_ids</span><span class="p">(</span><span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Tier&quot;</span><span class="p">:</span> <span class="s2">&quot;private&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">selected_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">current_region</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_region</span><span class="p">()</span>
+<span class="n">current_caller_identity</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_caller_identity</span><span class="p">()</span>
+<span class="n">es_security_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;esSecurityGroup&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Managed by Pulumi&quot;</span><span class="p">,</span>
+    <span class="n">ingress</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;cidrBlocks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">selected_vpc</span><span class="o">.</span><span class="n">cidr_block</span><span class="p">],</span>
+        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">selected_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">es_service_linked_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">ServiceLinkedRole</span><span class="p">(</span><span class="s2">&quot;esServiceLinkedRole&quot;</span><span class="p">,</span> <span class="n">aws_service_name</span><span class="o">=</span><span class="s2">&quot;es.amazonaws.com&quot;</span><span class="p">)</span>
+<span class="n">es_domain</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticsearch</span><span class="o">.</span><span class="n">Domain</span><span class="p">(</span><span class="s2">&quot;esDomain&quot;</span><span class="p">,</span>
+    <span class="n">access_policies</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">        &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">        &quot;Statement&quot;: [</span>
+<span class="s2">                </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">                        &quot;Action&quot;: &quot;es:*&quot;,</span>
+<span class="s2">                        &quot;Principal&quot;: &quot;*&quot;,</span>
+<span class="s2">                        &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">                        &quot;Resource&quot;: &quot;arn:aws:es:</span><span class="si">{</span><span class="n">current_region</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">current_caller_identity</span><span class="o">.</span><span class="n">account_id</span><span class="si">}</span><span class="s2">:domain/</span><span class="si">{</span><span class="n">domain</span><span class="si">}</span><span class="s2">/*&quot;</span>
+<span class="s2">                </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">        ]</span>
+<span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">advanced_options</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;rest.action.multi.allow_explicit_index&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">cluster_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;clusterConfig&quot;</span><span class="p">:</span> <span class="s2">&quot;m4.large.elasticsearch&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">elasticsearch_version</span><span class="o">=</span><span class="s2">&quot;6.3&quot;</span><span class="p">,</span>
+    <span class="n">snapshot_options</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;snapshotOptions&quot;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Domain&quot;</span><span class="p">:</span> <span class="s2">&quot;TestDomain&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vpc_options</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;securityGroupIds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">aws_security_group</span><span class="p">[</span><span class="s2">&quot;elasticsearch&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
+        <span class="s2">&quot;subnetIds&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="n">selected_subnet_ids</span><span class="o">.</span><span class="n">ids</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+            <span class="n">selected_subnet_ids</span><span class="o">.</span><span class="n">ids</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="p">],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -417,6 +554,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elasticsearch.DomainPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticsearch.</code><code class="sig-name descname">DomainPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticsearch.DomainPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows setting policy to an Elasticsearch domain while referencing domain attributes (e.g. ARN)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticsearch</span><span class="o">.</span><span class="n">Domain</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">elasticsearch_version</span><span class="o">=</span><span class="s2">&quot;2.3&quot;</span><span class="p">)</span>
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticsearch</span><span class="o">.</span><span class="n">DomainPolicy</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
+    <span class="n">access_policies</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">arn</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">arn</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">    &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">    &quot;Statement&quot;: [</span>
+<span class="s2">        </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">            &quot;Action&quot;: &quot;es:*&quot;,</span>
+<span class="s2">            &quot;Principal&quot;: &quot;*&quot;,</span>
+<span class="s2">            &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">            &quot;Condition&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">                &quot;IpAddress&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2">&quot;aws:SourceIp&quot;: &quot;127.0.0.1/32&quot;</span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">            </span><span class="se">&#x7D;&#x7D;</span><span class="s2">,</span>
+<span class="s2">            &quot;Resource&quot;: &quot;</span><span class="si">{</span><span class="n">arn</span><span class="si">}</span><span class="s2">/*&quot;</span>
+<span class="s2">        </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">    ]</span>
+<span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">),</span>
+    <span class="n">domain_name</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">domain_name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -622,6 +783,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elasticsearch.get_domain">
 <code class="sig-prename descclassname">pulumi_aws.elasticsearch.</code><code class="sig-name descname">get_domain</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domain_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticsearch.get_domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an Elasticsearch Domain</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">my_domain</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticsearch</span><span class="o">.</span><span class="n">get_domain</span><span class="p">(</span><span class="n">domain_name</span><span class="o">=</span><span class="s2">&quot;my-domain-name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

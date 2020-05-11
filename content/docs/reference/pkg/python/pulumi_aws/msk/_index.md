@@ -27,6 +27,102 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.msk.Cluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">broker_node_group_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_authentication</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">configuration_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enhanced_monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logging_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">number_of_broker_nodes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">open_monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages AWS Managed Streaming for Kafka cluster</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">vpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;vpc&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;192.168.0.0/22&quot;</span><span class="p">)</span>
+<span class="n">azs</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_availability_zones</span><span class="p">(</span><span class="n">state</span><span class="o">=</span><span class="s2">&quot;available&quot;</span><span class="p">)</span>
+<span class="n">subnet_az1</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;subnetAz1&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">azs</span><span class="o">.</span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;192.168.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">subnet_az2</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;subnetAz2&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">azs</span><span class="o">.</span><span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;192.168.1.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">subnet_az3</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;subnetAz3&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">azs</span><span class="o">.</span><span class="n">names</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;192.168.2.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">sg</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;sg&quot;</span><span class="p">,</span> <span class="n">vpc_id</span><span class="o">=</span><span class="n">vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">kms</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">Key</span><span class="p">(</span><span class="s2">&quot;kms&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">LogGroup</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">,</span> <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">firehose_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;firehoseRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">&quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">&quot;Statement&quot;: [</span>
+<span class="s2">  {</span>
+<span class="s2">    &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">    &quot;Principal&quot;: {</span>
+<span class="s2">      &quot;Service&quot;: &quot;firehose.amazonaws.com&quot;</span>
+<span class="s2">    },</span>
+<span class="s2">    &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">    &quot;Sid&quot;: &quot;&quot;</span>
+<span class="s2">  }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">test_stream</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kinesis</span><span class="o">.</span><span class="n">FirehoseDeliveryStream</span><span class="p">(</span><span class="s2">&quot;testStream&quot;</span><span class="p">,</span>
+    <span class="n">destination</span><span class="o">=</span><span class="s2">&quot;s3&quot;</span><span class="p">,</span>
+    <span class="n">s3_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">firehose_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+        <span class="s2">&quot;bucketArn&quot;</span><span class="p">:</span> <span class="n">bucket</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;LogDeliveryEnabled&quot;</span><span class="p">:</span> <span class="s2">&quot;placeholder&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">msk</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">cluster_name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">kafka_version</span><span class="o">=</span><span class="s2">&quot;2.1.0&quot;</span><span class="p">,</span>
+    <span class="n">number_of_broker_nodes</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">broker_node_group_info</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;instanceType&quot;</span><span class="p">:</span> <span class="s2">&quot;kafka.m5.large&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ebsVolumeSize&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
+        <span class="s2">&quot;clientSubnets&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="n">subnet_az1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="n">subnet_az2</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="n">subnet_az3</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;securityGroups&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">sg</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">encryption_info</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;encryptionAtRestKmsKeyArn&quot;</span><span class="p">:</span> <span class="n">kms</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">open_monitoring</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;prometheus&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;jmx_exporter&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;enabledInBroker&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;node_exporter&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;enabledInBroker&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">logging_info</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;broker_logs&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;cloudwatch_logs&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="s2">&quot;logGroup&quot;</span><span class="p">:</span> <span class="n">test</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;firehose&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="s2">&quot;deliveryStream&quot;</span><span class="p">:</span> <span class="n">test_stream</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;s3&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="s2">&quot;bucket&quot;</span><span class="p">:</span> <span class="n">bucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;logs/msk-&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;zookeeperConnectString&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">zookeeper_connect_string</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;bootstrapBrokers&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">bootstrap_brokers</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;bootstrapBrokersTls&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">bootstrap_brokers_tls</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -448,6 +544,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> The API does not support deleting MSK configurations. Removing this resource will only remove the this provider state for it.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">msk</span><span class="o">.</span><span class="n">Configuration</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">kafka_versions</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;2.1.0&quot;</span><span class="p">],</span>
+    <span class="n">server_properties</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;auto.create.topics.enable = true</span>
+<span class="s2">delete.topic.enable = true</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -658,6 +765,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.msk.get_cluster">
 <code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on an Amazon MSK Cluster.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">msk</span><span class="o">.</span><span class="n">get_cluster</span><span class="p">(</span><span class="n">cluster_name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -672,6 +785,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.msk.get_configuration">
 <code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">get_configuration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.get_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on an Amazon MSK Configuration.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">msk</span><span class="o">.</span><span class="n">get_configuration</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Name of the configuration.</p>

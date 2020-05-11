@@ -21,6 +21,17 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p><strong>Note:</strong> All arguments including the Client ID and Client Secret will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">pinpoint</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="s2">&quot;app&quot;</span><span class="p">)</span>
+<span class="n">channel</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">pinpoint</span><span class="o">.</span><span class="n">AdmChannel</span><span class="p">(</span><span class="s2">&quot;channel&quot;</span><span class="p">,</span>
+    <span class="n">application_id</span><span class="o">=</span><span class="n">app</span><span class="o">.</span><span class="n">application_id</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -123,6 +134,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> All arguments, including certificates and tokens, will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">pinpoint</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="s2">&quot;app&quot;</span><span class="p">)</span>
+<span class="n">apns</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">pinpoint</span><span class="o">.</span><span class="n">ApnsChannel</span><span class="p">(</span><span class="s2">&quot;apns&quot;</span><span class="p">,</span>
+    <span class="n">application_id</span><span class="o">=</span><span class="n">app</span><span class="o">.</span><span class="n">application_id</span><span class="p">,</span>
+    <span class="n">certificate</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;./certificate.pem&quot;</span><span class="p">),</span>
+    <span class="n">private_key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;./private_key.key&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -274,6 +295,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> All arguments, including certificates and tokens, will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">pinpoint</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="s2">&quot;app&quot;</span><span class="p">)</span>
+<span class="n">apns_sandbox</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">pinpoint</span><span class="o">.</span><span class="n">ApnsSandboxChannel</span><span class="p">(</span><span class="s2">&quot;apnsSandbox&quot;</span><span class="p">,</span>
+    <span class="n">application_id</span><span class="o">=</span><span class="n">app</span><span class="o">.</span><span class="n">application_id</span><span class="p">,</span>
+    <span class="n">certificate</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;./certificate.pem&quot;</span><span class="p">),</span>
+    <span class="n">private_key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;./private_key.key&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -425,6 +456,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> All arguments, including certificates and tokens, will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">pinpoint</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="s2">&quot;app&quot;</span><span class="p">)</span>
+<span class="n">apns_voip</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">pinpoint</span><span class="o">.</span><span class="n">ApnsVoipChannel</span><span class="p">(</span><span class="s2">&quot;apnsVoip&quot;</span><span class="p">,</span>
+    <span class="n">application_id</span><span class="o">=</span><span class="n">app</span><span class="o">.</span><span class="n">application_id</span><span class="p">,</span>
+    <span class="n">certificate</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;./certificate.pem&quot;</span><span class="p">),</span>
+    <span class="n">private_key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;./private_key.key&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -576,6 +617,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> All arguments, including certificates and tokens, will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">pinpoint</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="s2">&quot;app&quot;</span><span class="p">)</span>
+<span class="n">apns_voip_sandbox</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">pinpoint</span><span class="o">.</span><span class="n">ApnsVoipSandboxChannel</span><span class="p">(</span><span class="s2">&quot;apnsVoipSandbox&quot;</span><span class="p">,</span>
+    <span class="n">application_id</span><span class="o">=</span><span class="n">app</span><span class="o">.</span><span class="n">application_id</span><span class="p">,</span>
+    <span class="n">certificate</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;./certificate.pem&quot;</span><span class="p">),</span>
+    <span class="n">private_key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;./private_key.key&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -723,6 +774,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.pinpoint.App">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.pinpoint.</code><code class="sig-name descname">App</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">campaign_hook</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">limits</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">quiet_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pinpoint.App" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Pinpoint App resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">pinpoint</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">limits</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;maximumDuration&quot;</span><span class="p">:</span> <span class="mi">600</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">quiet_time</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;end&quot;</span><span class="p">:</span> <span class="s2">&quot;06:00&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;start&quot;</span><span class="p">:</span> <span class="s2">&quot;00:00&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -906,6 +970,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> All arguments including the Api Key and Secret Key will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">pinpoint</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="s2">&quot;app&quot;</span><span class="p">)</span>
+<span class="n">channel</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">pinpoint</span><span class="o">.</span><span class="n">BaiduChannel</span><span class="p">(</span><span class="s2">&quot;channel&quot;</span><span class="p">,</span>
+    <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">application_id</span><span class="o">=</span><span class="n">app</span><span class="o">.</span><span class="n">application_id</span><span class="p">,</span>
+    <span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1004,6 +1078,50 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.pinpoint.EmailChannel">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.pinpoint.</code><code class="sig-name descname">EmailChannel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">from_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pinpoint.EmailChannel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Pinpoint Email Channel resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">pinpoint</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="s2">&quot;app&quot;</span><span class="p">)</span>
+<span class="n">identity</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ses</span><span class="o">.</span><span class="n">DomainIdentity</span><span class="p">(</span><span class="s2">&quot;identity&quot;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">)</span>
+<span class="n">role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;role&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;pinpoint.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Sid&quot;: &quot;&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">email</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">pinpoint</span><span class="o">.</span><span class="n">EmailChannel</span><span class="p">(</span><span class="s2">&quot;email&quot;</span><span class="p">,</span>
+    <span class="n">application_id</span><span class="o">=</span><span class="n">app</span><span class="o">.</span><span class="n">application_id</span><span class="p">,</span>
+    <span class="n">from_address</span><span class="o">=</span><span class="s2">&quot;user@example.com&quot;</span><span class="p">,</span>
+    <span class="n">identity</span><span class="o">=</span><span class="n">identity</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">role_arn</span><span class="o">=</span><span class="n">role</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+<span class="n">role_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicy</span><span class="p">(</span><span class="s2">&quot;rolePolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: {</span>
+<span class="s2">    &quot;Action&quot;: [</span>
+<span class="s2">      &quot;mobileanalytics:PutEvents&quot;,</span>
+<span class="s2">      &quot;mobileanalytics:PutItems&quot;</span>
+<span class="s2">    ],</span>
+<span class="s2">    &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">    &quot;Resource&quot;: [</span>
+<span class="s2">      &quot;*&quot;</span>
+<span class="s2">    ]</span>
+<span class="s2">  }</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">role</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1117,6 +1235,49 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.pinpoint.EventStream">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.pinpoint.</code><code class="sig-name descname">EventStream</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_stream_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pinpoint.EventStream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Pinpoint Event Stream resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">pinpoint</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="s2">&quot;app&quot;</span><span class="p">)</span>
+<span class="n">test_stream</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kinesis</span><span class="o">.</span><span class="n">Stream</span><span class="p">(</span><span class="s2">&quot;testStream&quot;</span><span class="p">,</span> <span class="n">shard_count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">test_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;testRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;pinpoint.us-east-1.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Sid&quot;: &quot;&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">stream</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">pinpoint</span><span class="o">.</span><span class="n">EventStream</span><span class="p">(</span><span class="s2">&quot;stream&quot;</span><span class="p">,</span>
+    <span class="n">application_id</span><span class="o">=</span><span class="n">app</span><span class="o">.</span><span class="n">application_id</span><span class="p">,</span>
+    <span class="n">destination_stream_arn</span><span class="o">=</span><span class="n">test_stream</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">role_arn</span><span class="o">=</span><span class="n">test_role</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+<span class="n">test_role_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicy</span><span class="p">(</span><span class="s2">&quot;testRolePolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: {</span>
+<span class="s2">    &quot;Action&quot;: [</span>
+<span class="s2">      &quot;kinesis:PutRecords&quot;,</span>
+<span class="s2">      &quot;kinesis:DescribeStream&quot;</span>
+<span class="s2">    ],</span>
+<span class="s2">    &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">    &quot;Resource&quot;: [</span>
+<span class="s2">      &quot;arn:aws:kinesis:us-east-1:*:*/*&quot;</span>
+<span class="s2">    ]</span>
+<span class="s2">  }</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">test_role</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1211,6 +1372,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> Api Key argument will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">pinpoint</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="s2">&quot;app&quot;</span><span class="p">)</span>
+<span class="n">gcm</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">pinpoint</span><span class="o">.</span><span class="n">GcmChannel</span><span class="p">(</span><span class="s2">&quot;gcm&quot;</span><span class="p">,</span>
+    <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;api_key&quot;</span><span class="p">,</span>
+    <span class="n">application_id</span><span class="o">=</span><span class="n">app</span><span class="o">.</span><span class="n">application_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1301,6 +1471,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.pinpoint.SmsChannel">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.pinpoint.</code><code class="sig-name descname">SmsChannel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sender_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">short_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pinpoint.SmsChannel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Pinpoint SMS Channel resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">pinpoint</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="s2">&quot;app&quot;</span><span class="p">)</span>
+<span class="n">sms</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">pinpoint</span><span class="o">.</span><span class="n">SmsChannel</span><span class="p">(</span><span class="s2">&quot;sms&quot;</span><span class="p">,</span> <span class="n">application_id</span><span class="o">=</span><span class="n">app</span><span class="o">.</span><span class="n">application_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

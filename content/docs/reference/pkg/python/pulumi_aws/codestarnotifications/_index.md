@@ -17,6 +17,31 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.codestarnotifications.NotificationRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.codestarnotifications.</code><code class="sig-name descname">NotificationRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">detail_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">event_type_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">targets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codestarnotifications.NotificationRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodeStar Notifications Rule.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">code</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codecommit</span><span class="o">.</span><span class="n">Repository</span><span class="p">(</span><span class="s2">&quot;code&quot;</span><span class="p">,</span> <span class="n">repository_name</span><span class="o">=</span><span class="s2">&quot;example-code-repo&quot;</span><span class="p">)</span>
+<span class="n">notif</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;notif&quot;</span><span class="p">)</span>
+<span class="n">notif_access</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statement</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;sns:Publish&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;principals&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Service&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;identifiers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;codestar-notifications.amazonaws.com&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">notif</span><span class="o">.</span><span class="n">arn</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">TopicPolicy</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">arn</span><span class="o">=</span><span class="n">notif</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="n">notif_access</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>
+<span class="n">commits</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codestarnotifications</span><span class="o">.</span><span class="n">NotificationRule</span><span class="p">(</span><span class="s2">&quot;commits&quot;</span><span class="p">,</span>
+    <span class="n">detail_type</span><span class="o">=</span><span class="s2">&quot;BASIC&quot;</span><span class="p">,</span>
+    <span class="n">event_type_ids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;codecommit-repository-comments-on-commits&quot;</span><span class="p">],</span>
+    <span class="n">resource</span><span class="o">=</span><span class="n">code</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="n">notif</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

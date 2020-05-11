@@ -31,6 +31,18 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p><strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">redshift</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">cluster_identifier</span><span class="o">=</span><span class="s2">&quot;tf-redshift-cluster&quot;</span><span class="p">,</span>
+    <span class="n">cluster_type</span><span class="o">=</span><span class="s2">&quot;single-node&quot;</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;mydb&quot;</span><span class="p">,</span>
+    <span class="n">master_password</span><span class="o">=</span><span class="s2">&quot;Mustbe8characters&quot;</span><span class="p">,</span>
+    <span class="n">master_username</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">node_type</span><span class="o">=</span><span class="s2">&quot;dc1.large&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -441,6 +453,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.redshift.EventSubscription">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.redshift.</code><code class="sig-name descname">EventSubscription</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">event_categories</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">severity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sns_topic_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.EventSubscription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Redshift event subscription resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default_cluster</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">redshift</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;defaultCluster&quot;</span><span class="p">,</span>
+    <span class="n">cluster_identifier</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">)</span>
+<span class="n">default_topic</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;defaultTopic&quot;</span><span class="p">)</span>
+<span class="n">default_event_subscription</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">redshift</span><span class="o">.</span><span class="n">EventSubscription</span><span class="p">(</span><span class="s2">&quot;defaultEventSubscription&quot;</span><span class="p">,</span>
+    <span class="n">event_categories</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;configuration&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;management&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;monitoring&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;security&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">severity</span><span class="o">=</span><span class="s2">&quot;INFO&quot;</span><span class="p">,</span>
+    <span class="n">sns_topic_arn</span><span class="o">=</span><span class="n">default_topic</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">source_ids</span><span class="o">=</span><span class="p">[</span><span class="n">default_cluster</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">source_type</span><span class="o">=</span><span class="s2">&quot;cluster&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <p>The following additional atttributes are provided:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">arn</span></code> - Amazon Resource Name (ARN) of the Redshift event notification subscription</p></li>
@@ -781,6 +816,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.redshift.ParameterGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.redshift.</code><code class="sig-name descname">ParameterGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">family</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.ParameterGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Redshift Cluster parameter group resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">redshift</span><span class="o">.</span><span class="n">ParameterGroup</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">family</span><span class="o">=</span><span class="s2">&quot;redshift-1.0&quot;</span><span class="p">,</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;require_ssl&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;query_group&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;enable_user_activity_logging&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -908,6 +964,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.redshift.SecurityGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.redshift.</code><code class="sig-name descname">SecurityGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ingress</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.SecurityGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new Amazon Redshift security group. You use security groups to control access to non-VPC clusters</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">redshift</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">ingress</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;cidr&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.0.0/24&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1019,6 +1083,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.redshift.</code><code class="sig-name descname">SnapshotCopyGrant</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_copy_grant_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.SnapshotCopyGrant" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a snapshot copy grant that allows AWS Redshift to encrypt copied snapshots with a customer master key from AWS KMS in a destination region.</p>
 <p>Note that the grant must exist in the destination region, and not in the region of the cluster.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_snapshot_copy_grant</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">redshift</span><span class="o">.</span><span class="n">SnapshotCopyGrant</span><span class="p">(</span><span class="s2">&quot;testSnapshotCopyGrant&quot;</span><span class="p">,</span> <span class="n">snapshot_copy_grant_name</span><span class="o">=</span><span class="s2">&quot;my-grant&quot;</span><span class="p">)</span>
+<span class="n">test_cluster</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">redshift</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;testCluster&quot;</span><span class="p">,</span> <span class="n">snapshot_copy</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;destinationRegion&quot;</span><span class="p">:</span> <span class="s2">&quot;us-east-2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;grantName&quot;</span><span class="p">:</span> <span class="n">test_snapshot_copy_grant</span><span class="o">.</span><span class="n">snapshot_copy_grant_name</span><span class="p">,</span>
+<span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1115,7 +1189,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aws.redshift.SnapshotSchedule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.redshift.</code><code class="sig-name descname">SnapshotSchedule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">definitions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identifier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identifier_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.SnapshotSchedule" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">redshift</span><span class="o">.</span><span class="n">SnapshotSchedule</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">definitions</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;rate(12 hours)&quot;</span><span class="p">],</span>
+    <span class="n">identifier</span><span class="o">=</span><span class="s2">&quot;tf-redshift-snapshot-schedule&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
@@ -1231,7 +1313,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aws.redshift.SnapshotScheduleAssociation">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.redshift.</code><code class="sig-name descname">SnapshotScheduleAssociation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_identifier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedule_identifier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.SnapshotScheduleAssociation" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default_cluster</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">redshift</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;defaultCluster&quot;</span><span class="p">,</span>
+    <span class="n">cluster_identifier</span><span class="o">=</span><span class="s2">&quot;tf-redshift-cluster&quot;</span><span class="p">,</span>
+    <span class="n">cluster_type</span><span class="o">=</span><span class="s2">&quot;single-node&quot;</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;mydb&quot;</span><span class="p">,</span>
+    <span class="n">master_password</span><span class="o">=</span><span class="s2">&quot;Mustbe8characters&quot;</span><span class="p">,</span>
+    <span class="n">master_username</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">node_type</span><span class="o">=</span><span class="s2">&quot;dc1.large&quot;</span><span class="p">)</span>
+<span class="n">default_snapshot_schedule</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">redshift</span><span class="o">.</span><span class="n">SnapshotSchedule</span><span class="p">(</span><span class="s2">&quot;defaultSnapshotSchedule&quot;</span><span class="p">,</span>
+    <span class="n">definitions</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;rate(12 hours)&quot;</span><span class="p">],</span>
+    <span class="n">identifier</span><span class="o">=</span><span class="s2">&quot;tf-redshift-snapshot-schedule&quot;</span><span class="p">)</span>
+<span class="n">default_snapshot_schedule_association</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">redshift</span><span class="o">.</span><span class="n">SnapshotScheduleAssociation</span><span class="p">(</span><span class="s2">&quot;defaultSnapshotScheduleAssociation&quot;</span><span class="p">,</span>
+    <span class="n">cluster_identifier</span><span class="o">=</span><span class="n">default_cluster</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">schedule_identifier</span><span class="o">=</span><span class="n">default_snapshot_schedule</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
@@ -1313,6 +1413,34 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.redshift.SubnetGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.redshift.</code><code class="sig-name descname">SubnetGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.SubnetGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new Amazon Redshift subnet group. You must provide a list of one or more subnets in your existing Amazon Virtual Private Cloud (Amazon VPC) when creating Amazon Redshift subnet group.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo_vpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;fooVpc&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.1.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">foo_subnet</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;fooSubnet&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="s2">&quot;us-west-2a&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.1.1.0/24&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-dbsubnet-test-1&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">foo_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="s2">&quot;us-west-2b&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.1.2.0/24&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-dbsubnet-test-2&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">foo_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">foo_subnet_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">redshift</span><span class="o">.</span><span class="n">SubnetGroup</span><span class="p">(</span><span class="s2">&quot;fooSubnetGroup&quot;</span><span class="p">,</span>
+    <span class="n">subnet_ids</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">foo_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="n">bar</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Production&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1418,6 +1546,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.redshift.get_cluster">
 <code class="sig-prename descclassname">pulumi_aws.redshift.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_identifier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides details about a specific redshift cluster.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_cluster</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">redshift</span><span class="o">.</span><span class="n">get_cluster</span><span class="p">(</span><span class="n">cluster_identifier</span><span class="o">=</span><span class="s2">&quot;test-cluster&quot;</span><span class="p">)</span>
+<span class="n">test_stream</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kinesis</span><span class="o">.</span><span class="n">FirehoseDeliveryStream</span><span class="p">(</span><span class="s2">&quot;testStream&quot;</span><span class="p">,</span>
+    <span class="n">destination</span><span class="o">=</span><span class="s2">&quot;redshift&quot;</span><span class="p">,</span>
+    <span class="n">redshift_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;clusterJdbcurl&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;jdbc:redshift://</span><span class="si">{</span><span class="n">test_cluster</span><span class="o">.</span><span class="n">endpoint</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">test_cluster</span><span class="o">.</span><span class="n">database_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;copyOptions&quot;</span><span class="p">:</span> <span class="s2">&quot;delimiter &#39;|&#39;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dataTableColumns&quot;</span><span class="p">:</span> <span class="s2">&quot;test-col&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dataTableName&quot;</span><span class="p">:</span> <span class="s2">&quot;test-table&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;T3stPass&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;testuser&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">s3_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;bucketArn&quot;</span><span class="p">:</span> <span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s2">&quot;bucket&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;bufferInterval&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+        <span class="s2">&quot;bufferSize&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;compressionFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;GZIP&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1433,6 +1585,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.redshift.</code><code class="sig-name descname">get_service_account</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.get_service_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the Account ID of the <a class="reference external" href="http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging">AWS Redshift Service Account</a>
 in a given region for the purpose of allowing Redshift to store audit data in S3.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">redshift</span><span class="o">.</span><span class="n">get_service_account</span><span class="p">()</span>
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">,</span>
+    <span class="n">force_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">    &quot;Version&quot;: &quot;2008-10-17&quot;,</span>
+<span class="s2">    &quot;Statement&quot;: [</span>
+<span class="s2">            </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">                            &quot;Sid&quot;: &quot;Put bucket policy needed for audit logging&quot;,</span>
+<span class="s2">                            &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">                            &quot;Principal&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">                                            &quot;AWS&quot;: &quot;</span><span class="si">{</span><span class="n">main</span><span class="o">.</span><span class="n">arn</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="s2">                            </span><span class="se">&#x7D;&#x7D;</span><span class="s2">,</span>
+<span class="s2">                            &quot;Action&quot;: &quot;s3:PutObject&quot;,</span>
+<span class="s2">                            &quot;Resource&quot;: &quot;arn:aws:s3:::tf-redshift-logging-test-bucket/*&quot;</span>
+<span class="s2">                    </span><span class="se">&#x7D;&#x7D;</span><span class="s2">,</span>
+<span class="s2">                    </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">                            &quot;Sid&quot;: &quot;Get bucket policy needed for audit logging &quot;,</span>
+<span class="s2">                            &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">                            &quot;Principal&quot;: </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">                                            &quot;AWS&quot;: &quot;</span><span class="si">{</span><span class="n">main</span><span class="o">.</span><span class="n">arn</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="s2">                            </span><span class="se">&#x7D;&#x7D;</span><span class="s2">,</span>
+<span class="s2">                            &quot;Action&quot;: &quot;s3:GetBucketAcl&quot;,</span>
+<span class="s2">                            &quot;Resource&quot;: &quot;arn:aws:s3:::tf-redshift-logging-test-bucket&quot;</span>
+<span class="s2">                    </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">    ]</span>
+<span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>region</strong> (<em>str</em>) – Name of the region whose AWS Redshift account ID is desired.

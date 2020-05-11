@@ -17,6 +17,15 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.appsync.ApiKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appsync.</code><code class="sig-name descname">ApiKey</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expires</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.ApiKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AppSync API Key.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_graph_ql_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appsync</span><span class="o">.</span><span class="n">GraphQLApi</span><span class="p">(</span><span class="s2">&quot;exampleGraphQLApi&quot;</span><span class="p">,</span> <span class="n">authentication_type</span><span class="o">=</span><span class="s2">&quot;API_KEY&quot;</span><span class="p">)</span>
+<span class="n">example_api_key</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appsync</span><span class="o">.</span><span class="n">ApiKey</span><span class="p">(</span><span class="s2">&quot;exampleApiKey&quot;</span><span class="p">,</span>
+    <span class="n">api_id</span><span class="o">=</span><span class="n">example_graph_ql_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">expires</span><span class="o">=</span><span class="s2">&quot;2018-05-03T04:00:00Z&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -114,6 +123,59 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appsync.DataSource">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appsync.</code><code class="sig-name descname">DataSource</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dynamodb_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lambda_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.DataSource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AppSync DataSource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_table</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">dynamodb</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="s2">&quot;exampleTable&quot;</span><span class="p">,</span>
+    <span class="n">attributes</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;UserId&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">hash_key</span><span class="o">=</span><span class="s2">&quot;UserId&quot;</span><span class="p">,</span>
+    <span class="n">read_capacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">write_capacity</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">example_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;exampleRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;appsync.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">example_role_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicy</span><span class="p">(</span><span class="s2">&quot;exampleRolePolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="n">example_table</span><span class="o">.</span><span class="n">arn</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">arn</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;dynamodb:*&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Resource&quot;: [</span>
+<span class="s2">        &quot;</span><span class="si">{</span><span class="n">arn</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="s2">      ]</span>
+<span class="s2">    </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">  ]</span>
+<span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">),</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">example_role</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">example_graph_ql_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appsync</span><span class="o">.</span><span class="n">GraphQLApi</span><span class="p">(</span><span class="s2">&quot;exampleGraphQLApi&quot;</span><span class="p">,</span> <span class="n">authentication_type</span><span class="o">=</span><span class="s2">&quot;API_KEY&quot;</span><span class="p">)</span>
+<span class="n">example_data_source</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appsync</span><span class="o">.</span><span class="n">DataSource</span><span class="p">(</span><span class="s2">&quot;exampleDataSource&quot;</span><span class="p">,</span>
+    <span class="n">api_id</span><span class="o">=</span><span class="n">example_graph_ql_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">dynamodb_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tableName&quot;</span><span class="p">:</span> <span class="n">example_table</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">service_role_arn</span><span class="o">=</span><span class="n">example_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;AMAZON_DYNAMODB&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -312,6 +374,59 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appsync.Function">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appsync.</code><code class="sig-name descname">Function</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">function_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_mapping_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">response_mapping_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.Function" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AppSync Function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_graph_ql_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appsync</span><span class="o">.</span><span class="n">GraphQLApi</span><span class="p">(</span><span class="s2">&quot;testGraphQLApi&quot;</span><span class="p">,</span>
+    <span class="n">authentication_type</span><span class="o">=</span><span class="s2">&quot;API_KEY&quot;</span><span class="p">,</span>
+    <span class="n">schema</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;type Mutation {</span>
+<span class="s2">    putPost(id: ID!, title: String!): Post</span>
+<span class="s2">}</span>
+
+<span class="s2">type Post {</span>
+<span class="s2">    id: ID!</span>
+<span class="s2">    title: String!</span>
+<span class="s2">}</span>
+
+<span class="s2">type Query {</span>
+<span class="s2">    singlePost(id: ID!): Post</span>
+<span class="s2">}</span>
+
+<span class="s2">schema {</span>
+<span class="s2">    query: Query</span>
+<span class="s2">    mutation: Mutation</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">test_data_source</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appsync</span><span class="o">.</span><span class="n">DataSource</span><span class="p">(</span><span class="s2">&quot;testDataSource&quot;</span><span class="p">,</span>
+    <span class="n">api_id</span><span class="o">=</span><span class="n">test_graph_ql_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">http_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;endpoint&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">)</span>
+<span class="n">test_function</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appsync</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s2">&quot;testFunction&quot;</span><span class="p">,</span>
+    <span class="n">api_id</span><span class="o">=</span><span class="n">test_graph_ql_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">data_source</span><span class="o">=</span><span class="n">test_data_source</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;tf_example&quot;</span><span class="p">,</span>
+    <span class="n">request_mapping_template</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">    &quot;version&quot;: &quot;2018-05-29&quot;,</span>
+<span class="s2">    &quot;method&quot;: &quot;GET&quot;,</span>
+<span class="s2">    &quot;resourcePath&quot;: &quot;/&quot;,</span>
+<span class="s2">    &quot;params&quot;:{</span>
+<span class="s2">        &quot;headers&quot;: $$utils.http.copyheaders($$ctx.request.headers)</span>
+<span class="s2">    }</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">response_mapping_template</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;#if($$ctx.result.statusCode == 200)</span>
+<span class="s2">    $$ctx.result.body</span>
+<span class="s2">#else</span>
+<span class="s2">    $$utils.appendError($$ctx.result.body, $$ctx.result.statusCode)</span>
+<span class="s2">#end</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -448,6 +563,91 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appsync.GraphQLApi">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appsync.</code><code class="sig-name descname">GraphQLApi</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">additional_authentication_providers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authentication_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">openid_connect_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schema</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_pool_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">xray_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AppSync GraphQL API.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appsync</span><span class="o">.</span><span class="n">GraphQLApi</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">authentication_type</span><span class="o">=</span><span class="s2">&quot;API_KEY&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appsync</span><span class="o">.</span><span class="n">GraphQLApi</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">authentication_type</span><span class="o">=</span><span class="s2">&quot;AMAZON_COGNITO_USER_POOLS&quot;</span><span class="p">,</span>
+    <span class="n">user_pool_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;awsRegion&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;.getRegion&quot;</span><span class="p">][</span><span class="s2">&quot;current&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;defaultAction&quot;</span><span class="p">:</span> <span class="s2">&quot;DENY&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;userPoolId&quot;</span><span class="p">:</span> <span class="n">aws_cognito_user_pool</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appsync</span><span class="o">.</span><span class="n">GraphQLApi</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">authentication_type</span><span class="o">=</span><span class="s2">&quot;AWS_IAM&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appsync</span><span class="o">.</span><span class="n">GraphQLApi</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">authentication_type</span><span class="o">=</span><span class="s2">&quot;AWS_IAM&quot;</span><span class="p">,</span>
+    <span class="n">schema</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;schema {</span>
+<span class="s2">        query: Query</span>
+<span class="s2">}</span>
+<span class="s2">type Query {</span>
+<span class="s2">  test: Int</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appsync</span><span class="o">.</span><span class="n">GraphQLApi</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">authentication_type</span><span class="o">=</span><span class="s2">&quot;OPENID_CONNECT&quot;</span><span class="p">,</span>
+    <span class="n">openid_connect_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;issuer&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appsync</span><span class="o">.</span><span class="n">GraphQLApi</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">additional_authentication_providers</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;authenticationType&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS_IAM&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">authentication_type</span><span class="o">=</span><span class="s2">&quot;API_KEY&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;exampleRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">    &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">    &quot;Statement&quot;: [</span>
+<span class="s2">        {</span>
+<span class="s2">        &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">        &quot;Principal&quot;: {</span>
+<span class="s2">            &quot;Service&quot;: &quot;appsync.amazonaws.com&quot;</span>
+<span class="s2">        },</span>
+<span class="s2">        &quot;Action&quot;: &quot;sts:AssumeRole&quot;</span>
+<span class="s2">        }</span>
+<span class="s2">    ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">example_role_policy_attachment</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicyAttachment</span><span class="p">(</span><span class="s2">&quot;exampleRolePolicyAttachment&quot;</span><span class="p">,</span>
+    <span class="n">policy_arn</span><span class="o">=</span><span class="s2">&quot;arn:aws:iam::aws:policy/service-role/AWSAppSyncPushToCloudWatchLogs&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">example_role</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_graph_ql_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appsync</span><span class="o">.</span><span class="n">GraphQLApi</span><span class="p">(</span><span class="s2">&quot;exampleGraphQLApi&quot;</span><span class="p">,</span> <span class="n">log_config</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;cloudwatchLogsRoleArn&quot;</span><span class="p">:</span> <span class="n">example_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="s2">&quot;fieldLogLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;ERROR&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -713,6 +913,76 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appsync.Resolver">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appsync.</code><code class="sig-name descname">Resolver</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">field</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kind</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pipeline_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">response_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.Resolver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AppSync Resolver.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_graph_ql_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appsync</span><span class="o">.</span><span class="n">GraphQLApi</span><span class="p">(</span><span class="s2">&quot;testGraphQLApi&quot;</span><span class="p">,</span>
+    <span class="n">authentication_type</span><span class="o">=</span><span class="s2">&quot;API_KEY&quot;</span><span class="p">,</span>
+    <span class="n">schema</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;type Mutation {</span>
+<span class="s2">        putPost(id: ID!, title: String!): Post</span>
+<span class="s2">}</span>
+
+<span class="s2">type Post {</span>
+<span class="s2">        id: ID!</span>
+<span class="s2">        title: String!</span>
+<span class="s2">}</span>
+
+<span class="s2">type Query {</span>
+<span class="s2">        singlePost(id: ID!): Post</span>
+<span class="s2">}</span>
+
+<span class="s2">schema {</span>
+<span class="s2">        query: Query</span>
+<span class="s2">        mutation: Mutation</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">test_data_source</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appsync</span><span class="o">.</span><span class="n">DataSource</span><span class="p">(</span><span class="s2">&quot;testDataSource&quot;</span><span class="p">,</span>
+    <span class="n">api_id</span><span class="o">=</span><span class="n">test_graph_ql_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">http_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;endpoint&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">)</span>
+<span class="c1"># UNIT type resolver (default)</span>
+<span class="n">test_resolver</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appsync</span><span class="o">.</span><span class="n">Resolver</span><span class="p">(</span><span class="s2">&quot;testResolver&quot;</span><span class="p">,</span>
+    <span class="n">api_id</span><span class="o">=</span><span class="n">test_graph_ql_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">data_source</span><span class="o">=</span><span class="n">test_data_source</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">field</span><span class="o">=</span><span class="s2">&quot;singlePost&quot;</span><span class="p">,</span>
+    <span class="n">request_template</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">    &quot;version&quot;: &quot;2018-05-29&quot;,</span>
+<span class="s2">    &quot;method&quot;: &quot;GET&quot;,</span>
+<span class="s2">    &quot;resourcePath&quot;: &quot;/&quot;,</span>
+<span class="s2">    &quot;params&quot;:{</span>
+<span class="s2">        &quot;headers&quot;: $$utils.http.copyheaders($$ctx.request.headers)</span>
+<span class="s2">    }</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">response_template</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;#if($$ctx.result.statusCode == 200)</span>
+<span class="s2">    $$ctx.result.body</span>
+<span class="s2">#else</span>
+<span class="s2">    $$utils.appendError($$ctx.result.body, $$ctx.result.statusCode)</span>
+<span class="s2">#end</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;Query&quot;</span><span class="p">)</span>
+<span class="c1"># PIPELINE type resolver</span>
+<span class="n">mutation_pipeline_test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appsync</span><span class="o">.</span><span class="n">Resolver</span><span class="p">(</span><span class="s2">&quot;mutationPipelineTest&quot;</span><span class="p">,</span>
+    <span class="n">api_id</span><span class="o">=</span><span class="n">test_graph_ql_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">field</span><span class="o">=</span><span class="s2">&quot;pipelineTest&quot;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;PIPELINE&quot;</span><span class="p">,</span>
+    <span class="n">pipeline_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;functions&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="n">aws_appsync_function</span><span class="p">[</span><span class="s2">&quot;test1&quot;</span><span class="p">][</span><span class="s2">&quot;function_id&quot;</span><span class="p">],</span>
+            <span class="n">aws_appsync_function</span><span class="p">[</span><span class="s2">&quot;test2&quot;</span><span class="p">][</span><span class="s2">&quot;function_id&quot;</span><span class="p">],</span>
+            <span class="n">aws_appsync_function</span><span class="p">[</span><span class="s2">&quot;test3&quot;</span><span class="p">][</span><span class="s2">&quot;function_id&quot;</span><span class="p">],</span>
+        <span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">request_template</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">response_template</span><span class="o">=</span><span class="s2">&quot;$$util.toJson($$ctx.result)&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;Mutation&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

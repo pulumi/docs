@@ -22,6 +22,22 @@ anything, please consult the source <a class="reference external" href="https://
 region, it’s better to use <code class="docutils literal notranslate"><span class="pre">ec2.AmiCopy</span></code> instead.</p>
 <p>If you just want to share an existing AMI with another AWS account,
 it’s better to use <code class="docutils literal notranslate"><span class="pre">ec2.AmiLaunchPermission</span></code> instead.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="c1"># Create an AMI that will start a machine whose root device is backed by</span>
+<span class="c1"># an EBS volume populated from a snapshot. It is assumed that such a snapshot</span>
+<span class="c1"># already exists with the id &quot;snap-xxxxxxxx&quot;.</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Ami</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">ebs_block_devices</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;deviceName&quot;</span><span class="p">:</span> <span class="s2">&quot;/dev/xvda&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;snapshotId&quot;</span><span class="p">:</span> <span class="s2">&quot;snap-xxxxxxxx&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;volumeSize&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">root_device_name</span><span class="o">=</span><span class="s2">&quot;/dev/xvda&quot;</span><span class="p">,</span>
+    <span class="n">virtualization_type</span><span class="o">=</span><span class="s2">&quot;hvm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -297,6 +313,18 @@ along with the AMI.</p>
 it available in another for a multi-region deployment.</p>
 <p>Copying an AMI can take several minutes. The creation of this resource will
 block until the new AMI is available for use on new instances.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">AmiCopy</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A copy of ami-xxxxxxxx&quot;</span><span class="p">,</span>
+    <span class="n">source_ami_id</span><span class="o">=</span><span class="s2">&quot;ami-xxxxxxxx&quot;</span><span class="p">,</span>
+    <span class="n">source_ami_region</span><span class="o">=</span><span class="s2">&quot;us-west-1&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;HelloWorld&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -601,6 +629,12 @@ downtime.</p>
 resource. Ongoing updates to the referenced instance will not be propagated into
 the generated AMI. Users may taint or otherwise recreate the resource in order
 to produce a fresh snapshot.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">AmiFromInstance</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">source_instance_id</span><span class="o">=</span><span class="s2">&quot;i-xxxxxxxx&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -873,6 +907,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.AmiLaunchPermission">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AmiLaunchPermission</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AmiLaunchPermission" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds launch permission to Amazon Machine Image (AMI) from another AWS account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">AmiLaunchPermission</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;123456789012&quot;</span><span class="p">,</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="s2">&quot;ami-12345678&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -958,6 +1000,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> This is an advanced resource. The provider will automatically assume management of the EC2 Availability Zone Group without import and perform no actions on removal from configuration.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">AvailabilityZoneGroup</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">group_name</span><span class="o">=</span><span class="s2">&quot;us-west-2-lax-1&quot;</span><span class="p">,</span>
+    <span class="n">opt_in_status</span><span class="o">=</span><span class="s2">&quot;opted-in&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1037,6 +1087,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_aws.ec2.AwaitableGetCoipPoolResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetCoipPoolResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_route_table_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_cidrs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetCoipPoolResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.ec2.AwaitableGetCoipPoolsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetCoipPoolsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetCoipPoolsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_aws.ec2.AwaitableGetCustomerGatewayResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetCustomerGatewayResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bgp_asn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetCustomerGatewayResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -1074,6 +1134,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aws.ec2.AwaitableGetLaunchTemplateResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetLaunchTemplateResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">block_device_mappings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">credit_specifications</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_api_termination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_optimized</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elastic_gpu_specifications</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hibernation_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_instance_profiles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_initiated_shutdown_behavior</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_market_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kernel_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latest_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitorings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">placements</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ram_disk_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_group_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tag_specifications</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_security_group_ids</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetLaunchTemplateResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.ec2.AwaitableGetLocalGatewayResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetLocalGatewayResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outpost_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetLocalGatewayResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.ec2.AwaitableGetLocalGatewayRouteTableResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetLocalGatewayRouteTableResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_route_table_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outpost_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetLocalGatewayRouteTableResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.ec2.AwaitableGetLocalGatewayRouteTablesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetLocalGatewayRouteTablesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetLocalGatewayRouteTablesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.ec2.AwaitableGetLocalGatewaysResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetLocalGatewaysResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetLocalGatewaysResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -1170,6 +1250,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.CapacityReservation">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">CapacityReservation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_optimized</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ephemeral_storage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_match_criteria</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenancy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.CapacityReservation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an EC2 Capacity Reservation. This allows you to reserve capacity for your Amazon EC2 instances in a specific Availability Zone for any duration.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">CapacityReservation</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="s2">&quot;eu-west-1a&quot;</span><span class="p">,</span>
+    <span class="n">instance_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">instance_platform</span><span class="o">=</span><span class="s2">&quot;Linux/UNIX&quot;</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;t2.micro&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1325,6 +1415,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.CustomerGateway">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">CustomerGateway</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bgp_asn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.CustomerGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a customer gateway inside a VPC. These objects can be connected to VPN gateways via VPN connections, and allow you to establish tunnels between your network and the VPC.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">CustomerGateway</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
+    <span class="n">bgp_asn</span><span class="o">=</span><span class="mi">65000</span><span class="p">,</span>
+    <span class="n">ip_address</span><span class="o">=</span><span class="s2">&quot;172.83.124.10&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;main-customer-gateway&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;ipsec.1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1444,6 +1546,61 @@ result in diffs being shown. For these reasons, this resource is incompatible wi
 <code class="docutils literal notranslate"><span class="pre">ec2.NetworkAclRule</span></code> resource.</p>
 <p>For more information about Network ACLs, see the AWS Documentation on
 [Network ACLs][aws-network-acls].</p>
+<p>The following config gives the Default Network ACL the same rules that AWS
+includes, but pulls the resource under management by this provider. This means that
+any ACL rules added or changed will be detected as drift.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">mainvpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;mainvpc&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.1.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">DefaultNetworkAcl</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">default_network_acl_id</span><span class="o">=</span><span class="n">mainvpc</span><span class="o">.</span><span class="n">default_network_acl_id</span><span class="p">,</span>
+    <span class="n">ingress</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;ruleNo&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;allow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cidrBlock&quot;</span><span class="p">:</span> <span class="n">mainvpc</span><span class="o">.</span><span class="n">cidr_block</span><span class="p">,</span>
+        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">egress</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;ruleNo&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;allow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cidrBlock&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<p>The following denies all Egress traffic by omitting any <code class="docutils literal notranslate"><span class="pre">egress</span></code> rules, while
+including the default <code class="docutils literal notranslate"><span class="pre">ingress</span></code> rule to allow all traffic.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">mainvpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;mainvpc&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.1.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">DefaultNetworkAcl</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">default_network_acl_id</span><span class="o">=</span><span class="n">mainvpc</span><span class="o">.</span><span class="n">default_network_acl_id</span><span class="p">,</span>
+    <span class="n">ingress</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;ruleNo&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;allow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cidrBlock&quot;</span><span class="p">:</span> <span class="n">mainvpc</span><span class="o">.</span><span class="n">cidr_block</span><span class="p">,</span>
+        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<p>This config denies all traffic in the Default ACL. This can be useful if you
+want a locked down default to force all resources in the VPC to assign a
+non-default ACL.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">mainvpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;mainvpc&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.1.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">DefaultNetworkAcl</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">default_network_acl_id</span><span class="o">=</span><span class="n">mainvpc</span><span class="o">.</span><span class="n">default_network_acl_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1677,6 +1834,17 @@ defined in-line. At this time you cannot use a Route Table with in-line routes
 in conjunction with any Route resources. Doing so will cause
 a conflict of rule settings and will overwrite routes.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default_route_table</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">DefaultRouteTable</span><span class="p">(</span><span class="s2">&quot;defaultRouteTable&quot;</span><span class="p">,</span>
+    <span class="n">default_route_table_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;default_route_table_id&quot;</span><span class="p">],</span>
+    <span class="n">routes</span><span class="o">=</span><span class="p">[{}],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;default table&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1836,6 +2004,45 @@ result in diff shown. For these reasons, this resource is incompatible with the
 <code class="docutils literal notranslate"><span class="pre">ec2.SecurityGroupRule</span></code> resource.</p>
 <p>For more information about Default Security Groups, see the AWS Documentation on
 [Default Security Groups][aws-default-security-groups].</p>
+<p>The following config gives the Default Security Group the same rules that AWS
+provides by default, but pulls the resource under management by this provider. This means that
+any ingress or egress rules added or changed will be detected as drift.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">mainvpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;mainvpc&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.1.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">DefaultSecurityGroup</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">egress</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;cidrBlocks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;-1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">ingress</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;self&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">mainvpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The following denies all Egress traffic by omitting any <code class="docutils literal notranslate"><span class="pre">egress</span></code> rules, while
+including the default <code class="docutils literal notranslate"><span class="pre">ingress</span></code> rule to allow all traffic.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">mainvpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;mainvpc&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.1.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">DefaultSecurityGroup</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">ingress</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;self&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">mainvpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>With the exceptions mentioned above, <code class="docutils literal notranslate"><span class="pre">ec2.DefaultSecurityGroup</span></code> should
 identical behavior to <code class="docutils literal notranslate"><span class="pre">ec2.SecurityGroup</span></code>. Please consult <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/security_group.html">AWS_SECURITY_GROUP</a>
 for further usage documentation.</p>
@@ -2050,6 +2257,16 @@ in the current region.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">ec2.DefaultSubnet</span></code> behaves differently from normal resources, in that
 this provider does not <em>create</em> this resource, but instead “adopts” it
 into management.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default_az1</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">DefaultSubnet</span><span class="p">(</span><span class="s2">&quot;defaultAz1&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="s2">&quot;us-west-2a&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Default subnet for us-west-2a&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2173,6 +2390,14 @@ using it. Please read this document in its entirety before using this resource.<
 <p>The <code class="docutils literal notranslate"><span class="pre">ec2.DefaultVpc</span></code> behaves differently from normal resources, in that
 this provider does not <em>create</em> this resource, but instead “adopts” it
 into management.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">DefaultVpc</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Default VPC&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2368,6 +2593,14 @@ using it. Please read this document in its entirety before using this resource.<
 <p>The <code class="docutils literal notranslate"><span class="pre">ec2.DefaultVpcDhcpOptions</span></code> behaves differently from normal resources, in that
 this provider does not <em>create</em> this resource, but instead “adopts” it
 into management.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">DefaultVpcDhcpOptions</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Default DHCP Option Set&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2469,6 +2702,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 An egress-only Internet gateway is used to enable outbound communication
 over IPv6 from instances in your VPC to the Internet, and prevents hosts
 outside of your VPC from initiating an IPv6 connection with your instance.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_vpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;exampleVpc&quot;</span><span class="p">,</span>
+    <span class="n">assign_generated_ipv6_cidr_block</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.1.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">example_egress_only_internet_gateway</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">EgressOnlyInternetGateway</span><span class="p">(</span><span class="s2">&quot;exampleEgressOnlyInternetGateway&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;main&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">example_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2549,12 +2795,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aws.ec2.Eip">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">Eip</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">associate_with_private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interface</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_ipv4_pool</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Eip" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">Eip</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">associate_with_private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">customer_owned_ipv4_pool</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interface</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_ipv4_pool</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Eip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic IP resource.</p>
 <blockquote>
 <div><p><strong>Note:</strong> EIP may require IGW to exist prior to association. Use <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> to set an explicit dependency on the IGW.</p>
 <p><strong>Note:</strong> Do not use <code class="docutils literal notranslate"><span class="pre">network_interface</span></code> to associate the EIP to <code class="docutils literal notranslate"><span class="pre">lb.LoadBalancer</span></code> or <code class="docutils literal notranslate"><span class="pre">ec2.NatGateway</span></code> resources. Instead use the <code class="docutils literal notranslate"><span class="pre">allocation_id</span></code> available in those resources to allow AWS to manage the association, otherwise you will see <code class="docutils literal notranslate"><span class="pre">AuthFailure</span></code> errors.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">lb</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Eip</span><span class="p">(</span><span class="s2">&quot;lb&quot;</span><span class="p">,</span>
+    <span class="n">instance</span><span class="o">=</span><span class="n">aws_instance</span><span class="p">[</span><span class="s2">&quot;web&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">vpc</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2563,6 +2817,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>associate_with_private_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user specified primary or secondary private IP address to
 associate with the Elastic IP address. If no private IP address is specified,
 the Elastic IP address is associated with the primary private IP address.</p></li>
+<li><p><strong>customer_owned_ipv4_pool</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out <a class="reference external" href="https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing">Customer-owned IP addresses guide</a></p></li>
 <li><p><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – EC2 instance ID.</p></li>
 <li><p><strong>network_interface</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Network interface ID to associate with.</p></li>
 <li><p><strong>public_ipv4_pool</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – EC2 IPv4 address pool identifier or <code class="docutils literal notranslate"><span class="pre">amazon</span></code>. This option is only available for VPC EIPs.</p></li>
@@ -2577,6 +2832,18 @@ the Elastic IP address is associated with the primary private IP address.</p></l
 <dd><p>A user specified primary or secondary private IP address to
 associate with the Elastic IP address. If no private IP address is specified,
 the Elastic IP address is associated with the primary private IP address.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.Eip.customer_owned_ip">
+<code class="sig-name descname">customer_owned_ip</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Eip.customer_owned_ip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Customer owned IP.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.Eip.customer_owned_ipv4_pool">
+<code class="sig-name descname">customer_owned_ipv4_pool</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Eip.customer_owned_ipv4_pool" title="Permalink to this definition">¶</a></dt>
+<dd><p>The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out <a class="reference external" href="https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing">Customer-owned IP addresses guide</a></p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2635,7 +2902,7 @@ the Elastic IP address is associated with the primary private IP address.</p>
 
 <dl class="py method">
 <dt id="pulumi_aws.ec2.Eip.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allocation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">associate_with_private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">association_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interface</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_ipv4_pool</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Eip.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allocation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">associate_with_private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">association_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">customer_owned_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">customer_owned_ipv4_pool</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interface</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_ipv4_pool</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Eip.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Eip resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2647,6 +2914,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>associate_with_private_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user specified primary or secondary private IP address to
 associate with the Elastic IP address. If no private IP address is specified,
 the Elastic IP address is associated with the primary private IP address.</p></li>
+<li><p><strong>customer_owned_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Customer owned IP.</p></li>
+<li><p><strong>customer_owned_ipv4_pool</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out <a class="reference external" href="https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing">Customer-owned IP addresses guide</a></p>
+</p></li>
 <li><p><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – EC2 instance ID.</p></li>
 <li><p><strong>network_interface</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Network interface ID to associate with.</p></li>
 <li><p><strong>private_dns</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Private DNS associated with the Elastic IP address (if in VPC).</p></li>
@@ -2709,6 +2979,22 @@ disassociate Elastic IPs from AWS Instances and Network Interfaces.</p>
 <p><strong>NOTE:</strong> <code class="docutils literal notranslate"><span class="pre">ec2.EipAssociation</span></code> is useful in scenarios where EIPs are either
 pre-existing or distributed to customers or users and therefore cannot be changed.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">web</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;web&quot;</span><span class="p">,</span>
+    <span class="n">ami</span><span class="o">=</span><span class="s2">&quot;ami-21f78e11&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="s2">&quot;us-west-2a&quot;</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;t1.micro&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;HelloWorld&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Eip</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">vpc</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">eip_assoc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">EipAssociation</span><span class="p">(</span><span class="s2">&quot;eipAssoc&quot;</span><span class="p">,</span>
+    <span class="n">allocation_id</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">web</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2850,6 +3136,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.Fleet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">Fleet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">excess_capacity_termination_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">launch_template_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_demand_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replace_unhealthy_instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_capacity_specification</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">terminate_instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">terminate_instances_with_expiration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Fleet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage EC2 Fleets.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Fleet</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">launch_template_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;launchTemplateSpecification&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;launchTemplateId&quot;</span><span class="p">:</span> <span class="n">aws_launch_template</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="n">aws_launch_template</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;latest_version&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">target_capacity_specification</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;defaultTargetCapacityType&quot;</span><span class="p">:</span> <span class="s2">&quot;spot&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;totalTargetCapacity&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3104,6 +3406,63 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">FlowLog</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">eni_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_destination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_destination_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_aggregation_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">traffic_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.FlowLog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VPC/Subnet/ENI Flow Log to capture IP traffic for a specific network
 interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucket.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_log_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">LogGroup</span><span class="p">(</span><span class="s2">&quot;exampleLogGroup&quot;</span><span class="p">)</span>
+<span class="n">example_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;exampleRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Sid&quot;: &quot;&quot;,</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;vpc-flow-logs.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">example_flow_log</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">FlowLog</span><span class="p">(</span><span class="s2">&quot;exampleFlowLog&quot;</span><span class="p">,</span>
+    <span class="n">iam_role_arn</span><span class="o">=</span><span class="n">example_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">log_destination</span><span class="o">=</span><span class="n">example_log_group</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">traffic_type</span><span class="o">=</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">example_role_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicy</span><span class="p">(</span><span class="s2">&quot;exampleRolePolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;logs:CreateLogGroup&quot;,</span>
+<span class="s2">        &quot;logs:CreateLogStream&quot;,</span>
+<span class="s2">        &quot;logs:PutLogEvents&quot;,</span>
+<span class="s2">        &quot;logs:DescribeLogGroups&quot;,</span>
+<span class="s2">        &quot;logs:DescribeLogStreams&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Resource&quot;: &quot;*&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">example_role</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;exampleBucket&quot;</span><span class="p">)</span>
+<span class="n">example_flow_log</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">FlowLog</span><span class="p">(</span><span class="s2">&quot;exampleFlowLog&quot;</span><span class="p">,</span>
+    <span class="n">log_destination</span><span class="o">=</span><span class="n">example_bucket</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">log_destination_type</span><span class="o">=</span><span class="s2">&quot;s3&quot;</span><span class="p">,</span>
+    <span class="n">traffic_type</span><span class="o">=</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3259,6 +3618,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.ec2.GetCoipPoolResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetCoipPoolResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_route_table_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_cidrs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetCoipPoolResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getCoipPool.</p>
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetCoipPoolResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetCoipPoolResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetCoipPoolResult.pool_cidrs">
+<code class="sig-name descname">pool_cidrs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetCoipPoolResult.pool_cidrs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set of CIDR blocks in pool</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.ec2.GetCoipPoolsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetCoipPoolsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetCoipPoolsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getCoipPools.</p>
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetCoipPoolsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetCoipPoolsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetCoipPoolsResult.pool_ids">
+<code class="sig-name descname">pool_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetCoipPoolsResult.pool_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set of COIP Pool Identifiers</p>
 </dd></dl>
 
 </dd></dl>
@@ -3885,6 +4280,78 @@ Interfaces below for more details.</p>
 <dt id="pulumi_aws.ec2.GetLaunchTemplateResult.vpc_security_group_ids">
 <code class="sig-name descname">vpc_security_group_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchTemplateResult.vpc_security_group_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of security group IDs to associate with.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.ec2.GetLocalGatewayResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetLocalGatewayResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outpost_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewayResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getLocalGateway.</p>
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetLocalGatewayResult.outpost_arn">
+<code class="sig-name descname">outpost_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewayResult.outpost_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN) of Outpost</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetLocalGatewayResult.owner_id">
+<code class="sig-name descname">owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewayResult.owner_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>AWS account identifier that owns the Local Gateway.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetLocalGatewayResult.state">
+<code class="sig-name descname">state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewayResult.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>State of the local gateway.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.ec2.GetLocalGatewayRouteTableResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetLocalGatewayRouteTableResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_route_table_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outpost_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewayRouteTableResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getLocalGatewayRouteTable.</p>
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetLocalGatewayRouteTableResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewayRouteTableResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.ec2.GetLocalGatewayRouteTablesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetLocalGatewayRouteTablesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewayRouteTablesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getLocalGatewayRouteTables.</p>
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetLocalGatewayRouteTablesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewayRouteTablesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetLocalGatewayRouteTablesResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewayRouteTablesResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set of Local Gateway Route Table identifiers</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.ec2.GetLocalGatewaysResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetLocalGatewaysResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewaysResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getLocalGateways.</p>
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetLocalGatewaysResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewaysResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetLocalGatewaysResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewaysResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set of all the Local Gateway identifiers</p>
 </dd></dl>
 
 </dd></dl>
@@ -4534,6 +5001,29 @@ selected VPC. May be any of <code class="docutils literal notranslate"><span cla
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ami</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">associate_public_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_core_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_threads_per_core</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">credit_specification</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_api_termination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_optimized</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ephemeral_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">get_password_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hibernation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_instance_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_initiated_shutdown_behavior</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_address_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">placement_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_block_device</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_dest_check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenancy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data_base64</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_security_group_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an EC2 instance resource. This allows instances to be created, updated,
 and deleted. Instances also support <a class="reference external" href="https://www.terraform.io/docs/provisioners/index.html">provisioning</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">ubuntu</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_ami</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;virtualization-type&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;hvm&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">most_recent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">owners</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;099720109477&quot;</span><span class="p">])</span>
+<span class="n">web</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;web&quot;</span><span class="p">,</span>
+    <span class="n">ami</span><span class="o">=</span><span class="n">ubuntu</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;t2.micro&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;HelloWorld&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5166,6 +5656,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.InternetGateway">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">InternetGateway</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.InternetGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create a VPC Internet Gateway.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">gw</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">InternetGateway</span><span class="p">(</span><span class="s2">&quot;gw&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;main&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5262,6 +5762,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>Base64 encoded DER format</p></li>
 <li><p>SSH public key file format as specified in RFC4716</p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">deployer</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">KeyPair</span><span class="p">(</span><span class="s2">&quot;deployer&quot;</span><span class="p">,</span> <span class="n">public_key</span><span class="o">=</span><span class="s2">&quot;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD3F6tyPEFEzV0LX3X8BsXdMsQz1x2cEikKDEY0aIj41qgxMCP/iteneqXSIFZBp5vizPvaoIR3Um9xK7PGoW8giupGn+EPuxIA4cDM4vzOqOkiMPhz5XK0whEjkVzTo4+S0puvDZuwIsdiW9mxhJc7tgBNL0cYlWSYVkz4G/fslNfRPW5mYAM49f4fhtxPb5ok4Q2Lg9dPKVHO/Bgeu5woMc7RY0p1ej6D4CKFE6lymSDJpW0YHX/wqE9+cfEauh7xZcG0q9t2ta6F6fmX0agvpFyZo8aFbXeUBr7osSCJNgvavWbM/06niWrOvYX2xwWdhXmXSrbX8ZbabVohBK41 email@example.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5374,6 +5880,89 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.LaunchConfiguration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">LaunchConfiguration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">associate_public_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_optimized</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ephemeral_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_instance_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">placement_tenancy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_block_device</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_price</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data_base64</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_classic_link_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_classic_link_security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.LaunchConfiguration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create a new launch configuration, used for autoscaling groups.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">ubuntu</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_ami</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;virtualization-type&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;hvm&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">most_recent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">owners</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;099720109477&quot;</span><span class="p">])</span>
+<span class="n">as_conf</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">LaunchConfiguration</span><span class="p">(</span><span class="s2">&quot;asConf&quot;</span><span class="p">,</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="n">ubuntu</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;t2.micro&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Launch Configurations cannot be updated after creation with the Amazon
+Web Service API. In order to update a Launch Configuration, this provider will
+destroy the existing resource and create a replacement. In order to effectively
+use a Launch Configuration resource with an <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html">AutoScaling Group resource</a>,
+it’s recommended to specify <code class="docutils literal notranslate"><span class="pre">create_before_destroy</span></code> in a <a class="reference external" href="https://www.terraform.io/docs/configuration/resources.html#lifecycle">lifecycle</a> block.
+Either omit the Launch Configuration <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute, or specify a partial name
+with <code class="docutils literal notranslate"><span class="pre">name_prefix</span></code>.  Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">ubuntu</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_ami</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;virtualization-type&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;hvm&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">most_recent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">owners</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;099720109477&quot;</span><span class="p">])</span>
+<span class="n">as_conf</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">LaunchConfiguration</span><span class="p">(</span><span class="s2">&quot;asConf&quot;</span><span class="p">,</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="n">ubuntu</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;t2.micro&quot;</span><span class="p">,</span>
+    <span class="n">name_prefix</span><span class="o">=</span><span class="s2">&quot;lc-example-&quot;</span><span class="p">)</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">autoscaling</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">launch_configuration</span><span class="o">=</span><span class="n">as_conf</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">max_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">min_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With this setup this provider generates a unique name for your Launch
+Configuration and can then update the AutoScaling Group without conflict before
+destroying the previous Launch Configuration.</p>
+<p>Launch configurations can set the spot instance pricing to be used for the
+Auto Scaling Group to reserve instances. Simply specifying the <code class="docutils literal notranslate"><span class="pre">spot_price</span></code>
+parameter will set the price on the Launch Configuration which will attempt to
+reserve your instances at this price.  See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html">AWS Spot Instance
+documentation</a>
+for more information or how to launch <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html">Spot Instances</a> with this provider.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">ubuntu</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_ami</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;virtualization-type&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;hvm&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">most_recent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">owners</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;099720109477&quot;</span><span class="p">])</span>
+<span class="n">as_conf</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">LaunchConfiguration</span><span class="p">(</span><span class="s2">&quot;asConf&quot;</span><span class="p">,</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="n">ubuntu</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;m4.large&quot;</span><span class="p">,</span>
+    <span class="n">spot_price</span><span class="o">=</span><span class="s2">&quot;0.001&quot;</span><span class="p">)</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">autoscaling</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">launch_configuration</span><span class="o">=</span><span class="n">as_conf</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Each of the <code class="docutils literal notranslate"><span class="pre">*_block_device</span></code> attributes controls a portion of the AWS
 Launch Configuration’s “Block Device Mapping”. It’s a good idea to familiarize yourself with <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">AWS’s Block Device
 Mapping docs</a>
@@ -5900,6 +6489,7 @@ Otherwise, specify the default value of 2.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Availability Zone for the instance.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the placement group for the instance.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">host_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Dedicated Host for the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">partitionNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of the partition the instance should launch in. Valid only if the placement group strategy is set to partition.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spreadDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reserved for future use.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tenancy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tenancy of the instance (if the instance is running in a VPC). Can be <code class="docutils literal notranslate"><span class="pre">default</span></code>, <code class="docutils literal notranslate"><span class="pre">dedicated</span></code>, or <code class="docutils literal notranslate"><span class="pre">host</span></code>.</p></li>
 </ul>
@@ -6170,6 +6760,7 @@ Interfaces below for more details.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Availability Zone for the instance.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the placement group for the instance.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">host_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Dedicated Host for the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">partitionNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of the partition the instance should launch in. Valid only if the placement group strategy is set to partition.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spreadDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Reserved for future use.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tenancy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The tenancy of the instance (if the instance is running in a VPC). Can be <code class="docutils literal notranslate"><span class="pre">default</span></code>, <code class="docutils literal notranslate"><span class="pre">dedicated</span></code>, or <code class="docutils literal notranslate"><span class="pre">host</span></code>.</p></li>
 </ul>
@@ -6381,6 +6972,7 @@ Otherwise, specify the default value of 2.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Availability Zone for the instance.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the placement group for the instance.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">host_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Dedicated Host for the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">partitionNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of the partition the instance should launch in. Valid only if the placement group strategy is set to partition.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spreadDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reserved for future use.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tenancy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tenancy of the instance (if the instance is running in a VPC). Can be <code class="docutils literal notranslate"><span class="pre">default</span></code>, <code class="docutils literal notranslate"><span class="pre">dedicated</span></code>, or <code class="docutils literal notranslate"><span class="pre">host</span></code>.</p></li>
 </ul>
@@ -6433,6 +7025,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.MainRouteTableAssociation">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">MainRouteTableAssociation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">route_table_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.MainRouteTableAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource for managing the main routing table of a VPC.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main_route_table_association</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">MainRouteTableAssociation</span><span class="p">(</span><span class="s2">&quot;mainRouteTableAssociation&quot;</span><span class="p">,</span>
+    <span class="n">route_table_id</span><span class="o">=</span><span class="n">aws_route_table</span><span class="p">[</span><span class="s2">&quot;bar&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <p>On VPC creation, the AWS API always creates an initial Main Route Table. This
 resource records the ID of that Route Table under <code class="docutils literal notranslate"><span class="pre">original_route_table_id</span></code>.
 The “Delete” action for a <code class="docutils literal notranslate"><span class="pre">main_route_table_association</span></code> consists of resetting
@@ -6531,6 +7131,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.NatGateway">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">NatGateway</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allocation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NatGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create a VPC NAT Gateway.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">gw</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">NatGateway</span><span class="p">(</span><span class="s2">&quot;gw&quot;</span><span class="p">,</span>
+    <span class="n">allocation_id</span><span class="o">=</span><span class="n">aws_eip</span><span class="p">[</span><span class="s2">&quot;nat&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">subnet_id</span><span class="o">=</span><span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;public&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6650,6 +7258,32 @@ defined in-line. At this time you cannot use a Network ACL with in-line rules
 in conjunction with any Network ACL Rule resources. Doing so will cause
 a conflict of rule settings and will overwrite rules.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">NetworkAcl</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
+    <span class="n">egress</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;allow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cidrBlock&quot;</span><span class="p">:</span> <span class="s2">&quot;10.3.0.0/18&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ruleNo&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">ingress</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;allow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cidrBlock&quot;</span><span class="p">:</span> <span class="s2">&quot;10.3.0.0/18&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ruleNo&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;main&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6852,6 +7486,21 @@ defined in-line. At this time you cannot use a Network ACL with in-line rules
 in conjunction with any Network ACL Rule resources. Doing so will cause
 a conflict of rule settings and will overwrite rules.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bar_network_acl</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">NetworkAcl</span><span class="p">(</span><span class="s2">&quot;barNetworkAcl&quot;</span><span class="p">,</span> <span class="n">vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">bar_network_acl_rule</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">NetworkAclRule</span><span class="p">(</span><span class="s2">&quot;barNetworkAclRule&quot;</span><span class="p">,</span>
+    <span class="n">network_acl_id</span><span class="o">=</span><span class="n">bar_network_acl</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rule_number</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+    <span class="n">egress</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+    <span class="n">rule_action</span><span class="o">=</span><span class="s2">&quot;allow&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;cidr_block&quot;</span><span class="p">],</span>
+    <span class="n">from_port</span><span class="o">=</span><span class="mi">22</span><span class="p">,</span>
+    <span class="n">to_port</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7006,6 +7655,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.NetworkInterface">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">NetworkInterface</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attachments</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ips</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ips_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_dest_check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic network interface (ENI) resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">NetworkInterface</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">attachments</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;deviceIndex&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;instance&quot;</span><span class="p">:</span> <span class="n">aws_instance</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">private_ips</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.0.50&quot;</span><span class="p">],</span>
+    <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span><span class="n">aws_security_group</span><span class="p">[</span><span class="s2">&quot;web&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
+    <span class="n">subnet_id</span><span class="o">=</span><span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;public_a&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7167,6 +7829,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.NetworkInterfaceAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">NetworkInterfaceAttachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">device_index</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interface_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterfaceAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attach an Elastic network interface (ENI) resource with EC2 instance.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">NetworkInterfaceAttachment</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">device_index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">aws_instance</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">network_interface_id</span><span class="o">=</span><span class="n">aws_network_interface</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7281,6 +7952,29 @@ conjunction with security groups provided in-line in those resources will cause
 conflicts, and will lead to spurious diffs and undefined behavior - please use
 one or the other.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">ami</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_ami</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;amzn-ami-hvm-*&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">most_recent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">owners</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;amazon&quot;</span><span class="p">])</span>
+<span class="n">instance</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span>
+    <span class="n">ami</span><span class="o">=</span><span class="n">ami</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;t2.micro&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;test-instance&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">sg</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;sg&quot;</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;test-security-group&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">sg_attachment</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">NetworkInterfaceSecurityGroupAttachment</span><span class="p">(</span><span class="s2">&quot;sgAttachment&quot;</span><span class="p">,</span>
+    <span class="n">network_interface_id</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">primary_network_interface_id</span><span class="p">,</span>
+    <span class="n">security_group_id</span><span class="o">=</span><span class="n">sg</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>There are no outputs for this resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -7375,7 +8069,68 @@ management of the VPC Peering Connection and allows options to be set correctly 
 cross-account scenarios.</p>
 </div></blockquote>
 <p>Basic usage:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo_vpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;fooVpc&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.1.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">foo_vpc_peering_connection</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcPeeringConnection</span><span class="p">(</span><span class="s2">&quot;fooVpcPeeringConnection&quot;</span><span class="p">,</span>
+    <span class="n">auto_accept</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">peer_vpc_id</span><span class="o">=</span><span class="n">bar</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">foo_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">foo_peering_connection_options</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">PeeringConnectionOptions</span><span class="p">(</span><span class="s2">&quot;fooPeeringConnectionOptions&quot;</span><span class="p">,</span>
+    <span class="n">accepter</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;allowRemoteVpcDnsResolution&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">requester</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;allowClassicLinkToRemoteVpc&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;allowVpcToRemoteClassicLink&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vpc_peering_connection_id</span><span class="o">=</span><span class="n">foo_vpc_peering_connection</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Basic cross-account usage:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_pulumi</span> <span class="k">as</span> <span class="nn">pulumi</span>
+
+<span class="n">requester</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">Aws</span><span class="p">(</span><span class="s2">&quot;requester&quot;</span><span class="p">)</span>
+<span class="n">accepter</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">Aws</span><span class="p">(</span><span class="s2">&quot;accepter&quot;</span><span class="p">)</span>
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">enable_dns_hostnames</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">enable_dns_support</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">peer_vpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;peerVpc&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.1.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">enable_dns_hostnames</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">enable_dns_support</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">peer_caller_identity</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_caller_identity</span><span class="p">()</span>
+<span class="n">peer_vpc_peering_connection</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcPeeringConnection</span><span class="p">(</span><span class="s2">&quot;peerVpcPeeringConnection&quot;</span><span class="p">,</span>
+    <span class="n">auto_accept</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">peer_owner_id</span><span class="o">=</span><span class="n">peer_caller_identity</span><span class="o">.</span><span class="n">account_id</span><span class="p">,</span>
+    <span class="n">peer_vpc_id</span><span class="o">=</span><span class="n">peer_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Side&quot;</span><span class="p">:</span> <span class="s2">&quot;Requester&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">peer_vpc_peering_connection_accepter</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcPeeringConnectionAccepter</span><span class="p">(</span><span class="s2">&quot;peerVpcPeeringConnectionAccepter&quot;</span><span class="p">,</span>
+    <span class="n">auto_accept</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Side&quot;</span><span class="p">:</span> <span class="s2">&quot;Accepter&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vpc_peering_connection_id</span><span class="o">=</span><span class="n">peer_vpc_peering_connection</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">requester_peering_connection_options</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">PeeringConnectionOptions</span><span class="p">(</span><span class="s2">&quot;requesterPeeringConnectionOptions&quot;</span><span class="p">,</span>
+    <span class="n">requester</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;allowRemoteVpcDnsResolution&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vpc_peering_connection_id</span><span class="o">=</span><span class="n">peer_vpc_peering_connection_accepter</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">accepter_peering_connection_options</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">PeeringConnectionOptions</span><span class="p">(</span><span class="s2">&quot;accepterPeeringConnectionOptions&quot;</span><span class="p">,</span>
+    <span class="n">accepter</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;allowRemoteVpcDnsResolution&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vpc_peering_connection_id</span><span class="o">=</span><span class="n">peer_vpc_peering_connection_accepter</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7543,6 +8298,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">PlacementGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.PlacementGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an EC2 placement group. Read more about placement groups
 in <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">AWS Docs</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">web</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">PlacementGroup</span><span class="p">(</span><span class="s2">&quot;web&quot;</span><span class="p">,</span> <span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;cluster&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7640,6 +8401,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.ProxyProtocolPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">ProxyProtocolPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancer</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.ProxyProtocolPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a proxy protocol policy, which allows an ELB to carry a client connection information to a backend.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">lb</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;lb&quot;</span><span class="p">,</span>
+    <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;us-east-1a&quot;</span><span class="p">],</span>
+    <span class="n">listeners</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;instancePort&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+            <span class="s2">&quot;instanceProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;lbPort&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+            <span class="s2">&quot;lbProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;instancePort&quot;</span><span class="p">:</span> <span class="mi">587</span><span class="p">,</span>
+            <span class="s2">&quot;instanceProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;lbPort&quot;</span><span class="p">:</span> <span class="mi">587</span><span class="p">,</span>
+            <span class="s2">&quot;lbProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+<span class="n">smtp</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">ProxyProtocolPolicy</span><span class="p">(</span><span class="s2">&quot;smtp&quot;</span><span class="p">,</span>
+    <span class="n">instance_ports</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;25&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;587&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">load_balancer</span><span class="o">=</span><span class="n">lb</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7735,6 +8523,28 @@ defined in-line. At this time you cannot use a Route Table with in-line routes
 in conjunction with any Route resources. Doing so will cause
 a conflict of rule settings and will overwrite rules.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">route</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Route</span><span class="p">(</span><span class="s2">&quot;route&quot;</span><span class="p">,</span>
+    <span class="n">route_table_id</span><span class="o">=</span><span class="s2">&quot;rtb-4fbb3ac4&quot;</span><span class="p">,</span>
+    <span class="n">destination_cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/22&quot;</span><span class="p">,</span>
+    <span class="n">vpc_peering_connection_id</span><span class="o">=</span><span class="s2">&quot;pcx-45ff3dc1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">vpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;vpc&quot;</span><span class="p">,</span>
+    <span class="n">assign_generated_ipv6_cidr_block</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.1.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">egress</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">EgressOnlyInternetGateway</span><span class="p">(</span><span class="s2">&quot;egress&quot;</span><span class="p">,</span> <span class="n">vpc_id</span><span class="o">=</span><span class="n">vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">route</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Route</span><span class="p">(</span><span class="s2">&quot;route&quot;</span><span class="p">,</span>
+    <span class="n">destination_ipv6_cidr_block</span><span class="o">=</span><span class="s2">&quot;::/0&quot;</span><span class="p">,</span>
+    <span class="n">egress_only_gateway_id</span><span class="o">=</span><span class="n">egress</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">route_table_id</span><span class="o">=</span><span class="s2">&quot;rtb-4fbb3ac4&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7899,6 +8709,26 @@ this resource will delete any propagating gateways not explicitly listed in
 <code class="docutils literal notranslate"><span class="pre">propagating_vgws</span></code>. Omit this argument when defining route propagation using
 the separate resource.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">route_table</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">RouteTable</span><span class="p">(</span><span class="s2">&quot;routeTable&quot;</span><span class="p">,</span>
+    <span class="n">routes</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;cidrBlock&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;gatewayId&quot;</span><span class="p">:</span> <span class="n">aws_internet_gateway</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;egressOnlyGatewayId&quot;</span><span class="p">:</span> <span class="n">aws_egress_only_internet_gateway</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;ipv6CidrBlock&quot;</span><span class="p">:</span> <span class="s2">&quot;::/0&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;main&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -8040,6 +8870,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">RouteTableAssociation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">route_table_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.RouteTableAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create an association between a route table and a subnet or a route table and an
 internet gateway or virtual private gateway.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">route_table_association</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">RouteTableAssociation</span><span class="p">(</span><span class="s2">&quot;routeTableAssociation&quot;</span><span class="p">,</span>
+    <span class="n">subnet_id</span><span class="o">=</span><span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">route_table_id</span><span class="o">=</span><span class="n">aws_route_table</span><span class="p">[</span><span class="s2">&quot;bar&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -8140,6 +8978,40 @@ a conflict of rule settings and will overwrite rules.</p>
 <p><strong>NOTE:</strong> Referencing Security Groups across VPC peering has certain restrictions. More information is available in the <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html">VPC Peering User Guide</a>.</p>
 <p><strong>NOTE:</strong> Due to <a class="reference external" href="https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/">AWS Lambda improved VPC networking changes that began deploying in September 2019</a>, security groups associated with Lambda Functions can take up to 45 minutes to successfully delete.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">allow_tls</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;allowTls&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Allow TLS inbound traffic&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">ingress</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;TLS from VPC&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cidrBlocks&quot;</span><span class="p">:</span> <span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;cidr_block&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">egress</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;-1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cidrBlocks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;allow_tls&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<p>Prefix list IDs are managed by AWS internally. Prefix list IDs
+are associated with a prefix list name, or service name, that is linked to a specific region.
+Prefix list IDs are exported on VPC Endpoints, so you can use this format:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="c1"># ...</span>
+<span class="n">my_endpoint</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcEndpoint</span><span class="p">(</span><span class="s2">&quot;myEndpoint&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -8413,6 +9285,35 @@ a conflict of rule settings and will overwrite rules.</p>
 <p><strong>NOTE:</strong> Setting <code class="docutils literal notranslate"><span class="pre">protocol</span> <span class="pre">=</span> <span class="pre">&quot;all&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">protocol</span> <span class="pre">=</span> <span class="pre">-1</span></code> with <code class="docutils literal notranslate"><span class="pre">from_port</span></code> and <code class="docutils literal notranslate"><span class="pre">to_port</span></code> will result in the EC2 API creating a security group rule with all ports open. This API behavior cannot be controlled by this provider and may generate warnings in the future.</p>
 <p><strong>NOTE:</strong> Referencing Security Groups across VPC peering has certain restrictions. More information is available in the <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html">VPC Peering User Guide</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SecurityGroupRule</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;ingress&quot;</span><span class="p">,</span>
+    <span class="n">from_port</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">to_port</span><span class="o">=</span><span class="mi">65535</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+    <span class="n">cidr_blocks</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;cidr_block&quot;</span><span class="p">],</span>
+    <span class="n">security_group_id</span><span class="o">=</span><span class="s2">&quot;sg-123456&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Prefix list IDs are manged by AWS internally. Prefix list IDs
+are associated with a prefix list name, or service name, that is linked to a specific region.
+Prefix list IDs are exported on VPC Endpoints, so you can use this format:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="c1"># ...</span>
+<span class="n">my_endpoint</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcEndpoint</span><span class="p">(</span><span class="s2">&quot;myEndpoint&quot;</span><span class="p">)</span>
+<span class="n">allow_all</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SecurityGroupRule</span><span class="p">(</span><span class="s2">&quot;allowAll&quot;</span><span class="p">,</span>
+    <span class="n">from_port</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">prefix_list_ids</span><span class="o">=</span><span class="p">[</span><span class="n">my_endpoint</span><span class="o">.</span><span class="n">prefix_list_id</span><span class="p">],</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;-1&quot;</span><span class="p">,</span>
+    <span class="n">security_group_id</span><span class="o">=</span><span class="s2">&quot;sg-123456&quot;</span><span class="p">,</span>
+    <span class="n">to_port</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;egress&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -8581,6 +9482,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.SnapshotCreateVolumePermission">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">SnapshotCreateVolumePermission</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SnapshotCreateVolumePermission" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds permission to create volumes off of a given EBS Snapshot.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ebs</span><span class="o">.</span><span class="n">Volume</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="s2">&quot;us-west-2a&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
+<span class="n">example_snapshot</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ebs</span><span class="o">.</span><span class="n">Snapshot</span><span class="p">(</span><span class="s2">&quot;exampleSnapshot&quot;</span><span class="p">,</span> <span class="n">volume_id</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">example_perm</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SnapshotCreateVolumePermission</span><span class="p">(</span><span class="s2">&quot;examplePerm&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;12345678&quot;</span><span class="p">,</span>
+    <span class="n">snapshot_id</span><span class="o">=</span><span class="n">example_snapshot</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -8667,6 +9580,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </div></blockquote>
 <p>To help you understand the charges for your Spot instances, Amazon EC2 provides a data feed that describes your Spot instance usage and pricing.
 This data feed is sent to an Amazon S3 bucket that you specify when you subscribe to the data feed.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default_bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;defaultBucket&quot;</span><span class="p">)</span>
+<span class="n">default_spot_datafeed_subscription</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SpotDatafeedSubscription</span><span class="p">(</span><span class="s2">&quot;defaultSpotDatafeedSubscription&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">default_bucket</span><span class="o">.</span><span class="n">bucket</span><span class="p">,</span>
+    <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;my_subdirectory&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -8750,6 +9672,122 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">SpotFleetRequest</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allocation_strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">excess_capacity_termination_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fleet_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_fleet_role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_interruption_behaviour</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_pools_to_use_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">launch_specifications</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">launch_template_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replace_unhealthy_instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_price</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_group_arns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">terminate_instances_with_expiration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_until</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_fulfillment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an EC2 Spot Fleet Request resource. This allows a fleet of Spot
 instances to be requested on the Spot market.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="c1"># Request a Spot fleet</span>
+<span class="n">cheap_compute</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SpotFleetRequest</span><span class="p">(</span><span class="s2">&quot;cheapCompute&quot;</span><span class="p">,</span>
+    <span class="n">allocation_strategy</span><span class="o">=</span><span class="s2">&quot;diversified&quot;</span><span class="p">,</span>
+    <span class="n">iam_fleet_role</span><span class="o">=</span><span class="s2">&quot;arn:aws:iam::12345678:role/spot-fleet&quot;</span><span class="p">,</span>
+    <span class="n">launch_specifications</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;ami&quot;</span><span class="p">:</span> <span class="s2">&quot;ami-1234&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;iamInstanceProfileArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_instance_profile</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;instanceType&quot;</span><span class="p">:</span> <span class="s2">&quot;m4.10xlarge&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;placementTenancy&quot;</span><span class="p">:</span> <span class="s2">&quot;dedicated&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;spotPrice&quot;</span><span class="p">:</span> <span class="s2">&quot;2.793&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;ami&quot;</span><span class="p">:</span> <span class="s2">&quot;ami-5678&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;availabilityZone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-west-1a&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;iamInstanceProfileArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_instance_profile</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;instanceType&quot;</span><span class="p">:</span> <span class="s2">&quot;m4.4xlarge&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;keyName&quot;</span><span class="p">:</span> <span class="s2">&quot;my-key&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rootBlockDevice&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;volumeSize&quot;</span><span class="p">:</span> <span class="s2">&quot;300&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;volumeType&quot;</span><span class="p">:</span> <span class="s2">&quot;gp2&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+            <span class="s2">&quot;spotPrice&quot;</span><span class="p">:</span> <span class="s2">&quot;1.117&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="s2">&quot;subnet-1234&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;spot-fleet-example&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;weightedCapacity&quot;</span><span class="p">:</span> <span class="mi">35</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">spot_price</span><span class="o">=</span><span class="s2">&quot;0.03&quot;</span><span class="p">,</span>
+    <span class="n">target_capacity</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
+    <span class="n">valid_until</span><span class="o">=</span><span class="s2">&quot;2019-11-04T20:44:20Z&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo_launch_template</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">LaunchTemplate</span><span class="p">(</span><span class="s2">&quot;fooLaunchTemplate&quot;</span><span class="p">,</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="s2">&quot;ami-516b9131&quot;</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;m1.small&quot;</span><span class="p">,</span>
+    <span class="n">key_name</span><span class="o">=</span><span class="s2">&quot;some-key&quot;</span><span class="p">,</span>
+    <span class="n">spot_price</span><span class="o">=</span><span class="s2">&quot;0.05&quot;</span><span class="p">)</span>
+<span class="n">foo_spot_fleet_request</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SpotFleetRequest</span><span class="p">(</span><span class="s2">&quot;fooSpotFleetRequest&quot;</span><span class="p">,</span>
+    <span class="n">iam_fleet_role</span><span class="o">=</span><span class="s2">&quot;arn:aws:iam::12345678:role/spot-fleet&quot;</span><span class="p">,</span>
+    <span class="n">spot_price</span><span class="o">=</span><span class="s2">&quot;0.005&quot;</span><span class="p">,</span>
+    <span class="n">target_capacity</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">valid_until</span><span class="o">=</span><span class="s2">&quot;2019-11-04T20:44:20Z&quot;</span><span class="p">,</span>
+    <span class="n">launch_template_config</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;launch_template_specification&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">foo_launch_template</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="n">foo_launch_template</span><span class="o">.</span><span class="n">latest_version</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SpotFleetRequest</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">iam_fleet_role</span><span class="o">=</span><span class="s2">&quot;arn:aws:iam::12345678:role/spot-fleet&quot;</span><span class="p">,</span>
+    <span class="n">launch_specifications</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;ami&quot;</span><span class="p">:</span> <span class="s2">&quot;ami-d06a90b0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;availabilityZone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-west-2a&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;instanceType&quot;</span><span class="p">:</span> <span class="s2">&quot;m1.small&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;keyName&quot;</span><span class="p">:</span> <span class="s2">&quot;my-key&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;ami&quot;</span><span class="p">:</span> <span class="s2">&quot;ami-d06a90b0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;availabilityZone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-west-2a&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;instanceType&quot;</span><span class="p">:</span> <span class="s2">&quot;m5.large&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;keyName&quot;</span><span class="p">:</span> <span class="s2">&quot;my-key&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">spot_price</span><span class="o">=</span><span class="s2">&quot;0.005&quot;</span><span class="p">,</span>
+    <span class="n">target_capacity</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">valid_until</span><span class="o">=</span><span class="s2">&quot;2019-11-04T20:44:20Z&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_subnet_ids</span><span class="p">(</span><span class="n">vpc_id</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;vpc_id&quot;</span><span class="p">])</span>
+<span class="n">foo_launch_template</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">LaunchTemplate</span><span class="p">(</span><span class="s2">&quot;fooLaunchTemplate&quot;</span><span class="p">,</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="s2">&quot;ami-516b9131&quot;</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;m1.small&quot;</span><span class="p">,</span>
+    <span class="n">key_name</span><span class="o">=</span><span class="s2">&quot;some-key&quot;</span><span class="p">,</span>
+    <span class="n">spot_price</span><span class="o">=</span><span class="s2">&quot;0.05&quot;</span><span class="p">)</span>
+<span class="n">foo_spot_fleet_request</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SpotFleetRequest</span><span class="p">(</span><span class="s2">&quot;fooSpotFleetRequest&quot;</span><span class="p">,</span>
+    <span class="n">iam_fleet_role</span><span class="o">=</span><span class="s2">&quot;arn:aws:iam::12345678:role/spot-fleet&quot;</span><span class="p">,</span>
+    <span class="n">spot_price</span><span class="o">=</span><span class="s2">&quot;0.005&quot;</span><span class="p">,</span>
+    <span class="n">target_capacity</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">valid_until</span><span class="o">=</span><span class="s2">&quot;2019-11-04T20:44:20Z&quot;</span><span class="p">,</span>
+    <span class="n">launch_template_config</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;launch_template_specification&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">foo_launch_template</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="n">foo_launch_template</span><span class="o">.</span><span class="n">latest_version</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;overrides&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_subnets&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;ids&quot;</span><span class="p">],</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_subnets&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;ids&quot;</span><span class="p">],</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_subnets&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;ids&quot;</span><span class="p">],</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9251,6 +10289,19 @@ point in time. See the <a class="reference external" href="https://docs.aws.amaz
 documentation</a>
 for more information.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="c1"># Request a spot instance at $0.03</span>
+<span class="n">cheap_worker</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SpotInstanceRequest</span><span class="p">(</span><span class="s2">&quot;cheapWorker&quot;</span><span class="p">,</span>
+    <span class="n">ami</span><span class="o">=</span><span class="s2">&quot;ami-1234&quot;</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;c4.xlarge&quot;</span><span class="p">,</span>
+    <span class="n">spot_price</span><span class="o">=</span><span class="s2">&quot;0.03&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;CheapWorker&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9969,6 +11020,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Due to <a class="reference external" href="https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/">AWS Lambda improved VPC networking changes that began deploying in September 2019</a>, subnets associated with Lambda Functions can take up to 45 minutes to successfully delete.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Main&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">secondary_cidr</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcIpv4CidrBlockAssociation</span><span class="p">(</span><span class="s2">&quot;secondaryCidr&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.2.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">in_secondary_cidr</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;inSecondaryCidr&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.2.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">secondary_cidr</span><span class="o">.</span><span class="n">vpc_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10144,6 +11217,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">TrafficMirrorFilter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Traffic mirror filter.<span class="raw-html-m2r"><br></span>
 Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html">limits and considerations</a> for traffic mirroring</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">TrafficMirrorFilter</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;traffic mirror filter - example&quot;</span><span class="p">,</span>
+    <span class="n">network_services</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;amazon-dns&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10235,6 +11316,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">TrafficMirrorFilterRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_port_range</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rule_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rule_number</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_port_range</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">traffic_direction</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">traffic_mirror_filter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilterRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Traffic mirror filter rule.<span class="raw-html-m2r"><br></span>
 Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html">limits and considerations</a> for traffic mirroring</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="nb">filter</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">TrafficMirrorFilter</span><span class="p">(</span><span class="s2">&quot;filter&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;traffic mirror filter - example&quot;</span><span class="p">,</span>
+    <span class="n">network_services</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;amazon-dns&quot;</span><span class="p">])</span>
+<span class="n">ruleout</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">TrafficMirrorFilterRule</span><span class="p">(</span><span class="s2">&quot;ruleout&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;test rule&quot;</span><span class="p">,</span>
+    <span class="n">destination_cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/8&quot;</span><span class="p">,</span>
+    <span class="n">rule_action</span><span class="o">=</span><span class="s2">&quot;accept&quot;</span><span class="p">,</span>
+    <span class="n">rule_number</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">source_cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/8&quot;</span><span class="p">,</span>
+    <span class="n">traffic_direction</span><span class="o">=</span><span class="s2">&quot;egress&quot;</span><span class="p">,</span>
+    <span class="n">traffic_mirror_filter_id</span><span class="o">=</span><span class="nb">filter</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">rulein</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">TrafficMirrorFilterRule</span><span class="p">(</span><span class="s2">&quot;rulein&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;test rule&quot;</span><span class="p">,</span>
+    <span class="n">destination_cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/8&quot;</span><span class="p">,</span>
+    <span class="n">destination_port_range</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
+        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">53</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
+    <span class="n">rule_action</span><span class="o">=</span><span class="s2">&quot;accept&quot;</span><span class="p">,</span>
+    <span class="n">rule_number</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">source_cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/8&quot;</span><span class="p">,</span>
+    <span class="n">source_port_range</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">traffic_direction</span><span class="o">=</span><span class="s2">&quot;ingress&quot;</span><span class="p">,</span>
+    <span class="n">traffic_mirror_filter_id</span><span class="o">=</span><span class="nb">filter</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10411,6 +11525,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">TrafficMirrorSession</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interface_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">packet_length</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">session_number</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">traffic_mirror_filter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">traffic_mirror_target_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_network_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorSession" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Traffic mirror session.<span class="raw-html-m2r"><br></span>
 Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html">limits and considerations</a> for traffic mirroring</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="nb">filter</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">TrafficMirrorFilter</span><span class="p">(</span><span class="s2">&quot;filter&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;traffic mirror filter - example&quot;</span><span class="p">,</span>
+    <span class="n">network_services</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;amazon-dns&quot;</span><span class="p">])</span>
+<span class="n">target</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">TrafficMirrorTarget</span><span class="p">(</span><span class="s2">&quot;target&quot;</span><span class="p">,</span> <span class="n">network_load_balancer_arn</span><span class="o">=</span><span class="n">aws_lb</span><span class="p">[</span><span class="s2">&quot;lb&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
+<span class="n">session</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">TrafficMirrorSession</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;traffic mirror session - example&quot;</span><span class="p">,</span>
+    <span class="n">network_interface_id</span><span class="o">=</span><span class="n">aws_instance</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;primary_network_interface_id&quot;</span><span class="p">],</span>
+    <span class="n">traffic_mirror_filter_id</span><span class="o">=</span><span class="nb">filter</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">traffic_mirror_target_id</span><span class="o">=</span><span class="n">target</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10558,6 +11686,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">TrafficMirrorTarget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interface_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_load_balancer_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorTarget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Traffic mirror target.<span class="raw-html-m2r"><br></span>
 Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html">limits and considerations</a> for traffic mirroring</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">nlb</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">TrafficMirrorTarget</span><span class="p">(</span><span class="s2">&quot;nlb&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;NLB target&quot;</span><span class="p">,</span>
+    <span class="n">network_load_balancer_arn</span><span class="o">=</span><span class="n">aws_lb</span><span class="p">[</span><span class="s2">&quot;lb&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
+<span class="n">eni</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">TrafficMirrorTarget</span><span class="p">(</span><span class="s2">&quot;eni&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;ENI target&quot;</span><span class="p">,</span>
+    <span class="n">network_interface_id</span><span class="o">=</span><span class="n">aws_instance</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;primary_network_interface_id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10653,6 +11792,119 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_aws.ec2.TransitGatewayPeeringAttachmentAccepter">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">TransitGatewayPeeringAttachmentAccepter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transit_gateway_attachment_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TransitGatewayPeeringAttachmentAccepter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages the accepter’s side of an EC2 Transit Gateway Peering Attachment.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">TransitGatewayPeeringAttachmentAccepter</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Example cross-account attachment&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">transit_gateway_attachment_id</span><span class="o">=</span><span class="n">aws_ec2_transit_gateway_peering_attachment</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value tags for the EC2 Transit Gateway Peering Attachment.</p></li>
+<li><p><strong>transit_gateway_attachment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the EC2 Transit Gateway Peering Attachment to manage.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.TransitGatewayPeeringAttachmentAccepter.peer_account_id">
+<code class="sig-name descname">peer_account_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TransitGatewayPeeringAttachmentAccepter.peer_account_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of the AWS account that owns the EC2 TGW peering.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.TransitGatewayPeeringAttachmentAccepter.peer_transit_gateway_id">
+<code class="sig-name descname">peer_transit_gateway_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TransitGatewayPeeringAttachmentAccepter.peer_transit_gateway_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of EC2 Transit Gateway to peer with.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.TransitGatewayPeeringAttachmentAccepter.tags">
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TransitGatewayPeeringAttachmentAccepter.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value tags for the EC2 Transit Gateway Peering Attachment.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.TransitGatewayPeeringAttachmentAccepter.transit_gateway_attachment_id">
+<code class="sig-name descname">transit_gateway_attachment_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TransitGatewayPeeringAttachmentAccepter.transit_gateway_attachment_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the EC2 Transit Gateway Peering Attachment to manage.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.TransitGatewayPeeringAttachmentAccepter.transit_gateway_id">
+<code class="sig-name descname">transit_gateway_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TransitGatewayPeeringAttachmentAccepter.transit_gateway_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of EC2 Transit Gateway.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aws.ec2.TransitGatewayPeeringAttachmentAccepter.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_transit_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transit_gateway_attachment_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transit_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TransitGatewayPeeringAttachmentAccepter.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing TransitGatewayPeeringAttachmentAccepter resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>peer_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of the AWS account that owns the EC2 TGW peering.</p></li>
+<li><p><strong>peer_transit_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Transit Gateway to peer with.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value tags for the EC2 Transit Gateway Peering Attachment.</p></li>
+<li><p><strong>transit_gateway_attachment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the EC2 Transit Gateway Peering Attachment to manage.</p></li>
+<li><p><strong>transit_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Transit Gateway.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aws.ec2.TransitGatewayPeeringAttachmentAccepter.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TransitGatewayPeeringAttachmentAccepter.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aws.ec2.TransitGatewayPeeringAttachmentAccepter.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TransitGatewayPeeringAttachmentAccepter.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_aws.ec2.VolumeAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">VolumeAttachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">device_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_detach</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">skip_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VolumeAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS EBS Volume Attachment as a top level resource, to attach and
@@ -10660,6 +11912,25 @@ detach volumes from AWS Instances.</p>
 <blockquote>
 <div><p><strong>NOTE on EBS block devices:</strong> If you use <code class="docutils literal notranslate"><span class="pre">ebs_block_device</span></code> on an <code class="docutils literal notranslate"><span class="pre">ec2.Instance</span></code>, this provider will assume management over the full set of non-root EBS block devices for the instance, and treats additional block devices as drift. For this reason, <code class="docutils literal notranslate"><span class="pre">ebs_block_device</span></code> cannot be mixed with external <code class="docutils literal notranslate"><span class="pre">ebs.Volume</span></code> + <code class="docutils literal notranslate"><span class="pre">aws_ebs_volume_attachment</span></code> resources for a given instance.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">web</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;web&quot;</span><span class="p">,</span>
+    <span class="n">ami</span><span class="o">=</span><span class="s2">&quot;ami-21f78e11&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="s2">&quot;us-west-2a&quot;</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;t1.micro&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;HelloWorld&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ebs</span><span class="o">.</span><span class="n">Volume</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="s2">&quot;us-west-2a&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ebs_att</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VolumeAttachment</span><span class="p">(</span><span class="s2">&quot;ebsAtt&quot;</span><span class="p">,</span>
+    <span class="n">device_name</span><span class="o">=</span><span class="s2">&quot;/dev/sdh&quot;</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">web</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">volume_id</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10792,6 +12063,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.Vpc">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">Vpc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">assign_generated_ipv6_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_classiclink</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_classiclink_dns_support</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_dns_hostnames</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_dns_support</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_tenancy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Vpc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VPC resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10999,6 +12276,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.VpcDhcpOptions">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">VpcDhcpOptions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netbios_name_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netbios_node_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ntp_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcDhcpOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VPC DHCP Options resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">dns_resolver</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcDhcpOptions</span><span class="p">(</span><span class="s2">&quot;dnsResolver&quot;</span><span class="p">,</span> <span class="n">domain_name_servers</span><span class="o">=</span><span class="p">[</span>
+    <span class="s2">&quot;8.8.8.8&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;8.8.4.4&quot;</span><span class="p">,</span>
+<span class="p">])</span>
+</pre></div>
+</div>
 <ul class="simple">
 <li><p>Notice that all arguments are optional but you have to specify at least one argument.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">domain_name_servers</span></code>, <code class="docutils literal notranslate"><span class="pre">netbios_name_servers</span></code>, <code class="docutils literal notranslate"><span class="pre">ntp_servers</span></code> are limited by AWS to maximum four servers only.</p></li>
@@ -11129,6 +12415,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.VpcDhcpOptionsAssociation">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">VpcDhcpOptionsAssociation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dhcp_options_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcDhcpOptionsAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VPC DHCP Options Association resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">dns_resolver</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcDhcpOptionsAssociation</span><span class="p">(</span><span class="s2">&quot;dnsResolver&quot;</span><span class="p">,</span>
+    <span class="n">dhcp_options_id</span><span class="o">=</span><span class="n">aws_vpc_dhcp_options</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <ul class="simple">
 <li><p>You can only associate one DHCP Options Set to a given VPC ID.</p></li>
 <li><p>Removing the DHCP Options Association automatically sets AWS’s <code class="docutils literal notranslate"><span class="pre">default</span></code> DHCP Options Set to the VPC.</p></li>
@@ -11223,6 +12517,57 @@ a VPC Endpoint resource with <code class="docutils literal notranslate"><span cl
 Do not use the same resource ID in both a VPC Endpoint resource and a VPC Endpoint Association resource.
 Doing so will cause a conflict of associations and will overwrite the association.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">s3</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcEndpoint</span><span class="p">(</span><span class="s2">&quot;s3&quot;</span><span class="p">,</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="s2">&quot;com.amazonaws.us-west-2.s3&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">s3</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcEndpoint</span><span class="p">(</span><span class="s2">&quot;s3&quot;</span><span class="p">,</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="s2">&quot;com.amazonaws.us-west-2.s3&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">ec2</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcEndpoint</span><span class="p">(</span><span class="s2">&quot;ec2&quot;</span><span class="p">,</span>
+    <span class="n">private_dns_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">security_group_ids</span><span class="o">=</span><span class="p">[</span><span class="n">aws_security_group</span><span class="p">[</span><span class="s2">&quot;sg1&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="s2">&quot;com.amazonaws.us-west-2.ec2&quot;</span><span class="p">,</span>
+    <span class="n">vpc_endpoint_type</span><span class="o">=</span><span class="s2">&quot;Interface&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">ptfe_service_vpc_endpoint</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcEndpoint</span><span class="p">(</span><span class="s2">&quot;ptfeServiceVpcEndpoint&quot;</span><span class="p">,</span>
+    <span class="n">private_dns_enabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">security_group_ids</span><span class="o">=</span><span class="p">[</span><span class="n">aws_security_group</span><span class="p">[</span><span class="s2">&quot;ptfe_service&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;ptfe_service&quot;</span><span class="p">],</span>
+    <span class="n">subnet_ids</span><span class="o">=</span><span class="p">[</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;subnet_ids&quot;</span><span class="p">]],</span>
+    <span class="n">vpc_endpoint_type</span><span class="o">=</span><span class="s2">&quot;Interface&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;vpc_id&quot;</span><span class="p">])</span>
+<span class="n">internal</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">get_zone</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;vpc.internal.&quot;</span><span class="p">,</span>
+    <span class="n">private_zone</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;vpc_id&quot;</span><span class="p">])</span>
+<span class="n">ptfe_service_record</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;ptfeServiceRecord&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;ptfe.</span><span class="si">{</span><span class="n">internal</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">records</span><span class="o">=</span><span class="p">[</span><span class="n">ptfe_service_vpc_endpoint</span><span class="o">.</span><span class="n">dns_entries</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;dns_name&quot;</span><span class="p">]],</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="s2">&quot;300&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;CNAME&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">internal</span><span class="o">.</span><span class="n">zone_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -11432,6 +12777,34 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">VpcEndpointConnectionNotification</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_notification_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_endpoint_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_endpoint_service_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointConnectionNotification" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VPC Endpoint connection notification resource.
 Connection notifications notify subscribers of VPC Endpoint events.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">topic</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;topic&quot;</span><span class="p">,</span> <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">    &quot;Version&quot;:&quot;2012-10-17&quot;,</span>
+<span class="s2">    &quot;Statement&quot;:[{</span>
+<span class="s2">        &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">        &quot;Principal&quot;: {</span>
+<span class="s2">            &quot;Service&quot;: &quot;vpce.amazonaws.com&quot;</span>
+<span class="s2">        },</span>
+<span class="s2">        &quot;Action&quot;: &quot;SNS:Publish&quot;,</span>
+<span class="s2">        &quot;Resource&quot;: &quot;arn:aws:sns:*:*:vpce-notification-topic&quot;</span>
+<span class="s2">    }]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">foo_vpc_endpoint_service</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcEndpointService</span><span class="p">(</span><span class="s2">&quot;fooVpcEndpointService&quot;</span><span class="p">,</span>
+    <span class="n">acceptance_required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">network_load_balancer_arns</span><span class="o">=</span><span class="p">[</span><span class="n">aws_lb</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">]])</span>
+<span class="n">foo_vpc_endpoint_connection_notification</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcEndpointConnectionNotification</span><span class="p">(</span><span class="s2">&quot;fooVpcEndpointConnectionNotification&quot;</span><span class="p">,</span>
+    <span class="n">connection_events</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;Accept&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Reject&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">connection_notification_arn</span><span class="o">=</span><span class="n">topic</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">vpc_endpoint_service_id</span><span class="o">=</span><span class="n">foo_vpc_endpoint_service</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -11545,6 +12918,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.VpcEndpointRouteTableAssociation">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">VpcEndpointRouteTableAssociation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">route_table_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_endpoint_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointRouteTableAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a VPC Endpoint Route Table Association</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcEndpointRouteTableAssociation</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">route_table_id</span><span class="o">=</span><span class="n">aws_route_table</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">vpc_endpoint_id</span><span class="o">=</span><span class="n">aws_vpc_endpoint</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -11635,6 +13016,25 @@ and a VPC Endpoint Service resource with an <code class="docutils literal notran
 a VPC Endpoint Service resource and a VPC Endpoint Service Allowed Principal resource. Doing so will cause a conflict
 and will overwrite the association.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcEndpointService</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">acceptance_required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">network_load_balancer_arns</span><span class="o">=</span><span class="p">[</span><span class="n">aws_lb</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">]])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcEndpointService</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">acceptance_required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">network_load_balancer_arns</span><span class="o">=</span><span class="p">[</span><span class="n">aws_lb</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">]],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -11789,6 +13189,15 @@ and a VPC Endpoint Service resource with an <code class="docutils literal notran
 a VPC Endpoint Service resource and a VPC Endpoint Service Allowed Principal resource. Doing so will cause a conflict
 and will overwrite the association.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">current</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_caller_identity</span><span class="p">()</span>
+<span class="n">allow_me_to_foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcEndpointServiceAllowedPrinciple</span><span class="p">(</span><span class="s2">&quot;allowMeToFoo&quot;</span><span class="p">,</span>
+    <span class="n">principal_arn</span><span class="o">=</span><span class="n">current</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">vpc_endpoint_service_id</span><span class="o">=</span><span class="n">aws_vpc_endpoint_service</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -11878,6 +13287,14 @@ and a single <code class="docutils literal notranslate"><span class="pre">subnet
 attribute. Do not use the same subnet ID in both a VPC Endpoint resource and a VPC Endpoint Subnet
 Association resource. Doing so will cause a conflict of associations and will overwrite the association.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">sn_ec2</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcEndpointSubnetAssociation</span><span class="p">(</span><span class="s2">&quot;snEc2&quot;</span><span class="p">,</span>
+    <span class="n">subnet_id</span><span class="o">=</span><span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;sn&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">vpc_endpoint_id</span><span class="o">=</span><span class="n">aws_vpc_endpoint</span><span class="p">[</span><span class="s2">&quot;ec2&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -11962,6 +13379,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a resource to associate additional IPv4 CIDR blocks with a VPC.</p>
 <p>When a VPC is created, a primary IPv4 CIDR block for the VPC must be specified.
 The <code class="docutils literal notranslate"><span class="pre">ec2.VpcIpv4CidrBlockAssociation</span></code> resource allows further IPv4 CIDR blocks to be added to the VPC.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">secondary_cidr</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcIpv4CidrBlockAssociation</span><span class="p">(</span><span class="s2">&quot;secondaryCidr&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.2.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12056,6 +13482,15 @@ management of the VPC Peering Connection and allows options to be set correctly 
 VPC Peering Connections use the <code class="docutils literal notranslate"><span class="pre">ec2.VpcPeeringConnection</span></code> resource to manage the requester’s side of the
 connection and use the <code class="docutils literal notranslate"><span class="pre">ec2.VpcPeeringConnectionAccepter</span></code> resource to manage the accepter’s side of the connection.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcPeeringConnection</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">peer_owner_id</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;peer_owner_id&quot;</span><span class="p">],</span>
+    <span class="n">peer_vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;bar&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <p>If both VPCs are not in the same AWS account do not enable the <code class="docutils literal notranslate"><span class="pre">auto_accept</span></code> attribute.
 The accepter can manage its side of the connection using the <code class="docutils literal notranslate"><span class="pre">ec2.VpcPeeringConnectionAccepter</span></code> resource
 or accept the connection manually using the AWS Management Console, AWS CLI, through SDKs, etc.</p>
@@ -12297,6 +13732,33 @@ accepter’s account.
 The requester can use the <code class="docutils literal notranslate"><span class="pre">ec2.VpcPeeringConnection</span></code> resource to manage its side of the connection
 and the accepter can use the <code class="docutils literal notranslate"><span class="pre">ec2.VpcPeeringConnectionAccepter</span></code> resource to “adopt” its side of the
 connection into management.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_pulumi</span> <span class="k">as</span> <span class="nn">pulumi</span>
+
+<span class="n">peer</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">Aws</span><span class="p">(</span><span class="s2">&quot;peer&quot;</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-west-2&quot;</span><span class="p">)</span>
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">peer_vpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;peerVpc&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.1.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">peer_caller_identity</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_caller_identity</span><span class="p">()</span>
+<span class="c1"># Requester&#39;s side of the connection.</span>
+<span class="n">peer_vpc_peering_connection</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcPeeringConnection</span><span class="p">(</span><span class="s2">&quot;peerVpcPeeringConnection&quot;</span><span class="p">,</span>
+    <span class="n">auto_accept</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">peer_owner_id</span><span class="o">=</span><span class="n">peer_caller_identity</span><span class="o">.</span><span class="n">account_id</span><span class="p">,</span>
+    <span class="n">peer_region</span><span class="o">=</span><span class="s2">&quot;us-west-2&quot;</span><span class="p">,</span>
+    <span class="n">peer_vpc_id</span><span class="o">=</span><span class="n">peer_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Side&quot;</span><span class="p">:</span> <span class="s2">&quot;Requester&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="c1"># Accepter&#39;s side of the connection.</span>
+<span class="n">peer_vpc_peering_connection_accepter</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcPeeringConnectionAccepter</span><span class="p">(</span><span class="s2">&quot;peerVpcPeeringConnectionAccepter&quot;</span><span class="p">,</span>
+    <span class="n">auto_accept</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Side&quot;</span><span class="p">:</span> <span class="s2">&quot;Accepter&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vpc_peering_connection_id</span><span class="o">=</span><span class="n">peer_vpc_peering_connection</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12502,6 +13964,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>Note:</strong> The CIDR blocks in the arguments <code class="docutils literal notranslate"><span class="pre">tunnel1_inside_cidr</span></code> and <code class="docutils literal notranslate"><span class="pre">tunnel2_inside_cidr</span></code> must have a prefix of /30 and be a part of a specific range.
 <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnTunnelOptionsSpecification.html">Read more about this in the AWS documentation</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_transit_gateway</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">TransitGateway</span><span class="p">(</span><span class="s2">&quot;exampleTransitGateway&quot;</span><span class="p">)</span>
+<span class="n">example_customer_gateway</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">CustomerGateway</span><span class="p">(</span><span class="s2">&quot;exampleCustomerGateway&quot;</span><span class="p">,</span>
+    <span class="n">bgp_asn</span><span class="o">=</span><span class="mi">65000</span><span class="p">,</span>
+    <span class="n">ip_address</span><span class="o">=</span><span class="s2">&quot;172.0.0.1&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;ipsec.1&quot;</span><span class="p">)</span>
+<span class="n">example_vpn_connection</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpnConnection</span><span class="p">(</span><span class="s2">&quot;exampleVpnConnection&quot;</span><span class="p">,</span>
+    <span class="n">customer_gateway_id</span><span class="o">=</span><span class="n">example_customer_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">transit_gateway_id</span><span class="o">=</span><span class="n">example_transit_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="n">example_customer_gateway</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">vpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;vpc&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">vpn_gateway</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpnGateway</span><span class="p">(</span><span class="s2">&quot;vpnGateway&quot;</span><span class="p">,</span> <span class="n">vpc_id</span><span class="o">=</span><span class="n">vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">customer_gateway</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">CustomerGateway</span><span class="p">(</span><span class="s2">&quot;customerGateway&quot;</span><span class="p">,</span>
+    <span class="n">bgp_asn</span><span class="o">=</span><span class="mi">65000</span><span class="p">,</span>
+    <span class="n">ip_address</span><span class="o">=</span><span class="s2">&quot;172.0.0.1&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;ipsec.1&quot;</span><span class="p">)</span>
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpnConnection</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
+    <span class="n">customer_gateway_id</span><span class="o">=</span><span class="n">customer_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">static_routes_only</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;ipsec.1&quot;</span><span class="p">,</span>
+    <span class="n">vpn_gateway_id</span><span class="o">=</span><span class="n">vpn_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12746,6 +14238,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.VpnConnectionRoute">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">VpnConnectionRoute</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpn_connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpnConnectionRoute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a static route between a VPN connection and a customer gateway.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">vpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;vpc&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">vpn_gateway</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpnGateway</span><span class="p">(</span><span class="s2">&quot;vpnGateway&quot;</span><span class="p">,</span> <span class="n">vpc_id</span><span class="o">=</span><span class="n">vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">customer_gateway</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">CustomerGateway</span><span class="p">(</span><span class="s2">&quot;customerGateway&quot;</span><span class="p">,</span>
+    <span class="n">bgp_asn</span><span class="o">=</span><span class="mi">65000</span><span class="p">,</span>
+    <span class="n">ip_address</span><span class="o">=</span><span class="s2">&quot;172.0.0.1&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;ipsec.1&quot;</span><span class="p">)</span>
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpnConnection</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
+    <span class="n">customer_gateway_id</span><span class="o">=</span><span class="n">customer_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">static_routes_only</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;ipsec.1&quot;</span><span class="p">,</span>
+    <span class="n">vpn_gateway_id</span><span class="o">=</span><span class="n">vpn_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">office</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpnConnectionRoute</span><span class="p">(</span><span class="s2">&quot;office&quot;</span><span class="p">,</span>
+    <span class="n">destination_cidr_block</span><span class="o">=</span><span class="s2">&quot;192.168.10.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpn_connection_id</span><span class="o">=</span><span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12828,6 +14339,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.VpnGateway">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">VpnGateway</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">amazon_side_asn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpnGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create a VPC VPN Gateway.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">vpn_gw</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpnGateway</span><span class="p">(</span><span class="s2">&quot;vpnGw&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;main&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12932,6 +14453,18 @@ hardware VPN gateway to be attached and/or detached from a VPC.</p>
 resource can also automatically attach the Virtual Private Gateway it creates
 to an existing VPC by setting the <code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> attribute accordingly.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">network</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;network&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">vpn</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpnGateway</span><span class="p">(</span><span class="s2">&quot;vpn&quot;</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;example-vpn-gateway&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">vpn_attachment</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpnGatewayAttachment</span><span class="p">(</span><span class="s2">&quot;vpnAttachment&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">network</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">vpn_gateway_id</span><span class="o">=</span><span class="n">vpn</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13019,6 +14552,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 the <code class="docutils literal notranslate"><span class="pre">propagating_vgws</span></code> argument set. If that argument is set, any route
 propagation not explicitly listed in its value will be removed.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpnGatewayRoutePropagation</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">route_table_id</span><span class="o">=</span><span class="n">aws_route_table</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">vpn_gateway_id</span><span class="o">=</span><span class="n">aws_vpn_gateway</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13098,9 +14639,82 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py function">
+<dt id="pulumi_aws.ec2.get_coip_pool">
+<code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_coip_pool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_route_table_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_coip_pool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides details about a specific EC2 Customer-Owned IP Pool.</p>
+<p>This data source can prove useful when a module accepts a coip pool id as
+an input variable and needs to, for example, determine the CIDR block of that
+COIP Pool.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">coip_pool_id</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">require_object</span><span class="p">(</span><span class="s2">&quot;coipPoolId&quot;</span><span class="p">)</span>
+<span class="n">selected</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_coip_pool</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">coip_pool_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>local_gateway_route_table_id</strong> (<em>str</em>) – Local Gateway Route Table Id assigned to desired COIP Pool</p></li>
+<li><p><strong>pool_id</strong> (<em>str</em>) – The id of the specific COIP Pool to retrieve.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+a pair on the desired COIP Pool.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter by, as defined by
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeCoipPools.html">the underlying AWS API</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
+A COIP Pool will be selected if any one of the given values matches.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aws.ec2.get_coip_pools">
+<code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_coip_pools</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_coip_pools" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides information for multiple EC2 Customer-Owned IP Pools, such as their identifiers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+a pair on the desired aws_ec2_coip_pools.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter by, as defined by
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeCoipPools.html">the underlying AWS API</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
+A COIP Pool will be selected if any one of the given values matches.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
 <dt id="pulumi_aws.ec2.get_customer_gateway">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_customer_gateway</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_customer_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AWS Customer Gateway.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_customer_gateway</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;tag:Name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;foo-prod&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpnGateway</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
+    <span class="n">amazon_side_asn</span><span class="o">=</span><span class="mi">7224</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">transit</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpnConnection</span><span class="p">(</span><span class="s2">&quot;transit&quot;</span><span class="p">,</span>
+    <span class="n">customer_gateway_id</span><span class="o">=</span><span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">static_routes_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="n">foo</span><span class="o">.</span><span class="n">type</span><span class="p">,</span>
+    <span class="n">vpn_gateway_id</span><span class="o">=</span><span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13122,6 +14736,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_instance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">get_password_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">get_user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an Amazon EC2 Instance for use in other
 resources.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_instance</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;image-id&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ami-xxxxxxxx&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;tag:Name&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;instance-name-tag&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="s2">&quot;i-instanceid&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13149,6 +14779,24 @@ exactly match a pair on the desired Instance.</p></li>
 <dt id="pulumi_aws.ec2.get_instance_type_offering">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_instance_type_offering</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">preferred_instance_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_instance_type_offering" title="Permalink to this definition">¶</a></dt>
 <dd><p>Information about single EC2 Instance Type Offering.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_instance_type_offering</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;instance-type&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;t1.micro&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;t2.micro&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;t3.micro&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">preferred_instance_types</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;t3.micro&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;t2.micro&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;t1.micro&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13169,6 +14817,25 @@ exactly match a pair on the desired Instance.</p></li>
 <dt id="pulumi_aws.ec2.get_instance_type_offerings">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_instance_type_offerings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_instance_type_offerings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Information about EC2 Instance Type Offerings.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_instance_type_offerings</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;instance-type&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;t2.micro&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;t3.micro&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;location&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;usw2-az4&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">location_type</span><span class="o">=</span><span class="s2">&quot;availability-zone-id&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13196,6 +14863,25 @@ or to make it easier for an operator to connect through bastion host(s).</p>
 instances (e.g. managed via autoscaling group), as the output may change at any time
 and you’d need to re-run <code class="docutils literal notranslate"><span class="pre">apply</span></code> every time an instance comes up or dies.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_instances</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_instances</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;instance.group-id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;sg-12345678&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">instance_state_names</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;running&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;stopped&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">instance_tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Role&quot;</span><span class="p">:</span> <span class="s2">&quot;HardWorker&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">test_eip</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="nb">range</span> <span class="ow">in</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">test_instances</span><span class="o">.</span><span class="n">ids</span><span class="p">))]:</span>
+    <span class="n">test_eip</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Eip</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;testEip-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span><span class="n">test_instances</span><span class="o">.</span><span class="n">ids</span><span class="p">[</span><span class="nb">range</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]]))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13219,6 +14905,17 @@ exactly match a pair on desired instances.</p></li>
 <dt id="pulumi_aws.ec2.get_internet_gateway">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_internet_gateway</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internet_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_internet_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ec2.InternetGateway</span></code> provides details about a specific Internet Gateway.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">vpc_id</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">require_object</span><span class="p">(</span><span class="s2">&quot;vpcId&quot;</span><span class="p">)</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_internet_gateway</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;attachment.vpc-id&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">vpc_id</span><span class="p">],</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13242,6 +14939,12 @@ An Internet Gateway will be selected if any one of the given values matches.</p>
 <dt id="pulumi_aws.ec2.get_launch_configuration">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_launch_configuration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_launch_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Launch Configuration.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">ubuntu</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_launch_configuration</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;test-launch-config&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the launch configuration.</p>
@@ -13253,6 +14956,21 @@ An Internet Gateway will be selected if any one of the given values matches.</p>
 <dt id="pulumi_aws.ec2.get_launch_template">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_launch_template</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_launch_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Launch Template.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_launch_template</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-launch-template&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_launch_template</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;launch-template-name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;some-template&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13270,9 +14988,138 @@ An Internet Gateway will be selected if any one of the given values matches.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt id="pulumi_aws.ec2.get_local_gateway">
+<code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_local_gateway</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_local_gateway" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides details about an EC2 Local Gateway.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">local_gateway_id</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">require_object</span><span class="p">(</span><span class="s2">&quot;localGatewayId&quot;</span><span class="p">)</span>
+<span class="n">selected</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_local_gateway</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">local_gateway_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The id of the specific Local Gateway to retrieve.</p></li>
+<li><p><strong>state</strong> (<em>str</em>) – The current state of the desired Local Gateway.
+Can be either <code class="docutils literal notranslate"><span class="pre">&quot;pending&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;available&quot;</span></code>.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+a pair on the desired Local Gateway.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter by, as defined by
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLocalGateways.html">the underlying AWS API</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
+A Local Gateway will be selected if any one of the given values matches.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aws.ec2.get_local_gateway_route_table">
+<code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_local_gateway_route_table</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_route_table_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outpost_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_local_gateway_route_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides details about an EC2 Local Gateway Route Table.</p>
+<p>This data source can prove useful when a module accepts a local gateway route table id as
+an input variable and needs to, for example, find the associated Outpost or Local Gateway.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">ec2</span><span class="o">.</span><span class="n">getLocalGatewayRouteTable</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">require_object</span><span class="p">(</span><span class="s2">&quot;awsEc2LocalGatewayRouteTable&quot;</span><span class="p">)</span>
+<span class="n">selected</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_local_gateway_route_table</span><span class="p">(</span><span class="n">local_gateway_route_table_id</span><span class="o">=</span><span class="n">aws_ec2_local_gateway_route_table</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>local_gateway_id</strong> (<em>str</em>) – The id of the specific local gateway route table to retrieve.</p></li>
+<li><p><strong>local_gateway_route_table_id</strong> (<em>str</em>) – Local Gateway Route Table Id assigned to desired local gateway route table</p></li>
+<li><p><strong>outpost_arn</strong> (<em>str</em>) – The arn of the Outpost the local gateway route table is associated with.</p></li>
+<li><p><strong>state</strong> (<em>str</em>) – The state of the local gateway route table.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+a pair on the desired local gateway route table.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter by, as defined by
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLocalGatewayRouteTables.html">the underlying AWS API</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
+A local gateway route table will be selected if any one of the given values matches.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aws.ec2.get_local_gateway_route_tables">
+<code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_local_gateway_route_tables</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_local_gateway_route_tables" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides information for multiple EC2 Local Gateway Route Tables, such as their identifiers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+a pair on the desired local gateway route table.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter by, as defined by
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLocalGatewayRouteTables.html">the underlying AWS API</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
+A Local Gateway Route Table will be selected if any one of the given values matches.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aws.ec2.get_local_gateways">
+<code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_local_gateways</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_local_gateways" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides information for multiple EC2 Local Gateways, such as their identifiers.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo_local_gateways</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_local_gateways</span><span class="p">(</span><span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;production&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="n">foo_local_gateways</span><span class="o">.</span><span class="n">ids</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+a pair on the desired local_gateways.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter by, as defined by
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLocalGateways.html">the underlying AWS API</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
+A Local Gateway will be selected if any one of the given values matches.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
 <dt id="pulumi_aws.ec2.get_nat_gateway">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_nat_gateway</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_nat_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides details about a specific Nat Gateway.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">subnet_id</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">require_object</span><span class="p">(</span><span class="s2">&quot;subnetId&quot;</span><span class="p">)</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_nat_gateway</span><span class="p">(</span><span class="n">subnet_id</span><span class="o">=</span><span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;public&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13298,7 +15145,14 @@ An Nat Gateway will be selected if any one of the given values matches.</p></li>
 <dl class="py function">
 <dt id="pulumi_aws.ec2.get_network_acls">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_network_acls</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_network_acls" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_network_acls</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_network_acls</span><span class="p">(</span><span class="n">vpc_id</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;vpc_id&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">example_network_acls</span><span class="o">.</span><span class="n">ids</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
@@ -13321,6 +15175,12 @@ A VPC will be selected if any one of the given values matches.</p></li>
 <dt id="pulumi_aws.ec2.get_network_interface">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_network_interface</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_network_interface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a Network Interface.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">bar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_network_interface</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;eni-01234567&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13340,7 +15200,14 @@ A VPC will be selected if any one of the given values matches.</p></li>
 <dl class="py function">
 <dt id="pulumi_aws.ec2.get_network_interfaces">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_network_interfaces</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_network_interfaces" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_network_interfaces</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_network_interfaces</span><span class="p">()</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">example_network_interfaces</span><span class="o">.</span><span class="n">ids</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
@@ -13364,6 +15231,17 @@ a pair on the desired network interfaces.</p></li>
 <p>This resource can prove useful when finding the resource
 associated with a CIDR. For example, finding the peering
 connection associated with a CIDR value.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">subnet_id</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">require_object</span><span class="p">(</span><span class="s2">&quot;subnetId&quot;</span><span class="p">)</span>
+<span class="n">selected</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_route_table</span><span class="p">(</span><span class="n">subnet_id</span><span class="o">=</span><span class="n">subnet_id</span><span class="p">)</span>
+<span class="n">route</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_route</span><span class="p">(</span><span class="n">destination_cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">,</span>
+    <span class="n">route_table_id</span><span class="o">=</span><span class="n">aws_route_table</span><span class="p">[</span><span class="s2">&quot;selected&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">interface</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_network_interface</span><span class="p">(</span><span class="n">network_interface_id</span><span class="o">=</span><span class="n">route</span><span class="o">.</span><span class="n">network_interface_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13389,6 +15267,18 @@ connection associated with a CIDR value.</p>
 <p>This resource can prove useful when a module accepts a Subnet id as
 an input variable and needs to, for example, add a route in
 the Route Table.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">subnet_id</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">require_object</span><span class="p">(</span><span class="s2">&quot;subnetId&quot;</span><span class="p">)</span>
+<span class="n">selected</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_route_table</span><span class="p">(</span><span class="n">subnet_id</span><span class="o">=</span><span class="n">subnet_id</span><span class="p">)</span>
+<span class="n">route</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Route</span><span class="p">(</span><span class="s2">&quot;route&quot;</span><span class="p">,</span>
+    <span class="n">destination_cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/22&quot;</span><span class="p">,</span>
+    <span class="n">route_table_id</span><span class="o">=</span><span class="n">selected</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">vpc_peering_connection_id</span><span class="o">=</span><span class="s2">&quot;pcx-45ff3dc1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13415,6 +15305,22 @@ A Route Table will be selected if any one of the given values matches.</p></li>
 <dt id="pulumi_aws.ec2.get_route_tables">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_route_tables</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_route_tables" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource can be useful for getting back a list of route table ids to be referenced elsewhere.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">rts</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_route_tables</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;tag:kubernetes.io/kops/role&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;private*&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;vpc_id&quot;</span><span class="p">])</span>
+<span class="n">route</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="nb">range</span> <span class="ow">in</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">rts</span><span class="o">.</span><span class="n">ids</span><span class="p">))]:</span>
+    <span class="n">route</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Route</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;route-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">destination_cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/22&quot;</span><span class="p">,</span>
+        <span class="n">route_table_id</span><span class="o">=</span><span class="n">rts</span><span class="o">.</span><span class="n">ids</span><span class="p">[</span><span class="nb">range</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]],</span>
+        <span class="n">vpc_peering_connection_id</span><span class="o">=</span><span class="s2">&quot;pcx-0e9a7a9ecd137dc54&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13441,6 +15347,17 @@ A Route Table will be selected if any one of the given values matches.</p></li>
 <p>This resource can prove useful when a module accepts a Security Group id as
 an input variable and needs to, for example, determine the id of the
 VPC that the security group belongs to.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">security_group_id</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">require_object</span><span class="p">(</span><span class="s2">&quot;securityGroupId&quot;</span><span class="p">)</span>
+<span class="n">selected</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_security_group</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">security_group_id</span><span class="p">)</span>
+<span class="n">subnet</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;subnet&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">selected</span><span class="o">.</span><span class="n">vpc_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13469,6 +15386,15 @@ A Security Group will be selected if any one of the given values matches.</p></l
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_security_groups</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_security_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get IDs and VPC membership of Security Groups that are created
 outside of this provider.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_security_groups</span><span class="p">(</span><span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;Application&quot;</span><span class="p">:</span> <span class="s2">&quot;k8s&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13494,6 +15420,22 @@ desired security groups.</p></li>
 <p>This resource can prove useful when a module accepts a subnet id as
 an input variable and needs to, for example, determine the id of the
 VPC that the subnet belongs to.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">subnet_id</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">require_object</span><span class="p">(</span><span class="s2">&quot;subnetId&quot;</span><span class="p">)</span>
+<span class="n">selected</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_subnet</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">subnet_id</span><span class="p">)</span>
+<span class="n">subnet</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;subnet&quot;</span><span class="p">,</span>
+    <span class="n">ingress</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;cidrBlocks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">selected</span><span class="o">.</span><span class="n">cidr_block</span><span class="p">],</span>
+        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">selected</span><span class="o">.</span><span class="n">vpc_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13528,6 +15470,14 @@ A subnet will be selected if any one of the given values matches.</p></li>
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_subnet_ids</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_subnet_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ec2.getSubnetIds</span></code> provides a set of ids for a vpc_id</p>
 <p>This resource can be useful for getting back a set of subnet ids for a vpc.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_subnet_ids</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_subnet_ids</span><span class="p">(</span><span class="n">vpc_id</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;vpc_id&quot;</span><span class="p">])</span>
+<span class="n">example_subnet</span> <span class="o">=</span> <span class="p">[</span><span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_subnet</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">__value</span><span class="p">)</span> <span class="k">for</span> <span class="n">__key</span><span class="p">,</span> <span class="n">__value</span> <span class="ow">in</span> <span class="n">example_subnet_ids</span><span class="o">.</span><span class="n">ids</span><span class="p">]</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;subnetCidrBlocks&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">cidr_block</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">example_subnet</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13584,6 +15534,27 @@ A VPC will be selected if any one of the given values matches.</p></li>
 <dt id="pulumi_aws.ec2.get_vpc_dhcp_options">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_vpc_dhcp_options</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dhcp_options_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_dhcp_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about an EC2 DHCP Options configuration.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_vpc_dhcp_options</span><span class="p">(</span><span class="n">dhcp_options_id</span><span class="o">=</span><span class="s2">&quot;dopts-12345678&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_vpc_dhcp_options</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;key&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;domain-name&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;value&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;example.com&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+<span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13605,6 +15576,16 @@ A VPC will be selected if any one of the given values matches.</p></li>
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_vpc_endpoint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPC Endpoint data source provides details about
 a specific VPC endpoint.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">s3</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_vpc_endpoint</span><span class="p">(</span><span class="n">service_name</span><span class="o">=</span><span class="s2">&quot;com.amazonaws.us-west-2.s3&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">private_s3</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcEndpointRouteTableAssociation</span><span class="p">(</span><span class="s2">&quot;privateS3&quot;</span><span class="p">,</span>
+    <span class="n">route_table_id</span><span class="o">=</span><span class="n">aws_route_table</span><span class="p">[</span><span class="s2">&quot;private&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">vpc_endpoint_id</span><span class="o">=</span><span class="n">s3</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13632,6 +15613,33 @@ A VPC Endpoint will be selected if any one of the given values matches.</p></li>
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_vpc_endpoint_service</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_endpoint_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPC Endpoint Service data source details about a specific service that
 can be specified when creating a VPC endpoint within the region configured in the provider.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">s3</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_vpc_endpoint_service</span><span class="p">(</span><span class="n">service</span><span class="o">=</span><span class="s2">&quot;s3&quot;</span><span class="p">)</span>
+<span class="c1"># Create a VPC</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">)</span>
+<span class="c1"># Create a VPC endpoint</span>
+<span class="n">ep</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcEndpoint</span><span class="p">(</span><span class="s2">&quot;ep&quot;</span><span class="p">,</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="n">s3</span><span class="o">.</span><span class="n">service_name</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">custome</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_vpc_endpoint_service</span><span class="p">(</span><span class="n">service_name</span><span class="o">=</span><span class="s2">&quot;com.amazonaws.vpce.us-west-2.vpce-svc-0e87519c997c63cd8&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_vpc_endpoint_service</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;service-name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;some-service&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13654,6 +15662,20 @@ can be specified when creating a VPC endpoint within the region configured in th
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_vpc_peering_connection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_peering_connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPC Peering Connection data source provides details about
 a specific VPC peering connection.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">pc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_vpc_peering_connection</span><span class="p">(</span><span class="n">peer_cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/22&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="c1"># Create a route table</span>
+<span class="n">rt</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">RouteTable</span><span class="p">(</span><span class="s2">&quot;rt&quot;</span><span class="p">,</span> <span class="n">vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="c1"># Create a route</span>
+<span class="n">route</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Route</span><span class="p">(</span><span class="s2">&quot;route&quot;</span><span class="p">,</span>
+    <span class="n">destination_cidr_block</span><span class="o">=</span><span class="n">pc</span><span class="o">.</span><span class="n">peer_cidr_block</span><span class="p">,</span>
+    <span class="n">route_table_id</span><span class="o">=</span><span class="n">rt</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">vpc_peering_connection_id</span><span class="o">=</span><span class="n">pc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13687,6 +15709,15 @@ A VPC Peering Connection will be selected if any one of the given values matches
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_vpcs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpcs" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource can be useful for getting back a list of VPC Ids for a region.</p>
 <p>The following example retrieves a list of VPC Ids with a custom tag of <code class="docutils literal notranslate"><span class="pre">service</span></code> set to a value of “production”.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo_vpcs</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_vpcs</span><span class="p">(</span><span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;production&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="n">foo_vpcs</span><span class="o">.</span><span class="n">ids</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13710,6 +15741,16 @@ A VPC will be selected if any one of the given values matches.</p></li>
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_vpn_gateway</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">amazon_side_asn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attached_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpn_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPN Gateway data source provides details about
 a specific VPN gateway.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">selected</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_vpn_gateway</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;tag:Name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;vpn-gw&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;vpnGatewayId&quot;</span><span class="p">,</span> <span class="n">selected</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

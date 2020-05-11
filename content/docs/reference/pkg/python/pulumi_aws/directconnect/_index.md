@@ -22,6 +22,15 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.directconnect.BgpPeer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directconnect.</code><code class="sig-name descname">BgpPeer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address_family</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">amazon_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bgp_asn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bgp_auth_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">customer_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_interface_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.BgpPeer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Direct Connect BGP peer resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">peer</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">BgpPeer</span><span class="p">(</span><span class="s2">&quot;peer&quot;</span><span class="p">,</span>
+    <span class="n">address_family</span><span class="o">=</span><span class="s2">&quot;ipv6&quot;</span><span class="p">,</span>
+    <span class="n">bgp_asn</span><span class="o">=</span><span class="mi">65351</span><span class="p">,</span>
+    <span class="n">virtual_interface_id</span><span class="o">=</span><span class="n">aws_dx_private_virtual_interface</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -163,6 +172,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directconnect.Connection">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directconnect.</code><code class="sig-name descname">Connection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.Connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Connection of Direct Connect.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">hoge</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">Connection</span><span class="p">(</span><span class="s2">&quot;hoge&quot;</span><span class="p">,</span>
+    <span class="n">bandwidth</span><span class="o">=</span><span class="s2">&quot;1Gbps&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;EqDC2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -290,6 +307,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directconnect.ConnectionAssociation">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directconnect.</code><code class="sig-name descname">ConnectionAssociation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lag_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.ConnectionAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Associates a Direct Connect Connection with a LAG.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_connection</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">Connection</span><span class="p">(</span><span class="s2">&quot;exampleConnection&quot;</span><span class="p">,</span>
+    <span class="n">bandwidth</span><span class="o">=</span><span class="s2">&quot;1Gbps&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;EqSe2&quot;</span><span class="p">)</span>
+<span class="n">example_link_aggregation_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">LinkAggregationGroup</span><span class="p">(</span><span class="s2">&quot;exampleLinkAggregationGroup&quot;</span><span class="p">,</span>
+    <span class="n">connections_bandwidth</span><span class="o">=</span><span class="s2">&quot;1Gbps&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;EqSe2&quot;</span><span class="p">)</span>
+<span class="n">example_connection_association</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">ConnectionAssociation</span><span class="p">(</span><span class="s2">&quot;exampleConnectionAssociation&quot;</span><span class="p">,</span>
+    <span class="n">connection_id</span><span class="o">=</span><span class="n">example_connection</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">lag_id</span><span class="o">=</span><span class="n">example_link_aggregation_group</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -372,6 +403,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directconnect.Gateway">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directconnect.</code><code class="sig-name descname">Gateway</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">amazon_side_asn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.Gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Direct Connect Gateway.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">Gateway</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">amazon_side_asn</span><span class="o">=</span><span class="s2">&quot;64512&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -464,6 +501,46 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>To create a cross-account association, create an <cite>``directconnect.GatewayAssociationProposal`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/dx_gateway_association_proposal.html">https://www.terraform.io/docs/providers/aws/r/dx_gateway_association_proposal.html</a>&gt;`_
 in the AWS account that owns the VGW or transit gateway and then accept the proposal in the AWS account that owns the Direct Connect Gateway
 by creating an <code class="docutils literal notranslate"><span class="pre">directconnect.GatewayAssociation</span></code> resource with the <code class="docutils literal notranslate"><span class="pre">proposal_id</span></code> and <code class="docutils literal notranslate"><span class="pre">associated_gateway_owner_account_id</span></code> attributes set.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_gateway</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">Gateway</span><span class="p">(</span><span class="s2">&quot;exampleGateway&quot;</span><span class="p">,</span> <span class="n">amazon_side_asn</span><span class="o">=</span><span class="s2">&quot;64512&quot;</span><span class="p">)</span>
+<span class="n">example_vpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;exampleVpc&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.255.255.0/28&quot;</span><span class="p">)</span>
+<span class="n">example_vpn_gateway</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpnGateway</span><span class="p">(</span><span class="s2">&quot;exampleVpnGateway&quot;</span><span class="p">,</span> <span class="n">vpc_id</span><span class="o">=</span><span class="n">example_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">example_gateway_association</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">GatewayAssociation</span><span class="p">(</span><span class="s2">&quot;exampleGatewayAssociation&quot;</span><span class="p">,</span>
+    <span class="n">associated_gateway_id</span><span class="o">=</span><span class="n">example_vpn_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">dx_gateway_id</span><span class="o">=</span><span class="n">example_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_gateway</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">Gateway</span><span class="p">(</span><span class="s2">&quot;exampleGateway&quot;</span><span class="p">,</span> <span class="n">amazon_side_asn</span><span class="o">=</span><span class="s2">&quot;64512&quot;</span><span class="p">)</span>
+<span class="n">example_transit_gateway</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2transitgateway</span><span class="o">.</span><span class="n">TransitGateway</span><span class="p">(</span><span class="s2">&quot;exampleTransitGateway&quot;</span><span class="p">)</span>
+<span class="n">example_gateway_association</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">GatewayAssociation</span><span class="p">(</span><span class="s2">&quot;exampleGatewayAssociation&quot;</span><span class="p">,</span>
+    <span class="n">allowed_prefixes</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;10.255.255.0/30&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;10.255.255.8/30&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">associated_gateway_id</span><span class="o">=</span><span class="n">example_transit_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">dx_gateway_id</span><span class="o">=</span><span class="n">example_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_gateway</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">Gateway</span><span class="p">(</span><span class="s2">&quot;exampleGateway&quot;</span><span class="p">,</span> <span class="n">amazon_side_asn</span><span class="o">=</span><span class="s2">&quot;64512&quot;</span><span class="p">)</span>
+<span class="n">example_vpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;exampleVpc&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.255.255.0/28&quot;</span><span class="p">)</span>
+<span class="n">example_vpn_gateway</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpnGateway</span><span class="p">(</span><span class="s2">&quot;exampleVpnGateway&quot;</span><span class="p">,</span> <span class="n">vpc_id</span><span class="o">=</span><span class="n">example_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">example_gateway_association</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">GatewayAssociation</span><span class="p">(</span><span class="s2">&quot;exampleGatewayAssociation&quot;</span><span class="p">,</span>
+    <span class="n">allowed_prefixes</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;210.52.109.0/24&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;175.45.176.0/22&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">associated_gateway_id</span><span class="o">=</span><span class="n">example_vpn_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">dx_gateway_id</span><span class="o">=</span><span class="n">example_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -611,6 +688,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directconnect.GatewayAssociationProposal">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directconnect.</code><code class="sig-name descname">GatewayAssociationProposal</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_prefixes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">associated_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dx_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dx_gateway_owner_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpn_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociationProposal" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Direct Connect Gateway Association Proposal, typically for enabling cross-account associations. For single account associations, see the <cite>``directconnect.GatewayAssociation`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/dx_gateway_association.html">https://www.terraform.io/docs/providers/aws/r/dx_gateway_association.html</a>&gt;`_.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">GatewayAssociationProposal</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">associated_gateway_id</span><span class="o">=</span><span class="n">aws_vpn_gateway</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">dx_gateway_id</span><span class="o">=</span><span class="n">aws_dx_gateway</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">dx_gateway_owner_account_id</span><span class="o">=</span><span class="n">aws_dx_gateway</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;owner_account_id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -756,6 +842,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directconnect.</code><code class="sig-name descname">HostedPrivateVirtualInterface</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address_family</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">amazon_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bgp_asn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bgp_auth_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">customer_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mtu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedPrivateVirtualInterface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Direct Connect hosted private virtual interface resource. This resource represents the allocator’s side of the hosted virtual interface.
 A hosted virtual interface is a virtual interface that is owned by another AWS account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">HostedPrivateVirtualInterface</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">address_family</span><span class="o">=</span><span class="s2">&quot;ipv4&quot;</span><span class="p">,</span>
+    <span class="n">bgp_asn</span><span class="o">=</span><span class="mi">65352</span><span class="p">,</span>
+    <span class="n">connection_id</span><span class="o">=</span><span class="s2">&quot;dxcon-zzzzzzzz&quot;</span><span class="p">,</span>
+    <span class="n">vlan</span><span class="o">=</span><span class="mi">4094</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -924,6 +1020,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directconnect.</code><code class="sig-name descname">HostedPrivateVirtualInterfaceAccepter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dx_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_interface_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpn_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedPrivateVirtualInterfaceAccepter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage the accepter’s side of a Direct Connect hosted private virtual interface.
 This resource accepts ownership of a private virtual interface created by another AWS account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_pulumi</span> <span class="k">as</span> <span class="nn">pulumi</span>
+
+<span class="n">accepter</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">Aws</span><span class="p">(</span><span class="s2">&quot;accepter&quot;</span><span class="p">)</span>
+<span class="n">accepter_caller_identity</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_caller_identity</span><span class="p">()</span>
+<span class="c1"># Creator&#39;s side of the VIF</span>
+<span class="n">creator</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">HostedPrivateVirtualInterface</span><span class="p">(</span><span class="s2">&quot;creator&quot;</span><span class="p">,</span>
+    <span class="n">address_family</span><span class="o">=</span><span class="s2">&quot;ipv4&quot;</span><span class="p">,</span>
+    <span class="n">bgp_asn</span><span class="o">=</span><span class="mi">65352</span><span class="p">,</span>
+    <span class="n">connection_id</span><span class="o">=</span><span class="s2">&quot;dxcon-zzzzzzzz&quot;</span><span class="p">,</span>
+    <span class="n">owner_account_id</span><span class="o">=</span><span class="n">accepter_caller_identity</span><span class="o">.</span><span class="n">account_id</span><span class="p">,</span>
+    <span class="n">vlan</span><span class="o">=</span><span class="mi">4094</span><span class="p">)</span>
+<span class="c1"># Accepter&#39;s side of the VIF.</span>
+<span class="n">vpn_gw</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpnGateway</span><span class="p">(</span><span class="s2">&quot;vpnGw&quot;</span><span class="p">)</span>
+<span class="n">accepter_hosted_private_virtual_interface_accepter</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">HostedPrivateVirtualInterfaceAccepter</span><span class="p">(</span><span class="s2">&quot;accepterHostedPrivateVirtualInterfaceAccepter&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Side&quot;</span><span class="p">:</span> <span class="s2">&quot;Accepter&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">virtual_interface_id</span><span class="o">=</span><span class="n">creator</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">vpn_gateway_id</span><span class="o">=</span><span class="n">vpn_gw</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1030,6 +1149,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directconnect.</code><code class="sig-name descname">HostedPublicVirtualInterface</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address_family</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">amazon_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bgp_asn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bgp_auth_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">customer_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">route_filter_prefixes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedPublicVirtualInterface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Direct Connect hosted public virtual interface resource. This resource represents the allocator’s side of the hosted virtual interface.
 A hosted virtual interface is a virtual interface that is owned by another AWS account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">HostedPublicVirtualInterface</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">address_family</span><span class="o">=</span><span class="s2">&quot;ipv4&quot;</span><span class="p">,</span>
+    <span class="n">amazon_address</span><span class="o">=</span><span class="s2">&quot;175.45.176.2/30&quot;</span><span class="p">,</span>
+    <span class="n">bgp_asn</span><span class="o">=</span><span class="mi">65352</span><span class="p">,</span>
+    <span class="n">connection_id</span><span class="o">=</span><span class="s2">&quot;dxcon-zzzzzzzz&quot;</span><span class="p">,</span>
+    <span class="n">customer_address</span><span class="o">=</span><span class="s2">&quot;175.45.176.1/30&quot;</span><span class="p">,</span>
+    <span class="n">route_filter_prefixes</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;210.52.109.0/24&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;175.45.176.0/22&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">vlan</span><span class="o">=</span><span class="mi">4094</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1191,6 +1326,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directconnect.</code><code class="sig-name descname">HostedPublicVirtualInterfaceAccepter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_interface_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedPublicVirtualInterfaceAccepter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage the accepter’s side of a Direct Connect hosted public virtual interface.
 This resource accepts ownership of a public virtual interface created by another AWS account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_pulumi</span> <span class="k">as</span> <span class="nn">pulumi</span>
+
+<span class="n">accepter</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">Aws</span><span class="p">(</span><span class="s2">&quot;accepter&quot;</span><span class="p">)</span>
+<span class="n">accepter_caller_identity</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_caller_identity</span><span class="p">()</span>
+<span class="c1"># Creator&#39;s side of the VIF</span>
+<span class="n">creator</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">HostedPublicVirtualInterface</span><span class="p">(</span><span class="s2">&quot;creator&quot;</span><span class="p">,</span>
+    <span class="n">address_family</span><span class="o">=</span><span class="s2">&quot;ipv4&quot;</span><span class="p">,</span>
+    <span class="n">amazon_address</span><span class="o">=</span><span class="s2">&quot;175.45.176.2/30&quot;</span><span class="p">,</span>
+    <span class="n">bgp_asn</span><span class="o">=</span><span class="mi">65352</span><span class="p">,</span>
+    <span class="n">connection_id</span><span class="o">=</span><span class="s2">&quot;dxcon-zzzzzzzz&quot;</span><span class="p">,</span>
+    <span class="n">customer_address</span><span class="o">=</span><span class="s2">&quot;175.45.176.1/30&quot;</span><span class="p">,</span>
+    <span class="n">owner_account_id</span><span class="o">=</span><span class="n">accepter_caller_identity</span><span class="o">.</span><span class="n">account_id</span><span class="p">,</span>
+    <span class="n">route_filter_prefixes</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;210.52.109.0/24&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;175.45.176.0/22&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">vlan</span><span class="o">=</span><span class="mi">4094</span><span class="p">)</span>
+<span class="c1"># Accepter&#39;s side of the VIF.</span>
+<span class="n">accepter_hosted_public_virtual_interface_accepter</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">HostedPublicVirtualInterfaceAccepter</span><span class="p">(</span><span class="s2">&quot;accepterHostedPublicVirtualInterfaceAccepter&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Side&quot;</span><span class="p">:</span> <span class="s2">&quot;Accepter&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">virtual_interface_id</span><span class="o">=</span><span class="n">creator</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1282,6 +1444,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Direct Connect hosted transit virtual interface resource.
 This resource represents the allocator’s side of the hosted virtual interface.
 A hosted virtual interface is a virtual interface that is owned by another AWS account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">HostedTransitVirtualInterface</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">address_family</span><span class="o">=</span><span class="s2">&quot;ipv4&quot;</span><span class="p">,</span>
+    <span class="n">bgp_asn</span><span class="o">=</span><span class="mi">65352</span><span class="p">,</span>
+    <span class="n">connection_id</span><span class="o">=</span><span class="n">aws_dx_connection</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">vlan</span><span class="o">=</span><span class="mi">4094</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1453,6 +1625,29 @@ This resource accepts ownership of a transit virtual interface created by anothe
 <blockquote>
 <div><p><strong>NOTE:</strong> AWS allows a Direct Connect hosted transit virtual interface to be deleted from either the allocator’s or accepter’s side. However, this provider only allows the Direct Connect hosted transit virtual interface to be deleted from the allocator’s side by removing the corresponding <code class="docutils literal notranslate"><span class="pre">directconnect.HostedTransitVirtualInterface</span></code> resource from your configuration. Removing a <code class="docutils literal notranslate"><span class="pre">directconnect.HostedTransitVirtualInterfaceAcceptor</span></code> resource from your configuration will remove it from your statefile and management, <strong>but will not delete the Direct Connect virtual interface.</strong></p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_pulumi</span> <span class="k">as</span> <span class="nn">pulumi</span>
+
+<span class="n">accepter</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">Aws</span><span class="p">(</span><span class="s2">&quot;accepter&quot;</span><span class="p">)</span>
+<span class="n">accepter_caller_identity</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">get_caller_identity</span><span class="p">()</span>
+<span class="c1"># Creator&#39;s side of the VIF</span>
+<span class="n">creator</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">HostedTransitVirtualInterface</span><span class="p">(</span><span class="s2">&quot;creator&quot;</span><span class="p">,</span>
+    <span class="n">address_family</span><span class="o">=</span><span class="s2">&quot;ipv4&quot;</span><span class="p">,</span>
+    <span class="n">bgp_asn</span><span class="o">=</span><span class="mi">65352</span><span class="p">,</span>
+    <span class="n">connection_id</span><span class="o">=</span><span class="s2">&quot;dxcon-zzzzzzzz&quot;</span><span class="p">,</span>
+    <span class="n">owner_account_id</span><span class="o">=</span><span class="n">accepter_caller_identity</span><span class="o">.</span><span class="n">account_id</span><span class="p">,</span>
+    <span class="n">vlan</span><span class="o">=</span><span class="mi">4094</span><span class="p">)</span>
+<span class="c1"># Accepter&#39;s side of the VIF.</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">Gateway</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">amazon_side_asn</span><span class="o">=</span><span class="mi">64512</span><span class="p">)</span>
+<span class="n">accepter_hosted_transit_virtual_interface_acceptor</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">HostedTransitVirtualInterfaceAcceptor</span><span class="p">(</span><span class="s2">&quot;accepterHostedTransitVirtualInterfaceAcceptor&quot;</span><span class="p">,</span>
+    <span class="n">dx_gateway_id</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Side&quot;</span><span class="p">:</span> <span class="s2">&quot;Accepter&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">virtual_interface_id</span><span class="o">=</span><span class="n">creator</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1553,6 +1748,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><em>NOTE:</em> When creating a LAG, Direct Connect requires creating a Connection. This provider will remove this unmanaged connection during resource creation.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">hoge</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">LinkAggregationGroup</span><span class="p">(</span><span class="s2">&quot;hoge&quot;</span><span class="p">,</span>
+    <span class="n">connections_bandwidth</span><span class="o">=</span><span class="s2">&quot;1Gbps&quot;</span><span class="p">,</span>
+    <span class="n">force_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;EqDC2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1687,6 +1891,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directconnect.PrivateVirtualInterface">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directconnect.</code><code class="sig-name descname">PrivateVirtualInterface</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address_family</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">amazon_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bgp_asn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bgp_auth_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">customer_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dx_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mtu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpn_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.PrivateVirtualInterface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Direct Connect private virtual interface resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">PrivateVirtualInterface</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">address_family</span><span class="o">=</span><span class="s2">&quot;ipv4&quot;</span><span class="p">,</span>
+    <span class="n">bgp_asn</span><span class="o">=</span><span class="mi">65352</span><span class="p">,</span>
+    <span class="n">connection_id</span><span class="o">=</span><span class="s2">&quot;dxcon-zzzzzzzz&quot;</span><span class="p">,</span>
+    <span class="n">vlan</span><span class="o">=</span><span class="mi">4094</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1873,6 +2087,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directconnect.PublicVirtualInterface">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directconnect.</code><code class="sig-name descname">PublicVirtualInterface</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address_family</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">amazon_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bgp_asn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bgp_auth_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">customer_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">route_filter_prefixes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.PublicVirtualInterface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Direct Connect public virtual interface resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">PublicVirtualInterface</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">address_family</span><span class="o">=</span><span class="s2">&quot;ipv4&quot;</span><span class="p">,</span>
+    <span class="n">amazon_address</span><span class="o">=</span><span class="s2">&quot;175.45.176.2/30&quot;</span><span class="p">,</span>
+    <span class="n">bgp_asn</span><span class="o">=</span><span class="mi">65352</span><span class="p">,</span>
+    <span class="n">connection_id</span><span class="o">=</span><span class="s2">&quot;dxcon-zzzzzzzz&quot;</span><span class="p">,</span>
+    <span class="n">customer_address</span><span class="o">=</span><span class="s2">&quot;175.45.176.1/30&quot;</span><span class="p">,</span>
+    <span class="n">route_filter_prefixes</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;210.52.109.0/24&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;175.45.176.0/22&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">vlan</span><span class="o">=</span><span class="mi">4094</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2034,6 +2264,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directconnect.</code><code class="sig-name descname">TransitVirtualInterface</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address_family</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">amazon_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bgp_asn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bgp_auth_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">customer_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dx_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mtu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.TransitVirtualInterface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Direct Connect transit virtual interface resource.
 A transit virtual interface is a VLAN that transports traffic from a Direct Connect gateway to one or more transit gateways.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_gateway</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">Gateway</span><span class="p">(</span><span class="s2">&quot;exampleGateway&quot;</span><span class="p">,</span> <span class="n">amazon_side_asn</span><span class="o">=</span><span class="mi">64512</span><span class="p">)</span>
+<span class="n">example_transit_virtual_interface</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">TransitVirtualInterface</span><span class="p">(</span><span class="s2">&quot;exampleTransitVirtualInterface&quot;</span><span class="p">,</span>
+    <span class="n">address_family</span><span class="o">=</span><span class="s2">&quot;ipv4&quot;</span><span class="p">,</span>
+    <span class="n">bgp_asn</span><span class="o">=</span><span class="mi">65352</span><span class="p">,</span>
+    <span class="n">connection_id</span><span class="o">=</span><span class="n">aws_dx_connection</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">dx_gateway_id</span><span class="o">=</span><span class="n">example_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">vlan</span><span class="o">=</span><span class="mi">4094</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2212,6 +2454,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directconnect.get_gateway">
 <code class="sig-prename descclassname">pulumi_aws.directconnect.</code><code class="sig-name descname">get_gateway</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.get_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a Direct Connect Gateway.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">directconnect</span><span class="o">.</span><span class="n">get_gateway</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the gateway to retrieve.</p>

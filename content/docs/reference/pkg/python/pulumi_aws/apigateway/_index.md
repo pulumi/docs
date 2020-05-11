@@ -20,6 +20,49 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>Note:</strong> As there is no API method for deleting account settings or resetting it to defaults, destroying this resource will keep your account settings intact</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">cloudwatch_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;cloudwatchRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Sid&quot;: &quot;&quot;,</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;apigateway.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">demo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;demo&quot;</span><span class="p">,</span> <span class="n">cloudwatch_role_arn</span><span class="o">=</span><span class="n">cloudwatch_role</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+<span class="n">cloudwatch_role_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicy</span><span class="p">(</span><span class="s2">&quot;cloudwatchRolePolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">    &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">    &quot;Statement&quot;: [</span>
+<span class="s2">        {</span>
+<span class="s2">            &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">            &quot;Action&quot;: [</span>
+<span class="s2">                &quot;logs:CreateLogGroup&quot;,</span>
+<span class="s2">                &quot;logs:CreateLogStream&quot;,</span>
+<span class="s2">                &quot;logs:DescribeLogGroups&quot;,</span>
+<span class="s2">                &quot;logs:DescribeLogStreams&quot;,</span>
+<span class="s2">                &quot;logs:PutLogEvents&quot;,</span>
+<span class="s2">                &quot;logs:GetLogEvents&quot;,</span>
+<span class="s2">                &quot;logs:FilterLogEvents&quot;</span>
+<span class="s2">            ],</span>
+<span class="s2">            &quot;Resource&quot;: &quot;*&quot;</span>
+<span class="s2">        }</span>
+<span class="s2">    ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">cloudwatch_role</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -120,6 +163,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Since the API Gateway usage plans feature was launched on August 11, 2016, usage plans are now <strong>required</strong> to associate an API key with an API stage.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">my_demo_api_key</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">ApiKey</span><span class="p">(</span><span class="s2">&quot;myDemoApiKey&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -437,6 +486,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Connects a custom domain name registered via <code class="docutils literal notranslate"><span class="pre">apigateway.DomainName</span></code>
 with a deployed API so that its methods can be called via the
 custom domain name.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_deployment</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Deployment</span><span class="p">(</span><span class="s2">&quot;exampleDeployment&quot;</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">aws_api_gateway_rest_api</span><span class="p">[</span><span class="s2">&quot;MyDemoAPI&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">stage_name</span><span class="o">=</span><span class="s2">&quot;live&quot;</span><span class="p">)</span>
+<span class="n">example_domain_name</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">DomainName</span><span class="p">(</span><span class="s2">&quot;exampleDomainName&quot;</span><span class="p">,</span>
+    <span class="n">certificate_body</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="p">[</span><span class="s1">&#39;module&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/example.com/example.crt&quot;</span><span class="p">),</span>
+    <span class="n">certificate_chain</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="p">[</span><span class="s1">&#39;module&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/example.com/ca.crt&quot;</span><span class="p">),</span>
+    <span class="n">certificate_name</span><span class="o">=</span><span class="s2">&quot;example-api&quot;</span><span class="p">,</span>
+    <span class="n">certificate_private_key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="p">[</span><span class="s1">&#39;module&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/example.com/example.key&quot;</span><span class="p">),</span>
+    <span class="n">domain_name</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">)</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">BasePathMapping</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">aws_api_gateway_rest_api</span><span class="p">[</span><span class="s2">&quot;MyDemoAPI&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">domain_name</span><span class="o">=</span><span class="n">example_domain_name</span><span class="o">.</span><span class="n">domain_name</span><span class="p">,</span>
+    <span class="n">stage_name</span><span class="o">=</span><span class="n">example_deployment</span><span class="o">.</span><span class="n">stage_name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -535,6 +602,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.ClientCertificate">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">ClientCertificate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.ClientCertificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an API Gateway Client Certificate.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">demo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">ClientCertificate</span><span class="p">(</span><span class="s2">&quot;demo&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;My client certificate&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -643,12 +716,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aws.apigateway.Deployment">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">Deployment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rest_api</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stage_description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stage_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">variables</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.Deployment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">Deployment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rest_api</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stage_description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stage_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">triggers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">variables</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.Deployment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an API Gateway REST Deployment.</p>
 <blockquote>
-<div><p><strong>Note:</strong> Depends on having <code class="docutils literal notranslate"><span class="pre">apigateway.Integration</span></code> inside your rest api (which in turn depends on <code class="docutils literal notranslate"><span class="pre">apigateway.Method</span></code>). To avoid race conditions
-you might need to add an explicit <code class="docutils literal notranslate"><span class="pre">depends_on</span> <span class="pre">=</span> <span class="pre">[&quot;${aws_api_gateway_integration.name}&quot;]</span></code>.</p>
+<div><p><strong>Note:</strong> This resource depends on having at least one <code class="docutils literal notranslate"><span class="pre">apigateway.Integration</span></code> created in the REST API, which 
+itself has other dependencies. To avoid race conditions when all resources are being created together, you need to add 
+implicit resource references via the <code class="docutils literal notranslate"><span class="pre">triggers</span></code> argument or explicit resource references using the 
+<cite>resource ``dependsOn`</cite> meta-argument &lt;<a class="reference external" href="https://www.pulumi.com/docs/intro/concepts/programming-model/#dependson">https://www.pulumi.com/docs/intro/concepts/programming-model/#dependson</a>&gt;`_.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">my_demo_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">RestApi</span><span class="p">(</span><span class="s2">&quot;myDemoAPI&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is my API for demonstration purposes&quot;</span><span class="p">)</span>
+<span class="n">my_demo_resource</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="s2">&quot;myDemoResource&quot;</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">parent_id</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">root_resource_id</span><span class="p">,</span>
+    <span class="n">path_part</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
+<span class="n">my_demo_method</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Method</span><span class="p">(</span><span class="s2">&quot;myDemoMethod&quot;</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">my_demo_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">http_method</span><span class="o">=</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="n">authorization</span><span class="o">=</span><span class="s2">&quot;NONE&quot;</span><span class="p">)</span>
+<span class="n">my_demo_integration</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Integration</span><span class="p">(</span><span class="s2">&quot;myDemoIntegration&quot;</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">my_demo_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">http_method</span><span class="o">=</span><span class="n">my_demo_method</span><span class="o">.</span><span class="n">http_method</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;MOCK&quot;</span><span class="p">)</span>
+<span class="n">my_demo_deployment</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Deployment</span><span class="p">(</span><span class="s2">&quot;myDemoDeployment&quot;</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">stage_name</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">variables</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;answer&quot;</span><span class="p">:</span> <span class="s2">&quot;42&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -658,6 +759,7 @@ you might need to add an explicit <code class="docutils literal notranslate"><sp
 <li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the associated REST API</p></li>
 <li><p><strong>stage_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the stage</p></li>
 <li><p><strong>stage_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the stage. If the specified stage already exists, it will be updated to point to the new deployment. If the stage does not exist, a new one will be created and point to this deployment.</p></li>
+<li><p><strong>triggers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of arbitrary keys and values that, when changed, will trigger a redeployment.</p></li>
 <li><p><strong>variables</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map that defines variables for the stage</p></li>
 </ul>
 </dd>
@@ -677,7 +779,7 @@ you might need to add an explicit <code class="docutils literal notranslate"><sp
 <dl class="py attribute">
 <dt id="pulumi_aws.apigateway.Deployment.execution_arn">
 <code class="sig-name descname">execution_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.Deployment.execution_arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The execution ARN to be used in <cite>``lambda_permission`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html</a>&gt;`_’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code>
+<dd><p>The execution ARN to be used in <code class="docutils literal notranslate"><span class="pre">lambda_permission</span></code> resource’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code>
 when allowing API Gateway to invoke a Lambda function,
 e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod</span></code></p>
 </dd></dl>
@@ -708,6 +810,12 @@ e.g. <code class="docutils literal notranslate"><span class="pre">https://z4675b
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_aws.apigateway.Deployment.triggers">
+<code class="sig-name descname">triggers</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.Deployment.triggers" title="Permalink to this definition">¶</a></dt>
+<dd><p>A map of arbitrary keys and values that, when changed, will trigger a redeployment.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_aws.apigateway.Deployment.variables">
 <code class="sig-name descname">variables</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.Deployment.variables" title="Permalink to this definition">¶</a></dt>
 <dd><p>A map that defines variables for the stage</p>
@@ -715,7 +823,7 @@ e.g. <code class="docutils literal notranslate"><span class="pre">https://z4675b
 
 <dl class="py method">
 <dt id="pulumi_aws.apigateway.Deployment.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">execution_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">invoke_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rest_api</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stage_description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stage_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">variables</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.Deployment.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">execution_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">invoke_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rest_api</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stage_description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stage_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">triggers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">variables</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.Deployment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Deployment resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -726,7 +834,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>created_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The creation date of the deployment</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the deployment</p></li>
-<li><p><strong>execution_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The execution ARN to be used in <cite>``lambda_permission`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html</a>&gt;`_’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code>
+<li><p><strong>execution_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The execution ARN to be used in <code class="docutils literal notranslate"><span class="pre">lambda_permission</span></code> resource’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code>
 when allowing API Gateway to invoke a Lambda function,
 e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod</span></code></p></li>
 <li><p><strong>invoke_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL to invoke the API pointing to the stage,
@@ -734,6 +842,7 @@ e.g. <code class="docutils literal notranslate"><span class="pre">https://z4675b
 <li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the associated REST API</p></li>
 <li><p><strong>stage_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the stage</p></li>
 <li><p><strong>stage_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the stage. If the specified stage already exists, it will be updated to point to the new deployment. If the stage does not exist, a new one will be created and point to this deployment.</p></li>
+<li><p><strong>triggers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of arbitrary keys and values that, when changed, will trigger a redeployment.</p></li>
 <li><p><strong>variables</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map that defines variables for the stage</p></li>
 </ul>
 </dd>
@@ -782,6 +891,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.DocumentationPart">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">DocumentationPart</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">properties</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rest_api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.DocumentationPart" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a settings of an API Gateway Documentation Part.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_rest_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">RestApi</span><span class="p">(</span><span class="s2">&quot;exampleRestApi&quot;</span><span class="p">)</span>
+<span class="n">example_documentation_part</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">DocumentationPart</span><span class="p">(</span><span class="s2">&quot;exampleDocumentationPart&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/example&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;METHOD&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">properties</span><span class="o">=</span><span class="s2">&quot;{&quot;</span><span class="n">description</span><span class="s2">&quot;:&quot;</span><span class="n">Example</span> <span class="n">description</span><span class="s2">&quot;}&quot;</span><span class="p">,</span>
+    <span class="n">rest_api_id</span><span class="o">=</span><span class="n">example_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -895,6 +1018,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.DocumentationVersion">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">DocumentationVersion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rest_api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.DocumentationVersion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage an API Gateway Documentation Version.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_rest_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">RestApi</span><span class="p">(</span><span class="s2">&quot;exampleRestApi&quot;</span><span class="p">)</span>
+<span class="n">example_documentation_version</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">DocumentationVersion</span><span class="p">(</span><span class="s2">&quot;exampleDocumentationVersion&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Example description&quot;</span><span class="p">,</span>
+    <span class="n">rest_api_id</span><span class="o">=</span><span class="n">example_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;example_version&quot;</span><span class="p">)</span>
+<span class="n">example_documentation_part</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">DocumentationPart</span><span class="p">(</span><span class="s2">&quot;exampleDocumentationPart&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;API&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">properties</span><span class="o">=</span><span class="s2">&quot;{&quot;</span><span class="n">description</span><span class="s2">&quot;:&quot;</span><span class="n">Example</span><span class="s2">&quot;}&quot;</span><span class="p">,</span>
+    <span class="n">rest_api_id</span><span class="o">=</span><span class="n">example_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1009,6 +1148,95 @@ from the validation resource where it will be available after the resource creat
 <p><strong>Note:</strong> All arguments including the private key will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_domain_name</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">DomainName</span><span class="p">(</span><span class="s2">&quot;exampleDomainName&quot;</span><span class="p">,</span>
+    <span class="n">certificate_arn</span><span class="o">=</span><span class="n">aws_acm_certificate_validation</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;certificate_arn&quot;</span><span class="p">],</span>
+    <span class="n">domain_name</span><span class="o">=</span><span class="s2">&quot;api.example.com&quot;</span><span class="p">)</span>
+<span class="c1"># Example DNS record using Route53.</span>
+<span class="c1"># Route53 is not specifically required; any DNS host can be used.</span>
+<span class="n">example_record</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;exampleRecord&quot;</span><span class="p">,</span>
+    <span class="n">aliases</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;evaluateTargetHealth&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">example_domain_name</span><span class="o">.</span><span class="n">cloudfront_domain_name</span><span class="p">,</span>
+        <span class="s2">&quot;zoneId&quot;</span><span class="p">:</span> <span class="n">example_domain_name</span><span class="o">.</span><span class="n">cloudfront_zone_id</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">name</span><span class="o">=</span><span class="n">example_domain_name</span><span class="o">.</span><span class="n">domain_name</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">aws_route53_zone</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_domain_name</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">DomainName</span><span class="p">(</span><span class="s2">&quot;exampleDomainName&quot;</span><span class="p">,</span>
+    <span class="n">certificate_body</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="p">[</span><span class="s1">&#39;module&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/example.com/example.crt&quot;</span><span class="p">),</span>
+    <span class="n">certificate_chain</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="p">[</span><span class="s1">&#39;module&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/example.com/ca.crt&quot;</span><span class="p">),</span>
+    <span class="n">certificate_name</span><span class="o">=</span><span class="s2">&quot;example-api&quot;</span><span class="p">,</span>
+    <span class="n">certificate_private_key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="p">[</span><span class="s1">&#39;module&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/example.com/example.key&quot;</span><span class="p">),</span>
+    <span class="n">domain_name</span><span class="o">=</span><span class="s2">&quot;api.example.com&quot;</span><span class="p">)</span>
+<span class="c1"># Example DNS record using Route53.</span>
+<span class="c1"># Route53 is not specifically required; any DNS host can be used.</span>
+<span class="n">example_record</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;exampleRecord&quot;</span><span class="p">,</span>
+    <span class="n">aliases</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;evaluateTargetHealth&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">example_domain_name</span><span class="o">.</span><span class="n">cloudfront_domain_name</span><span class="p">,</span>
+        <span class="s2">&quot;zoneId&quot;</span><span class="p">:</span> <span class="n">example_domain_name</span><span class="o">.</span><span class="n">cloudfront_zone_id</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">name</span><span class="o">=</span><span class="n">example_domain_name</span><span class="o">.</span><span class="n">domain_name</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">aws_route53_zone</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="c1"># See route53.Zone for how to create this</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_domain_name</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">DomainName</span><span class="p">(</span><span class="s2">&quot;exampleDomainName&quot;</span><span class="p">,</span>
+    <span class="n">domain_name</span><span class="o">=</span><span class="s2">&quot;api.example.com&quot;</span><span class="p">,</span>
+    <span class="n">endpoint_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;types&quot;</span><span class="p">:</span> <span class="s2">&quot;REGIONAL&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">regional_certificate_arn</span><span class="o">=</span><span class="n">aws_acm_certificate_validation</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;certificate_arn&quot;</span><span class="p">])</span>
+<span class="c1"># Example DNS record using Route53.</span>
+<span class="c1"># Route53 is not specifically required; any DNS host can be used.</span>
+<span class="n">example_record</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;exampleRecord&quot;</span><span class="p">,</span>
+    <span class="n">aliases</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;evaluateTargetHealth&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">example_domain_name</span><span class="o">.</span><span class="n">regional_domain_name</span><span class="p">,</span>
+        <span class="s2">&quot;zoneId&quot;</span><span class="p">:</span> <span class="n">example_domain_name</span><span class="o">.</span><span class="n">regional_zone_id</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">name</span><span class="o">=</span><span class="n">example_domain_name</span><span class="o">.</span><span class="n">domain_name</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">aws_route53_zone</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_domain_name</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">DomainName</span><span class="p">(</span><span class="s2">&quot;exampleDomainName&quot;</span><span class="p">,</span>
+    <span class="n">certificate_body</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="p">[</span><span class="s1">&#39;module&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/example.com/example.crt&quot;</span><span class="p">),</span>
+    <span class="n">certificate_chain</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="p">[</span><span class="s1">&#39;module&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/example.com/ca.crt&quot;</span><span class="p">),</span>
+    <span class="n">certificate_private_key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="p">[</span><span class="s1">&#39;module&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/example.com/example.key&quot;</span><span class="p">),</span>
+    <span class="n">domain_name</span><span class="o">=</span><span class="s2">&quot;api.example.com&quot;</span><span class="p">,</span>
+    <span class="n">endpoint_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;types&quot;</span><span class="p">:</span> <span class="s2">&quot;REGIONAL&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">regional_certificate_name</span><span class="o">=</span><span class="s2">&quot;example-api&quot;</span><span class="p">)</span>
+<span class="c1"># Example DNS record using Route53.</span>
+<span class="c1"># Route53 is not specifically required; any DNS host can be used.</span>
+<span class="n">example_record</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;exampleRecord&quot;</span><span class="p">,</span>
+    <span class="n">aliases</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;evaluateTargetHealth&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">example_domain_name</span><span class="o">.</span><span class="n">regional_domain_name</span><span class="p">,</span>
+        <span class="s2">&quot;zoneId&quot;</span><span class="p">:</span> <span class="n">example_domain_name</span><span class="o">.</span><span class="n">regional_zone_id</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">name</span><span class="o">=</span><span class="n">example_domain_name</span><span class="o">.</span><span class="n">domain_name</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">aws_route53_zone</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1439,6 +1667,86 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.Integration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">Integration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_key_parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_namespace</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_handling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">credentials</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_http_method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">passthrough_behavior</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_templates</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rest_api</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout_milliseconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.Integration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an HTTP Method Integration for an API Gateway Integration.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">my_demo_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">RestApi</span><span class="p">(</span><span class="s2">&quot;myDemoAPI&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is my API for demonstration purposes&quot;</span><span class="p">)</span>
+<span class="n">my_demo_resource</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="s2">&quot;myDemoResource&quot;</span><span class="p">,</span>
+    <span class="n">parent_id</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">root_resource_id</span><span class="p">,</span>
+    <span class="n">path_part</span><span class="o">=</span><span class="s2">&quot;mydemoresource&quot;</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">my_demo_method</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Method</span><span class="p">(</span><span class="s2">&quot;myDemoMethod&quot;</span><span class="p">,</span>
+    <span class="n">authorization</span><span class="o">=</span><span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+    <span class="n">http_method</span><span class="o">=</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">my_demo_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">my_demo_integration</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Integration</span><span class="p">(</span><span class="s2">&quot;myDemoIntegration&quot;</span><span class="p">,</span>
+    <span class="n">cache_key_parameters</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;method.request.path.param&quot;</span><span class="p">],</span>
+    <span class="n">cache_namespace</span><span class="o">=</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">http_method</span><span class="o">=</span><span class="n">my_demo_method</span><span class="o">.</span><span class="n">http_method</span><span class="p">,</span>
+    <span class="n">request_parameters</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;integration.request.header.X-Authorization&quot;</span><span class="p">:</span> <span class="s2">&quot;&#39;static&#39;&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">request_templates</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;application/xml&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">   &quot;body&quot; : $$input.json(&#39;$$&#39;)</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">my_demo_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">timeout_milliseconds</span><span class="o">=</span><span class="mi">29000</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;MOCK&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">require_object</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="n">subnet_id</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">require_object</span><span class="p">(</span><span class="s2">&quot;subnetId&quot;</span><span class="p">)</span>
+<span class="n">test_load_balancer</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;testLoadBalancer&quot;</span><span class="p">,</span>
+    <span class="n">internal</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">load_balancer_type</span><span class="o">=</span><span class="s2">&quot;network&quot;</span><span class="p">,</span>
+    <span class="n">subnets</span><span class="o">=</span><span class="p">[</span><span class="n">subnet_id</span><span class="p">])</span>
+<span class="n">test_vpc_link</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">VpcLink</span><span class="p">(</span><span class="s2">&quot;testVpcLink&quot;</span><span class="p">,</span> <span class="n">target_arn</span><span class="o">=</span><span class="n">test_load_balancer</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+<span class="n">test_rest_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">RestApi</span><span class="p">(</span><span class="s2">&quot;testRestApi&quot;</span><span class="p">)</span>
+<span class="n">test_resource</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="s2">&quot;testResource&quot;</span><span class="p">,</span>
+    <span class="n">parent_id</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">root_resource_id</span><span class="p">,</span>
+    <span class="n">path_part</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">test_method</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Method</span><span class="p">(</span><span class="s2">&quot;testMethod&quot;</span><span class="p">,</span>
+    <span class="n">authorization</span><span class="o">=</span><span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+    <span class="n">http_method</span><span class="o">=</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="n">request_models</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;application/json&quot;</span><span class="p">:</span> <span class="s2">&quot;Error&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">test_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">test_integration</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Integration</span><span class="p">(</span><span class="s2">&quot;testIntegration&quot;</span><span class="p">,</span>
+    <span class="n">connection_id</span><span class="o">=</span><span class="n">test_vpc_link</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">connection_type</span><span class="o">=</span><span class="s2">&quot;VPC_LINK&quot;</span><span class="p">,</span>
+    <span class="n">content_handling</span><span class="o">=</span><span class="s2">&quot;CONVERT_TO_TEXT&quot;</span><span class="p">,</span>
+    <span class="n">http_method</span><span class="o">=</span><span class="n">test_method</span><span class="o">.</span><span class="n">http_method</span><span class="p">,</span>
+    <span class="n">integration_http_method</span><span class="o">=</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="n">passthrough_behavior</span><span class="o">=</span><span class="s2">&quot;WHEN_NO_MATCH&quot;</span><span class="p">,</span>
+    <span class="n">request_parameters</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;integration.request.header.X-Authorization&quot;</span><span class="p">:</span> <span class="s2">&quot;&#39;static&#39;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;integration.request.header.X-Foo&quot;</span><span class="p">:</span> <span class="s2">&quot;&#39;Bar&#39;&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">request_templates</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;application/json&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;application/xml&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;#set($$inputRoot = $$input.path(&#39;$$&#39;))</span>
+<span class="s2">{ }</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">test_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">uri</span><span class="o">=</span><span class="s2">&quot;https://www.google.de&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1664,6 +1972,45 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> Depends on having <code class="docutils literal notranslate"><span class="pre">apigateway.Integration</span></code> inside your rest api. To ensure this
 you might need to add an explicit <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> for clean runs.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">my_demo_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">RestApi</span><span class="p">(</span><span class="s2">&quot;myDemoAPI&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is my API for demonstration purposes&quot;</span><span class="p">)</span>
+<span class="n">my_demo_resource</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="s2">&quot;myDemoResource&quot;</span><span class="p">,</span>
+    <span class="n">parent_id</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">root_resource_id</span><span class="p">,</span>
+    <span class="n">path_part</span><span class="o">=</span><span class="s2">&quot;mydemoresource&quot;</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">my_demo_method</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Method</span><span class="p">(</span><span class="s2">&quot;myDemoMethod&quot;</span><span class="p">,</span>
+    <span class="n">authorization</span><span class="o">=</span><span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+    <span class="n">http_method</span><span class="o">=</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">my_demo_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">my_demo_integration</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Integration</span><span class="p">(</span><span class="s2">&quot;myDemoIntegration&quot;</span><span class="p">,</span>
+    <span class="n">http_method</span><span class="o">=</span><span class="n">my_demo_method</span><span class="o">.</span><span class="n">http_method</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">my_demo_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;MOCK&quot;</span><span class="p">)</span>
+<span class="n">response200</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">MethodResponse</span><span class="p">(</span><span class="s2">&quot;response200&quot;</span><span class="p">,</span>
+    <span class="n">http_method</span><span class="o">=</span><span class="n">my_demo_method</span><span class="o">.</span><span class="n">http_method</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">my_demo_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">status_code</span><span class="o">=</span><span class="s2">&quot;200&quot;</span><span class="p">)</span>
+<span class="n">my_demo_integration_response</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">IntegrationResponse</span><span class="p">(</span><span class="s2">&quot;myDemoIntegrationResponse&quot;</span><span class="p">,</span>
+    <span class="n">http_method</span><span class="o">=</span><span class="n">my_demo_method</span><span class="o">.</span><span class="n">http_method</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">my_demo_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">response_templates</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;application/xml&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;#set($$inputRoot = $$input.path(&#39;$$&#39;))</span>
+<span class="s2">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="s2">&lt;message&gt;</span>
+<span class="s2">    $$inputRoot.body</span>
+<span class="s2">&lt;/message&gt;</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">status_code</span><span class="o">=</span><span class="n">response200</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1806,6 +2153,47 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.Method">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">Method</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_key_required</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization_scopes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorizer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_models</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_validator_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rest_api</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.Method" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a HTTP Method for an API Gateway Resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">my_demo_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">RestApi</span><span class="p">(</span><span class="s2">&quot;myDemoAPI&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is my API for demonstration purposes&quot;</span><span class="p">)</span>
+<span class="n">my_demo_resource</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="s2">&quot;myDemoResource&quot;</span><span class="p">,</span>
+    <span class="n">parent_id</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">root_resource_id</span><span class="p">,</span>
+    <span class="n">path_part</span><span class="o">=</span><span class="s2">&quot;mydemoresource&quot;</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">my_demo_method</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Method</span><span class="p">(</span><span class="s2">&quot;myDemoMethod&quot;</span><span class="p">,</span>
+    <span class="n">authorization</span><span class="o">=</span><span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+    <span class="n">http_method</span><span class="o">=</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">my_demo_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">cognito_user_pool_name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">require_object</span><span class="p">(</span><span class="s2">&quot;cognitoUserPoolName&quot;</span><span class="p">)</span>
+<span class="n">this_user_pools</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">get_user_pools</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">cognito_user_pool_name</span><span class="p">)</span>
+<span class="n">this_rest_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">RestApi</span><span class="p">(</span><span class="s2">&quot;thisRestApi&quot;</span><span class="p">)</span>
+<span class="n">this_resource</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="s2">&quot;thisResource&quot;</span><span class="p">,</span>
+    <span class="n">parent_id</span><span class="o">=</span><span class="n">this_rest_api</span><span class="o">.</span><span class="n">root_resource_id</span><span class="p">,</span>
+    <span class="n">path_part</span><span class="o">=</span><span class="s2">&quot;{proxy+}&quot;</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">this_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">this_authorizer</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Authorizer</span><span class="p">(</span><span class="s2">&quot;thisAuthorizer&quot;</span><span class="p">,</span>
+    <span class="n">provider_arns</span><span class="o">=</span><span class="n">this_user_pools</span><span class="o">.</span><span class="n">arns</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">this_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;COGNITO_USER_POOLS&quot;</span><span class="p">)</span>
+<span class="nb">any</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Method</span><span class="p">(</span><span class="s2">&quot;any&quot;</span><span class="p">,</span>
+    <span class="n">authorization</span><span class="o">=</span><span class="s2">&quot;COGNITO_USER_POOLS&quot;</span><span class="p">,</span>
+    <span class="n">authorizer_id</span><span class="o">=</span><span class="n">this_authorizer</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">http_method</span><span class="o">=</span><span class="s2">&quot;ANY&quot;</span><span class="p">,</span>
+    <span class="n">request_parameters</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;method.request.path.proxy&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">this_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">this_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1961,6 +2349,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.MethodResponse">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">MethodResponse</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">response_models</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">response_parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rest_api</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.MethodResponse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an HTTP Method Response for an API Gateway Resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">my_demo_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">RestApi</span><span class="p">(</span><span class="s2">&quot;myDemoAPI&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is my API for demonstration purposes&quot;</span><span class="p">)</span>
+<span class="n">my_demo_resource</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="s2">&quot;myDemoResource&quot;</span><span class="p">,</span>
+    <span class="n">parent_id</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">root_resource_id</span><span class="p">,</span>
+    <span class="n">path_part</span><span class="o">=</span><span class="s2">&quot;mydemoresource&quot;</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">my_demo_method</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Method</span><span class="p">(</span><span class="s2">&quot;myDemoMethod&quot;</span><span class="p">,</span>
+    <span class="n">authorization</span><span class="o">=</span><span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+    <span class="n">http_method</span><span class="o">=</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">my_demo_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">my_demo_integration</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Integration</span><span class="p">(</span><span class="s2">&quot;myDemoIntegration&quot;</span><span class="p">,</span>
+    <span class="n">http_method</span><span class="o">=</span><span class="n">my_demo_method</span><span class="o">.</span><span class="n">http_method</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">my_demo_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;MOCK&quot;</span><span class="p">)</span>
+<span class="n">response200</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">MethodResponse</span><span class="p">(</span><span class="s2">&quot;response200&quot;</span><span class="p">,</span>
+    <span class="n">http_method</span><span class="o">=</span><span class="n">my_demo_method</span><span class="o">.</span><span class="n">http_method</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">my_demo_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">status_code</span><span class="o">=</span><span class="s2">&quot;200&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2081,6 +2494,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.MethodSettings">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">MethodSettings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">method_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rest_api</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stage_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.MethodSettings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an API Gateway Method Settings, e.g. logging or monitoring.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_rest_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">RestApi</span><span class="p">(</span><span class="s2">&quot;testRestApi&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is my API for demonstration purposes&quot;</span><span class="p">)</span>
+<span class="n">test_deployment</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Deployment</span><span class="p">(</span><span class="s2">&quot;testDeployment&quot;</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">stage_name</span><span class="o">=</span><span class="s2">&quot;dev&quot;</span><span class="p">)</span>
+<span class="n">test_stage</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Stage</span><span class="p">(</span><span class="s2">&quot;testStage&quot;</span><span class="p">,</span>
+    <span class="n">deployment</span><span class="o">=</span><span class="n">test_deployment</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">stage_name</span><span class="o">=</span><span class="s2">&quot;prod&quot;</span><span class="p">)</span>
+<span class="n">test_resource</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="s2">&quot;testResource&quot;</span><span class="p">,</span>
+    <span class="n">parent_id</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">root_resource_id</span><span class="p">,</span>
+    <span class="n">path_part</span><span class="o">=</span><span class="s2">&quot;mytestresource&quot;</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">test_method</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Method</span><span class="p">(</span><span class="s2">&quot;testMethod&quot;</span><span class="p">,</span>
+    <span class="n">authorization</span><span class="o">=</span><span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+    <span class="n">http_method</span><span class="o">=</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">test_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">method_settings</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">MethodSettings</span><span class="p">(</span><span class="s2">&quot;methodSettings&quot;</span><span class="p">,</span>
+    <span class="n">method_path</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">test_resource</span><span class="o">.</span><span class="n">path_part</span><span class="p">,</span> <span class="n">test_method</span><span class="o">.</span><span class="n">http_method</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path_part</span><span class="p">,</span> <span class="n">http_method</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path_part</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">http_method</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;loggingLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;INFO&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;metricsEnabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">stage_name</span><span class="o">=</span><span class="n">test_stage</span><span class="o">.</span><span class="n">stage_name</span><span class="p">)</span>
+<span class="n">test_integration</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Integration</span><span class="p">(</span><span class="s2">&quot;testIntegration&quot;</span><span class="p">,</span>
+    <span class="n">http_method</span><span class="o">=</span><span class="n">test_method</span><span class="o">.</span><span class="n">http_method</span><span class="p">,</span>
+    <span class="n">request_templates</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;application/xml&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">   &quot;body&quot; : $$input.json(&#39;$$&#39;)</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">test_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;MOCK&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2217,6 +2672,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.Model">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">Model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rest_api</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schema</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.Model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Model for a REST API Gateway.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">my_demo_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">RestApi</span><span class="p">(</span><span class="s2">&quot;myDemoAPI&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is my API for demonstration purposes&quot;</span><span class="p">)</span>
+<span class="n">my_demo_model</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="s2">&quot;myDemoModel&quot;</span><span class="p">,</span>
+    <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;application/json&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a JSON schema&quot;</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">schema</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;type&quot;: &quot;object&quot;</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2323,6 +2793,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.RequestValidator">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">RequestValidator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rest_api</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">validate_request_body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">validate_request_parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.RequestValidator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Gateway Request Validator.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">RequestValidator</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">aws_api_gateway_rest_api</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">validate_request_body</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">validate_request_parameters</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2421,6 +2900,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.Resource">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path_part</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rest_api</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.Resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an API Gateway Resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">my_demo_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">RestApi</span><span class="p">(</span><span class="s2">&quot;myDemoAPI&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is my API for demonstration purposes&quot;</span><span class="p">)</span>
+<span class="n">my_demo_resource</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="s2">&quot;myDemoResource&quot;</span><span class="p">,</span>
+    <span class="n">parent_id</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">root_resource_id</span><span class="p">,</span>
+    <span class="n">path_part</span><span class="o">=</span><span class="s2">&quot;mydemoresource&quot;</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">my_demo_api</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2518,6 +3007,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.Response">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">Response</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">response_parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">response_templates</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">response_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rest_api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.Response" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an API Gateway Gateway Response for a REST API Gateway.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">RestApi</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">)</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Response</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">response_parameters</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;gatewayresponse.header.Authorization&quot;</span><span class="p">:</span> <span class="s2">&quot;&#39;Basic&#39;&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">response_templates</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;application/json&quot;</span><span class="p">:</span> <span class="s2">&quot;{&#39;message&#39;:$$context.error.messageString}&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">response_type</span><span class="o">=</span><span class="s2">&quot;UNAUTHORIZED&quot;</span><span class="p">,</span>
+    <span class="n">rest_api_id</span><span class="o">=</span><span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">status_code</span><span class="o">=</span><span class="s2">&quot;401&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2627,6 +3132,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> Amazon API Gateway Version 1 resources are used for creating and deploying REST APIs. To create and deploy WebSocket and HTTP APIs, use Amazon API Gateway Version 2.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">my_demo_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">RestApi</span><span class="p">(</span><span class="s2">&quot;myDemoAPI&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is my API for demonstration purposes&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">RestApi</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">endpoint_configuration</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;types&quot;</span><span class="p">:</span> <span class="s2">&quot;REGIONAL&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2811,6 +3330,53 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.Stage">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">Stage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_log_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_cluster_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_cluster_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_certificate_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deployment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">documentation_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rest_api</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stage_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">variables</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">xray_tracing_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.Stage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an API Gateway Stage.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_rest_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">RestApi</span><span class="p">(</span><span class="s2">&quot;testRestApi&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is my API for demonstration purposes&quot;</span><span class="p">)</span>
+<span class="n">test_deployment</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Deployment</span><span class="p">(</span><span class="s2">&quot;testDeployment&quot;</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">stage_name</span><span class="o">=</span><span class="s2">&quot;dev&quot;</span><span class="p">)</span>
+<span class="n">test_stage</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Stage</span><span class="p">(</span><span class="s2">&quot;testStage&quot;</span><span class="p">,</span>
+    <span class="n">deployment</span><span class="o">=</span><span class="n">test_deployment</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">stage_name</span><span class="o">=</span><span class="s2">&quot;prod&quot;</span><span class="p">)</span>
+<span class="n">test_resource</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="s2">&quot;testResource&quot;</span><span class="p">,</span>
+    <span class="n">parent_id</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">root_resource_id</span><span class="p">,</span>
+    <span class="n">path_part</span><span class="o">=</span><span class="s2">&quot;mytestresource&quot;</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">test_method</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Method</span><span class="p">(</span><span class="s2">&quot;testMethod&quot;</span><span class="p">,</span>
+    <span class="n">authorization</span><span class="o">=</span><span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+    <span class="n">http_method</span><span class="o">=</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">test_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">method_settings</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">MethodSettings</span><span class="p">(</span><span class="s2">&quot;methodSettings&quot;</span><span class="p">,</span>
+    <span class="n">method_path</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">test_resource</span><span class="o">.</span><span class="n">path_part</span><span class="p">,</span> <span class="n">test_method</span><span class="o">.</span><span class="n">http_method</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path_part</span><span class="p">,</span> <span class="n">http_method</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path_part</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">http_method</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;loggingLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;INFO&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;metricsEnabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">stage_name</span><span class="o">=</span><span class="n">test_stage</span><span class="o">.</span><span class="n">stage_name</span><span class="p">)</span>
+<span class="n">test_integration</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Integration</span><span class="p">(</span><span class="s2">&quot;testIntegration&quot;</span><span class="p">,</span>
+    <span class="n">http_method</span><span class="o">=</span><span class="n">test_method</span><span class="o">.</span><span class="n">http_method</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">test_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">test_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;MOCK&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">stage_name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;stageName&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">stage_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">stage_name</span> <span class="o">=</span> <span class="s2">&quot;example&quot;</span>
+<span class="n">example_rest_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">RestApi</span><span class="p">(</span><span class="s2">&quot;exampleRestApi&quot;</span><span class="p">)</span>
+<span class="n">example_stage</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Stage</span><span class="p">(</span><span class="s2">&quot;exampleStage&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">stage_name</span><span class="p">)</span>
+<span class="n">example_log_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudwatch</span><span class="o">.</span><span class="n">LogGroup</span><span class="p">(</span><span class="s2">&quot;exampleLogGroup&quot;</span><span class="p">,</span> <span class="n">retention_in_days</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3020,6 +3586,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.UsagePlan">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">UsagePlan</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_stages</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">product_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">quota_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">throttle_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.UsagePlan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an API Gateway Usage Plan.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">myapi</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">RestApi</span><span class="p">(</span><span class="s2">&quot;myapi&quot;</span><span class="p">)</span>
+<span class="n">dev</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Deployment</span><span class="p">(</span><span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">myapi</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">stage_name</span><span class="o">=</span><span class="s2">&quot;dev&quot;</span><span class="p">)</span>
+<span class="n">prod</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">Deployment</span><span class="p">(</span><span class="s2">&quot;prod&quot;</span><span class="p">,</span>
+    <span class="n">rest_api</span><span class="o">=</span><span class="n">myapi</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">stage_name</span><span class="o">=</span><span class="s2">&quot;prod&quot;</span><span class="p">)</span>
+<span class="n">my_usage_plan</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">UsagePlan</span><span class="p">(</span><span class="s2">&quot;myUsagePlan&quot;</span><span class="p">,</span>
+    <span class="n">api_stages</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;apiId&quot;</span><span class="p">:</span> <span class="n">myapi</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;stage&quot;</span><span class="p">:</span> <span class="n">dev</span><span class="o">.</span><span class="n">stage_name</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;apiId&quot;</span><span class="p">:</span> <span class="n">myapi</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;stage&quot;</span><span class="p">:</span> <span class="n">prod</span><span class="o">.</span><span class="n">stage_name</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;my description&quot;</span><span class="p">,</span>
+    <span class="n">product_code</span><span class="o">=</span><span class="s2">&quot;MYCODE&quot;</span><span class="p">,</span>
+    <span class="n">quota_settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;limit&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+        <span class="s2">&quot;offset&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;period&quot;</span><span class="p">:</span> <span class="s2">&quot;WEEK&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">throttle_settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;burstLimit&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;rateLimit&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3194,6 +3794,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.UsagePlanKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">UsagePlanKey</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">usage_plan_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.UsagePlanKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an API Gateway Usage Plan Key.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">RestApi</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
+<span class="n">myusageplan</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">UsagePlan</span><span class="p">(</span><span class="s2">&quot;myusageplan&quot;</span><span class="p">,</span> <span class="n">api_stages</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;apiId&quot;</span><span class="p">:</span> <span class="n">test</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="s2">&quot;stage&quot;</span><span class="p">:</span> <span class="n">aws_api_gateway_deployment</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;stage_name&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">mykey</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">ApiKey</span><span class="p">(</span><span class="s2">&quot;mykey&quot;</span><span class="p">)</span>
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">UsagePlanKey</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
+    <span class="n">key_id</span><span class="o">=</span><span class="n">mykey</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">key_type</span><span class="o">=</span><span class="s2">&quot;API_KEY&quot;</span><span class="p">,</span>
+    <span class="n">usage_plan_id</span><span class="o">=</span><span class="n">myusageplan</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3302,6 +3917,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> Amazon API Gateway Version 1 VPC Links enable private integrations that connect REST APIs to private resources in a VPC.
 To enable private integration for HTTP APIs, use the Amazon API Gateway Version 2 VPC Link <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_vpc_link.html">resource</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_load_balancer</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;exampleLoadBalancer&quot;</span><span class="p">,</span>
+    <span class="n">internal</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">load_balancer_type</span><span class="o">=</span><span class="s2">&quot;network&quot;</span><span class="p">,</span>
+    <span class="n">subnet_mappings</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">example_vpc_link</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">VpcLink</span><span class="p">(</span><span class="s2">&quot;exampleVpcLink&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;example description&quot;</span><span class="p">,</span>
+    <span class="n">target_arn</span><span class="o">=</span><span class="n">example_load_balancer</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3401,6 +4030,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">get_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.get_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the name and value of a pre-existing API Key, for
 example to supply credentials for a dependency microservice.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">my_api_key</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">get_key</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;ru3mpjgse6&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3416,6 +4051,14 @@ example to supply credentials for a dependency microservice.</p>
 <code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">get_resource</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rest_api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.get_resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the id of a Resource in API Gateway. 
 To fetch the Resource, you must provide the REST API id as well as the full path.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">my_rest_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">get_rest_api</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-rest-api&quot;</span><span class="p">)</span>
+<span class="n">my_resource</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">get_resource</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s2">&quot;/endpoint/path&quot;</span><span class="p">,</span>
+    <span class="n">rest_api_id</span><span class="o">=</span><span class="n">my_rest_api</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3433,6 +4076,12 @@ To fetch the Resource, you must provide the REST API id as well as the full path
 API Gateway. To fetch the REST API you must provide a name to match against. 
 As there is no unique name constraint on REST APIs this data source will 
 error if there is more than one match.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">my_rest_api</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">get_rest_api</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-rest-api&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3450,6 +4099,12 @@ error if there is more than one match.</p>
 API Gateway. To fetch the VPC Link you must provide a name to match against. 
 As there is no unique name constraint on API Gateway VPC Links this data source will 
 error if there is more than one match.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">my_api_gateway_vpc_link</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">get_vpc_link</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-vpc-link&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

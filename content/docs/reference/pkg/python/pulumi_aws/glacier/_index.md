@@ -20,6 +20,40 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE:</strong> When removing a Glacier Vault, the Vault must be empty.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">Topic</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;awsSnsTopic&quot;</span><span class="p">)</span>
+<span class="n">my_archive</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glacier</span><span class="o">.</span><span class="n">Vault</span><span class="p">(</span><span class="s2">&quot;myArchive&quot;</span><span class="p">,</span>
+    <span class="n">access_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">    &quot;Version&quot;:&quot;2012-10-17&quot;,</span>
+<span class="s2">    &quot;Statement&quot;:[</span>
+<span class="s2">       {</span>
+<span class="s2">          &quot;Sid&quot;: &quot;add-read-only-perm&quot;,</span>
+<span class="s2">          &quot;Principal&quot;: &quot;*&quot;,</span>
+<span class="s2">          &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">          &quot;Action&quot;: [</span>
+<span class="s2">             &quot;glacier:InitiateJob&quot;,</span>
+<span class="s2">             &quot;glacier:GetJobOutput&quot;</span>
+<span class="s2">          ],</span>
+<span class="s2">          &quot;Resource&quot;: &quot;arn:aws:glacier:eu-west-1:432981146916:vaults/MyArchive&quot;</span>
+<span class="s2">       }</span>
+<span class="s2">    ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">notifications</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;events&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;ArchiveRetrievalCompleted&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;InventoryRetrievalCompleted&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;snsTopic&quot;</span><span class="p">:</span> <span class="n">aws_sns_topic</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Test&quot;</span><span class="p">:</span> <span class="s2">&quot;MyArchive&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -155,6 +189,35 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> This resource allows you to test Glacier Vault Lock policies by setting the <code class="docutils literal notranslate"><span class="pre">complete_lock</span></code> argument to <code class="docutils literal notranslate"><span class="pre">false</span></code>. When testing policies in this manner, the Glacier Vault Lock automatically expires after 24 hours and this provider will show this resource as needing recreation after that time. To permanently apply the policy, set the <code class="docutils literal notranslate"><span class="pre">complete_lock</span></code> argument to <code class="docutils literal notranslate"><span class="pre">true</span></code>. When changing <code class="docutils literal notranslate"><span class="pre">complete_lock</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code>, it is expected the resource will show as recreating.</p>
 </div></blockquote>
 <p>!&gt; <strong>WARNING:</strong> Once a Glacier Vault Lock is completed, it is immutable. The deletion of the Glacier Vault Lock is not be possible and attempting to remove it from this provider will return an error. Set the <code class="docutils literal notranslate"><span class="pre">ignore_deletion_error</span></code> argument to <code class="docutils literal notranslate"><span class="pre">true</span></code> and apply this configuration before attempting to delete this resource via this provider or remove this resource from this provider’s management.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_vault</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glacier</span><span class="o">.</span><span class="n">Vault</span><span class="p">(</span><span class="s2">&quot;exampleVault&quot;</span><span class="p">)</span>
+<span class="n">example_policy_document</span> <span class="o">=</span> <span class="n">example_vault</span><span class="o">.</span><span class="n">arn</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">arn</span><span class="p">:</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statements</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;glacier:DeleteArchive&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;condition&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;test&quot;</span><span class="p">:</span> <span class="s2">&quot;NumericLessThanEquals&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;365&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;variable&quot;</span><span class="p">:</span> <span class="s2">&quot;glacier:ArchiveAgeinDays&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="s2">&quot;effect&quot;</span><span class="p">:</span> <span class="s2">&quot;Deny&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">arn</span><span class="p">],</span>
+<span class="p">}]))</span>
+<span class="n">example_vault_lock</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glacier</span><span class="o">.</span><span class="n">VaultLock</span><span class="p">(</span><span class="s2">&quot;exampleVaultLock&quot;</span><span class="p">,</span>
+    <span class="n">complete_lock</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="n">example_policy_document</span><span class="o">.</span><span class="n">json</span><span class="p">,</span>
+    <span class="n">vault_name</span><span class="o">=</span><span class="n">example_vault</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glacier</span><span class="o">.</span><span class="n">VaultLock</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">complete_lock</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;iam.getPolicyDocument&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;json&quot;</span><span class="p">],</span>
+    <span class="n">vault_name</span><span class="o">=</span><span class="n">aws_glacier_vault</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

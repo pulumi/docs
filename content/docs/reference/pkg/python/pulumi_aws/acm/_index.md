@@ -34,6 +34,40 @@ deploy the required validation records and wait for validation to complete.</p>
 of this provider.</p>
 <p>It’s recommended to specify <code class="docutils literal notranslate"><span class="pre">create_before_destroy</span> <span class="pre">=</span> <span class="pre">true</span></code> in a <a class="reference external" href="https://www.terraform.io/docs/configuration/resources.html#lifecycle">lifecycle</a> block to replace a certificate
 which is currently in use (eg, by <code class="docutils literal notranslate"><span class="pre">lb.Listener</span></code>).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">cert</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">acm</span><span class="o">.</span><span class="n">Certificate</span><span class="p">(</span><span class="s2">&quot;cert&quot;</span><span class="p">,</span>
+    <span class="n">domain_name</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">validation_method</span><span class="o">=</span><span class="s2">&quot;DNS&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_tls</span> <span class="k">as</span> <span class="nn">tls</span>
+
+<span class="n">example_private_key</span> <span class="o">=</span> <span class="n">tls</span><span class="o">.</span><span class="n">PrivateKey</span><span class="p">(</span><span class="s2">&quot;examplePrivateKey&quot;</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="s2">&quot;RSA&quot;</span><span class="p">)</span>
+<span class="n">example_self_signed_cert</span> <span class="o">=</span> <span class="n">tls</span><span class="o">.</span><span class="n">SelfSignedCert</span><span class="p">(</span><span class="s2">&quot;exampleSelfSignedCert&quot;</span><span class="p">,</span>
+    <span class="n">allowed_uses</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;key_encipherment&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;digital_signature&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;server_auth&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">key_algorithm</span><span class="o">=</span><span class="s2">&quot;RSA&quot;</span><span class="p">,</span>
+    <span class="n">private_key_pem</span><span class="o">=</span><span class="n">example_private_key</span><span class="o">.</span><span class="n">private_key_pem</span><span class="p">,</span>
+    <span class="n">subjects</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;commonName&quot;</span><span class="p">:</span> <span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;organization&quot;</span><span class="p">:</span> <span class="s2">&quot;ACME Examples, Inc&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">validity_period_hours</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">cert</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">acm</span><span class="o">.</span><span class="n">Certificate</span><span class="p">(</span><span class="s2">&quot;cert&quot;</span><span class="p">,</span>
+    <span class="n">certificate_body</span><span class="o">=</span><span class="n">example_self_signed_cert</span><span class="o">.</span><span class="n">cert_pem</span><span class="p">,</span>
+    <span class="n">private_key</span><span class="o">=</span><span class="n">example_private_key</span><span class="o">.</span><span class="n">private_key_pem</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -243,6 +277,77 @@ deploy the required validation records and wait for validation to complete.</p>
 <blockquote>
 <div><p><strong>WARNING:</strong> This resource implements a part of the validation workflow. It does not represent a real-world entity in AWS, therefore changing or deleting this resource on its own has no immediate effect.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">cert_certificate</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">acm</span><span class="o">.</span><span class="n">Certificate</span><span class="p">(</span><span class="s2">&quot;certCertificate&quot;</span><span class="p">,</span>
+    <span class="n">domain_name</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="n">validation_method</span><span class="o">=</span><span class="s2">&quot;DNS&quot;</span><span class="p">)</span>
+<span class="n">zone</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">get_zone</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example.com.&quot;</span><span class="p">,</span>
+    <span class="n">private_zone</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">cert_validation</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;certValidation&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="n">cert_certificate</span><span class="o">.</span><span class="n">domain_validation_options</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;resourceRecordName&quot;</span><span class="p">],</span>
+    <span class="n">records</span><span class="o">=</span><span class="p">[</span><span class="n">cert_certificate</span><span class="o">.</span><span class="n">domain_validation_options</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;resourceRecordValue&quot;</span><span class="p">]],</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="n">cert_certificate</span><span class="o">.</span><span class="n">domain_validation_options</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;resourceRecordType&quot;</span><span class="p">],</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">zone</span><span class="o">.</span><span class="n">zone_id</span><span class="p">)</span>
+<span class="n">cert_certificate_validation</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">acm</span><span class="o">.</span><span class="n">CertificateValidation</span><span class="p">(</span><span class="s2">&quot;certCertificateValidation&quot;</span><span class="p">,</span>
+    <span class="n">certificate_arn</span><span class="o">=</span><span class="n">cert_certificate</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">validation_record_fqdns</span><span class="o">=</span><span class="p">[</span><span class="n">cert_validation</span><span class="o">.</span><span class="n">fqdn</span><span class="p">])</span>
+<span class="n">front_end</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="s2">&quot;frontEnd&quot;</span><span class="p">,</span> <span class="n">certificate_arn</span><span class="o">=</span><span class="n">cert_certificate_validation</span><span class="o">.</span><span class="n">certificate_arn</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">cert_certificate</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">acm</span><span class="o">.</span><span class="n">Certificate</span><span class="p">(</span><span class="s2">&quot;certCertificate&quot;</span><span class="p">,</span>
+    <span class="n">domain_name</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="n">subject_alternative_names</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;www.example.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;example.org&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">validation_method</span><span class="o">=</span><span class="s2">&quot;DNS&quot;</span><span class="p">)</span>
+<span class="n">zone</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">get_zone</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example.com.&quot;</span><span class="p">,</span>
+    <span class="n">private_zone</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">zone_alt</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">get_zone</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example.org.&quot;</span><span class="p">,</span>
+    <span class="n">private_zone</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">cert_validation</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;certValidation&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="n">cert_certificate</span><span class="o">.</span><span class="n">domain_validation_options</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;resourceRecordName&quot;</span><span class="p">],</span>
+    <span class="n">records</span><span class="o">=</span><span class="p">[</span><span class="n">cert_certificate</span><span class="o">.</span><span class="n">domain_validation_options</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;resourceRecordValue&quot;</span><span class="p">]],</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="n">cert_certificate</span><span class="o">.</span><span class="n">domain_validation_options</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;resourceRecordType&quot;</span><span class="p">],</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">zone</span><span class="o">.</span><span class="n">zone_id</span><span class="p">)</span>
+<span class="n">cert_validation_alt1</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;certValidationAlt1&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="n">cert_certificate</span><span class="o">.</span><span class="n">domain_validation_options</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;resourceRecordName&quot;</span><span class="p">],</span>
+    <span class="n">records</span><span class="o">=</span><span class="p">[</span><span class="n">cert_certificate</span><span class="o">.</span><span class="n">domain_validation_options</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;resourceRecordValue&quot;</span><span class="p">]],</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="n">cert_certificate</span><span class="o">.</span><span class="n">domain_validation_options</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;resourceRecordType&quot;</span><span class="p">],</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">zone</span><span class="o">.</span><span class="n">zone_id</span><span class="p">)</span>
+<span class="n">cert_validation_alt2</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;certValidationAlt2&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="n">cert_certificate</span><span class="o">.</span><span class="n">domain_validation_options</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="s2">&quot;resourceRecordName&quot;</span><span class="p">],</span>
+    <span class="n">records</span><span class="o">=</span><span class="p">[</span><span class="n">cert_certificate</span><span class="o">.</span><span class="n">domain_validation_options</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="s2">&quot;resourceRecordValue&quot;</span><span class="p">]],</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="n">cert_certificate</span><span class="o">.</span><span class="n">domain_validation_options</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="s2">&quot;resourceRecordType&quot;</span><span class="p">],</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">zone_alt</span><span class="o">.</span><span class="n">zone_id</span><span class="p">)</span>
+<span class="n">cert_certificate_validation</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">acm</span><span class="o">.</span><span class="n">CertificateValidation</span><span class="p">(</span><span class="s2">&quot;certCertificateValidation&quot;</span><span class="p">,</span>
+    <span class="n">certificate_arn</span><span class="o">=</span><span class="n">cert_certificate</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">validation_record_fqdns</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">cert_validation</span><span class="o">.</span><span class="n">fqdn</span><span class="p">,</span>
+        <span class="n">cert_validation_alt1</span><span class="o">.</span><span class="n">fqdn</span><span class="p">,</span>
+        <span class="n">cert_validation_alt2</span><span class="o">.</span><span class="n">fqdn</span><span class="p">,</span>
+    <span class="p">])</span>
+<span class="n">front_end</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="s2">&quot;frontEnd&quot;</span><span class="p">,</span> <span class="n">certificate_arn</span><span class="o">=</span><span class="n">cert_certificate_validation</span><span class="o">.</span><span class="n">certificate_arn</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">cert_certificate</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">acm</span><span class="o">.</span><span class="n">Certificate</span><span class="p">(</span><span class="s2">&quot;certCertificate&quot;</span><span class="p">,</span>
+    <span class="n">domain_name</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="n">validation_method</span><span class="o">=</span><span class="s2">&quot;EMAIL&quot;</span><span class="p">)</span>
+<span class="n">cert_certificate_validation</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">acm</span><span class="o">.</span><span class="n">CertificateValidation</span><span class="p">(</span><span class="s2">&quot;certCertificateValidation&quot;</span><span class="p">,</span> <span class="n">certificate_arn</span><span class="o">=</span><span class="n">cert_certificate</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -351,6 +456,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to get the ARN of a certificate in AWS Certificate
 Manager (ACM), you can reference
 it by domain without having to hard code the ARNs as input.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">acm</span><span class="o">.</span><span class="n">get_certificate</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="s2">&quot;tf.example.com&quot;</span><span class="p">,</span>
+    <span class="n">key_types</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;RSA_4096&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

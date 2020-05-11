@@ -17,6 +17,15 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.fsx.LustreFileSystem">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.fsx.</code><code class="sig-name descname">LustreFileSystem</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">export_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">import_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">imported_file_chunk_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_group_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">weekly_maintenance_start_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.fsx.LustreFileSystem" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a FSx Lustre File System. See the <a class="reference external" href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html">FSx Lustre Guide</a> for more information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">fsx</span><span class="o">.</span><span class="n">LustreFileSystem</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">import_path</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;s3://</span><span class="si">{</span><span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s1">&#39;example&#39;</span><span class="p">][</span><span class="s1">&#39;bucket&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">storage_capacity</span><span class="o">=</span><span class="mi">1200</span><span class="p">,</span>
+    <span class="n">subnet_ids</span><span class="o">=</span><span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -185,6 +194,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Either the <code class="docutils literal notranslate"><span class="pre">active_directory_id</span></code> argument or <code class="docutils literal notranslate"><span class="pre">self_managed_active_directory</span></code> configuration block must be specified.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">fsx</span><span class="o">.</span><span class="n">WindowsFileSystem</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">active_directory_id</span><span class="o">=</span><span class="n">aws_directory_service_directory</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">kms_key_id</span><span class="o">=</span><span class="n">aws_kms_key</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">storage_capacity</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">subnet_ids</span><span class="o">=</span><span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">throughput_capacity</span><span class="o">=</span><span class="mi">1024</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">fsx</span><span class="o">.</span><span class="n">WindowsFileSystem</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">kms_key_id</span><span class="o">=</span><span class="n">aws_kms_key</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">self_managed_active_directory</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;dnsIps&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;10.0.0.111&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;10.0.0.222&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;domainName&quot;</span><span class="p">:</span> <span class="s2">&quot;corp.example.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;avoid-plaintext-passwords&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;Admin&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">storage_capacity</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">subnet_ids</span><span class="o">=</span><span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">throughput_capacity</span><span class="o">=</span><span class="mi">1024</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

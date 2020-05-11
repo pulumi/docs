@@ -70,6 +70,49 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.transfer.Server">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.transfer.</code><code class="sig-name descname">Server</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_details</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_provider_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">invocation_role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logging_role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.Server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a AWS Transfer Server resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;fooRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">        &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">        &quot;Statement&quot;: [</span>
+<span class="s2">                {</span>
+<span class="s2">                &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">                &quot;Principal&quot;: {</span>
+<span class="s2">                        &quot;Service&quot;: &quot;transfer.amazonaws.com&quot;</span>
+<span class="s2">                },</span>
+<span class="s2">                &quot;Action&quot;: &quot;sts:AssumeRole&quot;</span>
+<span class="s2">                }</span>
+<span class="s2">        ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">foo_role_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicy</span><span class="p">(</span><span class="s2">&quot;fooRolePolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">        &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">        &quot;Statement&quot;: [</span>
+<span class="s2">                {</span>
+<span class="s2">                &quot;Sid&quot;: &quot;AllowFullAccesstoCloudWatchLogs&quot;,</span>
+<span class="s2">                &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">                &quot;Action&quot;: [</span>
+<span class="s2">                        &quot;logs:*&quot;</span>
+<span class="s2">                ],</span>
+<span class="s2">                &quot;Resource&quot;: &quot;*&quot;</span>
+<span class="s2">                }</span>
+<span class="s2">        ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">foo_role</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">foo_server</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">transfer</span><span class="o">.</span><span class="n">Server</span><span class="p">(</span><span class="s2">&quot;fooServer&quot;</span><span class="p">,</span>
+    <span class="n">identity_provider_type</span><span class="o">=</span><span class="s2">&quot;SERVICE_MANAGED&quot;</span><span class="p">,</span>
+    <span class="n">logging_role</span><span class="o">=</span><span class="n">foo_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;ENV&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;NAME&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-acc-test-transfer-server&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -248,6 +291,58 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.transfer.SshKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.transfer.</code><code class="sig-name descname">SshKey</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.SshKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a AWS Transfer User SSH Key resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo_server</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">transfer</span><span class="o">.</span><span class="n">Server</span><span class="p">(</span><span class="s2">&quot;fooServer&quot;</span><span class="p">,</span>
+    <span class="n">identity_provider_type</span><span class="o">=</span><span class="s2">&quot;SERVICE_MANAGED&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;NAME&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-acc-test-transfer-server&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">foo_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;fooRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">        &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">        &quot;Statement&quot;: [</span>
+<span class="s2">                {</span>
+<span class="s2">                &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">                &quot;Principal&quot;: {</span>
+<span class="s2">                        &quot;Service&quot;: &quot;transfer.amazonaws.com&quot;</span>
+<span class="s2">                },</span>
+<span class="s2">                &quot;Action&quot;: &quot;sts:AssumeRole&quot;</span>
+<span class="s2">                }</span>
+<span class="s2">        ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">foo_role_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicy</span><span class="p">(</span><span class="s2">&quot;fooRolePolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">        &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">        &quot;Statement&quot;: [</span>
+<span class="s2">                {</span>
+<span class="s2">                        &quot;Sid&quot;: &quot;AllowFullAccesstoS3&quot;,</span>
+<span class="s2">                        &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">                        &quot;Action&quot;: [</span>
+<span class="s2">                                &quot;s3:*&quot;</span>
+<span class="s2">                        ],</span>
+<span class="s2">                        &quot;Resource&quot;: &quot;*&quot;</span>
+<span class="s2">                }</span>
+<span class="s2">        ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">foo_role</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">foo_user</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">transfer</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;fooUser&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">foo_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">server_id</span><span class="o">=</span><span class="n">foo_server</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;NAME&quot;</span><span class="p">:</span> <span class="s2">&quot;tftestuser&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">user_name</span><span class="o">=</span><span class="s2">&quot;tftestuser&quot;</span><span class="p">)</span>
+<span class="n">foo_ssh_key</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">transfer</span><span class="o">.</span><span class="n">SshKey</span><span class="p">(</span><span class="s2">&quot;fooSshKey&quot;</span><span class="p">,</span>
+    <span class="n">body</span><span class="o">=</span><span class="s2">&quot;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD3F6tyPEFEzV0LX3X8BsXdMsQz1x2cEikKDEY0aIj41qgxMCP/iteneqXSIFZBp5vizPvaoIR3Um9xK7PGoW8giupGn+EPuxIA4cDM4vzOqOkiMPhz5XK0whEjkVzTo4+S0puvDZuwIsdiW9mxhJc7tgBNL0cYlWSYVkz4G/fslNfRPW5mYAM49f4fhtxPb5ok4Q2Lg9dPKVHO/Bgeu5woMc7RY0p1ej6D4CKFE6lymSDJpW0YHX/wqE9+cfEauh7xZcG0q9t2ta6F6fmX0agvpFyZo8aFbXeUBr7osSCJNgvavWbM/06niWrOvYX2xwWdhXmXSrbX8ZbabVohBK41 example@example.com&quot;</span><span class="p">,</span>
+    <span class="n">server_id</span><span class="o">=</span><span class="n">foo_server</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">user_name</span><span class="o">=</span><span class="n">foo_user</span><span class="o">.</span><span class="n">user_name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -338,6 +433,51 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.transfer.User">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.transfer.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">home_directory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a AWS Transfer User resource. Managing SSH keys can be accomplished with the <cite>``transfer.SshKey`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/transfer_ssh_key.html">https://www.terraform.io/docs/providers/aws/r/transfer_ssh_key.html</a>&gt;`_.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">foo_server</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">transfer</span><span class="o">.</span><span class="n">Server</span><span class="p">(</span><span class="s2">&quot;fooServer&quot;</span><span class="p">,</span>
+    <span class="n">identity_provider_type</span><span class="o">=</span><span class="s2">&quot;SERVICE_MANAGED&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;NAME&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-acc-test-transfer-server&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">foo_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;fooRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">        &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">        &quot;Statement&quot;: [</span>
+<span class="s2">                {</span>
+<span class="s2">                &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">                &quot;Principal&quot;: {</span>
+<span class="s2">                        &quot;Service&quot;: &quot;transfer.amazonaws.com&quot;</span>
+<span class="s2">                },</span>
+<span class="s2">                &quot;Action&quot;: &quot;sts:AssumeRole&quot;</span>
+<span class="s2">                }</span>
+<span class="s2">        ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">foo_role_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicy</span><span class="p">(</span><span class="s2">&quot;fooRolePolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">        &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">        &quot;Statement&quot;: [</span>
+<span class="s2">                {</span>
+<span class="s2">                        &quot;Sid&quot;: &quot;AllowFullAccesstoS3&quot;,</span>
+<span class="s2">                        &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">                        &quot;Action&quot;: [</span>
+<span class="s2">                                &quot;s3:*&quot;</span>
+<span class="s2">                        ],</span>
+<span class="s2">                        &quot;Resource&quot;: &quot;*&quot;</span>
+<span class="s2">                }</span>
+<span class="s2">        ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">foo_role</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">foo_user</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">transfer</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;fooUser&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">foo_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">server_id</span><span class="o">=</span><span class="n">foo_server</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">user_name</span><span class="o">=</span><span class="s2">&quot;tftestuser&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -460,6 +600,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.transfer.</code><code class="sig-name descname">get_server</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">server_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.get_server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ARN of an AWS Transfer Server for use in other
 resources.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">transfer</span><span class="o">.</span><span class="n">get_server</span><span class="p">(</span><span class="n">server_id</span><span class="o">=</span><span class="s2">&quot;s-1234567&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>server_id</strong> (<em>str</em>) – ID for an SFTP server.</p>

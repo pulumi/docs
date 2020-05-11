@@ -105,6 +105,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> Removing the <code class="docutils literal notranslate"><span class="pre">license_count</span></code> attribute is not supported by the License Manager API - recreate the resource instead.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">licensemanager</span><span class="o">.</span><span class="n">LicenseConfiguration</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Example&quot;</span><span class="p">,</span>
+    <span class="n">license_count</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">license_count_hard_limit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">license_counting_type</span><span class="o">=</span><span class="s2">&quot;Socket&quot;</span><span class="p">,</span>
+    <span class="n">license_rules</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;#minimumSockets=2&quot;</span><span class="p">],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;barr&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <p>License rules should be in the format of <code class="docutils literal notranslate"><span class="pre">#RuleType=RuleValue</span></code>. Supported rule types:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">minimumVcpus</span></code> - Resource must have minimum vCPU count in order to use the license. Default: 1</p></li>

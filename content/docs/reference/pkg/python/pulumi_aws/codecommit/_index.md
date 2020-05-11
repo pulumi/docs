@@ -63,6 +63,14 @@ anything, please consult the source <a class="reference external" href="https://
 in all regions - available regions are listed
 <a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/rande.html#codecommit_region">the AWS Docs</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codecommit</span><span class="o">.</span><span class="n">Repository</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is the Sample App Repository&quot;</span><span class="p">,</span>
+    <span class="n">repository_name</span><span class="o">=</span><span class="s2">&quot;MyTestRepository&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -194,6 +202,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 in all regions - available regions are listed
 <a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/rande.html#codecommit_region">the AWS Docs</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test_repository</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codecommit</span><span class="o">.</span><span class="n">Repository</span><span class="p">(</span><span class="s2">&quot;testRepository&quot;</span><span class="p">,</span> <span class="n">repository_name</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
+<span class="n">test_trigger</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codecommit</span><span class="o">.</span><span class="n">Trigger</span><span class="p">(</span><span class="s2">&quot;testTrigger&quot;</span><span class="p">,</span>
+    <span class="n">repository_name</span><span class="o">=</span><span class="n">test_repository</span><span class="o">.</span><span class="n">repository_name</span><span class="p">,</span>
+    <span class="n">triggers</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;destinationArn&quot;</span><span class="p">:</span> <span class="n">aws_sns_topic</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;events&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;all&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;all&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -284,6 +305,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.codecommit.get_repository">
 <code class="sig-prename descclassname">pulumi_aws.codecommit.</code><code class="sig-name descname">get_repository</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">repository_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.get_repository" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CodeCommit Repository data source allows the ARN, Repository ID, Repository URL for HTTP and Repository URL for SSH to be retrieved for an CodeCommit repository.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codecommit</span><span class="o">.</span><span class="n">get_repository</span><span class="p">(</span><span class="n">repository_name</span><span class="o">=</span><span class="s2">&quot;MyTestRepository&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>repository_name</strong> (<em>str</em>) – The name for the repository. This needs to be less than 100 characters.</p>

@@ -20,6 +20,118 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE on ``codepipeline.Pipeline``:</strong> - the <code class="docutils literal notranslate"><span class="pre">GITHUB_TOKEN</span></code> environment variable must be set if the GitHub provider is specified.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">codepipeline_bucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;codepipelineBucket&quot;</span><span class="p">,</span> <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">codepipeline_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;codepipelineRole&quot;</span><span class="p">,</span> <span class="n">assume_role_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Principal&quot;: {</span>
+<span class="s2">        &quot;Service&quot;: &quot;codepipeline.amazonaws.com&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;Action&quot;: &quot;sts:AssumeRole&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">codepipeline_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicy</span><span class="p">(</span><span class="s2">&quot;codepipelinePolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">codepipeline_bucket</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span> <span class="n">codepipeline_bucket</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">codepipelineBucketArn</span><span class="p">,</span> <span class="n">codepipelineBucketArn1</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">  &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">  &quot;Statement&quot;: [</span>
+<span class="s2">    </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">      &quot;Effect&quot;:&quot;Allow&quot;,</span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;s3:GetObject&quot;,</span>
+<span class="s2">        &quot;s3:GetObjectVersion&quot;,</span>
+<span class="s2">        &quot;s3:GetBucketVersioning&quot;,</span>
+<span class="s2">        &quot;s3:PutObject&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Resource&quot;: [</span>
+<span class="s2">        &quot;</span><span class="si">{</span><span class="n">codepipeline_bucket_arn</span><span class="si">}</span><span class="s2">&quot;,</span>
+<span class="s2">        &quot;</span><span class="si">{</span><span class="n">codepipeline_bucket_arn1</span><span class="si">}</span><span class="s2">/*&quot;</span>
+<span class="s2">      ]</span>
+<span class="s2">    </span><span class="se">&#x7D;&#x7D;</span><span class="s2">,</span>
+<span class="s2">    </span><span class="se">&#x7B;&#x7B;</span><span class="s2"></span>
+<span class="s2">      &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">      &quot;Action&quot;: [</span>
+<span class="s2">        &quot;codebuild:BatchGetBuilds&quot;,</span>
+<span class="s2">        &quot;codebuild:StartBuild&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Resource&quot;: &quot;*&quot;</span>
+<span class="s2">    </span><span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+<span class="s2">  ]</span>
+<span class="se">&#x7D;&#x7D;</span><span class="s2"></span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">),</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">codepipeline_role</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">s3kmskey</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">get_alias</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;alias/myKmsKey&quot;</span><span class="p">)</span>
+<span class="n">codepipeline</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codepipeline</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span><span class="s2">&quot;codepipeline&quot;</span><span class="p">,</span>
+    <span class="n">artifact_store</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;encryptionKey&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">s3kmskey</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;KMS&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="n">codepipeline_bucket</span><span class="o">.</span><span class="n">bucket</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;S3&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">role_arn</span><span class="o">=</span><span class="n">codepipeline_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">stages</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;Source&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;configuration&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;Branch&quot;</span><span class="p">:</span> <span class="s2">&quot;master&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;Owner&quot;</span><span class="p">:</span> <span class="s2">&quot;my-organization&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;Repo&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Source&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;outputArtifacts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;source_output&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;ThirdParty&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="s2">&quot;GitHub&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Source&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;Build&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;configuration&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;ProjectName&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;inputArtifacts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;source_output&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Build&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;outputArtifacts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;build_output&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="s2">&quot;CodeBuild&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Build&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;Deploy&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;configuration&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;ActionMode&quot;</span><span class="p">:</span> <span class="s2">&quot;REPLACE_ON_FAILURE&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;Capabilities&quot;</span><span class="p">:</span> <span class="s2">&quot;CAPABILITY_AUTO_EXPAND,CAPABILITY_IAM&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;OutputFileName&quot;</span><span class="p">:</span> <span class="s2">&quot;CreateStackOutput.json&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;StackName&quot;</span><span class="p">:</span> <span class="s2">&quot;MyStack&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;TemplatePath&quot;</span><span class="p">:</span> <span class="s2">&quot;build_output::sam-templated.yaml&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;inputArtifacts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;build_output&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Deploy&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="s2">&quot;CloudFormation&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Deploy&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -227,6 +339,76 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.codepipeline.Webhook">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.codepipeline.</code><code class="sig-name descname">Webhook</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authentication</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authentication_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_pipeline</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codepipeline.Webhook" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodePipeline Webhook.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="n">bar_pipeline</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codepipeline</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span><span class="s2">&quot;barPipeline&quot;</span><span class="p">,</span>
+    <span class="n">artifact_store</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;encryptionKey&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;kms.Alias&quot;</span><span class="p">][</span><span class="s2">&quot;s3kmskey&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;KMS&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s2">&quot;bar&quot;</span><span class="p">][</span><span class="s2">&quot;bucket&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;S3&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">role_arn</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;bar&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">stages</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;Source&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;configuration&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;Branch&quot;</span><span class="p">:</span> <span class="s2">&quot;master&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;Owner&quot;</span><span class="p">:</span> <span class="s2">&quot;my-organization&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;Repo&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Source&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;outputArtifacts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;ThirdParty&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="s2">&quot;GitHub&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Source&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;Build&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;configuration&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;ProjectName&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;inputArtifacts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Build&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="s2">&quot;CodeBuild&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Build&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+<span class="n">webhook_secret</span> <span class="o">=</span> <span class="s2">&quot;super-secret&quot;</span>
+<span class="n">bar_webhook</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codepipeline</span><span class="o">.</span><span class="n">Webhook</span><span class="p">(</span><span class="s2">&quot;barWebhook&quot;</span><span class="p">,</span>
+    <span class="n">authentication</span><span class="o">=</span><span class="s2">&quot;GITHUB_HMAC&quot;</span><span class="p">,</span>
+    <span class="n">authentication_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;secretToken&quot;</span><span class="p">:</span> <span class="n">webhook_secret</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">filters</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;jsonPath&quot;</span><span class="p">:</span> <span class="s2">&quot;$$.ref&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;matchEquals&quot;</span><span class="p">:</span> <span class="s2">&quot;refs/heads/</span><span class="si">{Branch}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">target_action</span><span class="o">=</span><span class="s2">&quot;Source&quot;</span><span class="p">,</span>
+    <span class="n">target_pipeline</span><span class="o">=</span><span class="n">bar_pipeline</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="c1"># Wire the CodePipeline webhook into a GitHub repository.</span>
+<span class="n">bar_repository_webhook</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">RepositoryWebhook</span><span class="p">(</span><span class="s2">&quot;barRepositoryWebhook&quot;</span><span class="p">,</span>
+    <span class="n">configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;contentType&quot;</span><span class="p">:</span> <span class="s2">&quot;json&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;insecureSsl&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;secret&quot;</span><span class="p">:</span> <span class="n">webhook_secret</span><span class="p">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">bar_webhook</span><span class="o">.</span><span class="n">url</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">events</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;push&quot;</span><span class="p">],</span>
+    <span class="n">repository</span><span class="o">=</span><span class="n">github_repository</span><span class="p">[</span><span class="s2">&quot;repo&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

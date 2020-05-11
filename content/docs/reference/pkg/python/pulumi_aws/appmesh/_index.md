@@ -17,6 +17,22 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.appmesh.Mesh">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appmesh.</code><code class="sig-name descname">Mesh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appmesh.Mesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS App Mesh service mesh resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">simple</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appmesh</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="s2">&quot;simple&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">simple</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appmesh</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="s2">&quot;simple&quot;</span><span class="p">,</span> <span class="n">spec</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;egressFilter&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ALLOW_ALL&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -154,6 +170,80 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appmesh.Route">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appmesh.</code><code class="sig-name descname">Route</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mesh_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_router_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appmesh.Route" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS App Mesh route resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">serviceb</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appmesh</span><span class="o">.</span><span class="n">Route</span><span class="p">(</span><span class="s2">&quot;serviceb&quot;</span><span class="p">,</span>
+    <span class="n">mesh_name</span><span class="o">=</span><span class="n">aws_appmesh_mesh</span><span class="p">[</span><span class="s2">&quot;simple&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">spec</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;httpRoute&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;weightedTarget&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;virtualNode&quot;</span><span class="p">:</span> <span class="n">aws_appmesh_virtual_node</span><span class="p">[</span><span class="s2">&quot;serviceb1&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;virtualNode&quot;</span><span class="p">:</span> <span class="n">aws_appmesh_virtual_node</span><span class="p">[</span><span class="s2">&quot;serviceb2&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+                    <span class="p">},</span>
+                <span class="p">],</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;match&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">virtual_router_name</span><span class="o">=</span><span class="n">aws_appmesh_virtual_router</span><span class="p">[</span><span class="s2">&quot;serviceb&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">serviceb</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appmesh</span><span class="o">.</span><span class="n">Route</span><span class="p">(</span><span class="s2">&quot;serviceb&quot;</span><span class="p">,</span>
+    <span class="n">mesh_name</span><span class="o">=</span><span class="n">aws_appmesh_mesh</span><span class="p">[</span><span class="s2">&quot;simple&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">spec</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;httpRoute&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;weightedTarget&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">&quot;virtualNode&quot;</span><span class="p">:</span> <span class="n">aws_appmesh_virtual_node</span><span class="p">[</span><span class="s2">&quot;serviceb&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+                <span class="p">}],</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;match&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;header&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">&quot;match&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;123&quot;</span><span class="p">,</span>
+                    <span class="p">},</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;clientRequestId&quot;</span><span class="p">,</span>
+                <span class="p">}],</span>
+                <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;scheme&quot;</span><span class="p">:</span> <span class="s2">&quot;https&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">virtual_router_name</span><span class="o">=</span><span class="n">aws_appmesh_virtual_router</span><span class="p">[</span><span class="s2">&quot;serviceb&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">serviceb</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appmesh</span><span class="o">.</span><span class="n">Route</span><span class="p">(</span><span class="s2">&quot;serviceb&quot;</span><span class="p">,</span>
+    <span class="n">mesh_name</span><span class="o">=</span><span class="n">aws_appmesh_mesh</span><span class="p">[</span><span class="s2">&quot;simple&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">spec</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tcpRoute&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;weightedTarget&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">&quot;virtualNode&quot;</span><span class="p">:</span> <span class="n">aws_appmesh_virtual_node</span><span class="p">[</span><span class="s2">&quot;serviceb1&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+                <span class="p">}],</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">virtual_router_name</span><span class="o">=</span><span class="n">aws_appmesh_virtual_router</span><span class="p">[</span><span class="s2">&quot;serviceb&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -479,6 +569,126 @@ a format of their choosing before sending those properties to the Pulumi engine.
 setting <code class="docutils literal notranslate"><span class="pre">virtual_service_name</span></code> to the name of the service.</p></li>
 </ul>
 <p>The state associated with existing resources will automatically be migrated.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">serviceb1</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appmesh</span><span class="o">.</span><span class="n">VirtualNode</span><span class="p">(</span><span class="s2">&quot;serviceb1&quot;</span><span class="p">,</span>
+    <span class="n">mesh_name</span><span class="o">=</span><span class="n">aws_appmesh_mesh</span><span class="p">[</span><span class="s2">&quot;simple&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">spec</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;backend&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;virtualService&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;virtualServiceName&quot;</span><span class="p">:</span> <span class="s2">&quot;servicea.simpleapp.local&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;listener&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;portMapping&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span>
+                <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;serviceDiscovery&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;dns&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;hostname&quot;</span><span class="p">:</span> <span class="s2">&quot;serviceb.simpleapp.local&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">servicediscovery</span><span class="o">.</span><span class="n">HttpNamespace</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+<span class="n">serviceb1</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appmesh</span><span class="o">.</span><span class="n">VirtualNode</span><span class="p">(</span><span class="s2">&quot;serviceb1&quot;</span><span class="p">,</span>
+    <span class="n">mesh_name</span><span class="o">=</span><span class="n">aws_appmesh_mesh</span><span class="p">[</span><span class="s2">&quot;simple&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">spec</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;backend&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;virtualService&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;virtualServiceName&quot;</span><span class="p">:</span> <span class="s2">&quot;servicea.simpleapp.local&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;listener&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;portMapping&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span>
+                <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;serviceDiscovery&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;awsCloudMap&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;stack&quot;</span><span class="p">:</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;namespaceName&quot;</span><span class="p">:</span> <span class="n">example</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                <span class="s2">&quot;serviceName&quot;</span><span class="p">:</span> <span class="s2">&quot;serviceb1&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">serviceb1</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appmesh</span><span class="o">.</span><span class="n">VirtualNode</span><span class="p">(</span><span class="s2">&quot;serviceb1&quot;</span><span class="p">,</span>
+    <span class="n">mesh_name</span><span class="o">=</span><span class="n">aws_appmesh_mesh</span><span class="p">[</span><span class="s2">&quot;simple&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">spec</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;backend&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;virtualService&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;virtualServiceName&quot;</span><span class="p">:</span> <span class="s2">&quot;servicea.simpleapp.local&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;listener&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;healthCheck&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;healthyThreshold&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;intervalMillis&quot;</span><span class="p">:</span> <span class="mi">5000</span><span class="p">,</span>
+                <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/ping&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;timeoutMillis&quot;</span><span class="p">:</span> <span class="mi">2000</span><span class="p">,</span>
+                <span class="s2">&quot;unhealthyThreshold&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;portMapping&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span>
+                <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;serviceDiscovery&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;dns&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;hostname&quot;</span><span class="p">:</span> <span class="s2">&quot;serviceb.simpleapp.local&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">serviceb1</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appmesh</span><span class="o">.</span><span class="n">VirtualNode</span><span class="p">(</span><span class="s2">&quot;serviceb1&quot;</span><span class="p">,</span>
+    <span class="n">mesh_name</span><span class="o">=</span><span class="n">aws_appmesh_mesh</span><span class="p">[</span><span class="s2">&quot;simple&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">spec</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;backend&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;virtualService&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;virtualServiceName&quot;</span><span class="p">:</span> <span class="s2">&quot;servicea.simpleapp.local&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;listener&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;portMapping&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span>
+                <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;logging&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;accessLog&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;file&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/dev/stdout&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;serviceDiscovery&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;dns&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;hostname&quot;</span><span class="p">:</span> <span class="s2">&quot;serviceb.simpleapp.local&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -794,6 +1004,21 @@ These resource can be imported using <code class="docutils literal notranslate">
 <li><p>Add a <code class="docutils literal notranslate"><span class="pre">listener</span></code> configuration block to the <code class="docutils literal notranslate"><span class="pre">spec</span></code> argument.</p></li>
 </ul>
 <p>The state associated with existing resources will automatically be migrated.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">serviceb</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appmesh</span><span class="o">.</span><span class="n">VirtualRouter</span><span class="p">(</span><span class="s2">&quot;serviceb&quot;</span><span class="p">,</span>
+    <span class="n">mesh_name</span><span class="o">=</span><span class="n">aws_appmesh_mesh</span><span class="p">[</span><span class="s2">&quot;simple&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">spec</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;listener&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;portMapping&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span>
+                <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -954,6 +1179,34 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appmesh.VirtualService">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appmesh.</code><code class="sig-name descname">VirtualService</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mesh_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appmesh.VirtualService" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS App Mesh virtual service resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">servicea</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appmesh</span><span class="o">.</span><span class="n">VirtualService</span><span class="p">(</span><span class="s2">&quot;servicea&quot;</span><span class="p">,</span>
+    <span class="n">mesh_name</span><span class="o">=</span><span class="n">aws_appmesh_mesh</span><span class="p">[</span><span class="s2">&quot;simple&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">spec</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;virtualNode&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;virtualNodeName&quot;</span><span class="p">:</span> <span class="n">aws_appmesh_virtual_node</span><span class="p">[</span><span class="s2">&quot;serviceb1&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">servicea</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appmesh</span><span class="o">.</span><span class="n">VirtualService</span><span class="p">(</span><span class="s2">&quot;servicea&quot;</span><span class="p">,</span>
+    <span class="n">mesh_name</span><span class="o">=</span><span class="n">aws_appmesh_mesh</span><span class="p">[</span><span class="s2">&quot;simple&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">spec</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;virtualRouter&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;virtualRouterName&quot;</span><span class="p">:</span> <span class="n">aws_appmesh_virtual_router</span><span class="p">[</span><span class="s2">&quot;serviceb&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
