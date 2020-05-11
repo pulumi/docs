@@ -87,7 +87,7 @@ service = fastly.Servicev1("my-service",
 
 ```go
 import (
-  fastly "github.com/pulumi/pulumi-fastly/sdk/go/fastly"
+  fastly "github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly"
 )
 
 service, _ := fastly.NewServicev1(ctx, "test", &fastly.Servicev1Args{

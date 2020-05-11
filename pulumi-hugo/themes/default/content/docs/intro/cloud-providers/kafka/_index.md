@@ -66,7 +66,7 @@ topic = kafka.Topic("topic",
 
 ```go
 import (
-  kafka "github.com/pulumi/pulumi-kafka/sdk/go/kafka"
+  kafka "github.com/pulumi/pulumi-kafka/sdk/v2/go/kafka"
 )
 
 topic, _ := kafka.NewTopic(ctx, "topic", &kafka.TopicArgs{

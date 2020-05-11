@@ -60,7 +60,7 @@ user = rabbitmq.User("user",
 
 ```go
 import (
-  rabbitmq "github.com/pulumi/pulumi-rabbitmq/sdk/go/rabbitmq"
+  rabbitmq "github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq"
 )
 
 user, _ := rabbitmq.NewUser(ctx, "user", &rabbitmq.UserArgs{

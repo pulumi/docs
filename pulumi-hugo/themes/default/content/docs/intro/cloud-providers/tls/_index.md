@@ -56,7 +56,7 @@ key = tls.PrivateKey("my-private-key",
 
 ```go
 import (
-  tls "github.com/pulumi/pulumi-tls/sdk/go/tls"
+  tls "github.com/pulumi/pulumi-tls/sdk/v2/go/tls"
 )
 
 key, _ := tls.NewPrivateKey(ctx, "my-private-key", &tls.PrivateKeyArgs{

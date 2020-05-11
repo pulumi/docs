@@ -37,6 +37,7 @@ aliases: ["/docs/reference/clouds/"]
 * [Docker]({{< relref "./docker" >}})
 * [Kafka]({{< relref "./kafka" >}})
 * [Mailgun]({{< relref "./mailgun" >}})
+* [MongoDB Atlas]({{< relref "./mongodbatlas" >}})
 * [Okta]({{< relref "./okta" >}})
 * [RabbitMQ]({{< relref "./rabbitmq" >}})
 * [Rancher2]({{< relref "./rancher2" >}})
@@ -62,6 +63,7 @@ aliases: ["/docs/reference/clouds/"]
 
 ## VCS Providers
 
+* [GitHub]({{< relref "./github" >}})
 * [GitLab]({{< relref "./gitlab" >}})
 
 ## Misc. Providers

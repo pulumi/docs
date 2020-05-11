@@ -1,6 +1,6 @@
 dl {
 
-    &.resources-properties, &.package-details {
+    &.resources-properties, &.package-details, &.tabular {
         @apply mb-8 mt-4 p-1 flex flex-col items-start items-stretch bg-gray-100 border rounded border-gray-300 text-sm text-gray-700;
 
         @screen lg {
@@ -48,6 +48,10 @@ dl {
                 @screen lg {
                     @apply border-gray-200;
                 }
+            }
+
+            a {
+                @apply text-blue-600;
             }
         }
 
