@@ -26,7 +26,7 @@ import (
 	"strings"
 
 	"github.com/pkg/errors"
-	"gopkg.in/russross/blackfriday.v2"
+	"github.com/russross/blackfriday/v2"
 )
 
 // clouds contains an index of the clouds for which we want to publish tutorials.
@@ -186,9 +186,9 @@ func gatherTutorials(root string) ([]tutorial, error) {
 
 		// Great! We have a new tutorial. Append it and let's move on to the next one.
 		tutorials = append(tutorials, tutorial{
-			Name:              name,
-			Title:             title,
-			H1:                h1,
+			Name:  name,
+			Title: title,
+			H1:    h1,
 			// LinkTitle is the display text for the breadcrumb control.
 			LinkTitle:         h1,
 			MetaDesc:          "",

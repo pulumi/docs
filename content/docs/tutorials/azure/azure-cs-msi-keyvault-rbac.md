@@ -21,7 +21,7 @@ no_edit_this_page: true
 
 [Managed identities](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/) for Azure resources provides Azure services with an automatically managed identity in Azure Active Directory (Azure AD).
 
-This example demostrates using a managed identity with Azure App Service to access Azure KeyVault, Azure Storage, and Azure SQL Database without passwords or secrets.
+This example demonstrates using a managed identity with Azure App Service to access Azure KeyVault, Azure Storage, and Azure SQL Database without passwords or secrets.
 
 The application consists of several parts:
 
@@ -38,7 +38,7 @@ To deploy your infrastructure, follow the below steps.
 ### Prerequisites
 
 1. [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
-2. [Install .NET Core 3.1+](https://dotnet.microsoft.com/download)
+2. [Install .NET Core 3.0+](https://dotnet.microsoft.com/download)
 
 ### Steps
 
@@ -83,9 +83,9 @@ To deploy your infrastructure, follow the below steps.
 1.  Check the deployed website endpoint:
 
     ```
-    $ pulumi stack output endpoint
+    $ pulumi stack output Endpoint
     https://app129968b8.azurewebsites.net/
-    $ curl "$(pulumi stack output endpoint)"
+    $ curl "$(pulumi stack output Endpoint)"
     Hello 311378b3-16b7-4889-a8d7-2eb77478beba@50f73f6a-e8e3-46b6-969c-bf026712a650! Here is your...
     ```
 

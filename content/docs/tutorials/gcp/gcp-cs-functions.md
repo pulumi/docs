@@ -29,7 +29,7 @@ To deploy your infrastructure, follow the below steps.
 
 1. [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
 1. [Configure Pulumi for GCP](https://www.pulumi.com/docs/intro/cloud-providers/gcp/setup/)
-1. [Install .NET Core 3.1+](https://dotnet.microsoft.com/download)
+1. [Install .NET Core 3.0+](https://dotnet.microsoft.com/download)
 
 ## Deploying and running the program
 
@@ -63,9 +63,9 @@ To deploy your infrastructure, follow the below steps.
 1.  Check the deployed function endpoints:
 
     ```
-    $ pulumi stack output pythonEndpoint
+    $ pulumi stack output PythonEndpoint
     https://us-central1-test-1234.cloudfunctions.net/python-func-742a512
-    $ curl "$(pulumi stack output pythonEndpoint)"
+    $ curl "$(pulumi stack output PythonEndpoint)"
     Hello World!
     ```
 1. From there, feel free to experiment. Simply making edits and running `pulumi up` will incrementally update your stack.

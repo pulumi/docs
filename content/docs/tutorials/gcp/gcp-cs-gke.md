@@ -28,7 +28,7 @@ To deploy your infrastructure, follow the below steps.
 ### Prerequisites
 
 1. [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
-1. [Install .NET Core 3.1+](https://dotnet.microsoft.com/download)
+1. [Install .NET Core 3.0+](https://dotnet.microsoft.com/download)
 1. [Install Google Cloud SDK (`gcloud`)](https://cloud.google.com/sdk/docs/downloads-interactive)
 1. Configure GCP Auth
 
@@ -99,8 +99,8 @@ After cloning this repo, from this working directory, run these commands:
     +   └─ gcp:container:Cluster  helloworld      created
 
     Outputs:
-        clusterName: "helloworld-9b9530f"
-        kubeconfig : "<KUBECONFIG_CONTENTS>"
+        ClusterName: "helloworld-9b9530f"
+        KubeConfig : "<KUBECONFIG_CONTENTS>"
 
 	Resources:
         + 2 created
@@ -115,10 +115,10 @@ After cloning this repo, from this working directory, run these commands:
 
     To access your new Kubernetes cluster using `kubectl`, we need to setup the
     `kubeconfig` file and download `kubectl`. We can leverage the Pulumi
-    stack output in the CLI, as Pulumi faciliates exporting these objects for us.
+    stack output in the CLI, as Pulumi facilitates exporting these objects for us.
 
     ```bash
-    $ pulumi stack output kubeconfig > kubeconfig
+    $ pulumi stack output KubeConfig > kubeconfig
     $ export KUBECONFIG=$PWD/kubeconfig
 
     $ kubectl version

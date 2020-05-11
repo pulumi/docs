@@ -37,7 +37,7 @@ To deploy your infrastructure, follow the below steps.
 ### Prerequisites
 
 1. [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
-2. [Install .NET Core 3.1+](https://dotnet.microsoft.com/download)
+2. [Install .NET Core 3.0+](https://dotnet.microsoft.com/download)
 
 ### Steps
 
@@ -90,10 +90,10 @@ Previewing changes:
 Three endpoints are now available. For example,
 
 ```
-$ pulumi stack output vmssEndpoint
+$ pulumi stack output VmssEndpoint
 http://vmssrgcc15ea50.trafficmanager.net/cosmos
 
-$ curl "$(pulumi stack output vmssEndpoint)"
+$ curl "$(pulumi stack output VmssEndpoint)"
 Document 'cosmos' not found
 ```
 
