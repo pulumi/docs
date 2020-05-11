@@ -257,14 +257,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_gcp.firebase.WebApp">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.firebase.</code><code class="sig-name descname">WebApp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.firebase.WebApp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a WebApp resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] display_name: The user-assigned display name of the App.
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div><p>If it is not provided, the provider project is used.</p>
-</div></blockquote>
+<dd><p>A Google Cloud Firebase web application instance</p>
+<p>To get more information about WebApp, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects.webApps">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://firebase.google.com/">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user-assigned display name of the App.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py attribute">
 <dt id="pulumi_gcp.firebase.WebApp.app_id">
 <code class="sig-name descname">app_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.firebase.WebApp.app_id" title="Permalink to this definition">¶</a></dt>
@@ -354,13 +367,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_gcp.firebase.get_web_app">
 <code class="sig-prename descclassname">pulumi_gcp.firebase.</code><code class="sig-name descname">get_web_app</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.firebase.get_web_app" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>A Google Cloud Firebase web application instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>app_id</strong> (<em>str</em>) – The app_ip of name of the Firebase webApp.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt id="pulumi_gcp.firebase.get_web_app_config">
 <code class="sig-prename descclassname">pulumi_gcp.firebase.</code><code class="sig-name descname">get_web_app_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.firebase.get_web_app_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>A Google Cloud Firebase web application configuration</p>
+<p>To get more information about WebApp, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects.webApps">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://firebase.google.com/">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>project</strong> (<em>str</em>) – The ID of the project in which the resource belongs. If it
+is not provided, the provider project is used.</p></li>
+<li><p><strong>web_app_id</strong> (<em>str</em>) – the id of the firebase web app</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>

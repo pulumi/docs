@@ -19,7 +19,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>A Healthcare <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> is a toplevel logical grouping of <code class="docutils literal notranslate"><span class="pre">dicomStores</span></code>, <code class="docutils literal notranslate"><span class="pre">fhirStores</span></code> and <code class="docutils literal notranslate"><span class="pre">hl7V2Stores</span></code>.</p>
 <p>To get more information about Dataset, see:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets">API documentation</a></p></li>
+<li><p><a class="reference external" href="https://cloud.google.com/healthcare/docs/reference/rest/v1/projects.locations.datasets">API documentation</a></p></li>
 <li><p>How-to Guides</p>
 <ul>
 <li><p><a class="reference external" href="https://cloud.google.com/healthcare/docs/how-tos/datasets">Creating a dataset</a></p></li>
@@ -503,7 +503,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 (<a class="reference external" href="https://www.dicomstandard.org/about/">https://www.dicomstandard.org/about/</a>) standard for Healthcare information exchange</p>
 <p>To get more information about DicomStore, see:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.dicomStores">API documentation</a></p></li>
+<li><p><a class="reference external" href="https://cloud.google.com/healthcare/docs/reference/rest/v1/projects.locations.datasets.dicomStores">API documentation</a></p></li>
 <li><p>How-to Guides</p>
 <ul>
 <li><p><a class="reference external" href="https://cloud.google.com/healthcare/docs/how-tos/dicom">Creating a DICOM store</a></p></li>
@@ -1033,7 +1033,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 standard for Healthcare information exchange</p>
 <p>To get more information about FhirStore, see:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores">API documentation</a></p></li>
+<li><p><a class="reference external" href="https://cloud.google.com/healthcare/docs/reference/rest/v1/projects.locations.datasets.fhirStores">API documentation</a></p></li>
 <li><p>How-to Guides</p>
 <ul>
 <li><p><a class="reference external" href="https://cloud.google.com/healthcare/docs/how-tos/fhir">Creating a FHIR store</a></p></li>
@@ -1664,7 +1664,7 @@ standard for Healthcare information exchange
 
 To get more information about Hl7V2Store, see:
 
-* [API documentation](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.hl7V2Stores)
+* [API documentation](https://cloud.google.com/healthcare/docs/reference/rest/v1/projects.locations.datasets.hl7V2Stores)
 * How-to Guides
     * [Creating a HL7v2 Store](https://cloud.google.com/healthcare/docs/how-tos/hl7v2)
 
@@ -1697,6 +1697,8 @@ The **notification_config** object supports the following:
 The **parser_config** object supports the following:
 
   * `allowNullHeader` (`pulumi.Input[bool]`) - Determines whether messages with no header are allowed.
+  * `schema` (`pulumi.Input[str]`) - JSON encoded string for schemas used to parse messages in this
+    store if schematized parsing is desired.
   * `segmentTerminator` (`pulumi.Input[str]`) - Byte(s) to be used as the segment terminator. If this is unset, &#39;
 </pre></div>
 </div>
@@ -1751,6 +1753,8 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
 <dd><p>A nested object resource  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allowNullHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Determines whether messages with no header are allowed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schema</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - JSON encoded string for schemas used to parse messages in this
+store if schematized parsing is desired.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">segmentTerminator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Byte(s) to be used as the segment terminator. If this is unset, ‘
 ‘ will be used as segment terminator.
 A base64-encoded string.</p></li>
@@ -1800,6 +1804,8 @@ The **notification_config** object supports the following:
 The **parser_config** object supports the following:
 
   * `allowNullHeader` (`pulumi.Input[bool]`) - Determines whether messages with no header are allowed.
+  * `schema` (`pulumi.Input[str]`) - JSON encoded string for schemas used to parse messages in this
+    store if schematized parsing is desired.
   * `segmentTerminator` (`pulumi.Input[str]`) - Byte(s) to be used as the segment terminator. If this is unset, &#39;
 </pre></div>
 </div>

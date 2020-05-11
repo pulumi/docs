@@ -183,7 +183,7 @@ is not provided, the provider project is used.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Cloud Bigtable cluster.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">num_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of nodes in your Cloud Bigtable cluster.
-Required, with a minimum of <code class="docutils literal notranslate"><span class="pre">3</span></code> for a <code class="docutils literal notranslate"><span class="pre">PRODUCTION</span></code> instance. Must be left unset
+Required, with a minimum of <code class="docutils literal notranslate"><span class="pre">1</span></code> for a <code class="docutils literal notranslate"><span class="pre">PRODUCTION</span></code> instance. Must be left unset
 for a <code class="docutils literal notranslate"><span class="pre">DEVELOPMENT</span></code> instance.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storageType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The storage type to use. One of <code class="docutils literal notranslate"><span class="pre">&quot;SSD&quot;</span></code> or
 <code class="docutils literal notranslate"><span class="pre">&quot;HDD&quot;</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;SSD&quot;</span></code>.</p></li>
@@ -198,7 +198,7 @@ Bigtable instances are noted on the <a class="reference external" href="https://
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Cloud Bigtable cluster.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">num_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of nodes in your Cloud Bigtable cluster.
-Required, with a minimum of <code class="docutils literal notranslate"><span class="pre">3</span></code> for a <code class="docutils literal notranslate"><span class="pre">PRODUCTION</span></code> instance. Must be left unset
+Required, with a minimum of <code class="docutils literal notranslate"><span class="pre">1</span></code> for a <code class="docutils literal notranslate"><span class="pre">PRODUCTION</span></code> instance. Must be left unset
 for a <code class="docutils literal notranslate"><span class="pre">DEVELOPMENT</span></code> instance.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storageType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The storage type to use. One of <code class="docutils literal notranslate"><span class="pre">&quot;SSD&quot;</span></code> or
 <code class="docutils literal notranslate"><span class="pre">&quot;HDD&quot;</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;SSD&quot;</span></code>.</p></li>
@@ -257,7 +257,7 @@ is not provided, the provider project is used.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Cloud Bigtable cluster.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">num_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of nodes in your Cloud Bigtable cluster.
-Required, with a minimum of <code class="docutils literal notranslate"><span class="pre">3</span></code> for a <code class="docutils literal notranslate"><span class="pre">PRODUCTION</span></code> instance. Must be left unset
+Required, with a minimum of <code class="docutils literal notranslate"><span class="pre">1</span></code> for a <code class="docutils literal notranslate"><span class="pre">PRODUCTION</span></code> instance. Must be left unset
 for a <code class="docutils literal notranslate"><span class="pre">DEVELOPMENT</span></code> instance.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storageType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The storage type to use. One of <code class="docutils literal notranslate"><span class="pre">&quot;SSD&quot;</span></code> or
 <code class="docutils literal notranslate"><span class="pre">&quot;HDD&quot;</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;SSD&quot;</span></code>.</p></li>

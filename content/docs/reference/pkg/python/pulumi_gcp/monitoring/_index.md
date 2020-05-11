@@ -1534,15 +1534,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_gcp.monitoring.CustomService">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">CustomService</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">telemetry</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.CustomService" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a CustomService resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] display_name: Name used for UI elements listing this Service.
-:param pulumi.Input[str] service_id: An optional service ID to use. If not given, the server will generate a service ID.
-:param pulumi.Input[dict] telemetry: Configuration for how to query telemetry on a Service.</p>
+<dd><p>A Service is a discrete, autonomous, and network-accessible unit,
+designed to solve an individual concern (Wikipedia). In Cloud Monitoring,
+a Service acts as the root resource under which operational aspects of
+the service are accessible</p>
+<p>To get more information about Service, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/services">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/service-monitoring">Service Monitoring</a></p></li>
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/api/v3/">Monitoring API Documentation</a></p></li>
+</ul>
+</li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name used for UI elements listing this Service.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional service ID to use. If not given, the server will generate a
+service ID.</p></li>
+<li><p><strong>telemetry</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration for how to query telemetry on a Service.  Structure is documented below.</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>telemetry</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The full name of the resource that defines this service.
+Formatted as described in
+<a class="reference external" href="https://cloud.google.com/apis/design/resource_names">https://cloud.google.com/apis/design/resource_names</a>.</p></li>
 </ul>
 <dl class="py attribute">
 <dt id="pulumi_gcp.monitoring.CustomService.display_name">
@@ -1557,17 +1581,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_gcp.monitoring.CustomService.project">
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.CustomService.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_gcp.monitoring.CustomService.service_id">
 <code class="sig-name descname">service_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.CustomService.service_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>An optional service ID to use. If not given, the server will generate a service ID.</p>
+<dd><p>An optional service ID to use. If not given, the server will generate a
+service ID.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_gcp.monitoring.CustomService.telemetry">
 <code class="sig-name descname">telemetry</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.CustomService.telemetry" title="Permalink to this definition">¶</a></dt>
-<dd><p>Configuration for how to query telemetry on a Service.</p>
+<dd><p>Configuration for how to query telemetry on a Service.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The full name of the resource that defines this service.
+Formatted as described in
+<a class="reference external" href="https://cloud.google.com/apis/design/resource_names">https://cloud.google.com/apis/design/resource_names</a>.</p></li>
 </ul>
 </dd></dl>
 
@@ -1584,14 +1618,19 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name used for UI elements listing this Service.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full resource name for this service. The syntax is: projects/[PROJECT_ID]/services/[SERVICE_ID].</p></li>
-<li><p><strong>service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional service ID to use. If not given, the server will generate a service ID.</p></li>
-<li><p><strong>telemetry</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration for how to query telemetry on a Service.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional service ID to use. If not given, the server will generate a
+service ID.</p></li>
+<li><p><strong>telemetry</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration for how to query telemetry on a Service.  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>telemetry</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The full name of the resource that defines this service.
+Formatted as described in
+<a class="reference external" href="https://cloud.google.com/apis/design/resource_names">https://cloud.google.com/apis/design/resource_names</a>.</p></li>
 </ul>
 </dd></dl>
 
@@ -1708,6 +1747,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.monitoring.GetUptimeCheckIPsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.GetUptimeCheckIPsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.monitoring.GetUptimeCheckIPsResult.uptime_check_ips">
+<code class="sig-name descname">uptime_check_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.GetUptimeCheckIPsResult.uptime_check_ips" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of uptime check IPs used by Stackdriver Monitoring. Each <code class="docutils literal notranslate"><span class="pre">uptime_check_ip</span></code> contains:</p>
 </dd></dl>
 
 </dd></dl>
@@ -2619,7 +2664,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_gcp.monitoring.get_app_engine_service">
 <code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">get_app_engine_service</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">module_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.get_app_engine_service" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>A Monitoring Service is the root resource under which operational aspects of a
+generic service are accessible. A service is some discrete, autonomous, and
+network-accessible unit, designed to solve an individual concern</p>
+<p>An App Engine monitoring service is automatically created by GCP to monitor
+App Engine services.</p>
+<p>To get more information about Service, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/services">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/service-monitoring">Service Monitoring</a></p></li>
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/api/v3/">Monitoring API Documentation</a></p></li>
+</ul>
+</li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>module_id</strong> (<em>str</em>) – The ID of the App Engine module underlying this
+service. Corresponds to the moduleId resource label in the <a class="reference external" href="https://cloud.google.com/monitoring/api/resources#tag_gae_app">gae_app</a> monitored resource, or the service/module name.</p></li>
+<li><p><strong>project</strong> (<em>str</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -2675,7 +2744,8 @@ is not provided, the latest version is retrieved.</p></li>
 <dl class="py function">
 <dt id="pulumi_gcp.monitoring.get_uptime_check_i_ps">
 <code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">get_uptime_check_i_ps</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.get_uptime_check_i_ps" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Returns the list of IP addresses that checkers run from. For more information see
+the <a class="reference external" href="https://cloud.google.com/monitoring/uptime-checks#get-ips">official documentation</a>.</p>
 </dd></dl>
 
 </div>

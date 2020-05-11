@@ -62,6 +62,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="secretmanager/">secretmanager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="securitycenter/">securitycenter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="service_account/">service_account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="servicedirectory/">servicedirectory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="servicenetworking/">servicenetworking</a></li>
 <li class="toctree-l1"><a class="reference internal" href="serviceusage/">serviceusage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sourcerepo/">sourcerepo</a></li>
