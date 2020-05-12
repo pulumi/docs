@@ -118,7 +118,7 @@ class Program {
             // Create an S3 Bucket (with tags):
             var config = new Config();
             var bucket = new Bucket("my-bucket", new BucketArgs {
-                Tags: new Dictionary<string, string> {
+                Tags = {
                     { "User:Project",     Deployment.Instance.ProjectName },
                     { "User:Stack",       Deployment.Instance.StackName },
                     { "User:Cost Center", config.Get("costCenter") },
