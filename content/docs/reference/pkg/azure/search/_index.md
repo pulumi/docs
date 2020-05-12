@@ -26,3 +26,21 @@ Explore the resources and functions of the search module in the Azure package.
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Search.html" title="Pulumi.Azure.Search">Pulumi.Azure.Search</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/search?tab=doc#" title="azure/search">azure/search</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/search/#" title="@pulumi/azure/search">@pulumi/azure/search</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/search" title="pulumi_azure/search">pulumi_azure/search</a></dd>
+
+</dl>
+

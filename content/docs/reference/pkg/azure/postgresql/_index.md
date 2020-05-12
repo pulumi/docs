@@ -35,3 +35,21 @@ Explore the resources and functions of the postgresql module in the Azure packag
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.PostgreSql.html" title="Pulumi.Azure.PostgreSql">Pulumi.Azure.PostgreSql</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/postgresql?tab=doc#" title="azure/postgresql">azure/postgresql</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/postgresql/#" title="@pulumi/azure/postgresql">@pulumi/azure/postgresql</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/postgresql" title="pulumi_azure/postgresql">pulumi_azure/postgresql</a></dd>
+
+</dl>
+

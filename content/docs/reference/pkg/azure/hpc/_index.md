@@ -28,3 +28,21 @@ Explore the resources and functions of the hpc module in the Azure package.
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Hpc.html" title="Pulumi.Azure.Hpc">Pulumi.Azure.Hpc</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hpc?tab=doc#" title="azure/hpc">azure/hpc</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/hpc/#" title="@pulumi/azure/hpc">@pulumi/azure/hpc</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/hpc" title="pulumi_azure/hpc">pulumi_azure/hpc</a></dd>
+
+</dl>
+

@@ -39,3 +39,21 @@ Explore the resources and functions of the cosmosdb module in the Azure package.
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.html" title="Pulumi.Azure.CosmosDB">Pulumi.Azure.CosmosDB</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#" title="azure/cosmosdb">azure/cosmosdb</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/cosmosdb/#" title="@pulumi/azure/cosmosdb">@pulumi/azure/cosmosdb</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/cosmosdb" title="pulumi_azure/cosmosdb">pulumi_azure/cosmosdb</a></dd>
+
+</dl>
+

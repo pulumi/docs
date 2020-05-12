@@ -26,3 +26,21 @@ Explore the resources and functions of the costmanagement module in the Azure pa
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CostManagement.html" title="Pulumi.Azure.CostManagement">Pulumi.Azure.CostManagement</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/costmanagement?tab=doc#" title="azure/costmanagement">azure/costmanagement</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/costmanagement/#" title="@pulumi/azure/costmanagement">@pulumi/azure/costmanagement</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/costmanagement" title="pulumi_azure/costmanagement">pulumi_azure/costmanagement</a></dd>
+
+</dl>
+

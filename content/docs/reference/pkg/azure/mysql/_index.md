@@ -30,3 +30,21 @@ Explore the resources and functions of the mysql module in the Azure package.
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MySql.html" title="Pulumi.Azure.MySql">Pulumi.Azure.MySql</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mysql?tab=doc#" title="azure/mysql">azure/mysql</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/mysql/#" title="@pulumi/azure/mysql">@pulumi/azure/mysql</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/mysql" title="pulumi_azure/mysql">pulumi_azure/mysql</a></dd>
+
+</dl>
+

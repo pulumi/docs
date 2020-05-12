@@ -26,3 +26,21 @@ Explore the resources and functions of the managementresource module in the Azur
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ManagementResource.html" title="Pulumi.Azure.ManagementResource">Pulumi.Azure.ManagementResource</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/managementresource?tab=doc#" title="azure/managementresource">azure/managementresource</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/managementresource/#" title="@pulumi/azure/managementresource">@pulumi/azure/managementresource</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/managementresource" title="pulumi_azure/managementresource">pulumi_azure/managementresource</a></dd>
+
+</dl>
+

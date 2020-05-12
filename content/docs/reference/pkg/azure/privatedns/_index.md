@@ -40,3 +40,21 @@ Explore the resources and functions of the privatedns module in the Azure packag
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.PrivateDns.html" title="Pulumi.Azure.PrivateDns">Pulumi.Azure.PrivateDns</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/privatedns?tab=doc#" title="azure/privatedns">azure/privatedns</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/privatedns/#" title="@pulumi/azure/privatedns">@pulumi/azure/privatedns</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/privatedns" title="pulumi_azure/privatedns">pulumi_azure/privatedns</a></dd>
+
+</dl>
+

@@ -41,3 +41,21 @@ Explore the resources and functions of the servicebus module in the Azure packag
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceBus.html" title="Pulumi.Azure.ServiceBus">Pulumi.Azure.ServiceBus</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicebus?tab=doc#" title="azure/servicebus">azure/servicebus</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/servicebus/#" title="@pulumi/azure/servicebus">@pulumi/azure/servicebus</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/servicebus" title="pulumi_azure/servicebus">pulumi_azure/servicebus</a></dd>
+
+</dl>
+

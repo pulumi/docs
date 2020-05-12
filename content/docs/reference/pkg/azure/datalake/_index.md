@@ -35,3 +35,21 @@ Explore the resources and functions of the datalake module in the Azure package.
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataLake.html" title="Pulumi.Azure.DataLake">Pulumi.Azure.DataLake</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datalake?tab=doc#" title="azure/datalake">azure/datalake</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/datalake/#" title="@pulumi/azure/datalake">@pulumi/azure/datalake</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/datalake" title="pulumi_azure/datalake">pulumi_azure/datalake</a></dd>
+
+</dl>
+

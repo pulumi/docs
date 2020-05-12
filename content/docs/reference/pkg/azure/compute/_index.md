@@ -62,3 +62,21 @@ Explore the resources and functions of the compute module in the Azure package.
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.html" title="Pulumi.Azure.Compute">Pulumi.Azure.Compute</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#" title="azure/compute">azure/compute</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/compute/#" title="@pulumi/azure/compute">@pulumi/azure/compute</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/compute" title="pulumi_azure/compute">pulumi_azure/compute</a></dd>
+
+</dl>
+

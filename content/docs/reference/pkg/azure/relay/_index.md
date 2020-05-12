@@ -27,3 +27,21 @@ Explore the resources and functions of the relay module in the Azure package.
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Relay.html" title="Pulumi.Azure.Relay">Pulumi.Azure.Relay</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/relay?tab=doc#" title="azure/relay">azure/relay</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/relay/#" title="@pulumi/azure/relay">@pulumi/azure/relay</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/relay" title="pulumi_azure/relay">pulumi_azure/relay</a></dd>
+
+</dl>
+

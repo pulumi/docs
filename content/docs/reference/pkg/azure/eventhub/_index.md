@@ -54,3 +54,21 @@ Explore the resources and functions of the eventhub module in the Azure package.
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.html" title="Pulumi.Azure.EventHub">Pulumi.Azure.EventHub</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#" title="azure/eventhub">azure/eventhub</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/eventhub/#" title="@pulumi/azure/eventhub">@pulumi/azure/eventhub</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/eventhub" title="pulumi_azure/eventhub">pulumi_azure/eventhub</a></dd>
+
+</dl>
+

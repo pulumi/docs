@@ -26,3 +26,21 @@ Explore the resources and functions of the analysisservices module in the Azure 
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AnalysisServices.html" title="Pulumi.Azure.AnalysisServices">Pulumi.Azure.AnalysisServices</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/analysisservices?tab=doc#" title="azure/analysisservices">azure/analysisservices</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/analysisservices/#" title="@pulumi/azure/analysisservices">@pulumi/azure/analysisservices</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/analysisservices" title="pulumi_azure/analysisservices">pulumi_azure/analysisservices</a></dd>
+
+</dl>
+

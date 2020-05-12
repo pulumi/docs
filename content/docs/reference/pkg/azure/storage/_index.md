@@ -47,3 +47,21 @@ Explore the resources and functions of the storage module in the Azure package.
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.html" title="Pulumi.Azure.Storage">Pulumi.Azure.Storage</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#" title="azure/storage">azure/storage</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#" title="@pulumi/azure/storage">@pulumi/azure/storage</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/storage" title="pulumi_azure/storage">pulumi_azure/storage</a></dd>
+
+</dl>
+

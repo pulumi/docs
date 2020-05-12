@@ -41,3 +41,21 @@ Explore the resources and functions of the datafactory module in the Azure packa
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataFactory.html" title="Pulumi.Azure.DataFactory">Pulumi.Azure.DataFactory</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory?tab=doc#" title="azure/datafactory">azure/datafactory</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/datafactory/#" title="@pulumi/azure/datafactory">@pulumi/azure/datafactory</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/datafactory" title="pulumi_azure/datafactory">pulumi_azure/datafactory</a></dd>
+
+</dl>
+

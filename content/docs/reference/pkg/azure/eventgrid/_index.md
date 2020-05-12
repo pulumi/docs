@@ -33,3 +33,21 @@ Explore the resources and functions of the eventgrid module in the Azure package
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.html" title="Pulumi.Azure.EventGrid">Pulumi.Azure.EventGrid</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#" title="azure/eventgrid">azure/eventgrid</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/eventgrid/#" title="@pulumi/azure/eventgrid">@pulumi/azure/eventgrid</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/eventgrid" title="pulumi_azure/eventgrid">pulumi_azure/eventgrid</a></dd>
+
+</dl>
+

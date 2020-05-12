@@ -26,3 +26,21 @@ Explore the resources and functions of the databricks module in the Azure packag
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataBricks.html" title="Pulumi.Azure.DataBricks">Pulumi.Azure.DataBricks</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/databricks?tab=doc#" title="azure/databricks">azure/databricks</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/databricks/#" title="@pulumi/azure/databricks">@pulumi/azure/databricks</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/databricks" title="pulumi_azure/databricks">pulumi_azure/databricks</a></dd>
+
+</dl>
+

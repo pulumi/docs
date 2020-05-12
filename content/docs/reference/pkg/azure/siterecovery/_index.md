@@ -31,3 +31,21 @@ Explore the resources and functions of the siterecovery module in the Azure pack
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.SiteRecovery.html" title="Pulumi.Azure.SiteRecovery">Pulumi.Azure.SiteRecovery</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/siterecovery?tab=doc#" title="azure/siterecovery">azure/siterecovery</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/siterecovery/#" title="@pulumi/azure/siterecovery">@pulumi/azure/siterecovery</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/siterecovery" title="pulumi_azure/siterecovery">pulumi_azure/siterecovery</a></dd>
+
+</dl>
+

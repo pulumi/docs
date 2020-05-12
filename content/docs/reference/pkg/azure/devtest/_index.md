@@ -37,3 +37,21 @@ Explore the resources and functions of the devtest module in the Azure package.
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DevTest.html" title="Pulumi.Azure.DevTest">Pulumi.Azure.DevTest</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/devtest?tab=doc#" title="azure/devtest">azure/devtest</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/devtest/#" title="@pulumi/azure/devtest">@pulumi/azure/devtest</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/devtest" title="pulumi_azure/devtest">pulumi_azure/devtest</a></dd>
+
+</dl>
+

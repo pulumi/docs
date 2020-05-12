@@ -31,3 +31,21 @@ Explore the resources and functions of the healthcare module in the Azure packag
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Healthcare.html" title="Pulumi.Azure.Healthcare">Pulumi.Azure.Healthcare</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/healthcare?tab=doc#" title="azure/healthcare">azure/healthcare</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/healthcare/#" title="@pulumi/azure/healthcare">@pulumi/azure/healthcare</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/healthcare" title="pulumi_azure/healthcare">pulumi_azure/healthcare</a></dd>
+
+</dl>
+

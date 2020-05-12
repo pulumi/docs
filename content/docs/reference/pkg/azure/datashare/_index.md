@@ -31,3 +31,21 @@ Explore the resources and functions of the datashare module in the Azure package
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataShare.html" title="Pulumi.Azure.DataShare">Pulumi.Azure.DataShare</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datashare?tab=doc#" title="azure/datashare">azure/datashare</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/datashare/#" title="@pulumi/azure/datashare">@pulumi/azure/datashare</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/datashare" title="pulumi_azure/datashare">pulumi_azure/datashare</a></dd>
+
+</dl>
+

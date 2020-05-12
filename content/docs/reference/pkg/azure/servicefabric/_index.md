@@ -26,3 +26,21 @@ Explore the resources and functions of the servicefabric module in the Azure pac
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.html" title="Pulumi.Azure.ServiceFabric">Pulumi.Azure.ServiceFabric</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#" title="azure/servicefabric">azure/servicefabric</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/servicefabric/#" title="@pulumi/azure/servicefabric">@pulumi/azure/servicefabric</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/servicefabric" title="pulumi_azure/servicefabric">pulumi_azure/servicefabric</a></dd>
+
+</dl>
+

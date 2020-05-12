@@ -42,3 +42,21 @@ Explore the resources and functions of the monitoring module in the Azure packag
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.html" title="Pulumi.Azure.Monitoring">Pulumi.Azure.Monitoring</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#" title="azure/monitoring">azure/monitoring</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/monitoring/#" title="@pulumi/azure/monitoring">@pulumi/azure/monitoring</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/monitoring" title="pulumi_azure/monitoring">pulumi_azure/monitoring</a></dd>
+
+</dl>
+

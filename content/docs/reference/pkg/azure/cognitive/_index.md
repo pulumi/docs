@@ -26,3 +26,21 @@ Explore the resources and functions of the cognitive module in the Azure package
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cognitive.html" title="Pulumi.Azure.Cognitive">Pulumi.Azure.Cognitive</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cognitive?tab=doc#" title="azure/cognitive">azure/cognitive</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/cognitive/#" title="@pulumi/azure/cognitive">@pulumi/azure/cognitive</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/cognitive" title="pulumi_azure/cognitive">pulumi_azure/cognitive</a></dd>
+
+</dl>
+

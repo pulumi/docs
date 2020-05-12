@@ -26,3 +26,21 @@ Explore the resources and functions of the devspace module in the Azure package.
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DevSpace.html" title="Pulumi.Azure.DevSpace">Pulumi.Azure.DevSpace</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/devspace?tab=doc#" title="azure/devspace">azure/devspace</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/devspace/#" title="@pulumi/azure/devspace">@pulumi/azure/devspace</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/devspace" title="pulumi_azure/devspace">pulumi_azure/devspace</a></dd>
+
+</dl>
+

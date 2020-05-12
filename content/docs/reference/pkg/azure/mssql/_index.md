@@ -38,3 +38,21 @@ Explore the resources and functions of the mssql module in the Azure package.
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.html" title="Pulumi.Azure.MSSql">Pulumi.Azure.MSSql</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#" title="azure/mssql">azure/mssql</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/mssql/#" title="@pulumi/azure/mssql">@pulumi/azure/mssql</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/mssql" title="pulumi_azure/mssql">pulumi_azure/mssql</a></dd>
+
+</dl>
+

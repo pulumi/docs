@@ -95,3 +95,21 @@ Explore the resources and functions of the network module in the Azure package.
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.html" title="Pulumi.Azure.Network">Pulumi.Azure.Network</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#" title="azure/network">azure/network</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#" title="@pulumi/azure/network">@pulumi/azure/network</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/network" title="pulumi_azure/network">pulumi_azure/network</a></dd>
+
+</dl>
+

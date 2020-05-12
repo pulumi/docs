@@ -26,3 +26,21 @@ Explore the resources and functions of the mixedreality module in the Azure pack
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MixedReality.html" title="Pulumi.Azure.MixedReality">Pulumi.Azure.MixedReality</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mixedreality?tab=doc#" title="azure/mixedreality">azure/mixedreality</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/mixedreality/#" title="@pulumi/azure/mixedreality">@pulumi/azure/mixedreality</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/mixedreality" title="pulumi_azure/mixedreality">pulumi_azure/mixedreality</a></dd>
+
+</dl>
+

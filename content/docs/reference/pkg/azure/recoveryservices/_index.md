@@ -31,3 +31,21 @@ Explore the resources and functions of the recoveryservices module in the Azure 
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.RecoveryServices.html" title="Pulumi.Azure.RecoveryServices">Pulumi.Azure.RecoveryServices</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/recoveryservices?tab=doc#" title="azure/recoveryservices">azure/recoveryservices</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/recoveryservices/#" title="@pulumi/azure/recoveryservices">@pulumi/azure/recoveryservices</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/recoveryservices" title="pulumi_azure/recoveryservices">pulumi_azure/recoveryservices</a></dd>
+
+</dl>
+

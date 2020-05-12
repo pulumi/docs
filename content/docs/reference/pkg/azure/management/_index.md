@@ -32,3 +32,21 @@ Explore the resources and functions of the management module in the Azure packag
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Management.html" title="Pulumi.Azure.Management">Pulumi.Azure.Management</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/management?tab=doc#" title="azure/management">azure/management</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/management/#" title="@pulumi/azure/management">@pulumi/azure/management</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/management" title="pulumi_azure/management">pulumi_azure/management</a></dd>
+
+</dl>
+

@@ -63,3 +63,21 @@ Explore the resources and functions of the apimanagement module in the Azure pac
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.html" title="Pulumi.Azure.ApiManagement">Pulumi.Azure.ApiManagement</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#" title="azure/apimanagement">azure/apimanagement</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#" title="@pulumi/azure/apimanagement">@pulumi/azure/apimanagement</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement" title="pulumi_azure/apimanagement">pulumi_azure/apimanagement</a></dd>
+
+</dl>
+

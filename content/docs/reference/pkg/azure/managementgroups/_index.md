@@ -31,3 +31,21 @@ Explore the resources and functions of the managementgroups module in the Azure 
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ManagementGroups.html" title="Pulumi.Azure.ManagementGroups">Pulumi.Azure.ManagementGroups</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/managementgroups?tab=doc#" title="azure/managementgroups">azure/managementgroups</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/managementgroups/#" title="@pulumi/azure/managementgroups">@pulumi/azure/managementgroups</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/managementgroups" title="pulumi_azure/managementgroups">pulumi_azure/managementgroups</a></dd>
+
+</dl>
+

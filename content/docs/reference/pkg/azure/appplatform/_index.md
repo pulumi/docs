@@ -32,3 +32,21 @@ Explore the resources and functions of the appplatform module in the Azure packa
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.html" title="Pulumi.Azure.AppPlatform">Pulumi.Azure.AppPlatform</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#" title="azure/appplatform">azure/appplatform</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/appplatform/#" title="@pulumi/azure/appplatform">@pulumi/azure/appplatform</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/appplatform" title="pulumi_azure/appplatform">pulumi_azure/appplatform</a></dd>
+
+</dl>
+

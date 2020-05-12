@@ -32,3 +32,21 @@ Explore the resources and functions of the sentinel module in the Azure package.
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Sentinel.html" title="Pulumi.Azure.Sentinel">Pulumi.Azure.Sentinel</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sentinel?tab=doc#" title="azure/sentinel">azure/sentinel</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/sentinel/#" title="@pulumi/azure/sentinel">@pulumi/azure/sentinel</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/sentinel" title="pulumi_azure/sentinel">pulumi_azure/sentinel</a></dd>
+
+</dl>
+

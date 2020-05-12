@@ -31,3 +31,21 @@ Explore the resources and functions of the appconfiguration module in the Azure 
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppConfiguration.html" title="Pulumi.Azure.AppConfiguration">Pulumi.Azure.AppConfiguration</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appconfiguration?tab=doc#" title="azure/appconfiguration">azure/appconfiguration</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/appconfiguration/#" title="@pulumi/azure/appconfiguration">@pulumi/azure/appconfiguration</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/appconfiguration" title="pulumi_azure/appconfiguration">pulumi_azure/appconfiguration</a></dd>
+
+</dl>
+

@@ -31,3 +31,21 @@ Explore the resources and functions of the proximity module in the Azure package
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Proximity.html" title="Pulumi.Azure.Proximity">Pulumi.Azure.Proximity</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/proximity?tab=doc#" title="azure/proximity">azure/proximity</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/proximity/#" title="@pulumi/azure/proximity">@pulumi/azure/proximity</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/proximity" title="pulumi_azure/proximity">pulumi_azure/proximity</a></dd>
+
+</dl>
+

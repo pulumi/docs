@@ -26,3 +26,21 @@ Explore the resources and functions of the mediaservices module in the Azure pac
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MediaServices.html" title="Pulumi.Azure.MediaServices">Pulumi.Azure.MediaServices</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mediaservices?tab=doc#" title="azure/mediaservices">azure/mediaservices</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/mediaservices/#" title="@pulumi/azure/mediaservices">@pulumi/azure/mediaservices</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/mediaservices" title="pulumi_azure/mediaservices">pulumi_azure/mediaservices</a></dd>
+
+</dl>
+

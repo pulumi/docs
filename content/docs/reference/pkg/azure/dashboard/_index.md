@@ -26,3 +26,21 @@ Explore the resources and functions of the dashboard module in the Azure package
 	<dd>3.5.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Dashboard.html" title="Pulumi.Azure.Dashboard">Pulumi.Azure.Dashboard</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/dashboard?tab=doc#" title="azure/dashboard">azure/dashboard</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/dashboard/#" title="@pulumi/azure/dashboard">@pulumi/azure/dashboard</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/dashboard" title="pulumi_azure/dashboard">pulumi_azure/dashboard</a></dd>
+
+</dl>
+
