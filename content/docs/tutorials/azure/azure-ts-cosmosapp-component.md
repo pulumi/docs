@@ -33,7 +33,7 @@ The [`CosmosApp`](https://github.com/pulumi/examples/blob/master/azure-ts-cosmos
 The application has three example of using this component with the following compute services:
 
 - Azure Functions
-- Azure Container Intances
+- Azure Container Instances
 - Azure VM Scale Sets + Azure Load Balancer
 
 ## Prerequisites

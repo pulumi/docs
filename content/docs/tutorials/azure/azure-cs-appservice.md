@@ -31,7 +31,7 @@ To deploy your infrastructure, follow the below steps.
 ### Prerequisites
 
 1. [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
-2. [Install .NET Core 3.1+](https://dotnet.microsoft.com/download)
+2. [Install .NET Core 3.0+](https://dotnet.microsoft.com/download)
 
 ### Steps
 
@@ -76,9 +76,9 @@ To deploy your infrastructure, follow the below steps.
 1.  Check the deployed website endpoint:
 
     ```
-    $ pulumi stack output endpoint
+    $ pulumi stack output Endpoint
     https://azpulumi-as0ef47193.azurewebsites.net
-    $ curl "$(pulumi stack output endpoint)"
+    $ curl "$(pulumi stack output Endpoint)"
     <html>
         <body>
             <h1>Greetings from Azure App Service!</h1>

@@ -28,7 +28,7 @@ To deploy your infrastructure, follow the below steps.
 ### Prerequisites
 
 1. [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
-2. [Install .NET Core 3.1+](https://dotnet.microsoft.com/download)
+2. [Install .NET Core 3.0+](https://dotnet.microsoft.com/download)
 
 ### Steps
 
@@ -62,14 +62,14 @@ To deploy your infrastructure, follow the below steps.
 1. Get the IP address of the newly-created instance from the stack's outputs:
 
     ```
-    $ pulumi stack output ipAddress
+    $ pulumi stack output IpAddress
     137.117.15.111
     ```
 
 1. Check to see that your server is now running:
 
     ```
-    $ curl http://$(pulumi stack output ipAddress)
+    $ curl http://$(pulumi stack output IpAddress)
     Hello, World!
     ```
 

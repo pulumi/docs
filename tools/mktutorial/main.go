@@ -26,7 +26,7 @@ import (
 	"strings"
 
 	"github.com/pkg/errors"
-	"gopkg.in/russross/blackfriday.v2"
+	"github.com/russross/blackfriday/v2"
 )
 
 // clouds contains an index of the clouds for which we want to publish tutorials.
@@ -186,9 +186,9 @@ func gatherTutorials(root string) ([]tutorial, error) {
 
 		// Great! We have a new tutorial. Append it and let's move on to the next one.
 		tutorials = append(tutorials, tutorial{
-			Name:              name,
-			Title:             title,
-			H1:                h1,
+			Name:  name,
+			Title: title,
+			H1:    h1,
 			// LinkTitle is the display text for the breadcrumb control.
 			LinkTitle:         h1,
 			MetaDesc:          "",
@@ -271,6 +271,8 @@ func makeLangMap(tutorials []tutorial, include []string, exclude []string) (map[
 		"js": nil,
 		"ts": nil,
 		"py": nil,
+		"go": nil,
+		"cs": nil,
 	}
 	var c int
 	for _, tut := range tutorials {
@@ -341,9 +343,12 @@ func emitGlobalIndexShortcode(root string, tutorials []tutorial) error {
 
 	// Render the template using the tutorials data.
 	if err = globalIndexTemplate.FRender(f, map[string]interface{}{
-		"JavaScriptTutorials": tuts["js"],
-		"TypeScriptTutorials": tuts["ts"],
+		// Note: We combine JS and TS together as they are largely interchangable, and displaying a
+		// seperate JavaScript section with a very small selection isn't particularly "helpful".
+		"TypeScriptTutorials": append(tuts["ts"], tuts["js"]...),
 		"PythonTutorials":     tuts["py"],
+		"GoTutorials":         tuts["go"],
+		"CSharpTutorials":     tuts["cs"],
 	}); err != nil {
 		return err
 	}
@@ -369,9 +374,12 @@ func emitCloudIndexShortcode(root, cloud string, tutorials []tutorial) error {
 
 	// Render the template using the tutorials data.
 	if err = cloudIndexTemplate.FRender(f, map[string]interface{}{
-		"JavaScriptTutorials": tuts["js"],
-		"TypeScriptTutorials": tuts["ts"],
+		// Note: We combine JS and TS together as they are largely interchangable, and displaying a
+		// seperate JavaScript section with a very small selection isn't particularly "helpful".
+		"TypeScriptTutorials": append(tuts["ts"], tuts["js"]...),
 		"PythonTutorials":     tuts["py"],
+		"GoTutorials":         tuts["go"],
+		"CSharpTutorials":     tuts["cs"],
 	}); err != nil {
 		return err
 	}

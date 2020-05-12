@@ -30,7 +30,7 @@ To deploy your infrastructure, follow the below steps.
 
 1. [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
 1. [Configure Pulumi for AWS](https://www.pulumi.com/docs/intro/cloud-providers/aws/setup/)
-1. [Install .NET Core 3.1+](https://dotnet.microsoft.com/download)
+1. [Install .NET Core 3.0+](https://dotnet.microsoft.com/download)
 
 ## Deploying and running the program
 
@@ -65,9 +65,9 @@ To deploy your infrastructure, follow the below steps.
     ```
     $ pulumi stack output
     Current stack outputs (2):
-        OUTPUT                                           VALUE
-        public_dns                                       ec2-34-217-176-141.us-west-2.compute.amazonaws.com
-        public_ip                                        34.217.176.141
+        OUTPUT          VALUE
+        PublicDns       ec2-34-217-176-141.us-west-2.compute.amazonaws.com
+        PublicIp        34.217.176.141
     ```
 
 1.  Verify that the EC2 instance exists, by either using the AWS Console or running `aws ec2 describe-instances`.
