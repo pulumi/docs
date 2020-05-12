@@ -10,7 +10,13 @@ notitle: true
 <dl class="py class">
 <dt id="pulumi_aiven.Account">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">Account</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_team_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Account" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">account1</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;account1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
@@ -122,7 +128,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.AccountTeam">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AccountTeam</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AccountTeam" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">account_team1</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">AccountTeam</span><span class="p">(</span><span class="s2">&quot;accountTeam1&quot;</span><span class="p">,</span> <span class="n">account_id</span><span class="o">=</span><span class="n">aiven_account</span><span class="p">[</span><span class="s2">&quot;team&quot;</span><span class="p">][</span><span class="s2">&quot;account_id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
@@ -230,6 +242,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 to a user using <code class="docutils literal notranslate"><span class="pre">user_email</span></code> address. If the user accepts an invitation, he or she will become a member of the account team. 
 The deletion of <code class="docutils literal notranslate"><span class="pre">.AccountTeamMember</span></code> will not only delete invitation if one was sent but not yet accepted by the 
 user, and it will also eliminate an account team member if one has accepted an invitation previously.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">AccountTeamMember</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="n">aiven_account</span><span class="p">[</span><span class="s2">&quot;developers&quot;</span><span class="p">][</span><span class="s2">&quot;account_id&quot;</span><span class="p">],</span>
+    <span class="n">team_id</span><span class="o">=</span><span class="n">aiven_account</span><span class="p">[</span><span class="s2">&quot;developers&quot;</span><span class="p">][</span><span class="s2">&quot;account_id&quot;</span><span class="p">],</span>
+    <span class="n">user_email</span><span class="o">=</span><span class="s2">&quot;user+1@example.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -345,6 +366,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AccountTeamProject</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AccountTeamProject" title="Permalink to this definition">¶</a></dt>
 <dd><p>The account team project is intended to link and existing project to the existing account team. It is important to note 
 that the project should have an <code class="docutils literal notranslate"><span class="pre">account_id</span></code> property set and equal to account team you are trying to link this project.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">project1</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;project1&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="n">aiven_account_team</span><span class="p">[</span><span class="s2">&quot;developers&quot;</span><span class="p">][</span><span class="s2">&quot;account_id&quot;</span><span class="p">],</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;project-1&quot;</span><span class="p">)</span>
+<span class="n">account_team_project1</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">AccountTeamProject</span><span class="p">(</span><span class="s2">&quot;accountTeamProject1&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="n">aiven_account_team</span><span class="p">[</span><span class="s2">&quot;developers&quot;</span><span class="p">][</span><span class="s2">&quot;account_id&quot;</span><span class="p">],</span>
+    <span class="n">project_name</span><span class="o">=</span><span class="n">project1</span><span class="o">.</span><span class="n">project</span><span class="p">,</span>
+    <span class="n">team_id</span><span class="o">=</span><span class="n">aiven_account_team</span><span class="p">[</span><span class="s2">&quot;developers&quot;</span><span class="p">][</span><span class="s2">&quot;team_id&quot;</span><span class="p">],</span>
+    <span class="n">team_type</span><span class="o">=</span><span class="s2">&quot;admin&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -537,7 +571,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.ConnectionPool">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">ConnectionPool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.ConnectionPool" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">mytestpool</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">ConnectionPool</span><span class="p">(</span><span class="s2">&quot;mytestpool&quot;</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="n">aiven_database</span><span class="p">[</span><span class="s2">&quot;mydatabase&quot;</span><span class="p">][</span><span class="s2">&quot;database_name&quot;</span><span class="p">],</span>
+    <span class="n">pool_mode</span><span class="o">=</span><span class="s2">&quot;transaction&quot;</span><span class="p">,</span>
+    <span class="n">pool_name</span><span class="o">=</span><span class="s2">&quot;mypool&quot;</span><span class="p">,</span>
+    <span class="n">pool_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">aiven_project</span><span class="p">[</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="n">aiven_service</span><span class="p">[</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">aiven_service_user</span><span class="p">[</span><span class="s2">&quot;myserviceuser&quot;</span><span class="p">][</span><span class="s2">&quot;username&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
@@ -665,7 +712,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.Database">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">Database</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lc_collate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lc_ctype</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Database" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">mydatabase</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s2">&quot;mydatabase&quot;</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;&lt;DATABASE_NAME&gt;&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">aiven_project</span><span class="p">[</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="n">aiven_service</span><span class="p">[</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
@@ -1152,7 +1208,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.KafkaAcl">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">KafkaAcl</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permission</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.KafkaAcl" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">mytestacl</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">KafkaAcl</span><span class="p">(</span><span class="s2">&quot;mytestacl&quot;</span><span class="p">,</span>
+    <span class="n">permission</span><span class="o">=</span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">aiven_project</span><span class="p">[</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="n">aiven_service</span><span class="p">[</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
+    <span class="n">topic</span><span class="o">=</span><span class="s2">&quot;&lt;TOPIC_NAME_PATTERN&gt;&quot;</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;&lt;USERNAME_PATTERN&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
@@ -1590,7 +1657,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.KafkaTopic">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">KafkaTopic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cleanup_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimum_in_sync_replicas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partitions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_hours</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.KafkaTopic" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">mytesttopic</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">KafkaTopic</span><span class="p">(</span><span class="s2">&quot;mytesttopic&quot;</span><span class="p">,</span>
+    <span class="n">cleanup_policy</span><span class="o">=</span><span class="s2">&quot;delete&quot;</span><span class="p">,</span>
+    <span class="n">minimum_in_sync_replicas</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">partitions</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">aiven_project</span><span class="p">[</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">replication</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">retention_bytes</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">retention_hours</span><span class="o">=</span><span class="mi">72</span><span class="p">,</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="n">aiven_service</span><span class="p">[</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
+    <span class="n">topic_name</span><span class="o">=</span><span class="s2">&quot;&lt;TOPIC_NAME&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
@@ -1738,7 +1820,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.Project">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_emails</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ca_cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">card_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">copy_from_project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">technical_emails</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Project" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">myproject</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;myproject&quot;</span><span class="p">,</span>
+    <span class="n">card_id</span><span class="o">=</span><span class="s2">&quot;&lt;FULL_CARD_ID/LAST4_DIGITS&gt;&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT_NAME&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
@@ -1875,7 +1965,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.ProjectUser">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">ProjectUser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">member_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.ProjectUser" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">mytestuser</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">ProjectUser</span><span class="p">(</span><span class="s2">&quot;mytestuser&quot;</span><span class="p">,</span>
+    <span class="n">email</span><span class="o">=</span><span class="s2">&quot;john.doe@example.com&quot;</span><span class="p">,</span>
+    <span class="n">member_type</span><span class="o">=</span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">aiven_project</span><span class="p">[</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
@@ -1971,7 +2070,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.ProjectVpc">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">ProjectVpc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_cidr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.ProjectVpc" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">myvpc</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">ProjectVpc</span><span class="p">(</span><span class="s2">&quot;myvpc&quot;</span><span class="p">,</span>
+    <span class="n">cloud_name</span><span class="o">=</span><span class="s2">&quot;google-europe-west1&quot;</span><span class="p">,</span>
+    <span class="n">network_cidr</span><span class="o">=</span><span class="s2">&quot;192.168.0.1/24&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">aiven_project</span><span class="p">[</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
@@ -2121,7 +2229,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.Service">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Service" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">myservice</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;myservice&quot;</span><span class="p">,</span>
+    <span class="n">cloud_name</span><span class="o">=</span><span class="s2">&quot;google-europe-west1&quot;</span><span class="p">,</span>
+    <span class="n">pg_user_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;ipFilter&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;pgVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">plan</span><span class="o">=</span><span class="s2">&quot;business-8&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">aiven_project</span><span class="p">[</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">project_vpc_id</span><span class="o">=</span><span class="n">aiven_project_vpc</span><span class="p">[</span><span class="s2">&quot;vpc_gcp_europe_west1&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="s2">&quot;&lt;SERVICE_NAME&gt;&quot;</span><span class="p">,</span>
+    <span class="n">service_type</span><span class="o">=</span><span class="s2">&quot;pg&quot;</span><span class="p">,</span>
+    <span class="n">termination_protection</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
@@ -3850,7 +3975,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.ServiceIntegration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">ServiceIntegration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_endpoint_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logs_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mirrormaker_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_endpoint_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.ServiceIntegration" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">myintegration</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">ServiceIntegration</span><span class="p">(</span><span class="s2">&quot;myintegration&quot;</span><span class="p">,</span>
+    <span class="n">destination_endpoint_id</span><span class="o">=</span><span class="n">aiven_service_integration_endpoint</span><span class="p">[</span><span class="s2">&quot;myendpoint&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">destination_service_name</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">integration_type</span><span class="o">=</span><span class="s2">&quot;datadog&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">aiven_project</span><span class="p">[</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">source_endpoint_id</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">source_service_name</span><span class="o">=</span><span class="n">aiven_service</span><span class="p">[</span><span class="s2">&quot;testkafka&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
@@ -4004,7 +4141,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.ServiceIntegrationEndpoint">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">ServiceIntegrationEndpoint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datadog_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">external_elasticsearch_logs_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">prometheus_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rsyslog_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.ServiceIntegrationEndpoint" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">myendpoint</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">ServiceIntegrationEndpoint</span><span class="p">(</span><span class="s2">&quot;myendpoint&quot;</span><span class="p">,</span>
+    <span class="n">datadog_user_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;datadogApiKey&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;DATADOG_API_KEY&gt;&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">endpoint_name</span><span class="o">=</span><span class="s2">&quot;&lt;ENDPOINT_NAME&gt;&quot;</span><span class="p">,</span>
+    <span class="n">endpoint_type</span><span class="o">=</span><span class="s2">&quot;datadog&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">aiven_project</span><span class="p">[</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
@@ -4224,7 +4373,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.ServiceUser">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">ServiceUser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.ServiceUser" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">myserviceuser</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">ServiceUser</span><span class="p">(</span><span class="s2">&quot;myserviceuser&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">aiven_project</span><span class="p">[</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="n">aiven_service</span><span class="p">[</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;&lt;USERNAME&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
@@ -4341,7 +4499,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.VpcPeeringConnection">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">VpcPeeringConnection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_cloud_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_vpc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.VpcPeeringConnection" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">mypeeringconnection</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">VpcPeeringConnection</span><span class="p">(</span><span class="s2">&quot;mypeeringconnection&quot;</span><span class="p">,</span>
+    <span class="n">peer_cloud_account</span><span class="o">=</span><span class="s2">&quot;&lt;PEER_ACCOUNT_ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">peer_region</span><span class="o">=</span><span class="s2">&quot;&lt;PEER_REGION&gt;&quot;</span><span class="p">,</span>
+    <span class="n">peer_vpc</span><span class="o">=</span><span class="s2">&quot;&lt;PEER_VPC_ID/NAME&gt;&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">aiven_project_vpc</span><span class="p">[</span><span class="s2">&quot;myvpc&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
@@ -4457,6 +4625,81 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py function">
+<dt id="pulumi_aiven.get_account">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_account</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_team_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_account" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">account1</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_account</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;&lt;ACCOUNT_NAME&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aiven.get_account_team">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_account_team</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_account_team" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">account_team1</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_account_team</span><span class="p">(</span><span class="n">account_id</span><span class="o">=</span><span class="n">aiven_account</span><span class="p">[</span><span class="s2">&quot;team&quot;</span><span class="p">][</span><span class="s2">&quot;account_id&quot;</span><span class="p">],</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;account_team1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aiven.get_account_team_member">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_account_team_member</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">accepted</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">invited_by_user_email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_account_team_member" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_account_team_member</span><span class="p">(</span><span class="n">account_id</span><span class="o">=</span><span class="n">aiven_account</span><span class="p">[</span><span class="s2">&quot;developers&quot;</span><span class="p">][</span><span class="s2">&quot;account_id&quot;</span><span class="p">],</span>
+    <span class="n">team_id</span><span class="o">=</span><span class="n">aiven_account</span><span class="p">[</span><span class="s2">&quot;developers&quot;</span><span class="p">][</span><span class="s2">&quot;account_id&quot;</span><span class="p">],</span>
+    <span class="n">user_email</span><span class="o">=</span><span class="s2">&quot;user+1@example.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aiven.get_account_team_project">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_account_team_project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_account_team_project" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">account_team_project1</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_account_team_project</span><span class="p">(</span><span class="n">account_id</span><span class="o">=</span><span class="n">aiven_account_team</span><span class="p">[</span><span class="s2">&quot;developers&quot;</span><span class="p">][</span><span class="s2">&quot;account_id&quot;</span><span class="p">],</span>
+    <span class="n">project_name</span><span class="o">=</span><span class="n">aiven_project</span><span class="p">[</span><span class="s2">&quot;project1&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">team_id</span><span class="o">=</span><span class="n">aiven_account_team</span><span class="p">[</span><span class="s2">&quot;developers&quot;</span><span class="p">][</span><span class="s2">&quot;team_id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aiven.get_connection_pool">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_connection_pool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">connection_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_connection_pool" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">mytestpool</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_connection_pool</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
+    <span class="n">pool_name</span><span class="o">=</span><span class="s2">&quot;&lt;POOLNAME&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aiven.get_database">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_database</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">database_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lc_collate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lc_ctype</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_database" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">mydatabase</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_database</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;&lt;DATABASE_NAME&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
 <dt id="pulumi_aiven.get_elastic_search_acl">
 <code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_elastic_search_acl</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">acls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extended_acl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_elastic_search_acl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
@@ -4470,6 +4713,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aiven.get_kafka_acl">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_kafka_acl</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">permission</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_kafka_acl" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">mytestacl</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_kafka_acl</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
+    <span class="n">topic</span><span class="o">=</span><span class="s2">&quot;&lt;TOPIC_NAME_PATTERN&gt;&quot;</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;&lt;USERNAME_PATTERN&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py function">
@@ -4496,9 +4753,64 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py function">
+<dt id="pulumi_aiven.get_kafka_topic">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_kafka_topic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cleanup_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimum_in_sync_replicas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partitions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_hours</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_kafka_topic" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">mytesttopic</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_kafka_topic</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
+    <span class="n">topic_name</span><span class="o">=</span><span class="s2">&quot;&lt;TOPIC_NAME&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aiven.get_project">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_emails</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ca_cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">card_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">copy_from_project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">technical_emails</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_project" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">myproject</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT_NAME&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aiven.get_project_user">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_project_user</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">accepted</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">member_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_project_user" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">mytestuser</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_project_user</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Project&quot;</span><span class="p">][</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">email</span><span class="o">=</span><span class="s2">&quot;john.doe@example.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aiven.get_project_vpc">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_project_vpc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_cidr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_project_vpc" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">myvpc</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_project_vpc</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Project&quot;</span><span class="p">][</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">cloud_name</span><span class="o">=</span><span class="s2">&quot;google-europe-west1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
 <dt id="pulumi_aiven.get_service">
 <code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_service</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cassandra</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_service" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <strong>cassandra_user_config</strong> object supports the following:</p>
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">myservice</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_service</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Project&quot;</span><span class="p">][</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="s2">&quot;&lt;SERVICE_NAME&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <strong>cassandra_user_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">migrateSstableloader</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -4975,7 +5287,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_aiven.get_service_integration_endpoint">
 <code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_service_integration_endpoint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datadog_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">external_elasticsearch_logs_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">prometheus_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rsyslog_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_service_integration_endpoint" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <strong>datadog_user_config</strong> object supports the following:</p>
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">myendpoint</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_service_integration_endpoint</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Project&quot;</span><span class="p">][</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">endpoint_name</span><span class="o">=</span><span class="s2">&quot;&lt;ENDPOINT_NAME&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <strong>datadog_user_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">datadogApiKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disableConsumerStats</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -5007,6 +5326,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">server</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tls</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 </ul>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aiven.get_service_user">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_service_user</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">access_cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_service_user" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">myserviceuser</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_service_user</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;&lt;USERNAME&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aiven.get_vpc_peering_connection">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_vpc_peering_connection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">peer_cloud_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_vpc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peering_connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_vpc_peering_connection" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+
+<span class="n">mypeeringconnection</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_vpc_peering_connection</span><span class="p">(</span><span class="n">vpc_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.ProjectVpc&quot;</span><span class="p">][</span><span class="s2">&quot;vpc_id&quot;</span><span class="p">],</span>
+    <span class="n">peer_cloud_account</span><span class="o">=</span><span class="s2">&quot;&lt;PEER_ACCOUNT_ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">peer_vpc</span><span class="o">=</span><span class="s2">&quot;&lt;PEER_VPC_ID/NAME&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </div>

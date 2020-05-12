@@ -26,7 +26,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aiven as aiven
+
+mytesttopic = aiven.KafkaTopic("mytesttopic",
+    cleanup_policy="delete",
+    minimum_in_sync_replicas=2,
+    partitions=5,
+    project=aiven_project["myproject"]["project"],
+    replication=3,
+    retention_bytes=-1,
+    retention_hours=72,
+    service_name=aiven_service["myservice"]["service_name"],
+    topic_name="<TOPIC_NAME>")
+```
 {{% /example %}}
 
 {{% example typescript %}}

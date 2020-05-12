@@ -26,7 +26,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aiven as aiven
+
+myendpoint = aiven.ServiceIntegrationEndpoint("myendpoint",
+    datadog_user_config={
+        "datadogApiKey": "<DATADOG_API_KEY>",
+    },
+    endpoint_name="<ENDPOINT_NAME>",
+    endpoint_type="datadog",
+    project=aiven_project["myproject"]["project"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

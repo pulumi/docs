@@ -26,7 +26,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aiven as aiven
+
+myproject = aiven.Project("myproject",
+    card_id="<FULL_CARD_ID/LAST4_DIGITS>",
+    project="<PROJECT_NAME>")
+```
 {{% /example %}}
 
 {{% example typescript %}}

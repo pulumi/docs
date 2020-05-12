@@ -26,7 +26,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aiven as aiven
+
+account1 = aiven.Account("account1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

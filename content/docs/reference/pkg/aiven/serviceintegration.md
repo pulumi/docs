@@ -26,7 +26,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aiven as aiven
+
+myintegration = aiven.ServiceIntegration("myintegration",
+    destination_endpoint_id=aiven_service_integration_endpoint["myendpoint"]["id"],
+    destination_service_name="",
+    integration_type="datadog",
+    project=aiven_project["myproject"]["project"],
+    source_endpoint_id="",
+    source_service_name=aiven_service["testkafka"]["service_name"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

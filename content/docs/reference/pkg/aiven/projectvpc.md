@@ -26,7 +26,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aiven as aiven
+
+myvpc = aiven.ProjectVpc("myvpc",
+    cloud_name="google-europe-west1",
+    network_cidr="192.168.0.1/24",
+    project=aiven_project["myproject"]["project"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

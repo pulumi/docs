@@ -26,7 +26,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aiven as aiven
+
+mytestacl = aiven.KafkaAcl("mytestacl",
+    permission="admin",
+    project=aiven_project["myproject"]["project"],
+    service_name=aiven_service["myservice"]["service_name"],
+    topic="<TOPIC_NAME_PATTERN>",
+    username="<USERNAME_PATTERN>")
+```
 {{% /example %}}
 
 {{% example typescript %}}
