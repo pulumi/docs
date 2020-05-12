@@ -18,6 +18,24 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">DataGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">records</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.DataGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.DataGroup</span></code> Manages internal (in-line) datagroup configuration</p>
 <p>Resource should be named with their “full path”. The full path is the combination of the partition + name of the resource, for example /Common/my-datagroup.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_f5bigip</span> <span class="k">as</span> <span class="nn">f5bigip</span>
+
+<span class="n">datagroup</span> <span class="o">=</span> <span class="n">f5bigip</span><span class="o">.</span><span class="n">ltm</span><span class="o">.</span><span class="n">DataGroup</span><span class="p">(</span><span class="s2">&quot;datagroup&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;/Common/dgx2&quot;</span><span class="p">,</span>
+    <span class="n">records</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="s2">&quot;pool1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;abc.com&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="s2">&quot;123&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -204,34 +222,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_f5bigip.ltm.Monitor">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">Monitor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">adaptive</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">adaptive_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compatibility</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defaults_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filename</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_dscp</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">manual_resume</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">receive</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">receive_disable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reverse</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">send</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">time_until_up</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transparent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.Monitor" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">ltm.Monitor</span></code> Configures a custom monitor for use by health checks.</p>
-<p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>adaptive</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ftp adaptive</p></li>
-<li><p><strong>adaptive_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Integer value</p></li>
-<li><p><strong>compatibility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies, when enabled, that the SSL options setting (in OpenSSL) is set to ALL. Accepts ‘enabled’ or ‘disabled’ values, the default value is ‘enabled’.</p></li>
-<li><p><strong>database</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the database in which the user is created</p></li>
-<li><p><strong>defaults_from</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Existing monitor to inherit from. Must be one of /Common/http, /Common/https, /Common/icmp or /Common/gateway-icmp.</p></li>
-<li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify an alias address for monitoring</p></li>
-<li><p><strong>filename</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the full path and file name of the file that the system attempts to download. The health check is successful if the system can download the file.</p></li>
-<li><p><strong>interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Check interval in seconds</p></li>
-<li><p><strong>mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the data transfer process (DTP) mode. The default value is passive. The options are passive (Specifies that the monitor sends a data transfer request to the FTP server. When the FTP server receives the request, the FTP server then initiates and establishes the data connection.) and active (Specifies that the monitor initiates and establishes the data connection with the FTP server.).</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the monitor</p></li>
-<li><p><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Existing LTM monitor to inherit from</p></li>
-<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the password if the monitored target requires authentication</p></li>
-<li><p><strong>receive</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Expected response string</p></li>
-<li><p><strong>receive_disable</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Expected response string.</p></li>
-<li><p><strong>send</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Request string to send</p></li>
-<li><p><strong>time_until_up</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Time in seconds</p></li>
-<li><p><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Timeout in seconds</p></li>
-<li><p><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the user name if the monitored target requires authentication</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Monitor resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] adaptive: ftp adaptive
+:param pulumi.Input[float] adaptive_limit: Integer value
+:param pulumi.Input[str] compatibility: Specifies, when enabled, that the SSL options setting (in OpenSSL) is set to ALL. Accepts ‘enabled’ or ‘disabled’ values, the default value is ‘enabled’.
+:param pulumi.Input[str] database: Specifies the database in which the user is created
+:param pulumi.Input[str] defaults_from: Existing monitor to inherit from. Must be one of /Common/http, /Common/https, /Common/icmp or /Common/gateway-icmp.
+:param pulumi.Input[str] destination: Specify an alias address for monitoring
+:param pulumi.Input[str] filename: Specifies the full path and file name of the file that the system attempts to download. The health check is successful if the system can download the file.
+:param pulumi.Input[float] interval: Check interval in seconds
+:param pulumi.Input[str] mode: Specifies the data transfer process (DTP) mode. The default value is passive. The options are passive (Specifies that the monitor sends a data transfer request to the FTP server. When the FTP server receives the request, the FTP server then initiates and establishes the data connection.) and active (Specifies that the monitor initiates and establishes the data connection with the FTP server.).
+:param pulumi.Input[str] name: Name of the monitor
+:param pulumi.Input[str] parent: Existing LTM monitor to inherit from
+:param pulumi.Input[str] password: Specifies the password if the monitored target requires authentication 
+:param pulumi.Input[str] receive: Expected response string
+:param pulumi.Input[str] receive_disable: Expected response string.
+:param pulumi.Input[str] send: Request string to send
+:param pulumi.Input[float] time_until_up: Time in seconds
+:param pulumi.Input[float] timeout: Timeout in seconds
+:param pulumi.Input[str] username: Specifies the user name if the monitored target requires authentication</p>
 <dl class="py attribute">
 <dt id="pulumi_f5bigip.ltm.Monitor.adaptive">
 <code class="sig-name descname">adaptive</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.Monitor.adaptive" title="Permalink to this definition">¶</a></dt>
@@ -415,25 +426,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_f5bigip.ltm.Node">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">Node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dynamic_ratio</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fqdn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rate_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ratio</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.Node" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">ltm.Node</span></code> Manages a node configuration</p>
-<p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IP or hostname of the node</p></li>
-<li><p><strong>connection_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the maximum number of connections allowed for the node or node address.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User-defined description give ltm_node</p></li>
-<li><p><strong>dynamic_ratio</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the fixed ratio value used for a node during ratio load balancing.</p></li>
-<li><p><strong>monitor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – specifies the name of the monitor or monitor rule that you want to associate with the node.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the node</p></li>
-<li><p><strong>rate_limit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the maximum number of connections per second allowed for a node or node address. The default value is ‘disabled’.</p></li>
-<li><p><strong>ratio</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Sets the ratio number for the node.</p></li>
-<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Default is “user-up” you can set to “user-down” if you want to disable</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Node resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] address: IP or hostname of the node
+:param pulumi.Input[float] connection_limit: Specifies the maximum number of connections allowed for the node or node address.
+:param pulumi.Input[str] description: User-defined description give ltm_node
+:param pulumi.Input[float] dynamic_ratio: Specifies the fixed ratio value used for a node during ratio load balancing.
+:param pulumi.Input[str] monitor: specifies the name of the monitor or monitor rule that you want to associate with the node.
+:param pulumi.Input[str] name: Name of the node
+:param pulumi.Input[str] rate_limit: Specifies the maximum number of connections per second allowed for a node or node address. The default value is ‘disabled’.
+:param pulumi.Input[float] ratio: Sets the ratio number for the node.
+:param pulumi.Input[str] state: Default is “user-up” you can set to “user-down” if you want to disable</p>
 <p>The <strong>fqdn</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">addressFamily</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the node’s address family. The default is ‘unspecified’, or IP-agnostic. This needs to be specified inside the fqdn (fully qualified domain name).</p></li>
@@ -570,53 +574,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_f5bigip.ltm.PersistenceProfileCookie">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">PersistenceProfileCookie</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">always_send</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cookie_encryption</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cookie_encryption_passphrase</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cookie_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defaults_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expiration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hash_length</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hash_offset</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">httponly</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">match_across_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">match_across_services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">match_across_virtuals</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mirror</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">override_conn_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.PersistenceProfileCookie" title="Permalink to this definition">¶</a></dt>
-<dd><p>Configures a cookie persistence profile</p>
-<p><code class="docutils literal notranslate"><span class="pre">name</span></code> - (Required) Name of the virtual address</p>
-<p><code class="docutils literal notranslate"><span class="pre">defaults_from</span></code> - (Required) Parent cookie persistence profile</p>
-<p><code class="docutils literal notranslate"><span class="pre">match_across_pools</span></code> (Optional) (enabled or disabled) match across pools with given persistence record</p>
-<p><code class="docutils literal notranslate"><span class="pre">match_across_services</span></code> (Optional) (enabled or disabled) match across services with given persistence record</p>
-<p><code class="docutils literal notranslate"><span class="pre">match_across_virtuals</span></code> (Optional) (enabled or disabled) match across virtual servers with given persistence record</p>
-<p><code class="docutils literal notranslate"><span class="pre">mirror</span></code> (Optional) (enabled or disabled) mirror persistence record</p>
-<p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (Optional) (enabled or disabled) Timeout for persistence of the session in seconds</p>
-<p><code class="docutils literal notranslate"><span class="pre">override_conn_limit</span></code> (Optional) (enabled or disabled) Enable or dissable pool member connection limits are overridden for persisted clients. Per-virtual connection limits remain hard limits and are not overridden.</p>
-<p><code class="docutils literal notranslate"><span class="pre">always_send</span></code> (Optional) (enabled or disabled) always send cookies</p>
-<p><code class="docutils literal notranslate"><span class="pre">cookie_encryption</span></code> (Optional) (required, preferred, or disabled) To required, preferred, or disabled policy for cookie encryption</p>
-<p><code class="docutils literal notranslate"><span class="pre">cookie_encryption_passphrase</span></code> (Optional) (required, preferred, or disabled) Passphrase for encrypted cookies. The field is encrypted on the server and will always return differently then set.
-If this is configured specify <code class="docutils literal notranslate"><span class="pre">ignore_changes</span></code> under the <code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> block to ignore returned encrypted value.</p>
-<p><code class="docutils literal notranslate"><span class="pre">cookie_name</span></code> (Optional) Name of the cookie to track persistence</p>
-<p><code class="docutils literal notranslate"><span class="pre">expiration</span></code> (Optional) Expiration TTL for cookie specified in DAY:HOUR:MIN:SECONDS (Examples: 1:0:0:0 one day, 1:0:0 one hour, 30:0 thirty minutes)</p>
-<p><code class="docutils literal notranslate"><span class="pre">hash_length</span></code> (Optional) (Integer) Length of hash to apply to cookie</p>
-<p><code class="docutils literal notranslate"><span class="pre">hash_offset</span></code> (Optional) (Integer) Number of characters to skip in the cookie for the hash</p>
-<p><code class="docutils literal notranslate"><span class="pre">httponly</span></code> (Optional) (enabled or disabled) Sending only over http</p>
+<dd><p>Create a PersistenceProfileCookie resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] always<a href="#id1"><span class="problematic" id="id2">*</span></a>send: To enable * disable always sending cookies
+:param pulumi.Input[str] cookie_encryption: To required, preferred, or disabled policy for cookie encryption
+:param pulumi.Input[str] cookie_encryption_passphrase: Passphrase for encrypted cookies
+:param pulumi.Input[str] cookie_name: Name of the cookie to track persistence
+:param pulumi.Input[str] defaults_from: Inherit defaults from parent profile
+:param pulumi.Input[str] expiration: Expiration TTL for cookie specified in D:H:M:S or in seconds
+:param pulumi.Input[float] hash_length: Length of hash to apply to cookie
+:param pulumi.Input[float] hash<a href="#id3"><span class="problematic" id="id4">*</span></a>offset: Number of characters to skip in the cookie for the hash
+:param pulumi.Input[str] httponly: To enable * disable sending only over http
+:param pulumi.Input[str] match_across<a href="#id5"><span class="problematic" id="id6">*</span></a>pools: To enable * disable match across pools with given persistence record
+:param pulumi.Input[str] match_across<a href="#id7"><span class="problematic" id="id8">*</span></a>services: To enable * disable match across services with given persistence record
+:param pulumi.Input[str] match_across<a href="#id9"><span class="problematic" id="id10">*</span></a>virtuals: To enable * disable match across virtual servers with given persistence record
+:param pulumi.Input[str] mirror: To enable _ disable
+:param pulumi.Input[str] name: Name of the persistence profile
+:param pulumi.Input[str] override_conn<a href="#id11"><span class="problematic" id="id12">*</span></a>limit: To enable * disable that pool member connection limits are overridden for persisted clients. Per-virtual connection</p>
+<blockquote>
+<div><p>limits remain hard limits and are not overridden.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>always*send</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>To enable * disable always sending cookies</p>
-</p></li>
-<li><p><strong>cookie_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – To required, preferred, or disabled policy for cookie encryption</p></li>
-<li><p><strong>cookie_encryption_passphrase</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Passphrase for encrypted cookies</p></li>
-<li><p><strong>cookie_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the cookie to track persistence</p></li>
-<li><p><strong>defaults_from</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Inherit defaults from parent profile</p></li>
-<li><p><strong>expiration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Expiration TTL for cookie specified in D:H:M:S or in seconds</p></li>
-<li><p><strong>hash_length</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Length of hash to apply to cookie</p></li>
-<li><p><strong>hash*offset</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <p>Number of characters to skip in the cookie for the hash</p>
-</p></li>
-<li><p><strong>httponly</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – To enable * disable sending only over http</p></li>
-<li><p><strong>match_across*pools</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>To enable * disable match across pools with given persistence record</p>
-</p></li>
-<li><p><strong>match_across*services</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>To enable * disable match across services with given persistence record</p>
-</p></li>
-<li><p><strong>match_across*virtuals</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>To enable * disable match across virtual servers with given persistence record</p>
-</p></li>
-<li><p><strong>mirror</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – To enable _ disable</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the persistence profile</p></li>
-<li><p><strong>override_conn*limit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>To enable * disable that pool member connection limits are overridden for persisted clients. Per-virtual connection
-limits remain hard limits and are not overridden.</p>
-</p></li>
-<li><p><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Timeout for persistence of the session</p></li>
-</ul>
+<dd class="field-odd"><p><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Timeout for persistence of the session</p>
 </dd>
 </dl>
 <dl class="py attribute">
@@ -796,24 +777,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_f5bigip.ltm.PersistenceProfileDstAddr">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">PersistenceProfileDstAddr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defaults_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hash_algorithm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mask</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">match_across_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">match_across_services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">match_across_virtuals</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mirror</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">override_conn_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.PersistenceProfileDstAddr" title="Permalink to this definition">¶</a></dt>
-<dd><p>Configures a cookie persistence profile</p>
-<p><code class="docutils literal notranslate"><span class="pre">name</span></code> - (Required) Name of the virtual address</p>
-<p><code class="docutils literal notranslate"><span class="pre">defaults_from</span></code> - (Optional) Specifies the existing profile from which the system imports settings for the new profile.</p>
-<p><code class="docutils literal notranslate"><span class="pre">match_across_pools</span></code> (Optional) (enabled or disabled) match across pools with given persistence record</p>
-<p><code class="docutils literal notranslate"><span class="pre">match_across_services</span></code> (Optional) (enabled or disabled) match across services with given persistence record</p>
-<p><code class="docutils literal notranslate"><span class="pre">match_across_virtuals</span></code> (Optional) (enabled or disabled) match across virtual servers with given persistence record</p>
-<p><code class="docutils literal notranslate"><span class="pre">mirror</span></code> (Optional) (enabled or disabled) mirror persistence record</p>
-<p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (Optional) (enabled or disabled) Timeout for persistence of the session in seconds</p>
-<p><code class="docutils literal notranslate"><span class="pre">override_conn_limit</span></code> (Optional) (enabled or disabled) Enable or dissable pool member connection limits are overridden for persisted clients. Per-virtual connection limits remain hard limits and are not overridden.</p>
+<dd><p>Create a PersistenceProfileDstAddr resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] defaults_from: Inherit defaults from parent profile
+:param pulumi.Input[str] hash_algorithm: Specify the hash algorithm
+:param pulumi.Input[str] mask: Identify a range of source IP addresses to manage together as a single source address affinity persistent connection</p>
+<blockquote>
+<div><p>when connecting to the pool. Must be a valid IPv4 or IPv6 mask.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>defaults_from</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Inherit defaults from parent profile</p></li>
-<li><p><strong>hash_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the hash algorithm</p></li>
-<li><p><strong>mask</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identify a range of source IP addresses to manage together as a single source address affinity persistent connection
-when connecting to the pool. Must be a valid IPv4 or IPv6 mask.</p></li>
 <li><p><strong>match_across*pools</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>To enable * disable match across pools with given persistence record</p>
 </p></li>
 <li><p><strong>match_across*services</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>To enable * disable match across services with given persistence record</p>
@@ -964,29 +939,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_f5bigip.ltm.PersistenceProfileSrcAddr">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">PersistenceProfileSrcAddr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defaults_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hash_algorithm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_proxies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mask</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">match_across_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">match_across_services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">match_across_virtuals</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mirror</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">override_conn_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.PersistenceProfileSrcAddr" title="Permalink to this definition">¶</a></dt>
-<dd><p>Configures a source address persistence profile</p>
-<p><code class="docutils literal notranslate"><span class="pre">name</span></code> - (Required) Name of the virtual address</p>
-<p><code class="docutils literal notranslate"><span class="pre">defaults_from</span></code> - (Required) Parent cookie persistence profile</p>
-<p><code class="docutils literal notranslate"><span class="pre">match_across_pools</span></code> (Optional) (enabled or disabled) match across pools with given persistence record</p>
-<p><code class="docutils literal notranslate"><span class="pre">match_across_services</span></code> (Optional) (enabled or disabled) match across services with given persistence record</p>
-<p><code class="docutils literal notranslate"><span class="pre">match_across_virtuals</span></code> (Optional) (enabled or disabled) match across virtual servers with given persistence record</p>
-<p><code class="docutils literal notranslate"><span class="pre">mirror</span></code> (Optional) (enabled or disabled) mirror persistence record</p>
-<p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (Optional) (enabled or disabled) Timeout for persistence of the session in seconds</p>
-<p><code class="docutils literal notranslate"><span class="pre">override_conn_limit</span></code> (Optional) (enabled or disabled) Enable or dissable pool member connection limits are overridden for persisted clients. Per-virtual connection limits remain hard limits and are not overridden.</p>
-<p><code class="docutils literal notranslate"><span class="pre">hash_algorithm</span></code> (Optional) Specify the hash algorithm</p>
-<p><code class="docutils literal notranslate"><span class="pre">mask</span></code> (Optional) Identify a range of source IP addresses to manage together as a single source address affinity persistent connection when connecting to the pool. Must be a valid IPv4 or IPv6 mask.</p>
-<p><code class="docutils literal notranslate"><span class="pre">map_proxies</span></code> (Optional) (enabled or disabled) Directs all to the same single pool member</p>
+<dd><p>Create a PersistenceProfileSrcAddr resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] defaults_from: Inherit defaults from parent profile
+:param pulumi.Input[str] hash_algorithm: Specify the hash algorithm
+:param pulumi.Input[str] map<a href="#id41"><span class="problematic" id="id42">*</span></a>proxies: To enable * disable directs all to the same single pool member
+:param pulumi.Input[str] mask: Identify a range of source IP addresses to manage together as a single source address affinity persistent connection</p>
+<blockquote>
+<div><p>when connecting to the pool. Must be a valid IPv4 or IPv6 mask.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>defaults_from</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Inherit defaults from parent profile</p></li>
-<li><p><strong>hash_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the hash algorithm</p></li>
-<li><p><strong>map*proxies</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>To enable * disable directs all to the same single pool member</p>
-</p></li>
-<li><p><strong>mask</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identify a range of source IP addresses to manage together as a single source address affinity persistent connection
-when connecting to the pool. Must be a valid IPv4 or IPv6 mask.</p></li>
 <li><p><strong>match_across*pools</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>To enable * disable match across pools with given persistence record</p>
 </p></li>
 <li><p><strong>match_across*services</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>To enable * disable match across services with given persistence record</p>
@@ -1145,34 +1110,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_f5bigip.ltm.PersistenceProfileSsl">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">PersistenceProfileSsl</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defaults_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">match_across_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">match_across_services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">match_across_virtuals</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mirror</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">override_conn_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.PersistenceProfileSsl" title="Permalink to this definition">¶</a></dt>
-<dd><p>Configures an SSL persistence profile</p>
-<p><code class="docutils literal notranslate"><span class="pre">name</span></code> - (Required) Name of the virtual address</p>
-<p><code class="docutils literal notranslate"><span class="pre">defaults_from</span></code> - (Required) Parent cookie persistence profile</p>
-<p><code class="docutils literal notranslate"><span class="pre">match_across_pools</span></code> (Optional) (enabled or disabled) match across pools with given persistence record</p>
-<p><code class="docutils literal notranslate"><span class="pre">match_across_services</span></code> (Optional) (enabled or disabled) match across services with given persistence record</p>
-<p><code class="docutils literal notranslate"><span class="pre">match_across_virtuals</span></code> (Optional) (enabled or disabled) match across virtual servers with given persistence record</p>
-<p><code class="docutils literal notranslate"><span class="pre">mirror</span></code> (Optional) (enabled or disabled) mirror persistence record</p>
-<p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (Optional) (enabled or disabled) Timeout for persistence of the session in seconds</p>
-<p><code class="docutils literal notranslate"><span class="pre">override_conn_limit</span></code> (Optional) (enabled or disabled) Enable or dissable pool member connection limits are overridden for persisted clients. Per-virtual connection limits remain hard limits and are not overridden.</p>
+<dd><p>Create a PersistenceProfileSsl resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] defaults_from: Inherit defaults from parent profile
+:param pulumi.Input[str] match_across<a href="#id61"><span class="problematic" id="id62">*</span></a>pools: To enable * disable match across pools with given persistence record
+:param pulumi.Input[str] match_across<a href="#id63"><span class="problematic" id="id64">*</span></a>services: To enable * disable match across services with given persistence record
+:param pulumi.Input[str] match_across<a href="#id65"><span class="problematic" id="id66">*</span></a>virtuals: To enable * disable match across services with given persistence record
+:param pulumi.Input[str] mirror: To enable _ disable
+:param pulumi.Input[str] name: Name of the persistence profile
+:param pulumi.Input[str] override_conn<a href="#id67"><span class="problematic" id="id68">*</span></a>limit: To enable * disable that pool member connection limits are overridden for persisted clients. Per-virtual connection</p>
+<blockquote>
+<div><p>limits remain hard limits and are not overridden.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>defaults_from</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Inherit defaults from parent profile</p></li>
-<li><p><strong>match_across*pools</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>To enable * disable match across pools with given persistence record</p>
-</p></li>
-<li><p><strong>match_across*services</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>To enable * disable match across services with given persistence record</p>
-</p></li>
-<li><p><strong>match_across*virtuals</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>To enable * disable match across services with given persistence record</p>
-</p></li>
-<li><p><strong>mirror</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – To enable _ disable</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the persistence profile</p></li>
-<li><p><strong>override_conn*limit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>To enable * disable that pool member connection limits are overridden for persisted clients. Per-virtual connection
-limits remain hard limits and are not overridden.</p>
-</p></li>
-<li><p><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Timeout for persistence of the session</p></li>
-</ul>
+<dd class="field-odd"><p><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Timeout for persistence of the session</p>
 </dd>
 </dl>
 <dl class="py attribute">
@@ -1296,6 +1249,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">Policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">controls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">published_copy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">requires</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.Policy" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.Policy</span></code> Configures Virtual Server</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_f5bigip</span> <span class="k">as</span> <span class="nn">f5bigip</span>
+
+<span class="n">test_policy</span> <span class="o">=</span> <span class="n">f5bigip</span><span class="o">.</span><span class="n">ltm</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;test-policy&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my_policy&quot;</span><span class="p">,</span>
+    <span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;first-match&quot;</span><span class="p">,</span>
+    <span class="n">requires</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;http&quot;</span><span class="p">],</span>
+    <span class="n">published_copy</span><span class="o">=</span><span class="s2">&quot;Drafts/my_policy&quot;</span><span class="p">,</span>
+    <span class="n">controls</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;forwarding&quot;</span><span class="p">],</span>
+    <span class="n">rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;rule6&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;tmName&quot;</span><span class="p">:</span> <span class="s2">&quot;20&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;forward&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;pool&quot;</span><span class="p">:</span> <span class="s2">&quot;/Common/mypool&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2020,25 +1992,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_f5bigip.ltm.Pool">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">Pool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_nat</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_snat</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancing_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitors</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reselect_tries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_down_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">slow_ramp_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.Pool" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">ltm.Pool</span></code> Manages a pool configuration.</p>
-<p>Resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>allow_nat</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Allow NAT</p></li>
-<li><p><strong>allow_snat</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Allow SNAT</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Userdefined value to describe the pool</p></li>
-<li><p><strong>load_balancing_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Possible values: round-robin, …</p></li>
-<li><p><strong>monitors</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of monitor names to associate with the pool</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the pool</p></li>
-<li><p><strong>reselect_tries</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of times the system tries to select a new pool member after a failure.</p></li>
-<li><p><strong>service_down_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Possible values: none, reset, reselect, drop</p></li>
-<li><p><strong>slow_ramp_time</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Slow ramp time for pool members</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Pool resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] allow_nat: Allow NAT
+:param pulumi.Input[str] allow_snat: Allow SNAT
+:param pulumi.Input[str] description: Userdefined value to describe the pool 
+:param pulumi.Input[str] load_balancing_mode: Possible values: round-robin, …
+:param pulumi.Input[list] monitors: List of monitor names to associate with the pool
+:param pulumi.Input[str] name: Name of the pool
+:param pulumi.Input[float] reselect_tries: Number of times the system tries to select a new pool member after a failure.
+:param pulumi.Input[str] service_down_action: Possible values: none, reset, reselect, drop
+:param pulumi.Input[float] slow_ramp_time: Slow ramp time for pool members</p>
 <dl class="py attribute">
 <dt id="pulumi_f5bigip.ltm.Pool.allow_nat">
 <code class="sig-name descname">allow_nat</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.Pool.allow_nat" title="Permalink to this definition">¶</a></dt>
@@ -2159,19 +2124,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_f5bigip.ltm.PoolAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">PoolAttachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.PoolAttachment" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">ltm.PoolAttachment</span></code> Manages nodes membership in pools</p>
-<p>Resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-<p>Note: node must be the full path to the node followed by the port. For example /Common/my-node:80</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>node</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Node to add to the pool in /Partition/NodeName:Port format (e.g. /Common/Node01:80)</p></li>
-<li><p><strong>pool</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the pool in /Partition/Name format</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a PoolAttachment resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] node: Node to add to the pool in /Partition/NodeName:Port format (e.g. /Common/Node01:80)
+:param pulumi.Input[str] pool: Name of the pool in /Partition/Name format</p>
 <dl class="py attribute">
 <dt id="pulumi_f5bigip.ltm.PoolAttachment.node">
 <code class="sig-name descname">node</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.PoolAttachment.node" title="Permalink to this definition">¶</a></dt>
@@ -2244,6 +2201,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_f5bigip.ltm.ProfileClientSsl">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">ProfileClientSsl</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alert_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_non_ssl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authenticate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authenticate_depth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ca_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cert_extension_includes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cert_key_chains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cert_life_span</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cert_lookup_by_ipaddr_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">chain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ciphers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_cert_ca</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">crl_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defaults_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">forward_proxy_bypass_default_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">generation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">generic_alert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">handshake_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inherit_cert_keychain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mod_ssl_methods</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">passphrase</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_cert_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy_ca_cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy_ca_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy_ca_passphrase</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy_ssl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy_ssl_passthrough</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renegotiate_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renegotiate_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renegotiation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retain_certificate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secure_renegotiation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">session_mirroring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">session_ticket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sni_default</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sni_require</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssl_forward_proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssl_forward_proxy_bypass</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssl_sign_hash</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">strict_resume</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tm_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">unclean_shutdown</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileClientSsl" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.ProfileClientSsl</span></code> Manages client SSL profiles on a BIG-IP</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_f5bigip</span> <span class="k">as</span> <span class="nn">f5bigip</span>
+
+<span class="n">test__client_ssl</span> <span class="o">=</span> <span class="n">f5bigip</span><span class="o">.</span><span class="n">ltm</span><span class="o">.</span><span class="n">ProfileClientSsl</span><span class="p">(</span><span class="s2">&quot;test-ClientSsl&quot;</span><span class="p">,</span>
+    <span class="n">authenticate</span><span class="o">=</span><span class="s2">&quot;always&quot;</span><span class="p">,</span>
+    <span class="n">ciphers</span><span class="o">=</span><span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
+    <span class="n">defaults_from</span><span class="o">=</span><span class="s2">&quot;/Common/clientssl&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;/Common/test-ClientSsl&quot;</span><span class="p">,</span>
+    <span class="n">partition</span><span class="o">=</span><span class="s2">&quot;Common&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2734,6 +2702,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">ProfileFastHttp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connpool_maxreuse</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connpool_maxsize</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connpool_minsize</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connpool_replenish</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connpool_step</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connpoolidle_timeoutoverride</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defaults_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">forcehttp10response</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">idle_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maxheader_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileFastHttp" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.ProfileFastHttp</span></code> Configures a custom profile_fasthttp for use by health checks.</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_f5bigip</span> <span class="k">as</span> <span class="nn">f5bigip</span>
+
+<span class="n">sjfasthttpprofile</span> <span class="o">=</span> <span class="n">f5bigip</span><span class="o">.</span><span class="n">ltm</span><span class="o">.</span><span class="n">ProfileFastHttp</span><span class="p">(</span><span class="s2">&quot;sjfasthttpprofile&quot;</span><span class="p">,</span>
+    <span class="n">connpool_maxreuse</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">connpool_maxsize</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span>
+    <span class="n">connpool_minsize</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">connpool_replenish</span><span class="o">=</span><span class="s2">&quot;enabled&quot;</span><span class="p">,</span>
+    <span class="n">connpool_step</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">connpoolidle_timeoutoverride</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">defaults_from</span><span class="o">=</span><span class="s2">&quot;/Common/fasthttp&quot;</span><span class="p">,</span>
+    <span class="n">forcehttp10response</span><span class="o">=</span><span class="s2">&quot;disabled&quot;</span><span class="p">,</span>
+    <span class="n">idle_timeout</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">maxheader_size</span><span class="o">=</span><span class="mi">32768</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;sjfasthttpprofile&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2889,6 +2874,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">ProfileFastL4</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defaults_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">explicitflow_migration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hardware_syncookie</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">idle_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iptos_toclient</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iptos_toserver</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepalive_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileFastL4" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.ProfileFastL4</span></code> Configures a custom profile_fastl4 for use by health checks.</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_f5bigip</span> <span class="k">as</span> <span class="nn">f5bigip</span>
+
+<span class="n">profile_fastl4</span> <span class="o">=</span> <span class="n">f5bigip</span><span class="o">.</span><span class="n">ltm</span><span class="o">.</span><span class="n">ProfileFastL4</span><span class="p">(</span><span class="s2">&quot;profileFastl4&quot;</span><span class="p">,</span>
+    <span class="n">client_timeout</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
+    <span class="n">defaults_from</span><span class="o">=</span><span class="s2">&quot;/Common/fastL4&quot;</span><span class="p">,</span>
+    <span class="n">explicitflow_migration</span><span class="o">=</span><span class="s2">&quot;enabled&quot;</span><span class="p">,</span>
+    <span class="n">hardware_syncookie</span><span class="o">=</span><span class="s2">&quot;enabled&quot;</span><span class="p">,</span>
+    <span class="n">idle_timeout</span><span class="o">=</span><span class="s2">&quot;200&quot;</span><span class="p">,</span>
+    <span class="n">iptos_toclient</span><span class="o">=</span><span class="s2">&quot;pass-through&quot;</span><span class="p">,</span>
+    <span class="n">iptos_toserver</span><span class="o">=</span><span class="s2">&quot;pass-through&quot;</span><span class="p">,</span>
+    <span class="n">keepalive_interval</span><span class="o">=</span><span class="s2">&quot;disabled&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;/Common/sjfastl4profile&quot;</span><span class="p">,</span>
+    <span class="n">partition</span><span class="o">=</span><span class="s2">&quot;Common&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3036,6 +3037,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">ProfileHttp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">accept_xff</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">basic_auth_realm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defaults_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encrypt_cookie_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encrypt_cookies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fallback_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fallback_status_codes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">head_erase</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">head_insert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">insert_xforwarded_for</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lws_separator</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oneconnect_transformations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redirect_rewrite</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_chunking</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">response_chunking</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">response_headers_permitteds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_agent_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tm_partition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">via_host_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">via_request</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">via_response</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">xff_alternative_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileHttp" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.ProfileHttp</span></code> Configures a custom profile_http for use by health checks.</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_f5bigip</span> <span class="k">as</span> <span class="nn">f5bigip</span>
+
+<span class="n">sanjose_http</span> <span class="o">=</span> <span class="n">f5bigip</span><span class="o">.</span><span class="n">ltm</span><span class="o">.</span><span class="n">ProfileHttp</span><span class="p">(</span><span class="s2">&quot;sanjose-http&quot;</span><span class="p">,</span>
+    <span class="n">defaults_from</span><span class="o">=</span><span class="s2">&quot;/Common/http&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;some http&quot;</span><span class="p">,</span>
+    <span class="n">fallback_host</span><span class="o">=</span><span class="s2">&quot;titanic&quot;</span><span class="p">,</span>
+    <span class="n">fallback_status_codes</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;400&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;500&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;300&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;/Common/sanjose-http&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3317,6 +3333,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">ProfileHttp2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">activation_modes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">concurrent_streams_per_connection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_idle_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defaults_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">header_table_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileHttp2" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.ProfileHttp2</span></code> Configures a custom profile_http2 for use by health checks.</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_f5bigip</span> <span class="k">as</span> <span class="nn">f5bigip</span>
+
+<span class="n">nyhttp2</span> <span class="o">=</span> <span class="n">f5bigip</span><span class="o">.</span><span class="n">ltm</span><span class="o">.</span><span class="n">ProfileHttp2</span><span class="p">(</span><span class="s2">&quot;nyhttp2&quot;</span><span class="p">,</span>
+    <span class="n">activation_modes</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;alpn&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;npn&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">concurrent_streams_per_connection</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">connection_idle_timeout</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+    <span class="n">defaults_from</span><span class="o">=</span><span class="s2">&quot;/Common/http2&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;/Common/NewYork_http2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3432,6 +3462,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">ProfileHttpCompress</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_type_excludes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_type_includes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defaults_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uri_excludes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uri_includes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileHttpCompress" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.ProfileHttpCompress</span></code>  Virtual server HTTP compression profile configuration</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_f5bigip</span> <span class="k">as</span> <span class="nn">f5bigip</span>
+
+<span class="n">sjhttpcompression</span> <span class="o">=</span> <span class="n">f5bigip</span><span class="o">.</span><span class="n">ltm</span><span class="o">.</span><span class="n">ProfileHttpCompress</span><span class="p">(</span><span class="s2">&quot;sjhttpcompression&quot;</span><span class="p">,</span>
+    <span class="n">content_type_excludes</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;nicecontentexclude.com&quot;</span><span class="p">],</span>
+    <span class="n">content_type_includes</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;nicecontent.com&quot;</span><span class="p">],</span>
+    <span class="n">defaults_from</span><span class="o">=</span><span class="s2">&quot;/Common/httpcompression&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;/Common/sjhttpcompression2&quot;</span><span class="p">,</span>
+    <span class="n">uri_excludes</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;www.abc.f5.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;www.abc2.f5.com&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">uri_includes</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;www.xyzbc.cisco.com&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3547,6 +3592,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">ProfileOneConnect</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defaults_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">idle_timeout_override</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_age</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_reuse</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">share_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_mask</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileOneConnect" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.ProfileOneConnect</span></code> Configures a custom profile_oneconnect for use by health checks.</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_f5bigip</span> <span class="k">as</span> <span class="nn">f5bigip</span>
+
+<span class="n">oneconnect_sanjose</span> <span class="o">=</span> <span class="n">f5bigip</span><span class="o">.</span><span class="n">ltm</span><span class="o">.</span><span class="n">ProfileOneConnect</span><span class="p">(</span><span class="s2">&quot;oneconnect-sanjose&quot;</span><span class="p">,</span>
+    <span class="n">defaults_from</span><span class="o">=</span><span class="s2">&quot;/Common/oneconnect&quot;</span><span class="p">,</span>
+    <span class="n">idle_timeout_override</span><span class="o">=</span><span class="s2">&quot;disabled&quot;</span><span class="p">,</span>
+    <span class="n">max_age</span><span class="o">=</span><span class="mi">3600</span><span class="p">,</span>
+    <span class="n">max_reuse</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+    <span class="n">max_size</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;sanjose&quot;</span><span class="p">,</span>
+    <span class="n">partition</span><span class="o">=</span><span class="s2">&quot;Common&quot;</span><span class="p">,</span>
+    <span class="n">share_pools</span><span class="o">=</span><span class="s2">&quot;disabled&quot;</span><span class="p">,</span>
+    <span class="n">source_mask</span><span class="o">=</span><span class="s2">&quot;255.255.255.255&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3685,6 +3745,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_f5bigip.ltm.ProfileServerSsl">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">ProfileServerSsl</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alert_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authenticate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authenticate_depth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ca_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">chain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ciphers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defaults_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expire_cert_response_control</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">generation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">generic_alert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">handshake_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mod_ssl_methods</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">passphrase</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_cert_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy_ssl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renegotiate_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renegotiate_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renegotiation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retain_certificate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secure_renegotiation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">session_mirroring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">session_ticket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sni_default</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sni_require</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssl_forward_proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssl_forward_proxy_bypass</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssl_sign_hash</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">strict_resume</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tm_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">unclean_shutdown</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">untrusted_cert_response_control</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileServerSsl" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.ProfileServerSsl</span></code> Manages server SSL profiles on a BIG-IP</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_f5bigip</span> <span class="k">as</span> <span class="nn">f5bigip</span>
+
+<span class="n">test__server_ssl</span> <span class="o">=</span> <span class="n">f5bigip</span><span class="o">.</span><span class="n">ltm</span><span class="o">.</span><span class="n">ProfileServerSsl</span><span class="p">(</span><span class="s2">&quot;test-ServerSsl&quot;</span><span class="p">,</span>
+    <span class="n">authenticate</span><span class="o">=</span><span class="s2">&quot;always&quot;</span><span class="p">,</span>
+    <span class="n">ciphers</span><span class="o">=</span><span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
+    <span class="n">defaults_from</span><span class="o">=</span><span class="s2">&quot;/Common/serverssl&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;/Common/test-ServerSsl&quot;</span><span class="p">,</span>
+    <span class="n">partition</span><span class="o">=</span><span class="s2">&quot;Common&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4076,6 +4147,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">ProfileTcp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">close_wait_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defaults_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deferred_accept</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fast_open</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">finwait2timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">finwait_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">idle_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepalive_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileTcp" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.ProfileTcp</span></code> Configures a custom profile_tcp for use by health checks.</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_f5bigip</span> <span class="k">as</span> <span class="nn">f5bigip</span>
+
+<span class="n">sanjose_tcp_lan_profile</span> <span class="o">=</span> <span class="n">f5bigip</span><span class="o">.</span><span class="n">ltm</span><span class="o">.</span><span class="n">ProfileTcp</span><span class="p">(</span><span class="s2">&quot;sanjose-tcp-lan-profile&quot;</span><span class="p">,</span>
+    <span class="n">close_wait_timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">deferred_accept</span><span class="o">=</span><span class="s2">&quot;enabled&quot;</span><span class="p">,</span>
+    <span class="n">fast_open</span><span class="o">=</span><span class="s2">&quot;enabled&quot;</span><span class="p">,</span>
+    <span class="n">finwait2timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">finwait_timeout</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">idle_timeout</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+    <span class="n">keepalive_interval</span><span class="o">=</span><span class="mi">1700</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;sanjose-tcp-lan-profile&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4223,6 +4308,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">Snat</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autolasthop</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mirror</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">origins</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snatpool</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sourceport</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">translation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlansdisabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.Snat" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.Snat</span></code> Manages a snat configuration</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_f5bigip</span> <span class="k">as</span> <span class="nn">f5bigip</span>
+
+<span class="n">test_snat</span> <span class="o">=</span> <span class="n">f5bigip</span><span class="o">.</span><span class="n">ltm</span><span class="o">.</span><span class="n">Snat</span><span class="p">(</span><span class="s2">&quot;test-snat&quot;</span><span class="p">,</span>
+    <span class="n">autolasthop</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">full_path</span><span class="o">=</span><span class="s2">&quot;/Common/test-snat&quot;</span><span class="p">,</span>
+    <span class="n">mirror</span><span class="o">=</span><span class="s2">&quot;disabled&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;TEST_SNAT_NAME&quot;</span><span class="p">,</span>
+    <span class="n">origins</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;2.2.2.2&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;3.3.3.3&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">partition</span><span class="o">=</span><span class="s2">&quot;Common&quot;</span><span class="p">,</span>
+    <span class="n">translation</span><span class="o">=</span><span class="s2">&quot;/Common/136.1.1.1&quot;</span><span class="p">,</span>
+    <span class="n">vlansdisabled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4392,6 +4498,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">SnatPool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">members</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.SnatPool" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.SnatPool</span></code> Collections of SNAT translation addresses</p>
 <p>Resource should be named with their “full path”. The full path is the combination of the partition + name of the resource, for example /Common/my-snatpool.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_f5bigip</span> <span class="k">as</span> <span class="nn">f5bigip</span>
+
+<span class="n">snatpool_sanjose</span> <span class="o">=</span> <span class="n">f5bigip</span><span class="o">.</span><span class="n">ltm</span><span class="o">.</span><span class="n">SnatPool</span><span class="p">(</span><span class="s2">&quot;snatpoolSanjose&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;191.1.1.1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;194.2.2.2&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;/Common/snatpool_sanjose&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4475,6 +4592,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">VirtualAddress</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">advertize_route</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arp</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_delete</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">conn_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">icmp_echo</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">traffic_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.VirtualAddress" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.VirtualAddress</span></code> Configures Virtual Server</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_f5bigip</span> <span class="k">as</span> <span class="nn">f5bigip</span>
+
+<span class="n">vs_va</span> <span class="o">=</span> <span class="n">f5bigip</span><span class="o">.</span><span class="n">ltm</span><span class="o">.</span><span class="n">VirtualAddress</span><span class="p">(</span><span class="s2">&quot;vsVa&quot;</span><span class="p">,</span>
+    <span class="n">advertize_route</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;/Common/vs_va&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4604,37 +4729,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_f5bigip.ltm.VirtualServer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">VirtualServer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_profiles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_persistence_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fallback_persistence_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">irules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mask</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">persistence_profiles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">profiles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_profiles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snatpool</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_address_translation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">translate_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">translate_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlans_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.VirtualServer" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">ltm.VirtualServer</span></code> Configures Virtual Server</p>
-<p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>client_profiles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of client context profiles associated on the virtual server. Not mutually exclusive with profiles and server_profiles</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of Virtual server</p></li>
-<li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Destination IP</p></li>
-<li><p><strong>fallback_persistence_profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a fallback persistence profile for the Virtual Server to use when the default persistence profile is not available.</p></li>
-<li><p><strong>ip_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the IP protocol to use with the the virtual server (all, tcp, or udp are valid)</p></li>
-<li><p><strong>irules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The iRules list you want run on this virtual server. iRules help automate the intercepting, processing, and routing of application traffic.</p></li>
-<li><p><strong>mask</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Mask can either be in CIDR notation or decimal, i.e.: 24 or 255.255.255.0. A CIDR mask of 0 is the same as 0.0.0.0</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the virtual server</p></li>
-<li><p><strong>persistence_profiles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of persistence profiles associated with the Virtual Server.</p></li>
-<li><p><strong>pool</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Default pool name</p></li>
-<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Listen port for the virtual server</p></li>
-<li><p><strong>profiles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of profiles associated both client and server contexts on the virtual server. This includes protocol, ssl, http, etc.</p></li>
-<li><p><strong>server_profiles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of server context profiles associated on the virtual server. Not mutually exclusive with profiles and client_profiles</p></li>
-<li><p><strong>snatpool</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of an existing SNAT pool that you want the virtual server to use to implement selective and intelligent SNATs. DEPRECATED - see Virtual Server Property Groups source-address-translation</p></li>
-<li><p><strong>source</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies an IP address or network from which the virtual server will accept traffic.</p></li>
-<li><p><strong>source_address_translation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Can be either omitted for none or the values automap or snat</p></li>
-<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether the virtual server and its resources are available for load balancing. The default is Enabled</p></li>
-<li><p><strong>translate_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Enables or disables address translation for the virtual server. Turn address translation off for a virtual server if you want to use the virtual server to load balance connections to any address. This option is useful when the system is load balancing devices that have the same IP address.</p></li>
-<li><p><strong>translate_port</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Enables or disables port translation. Turn port translation off for a virtual server if you want to use the virtual server to load balance connections to any service</p></li>
-<li><p><strong>vlans</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The virtual server is enabled/disabled on this set of VLANs. See vlans-disabled and vlans-enabled.</p></li>
-<li><p><strong>vlans_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables the virtual server on the VLANs specified by the VLANs option.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a VirtualServer resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] client_profiles: List of client context profiles associated on the virtual server. Not mutually exclusive with profiles and server_profiles
+:param pulumi.Input[str] description: Description of Virtual server
+:param pulumi.Input[str] destination: Destination IP
+:param pulumi.Input[str] fallback_persistence_profile: Specifies a fallback persistence profile for the Virtual Server to use when the default persistence profile is not available.
+:param pulumi.Input[str] ip_protocol: Specify the IP protocol to use with the the virtual server (all, tcp, or udp are valid)
+:param pulumi.Input[list] irules: The iRules list you want run on this virtual server. iRules help automate the intercepting, processing, and routing of application traffic.
+:param pulumi.Input[str] mask: Mask can either be in CIDR notation or decimal, i.e.: 24 or 255.255.255.0. A CIDR mask of 0 is the same as 0.0.0.0
+:param pulumi.Input[str] name: Name of the virtual server
+:param pulumi.Input[list] persistence_profiles: List of persistence profiles associated with the Virtual Server.
+:param pulumi.Input[str] pool: Default pool name
+:param pulumi.Input[float] port: Listen port for the virtual server
+:param pulumi.Input[list] profiles: List of profiles associated both client and server contexts on the virtual server. This includes protocol, ssl, http, etc.
+:param pulumi.Input[list] server_profiles: List of server context profiles associated on the virtual server. Not mutually exclusive with profiles and client_profiles
+:param pulumi.Input[str] snatpool: Specifies the name of an existing SNAT pool that you want the virtual server to use to implement selective and intelligent SNATs. DEPRECATED - see Virtual Server Property Groups source-address-translation
+:param pulumi.Input[str] source: Specifies an IP address or network from which the virtual server will accept traffic.
+:param pulumi.Input[str] source_address_translation: Can be either omitted for none or the values automap or snat
+:param pulumi.Input[str] state: Specifies whether the virtual server and its resources are available for load balancing. The default is Enabled
+:param pulumi.Input[str] translate_address: Enables or disables address translation for the virtual server. Turn address translation off for a virtual server if you want to use the virtual server to load balance connections to any address. This option is useful when the system is load balancing devices that have the same IP address.
+:param pulumi.Input[str] translate_port: Enables or disables port translation. Turn port translation off for a virtual server if you want to use the virtual server to load balance connections to any service
+:param pulumi.Input[list] vlans: The virtual server is enabled/disabled on this set of VLANs. See vlans-disabled and vlans-enabled.
+:param pulumi.Input[bool] vlans_enabled: Enables the virtual server on the VLANs specified by the VLANs option.</p>
 <dl class="py attribute">
 <dt id="pulumi_f5bigip.ltm.VirtualServer.client_profiles">
 <code class="sig-name descname">client_profiles</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.VirtualServer.client_profiles" title="Permalink to this definition">¶</a></dt>

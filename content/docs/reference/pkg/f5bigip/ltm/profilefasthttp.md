@@ -30,7 +30,23 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+sjfasthttpprofile = f5bigip.ltm.ProfileFastHttp("sjfasthttpprofile",
+    connpool_maxreuse=2,
+    connpool_maxsize=2048,
+    connpool_minsize=0,
+    connpool_replenish="enabled",
+    connpool_step=4,
+    connpoolidle_timeoutoverride=0,
+    defaults_from="/Common/fasthttp",
+    forcehttp10response="disabled",
+    idle_timeout=300,
+    maxheader_size=32768,
+    name="sjfasthttpprofile")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -27,7 +27,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+snmp_traps = f5bigip.sys.SnmpTraps("snmpTraps",
+    community="f5community",
+    description="Setup snmp traps",
+    host="195.10.10.1",
+    name="snmptraps",
+    port=111)
+```
 {{% /example %}}
 
 {{% example typescript %}}

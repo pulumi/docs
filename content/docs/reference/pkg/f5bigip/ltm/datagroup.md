@@ -31,7 +31,24 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+datagroup = f5bigip.ltm.DataGroup("datagroup",
+    name="/Common/dgx2",
+    records=[
+        {
+            "data": "pool1",
+            "name": "abc.com",
+        },
+        {
+            "data": "123",
+            "name": "test",
+        },
+    ],
+    type="string")
+```
 {{% /example %}}
 
 {{% example typescript %}}

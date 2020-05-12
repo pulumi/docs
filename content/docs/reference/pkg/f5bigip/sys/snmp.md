@@ -27,7 +27,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+snmp = f5bigip.sys.Snmp("snmp",
+    allowedaddresses=["202.10.10.2"],
+    sys_contact=" NetOPsAdmin s.shitole@f5.com",
+    sys_location="SeattleHQ")
+```
 {{% /example %}}
 
 {{% example typescript %}}

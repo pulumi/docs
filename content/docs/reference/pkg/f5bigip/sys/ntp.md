@@ -29,7 +29,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+ntp1 = f5bigip.sys.Ntp("ntp1",
+    description="/Common/NTP1",
+    servers=["time.facebook.com"],
+    timezone="America/Los_Angeles")
+```
 {{% /example %}}
 
 {{% example typescript %}}

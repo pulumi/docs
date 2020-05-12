@@ -15,9 +15,67 @@ meta_desc: "Explore the Policy resource of the ltm module, including examples, i
 For resources should be named with their "full path". The full path is the combination of the partition + name of the resource. For example /Common/my-pool.
 
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+test_policy = f5bigip.ltm.Policy("test-policy",
+    name="my_policy",
+    strategy="first-match",
+    requires=["http"],
+    published_copy="Drafts/my_policy",
+    controls=["forwarding"],
+    rule=[{
+        "name": "rule6",
+        "action": [{
+            "tmName": "20",
+            "forward": True,
+            "pool": "/Common/mypool",
+        }],
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as f5bigip from "@pulumi/f5bigip";
+
+const test-policy = new f5bigip.ltm.Policy("test-policy", {
+    name: "my_policy",
+    strategy: "first-match",
+    requires: ["http"],
+    publishedCopy: "Drafts/my_policy",
+    controls: ["forwarding"],
+    rule: [{
+        name: "rule6",
+        action: [{
+            tmName: "20",
+            forward: true,
+            pool: "/Common/mypool",
+        }],
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Policy Resource {#create}

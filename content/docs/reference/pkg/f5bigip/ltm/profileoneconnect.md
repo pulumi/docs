@@ -30,7 +30,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+oneconnect_sanjose = f5bigip.ltm.ProfileOneConnect("oneconnect-sanjose",
+    defaults_from="/Common/oneconnect",
+    idle_timeout_override="disabled",
+    max_age=3600,
+    max_reuse=1000,
+    max_size=1000,
+    name="sanjose",
+    partition="Common",
+    share_pools="disabled",
+    source_mask="255.255.255.255")
+```
 {{% /example %}}
 
 {{% example typescript %}}

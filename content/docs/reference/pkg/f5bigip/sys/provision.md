@@ -27,7 +27,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+test_provision = f5bigip.sys.Provision("test-provision",
+    cpu_ratio=0,
+    disk_ratio=0,
+    full_path="asm",
+    level="none",
+    memory_ratio=0,
+    name="TEST_ASM_PROVISION_NAME")
+```
 {{% /example %}}
 
 {{% example typescript %}}

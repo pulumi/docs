@@ -15,9 +15,49 @@ meta_desc: "Explore the SelfIp resource of the net module, including examples, i
 Resource should be named with their "full path". The full path is the combination of the partition + name of the resource, for example /Common/my-selfip.
 
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+selfip1 = f5bigip.net.SelfIp("selfip1",
+    name="/Common/internalselfIP",
+    ip="11.1.1.1/24",
+    vlan="/Common/internal",
+    traffic_group="traffic-group-1")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as f5bigip from "@pulumi/f5bigip";
+
+const selfip1 = new f5bigip.net.SelfIp("selfip1", {
+    name: "/Common/internalselfIP",
+    ip: "11.1.1.1/24",
+    vlan: "/Common/internal",
+    trafficGroup: "traffic-group-1",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SelfIp Resource {#create}

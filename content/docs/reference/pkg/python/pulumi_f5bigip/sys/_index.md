@@ -93,6 +93,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_f5bigip.sys.Dns">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.sys.</code><code class="sig-name descname">Dns</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">number_of_dots</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">searches</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.Dns" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">sys.Dns</span></code> Configures DNS server on F5 BIG-IP</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_f5bigip</span> <span class="k">as</span> <span class="nn">f5bigip</span>
+
+<span class="n">dns1</span> <span class="o">=</span> <span class="n">f5bigip</span><span class="o">.</span><span class="n">sys</span><span class="o">.</span><span class="n">Dns</span><span class="p">(</span><span class="s2">&quot;dns1&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;/Common/DNS1&quot;</span><span class="p">,</span>
+    <span class="n">name_servers</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;1.1.1.1&quot;</span><span class="p">],</span>
+    <span class="n">number_of_dots</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">searches</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;f5.com&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -191,6 +201,34 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_f5bigip.sys.IApp">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.sys.</code><code class="sig-name descname">IApp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">devicegroup</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">execute_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inherited_devicegroup</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inherited_traffic_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">jsonfile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadatas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">strict_updates</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tables</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_modified</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_prerequisite_errors</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">traffic_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">variables</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.IApp" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">sys.IApp</span></code> resource helps you to deploy Application Services template that can be used to automate and orchestrate Layer 4-7 applications service deployments using F5 Network.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_f5bigip</span> <span class="k">as</span> <span class="nn">f5bigip</span>
+
+<span class="n">simplehttp</span> <span class="o">=</span> <span class="n">f5bigip</span><span class="o">.</span><span class="n">sys</span><span class="o">.</span><span class="n">IApp</span><span class="p">(</span><span class="s2">&quot;simplehttp&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;simplehttp&quot;</span><span class="p">,</span>
+    <span class="n">jsonfile</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;simplehttp.json&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> - User defined description.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceGroup</span></code> - The name of the device group that the application service is assigned to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">executeAction</span></code> - Run the specified template action associated with the application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inheritedDevicegroup</span></code>- Read-only. Shows whether the application folder will automatically remain with the same device-group as its parent folder. Use ‘device-group default’ or ‘device-group non-default’ to set this.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inheritedTrafficGroup</span></code> - Read-only. Shows whether the application folder will automatically remain with the same traffic-group as its parent folder. Use ‘traffic-group default’ or ‘traffic-group non-default’ to set this.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">partition</span></code> - Displays the administrative partition within which the application resides.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">strictUpdates</span></code> - Specifies whether configuration objects contained in the application may be directly modified, outside the context of the system’s application management interfaces.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">template</span></code> - The template defines the configuration for the application. This may be changed after the application has been created to move the application to a new template.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">templateModified</span></code> - Indicates that the application template used to deploy the application has been modified. The application should be updated to make use of the latest changes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">templatePrerequisiteErrors</span></code> - Indicates any missing prerequisites associated with the template that defines this application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trafficGroup</span></code> - The name of the traffic group that the application service is assigned to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lists</span></code> - string values</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code> - User defined generic data for the application service. It is a name and value pair.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tables</span></code> - Values provided like pool name, nodes etc.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">variables</span></code> - Name, values, encrypted or not</p></li>
+</ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -416,6 +454,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.sys.</code><code class="sig-name descname">Ntp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timezone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.Ntp" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">sys.Ntp</span></code> provides details about a specific bigip</p>
 <p>This resource is helpful when configuring NTP server on the BIG-IP.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_f5bigip</span> <span class="k">as</span> <span class="nn">f5bigip</span>
+
+<span class="n">ntp1</span> <span class="o">=</span> <span class="n">f5bigip</span><span class="o">.</span><span class="n">sys</span><span class="o">.</span><span class="n">Ntp</span><span class="p">(</span><span class="s2">&quot;ntp1&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;/Common/NTP1&quot;</span><span class="p">,</span>
+    <span class="n">servers</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;time.facebook.com&quot;</span><span class="p">],</span>
+    <span class="n">timezone</span><span class="o">=</span><span class="s2">&quot;America/Los_Angeles&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -506,6 +553,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_f5bigip.sys.Provision">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.sys.</code><code class="sig-name descname">Provision</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_ratio</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_ratio</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_ratio</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.Provision" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">sys.Provision</span></code> provides details bout how to enable “ilx”, “asm” “apm” resource on BIG-IP</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_f5bigip</span> <span class="k">as</span> <span class="nn">f5bigip</span>
+
+<span class="n">test_provision</span> <span class="o">=</span> <span class="n">f5bigip</span><span class="o">.</span><span class="n">sys</span><span class="o">.</span><span class="n">Provision</span><span class="p">(</span><span class="s2">&quot;test-provision&quot;</span><span class="p">,</span>
+    <span class="n">cpu_ratio</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">disk_ratio</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">full_path</span><span class="o">=</span><span class="s2">&quot;asm&quot;</span><span class="p">,</span>
+    <span class="n">level</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">,</span>
+    <span class="n">memory_ratio</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;TEST_ASM_PROVISION_NAME&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -620,6 +679,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_f5bigip.sys.Snmp">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.sys.</code><code class="sig-name descname">Snmp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowedaddresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sys_contact</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sys_location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.Snmp" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">sys.Snmp</span></code> provides details bout how to enable “ilx”, “asm” “apm” resource on BIG-IP</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_f5bigip</span> <span class="k">as</span> <span class="nn">f5bigip</span>
+
+<span class="n">snmp</span> <span class="o">=</span> <span class="n">f5bigip</span><span class="o">.</span><span class="n">sys</span><span class="o">.</span><span class="n">Snmp</span><span class="p">(</span><span class="s2">&quot;snmp&quot;</span><span class="p">,</span>
+    <span class="n">allowedaddresses</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;202.10.10.2&quot;</span><span class="p">],</span>
+    <span class="n">sys_contact</span><span class="o">=</span><span class="s2">&quot; NetOPsAdmin s.shitole@f5.com&quot;</span><span class="p">,</span>
+    <span class="n">sys_location</span><span class="o">=</span><span class="s2">&quot;SeattleHQ&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -710,6 +778,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_f5bigip.sys.SnmpTraps">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.sys.</code><code class="sig-name descname">SnmpTraps</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auth_passwordencrypted</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auth_protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">community</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">privacy_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">privacy_password_encrypted</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">privacy_protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.SnmpTraps" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">sys.SnmpTraps</span></code> provides details bout how to enable snmp_traps resource on BIG-IP</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_f5bigip</span> <span class="k">as</span> <span class="nn">f5bigip</span>
+
+<span class="n">snmp_traps</span> <span class="o">=</span> <span class="n">f5bigip</span><span class="o">.</span><span class="n">sys</span><span class="o">.</span><span class="n">SnmpTraps</span><span class="p">(</span><span class="s2">&quot;snmpTraps&quot;</span><span class="p">,</span>
+    <span class="n">community</span><span class="o">=</span><span class="s2">&quot;f5community&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Setup snmp traps&quot;</span><span class="p">,</span>
+    <span class="n">host</span><span class="o">=</span><span class="s2">&quot;195.10.10.1&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;snmptraps&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">111</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
