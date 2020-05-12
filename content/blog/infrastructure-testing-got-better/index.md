@@ -1,7 +1,7 @@
 ---
 title: "Infrastructure Testing Just Got Better with Pulumi"
 date: 2020-05-13
-meta_desc:
+meta_desc: "Pulumi accelerates infrastructure testing 6000x with mocking and unit tests."
 meta_image: meta.png
 authors:
     - dustin-farris
@@ -10,7 +10,7 @@ tags:
     - unit testing
 ---
 
-Guest Article: 
+_Guest Article_
 
 Dustin Farris is an experienced cloud engineering consultant.  He’s currently building a new data lake for a large public university using Pulumi. The project handles sensitive student and research data and as a result, his team must meet stringent QA and security requirements.  Dustin shows how resource mocking in Pulumi makes testing and verification faster than ever before.
 
@@ -34,7 +34,7 @@ With this shift, it makes sense to throw out old configurations and pick the bes
 
 ## Accelerating Test and Verification
 
-There are many benefits to using Pulumi to develop and test infrastructure. First, the team has the immediate benefit of modern language and IDE support: things like missing arguments are now visible in-line as we define resources.  In addition, state tracking and version control capabilities, for all cloud provider resources, make for a terrific experience in terms of productivity. 
+There are many benefits to using Pulumi to develop and test infrastructure. First, the team has the immediate benefit of modern language and IDE support: things like missing arguments are now visible in-line as we define resources.  In addition, state tracking and version control capabilities, for all cloud provider resources, make for a terrific experience in terms of productivity.
 
 Second, creating standard infrastructure stacks for the team helps everyone move faster.  We create environments for each developer in separate AWS accounts so they can develop features without impacting other developers and we don’t have to wait for central IT to provision resources. Pulumi’s support for ephemeral environments means that developers can spin-up and spin-down stacks quickly, in order to verify that changes to the desired state are actually reflected in the provisioned resources.  This makes integration testing far easier, and ephemeral environments keep cloud costs down because they are easily destroyed when they are no longer needed.
 
