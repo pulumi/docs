@@ -32,3 +32,21 @@ Explore the resources and functions of the sys module in the f5 BIG-IP package.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5bigip.Sys.html" title="Pulumi.F5bigip.Sys">Pulumi.F5bigip.Sys</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys?tab=doc#" title="f5bigip/sys">f5bigip/sys</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/sys/#" title="@pulumi/f5bigip/sys">@pulumi/f5bigip/sys</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_f5bigip/sys" title="pulumi_f5bigip/sys">pulumi_f5bigip/sys</a></dd>
+
+</dl>
+

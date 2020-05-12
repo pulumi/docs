@@ -28,3 +28,21 @@ Explore the resources and functions of the net module in the f5 BIG-IP package.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5bigip.Net.html" title="Pulumi.F5bigip.Net">Pulumi.F5bigip.Net</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/net?tab=doc#" title="f5bigip/net">f5bigip/net</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/net/#" title="@pulumi/f5bigip/net">@pulumi/f5bigip/net</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_f5bigip/net" title="pulumi_f5bigip/net">pulumi_f5bigip/net</a></dd>
+
+</dl>
+
