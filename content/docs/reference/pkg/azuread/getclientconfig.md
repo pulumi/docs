@@ -12,9 +12,42 @@ meta_desc: "Explore the GetClientConfig function of the Azure AD package, includ
 
 Use this data source to access the configuration of the AzureRM provider.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azuread as azuread
+
+current = azuread.get_client_config()
+pulumi.export("accountId", current.client_id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azuread from "@pulumi/azuread";
+
+const current = azuread.getClientConfig({});
+export const accountId = current.then(current => current.clientId);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetClientConfig {#using}

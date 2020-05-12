@@ -30,7 +30,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azuread as azuread
+
+example_user = azuread.get_user(user_principal_name="jdoe@hashicorp.com")
+example_group = azuread.Group("exampleGroup")
+example_group_member = azuread.GroupMember("exampleGroupMember",
+    group_object_id=example_group.id,
+    member_object_id=example_user.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

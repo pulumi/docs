@@ -30,7 +30,25 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azuread as azuread
+
+example_application = azuread.Application("exampleApplication",
+    available_to_other_tenants=False,
+    homepage="http://homepage",
+    identifier_uris=["http://uri"],
+    oauth2_allow_implicit_flow=True,
+    reply_urls=["http://replyurl"])
+example_service_principal = azuread.ServicePrincipal("exampleServicePrincipal",
+    app_role_assignment_required=False,
+    application_id=example_application.application_id,
+    tags=[
+        "example",
+        "tags",
+        "here",
+    ])
+```
 {{% /example %}}
 
 {{% example typescript %}}

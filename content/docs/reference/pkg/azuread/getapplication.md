@@ -30,7 +30,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azuread as azuread
+
+example = azuread.get_application(name="My First AzureAD Application")
+pulumi.export("azureAdObjectId", example.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}
