@@ -88,3 +88,21 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
 	<dd>2.4.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.html" title="Pulumi.Digitalocean">Pulumi.Digitalocean</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#" title="digitalocean">digitalocean</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#" title="@pulumi/digitalocean">@pulumi/digitalocean</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_digitalocean" title="pulumi_digitalocean">pulumi_digitalocean</a></dd>
+
+</dl>
+
