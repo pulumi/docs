@@ -13,15 +13,14 @@ export class TopButton {
     
     @Listen("scroll", { target: "window" })
     handleScroll() {
-        this.setVisibility()
+        this.setVisibility();
     }
     
     componentWillRender() {
-        this.setVisibility()
+        this.setVisibility();
     }
     
     render() {
-        console.log("render")
         let buttonClass = `top-button fas fa-chevron-up ${this.visible}`
         return (
             <div>
@@ -33,5 +32,4 @@ export class TopButton {
     setVisibility() {
         this.visible = window.scrollY > 2500 ? "visible" : "hidden";
     }
-  
 }
