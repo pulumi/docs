@@ -12,9 +12,70 @@ meta_desc: "Explore the User resource of the apimanagement module, including exa
 
 Manages an API Management User.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_service = azure.apimanagement.Service("exampleService",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    publisher_name="My Company",
+    publisher_email="company@exmaple.com",
+    sku_name="Developer_1")
+example_user = azure.apimanagement.User("exampleUser",
+    user_id="5931a75ae4bbd512288c680b",
+    api_management_name=example_service.name,
+    resource_group_name=example_resource_group.name,
+    first_name="Example",
+    last_name="User",
+    email="user@example.com",
+    state="active")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleService = new azure.apimanagement.Service("exampleService", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    publisherName: "My Company",
+    publisherEmail: "company@exmaple.com",
+    skuName: "Developer_1",
+});
+const exampleUser = new azure.apimanagement.User("exampleUser", {
+    userId: "5931a75ae4bbd512288c680b",
+    apiManagementName: exampleService.name,
+    resourceGroupName: exampleResourceGroup.name,
+    firstName: "Example",
+    lastName: "User",
+    email: "user@example.com",
+    state: "active",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a User Resource {#create}

@@ -12,9 +12,46 @@ meta_desc: "Explore the GetCertificate function of the appservice module, includ
 
 Use this data source to access information about an App Service Certificate.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.appservice.get_certificate(name="example-app-service-certificate",
+    resource_group_name="example-rg")
+pulumi.export("appServiceCertificateId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.appservice.getCertificate({
+    name: "example-app-service-certificate",
+    resourceGroupName: "example-rg",
+});
+export const appServiceCertificateId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetCertificate {#using}

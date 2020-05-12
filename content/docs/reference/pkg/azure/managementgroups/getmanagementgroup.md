@@ -12,11 +12,46 @@ meta_desc: "Explore the GetManagementGroup function of the managementgroups modu
 
 Use this data source to access information about an existing Management Group.
 
-{{% examples %}}
-{{% /examples %}}
+
 
 Deprecated: azure.managementgroups.getManagementGroup has been deprecated in favour of azure.management.getGroup
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.management.get_group(name="00000000-0000-0000-0000-000000000000")
+pulumi.export("displayName", example.display_name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.management.getGroup({
+    name: "00000000-0000-0000-0000-000000000000",
+});
+export const displayName = example.then(example => example.displayName);
+```
+{{% /example %}}
+
+{{% /examples %}}
 <p class="resource-deprecated">Deprecated: {{% md %}}azure.managementgroups.getManagementGroup has been deprecated in favour of azure.management.getGroup{{% /md %}}</p>
 
 

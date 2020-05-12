@@ -17,6 +17,19 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.datalake.AnalyticsAccount">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.datalake.</code><code class="sig-name descname">AnalyticsAccount</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_store_account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.AnalyticsAccount" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Data Lake Analytics Account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;northeurope&quot;</span><span class="p">)</span>
+<span class="n">example_store</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">datalake</span><span class="o">.</span><span class="n">Store</span><span class="p">(</span><span class="s2">&quot;exampleStore&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">)</span>
+<span class="n">example_analytics_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">datalake</span><span class="o">.</span><span class="n">AnalyticsAccount</span><span class="p">(</span><span class="s2">&quot;exampleAnalyticsAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">default_store_account_name</span><span class="o">=</span><span class="n">example_store</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -131,6 +144,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.datalake.AnalyticsFirewallRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.datalake.</code><code class="sig-name descname">AnalyticsFirewallRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.AnalyticsFirewallRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Azure Data Lake Analytics Firewall Rule.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;northeurope&quot;</span><span class="p">)</span>
+<span class="n">example_store</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">datalake</span><span class="o">.</span><span class="n">Store</span><span class="p">(</span><span class="s2">&quot;exampleStore&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">)</span>
+<span class="n">example_analytics_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">datalake</span><span class="o">.</span><span class="n">AnalyticsAccount</span><span class="p">(</span><span class="s2">&quot;exampleAnalyticsAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">default_store_account_name</span><span class="o">=</span><span class="n">example_store</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_analytics_firewall_rule</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">datalake</span><span class="o">.</span><span class="n">AnalyticsFirewallRule</span><span class="p">(</span><span class="s2">&quot;exampleAnalyticsFirewallRule&quot;</span><span class="p">,</span>
+    <span class="n">account_name</span><span class="o">=</span><span class="n">azurerm_data_lake_analytics</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">start_ip_address</span><span class="o">=</span><span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
+    <span class="n">end_ip_address</span><span class="o">=</span><span class="s2">&quot;2.3.4.5&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -290,6 +321,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.datalake.Store">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.datalake.</code><code class="sig-name descname">Store</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">firewall_allow_azure_ips</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">firewall_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.Store" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Data Lake Store.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;northeurope&quot;</span><span class="p">)</span>
+<span class="n">example_store</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">datalake</span><span class="o">.</span><span class="n">Store</span><span class="p">(</span><span class="s2">&quot;exampleStore&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">encryption_state</span><span class="o">=</span><span class="s2">&quot;Enabled&quot;</span><span class="p">,</span>
+    <span class="n">encryption_type</span><span class="o">=</span><span class="s2">&quot;ServiceManaged&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -439,6 +481,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> If you want to change the data in the remote file without changing the <code class="docutils literal notranslate"><span class="pre">local_file_path</span></code>, then
 taint the resource so the <code class="docutils literal notranslate"><span class="pre">datalake.StoreFile</span></code> gets recreated with the new data.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;northeurope&quot;</span><span class="p">)</span>
+<span class="n">example_store</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">datalake</span><span class="o">.</span><span class="n">Store</span><span class="p">(</span><span class="s2">&quot;exampleStore&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_store_file</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">datalake</span><span class="o">.</span><span class="n">StoreFile</span><span class="p">(</span><span class="s2">&quot;exampleStoreFile&quot;</span><span class="p">,</span>
+    <span class="n">local_file_path</span><span class="o">=</span><span class="s2">&quot;/path/to/local/file&quot;</span><span class="p">,</span>
+    <span class="n">remote_file_path</span><span class="o">=</span><span class="s2">&quot;/path/created/for/remote/file&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -529,6 +584,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.datalake.StoreFirewallRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.datalake.</code><code class="sig-name descname">StoreFirewallRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.StoreFirewallRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Azure Data Lake Store Firewall Rule.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;northeurope&quot;</span><span class="p">)</span>
+<span class="n">example_store</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">datalake</span><span class="o">.</span><span class="n">Store</span><span class="p">(</span><span class="s2">&quot;exampleStore&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">)</span>
+<span class="n">example_store_firewall_rule</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">datalake</span><span class="o">.</span><span class="n">StoreFirewallRule</span><span class="p">(</span><span class="s2">&quot;exampleStoreFirewallRule&quot;</span><span class="p">,</span>
+    <span class="n">account_name</span><span class="o">=</span><span class="n">example_store</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">start_ip_address</span><span class="o">=</span><span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
+    <span class="n">end_ip_address</span><span class="o">=</span><span class="s2">&quot;2.3.4.5&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -635,6 +704,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.datalake.get_store">
 <code class="sig-prename descclassname">pulumi_azure.datalake.</code><code class="sig-name descname">get_store</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.get_store" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Data Lake Store.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">datalake</span><span class="o">.</span><span class="n">get_store</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;testdatalake&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;testdatalake&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;dataLakeStoreId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

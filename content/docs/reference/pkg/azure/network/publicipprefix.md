@@ -12,9 +12,55 @@ meta_desc: "Explore the PublicIpPrefix resource of the network module, including
 
 Manages a Public IP Prefix.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_public_ip_prefix = azure.network.PublicIpPrefix("examplePublicIpPrefix",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    prefix_length=31,
+    tags={
+        "environment": "Production",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const examplePublicIpPrefix = new azure.network.PublicIpPrefix("examplePublicIpPrefix", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    prefixLength: 31,
+    tags: {
+        environment: "Production",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PublicIpPrefix Resource {#create}

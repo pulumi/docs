@@ -16,9 +16,76 @@ Sets a MySQL Configuration value on a MySQL Server.
 
 > **Note:** Since this resource is provisioned by default, the Azure Provider will not check for the presence of an existing resource prior to attempting to create it.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_server = azure.mysql.Server("exampleServer",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku_name="GP_Gen5_2",
+    storage_profile={
+        "storageMb": 5120,
+        "backupRetentionDays": 7,
+        "geoRedundantBackup": "Disabled",
+    },
+    administrator_login="psqladminun",
+    administrator_login_password="H@Sh1CoR3!",
+    version="5.7",
+    ssl_enforcement="Enabled")
+example_configuration = azure.mysql.Configuration("exampleConfiguration",
+    resource_group_name=example_resource_group.name,
+    server_name=example_server.name,
+    value="600")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleServer = new azure.mysql.Server("exampleServer", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    skuName: "GP_Gen5_2",
+    storage_profile: {
+        storageMb: 5120,
+        backupRetentionDays: 7,
+        geoRedundantBackup: "Disabled",
+    },
+    administratorLogin: "psqladminun",
+    administratorLoginPassword: "H@Sh1CoR3!",
+    version: "5.7",
+    sslEnforcement: "Enabled",
+});
+const exampleConfiguration = new azure.mysql.Configuration("exampleConfiguration", {
+    resourceGroupName: exampleResourceGroup.name,
+    serverName: exampleServer.name,
+    value: "600",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Configuration Resource {#create}

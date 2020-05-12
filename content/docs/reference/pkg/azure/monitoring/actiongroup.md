@@ -12,9 +12,175 @@ meta_desc: "Explore the ActionGroup resource of the monitoring module, including
 
 Manages an Action Group within Azure Monitor.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_action_group = azure.monitoring.ActionGroup("exampleActionGroup",
+    resource_group_name=example_resource_group.name,
+    short_name="p0action",
+    arm_role_receiver=[{
+        "name": "armroleaction",
+        "roleId": "de139f84-1756-47ae-9be6-808fbbe84772",
+        "useCommonAlertSchema": True,
+    }],
+    automation_runbook_receiver=[{
+        "name": "action_name_1",
+        "automationAccountId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-runbooks/providers/microsoft.automation/automationaccounts/aaa001",
+        "runbookName": "my runbook",
+        "webhookResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-runbooks/providers/microsoft.automation/automationaccounts/aaa001/webhooks/webhook_alert",
+        "isGlobalRunbook": True,
+        "serviceUri": "https://s13events.azure-automation.net/webhooks?token=randomtoken",
+        "useCommonAlertSchema": True,
+    }],
+    azure_app_push_receiver=[{
+        "name": "pushtoadmin",
+        "emailAddress": "admin@contoso.com",
+    }],
+    azure_function_receiver=[{
+        "name": "funcaction",
+        "functionAppResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-funcapp/providers/Microsoft.Web/sites/funcapp",
+        "functionName": "myfunc",
+        "httpTriggerUrl": "https://example.com/trigger",
+        "useCommonAlertSchema": True,
+    }],
+    email_receiver=[
+        {
+            "name": "sendtoadmin",
+            "emailAddress": "admin@contoso.com",
+        },
+        {
+            "name": "sendtodevops",
+            "emailAddress": "devops@contoso.com",
+            "useCommonAlertSchema": True,
+        },
+    ],
+    itsm_receiver=[{
+        "name": "createorupdateticket",
+        "workspaceId": "6eee3a18-aac3-40e4-b98e-1f309f329816",
+        "connectionId": "53de6956-42b4-41ba-be3c-b154cdf17b13",
+        "ticketConfiguration": "{}",
+        "region": "southcentralus",
+    }],
+    logic_app_receiver=[{
+        "name": "logicappaction",
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-logicapp/providers/Microsoft.Logic/workflows/logicapp",
+        "callbackUrl": "https://logicapptriggerurl/...",
+        "useCommonAlertSchema": True,
+    }],
+    sms_receiver=[{
+        "name": "oncallmsg",
+        "countryCode": "1",
+        "phoneNumber": "1231231234",
+    }],
+    voice_receiver=[{
+        "name": "remotesupport",
+        "countryCode": "86",
+        "phoneNumber": "13888888888",
+    }],
+    webhook_receiver=[{
+        "name": "callmyapiaswell",
+        "serviceUri": "http://example.com/alert",
+        "useCommonAlertSchema": True,
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleActionGroup = new azure.monitoring.ActionGroup("exampleActionGroup", {
+    resourceGroupName: exampleResourceGroup.name,
+    shortName: "p0action",
+    arm_role_receiver: [{
+        name: "armroleaction",
+        roleId: "de139f84-1756-47ae-9be6-808fbbe84772",
+        useCommonAlertSchema: true,
+    }],
+    automation_runbook_receiver: [{
+        name: "action_name_1",
+        automationAccountId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-runbooks/providers/microsoft.automation/automationaccounts/aaa001",
+        runbookName: "my runbook",
+        webhookResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-runbooks/providers/microsoft.automation/automationaccounts/aaa001/webhooks/webhook_alert",
+        isGlobalRunbook: true,
+        serviceUri: "https://s13events.azure-automation.net/webhooks?token=randomtoken",
+        useCommonAlertSchema: true,
+    }],
+    azure_app_push_receiver: [{
+        name: "pushtoadmin",
+        emailAddress: "admin@contoso.com",
+    }],
+    azure_function_receiver: [{
+        name: "funcaction",
+        functionAppResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-funcapp/providers/Microsoft.Web/sites/funcapp",
+        functionName: "myfunc",
+        httpTriggerUrl: "https://example.com/trigger",
+        useCommonAlertSchema: true,
+    }],
+    email_receiver: [
+        {
+            name: "sendtoadmin",
+            emailAddress: "admin@contoso.com",
+        },
+        {
+            name: "sendtodevops",
+            emailAddress: "devops@contoso.com",
+            useCommonAlertSchema: true,
+        },
+    ],
+    itsm_receiver: [{
+        name: "createorupdateticket",
+        workspaceId: "6eee3a18-aac3-40e4-b98e-1f309f329816",
+        connectionId: "53de6956-42b4-41ba-be3c-b154cdf17b13",
+        ticketConfiguration: "{}",
+        region: "southcentralus",
+    }],
+    logic_app_receiver: [{
+        name: "logicappaction",
+        resourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-logicapp/providers/Microsoft.Logic/workflows/logicapp",
+        callbackUrl: "https://logicapptriggerurl/...",
+        useCommonAlertSchema: true,
+    }],
+    sms_receiver: [{
+        name: "oncallmsg",
+        countryCode: "1",
+        phoneNumber: "1231231234",
+    }],
+    voice_receiver: [{
+        name: "remotesupport",
+        countryCode: "86",
+        phoneNumber: "13888888888",
+    }],
+    webhook_receiver: [{
+        name: "callmyapiaswell",
+        serviceUri: "http://example.com/alert",
+        useCommonAlertSchema: true,
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ActionGroup Resource {#create}

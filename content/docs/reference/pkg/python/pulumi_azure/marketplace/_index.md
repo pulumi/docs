@@ -17,6 +17,15 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.marketplace.Agreement">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.marketplace.</code><code class="sig-name descname">Agreement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">offer</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">publisher</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.marketplace.Agreement" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows accepting the Legal Terms for a Marketplace Image.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">barracuda</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">marketplace</span><span class="o">.</span><span class="n">Agreement</span><span class="p">(</span><span class="s2">&quot;barracuda&quot;</span><span class="p">,</span>
+    <span class="n">offer</span><span class="o">=</span><span class="s2">&quot;waf&quot;</span><span class="p">,</span>
+    <span class="n">plan</span><span class="o">=</span><span class="s2">&quot;hourly&quot;</span><span class="p">,</span>
+    <span class="n">publisher</span><span class="o">=</span><span class="s2">&quot;barracudanetworks&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

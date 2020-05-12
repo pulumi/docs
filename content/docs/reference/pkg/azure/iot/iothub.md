@@ -18,9 +18,176 @@ Manages an IotHub
 
 > **NOTE:** Fallback route can be defined either directly on the `azure.iot.IoTHub` resource, or using the `azure.iot.FallbackRoute` resource - but the two cannot be used together. If both are used against the same IoTHub, spurious changes will occur.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="Canada Central")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_container = azure.storage.Container("exampleContainer",
+    storage_account_name=example_account.name,
+    container_access_type="private")
+example_event_hub_namespace = azure.eventhub.EventHubNamespace("exampleEventHubNamespace",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    sku="Basic")
+example_event_hub = azure.eventhub.EventHub("exampleEventHub",
+    resource_group_name=example_resource_group.name,
+    namespace_name=example_event_hub_namespace.name,
+    partition_count=2,
+    message_retention=1)
+example_authorization_rule = azure.eventhub.AuthorizationRule("exampleAuthorizationRule",
+    resource_group_name=example_resource_group.name,
+    namespace_name=example_event_hub_namespace.name,
+    eventhub_name=example_event_hub.name,
+    send=True)
+example_io_t_hub = azure.iot.IoTHub("exampleIoTHub",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    sku={
+        "name": "S1",
+        "capacity": "1",
+    },
+    endpoint=[
+        {
+            "type": "AzureIotHub.StorageContainer",
+            "connectionString": example_account.primary_blob_connection_string,
+            "name": "export",
+            "batchFrequencyInSeconds": 60,
+            "maxChunkSizeInBytes": 10485760,
+            "containerName": example_container.name,
+            "encoding": "Avro",
+            "fileNameFormat": "{iothub}/{partition}_{YYYY}_{MM}_{DD}_{HH}_{mm}",
+        },
+        {
+            "type": "AzureIotHub.EventHub",
+            "connectionString": example_authorization_rule.primary_connection_string,
+            "name": "export2",
+        },
+    ],
+    route=[
+        {
+            "name": "export",
+            "source": "DeviceMessages",
+            "condition": "true",
+            "endpointNames": ["export"],
+            "enabled": True,
+        },
+        {
+            "name": "export2",
+            "source": "DeviceMessages",
+            "condition": "true",
+            "endpointNames": ["export2"],
+            "enabled": True,
+        },
+    ],
+    tags={
+        "purpose": "testing",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "Canada Central"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const exampleContainer = new azure.storage.Container("exampleContainer", {
+    storageAccountName: exampleAccount.name,
+    containerAccessType: "private",
+});
+const exampleEventHubNamespace = new azure.eventhub.EventHubNamespace("exampleEventHubNamespace", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    sku: "Basic",
+});
+const exampleEventHub = new azure.eventhub.EventHub("exampleEventHub", {
+    resourceGroupName: exampleResourceGroup.name,
+    namespaceName: exampleEventHubNamespace.name,
+    partitionCount: 2,
+    messageRetention: 1,
+});
+const exampleAuthorizationRule = new azure.eventhub.AuthorizationRule("exampleAuthorizationRule", {
+    resourceGroupName: exampleResourceGroup.name,
+    namespaceName: exampleEventHubNamespace.name,
+    eventhubName: exampleEventHub.name,
+    send: true,
+});
+const exampleIoTHub = new azure.iot.IoTHub("exampleIoTHub", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    sku: {
+        name: "S1",
+        capacity: "1",
+    },
+    endpoint: [
+        {
+            type: "AzureIotHub.StorageContainer",
+            connectionString: exampleAccount.primaryBlobConnectionString,
+            name: "export",
+            batchFrequencyInSeconds: 60,
+            maxChunkSizeInBytes: 10485760,
+            containerName: exampleContainer.name,
+            encoding: "Avro",
+            fileNameFormat: "{iothub}/{partition}_{YYYY}_{MM}_{DD}_{HH}_{mm}",
+        },
+        {
+            type: "AzureIotHub.EventHub",
+            connectionString: exampleAuthorizationRule.primaryConnectionString,
+            name: "export2",
+        },
+    ],
+    route: [
+        {
+            name: "export",
+            source: "DeviceMessages",
+            condition: "true",
+            endpointNames: ["export"],
+            enabled: true,
+        },
+        {
+            name: "export2",
+            source: "DeviceMessages",
+            condition: "true",
+            endpointNames: ["export2"],
+            enabled: true,
+        },
+    ],
+    tags: {
+        purpose: "testing",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IoTHub Resource {#create}

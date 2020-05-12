@@ -12,9 +12,118 @@ meta_desc: "Explore the Assignment resource of the policy module, including exam
 
 Configures the specified Policy Definition at the specified Scope. Also, Policy Set Definitions are supported.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_definition = azure.policy.Definition("exampleDefinition",
+    policy_type="Custom",
+    mode="All",
+    display_name="my-policy-definition",
+    policy_rule="""	{
+    "if": {
+      "not": {
+        "field": "location",
+        "in": "[parameters('allowedLocations')]"
+      }
+    },
+    "then": {
+      "effect": "audit"
+    }
+  }
+""",
+    parameters="""	{
+    "allowedLocations": {
+      "type": "Array",
+      "metadata": {
+        "description": "The list of allowed locations for resources.",
+        "displayName": "Allowed locations",
+        "strongType": "location"
+      }
+    }
+  }
+""")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_assignment = azure.policy.Assignment("exampleAssignment",
+    scope=example_resource_group.id,
+    policy_definition_id=example_definition.id,
+    description="Policy Assignment created via an Acceptance Test",
+    display_name="My Example Policy Assignment",
+    parameters="""{
+  "allowedLocations": {
+    "value": [ "West Europe" ]
+  }
+}
+""")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleDefinition = new azure.policy.Definition("exampleDefinition", {
+    policyType: "Custom",
+    mode: "All",
+    displayName: "my-policy-definition",
+    policyRule: `	{
+    "if": {
+      "not": {
+        "field": "location",
+        "in": "[parameters('allowedLocations')]"
+      }
+    },
+    "then": {
+      "effect": "audit"
+    }
+  }
+`,
+    parameters: `	{
+    "allowedLocations": {
+      "type": "Array",
+      "metadata": {
+        "description": "The list of allowed locations for resources.",
+        "displayName": "Allowed locations",
+        "strongType": "location"
+      }
+    }
+  }
+`,
+});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAssignment = new azure.policy.Assignment("exampleAssignment", {
+    scope: exampleResourceGroup.id,
+    policyDefinitionId: exampleDefinition.id,
+    description: "Policy Assignment created via an Acceptance Test",
+    displayName: "My Example Policy Assignment",
+    parameters: `{
+  "allowedLocations": {
+    "value": [ "West Europe" ]
+  }
+}
+`,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Assignment Resource {#create}

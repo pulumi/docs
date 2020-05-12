@@ -12,9 +12,46 @@ meta_desc: "Explore the GetCertificateOrder function of the appservice module, i
 
 Use this data source to access information about an existing App Service Certificate Order.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.appservice.get_certificate_order(name="example-cert-order",
+    resource_group_name="example-resources")
+pulumi.export("certificateOrderId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.appservice.getCertificateOrder({
+    name: "example-cert-order",
+    resourceGroupName: "example-resources",
+});
+export const certificateOrderId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetCertificateOrder {#using}

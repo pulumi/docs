@@ -12,9 +12,72 @@ meta_desc: "Explore the Schedule resource of the automation module, including ex
 
 Manages a Automation Schedule.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.automation.Account("exampleAccount",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku=[{
+        "name": "Basic",
+    }])
+example_schedule = azure.automation.Schedule("exampleSchedule",
+    resource_group_name=example_resource_group.name,
+    automation_account_name=example_account.name,
+    frequency="Week",
+    interval=1,
+    timezone="Central Europe Standard Time",
+    start_time="2014-04-15T18:00:15+02:00",
+    description="This is an example schedule",
+    week_days=["Friday"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = new azure.automation.Account("exampleAccount", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: [{
+        name: "Basic",
+    }],
+});
+const exampleSchedule = new azure.automation.Schedule("exampleSchedule", {
+    resourceGroupName: exampleResourceGroup.name,
+    automationAccountName: exampleAccount.name,
+    frequency: "Week",
+    interval: 1,
+    timezone: "Central Europe Standard Time",
+    startTime: "2014-04-15T18:00:15+02:00",
+    description: "This is an example schedule",
+    weekDays: ["Friday"],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Schedule Resource {#create}

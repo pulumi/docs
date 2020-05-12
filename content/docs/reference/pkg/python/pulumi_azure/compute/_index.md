@@ -17,6 +17,18 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.compute.AvailabilitySet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AvailabilitySet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">managed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">platform_fault_domain_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">platform_update_domain_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proximity_placement_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AvailabilitySet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Availability Set for Virtual Machines.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_availability_set</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">AvailabilitySet</span><span class="p">(</span><span class="s2">&quot;exampleAvailabilitySet&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Production&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -194,6 +206,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_azure.compute.AwaitableGetSharedImageVersionsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetSharedImageVersionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">gallery_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">images</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags_filter</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetSharedImageVersionsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_azure.compute.AwaitableGetSnapshotResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetSnapshotResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">creation_option</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">os_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_resource_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">time_created</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetSnapshotResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -210,6 +227,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> Bastion Hosts are a preview feature in Azure, and therefore are only supported in a select number of regions. <a class="reference external" href="https://docs.microsoft.com/en-us/azure/bastion/bastion-faq">Read more</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_virtual_network</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;exampleVirtualNetwork&quot;</span><span class="p">,</span>
+    <span class="n">address_spaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;192.168.1.0/24&quot;</span><span class="p">],</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_subnet</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;exampleSubnet&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">example_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;192.168.1.224/27&quot;</span><span class="p">)</span>
+<span class="n">example_public_ip</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">PublicIp</span><span class="p">(</span><span class="s2">&quot;examplePublicIp&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">allocation_method</span><span class="o">=</span><span class="s2">&quot;Static&quot;</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">)</span>
+<span class="n">example_bastion_host</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">BastionHost</span><span class="p">(</span><span class="s2">&quot;exampleBastionHost&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ip_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;configuration&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -344,6 +388,69 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> Data Disks can be attached either directly on the <code class="docutils literal notranslate"><span class="pre">compute.VirtualMachine</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">compute.DataDiskAttachment</span></code> resource - but the two cannot be used together. If both are used against the same Virtual Machine, spurious changes will occur.</p>
 <p><strong>Please Note:</strong> only Managed Disks are supported via this separate resource, Unmanaged Disks can be attached using the <code class="docutils literal notranslate"><span class="pre">storage_data_disk</span></code> block in the <code class="docutils literal notranslate"><span class="pre">compute.VirtualMachine</span></code> resource.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">prefix</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;prefix&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">prefix</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">prefix</span> <span class="o">=</span> <span class="s2">&quot;example&quot;</span>
+<span class="n">vm_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prefix</span><span class="si">}</span><span class="s2">-vm&quot;</span>
+<span class="n">main_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;mainResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">main_virtual_network</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;mainVirtualNetwork&quot;</span><span class="p">,</span>
+    <span class="n">address_spaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">],</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">internal</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;internal&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">main_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">)</span>
+<span class="n">main_network_interface</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">NetworkInterface</span><span class="p">(</span><span class="s2">&quot;mainNetworkInterface&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;internal&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">internal</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">example_virtual_machine</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VirtualMachine</span><span class="p">(</span><span class="s2">&quot;exampleVirtualMachine&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">network_interface_ids</span><span class="o">=</span><span class="p">[</span><span class="n">main_network_interface</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">vm_size</span><span class="o">=</span><span class="s2">&quot;Standard_F2&quot;</span><span class="p">,</span>
+    <span class="n">storage_image_reference</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="s2">&quot;Canonical&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;offer&quot;</span><span class="p">:</span> <span class="s2">&quot;UbuntuServer&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sku&quot;</span><span class="p">:</span> <span class="s2">&quot;16.04-LTS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;latest&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">storage_os_disk</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;myosdisk1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;caching&quot;</span><span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;createOption&quot;</span><span class="p">:</span> <span class="s2">&quot;FromImage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;managedDiskType&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">os_profile</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;computerName&quot;</span><span class="p">:</span> <span class="n">vm_name</span><span class="p">,</span>
+        <span class="s2">&quot;adminUsername&quot;</span><span class="p">:</span> <span class="s2">&quot;testadmin&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;adminPassword&quot;</span><span class="p">:</span> <span class="s2">&quot;Password1234!&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">os_profile_linux_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;disablePasswordAuthentication&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_managed_disk</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ManagedDisk</span><span class="p">(</span><span class="s2">&quot;exampleManagedDisk&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_type</span><span class="o">=</span><span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
+    <span class="n">create_option</span><span class="o">=</span><span class="s2">&quot;Empty&quot;</span><span class="p">,</span>
+    <span class="n">disk_size_gb</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">example_data_disk_attachment</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">DataDiskAttachment</span><span class="p">(</span><span class="s2">&quot;exampleDataDiskAttachment&quot;</span><span class="p">,</span>
+    <span class="n">managed_disk_id</span><span class="o">=</span><span class="n">example_managed_disk</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">virtual_machine_id</span><span class="o">=</span><span class="n">example_virtual_machine</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">lun</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">,</span>
+    <span class="n">caching</span><span class="o">=</span><span class="s2">&quot;ReadWrite&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -459,6 +566,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.DedicatedHost">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">DedicatedHost</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_replace_on_failure</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dedicated_host_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">platform_fault_domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.DedicatedHost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a Dedicated Host within a Dedicated Host Group.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_dedicated_host_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">DedicatedHostGroup</span><span class="p">(</span><span class="s2">&quot;exampleDedicatedHostGroup&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">platform_fault_domain_count</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">example_dedicated_host</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">DedicatedHost</span><span class="p">(</span><span class="s2">&quot;exampleDedicatedHost&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">dedicated_host_group_id</span><span class="o">=</span><span class="n">example_dedicated_host_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;DSv3-Type1&quot;</span><span class="p">,</span>
+    <span class="n">platform_fault_domain</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -589,6 +711,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.DedicatedHostGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">DedicatedHostGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">platform_fault_domain_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zones</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.DedicatedHostGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a Dedicated Host Group.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_dedicated_host_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">DedicatedHostGroup</span><span class="p">(</span><span class="s2">&quot;exampleDedicatedHostGroup&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">platform_fault_domain_count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -707,6 +839,52 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE</strong>: Disk Encryption Sets are in Public Preview and at this time is only available in <code class="docutils literal notranslate"><span class="pre">Canada</span> <span class="pre">Central</span></code>, <code class="docutils literal notranslate"><span class="pre">North</span> <span class="pre">Europe</span></code> and <code class="docutils literal notranslate"><span class="pre">West</span> <span class="pre">Central</span> <span class="pre">US</span></code> regions - <a class="reference external" href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/disk-encryption">more information can be found in the preview documentation</a>.</p>
 <p><strong>NOTE:</strong> At this time the Key Vault used to store the Active Key for this Disk Encryption Set must have both Soft Delete &amp; Purge Protection enabled - which are not yet supported by this provider.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">current</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_client_config</span><span class="p">()</span>
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_key_vault</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">keyvault</span><span class="o">.</span><span class="n">KeyVault</span><span class="p">(</span><span class="s2">&quot;exampleKeyVault&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">tenant_id</span><span class="o">=</span><span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;premium&quot;</span><span class="p">,</span>
+    <span class="n">access_policy</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;tenantId&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
+        <span class="s2">&quot;objectId&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">object_id</span><span class="p">,</span>
+        <span class="s2">&quot;keyPermissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;create&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;get&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;delete&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;list&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;wrapkey&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;unwrapkey&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;get&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;secretPermissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;get&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;delete&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;set&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">}])</span>
+<span class="n">example_key</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">keyvault</span><span class="o">.</span><span class="n">Key</span><span class="p">(</span><span class="s2">&quot;exampleKey&quot;</span><span class="p">,</span>
+    <span class="n">key_vault_id</span><span class="o">=</span><span class="n">example_key_vault</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">key_type</span><span class="o">=</span><span class="s2">&quot;RSA&quot;</span><span class="p">,</span>
+    <span class="n">key_size</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span>
+    <span class="n">key_opts</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;decrypt&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;encrypt&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sign&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;unwrapKey&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;verify&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;wrapKey&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+<span class="n">example_disk_encryption_set</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">DiskEncryptionSet</span><span class="p">(</span><span class="s2">&quot;exampleDiskEncryptionSet&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">key_vault_key_id</span><span class="o">=</span><span class="n">example_key</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -843,6 +1021,80 @@ and run automated tasks.</p>
 <div><p><strong>NOTE:</strong> Custom Script Extensions for Linux &amp; Windows require that the <code class="docutils literal notranslate"><span class="pre">commandToExecute</span></code> returns a <code class="docutils literal notranslate"><span class="pre">0</span></code> exit code to be classified as successfully deployed. You can achieve this by appending <code class="docutils literal notranslate"><span class="pre">exit</span> <span class="pre">0</span></code> to the end of your <code class="docutils literal notranslate"><span class="pre">commandToExecute</span></code>.</p>
 <p><strong>NOTE:</strong> Custom Script Extensions require that the Azure Virtual Machine Guest Agent is running on the Virtual Machine.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_virtual_network</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;exampleVirtualNetwork&quot;</span><span class="p">,</span>
+    <span class="n">address_spaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">],</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_subnet</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;exampleSubnet&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">example_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">)</span>
+<span class="n">example_network_interface</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">NetworkInterface</span><span class="p">(</span><span class="s2">&quot;exampleNetworkInterface&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;testconfiguration1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;staging&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">example_virtual_machine</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VirtualMachine</span><span class="p">(</span><span class="s2">&quot;exampleVirtualMachine&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">network_interface_ids</span><span class="o">=</span><span class="p">[</span><span class="n">example_network_interface</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">vm_size</span><span class="o">=</span><span class="s2">&quot;Standard_F2&quot;</span><span class="p">,</span>
+    <span class="n">storage_image_reference</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="s2">&quot;Canonical&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;offer&quot;</span><span class="p">:</span> <span class="s2">&quot;UbuntuServer&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sku&quot;</span><span class="p">:</span> <span class="s2">&quot;16.04-LTS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;latest&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">storage_os_disk</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;myosdisk1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;vhdUri&quot;</span><span class="p">:</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_endpoint</span><span class="p">,</span> <span class="n">example_container</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">primary_blob_endpoint</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">primary_blob_endpoint</span><span class="si">}{</span><span class="n">name</span><span class="si">}</span><span class="s2">/myosdisk1.vhd&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;caching&quot;</span><span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;createOption&quot;</span><span class="p">:</span> <span class="s2">&quot;FromImage&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">os_profile</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;computerName&quot;</span><span class="p">:</span> <span class="s2">&quot;hostname&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;adminUsername&quot;</span><span class="p">:</span> <span class="s2">&quot;testadmin&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;adminPassword&quot;</span><span class="p">:</span> <span class="s2">&quot;Password1234!&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">os_profile_linux_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;disablePasswordAuthentication&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;staging&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_extension</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Extension</span><span class="p">(</span><span class="s2">&quot;exampleExtension&quot;</span><span class="p">,</span>
+    <span class="n">virtual_machine_id</span><span class="o">=</span><span class="n">example_virtual_machine</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">publisher</span><span class="o">=</span><span class="s2">&quot;Microsoft.Azure.Extensions&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;CustomScript&quot;</span><span class="p">,</span>
+    <span class="n">type_handler_version</span><span class="o">=</span><span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="n">settings</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;        {</span>
+<span class="s2">                &quot;commandToExecute&quot;: &quot;hostname &amp;&amp; uptime&quot;</span>
+<span class="s2">        }</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Production&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1413,6 +1665,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_azure.compute.GetSharedImageVersionsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetSharedImageVersionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">gallery_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">images</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags_filter</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageVersionsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getSharedImageVersions.</p>
+<dl class="py attribute">
+<dt id="pulumi_azure.compute.GetSharedImageVersionsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageVersionsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.compute.GetSharedImageVersionsResult.images">
+<code class="sig-name descname">images</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageVersionsResult.images" title="Permalink to this definition">¶</a></dt>
+<dd><p>An <code class="docutils literal notranslate"><span class="pre">images</span></code> block as defined below:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_azure.compute.GetSnapshotResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetSnapshotResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">creation_option</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">os_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_resource_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">time_created</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetSnapshotResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSnapshot.</p>
@@ -1464,6 +1734,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.Image">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">Image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hyper_v_generation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">os_disk</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_virtual_machine_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_resilient</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a custom virtual machine image that can be used to create virtual machines.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_image</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;exampleImage&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">os_disk</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;osType&quot;</span><span class="p">:</span> <span class="s2">&quot;Linux&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;osState&quot;</span><span class="p">:</span> <span class="s2">&quot;Generalized&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;blobUri&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{blob_uri}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sizeGb&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_image</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;exampleImage&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">source_virtual_machine_id</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">{vm_id}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1666,6 +1961,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>Note</strong> This resource does not support attaching existing OS Disks. You can instead capture an image of the OS Disk or continue to use the <code class="docutils literal notranslate"><span class="pre">compute.VirtualMachine</span></code> resource instead.</p>
 <p>In this release there’s a known issue where the <code class="docutils literal notranslate"><span class="pre">public_ip_address</span></code> and <code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> fields may not be fully populated for Dynamic Public IP’s.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_virtual_network</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;exampleVirtualNetwork&quot;</span><span class="p">,</span>
+    <span class="n">address_spaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">],</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_subnet</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;exampleSubnet&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">example_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">)</span>
+<span class="n">example_network_interface</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">NetworkInterface</span><span class="p">(</span><span class="s2">&quot;exampleNetworkInterface&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;internal&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">example_linux_virtual_machine</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">LinuxVirtualMachine</span><span class="p">(</span><span class="s2">&quot;exampleLinuxVirtualMachine&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;Standard_F2&quot;</span><span class="p">,</span>
+    <span class="n">admin_username</span><span class="o">=</span><span class="s2">&quot;adminuser&quot;</span><span class="p">,</span>
+    <span class="n">network_interface_ids</span><span class="o">=</span><span class="p">[</span><span class="n">example_network_interface</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">admin_ssh_key</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;adminuser&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;publicKey&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;~/.ssh/id_rsa.pub&quot;</span><span class="p">),</span>
+    <span class="p">}],</span>
+    <span class="n">os_disk</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;caching&quot;</span><span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;storageAccountType&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">source_image_reference</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="s2">&quot;Canonical&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;offer&quot;</span><span class="p">:</span> <span class="s2">&quot;UbuntuServer&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sku&quot;</span><span class="p">:</span> <span class="s2">&quot;16.04-LTS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;latest&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1678,7 +2015,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>allow_extension_operations</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Extension Operations be allowed on this Virtual Machine? Changing this forces a new resource to be created.</p></li>
 <li><p><strong>availability_set_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>boot_diagnostics</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.</p></li>
-<li><p><strong>computer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>computer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. If the value of the <code class="docutils literal notranslate"><span class="pre">name</span></code> field is not a valid <code class="docutils literal notranslate"><span class="pre">computer_name</span></code>, then you must specify <code class="docutils literal notranslate"><span class="pre">computer_name</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>custom_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>dedicated_host_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a Dedicated Host where this machine should be run on. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>disable_password_authentication</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Password Authentication be disabled on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this forces a new resource to be created.</p></li>
@@ -1813,7 +2150,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_azure.compute.LinuxVirtualMachine.computer_name">
 <code class="sig-name descname">computer_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachine.computer_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. Changing this forces a new resource to be created.</p>
+<dd><p>Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. If the value of the <code class="docutils literal notranslate"><span class="pre">name</span></code> field is not a valid <code class="docutils literal notranslate"><span class="pre">computer_name</span></code>, then you must specify <code class="docutils literal notranslate"><span class="pre">computer_name</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2027,7 +2364,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>allow_extension_operations</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Extension Operations be allowed on this Virtual Machine? Changing this forces a new resource to be created.</p></li>
 <li><p><strong>availability_set_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>boot_diagnostics</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.</p></li>
-<li><p><strong>computer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>computer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. If the value of the <code class="docutils literal notranslate"><span class="pre">name</span></code> field is not a valid <code class="docutils literal notranslate"><span class="pre">computer_name</span></code>, then you must specify <code class="docutils literal notranslate"><span class="pre">computer_name</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>custom_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>dedicated_host_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a Dedicated Host where this machine should be run on. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>disable_password_authentication</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Password Authentication be disabled on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this forces a new resource to be created.</p></li>
@@ -2160,6 +2497,49 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note</strong> This provider will automatically update &amp; reimage the nodes in the Scale Set (if Required) during an Update - this behaviour can be configured using the <code class="docutils literal notranslate"><span class="pre">features</span></code> configuration within the Provider configuration block.</p>
 <p><strong>Note:</strong> This resource does not support Unmanaged Disks. If you need to use Unmanaged Disks you can continue to use the <code class="docutils literal notranslate"><span class="pre">compute.ScaleSet</span></code> resource instead</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_virtual_network</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;exampleVirtualNetwork&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">address_spaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">])</span>
+<span class="n">internal</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;internal&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">example_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">)</span>
+<span class="n">example_linux_virtual_machine_scale_set</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">LinuxVirtualMachineScaleSet</span><span class="p">(</span><span class="s2">&quot;exampleLinuxVirtualMachineScaleSet&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Standard_F2&quot;</span><span class="p">,</span>
+    <span class="n">instances</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">admin_username</span><span class="o">=</span><span class="s2">&quot;adminuser&quot;</span><span class="p">,</span>
+    <span class="n">admin_ssh_key</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;adminuser&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;publicKey&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;~/.ssh/id_rsa.pub&quot;</span><span class="p">),</span>
+    <span class="p">}],</span>
+    <span class="n">source_image_reference</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="s2">&quot;Canonical&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;offer&quot;</span><span class="p">:</span> <span class="s2">&quot;UbuntuServer&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sku&quot;</span><span class="p">:</span> <span class="s2">&quot;16.04-LTS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;latest&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">os_disk</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;storageAccountType&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;caching&quot;</span><span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;primary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;ip_configuration&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;internal&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;primary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">internal</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2172,7 +2552,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>automatic_instance_repair</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">automatic_instance_repair</span></code> block as defined below. To enable the automatic instance repair, this Virtual Machine Scale Set must have a valid <code class="docutils literal notranslate"><span class="pre">health_probe_id</span></code> or an <a class="reference external" href="https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-health-extension">Application Health Extension</a>.</p></li>
 <li><p><strong>automatic_os_upgrade_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">automatic_os_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>.</p></li>
 <li><p><strong>boot_diagnostics</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.</p></li>
-<li><p><strong>computer_name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The prefix which should be used for the name of the Virtual Machines in this Scale Set. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field.</p></li>
+<li><p><strong>computer_name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The prefix which should be used for the name of the Virtual Machines in this Scale Set. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. If the value of the <code class="docutils literal notranslate"><span class="pre">name</span></code> field is not a valid <code class="docutils literal notranslate"><span class="pre">computer_name_prefix</span></code>, then you must specify <code class="docutils literal notranslate"><span class="pre">computer_name_prefix</span></code>.</p></li>
 <li><p><strong>custom_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Base64-Encoded Custom Data which should be used for this Virtual Machine Scale Set.</p></li>
 <li><p><strong>data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">data_disk</span></code> blocks as defined below.</p></li>
 <li><p><strong>disable_password_authentication</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Password Authentication be disabled on this Virtual Machine Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
@@ -2232,6 +2612,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>data_disks</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of Caching which should be used for this Data Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The create option which should be used for this Data Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">Empty</span></code> and <code class="docutils literal notranslate"><span class="pre">FromImage</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Empty</span></code>. (<code class="docutils literal notranslate"><span class="pre">FromImage</span></code> should only be used if the source image includes data disks).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Disk Encryption Set which should be used to encrypt this Data Disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the Data Disk which should be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Logical Unit Number of the Data Disk, which must be unique within the Virtual Machine.</p></li>
@@ -2389,7 +2770,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_azure.compute.LinuxVirtualMachineScaleSet.computer_name_prefix">
 <code class="sig-name descname">computer_name_prefix</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachineScaleSet.computer_name_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>The prefix which should be used for the name of the Virtual Machines in this Scale Set. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field.</p>
+<dd><p>The prefix which should be used for the name of the Virtual Machines in this Scale Set. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. If the value of the <code class="docutils literal notranslate"><span class="pre">name</span></code> field is not a valid <code class="docutils literal notranslate"><span class="pre">computer_name_prefix</span></code>, then you must specify <code class="docutils literal notranslate"><span class="pre">computer_name_prefix</span></code>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2404,6 +2785,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">data_disk</span></code> blocks as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of Caching which should be used for this Data Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The create option which should be used for this Data Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">Empty</span></code> and <code class="docutils literal notranslate"><span class="pre">FromImage</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Empty</span></code>. (<code class="docutils literal notranslate"><span class="pre">FromImage</span></code> should only be used if the source image includes data disks).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Disk Encryption Set which should be used to encrypt this Data Disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the Data Disk which should be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Logical Unit Number of the Data Disk, which must be unique within the Virtual Machine.</p></li>
@@ -2680,7 +3062,7 @@ properties used to qualify the lookup.</p>
 </p></li>
 <li><p><strong>automatic_os_upgrade_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">automatic_os_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>.</p></li>
 <li><p><strong>boot_diagnostics</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.</p></li>
-<li><p><strong>computer_name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The prefix which should be used for the name of the Virtual Machines in this Scale Set. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field.</p></li>
+<li><p><strong>computer_name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The prefix which should be used for the name of the Virtual Machines in this Scale Set. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. If the value of the <code class="docutils literal notranslate"><span class="pre">name</span></code> field is not a valid <code class="docutils literal notranslate"><span class="pre">computer_name_prefix</span></code>, then you must specify <code class="docutils literal notranslate"><span class="pre">computer_name_prefix</span></code>.</p></li>
 <li><p><strong>custom_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Base64-Encoded Custom Data which should be used for this Virtual Machine Scale Set.</p></li>
 <li><p><strong>data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">data_disk</span></code> blocks as defined below.</p></li>
 <li><p><strong>disable_password_authentication</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Password Authentication be disabled on this Virtual Machine Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
@@ -2742,6 +3124,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>data_disks</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of Caching which should be used for this Data Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The create option which should be used for this Data Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">Empty</span></code> and <code class="docutils literal notranslate"><span class="pre">FromImage</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Empty</span></code>. (<code class="docutils literal notranslate"><span class="pre">FromImage</span></code> should only be used if the source image includes data disks).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Disk Encryption Set which should be used to encrypt this Data Disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the Data Disk which should be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Logical Unit Number of the Data Disk, which must be unique within the Virtual Machine.</p></li>
@@ -2880,6 +3263,46 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.ManagedDisk">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">ManagedDisk</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_option</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_encryption_set_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_iops_read_write</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_mbps_read_write</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_reference_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">os_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_resource_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zones</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.ManagedDisk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a managed disk.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US 2&quot;</span><span class="p">)</span>
+<span class="n">example_managed_disk</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ManagedDisk</span><span class="p">(</span><span class="s2">&quot;exampleManagedDisk&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US 2&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_type</span><span class="o">=</span><span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
+    <span class="n">create_option</span><span class="o">=</span><span class="s2">&quot;Empty&quot;</span><span class="p">,</span>
+    <span class="n">disk_size_gb</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;staging&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US 2&quot;</span><span class="p">)</span>
+<span class="n">source</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ManagedDisk</span><span class="p">(</span><span class="s2">&quot;source&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US 2&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_type</span><span class="o">=</span><span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
+    <span class="n">create_option</span><span class="o">=</span><span class="s2">&quot;Empty&quot;</span><span class="p">,</span>
+    <span class="n">disk_size_gb</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;staging&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">copy</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ManagedDisk</span><span class="p">(</span><span class="s2">&quot;copy&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US 2&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_type</span><span class="o">=</span><span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
+    <span class="n">create_option</span><span class="o">=</span><span class="s2">&quot;Copy&quot;</span><span class="p">,</span>
+    <span class="n">source_resource_id</span><span class="o">=</span><span class="n">source</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">disk_size_gb</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;staging&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3132,6 +3555,190 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> The <code class="docutils literal notranslate"><span class="pre">compute.ScaleSet</span></code> resource has been superseded by the <code class="docutils literal notranslate"><span class="pre">compute.LinuxVirtualMachineScaleSet</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.WindowsVirtualMachineScaleSet</span></code> resources. The existing <code class="docutils literal notranslate"><span class="pre">compute.ScaleSet</span></code> resource will continue to be available throughout the 2.x releases however is in a feature-frozen state to maintain compatibility - new functionality will instead be added to the <code class="docutils literal notranslate"><span class="pre">compute.LinuxVirtualMachineScaleSet</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.WindowsVirtualMachineScaleSet</span></code> resources.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US 2&quot;</span><span class="p">)</span>
+<span class="n">example_virtual_network</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;exampleVirtualNetwork&quot;</span><span class="p">,</span>
+    <span class="n">address_spaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">],</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_subnet</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;exampleSubnet&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">example_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">)</span>
+<span class="n">example_public_ip</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">PublicIp</span><span class="p">(</span><span class="s2">&quot;examplePublicIp&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">allocation_method</span><span class="o">=</span><span class="s2">&quot;Static&quot;</span><span class="p">,</span>
+    <span class="n">domain_name_label</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;staging&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_load_balancer</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;exampleLoadBalancer&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">frontend_ip_configuration</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PublicIPAddress&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">bpepool</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">BackendAddressPool</span><span class="p">(</span><span class="s2">&quot;bpepool&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">loadbalancer_id</span><span class="o">=</span><span class="n">example_load_balancer</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">lbnatpool</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">NatPool</span><span class="p">(</span><span class="s2">&quot;lbnatpool&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">loadbalancer_id</span><span class="o">=</span><span class="n">example_load_balancer</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;Tcp&quot;</span><span class="p">,</span>
+    <span class="n">frontend_port_start</span><span class="o">=</span><span class="mi">50000</span><span class="p">,</span>
+    <span class="n">frontend_port_end</span><span class="o">=</span><span class="mi">50119</span><span class="p">,</span>
+    <span class="n">backend_port</span><span class="o">=</span><span class="mi">22</span><span class="p">,</span>
+    <span class="n">frontend_ip_configuration_name</span><span class="o">=</span><span class="s2">&quot;PublicIPAddress&quot;</span><span class="p">)</span>
+<span class="n">example_probe</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">Probe</span><span class="p">(</span><span class="s2">&quot;exampleProbe&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">loadbalancer_id</span><span class="o">=</span><span class="n">example_load_balancer</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;Http&quot;</span><span class="p">,</span>
+    <span class="n">request_path</span><span class="o">=</span><span class="s2">&quot;/health&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">8080</span><span class="p">)</span>
+<span class="n">example_scale_set</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ScaleSet</span><span class="p">(</span><span class="s2">&quot;exampleScaleSet&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">automatic_os_upgrade</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">upgrade_policy_mode</span><span class="o">=</span><span class="s2">&quot;Rolling&quot;</span><span class="p">,</span>
+    <span class="n">rolling_upgrade_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;maxBatchInstancePercent&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+        <span class="s2">&quot;maxUnhealthyInstancePercent&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+        <span class="s2">&quot;maxUnhealthyUpgradedInstancePercent&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;pauseTimeBetweenBatches&quot;</span><span class="p">:</span> <span class="s2">&quot;PT0S&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">health_probe_id</span><span class="o">=</span><span class="n">example_probe</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_F2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;capacity&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">storage_profile_image_reference</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="s2">&quot;Canonical&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;offer&quot;</span><span class="p">:</span> <span class="s2">&quot;UbuntuServer&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sku&quot;</span><span class="p">:</span> <span class="s2">&quot;16.04-LTS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;latest&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">storage_profile_os_disk</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;caching&quot;</span><span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;createOption&quot;</span><span class="p">:</span> <span class="s2">&quot;FromImage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;managedDiskType&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">storage_profile_data_disk</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;lun&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;caching&quot;</span><span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;createOption&quot;</span><span class="p">:</span> <span class="s2">&quot;Empty&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;diskSizeGb&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">os_profile</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;computerNamePrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;testvm&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;adminUsername&quot;</span><span class="p">:</span> <span class="s2">&quot;myadmin&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">os_profile_linux_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;disablePasswordAuthentication&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;ssh_keys&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/home/myadmin/.ssh/authorized_keys&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;keyData&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;~/.ssh/demo_key.pub&quot;</span><span class="p">),</span>
+        <span class="p">}],</span>
+    <span class="p">},</span>
+    <span class="n">network_profile</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;mynetworkprofile&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;primary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;ip_configuration&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;TestIPConfiguration&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;primary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;loadBalancerBackendAddressPoolIds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">bpepool</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+            <span class="s2">&quot;loadBalancerInboundNatRulesIds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">lbnatpool</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+        <span class="p">}],</span>
+    <span class="p">}],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;staging&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_virtual_network</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;exampleVirtualNetwork&quot;</span><span class="p">,</span>
+    <span class="n">address_spaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">],</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_subnet</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;exampleSubnet&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">example_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;westus&quot;</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;staging&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">example_scale_set</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ScaleSet</span><span class="p">(</span><span class="s2">&quot;exampleScaleSet&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">upgrade_policy_mode</span><span class="o">=</span><span class="s2">&quot;Manual&quot;</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_F2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;capacity&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">os_profile</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;computerNamePrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;testvm&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;adminUsername&quot;</span><span class="p">:</span> <span class="s2">&quot;myadmin&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">os_profile_linux_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;disablePasswordAuthentication&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;ssh_keys&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/home/myadmin/.ssh/authorized_keys&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;keyData&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;~/.ssh/demo_key.pub&quot;</span><span class="p">),</span>
+        <span class="p">}],</span>
+    <span class="p">},</span>
+    <span class="n">network_profile</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;TestNetworkProfile&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;primary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;ip_configuration&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;TestIPConfiguration&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;primary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">}],</span>
+    <span class="n">storage_profile_os_disk</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;osDiskProfile&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;caching&quot;</span><span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;createOption&quot;</span><span class="p">:</span> <span class="s2">&quot;FromImage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;vhdContainers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_endpoint</span><span class="p">,</span> <span class="n">example_container</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">primary_blob_endpoint</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">primary_blob_endpoint</span><span class="si">}{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)],</span>
+    <span class="p">},</span>
+    <span class="n">storage_profile_image_reference</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="s2">&quot;Canonical&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;offer&quot;</span><span class="p">:</span> <span class="s2">&quot;UbuntuServer&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sku&quot;</span><span class="p">:</span> <span class="s2">&quot;16.04-LTS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;latest&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_image</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;exampleImage&quot;</span><span class="p">)</span>
+<span class="c1"># ...</span>
+<span class="n">example_scale_set</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ScaleSet</span><span class="p">(</span><span class="s2">&quot;exampleScaleSet&quot;</span><span class="p">,</span> <span class="n">storage_profile_image_reference</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">example_image</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="c1"># ...</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3837,6 +4444,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.SharedImage">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">SharedImage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">eula</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gallery_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hyper_v_generation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identifier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">os_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">privacy_statement_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">release_note_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.SharedImage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Shared Image within a Shared Image Gallery.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_shared_image_gallery</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">SharedImageGallery</span><span class="p">(</span><span class="s2">&quot;exampleSharedImageGallery&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Shared images and things.&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Hello&quot;</span><span class="p">:</span> <span class="s2">&quot;There&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;World&quot;</span><span class="p">:</span> <span class="s2">&quot;Example&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_shared_image</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">SharedImage</span><span class="p">(</span><span class="s2">&quot;exampleSharedImage&quot;</span><span class="p">,</span>
+    <span class="n">gallery_name</span><span class="o">=</span><span class="n">example_shared_image_gallery</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">os_type</span><span class="o">=</span><span class="s2">&quot;Linux&quot;</span><span class="p">,</span>
+    <span class="n">identifier</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="s2">&quot;PublisherName&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;offer&quot;</span><span class="p">:</span> <span class="s2">&quot;OfferName&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sku&quot;</span><span class="p">:</span> <span class="s2">&quot;ExampleSku&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4016,6 +4647,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.SharedImageGallery">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">SharedImageGallery</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.SharedImageGallery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Shared Image Gallery.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_shared_image_gallery</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">SharedImageGallery</span><span class="p">(</span><span class="s2">&quot;exampleSharedImageGallery&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Shared images and things.&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Hello&quot;</span><span class="p">:</span> <span class="s2">&quot;There&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;World&quot;</span><span class="p">:</span> <span class="s2">&quot;Example&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4129,6 +4774,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.SharedImageVersion">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">SharedImageVersion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">exclude_from_latest</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gallery_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">managed_image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_regions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.SharedImageVersion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Version of a Shared Image within a Shared Image Gallery.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">existing_image</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;search-api&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;packerimages&quot;</span><span class="p">)</span>
+<span class="n">existing_shared_image</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_shared_image</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;existing-image&quot;</span><span class="p">,</span>
+    <span class="n">gallery_name</span><span class="o">=</span><span class="s2">&quot;existing_gallery&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;existing-resources&quot;</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">SharedImageVersion</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">gallery_name</span><span class="o">=</span><span class="n">existing_shared_image</span><span class="o">.</span><span class="n">gallery_name</span><span class="p">,</span>
+    <span class="n">image_name</span><span class="o">=</span><span class="n">existing_shared_image</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">existing_shared_image</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">existing_shared_image</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">managed_image_id</span><span class="o">=</span><span class="n">existing_image</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">target_region</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">existing_shared_image</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+        <span class="s2">&quot;regionalReplicaCount&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;storageAccountType&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4284,6 +4950,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.Snapshot">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">Snapshot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_option</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_resource_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Disk Snapshot.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_managed_disk</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ManagedDisk</span><span class="p">(</span><span class="s2">&quot;exampleManagedDisk&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_type</span><span class="o">=</span><span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
+    <span class="n">create_option</span><span class="o">=</span><span class="s2">&quot;Empty&quot;</span><span class="p">,</span>
+    <span class="n">disk_size_gb</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">)</span>
+<span class="n">example_snapshot</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Snapshot</span><span class="p">(</span><span class="s2">&quot;exampleSnapshot&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">create_option</span><span class="o">=</span><span class="s2">&quot;Copy&quot;</span><span class="p">,</span>
+    <span class="n">source_uri</span><span class="o">=</span><span class="n">example_managed_disk</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4458,6 +5141,61 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> The <code class="docutils literal notranslate"><span class="pre">compute.VirtualMachine</span></code> resource has been superseded by the <code class="docutils literal notranslate"><span class="pre">compute.LinuxVirtualMachine</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.WindowsVirtualMachine</span></code> resources. The existing <code class="docutils literal notranslate"><span class="pre">compute.VirtualMachine</span></code> resource will continue to be available throughout the 2.x releases however is in a feature-frozen state to maintain compatibility - new functionality will instead be added to the <code class="docutils literal notranslate"><span class="pre">compute.LinuxVirtualMachine</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.WindowsVirtualMachine</span></code> resources.</p>
 <p><strong>Note:</strong> Data Disks can be attached either directly on the <code class="docutils literal notranslate"><span class="pre">compute.VirtualMachine</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">compute.DataDiskAttachment</span></code> resource - but the two cannot be used together. If both are used against the same Virtual Machine, spurious changes will occur.</p>
 </div></blockquote>
+<p>This example provisions a Virtual Machine with Managed Disks.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">prefix</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;prefix&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">prefix</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">prefix</span> <span class="o">=</span> <span class="s2">&quot;tfvmex&quot;</span>
+<span class="n">main_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;mainResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US 2&quot;</span><span class="p">)</span>
+<span class="n">main_virtual_network</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;mainVirtualNetwork&quot;</span><span class="p">,</span>
+    <span class="n">address_spaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">],</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">internal</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;internal&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">main_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">)</span>
+<span class="n">main_network_interface</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">NetworkInterface</span><span class="p">(</span><span class="s2">&quot;mainNetworkInterface&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;testconfiguration1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">internal</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">main_virtual_machine</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VirtualMachine</span><span class="p">(</span><span class="s2">&quot;mainVirtualMachine&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">network_interface_ids</span><span class="o">=</span><span class="p">[</span><span class="n">main_network_interface</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">vm_size</span><span class="o">=</span><span class="s2">&quot;Standard_DS1_v2&quot;</span><span class="p">,</span>
+    <span class="n">storage_image_reference</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="s2">&quot;Canonical&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;offer&quot;</span><span class="p">:</span> <span class="s2">&quot;UbuntuServer&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sku&quot;</span><span class="p">:</span> <span class="s2">&quot;16.04-LTS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;latest&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">storage_os_disk</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;myosdisk1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;caching&quot;</span><span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;createOption&quot;</span><span class="p">:</span> <span class="s2">&quot;FromImage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;managedDiskType&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">os_profile</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;computerName&quot;</span><span class="p">:</span> <span class="s2">&quot;hostname&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;adminUsername&quot;</span><span class="p">:</span> <span class="s2">&quot;testadmin&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;adminPassword&quot;</span><span class="p">:</span> <span class="s2">&quot;Password1234!&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">os_profile_linux_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;disablePasswordAuthentication&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;staging&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5012,6 +5750,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource is not intended to be used with the <code class="docutils literal notranslate"><span class="pre">compute.ScaleSet</span></code> resource - instead it’s intended for this to be used with the <code class="docutils literal notranslate"><span class="pre">compute.LinuxVirtualMachineScaleSet</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.WindowsVirtualMachineScaleSet</span></code> resources.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_linux_virtual_machine_scale_set</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">LinuxVirtualMachineScaleSet</span><span class="p">(</span><span class="s2">&quot;exampleLinuxVirtualMachineScaleSet&quot;</span><span class="p">)</span>
+<span class="c1">#...</span>
+<span class="n">example_virtual_machine_scale_set_extension</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VirtualMachineScaleSetExtension</span><span class="p">(</span><span class="s2">&quot;exampleVirtualMachineScaleSetExtension&quot;</span><span class="p">,</span>
+    <span class="n">virtual_machine_scale_set_id</span><span class="o">=</span><span class="n">example_linux_virtual_machine_scale_set</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">publisher</span><span class="o">=</span><span class="s2">&quot;Microsoft.Azure.Extensions&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;CustomScript&quot;</span><span class="p">,</span>
+    <span class="n">type_handler_version</span><span class="o">=</span><span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="n">settings</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span>
+        <span class="s2">&quot;commandToExecute&quot;</span><span class="p">:</span> <span class="s2">&quot;echo $HOSTNAME&quot;</span><span class="p">,</span>
+    <span class="p">}))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5164,6 +5918,45 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>Note</strong> This resource does not support attaching existing OS Disks. You can instead capture an image of the OS Disk or continue to use the <code class="docutils literal notranslate"><span class="pre">compute.VirtualMachine</span></code> resource instead.</p>
 <p>In this release there’s a known issue where the <code class="docutils literal notranslate"><span class="pre">public_ip_address</span></code> and <code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> fields may not be fully populated for Dynamic Public IP’s.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_virtual_network</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;exampleVirtualNetwork&quot;</span><span class="p">,</span>
+    <span class="n">address_spaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">],</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_subnet</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;exampleSubnet&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">example_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">)</span>
+<span class="n">example_network_interface</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">NetworkInterface</span><span class="p">(</span><span class="s2">&quot;exampleNetworkInterface&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;internal&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">example_windows_virtual_machine</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">WindowsVirtualMachine</span><span class="p">(</span><span class="s2">&quot;exampleWindowsVirtualMachine&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;Standard_F2&quot;</span><span class="p">,</span>
+    <span class="n">admin_username</span><span class="o">=</span><span class="s2">&quot;adminuser&quot;</span><span class="p">,</span>
+    <span class="n">admin_password</span><span class="o">=</span><span class="s2">&quot;P@$$w0rd1234!&quot;</span><span class="p">,</span>
+    <span class="n">network_interface_ids</span><span class="o">=</span><span class="p">[</span><span class="n">example_network_interface</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">os_disk</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;caching&quot;</span><span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;storageAccountType&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">source_image_reference</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="s2">&quot;MicrosoftWindowsServer&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;offer&quot;</span><span class="p">:</span> <span class="s2">&quot;WindowsServer&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sku&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-Datacenter&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;latest&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5176,7 +5969,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>allow_extension_operations</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Extension Operations be allowed on this Virtual Machine? Changing this forces a new resource to be created.</p></li>
 <li><p><strong>availability_set_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>boot_diagnostics</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.</p></li>
-<li><p><strong>computer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>computer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. If the value of the <code class="docutils literal notranslate"><span class="pre">name</span></code> field is not a valid <code class="docutils literal notranslate"><span class="pre">computer_name</span></code>, then you must specify <code class="docutils literal notranslate"><span class="pre">computer_name</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>custom_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>dedicated_host_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a Dedicated Host where this machine should be run on. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>enable_automatic_updates</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if Automatic Updates are Enabled for the Windows Virtual Machine. Changing this forces a new resource to be created.</p></li>
@@ -5321,7 +6114,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_azure.compute.WindowsVirtualMachine.computer_name">
 <code class="sig-name descname">computer_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachine.computer_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. Changing this forces a new resource to be created.</p>
+<dd><p>Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. If the value of the <code class="docutils literal notranslate"><span class="pre">name</span></code> field is not a valid <code class="docutils literal notranslate"><span class="pre">computer_name</span></code>, then you must specify <code class="docutils literal notranslate"><span class="pre">computer_name</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -5558,7 +6351,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>allow_extension_operations</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Extension Operations be allowed on this Virtual Machine? Changing this forces a new resource to be created.</p></li>
 <li><p><strong>availability_set_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>boot_diagnostics</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.</p></li>
-<li><p><strong>computer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>computer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. If the value of the <code class="docutils literal notranslate"><span class="pre">name</span></code> field is not a valid <code class="docutils literal notranslate"><span class="pre">computer_name</span></code>, then you must specify <code class="docutils literal notranslate"><span class="pre">computer_name</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>custom_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>dedicated_host_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a Dedicated Host where this machine should be run on. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>enable_automatic_updates</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if Automatic Updates are Enabled for the Windows Virtual Machine. Changing this forces a new resource to be created.</p></li>
@@ -5702,6 +6495,46 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note</strong> This provider will automatically update &amp; reimage the nodes in the Scale Set (if Required) during an Update - this behaviour can be configured using the <code class="docutils literal notranslate"><span class="pre">features</span></code> configuration within the Provider configuration block.</p>
 <p><strong>Note:</strong> This resource does not support Unmanaged Disks. If you need to use Unmanaged Disks you can continue to use the <code class="docutils literal notranslate"><span class="pre">compute.ScaleSet</span></code> resource instead</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_virtual_network</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;exampleVirtualNetwork&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">address_spaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">])</span>
+<span class="n">internal</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;internal&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">example_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">)</span>
+<span class="n">example_windows_virtual_machine_scale_set</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">WindowsVirtualMachineScaleSet</span><span class="p">(</span><span class="s2">&quot;exampleWindowsVirtualMachineScaleSet&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Standard_F2&quot;</span><span class="p">,</span>
+    <span class="n">instances</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">admin_password</span><span class="o">=</span><span class="s2">&quot;P@55w0rd1234!&quot;</span><span class="p">,</span>
+    <span class="n">admin_username</span><span class="o">=</span><span class="s2">&quot;adminuser&quot;</span><span class="p">,</span>
+    <span class="n">source_image_reference</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="s2">&quot;MicrosoftWindowsServer&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;offer&quot;</span><span class="p">:</span> <span class="s2">&quot;WindowsServer&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sku&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-Datacenter-Server-Core&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;latest&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">os_disk</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;storageAccountType&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;caching&quot;</span><span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;primary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;ip_configuration&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;internal&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;primary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">internal</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5715,7 +6548,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </p></li>
 <li><p><strong>automatic_os_upgrade_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">automatic_os_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>.</p></li>
 <li><p><strong>boot_diagnostics</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.</p></li>
-<li><p><strong>computer_name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The prefix which should be used for the name of the Virtual Machines in this Scale Set. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field.</p></li>
+<li><p><strong>computer_name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The prefix which should be used for the name of the Virtual Machines in this Scale Set. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. If the value of the <code class="docutils literal notranslate"><span class="pre">name</span></code> field is not a valid <code class="docutils literal notranslate"><span class="pre">computer_name_prefix</span></code>, then you must specify <code class="docutils literal notranslate"><span class="pre">computer_name_prefix</span></code>.</p></li>
 <li><p><strong>custom_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Base64-Encoded Custom Data which should be used for this Virtual Machine Scale Set.</p></li>
 <li><p><strong>data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">data_disk</span></code> blocks as defined below.</p></li>
 <li><p><strong>do_not_run_extensions_on_overprovisioned_machines</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Virtual Machine Extensions be run on Overprovisioned Virtual Machines in the Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
@@ -5781,6 +6614,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>data_disks</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of Caching which should be used for this Data Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The create option which should be used for this Data Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">Empty</span></code> and <code class="docutils literal notranslate"><span class="pre">FromImage</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Empty</span></code>. (<code class="docutils literal notranslate"><span class="pre">FromImage</span></code> should only be used if the source image includes data disks).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Disk Encryption Set which should be used to encrypt this Data Disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the Data Disk which should be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Logical Unit Number of the Data Disk, which must be unique within the Virtual Machine.</p></li>
@@ -5944,7 +6778,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_azure.compute.WindowsVirtualMachineScaleSet.computer_name_prefix">
 <code class="sig-name descname">computer_name_prefix</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachineScaleSet.computer_name_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>The prefix which should be used for the name of the Virtual Machines in this Scale Set. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field.</p>
+<dd><p>The prefix which should be used for the name of the Virtual Machines in this Scale Set. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. If the value of the <code class="docutils literal notranslate"><span class="pre">name</span></code> field is not a valid <code class="docutils literal notranslate"><span class="pre">computer_name_prefix</span></code>, then you must specify <code class="docutils literal notranslate"><span class="pre">computer_name_prefix</span></code>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -5959,6 +6793,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">data_disk</span></code> blocks as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of Caching which should be used for this Data Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The create option which should be used for this Data Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">Empty</span></code> and <code class="docutils literal notranslate"><span class="pre">FromImage</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Empty</span></code>. (<code class="docutils literal notranslate"><span class="pre">FromImage</span></code> should only be used if the source image includes data disks).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Disk Encryption Set which should be used to encrypt this Data Disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the Data Disk which should be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Logical Unit Number of the Data Disk, which must be unique within the Virtual Machine.</p></li>
@@ -6258,7 +7093,7 @@ properties used to qualify the lookup.</p>
 </p></li>
 <li><p><strong>automatic_os_upgrade_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">automatic_os_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>.</p></li>
 <li><p><strong>boot_diagnostics</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.</p></li>
-<li><p><strong>computer_name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The prefix which should be used for the name of the Virtual Machines in this Scale Set. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field.</p></li>
+<li><p><strong>computer_name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The prefix which should be used for the name of the Virtual Machines in this Scale Set. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. If the value of the <code class="docutils literal notranslate"><span class="pre">name</span></code> field is not a valid <code class="docutils literal notranslate"><span class="pre">computer_name_prefix</span></code>, then you must specify <code class="docutils literal notranslate"><span class="pre">computer_name_prefix</span></code>.</p></li>
 <li><p><strong>custom_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Base64-Encoded Custom Data which should be used for this Virtual Machine Scale Set.</p></li>
 <li><p><strong>data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">data_disk</span></code> blocks as defined below.</p></li>
 <li><p><strong>do_not_run_extensions_on_overprovisioned_machines</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Virtual Machine Extensions be run on Overprovisioned Virtual Machines in the Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
@@ -6325,6 +7160,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>data_disks</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of Caching which should be used for this Data Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The create option which should be used for this Data Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">Empty</span></code> and <code class="docutils literal notranslate"><span class="pre">FromImage</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Empty</span></code>. (<code class="docutils literal notranslate"><span class="pre">FromImage</span></code> should only be used if the source image includes data disks).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Disk Encryption Set which should be used to encrypt this Data Disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the Data Disk which should be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Logical Unit Number of the Data Disk, which must be unique within the Virtual Machine.</p></li>
@@ -6469,6 +7305,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.get_availability_set">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_availability_set</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_availability_set" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Availability Set.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_availability_set</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;tf-appsecuritygroup&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;my-resource-group&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;availabilitySetId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6483,6 +7327,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.get_dedicated_host">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_dedicated_host</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dedicated_host_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_dedicated_host" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Dedicated Host.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_dedicated_host</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-host&quot;</span><span class="p">,</span>
+    <span class="n">dedicated_host_group_name</span><span class="o">=</span><span class="s2">&quot;example-host-group&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-resources&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;dedicatedHostId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6498,6 +7351,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.get_dedicated_host_group">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_dedicated_host_group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_dedicated_host_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Dedicated Host Group.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_dedicated_host_group</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-dedicated-host-group&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-rg&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6526,6 +7387,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.get_image">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sort_descending</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Image.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">search</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;search-api&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;packerimages&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;imageId&quot;</span><span class="p">,</span> <span class="n">search</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6542,6 +7411,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.get_managed_disk">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_managed_disk</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zones</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_managed_disk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Managed Disk.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">existing</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_managed_disk</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-datadisk&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-resources&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="n">existing</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6558,6 +7435,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.get_platform_image">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_platform_image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">offer</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">publisher</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_platform_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about a Platform Image.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_platform_image</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">,</span>
+    <span class="n">publisher</span><span class="o">=</span><span class="s2">&quot;Canonical&quot;</span><span class="p">,</span>
+    <span class="n">offer</span><span class="o">=</span><span class="s2">&quot;UbuntuServer&quot;</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;16.04-LTS&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;version&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6574,6 +7461,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.get_shared_image">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_shared_image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">gallery_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_shared_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Shared Image within a Shared Image Gallery.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_shared_image</span><span class="p">(</span><span class="n">gallery_name</span><span class="o">=</span><span class="s2">&quot;my-image-gallery&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-image&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-resources&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6589,6 +7484,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.get_shared_image_gallery">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_shared_image_gallery</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_shared_image_gallery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Shared Image Gallery.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_shared_image_gallery</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-image-gallery&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-resources&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6603,6 +7505,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.get_shared_image_version">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_shared_image_version</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">gallery_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_shared_image_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Version of a Shared Image within a Shared Image Gallery.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_shared_image_version</span><span class="p">(</span><span class="n">gallery_name</span><span class="o">=</span><span class="s2">&quot;my-image-gallery&quot;</span><span class="p">,</span>
+    <span class="n">image_name</span><span class="o">=</span><span class="s2">&quot;my-image&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-resources&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6616,9 +7527,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py function">
+<dt id="pulumi_azure.compute.get_shared_image_versions">
+<code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_shared_image_versions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">gallery_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags_filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_shared_image_versions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about existing Versions of a Shared Image within a Shared Image Gallery.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_shared_image_versions</span><span class="p">(</span><span class="n">gallery_name</span><span class="o">=</span><span class="s2">&quot;my-image-gallery&quot;</span><span class="p">,</span>
+    <span class="n">image_name</span><span class="o">=</span><span class="s2">&quot;my-image&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-resources&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gallery_name</strong> (<em>str</em>) – The name of the Shared Image in which the Shared Image exists.</p></li>
+<li><p><strong>image_name</strong> (<em>str</em>) – The name of the Shared Image in which this Version exists.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – The name of the Resource Group in which the Shared Image Gallery exists.</p></li>
+<li><p><strong>tags_filter</strong> (<em>dict</em>) – A mapping of tags to filter the list of images against.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt id="pulumi_azure.compute.get_snapshot">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_snapshot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Snapshot.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_snapshot</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-snapshot&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;my-resource-group&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6633,6 +7575,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.get_virtual_machine">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_virtual_machine</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_virtual_machine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Virtual Machine.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_virtual_machine</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;production&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;networking&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;virtualMachineId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

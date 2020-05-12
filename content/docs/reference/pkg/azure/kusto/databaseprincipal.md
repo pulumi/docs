@@ -12,9 +12,87 @@ meta_desc: "Explore the DatabasePrincipal resource of the kusto module, includin
 
 Manages a Kusto (also known as Azure Data Explorer) Database Principal
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+rg = azure.core.ResourceGroup("rg", location="East US")
+cluster = azure.kusto.Cluster("cluster",
+    location=rg.location,
+    resource_group_name=rg.name,
+    sku={
+        "name": "Standard_D13_v2",
+        "capacity": 2,
+    })
+database = azure.kusto.Database("database",
+    resource_group_name=rg.name,
+    location=rg.location,
+    cluster_name=cluster.name,
+    hot_cache_period="P7D",
+    soft_delete_period="P31D")
+principal = azure.kusto.DatabasePrincipal("principal",
+    resource_group_name=rg.name,
+    cluster_name=cluster.name,
+    database_name=azurerm_kusto_database["test"]["name"],
+    role="Viewer",
+    type="User",
+    client_id=current.tenant_id,
+    object_id=current.client_id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const rg = new azure.core.ResourceGroup("rg", {location: "East US"});
+const cluster = new azure.kusto.Cluster("cluster", {
+    location: rg.location,
+    resourceGroupName: rg.name,
+    sku: {
+        name: "Standard_D13_v2",
+        capacity: 2,
+    },
+});
+const database = new azure.kusto.Database("database", {
+    resourceGroupName: rg.name,
+    location: rg.location,
+    clusterName: cluster.name,
+    hotCachePeriod: "P7D",
+    softDeletePeriod: "P31D",
+});
+const principal = new azure.kusto.DatabasePrincipal("principal", {
+    resourceGroupName: rg.name,
+    clusterName: cluster.name,
+    databaseName: azurerm_kusto_database.test.name,
+    role: "Viewer",
+    type: "User",
+    clientId: current.then(current => current.tenantId),
+    objectId: current.then(current => current.clientId),
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DatabasePrincipal Resource {#create}

@@ -12,9 +12,68 @@ meta_desc: "Explore the Database resource of the kusto module, including example
 
 Manages a Kusto (also known as Azure Data Explorer) Database
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+rg = azure.core.ResourceGroup("rg", location="East US")
+cluster = azure.kusto.Cluster("cluster",
+    location=rg.location,
+    resource_group_name=rg.name,
+    sku={
+        "name": "Standard_D13_v2",
+        "capacity": 2,
+    })
+database = azure.kusto.Database("database",
+    resource_group_name=rg.name,
+    location=rg.location,
+    cluster_name=cluster.name,
+    hot_cache_period="P7D",
+    soft_delete_period="P31D")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const rg = new azure.core.ResourceGroup("rg", {location: "East US"});
+const cluster = new azure.kusto.Cluster("cluster", {
+    location: rg.location,
+    resourceGroupName: rg.name,
+    sku: {
+        name: "Standard_D13_v2",
+        capacity: 2,
+    },
+});
+const database = new azure.kusto.Database("database", {
+    resourceGroupName: rg.name,
+    location: rg.location,
+    clusterName: cluster.name,
+    hotCachePeriod: "P7D",
+    softDeletePeriod: "P31D",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Database Resource {#create}

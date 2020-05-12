@@ -28,7 +28,26 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_server = azure.mariadb.Server("exampleServer",
+    administrator_login="mariadbadmin",
+    administrator_login_password="H@Sh1CoR3!",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku_name="B_Gen5_2",
+    ssl_enforcement="Enabled",
+    storage_profile={
+        "autoGrow": "Disabled",
+        "backupRetentionDays": 7,
+        "geoRedundantBackup": "Disabled",
+        "storageMb": 5120,
+    },
+    version="10.2")
+```
 {{% /example %}}
 
 {{% example typescript %}}

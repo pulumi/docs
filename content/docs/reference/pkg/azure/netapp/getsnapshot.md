@@ -12,6 +12,33 @@ meta_desc: "Explore the GetSnapshot function of the netapp module, including exa
 
 Uses this data source to access information about an existing NetApp Snapshot.
 
+## NetApp Snapshot Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const test = azure.netapp.getSnapshot({
+    resourceGroupName: "acctestRG",
+    name: "acctestnetappsnapshot",
+    accountName: "acctestnetappaccount",
+    poolName: "acctestnetapppool",
+    volumeName: "acctestnetappvolume",
+});
+export const netappSnapshotId = data.azurerm_netapp_snapshot.example.id;
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+test = azure.netapp.get_snapshot(resource_group_name="acctestRG",
+    name="acctestnetappsnapshot",
+    account_name="acctestnetappaccount",
+    pool_name="acctestnetapppool",
+    volume_name="acctestnetappvolume")
+pulumi.export("netappSnapshotId", data["azure.netapp.Snapshot"]["example"]["id"])
+```
+
 
 
 ## Using GetSnapshot {#using}

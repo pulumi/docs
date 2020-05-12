@@ -28,7 +28,28 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_vault = azure.recoveryservices.Vault("exampleVault",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="Standard")
+example_policy_vm = azure.backup.PolicyVM("examplePolicyVM",
+    backup={
+        "frequency": "Daily",
+        "time": "23:00",
+    },
+    recovery_vault_name=example_vault.name,
+    resource_group_name=example_resource_group.name)
+vm1 = azure.backup.ProtectedVM("vm1",
+    backup_policy_id=example_policy_vm.id,
+    recovery_vault_name=example_vault.name,
+    resource_group_name=example_resource_group.name,
+    source_vm_id=azurerm_virtual_machine["example"]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

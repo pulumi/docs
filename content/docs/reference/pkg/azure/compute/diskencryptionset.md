@@ -16,9 +16,123 @@ Manages a Disk Encryption Set.
 
 > **NOTE:** At this time the Key Vault used to store the Active Key for this Disk Encryption Set must have both Soft Delete & Purge Protection enabled - which are not yet supported by this provider.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    tenant_id=current.tenant_id,
+    sku_name="premium",
+    access_policy=[{
+        "tenantId": current.tenant_id,
+        "objectId": current.object_id,
+        "keyPermissions": [
+            "create",
+            "get",
+            "delete",
+            "list",
+            "wrapkey",
+            "unwrapkey",
+            "get",
+        ],
+        "secretPermissions": [
+            "get",
+            "delete",
+            "set",
+        ],
+    }])
+example_key = azure.keyvault.Key("exampleKey",
+    key_vault_id=example_key_vault.id,
+    key_type="RSA",
+    key_size=2048,
+    key_opts=[
+        "decrypt",
+        "encrypt",
+        "sign",
+        "unwrapKey",
+        "verify",
+        "wrapKey",
+    ])
+example_disk_encryption_set = azure.compute.DiskEncryptionSet("exampleDiskEncryptionSet",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    key_vault_key_id=example_key.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    tenantId: current.then(current => current.tenantId),
+    skuName: "premium",
+    access_policy: [{
+        tenantId: current.then(current => current.tenantId),
+        objectId: current.then(current => current.objectId),
+        keyPermissions: [
+            "create",
+            "get",
+            "delete",
+            "list",
+            "wrapkey",
+            "unwrapkey",
+            "get",
+        ],
+        secretPermissions: [
+            "get",
+            "delete",
+            "set",
+        ],
+    }],
+});
+const exampleKey = new azure.keyvault.Key("exampleKey", {
+    keyVaultId: exampleKeyVault.id,
+    keyType: "RSA",
+    keySize: 2048,
+    keyOpts: [
+        "decrypt",
+        "encrypt",
+        "sign",
+        "unwrapKey",
+        "verify",
+        "wrapKey",
+    ],
+});
+const exampleDiskEncryptionSet = new azure.compute.DiskEncryptionSet("exampleDiskEncryptionSet", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    keyVaultKeyId: exampleKey.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DiskEncryptionSet Resource {#create}

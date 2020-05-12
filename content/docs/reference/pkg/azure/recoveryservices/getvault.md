@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+vault = azure.recoveryservices.get_vault(name="tfex-recovery_vault",
+    resource_group_name="tfex-resource_group")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -12,9 +12,47 @@ meta_desc: "Explore the Workflow resource of the logicapps module, including exa
 
 Manages a Logic App Workflow.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="East US")
+example_workflow = azure.logicapps.Workflow("exampleWorkflow",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "East US"});
+const exampleWorkflow = new azure.logicapps.Workflow("exampleWorkflow", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Workflow Resource {#create}

@@ -12,9 +12,66 @@ meta_desc: "Explore the SharedAccessPolicy resource of the iot module, including
 
 Manages an IotHub Shared Access Policy
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_io_t_hub = azure.iot.IoTHub("exampleIoTHub",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    sku={
+        "name": "S1",
+        "capacity": "1",
+    })
+example_shared_access_policy = azure.iot.SharedAccessPolicy("exampleSharedAccessPolicy",
+    resource_group_name=example_resource_group.name,
+    iothub_name=example_io_t_hub.name,
+    registry_read=True,
+    registry_write=True)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleIoTHub = new azure.iot.IoTHub("exampleIoTHub", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    sku: {
+        name: "S1",
+        capacity: "1",
+    },
+});
+const exampleSharedAccessPolicy = new azure.iot.SharedAccessPolicy("exampleSharedAccessPolicy", {
+    resourceGroupName: exampleResourceGroup.name,
+    iothubName: exampleIoTHub.name,
+    registryRead: true,
+    registryWrite: true,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SharedAccessPolicy Resource {#create}

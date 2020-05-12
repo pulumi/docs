@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.compute.get_shared_image_gallery(name="my-image-gallery",
+    resource_group_name="example-resources")
+```
 {{% /example %}}
 
 {{% example typescript %}}

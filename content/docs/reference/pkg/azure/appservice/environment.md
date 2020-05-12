@@ -12,9 +12,76 @@ meta_desc: "Explore the Environment resource of the appservice module, including
 
 Manages an App Service Environment.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="westeurope")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    address_spaces=["10.0.0.0/16"])
+ase = azure.network.Subnet("ase",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.1.0/24")
+gateway = azure.network.Subnet("gateway",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.2.0/24")
+example_environment = azure.appservice.Environment("exampleEnvironment",
+    subnet_id=ase.id,
+    pricing_tier="I2",
+    front_end_scale_factor=10)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "westeurope"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    addressSpaces: ["10.0.0.0/16"],
+});
+const ase = new azure.network.Subnet("ase", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.1.0/24",
+});
+const gateway = new azure.network.Subnet("gateway", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+});
+const exampleEnvironment = new azure.appservice.Environment("exampleEnvironment", {
+    subnetId: ase.id,
+    pricingTier: "I2",
+    frontEndScaleFactor: 10,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Environment Resource {#create}

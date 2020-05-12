@@ -12,6 +12,136 @@ meta_desc: "Explore the Plan resource of the appservice module, including exampl
 
 Manages an App Service Plan component.
 
+## Example Usage (Dedicated)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const examplePlan = new azure.appservice.Plan("examplePlan", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: {
+        tier: "Standard",
+        size: "S1",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_plan = azure.appservice.Plan("examplePlan",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku={
+        "tier": "Standard",
+        "size": "S1",
+    })
+```
+
+## Example Usage (Shared / Consumption Plan)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const examplePlan = new azure.appservice.Plan("examplePlan", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    kind: "FunctionApp",
+    sku: {
+        tier: "Dynamic",
+        size: "Y1",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_plan = azure.appservice.Plan("examplePlan",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    kind="FunctionApp",
+    sku={
+        "tier": "Dynamic",
+        "size": "Y1",
+    })
+```
+
+## Example Usage (Linux)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const examplePlan = new azure.appservice.Plan("examplePlan", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    kind: "Linux",
+    reserved: true,
+    sku: {
+        tier: "Standard",
+        size: "S1",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_plan = azure.appservice.Plan("examplePlan",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    kind="Linux",
+    reserved=True,
+    sku={
+        "tier": "Standard",
+        "size": "S1",
+    })
+```
+
+## Example Usage (Windows Container)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const examplePlan = new azure.appservice.Plan("examplePlan", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    kind: "xenon",
+    isXenon: true,
+    sku: {
+        tier: "PremiumContainer",
+        size: "PC2",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_plan = azure.appservice.Plan("examplePlan",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    kind="xenon",
+    is_xenon=True,
+    sku={
+        "tier": "PremiumContainer",
+        "size": "PC2",
+    })
+```
+
 
 
 ## Create a Plan Resource {#create}

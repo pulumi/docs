@@ -12,9 +12,93 @@ meta_desc: "Explore the Profile resource of the network module, including exampl
 
 Manages a Network Profile.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    address_spaces=["10.1.0.0/16"])
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.1.0.0/24",
+    delegation=[{
+        "name": "delegation",
+        "service_delegation": {
+            "name": "Microsoft.ContainerInstance/containerGroups",
+            "actions": ["Microsoft.Network/virtualNetworks/subnets/action"],
+        },
+    }])
+example_profile = azure.network.Profile("exampleProfile",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    container_network_interface={
+        "name": "examplecnic",
+        "ip_configuration": [{
+            "name": "exampleipconfig",
+            "subnetId": example_subnet.id,
+        }],
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    addressSpaces: ["10.1.0.0/16"],
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.1.0.0/24",
+    delegation: [{
+        name: "delegation",
+        service_delegation: {
+            name: "Microsoft.ContainerInstance/containerGroups",
+            actions: ["Microsoft.Network/virtualNetworks/subnets/action"],
+        },
+    }],
+});
+const exampleProfile = new azure.network.Profile("exampleProfile", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    container_network_interface: {
+        name: "examplecnic",
+        ip_configuration: [{
+            name: "exampleipconfig",
+            subnetId: exampleSubnet.id,
+        }],
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Profile Resource {#create}

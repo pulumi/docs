@@ -12,9 +12,73 @@ meta_desc: "Explore the ApiOperation resource of the apimanagement module, inclu
 
 Manages an API Operation within an API Management Service.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_api = azure.apimanagement.get_api(name="search-api",
+    api_management_name="search-api-management",
+    resource_group_name="search-service",
+    revision="2")
+example_api_operation = azure.apimanagement.ApiOperation("exampleApiOperation",
+    operation_id="user-delete",
+    api_name=example_api.name,
+    api_management_name=example_api.api_management_name,
+    resource_group_name=example_api.resource_group_name,
+    display_name="Delete User Operation",
+    method="DELETE",
+    url_template="/users/{id}/delete",
+    description="This can only be done by the logged in user.",
+    response=[{
+        "statusCode": 200,
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleApi = azure.apimanagement.getApi({
+    name: "search-api",
+    apiManagementName: "search-api-management",
+    resourceGroupName: "search-service",
+    revision: "2",
+});
+const exampleApiOperation = new azure.apimanagement.ApiOperation("exampleApiOperation", {
+    operationId: "user-delete",
+    apiName: exampleApi.then(exampleApi => exampleApi.name),
+    apiManagementName: exampleApi.then(exampleApi => exampleApi.apiManagementName),
+    resourceGroupName: exampleApi.then(exampleApi => exampleApi.resourceGroupName),
+    displayName: "Delete User Operation",
+    method: "DELETE",
+    urlTemplate: "/users/{id}/delete",
+    description: "This can only be done by the logged in user.",
+    response: [{
+        statusCode: 200,
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApiOperation Resource {#create}

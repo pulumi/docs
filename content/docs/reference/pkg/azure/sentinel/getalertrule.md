@@ -12,9 +12,52 @@ meta_desc: "Explore the GetAlertRule function of the sentinel module, including 
 
 Use this data source to access information about an existing Sentinel Alert Rule.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_analytics_workspace = azure.operationalinsights.get_analytics_workspace(name="example",
+    resource_group_name="example-resources")
+example_alert_rule = azure.sentinel.get_alert_rule(name="existing",
+    log_analytics_workspace_id=example_analytics_workspace.id)
+pulumi.export("id", example_alert_rule.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleAnalyticsWorkspace = azure.operationalinsights.getAnalyticsWorkspace({
+    name: "example",
+    resourceGroupName: "example-resources",
+});
+const exampleAlertRule = exampleAnalyticsWorkspace.then(exampleAnalyticsWorkspace => azure.sentinel.getAlertRule({
+    name: "existing",
+    logAnalyticsWorkspaceId: exampleAnalyticsWorkspace.id,
+}));
+export const id = exampleAlertRule.then(exampleAlertRule => exampleAlertRule.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAlertRule {#using}

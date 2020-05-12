@@ -17,6 +17,21 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.loganalytics.DataSourceWindowsEvent">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.loganalytics.</code><code class="sig-name descname">DataSourceWindowsEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">event_log_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">event_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workspace_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.loganalytics.DataSourceWindowsEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Log Analytics Windows Event DataSource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_analytics_workspace</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">operationalinsights</span><span class="o">.</span><span class="n">AnalyticsWorkspace</span><span class="p">(</span><span class="s2">&quot;exampleAnalyticsWorkspace&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;PerGB2018&quot;</span><span class="p">)</span>
+<span class="n">example_data_source_windows_event</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">loganalytics</span><span class="o">.</span><span class="n">DataSourceWindowsEvent</span><span class="p">(</span><span class="s2">&quot;exampleDataSourceWindowsEvent&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">workspace_name</span><span class="o">=</span><span class="n">example_analytics_workspace</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">event_log_name</span><span class="o">=</span><span class="s2">&quot;Application&quot;</span><span class="p">,</span>
+    <span class="n">event_types</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;error&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -123,6 +138,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.loganalytics.DataSourceWindowsPerformanceCounter">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.loganalytics.</code><code class="sig-name descname">DataSourceWindowsPerformanceCounter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">counter_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interval_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workspace_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.loganalytics.DataSourceWindowsPerformanceCounter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Log Analytics (formally Operational Insights) Windows Performance Counter DataSource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_analytics_workspace</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">operationalinsights</span><span class="o">.</span><span class="n">AnalyticsWorkspace</span><span class="p">(</span><span class="s2">&quot;exampleAnalyticsWorkspace&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;PerGB2018&quot;</span><span class="p">)</span>
+<span class="n">example_data_source_windows_performance_counter</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">loganalytics</span><span class="o">.</span><span class="n">DataSourceWindowsPerformanceCounter</span><span class="p">(</span><span class="s2">&quot;exampleDataSourceWindowsPerformanceCounter&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">workspace_name</span><span class="o">=</span><span class="n">example_analytics_workspace</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">object_name</span><span class="o">=</span><span class="s2">&quot;CPU&quot;</span><span class="p">,</span>
+    <span class="n">instance_name</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">,</span>
+    <span class="n">counter_name</span><span class="o">=</span><span class="s2">&quot;CPU&quot;</span><span class="p">,</span>
+    <span class="n">interval_seconds</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -245,6 +277,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.loganalytics.LinkedService">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.loganalytics.</code><code class="sig-name descname">LinkedService</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">linked_service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workspace_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.loganalytics.LinkedService" title="Permalink to this definition">¶</a></dt>
 <dd><p>Links a Log Analytics (formally Operational Insights) Workspace to another resource. The (currently) only linkable service is an Azure Automation Account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">automation</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Basic&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;development&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_analytics_workspace</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">operationalinsights</span><span class="o">.</span><span class="n">AnalyticsWorkspace</span><span class="p">(</span><span class="s2">&quot;exampleAnalyticsWorkspace&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;PerGB2018&quot;</span><span class="p">,</span>
+    <span class="n">retention_in_days</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">example_linked_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">loganalytics</span><span class="o">.</span><span class="n">LinkedService</span><span class="p">(</span><span class="s2">&quot;exampleLinkedService&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">workspace_name</span><span class="o">=</span><span class="n">example_analytics_workspace</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_id</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

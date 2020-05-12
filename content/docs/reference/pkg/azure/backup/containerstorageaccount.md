@@ -14,9 +14,69 @@ Manages registration of a storage account with Azure Backup. Storage accounts mu
 
 > **NOTE:** Azure Backup for Azure File Shares is currently in public preview. During the preview, the service is subject to additional limitations and unsupported backup scenarios. [Read More](https://docs.microsoft.com/en-us/azure/backup/backup-azure-files#limitations-for-azure-file-share-backup-during-preview)
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+rg = azure.core.ResourceGroup("rg", location="West US")
+vault = azure.recoveryservices.Vault("vault",
+    location=rg.location,
+    resource_group_name=rg.name,
+    sku="Standard")
+sa = azure.storage.Account("sa",
+    location=rg.location,
+    resource_group_name=rg.name,
+    account_tier="Standard",
+    account_replication_type="LRS")
+container = azure.backup.ContainerStorageAccount("container",
+    resource_group_name=rg.name,
+    recovery_vault_name=vault.name,
+    storage_account_id=sa.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const rg = new azure.core.ResourceGroup("rg", {location: "West US"});
+const vault = new azure.recoveryservices.Vault("vault", {
+    location: rg.location,
+    resourceGroupName: rg.name,
+    sku: "Standard",
+});
+const sa = new azure.storage.Account("sa", {
+    location: rg.location,
+    resourceGroupName: rg.name,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const container = new azure.backup.ContainerStorageAccount("container", {
+    resourceGroupName: rg.name,
+    recoveryVaultName: vault.name,
+    storageAccountId: sa.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ContainerStorageAccount Resource {#create}

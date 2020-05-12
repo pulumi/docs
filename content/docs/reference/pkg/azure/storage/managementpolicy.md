@@ -12,9 +12,140 @@ meta_desc: "Explore the ManagementPolicy resource of the storage module, includi
 
 Manages an Azure Storage Account Management Policy.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="westus")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS",
+    account_kind="BlobStorage")
+example_management_policy = azure.storage.ManagementPolicy("exampleManagementPolicy",
+    storage_account_id=example_account.id,
+    rule=[
+        {
+            "name": "rule1",
+            "enabled": True,
+            "filters": {
+                "prefixMatches": ["container1/prefix1"],
+                "blobTypes": ["blockBlob"],
+            },
+            "actions": {
+                "base_blob": {
+                    "tierToCoolAfterDaysSinceModificationGreaterThan": 10,
+                    "tierToArchiveAfterDaysSinceModificationGreaterThan": 50,
+                    "deleteAfterDaysSinceModificationGreaterThan": 100,
+                },
+                "snapshot": {
+                    "deleteAfterDaysSinceCreationGreaterThan": 30,
+                },
+            },
+        },
+        {
+            "name": "rule2",
+            "enabled": False,
+            "filters": {
+                "prefixMatches": [
+                    "container2/prefix1",
+                    "container2/prefix2",
+                ],
+                "blobTypes": ["blockBlob"],
+            },
+            "actions": {
+                "base_blob": {
+                    "tierToCoolAfterDaysSinceModificationGreaterThan": 11,
+                    "tierToArchiveAfterDaysSinceModificationGreaterThan": 51,
+                    "deleteAfterDaysSinceModificationGreaterThan": 101,
+                },
+                "snapshot": {
+                    "deleteAfterDaysSinceCreationGreaterThan": 31,
+                },
+            },
+        },
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "westus"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+    accountKind: "BlobStorage",
+});
+const exampleManagementPolicy = new azure.storage.ManagementPolicy("exampleManagementPolicy", {
+    storageAccountId: exampleAccount.id,
+    rule: [
+        {
+            name: "rule1",
+            enabled: true,
+            filters: {
+                prefixMatches: ["container1/prefix1"],
+                blobTypes: ["blockBlob"],
+            },
+            actions: {
+                base_blob: {
+                    tierToCoolAfterDaysSinceModificationGreaterThan: 10,
+                    tierToArchiveAfterDaysSinceModificationGreaterThan: 50,
+                    deleteAfterDaysSinceModificationGreaterThan: 100,
+                },
+                snapshot: {
+                    deleteAfterDaysSinceCreationGreaterThan: 30,
+                },
+            },
+        },
+        {
+            name: "rule2",
+            enabled: false,
+            filters: {
+                prefixMatches: [
+                    "container2/prefix1",
+                    "container2/prefix2",
+                ],
+                blobTypes: ["blockBlob"],
+            },
+            actions: {
+                base_blob: {
+                    tierToCoolAfterDaysSinceModificationGreaterThan: 11,
+                    tierToArchiveAfterDaysSinceModificationGreaterThan: 51,
+                    deleteAfterDaysSinceModificationGreaterThan: 101,
+                },
+                snapshot: {
+                    deleteAfterDaysSinceCreationGreaterThan: 31,
+                },
+            },
+        },
+    ],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagementPolicy Resource {#create}

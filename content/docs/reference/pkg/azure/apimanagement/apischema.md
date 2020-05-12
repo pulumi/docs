@@ -12,9 +12,64 @@ meta_desc: "Explore the ApiSchema resource of the apimanagement module, includin
 
 Manages an API Schema within an API Management Service.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_api = azure.apimanagement.get_api(name="search-api",
+    api_management_name="search-api-management",
+    resource_group_name="search-service",
+    revision="2")
+example_api_schema = azure.apimanagement.ApiSchema("exampleApiSchema",
+    api_name=example_api.name,
+    api_management_name=example_api.api_management_name,
+    resource_group_name=example_api.resource_group_name,
+    schema_id="example-sche,a",
+    content_type="application/vnd.ms-azure-apim.xsd+xml",
+    value=(lambda path: open(path).read())("api_management_api_schema.xml"))
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * from "fs";
+
+const exampleApi = azure.apimanagement.getApi({
+    name: "search-api",
+    apiManagementName: "search-api-management",
+    resourceGroupName: "search-service",
+    revision: "2",
+});
+const exampleApiSchema = new azure.apimanagement.ApiSchema("exampleApiSchema", {
+    apiName: exampleApi.then(exampleApi => exampleApi.name),
+    apiManagementName: exampleApi.then(exampleApi => exampleApi.apiManagementName),
+    resourceGroupName: exampleApi.then(exampleApi => exampleApi.resourceGroupName),
+    schemaId: "example-sche,a",
+    contentType: "application/vnd.ms-azure-apim.xsd+xml",
+    value: fs.readFileSync("api_management_api_schema.xml"),
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApiSchema Resource {#create}

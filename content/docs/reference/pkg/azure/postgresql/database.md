@@ -12,9 +12,76 @@ meta_desc: "Explore the Database resource of the postgresql module, including ex
 
 Manages a PostgreSQL Database within a PostgreSQL Server
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_server = azure.postgresql.Server("exampleServer",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku_name="B_Gen5_2",
+    storage_mb=5120,
+    backup_retention_days=7,
+    geo_redundant_backup_enabled=False,
+    auto_grow_enabled=True,
+    administrator_login="psqladminun",
+    administrator_login_password="H@Sh1CoR3!",
+    version="9.5",
+    ssl_enforcement_enabled=True)
+example_database = azure.postgresql.Database("exampleDatabase",
+    resource_group_name=example_resource_group.name,
+    server_name=example_server.name,
+    charset="UTF8",
+    collation="English_United States.1252")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleServer = new azure.postgresql.Server("exampleServer", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    skuName: "B_Gen5_2",
+    storageMb: 5120,
+    backupRetentionDays: 7,
+    geoRedundantBackupEnabled: false,
+    autoGrowEnabled: true,
+    administratorLogin: "psqladminun",
+    administratorLoginPassword: "H@Sh1CoR3!",
+    version: "9.5",
+    sslEnforcementEnabled: true,
+});
+const exampleDatabase = new azure.postgresql.Database("exampleDatabase", {
+    resourceGroupName: exampleResourceGroup.name,
+    serverName: exampleServer.name,
+    charset: "UTF8",
+    collation: "English_United States.1252",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Database Resource {#create}

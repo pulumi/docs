@@ -12,9 +12,46 @@ meta_desc: "Explore the GetSharedAccessPolicy function of the iot module, includ
 
 Use this data source to access information about an existing IotHub Shared Access Policy
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.iot.get_shared_access_policy(name="example",
+    resource_group_name=azurerm_resource_group["example"]["name"],
+    iothub_name=azurerm_iothub["example"]["name"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.iot.getSharedAccessPolicy({
+    name: "example",
+    resourceGroupName: azurerm_resource_group.example.name,
+    iothubName: azurerm_iothub.example.name,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetSharedAccessPolicy {#using}

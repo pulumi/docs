@@ -12,9 +12,64 @@ meta_desc: "Explore the DataSourceWindowsPerformanceCounter resource of the loga
 
 Manages a Log Analytics (formally Operational Insights) Windows Performance Counter DataSource.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_analytics_workspace = azure.operationalinsights.AnalyticsWorkspace("exampleAnalyticsWorkspace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="PerGB2018")
+example_data_source_windows_performance_counter = azure.loganalytics.DataSourceWindowsPerformanceCounter("exampleDataSourceWindowsPerformanceCounter",
+    resource_group_name=example_resource_group.name,
+    workspace_name=example_analytics_workspace.name,
+    object_name="CPU",
+    instance_name="*",
+    counter_name="CPU",
+    interval_seconds=10)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAnalyticsWorkspace = new azure.operationalinsights.AnalyticsWorkspace("exampleAnalyticsWorkspace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "PerGB2018",
+});
+const exampleDataSourceWindowsPerformanceCounter = new azure.loganalytics.DataSourceWindowsPerformanceCounter("exampleDataSourceWindowsPerformanceCounter", {
+    resourceGroupName: exampleResourceGroup.name,
+    workspaceName: exampleAnalyticsWorkspace.name,
+    objectName: "CPU",
+    instanceName: "*",
+    counterName: "CPU",
+    intervalSeconds: 10,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DataSourceWindowsPerformanceCounter Resource {#create}

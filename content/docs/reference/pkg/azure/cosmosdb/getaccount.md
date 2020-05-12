@@ -12,9 +12,46 @@ meta_desc: "Explore the GetAccount function of the cosmosdb module, including ex
 
 Use this data source to access information about an existing CosmosDB (formally DocumentDB) Account.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.cosmosdb.get_account(name="tfex-cosmosdb-account",
+    resource_group_name="tfex-cosmosdb-account-rg")
+pulumi.export("cosmosdbAccountEndpoint", data["azure.cosmosdb.Account"]["jobs"]["endpoint"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.cosmosdb.getAccount({
+    name: "tfex-cosmosdb-account",
+    resourceGroupName: "tfex-cosmosdb-account-rg",
+});
+export const cosmosdbAccountEndpoint = data.azurerm_cosmosdb_account.jobs.endpoint;
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAccount {#using}

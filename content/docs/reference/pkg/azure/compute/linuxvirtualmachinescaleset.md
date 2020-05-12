@@ -18,9 +18,118 @@ Manages a Linux Virtual Machine Scale Set.
 
 > **Note:** This resource does not support Unmanaged Disks. If you need to use Unmanaged Disks you can continue to use the `azure.compute.ScaleSet` resource instead
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    address_spaces=["10.0.0.0/16"])
+internal = azure.network.Subnet("internal",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.2.0/24")
+example_linux_virtual_machine_scale_set = azure.compute.LinuxVirtualMachineScaleSet("exampleLinuxVirtualMachineScaleSet",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    sku="Standard_F2",
+    instances=1,
+    admin_username="adminuser",
+    admin_ssh_key=[{
+        "username": "adminuser",
+        "publicKey": (lambda path: open(path).read())("~/.ssh/id_rsa.pub"),
+    }],
+    source_image_reference={
+        "publisher": "Canonical",
+        "offer": "UbuntuServer",
+        "sku": "16.04-LTS",
+        "version": "latest",
+    },
+    os_disk={
+        "storageAccountType": "Standard_LRS",
+        "caching": "ReadWrite",
+    },
+    network_interface=[{
+        "name": "example",
+        "primary": True,
+        "ip_configuration": [{
+            "name": "internal",
+            "primary": True,
+            "subnetId": internal.id,
+        }],
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * from "fs";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    addressSpaces: ["10.0.0.0/16"],
+});
+const internal = new azure.network.Subnet("internal", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+});
+const exampleLinuxVirtualMachineScaleSet = new azure.compute.LinuxVirtualMachineScaleSet("exampleLinuxVirtualMachineScaleSet", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    sku: "Standard_F2",
+    instances: 1,
+    adminUsername: "adminuser",
+    admin_ssh_key: [{
+        username: "adminuser",
+        publicKey: fs.readFileSync("~/.ssh/id_rsa.pub"),
+    }],
+    source_image_reference: {
+        publisher: "Canonical",
+        offer: "UbuntuServer",
+        sku: "16.04-LTS",
+        version: "latest",
+    },
+    os_disk: {
+        storageAccountType: "Standard_LRS",
+        caching: "ReadWrite",
+    },
+    network_interface: [{
+        name: "example",
+        primary: true,
+        ip_configuration: [{
+            name: "internal",
+            primary: true,
+            subnetId: internal.id,
+        }],
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LinuxVirtualMachineScaleSet Resource {#create}
@@ -3911,6 +4020,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Create<wbr>Option</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The create option which should be used for this Data Disk. Possible values are `Empty` and `FromImage`. Defaults to `Empty`. (`FromImage` should only be used if the source image includes data disks).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Disk<wbr>Encryption<wbr>Set<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -3968,6 +4086,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Type of Storage Account which should back this Data Disk. Possible values include `Standard_LRS`, `StandardSSD_LRS`, `Premium_LRS` and `UltraSSD_LRS`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Create<wbr>Option</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The create option which should be used for this Data Disk. Possible values are `Empty` and `FromImage`. Defaults to `Empty`. (`FromImage` should only be used if the source image includes data disks).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4033,6 +4160,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>create<wbr>Option</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The create option which should be used for this Data Disk. Possible values are `Empty` and `FromImage`. Defaults to `Empty`. (`FromImage` should only be used if the source image includes data disks).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>disk<wbr>Encryption<wbr>Set<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -4090,6 +4226,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Type of Storage Account which should back this Data Disk. Possible values include `Standard_LRS`, `StandardSSD_LRS`, `Premium_LRS` and `UltraSSD_LRS`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>create_<wbr>option</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The create option which should be used for this Data Disk. Possible values are `Empty` and `FromImage`. Defaults to `Empty`. (`FromImage` should only be used if the source image includes data disks).
 {{% /md %}}</dd>
 
     <dt class="property-optional"

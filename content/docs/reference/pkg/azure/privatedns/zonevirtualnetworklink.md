@@ -12,9 +12,51 @@ meta_desc: "Explore the ZoneVirtualNetworkLink resource of the privatedns module
 
 Enables you to manage Private DNS zone Virtual Network Links. These Links enable DNS resolution and registration inside Azure Virtual Networks using Azure Private DNS.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_zone = azure.privatedns.Zone("exampleZone", resource_group_name=example_resource_group.name)
+example_zone_virtual_network_link = azure.privatedns.ZoneVirtualNetworkLink("exampleZoneVirtualNetworkLink",
+    resource_group_name=example_resource_group.name,
+    private_dns_zone_name=example_zone.name,
+    virtual_network_id=azurerm_virtual_network["example"]["id"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleZone = new azure.privatedns.Zone("exampleZone", {resourceGroupName: exampleResourceGroup.name});
+const exampleZoneVirtualNetworkLink = new azure.privatedns.ZoneVirtualNetworkLink("exampleZoneVirtualNetworkLink", {
+    resourceGroupName: exampleResourceGroup.name,
+    privateDnsZoneName: exampleZone.name,
+    virtualNetworkId: azurerm_virtual_network.example.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ZoneVirtualNetworkLink Resource {#create}

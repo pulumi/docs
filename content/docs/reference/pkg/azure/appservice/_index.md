@@ -18,6 +18,7 @@ Explore the resources and functions of the appservice module in the Azure packag
     <li><a href="customhostnamebinding" title="CustomHostnameBinding"><span class="symbol resource"></span>CustomHostnameBinding</a></li>
     <li><a href="environment" title="Environment"><span class="symbol resource"></span>Environment</a></li>
     <li><a href="functionapp" title="FunctionApp"><span class="symbol resource"></span>FunctionApp</a></li>
+    <li><a href="functionappslot" title="FunctionAppSlot"><span class="symbol resource"></span>FunctionAppSlot</a></li>
     <li><a href="plan" title="Plan"><span class="symbol resource"></span>Plan</a></li>
     <li><a href="slot" title="Slot"><span class="symbol resource"></span>Slot</a></li>
     <li><a href="sourcecodetoken" title="SourceCodeToken"><span class="symbol resource"></span>SourceCodeToken</a></li>
@@ -43,6 +44,6 @@ Explore the resources and functions of the appservice module in the Azure packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.4.0</dd>
+	<dd>3.5.0</dd>
 </dl>
 

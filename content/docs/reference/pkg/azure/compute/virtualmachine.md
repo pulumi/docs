@@ -18,6 +18,121 @@ Manages a Virtual Machine.
 
 > **Note:** Data Disks can be attached either directly on the `azure.compute.VirtualMachine` resource, or using the `azure.compute.DataDiskAttachment` resource - but the two cannot be used together. If both are used against the same Virtual Machine, spurious changes will occur.
 
+## Example Usage (from an Azure Platform Image)
+
+This example provisions a Virtual Machine with Managed Disks.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const config = new pulumi.Config();
+const prefix = config.get("prefix") || "tfvmex";
+const mainResourceGroup = new azure.core.ResourceGroup("mainResourceGroup", {location: "West US 2"});
+const mainVirtualNetwork = new azure.network.VirtualNetwork("mainVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: mainResourceGroup.location,
+    resourceGroupName: mainResourceGroup.name,
+});
+const internal = new azure.network.Subnet("internal", {
+    resourceGroupName: mainResourceGroup.name,
+    virtualNetworkName: mainVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+});
+const mainNetworkInterface = new azure.network.NetworkInterface("mainNetworkInterface", {
+    location: mainResourceGroup.location,
+    resourceGroupName: mainResourceGroup.name,
+    ip_configuration: [{
+        name: "testconfiguration1",
+        subnetId: internal.id,
+        privateIpAddressAllocation: "Dynamic",
+    }],
+});
+const mainVirtualMachine = new azure.compute.VirtualMachine("mainVirtualMachine", {
+    location: mainResourceGroup.location,
+    resourceGroupName: mainResourceGroup.name,
+    networkInterfaceIds: [mainNetworkInterface.id],
+    vmSize: "Standard_DS1_v2",
+    storage_image_reference: {
+        publisher: "Canonical",
+        offer: "UbuntuServer",
+        sku: "16.04-LTS",
+        version: "latest",
+    },
+    storage_os_disk: {
+        name: "myosdisk1",
+        caching: "ReadWrite",
+        createOption: "FromImage",
+        managedDiskType: "Standard_LRS",
+    },
+    os_profile: {
+        computerName: "hostname",
+        adminUsername: "testadmin",
+        adminPassword: "Password1234!",
+    },
+    os_profile_linux_config: {
+        disablePasswordAuthentication: false,
+    },
+    tags: {
+        environment: "staging",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+config = pulumi.Config()
+prefix = config.get("prefix")
+if prefix is None:
+    prefix = "tfvmex"
+main_resource_group = azure.core.ResourceGroup("mainResourceGroup", location="West US 2")
+main_virtual_network = azure.network.VirtualNetwork("mainVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=main_resource_group.location,
+    resource_group_name=main_resource_group.name)
+internal = azure.network.Subnet("internal",
+    resource_group_name=main_resource_group.name,
+    virtual_network_name=main_virtual_network.name,
+    address_prefix="10.0.2.0/24")
+main_network_interface = azure.network.NetworkInterface("mainNetworkInterface",
+    location=main_resource_group.location,
+    resource_group_name=main_resource_group.name,
+    ip_configuration=[{
+        "name": "testconfiguration1",
+        "subnetId": internal.id,
+        "privateIpAddressAllocation": "Dynamic",
+    }])
+main_virtual_machine = azure.compute.VirtualMachine("mainVirtualMachine",
+    location=main_resource_group.location,
+    resource_group_name=main_resource_group.name,
+    network_interface_ids=[main_network_interface.id],
+    vm_size="Standard_DS1_v2",
+    storage_image_reference={
+        "publisher": "Canonical",
+        "offer": "UbuntuServer",
+        "sku": "16.04-LTS",
+        "version": "latest",
+    },
+    storage_os_disk={
+        "name": "myosdisk1",
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+        "managedDiskType": "Standard_LRS",
+    },
+    os_profile={
+        "computerName": "hostname",
+        "adminUsername": "testadmin",
+        "adminPassword": "Password1234!",
+    },
+    os_profile_linux_config={
+        "disablePasswordAuthentication": False,
+    },
+    tags={
+        "environment": "staging",
+    })
+```
+
 
 
 ## Create a VirtualMachine Resource {#create}

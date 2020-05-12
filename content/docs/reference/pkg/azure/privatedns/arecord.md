@@ -12,9 +12,53 @@ meta_desc: "Explore the ARecord resource of the privatedns module, including exa
 
 Enables you to manage DNS A Records within Azure Private DNS.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_zone = azure.privatedns.Zone("exampleZone", resource_group_name=example_resource_group.name)
+example_a_record = azure.privatedns.ARecord("exampleARecord",
+    zone_name=example_zone.name,
+    resource_group_name=example_resource_group.name,
+    ttl=300,
+    records=["10.0.180.17"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleZone = new azure.privatedns.Zone("exampleZone", {resourceGroupName: exampleResourceGroup.name});
+const exampleARecord = new azure.privatedns.ARecord("exampleARecord", {
+    zoneName: exampleZone.name,
+    resourceGroupName: exampleResourceGroup.name,
+    ttl: 300,
+    records: ["10.0.180.17"],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ARecord Resource {#create}

@@ -12,9 +12,98 @@ meta_desc: "Explore the FailoverGroup resource of the sql module, including exam
 
 Create a failover group of databases on a collection of Azure SQL servers.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="uksouth")
+primary = azure.sql.SqlServer("primary",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    version="12.0",
+    administrator_login="sqladmin",
+    administrator_login_password="pa$$w0rd")
+secondary = azure.sql.SqlServer("secondary",
+    resource_group_name=example_resource_group.name,
+    location="northeurope",
+    version="12.0",
+    administrator_login="sqladmin",
+    administrator_login_password="pa$$w0rd")
+db1 = azure.sql.Database("db1",
+    resource_group_name=primary.resource_group_name,
+    location=primary.location,
+    server_name=primary.name)
+example_failover_group = azure.sql.FailoverGroup("exampleFailoverGroup",
+    resource_group_name=primary.resource_group_name,
+    server_name=primary.name,
+    databases=[db1.id],
+    partner_servers=[{
+        "id": secondary.id,
+    }],
+    read_write_endpoint_failover_policy={
+        "mode": "Automatic",
+        "graceMinutes": 60,
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "uksouth"});
+const primary = new azure.sql.SqlServer("primary", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    version: "12.0",
+    administratorLogin: "sqladmin",
+    administratorLoginPassword: `pa$$w0rd`,
+});
+const secondary = new azure.sql.SqlServer("secondary", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: "northeurope",
+    version: "12.0",
+    administratorLogin: "sqladmin",
+    administratorLoginPassword: `pa$$w0rd`,
+});
+const db1 = new azure.sql.Database("db1", {
+    resourceGroupName: primary.resourceGroupName,
+    location: primary.location,
+    serverName: primary.name,
+});
+const exampleFailoverGroup = new azure.sql.FailoverGroup("exampleFailoverGroup", {
+    resourceGroupName: primary.resourceGroupName,
+    serverName: primary.name,
+    databases: [db1.id],
+    partner_servers: [{
+        id: secondary.id,
+    }],
+    read_write_endpoint_failover_policy: {
+        mode: "Automatic",
+        graceMinutes: 60,
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FailoverGroup Resource {#create}

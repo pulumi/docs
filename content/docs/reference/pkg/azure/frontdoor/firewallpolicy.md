@@ -12,9 +12,235 @@ meta_desc: "Explore the FirewallPolicy resource of the frontdoor module, includi
 
 Manages an Azure Front Door Web Application Firewall Policy instance.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US 2")
+example_firewall_policy = azure.frontdoor.FirewallPolicy("exampleFirewallPolicy",
+    resource_group_name=example_resource_group.name,
+    enabled=True,
+    mode="Prevention",
+    redirect_url="https://www.contoso.com",
+    custom_block_response_status_code=403,
+    custom_block_response_body="PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==",
+    custom_rule=[
+        {
+            "name": "Rule1",
+            "enabled": True,
+            "priority": 1,
+            "rateLimitDurationInMinutes": 1,
+            "rateLimitThreshold": 10,
+            "type": "MatchRule",
+            "action": "Block",
+            "match_condition": [{
+                "matchVariable": "RemoteAddr",
+                "operator": "IPMatch",
+                "negationCondition": False,
+                "matchValues": [
+                    "192.168.1.0/24",
+                    "10.0.0.0/24",
+                ],
+            }],
+        },
+        {
+            "name": "Rule2",
+            "enabled": True,
+            "priority": 2,
+            "rateLimitDurationInMinutes": 1,
+            "rateLimitThreshold": 10,
+            "type": "MatchRule",
+            "action": "Block",
+            "match_condition": [
+                {
+                    "matchVariable": "RemoteAddr",
+                    "operator": "IPMatch",
+                    "negationCondition": False,
+                    "matchValues": ["192.168.1.0/24"],
+                },
+                {
+                    "matchVariable": "RequestHeader",
+                    "selector": "UserAgent",
+                    "operator": "Contains",
+                    "negationCondition": False,
+                    "matchValues": ["windows"],
+                    "transforms": [
+                        "Lowercase",
+                        "Trim",
+                    ],
+                },
+            ],
+        },
+    ],
+    managed_rule=[
+        {
+            "type": "DefaultRuleSet",
+            "version": "1.0",
+            "exclusion": [{
+                "matchVariable": "QueryStringArgNames",
+                "operator": "Equals",
+                "selector": "not_suspicious",
+            }],
+            "override": [
+                {
+                    "ruleGroupName": "PHP",
+                    "rule": [{
+                        "ruleId": "933100",
+                        "enabled": False,
+                        "action": "Block",
+                    }],
+                },
+                {
+                    "ruleGroupName": "SQLI",
+                    "exclusion": [{
+                        "matchVariable": "QueryStringArgNames",
+                        "operator": "Equals",
+                        "selector": "really_not_suspicious",
+                    }],
+                    "rule": [{
+                        "ruleId": "942200",
+                        "action": "Block",
+                        "exclusion": [{
+                            "matchVariable": "QueryStringArgNames",
+                            "operator": "Equals",
+                            "selector": "innocent",
+                        }],
+                    }],
+                },
+            ],
+        },
+        {
+            "type": "Microsoft_BotManagerRuleSet",
+            "version": "1.0",
+        },
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US 2"});
+const exampleFirewallPolicy = new azure.frontdoor.FirewallPolicy("exampleFirewallPolicy", {
+    resourceGroupName: exampleResourceGroup.name,
+    enabled: true,
+    mode: "Prevention",
+    redirectUrl: "https://www.contoso.com",
+    customBlockResponseStatusCode: 403,
+    customBlockResponseBody: "PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==",
+    custom_rule: [
+        {
+            name: "Rule1",
+            enabled: true,
+            priority: 1,
+            rateLimitDurationInMinutes: 1,
+            rateLimitThreshold: 10,
+            type: "MatchRule",
+            action: "Block",
+            match_condition: [{
+                matchVariable: "RemoteAddr",
+                operator: "IPMatch",
+                negationCondition: false,
+                matchValues: [
+                    "192.168.1.0/24",
+                    "10.0.0.0/24",
+                ],
+            }],
+        },
+        {
+            name: "Rule2",
+            enabled: true,
+            priority: 2,
+            rateLimitDurationInMinutes: 1,
+            rateLimitThreshold: 10,
+            type: "MatchRule",
+            action: "Block",
+            match_condition: [
+                {
+                    matchVariable: "RemoteAddr",
+                    operator: "IPMatch",
+                    negationCondition: false,
+                    matchValues: ["192.168.1.0/24"],
+                },
+                {
+                    matchVariable: "RequestHeader",
+                    selector: "UserAgent",
+                    operator: "Contains",
+                    negationCondition: false,
+                    matchValues: ["windows"],
+                    transforms: [
+                        "Lowercase",
+                        "Trim",
+                    ],
+                },
+            ],
+        },
+    ],
+    managed_rule: [
+        {
+            type: "DefaultRuleSet",
+            version: "1.0",
+            exclusion: [{
+                matchVariable: "QueryStringArgNames",
+                operator: "Equals",
+                selector: "not_suspicious",
+            }],
+            override: [
+                {
+                    ruleGroupName: "PHP",
+                    rule: [{
+                        ruleId: "933100",
+                        enabled: false,
+                        action: "Block",
+                    }],
+                },
+                {
+                    ruleGroupName: "SQLI",
+                    exclusion: [{
+                        matchVariable: "QueryStringArgNames",
+                        operator: "Equals",
+                        selector: "really_not_suspicious",
+                    }],
+                    rule: [{
+                        ruleId: "942200",
+                        action: "Block",
+                        exclusion: [{
+                            matchVariable: "QueryStringArgNames",
+                            operator: "Equals",
+                            selector: "innocent",
+                        }],
+                    }],
+                },
+            ],
+        },
+        {
+            type: "Microsoft_BotManagerRuleSet",
+            version: "1.0",
+        },
+    ],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FirewallPolicy Resource {#create}

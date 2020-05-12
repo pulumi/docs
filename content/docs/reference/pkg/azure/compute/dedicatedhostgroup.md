@@ -12,9 +12,49 @@ meta_desc: "Explore the DedicatedHostGroup resource of the compute module, inclu
 
 Manage a Dedicated Host Group.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_dedicated_host_group = azure.compute.DedicatedHostGroup("exampleDedicatedHostGroup",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    platform_fault_domain_count=1)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleDedicatedHostGroup = new azure.compute.DedicatedHostGroup("exampleDedicatedHostGroup", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    platformFaultDomainCount: 1,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DedicatedHostGroup Resource {#create}

@@ -12,9 +12,92 @@ meta_desc: "Explore the Application resource of the managedapplication module, i
 
 Manages a Managed Application.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+builtin = azure.authorization.get_role_definition(name="Contributor")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_definition = azure.managedapplication.Definition("exampleDefinition",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    lock_level="ReadOnly",
+    package_file_uri="https://github.com/Azure/azure-managedapp-samples/raw/master/Managed Application Sample Packages/201-managed-storage-account/managedstorage.zip",
+    display_name="TestManagedAppDefinition",
+    description="Test Managed App Definition",
+    authorization=[{
+        "servicePrincipalId": current.object_id,
+        "roleDefinitionId": builtin.id.split("/")[len(builtin.id.split("/")) - 1],
+    }])
+example_application = azure.managedapplication.Application("exampleApplication",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    kind="ServiceCatalog",
+    managed_resource_group_name="infrastructureGroup",
+    application_definition_id=example_definition.id,
+    parameters={
+        "location": example_resource_group.location,
+        "storageAccountNamePrefix": "storeNamePrefix",
+        "storageAccountType": "Standard_LRS",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const builtin = azure.authorization.getRoleDefinition({
+    name: "Contributor",
+});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleDefinition = new azure.managedapplication.Definition("exampleDefinition", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    lockLevel: "ReadOnly",
+    packageFileUri: "https://github.com/Azure/azure-managedapp-samples/raw/master/Managed Application Sample Packages/201-managed-storage-account/managedstorage.zip",
+    displayName: "TestManagedAppDefinition",
+    description: "Test Managed App Definition",
+    authorization: [{
+        servicePrincipalId: current.then(current => current.objectId),
+        roleDefinitionId: Promise.all([builtin, builtin.then(builtin => builtin.id.split("/")).length]).then(([builtin, length]) => builtin.id.split("/")[length - 1]),
+    }],
+});
+const exampleApplication = new azure.managedapplication.Application("exampleApplication", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    kind: "ServiceCatalog",
+    managedResourceGroupName: "infrastructureGroup",
+    applicationDefinitionId: exampleDefinition.id,
+    parameters: {
+        location: exampleResourceGroup.location,
+        storageAccountNamePrefix: "storeNamePrefix",
+        storageAccountType: "Standard_LRS",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Application Resource {#create}

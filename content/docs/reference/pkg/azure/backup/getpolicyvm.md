@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+policy = azure.backup.get_policy_vm(name="policy",
+    recovery_vault_name="recovery_vault",
+    resource_group_name="resource_group")
+```
 {{% /example %}}
 
 {{% example typescript %}}

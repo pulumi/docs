@@ -12,9 +12,46 @@ meta_desc: "Explore the GetServer function of the sql module, including examples
 
 Use this data source to access information about an existing SQL Azure Database Server.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.sql.get_server(name="examplesqlservername",
+    resource_group_name="example-resources")
+pulumi.export("sqlServerId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.sql.getServer({
+    name: "examplesqlservername",
+    resourceGroupName: "example-resources",
+});
+export const sqlServerId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetServer {#using}

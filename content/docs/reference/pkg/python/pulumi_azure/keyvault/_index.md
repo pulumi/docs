@@ -204,7 +204,111 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.keyvault.Certifiate">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.keyvault.</code><code class="sig-name descname">Certifiate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_vault_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.Certifiate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Key Vault Certificate.</p>
-<p>Deprecated: azure.Certifiate has been deprecated in favour of azure.Certificate</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">current</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_client_config</span><span class="p">()</span>
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_key_vault</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">keyvault</span><span class="o">.</span><span class="n">KeyVault</span><span class="p">(</span><span class="s2">&quot;exampleKeyVault&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">tenant_id</span><span class="o">=</span><span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;standard&quot;</span><span class="p">,</span>
+    <span class="n">access_policy</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;tenantId&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
+        <span class="s2">&quot;objectId&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">object_id</span><span class="p">,</span>
+        <span class="s2">&quot;certificatePermissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;create&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;delete&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;deleteissuers&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;get&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;getissuers&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;import&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;list&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;listissuers&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;managecontacts&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;manageissuers&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;setissuers&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;update&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;keyPermissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;backup&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;create&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;decrypt&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;delete&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;encrypt&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;get&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;import&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;list&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;purge&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;recover&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;restore&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sign&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;unwrapKey&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;update&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;verify&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;wrapKey&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;secretPermissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;backup&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;delete&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;get&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;list&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;purge&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;recover&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;restore&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;set&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Production&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_certificate</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">keyvault</span><span class="o">.</span><span class="n">Certificate</span><span class="p">(</span><span class="s2">&quot;exampleCertificate&quot;</span><span class="p">,</span>
+    <span class="n">key_vault_id</span><span class="o">=</span><span class="n">example_key_vault</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">certificate_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;issuer_parameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Self&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;key_properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;exportable&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;keySize&quot;</span><span class="p">:</span> <span class="mi">2048</span><span class="p">,</span>
+            <span class="s2">&quot;keyType&quot;</span><span class="p">:</span> <span class="s2">&quot;RSA&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;reuseKey&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;lifetime_action&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;actionType&quot;</span><span class="p">:</span> <span class="s2">&quot;AutoRenew&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;trigger&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;daysBeforeExpiry&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;secret_properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;contentType&quot;</span><span class="p">:</span> <span class="s2">&quot;application/x-pkcs12&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;x509_certificate_properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;extendedKeyUsages&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;1.3.6.1.5.5.7.3.1&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;keyUsages&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;cRLSign&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;dataEncipherment&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;digitalSignature&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;keyAgreement&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;keyCertSign&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;keyEncipherment&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;subject_alternative_names&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;dnsNames&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;internal.contoso.com&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;domain.hello.world&quot;</span><span class="p">,</span>
+                <span class="p">],</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;subject&quot;</span><span class="p">:</span> <span class="s2">&quot;CN=hello-world&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;validityInMonths&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<p>Deprecated: azure.keyvault.Certifiate has been deprecated in favour of azure.keyvault.Certificate</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -505,6 +609,110 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.keyvault.Certificate">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.keyvault.</code><code class="sig-name descname">Certificate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_vault_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.Certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Key Vault Certificate.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">current</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_client_config</span><span class="p">()</span>
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_key_vault</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">keyvault</span><span class="o">.</span><span class="n">KeyVault</span><span class="p">(</span><span class="s2">&quot;exampleKeyVault&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">tenant_id</span><span class="o">=</span><span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;standard&quot;</span><span class="p">,</span>
+    <span class="n">access_policy</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;tenantId&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
+        <span class="s2">&quot;objectId&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">object_id</span><span class="p">,</span>
+        <span class="s2">&quot;certificatePermissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;create&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;delete&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;deleteissuers&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;get&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;getissuers&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;import&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;list&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;listissuers&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;managecontacts&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;manageissuers&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;setissuers&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;update&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;keyPermissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;backup&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;create&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;decrypt&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;delete&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;encrypt&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;get&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;import&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;list&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;purge&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;recover&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;restore&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sign&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;unwrapKey&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;update&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;verify&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;wrapKey&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;secretPermissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;backup&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;delete&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;get&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;list&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;purge&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;recover&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;restore&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;set&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Production&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_certificate</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">keyvault</span><span class="o">.</span><span class="n">Certificate</span><span class="p">(</span><span class="s2">&quot;exampleCertificate&quot;</span><span class="p">,</span>
+    <span class="n">key_vault_id</span><span class="o">=</span><span class="n">example_key_vault</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">certificate_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;issuer_parameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Self&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;key_properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;exportable&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;keySize&quot;</span><span class="p">:</span> <span class="mi">2048</span><span class="p">,</span>
+            <span class="s2">&quot;keyType&quot;</span><span class="p">:</span> <span class="s2">&quot;RSA&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;reuseKey&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;lifetime_action&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;actionType&quot;</span><span class="p">:</span> <span class="s2">&quot;AutoRenew&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;trigger&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;daysBeforeExpiry&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;secret_properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;contentType&quot;</span><span class="p">:</span> <span class="s2">&quot;application/x-pkcs12&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;x509_certificate_properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;extendedKeyUsages&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;1.3.6.1.5.5.7.3.1&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;keyUsages&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;cRLSign&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;dataEncipherment&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;digitalSignature&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;keyAgreement&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;keyCertSign&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;keyEncipherment&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;subject_alternative_names&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;dnsNames&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;internal.contoso.com&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;domain.hello.world&quot;</span><span class="p">,</span>
+                <span class="p">],</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;subject&quot;</span><span class="p">:</span> <span class="s2">&quot;CN=hello-world&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;validityInMonths&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1003,6 +1211,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.keyvault.Key">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.keyvault.</code><code class="sig-name descname">Key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">curve</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expiration_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_vault_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">not_before_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.Key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Key Vault Key.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+<span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
+
+<span class="n">current</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_client_config</span><span class="p">()</span>
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">server</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">RandomId</span><span class="p">(</span><span class="s2">&quot;server&quot;</span><span class="p">,</span>
+    <span class="n">keepers</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;ami_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">byte_length</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">example_key_vault</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">keyvault</span><span class="o">.</span><span class="n">KeyVault</span><span class="p">(</span><span class="s2">&quot;exampleKeyVault&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">tenant_id</span><span class="o">=</span><span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;premium&quot;</span><span class="p">,</span>
+    <span class="n">access_policy</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;tenantId&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
+        <span class="s2">&quot;objectId&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">object_id</span><span class="p">,</span>
+        <span class="s2">&quot;keyPermissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;create&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;get&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;secretPermissions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;set&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Production&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">generated</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">keyvault</span><span class="o">.</span><span class="n">Key</span><span class="p">(</span><span class="s2">&quot;generated&quot;</span><span class="p">,</span>
+    <span class="n">key_vault_id</span><span class="o">=</span><span class="n">example_key_vault</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">key_type</span><span class="o">=</span><span class="s2">&quot;RSA&quot;</span><span class="p">,</span>
+    <span class="n">key_size</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span>
+    <span class="n">key_opts</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;decrypt&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;encrypt&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sign&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;unwrapKey&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;verify&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;wrapKey&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1180,6 +1430,35 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> It’s possible to define Key Vault Access Policies both within the <code class="docutils literal notranslate"><span class="pre">keyvault.KeyVault</span></code> resource via the <code class="docutils literal notranslate"><span class="pre">access_policy</span></code> block and by using the <code class="docutils literal notranslate"><span class="pre">keyvault.AccessPolicy</span></code> resource. However it’s not possible to use both methods to manage Access Policies within a KeyVault, since there’ll be conflicts.</p>
 <p><strong>Note:</strong> This provi will automatically recover a soft-deleted Key Vault during Creation if one is found - you can opt out of this using the <code class="docutils literal notranslate"><span class="pre">features</span></code> configuration within the Provider configuration block.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">current</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_client_config</span><span class="p">()</span>
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_key_vault</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">keyvault</span><span class="o">.</span><span class="n">KeyVault</span><span class="p">(</span><span class="s2">&quot;exampleKeyVault&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">enabled_for_disk_encryption</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">tenant_id</span><span class="o">=</span><span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
+    <span class="n">soft_delete_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">purge_protection_enabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;standard&quot;</span><span class="p">,</span>
+    <span class="n">access_policy</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;tenantId&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
+        <span class="s2">&quot;objectId&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">object_id</span><span class="p">,</span>
+        <span class="s2">&quot;keyPermissions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;get&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;secretPermissions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;get&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;storagePermissions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;get&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">network_acls</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;defaultAction&quot;</span><span class="p">:</span> <span class="s2">&quot;Deny&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bypass&quot;</span><span class="p">:</span> <span class="s2">&quot;AzureServices&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Testing&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1535,6 +1814,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.keyvault.get_access_policy">
 <code class="sig-prename descclassname">pulumi_azure.keyvault.</code><code class="sig-name descname">get_access_policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.get_access_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about the permissions from the Management Key Vault Templates.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">contributor</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">keyvault</span><span class="o">.</span><span class="n">get_access_policy</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Key Management&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;accessPolicyKeyPermissions&quot;</span><span class="p">,</span> <span class="n">contributor</span><span class="o">.</span><span class="n">key_permissions</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Specifies the name of the Management Template. Possible values are: <code class="docutils literal notranslate"><span class="pre">Key</span> <span class="pre">Management</span></code>,
@@ -1548,6 +1834,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.keyvault.get_key">
 <code class="sig-prename descclassname">pulumi_azure.keyvault.</code><code class="sig-name descname">get_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key_vault_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.get_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Key Vault Key.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">keyvault</span><span class="o">.</span><span class="n">get_key</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;secret-sauce&quot;</span><span class="p">,</span>
+    <span class="n">key_vault_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;keyvault.KeyVault&quot;</span><span class="p">][</span><span class="s2">&quot;existing&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;keyType&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">key_type</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1562,6 +1856,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.keyvault.get_key_vault">
 <code class="sig-prename descclassname">pulumi_azure.keyvault.</code><code class="sig-name descname">get_key_vault</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.get_key_vault" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Key Vault.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">keyvault</span><span class="o">.</span><span class="n">get_key_vault</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;mykeyvault&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;some-resource-group&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;vaultUri&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">vault_uri</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1576,6 +1878,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.keyvault.get_secret">
 <code class="sig-prename descclassname">pulumi_azure.keyvault.</code><code class="sig-name descname">get_secret</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key_vault_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.get_secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Key Vault Secret.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">keyvault</span><span class="o">.</span><span class="n">get_secret</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;secret-sauce&quot;</span><span class="p">,</span>
+    <span class="n">key_vault_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;keyvault.KeyVault&quot;</span><span class="p">][</span><span class="s2">&quot;existing&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;secretValue&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

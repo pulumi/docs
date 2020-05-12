@@ -13,9 +13,65 @@ meta_desc: "Explore the AuthorizationServer resource of the apimanagement module
 Manages an Authorization Server within an API Management Service.
 
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_api = azure.apimanagement.get_api(name="search-api",
+    api_management_name="search-api-management",
+    resource_group_name="search-service",
+    revision="2")
+example_authorization_server = azure.apimanagement.AuthorizationServer("exampleAuthorizationServer",
+    api_management_name=data["azure.apimanagement.Service"]["example"]["name"],
+    resource_group_name=data["azure.apimanagement.Service"]["example"]["resource_group_name"],
+    display_name="Test Server",
+    authorization_endpoint="https://example.mydomain.com/client/authorize",
+    client_id="42424242-4242-4242-4242-424242424242",
+    client_registration_endpoint="https://example.mydomain.com/client/register",
+    grant_types=["authorizationCode"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleApi = azure.apimanagement.getApi({
+    name: "search-api",
+    apiManagementName: "search-api-management",
+    resourceGroupName: "search-service",
+    revision: "2",
+});
+const exampleAuthorizationServer = new azure.apimanagement.AuthorizationServer("exampleAuthorizationServer", {
+    apiManagementName: data.azurerm_api_management.example.name,
+    resourceGroupName: data.azurerm_api_management.example.resource_group_name,
+    displayName: "Test Server",
+    authorizationEndpoint: "https://example.mydomain.com/client/authorize",
+    clientId: "42424242-4242-4242-4242-424242424242",
+    clientRegistrationEndpoint: "https://example.mydomain.com/client/register",
+    grantTypes: ["authorizationCode"],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AuthorizationServer Resource {#create}

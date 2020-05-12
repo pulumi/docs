@@ -14,11 +14,55 @@ Manages an EventGrid Topic
 
 > **Note:** at this time EventGrid Topic's are only available in a limited number of regions.
 
-{{% examples %}}
-{{% /examples %}}
+
 
 Deprecated: azure.eventhub.EventGridTopic has been deprecated in favour of azure.eventgrid.Topic
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US 2")
+example_topic = azure.eventgrid.Topic("exampleTopic",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    tags={
+        "environment": "Production",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US 2"});
+const exampleTopic = new azure.eventgrid.Topic("exampleTopic", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    tags: {
+        environment: "Production",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 <p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.EventGridTopic has been deprecated in favour of azure.eventgrid.Topic{{% /md %}}</p>
 
 

@@ -32,7 +32,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.securitycenter.SubscriptionPricing("example", tier="Standard")
+```
 {{% /example %}}
 
 {{% example typescript %}}

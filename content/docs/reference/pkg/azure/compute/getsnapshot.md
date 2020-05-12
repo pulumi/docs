@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.compute.get_snapshot(name="my-snapshot",
+    resource_group_name="my-resource-group")
+```
 {{% /example %}}
 
 {{% example typescript %}}

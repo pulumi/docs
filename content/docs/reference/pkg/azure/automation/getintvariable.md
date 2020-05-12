@@ -13,9 +13,48 @@ meta_desc: "Explore the GetIntVariable function of the automation module, includ
 Use this data source to access information about an existing Automation Int Variable.
 
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.automation.get_int_variable(name="tfex-example-var",
+    resource_group_name="tfex-example-rg",
+    automation_account_name="tfex-example-account")
+pulumi.export("variableId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.automation.getIntVariable({
+    name: "tfex-example-var",
+    resourceGroupName: "tfex-example-rg",
+    automationAccountName: "tfex-example-account",
+});
+export const variableId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetIntVariable {#using}

@@ -13,9 +13,67 @@ meta_desc: "Explore the ProductPolicy resource of the apimanagement module, incl
 Manages an API Management Product Policy
 
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_product = azure.apimanagement.get_product(product_id="my-product",
+    api_management_name="example-apim",
+    resource_group_name="search-service")
+example_product_policy = azure.apimanagement.ProductPolicy("exampleProductPolicy",
+    product_id=example_product.product_id,
+    api_management_name=example_product.api_management_name,
+    resource_group_name=example_product.resource_group_name,
+    xml_content="""<policies>
+  <inbound>
+    <find-and-replace from="xyz" to="abc" />
+  </inbound>
+</policies>
+""")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleProduct = azure.apimanagement.getProduct({
+    productId: "my-product",
+    apiManagementName: "example-apim",
+    resourceGroupName: "search-service",
+});
+const exampleProductPolicy = new azure.apimanagement.ProductPolicy("exampleProductPolicy", {
+    productId: exampleProduct.then(exampleProduct => exampleProduct.productId),
+    apiManagementName: exampleProduct.then(exampleProduct => exampleProduct.apiManagementName),
+    resourceGroupName: exampleProduct.then(exampleProduct => exampleProduct.resourceGroupName),
+    xmlContent: `<policies>
+  <inbound>
+    <find-and-replace from="xyz" to="abc" />
+  </inbound>
+</policies>
+`,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ProductPolicy Resource {#create}

@@ -12,9 +12,115 @@ meta_desc: "Explore the Key resource of the keyvault module, including examples,
 
 Manages a Key Vault Key.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+import pulumi_random as random
+
+current = azure.core.get_client_config()
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+server = random.RandomId("server",
+    keepers={
+        "ami_id": 1,
+    },
+    byte_length=8)
+example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    tenant_id=current.tenant_id,
+    sku_name="premium",
+    access_policy=[{
+        "tenantId": current.tenant_id,
+        "objectId": current.object_id,
+        "keyPermissions": [
+            "create",
+            "get",
+        ],
+        "secretPermissions": ["set"],
+    }],
+    tags={
+        "environment": "Production",
+    })
+generated = azure.keyvault.Key("generated",
+    key_vault_id=example_key_vault.id,
+    key_type="RSA",
+    key_size=2048,
+    key_opts=[
+        "decrypt",
+        "encrypt",
+        "sign",
+        "unwrapKey",
+        "verify",
+        "wrapKey",
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * as random from "@pulumi/random";
+
+const current = azure.core.getClientConfig({});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const server = new random.RandomId("server", {
+    keepers: {
+        ami_id: 1,
+    },
+    byteLength: 8,
+});
+const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    tenantId: current.then(current => current.tenantId),
+    skuName: "premium",
+    access_policy: [{
+        tenantId: current.then(current => current.tenantId),
+        objectId: current.then(current => current.objectId),
+        keyPermissions: [
+            "create",
+            "get",
+        ],
+        secretPermissions: ["set"],
+    }],
+    tags: {
+        environment: "Production",
+    },
+});
+const generated = new azure.keyvault.Key("generated", {
+    keyVaultId: exampleKeyVault.id,
+    keyType: "RSA",
+    keySize: 2048,
+    keyOpts: [
+        "decrypt",
+        "encrypt",
+        "sign",
+        "unwrapKey",
+        "verify",
+        "wrapKey",
+    ],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Key Resource {#create}

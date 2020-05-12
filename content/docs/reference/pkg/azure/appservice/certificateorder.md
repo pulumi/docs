@@ -12,9 +12,51 @@ meta_desc: "Explore the CertificateOrder resource of the appservice module, incl
 
 Manages an App Service Certificate Order.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_certificate_order = azure.appservice.CertificateOrder("exampleCertificateOrder",
+    resource_group_name=example_resource_group.name,
+    location="global",
+    distinguished_name="CN=example.com",
+    product_type="Standard")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleCertificateOrder = new azure.appservice.CertificateOrder("exampleCertificateOrder", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: "global",
+    distinguishedName: "CN=example.com",
+    productType: "Standard",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CertificateOrder Resource {#create}

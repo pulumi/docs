@@ -12,9 +12,42 @@ meta_desc: "Explore the GetSubscription function of the core module, including e
 
 Use this data source to access information about an existing Subscription.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_subscription()
+pulumi.export("currentSubscriptionDisplayName", current.display_name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getSubscription({});
+export const currentSubscriptionDisplayName = current.then(current => current.displayName);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetSubscription {#using}

@@ -12,9 +12,95 @@ meta_desc: "Explore the OutputMssql resource of the streamanalytics module, incl
 
 Manages a Stream Analytics Output to Microsoft SQL Server Database.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.get_resource_group(name="example-resources")
+example_job = azure.streamanalytics.get_job(name="example-job",
+    resource_group_name=azurerm_resource_group["example"]["name"])
+example_sql_server = azure.sql.SqlServer("exampleSqlServer",
+    resource_group_name=azurerm_resource_group["example"]["name"],
+    location=azurerm_resource_group["example"]["location"],
+    version="12.0",
+    administrator_login="dbadmin",
+    administrator_login_password="example-password")
+example_database = azure.sql.Database("exampleDatabase",
+    resource_group_name=azurerm_resource_group["example"]["name"],
+    location=azurerm_resource_group["example"]["location"],
+    server_name=example_sql_server.name,
+    requested_service_objective_name="S0",
+    collation="SQL_LATIN1_GENERAL_CP1_CI_AS",
+    max_size_bytes="268435456000",
+    create_mode="Default")
+example_output_mssql = azure.streamanalytics.OutputMssql("exampleOutputMssql",
+    stream_analytics_job_name=azurerm_stream_analytics_job["example"]["name"],
+    resource_group_name=azurerm_stream_analytics_job["example"]["resource_group_name"],
+    server=example_sql_server.fully_qualified_domain_name,
+    user=example_sql_server.administrator_login,
+    password=example_sql_server.administrator_login_password,
+    database=example_database.name,
+    table="ExampleTable")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = azure.core.getResourceGroup({
+    name: "example-resources",
+});
+const exampleJob = azure.streamanalytics.getJob({
+    name: "example-job",
+    resourceGroupName: azurerm_resource_group.example.name,
+});
+const exampleSqlServer = new azure.sql.SqlServer("exampleSqlServer", {
+    resourceGroupName: azurerm_resource_group.example.name,
+    location: azurerm_resource_group.example.location,
+    version: "12.0",
+    administratorLogin: "dbadmin",
+    administratorLoginPassword: "example-password",
+});
+const exampleDatabase = new azure.sql.Database("exampleDatabase", {
+    resourceGroupName: azurerm_resource_group.example.name,
+    location: azurerm_resource_group.example.location,
+    serverName: exampleSqlServer.name,
+    requestedServiceObjectiveName: "S0",
+    collation: "SQL_LATIN1_GENERAL_CP1_CI_AS",
+    maxSizeBytes: "268435456000",
+    createMode: "Default",
+});
+const exampleOutputMssql = new azure.streamanalytics.OutputMssql("exampleOutputMssql", {
+    streamAnalyticsJobName: azurerm_stream_analytics_job.example.name,
+    resourceGroupName: azurerm_stream_analytics_job.example.resource_group_name,
+    server: exampleSqlServer.fullyQualifiedDomainName,
+    user: exampleSqlServer.administratorLogin,
+    password: exampleSqlServer.administratorLoginPassword,
+    database: exampleDatabase.name,
+    table: "ExampleTable",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a OutputMssql Resource {#create}

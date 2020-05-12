@@ -12,6 +12,25 @@ meta_desc: "Explore the GetWorkspace function of the machinelearning module, inc
 
 Use this data source to access information about an existing Machine Learning Workspace.
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const existing = azure.machinelearning.getWorkspace({
+    name: "example-workspace",
+    resourceGroupName: "example-resources",
+});
+export const id = azurerm_machine_learning_workspace.existing.id;
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+existing = azure.machinelearning.get_workspace(name="example-workspace",
+    resource_group_name="example-resources")
+pulumi.export("id", azurerm_machine_learning_workspace["existing"]["id"])
+```
+
 
 
 ## Using GetWorkspace {#using}

@@ -12,9 +12,70 @@ meta_desc: "Explore the EventHubNamespaceAuthorizationRule resource of the event
 
 Manages an Authorization Rule for an Event Hub Namespace.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_event_hub_namespace = azure.eventhub.EventHubNamespace("exampleEventHubNamespace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="Basic",
+    capacity=2,
+    tags={
+        "environment": "Production",
+    })
+example_event_hub_namespace_authorization_rule = azure.eventhub.EventHubNamespaceAuthorizationRule("exampleEventHubNamespaceAuthorizationRule",
+    namespace_name=example_event_hub_namespace.name,
+    resource_group_name=example_resource_group.name,
+    listen=True,
+    send=False,
+    manage=False)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleEventHubNamespace = new azure.eventhub.EventHubNamespace("exampleEventHubNamespace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "Basic",
+    capacity: 2,
+    tags: {
+        environment: "Production",
+    },
+});
+const exampleEventHubNamespaceAuthorizationRule = new azure.eventhub.EventHubNamespaceAuthorizationRule("exampleEventHubNamespaceAuthorizationRule", {
+    namespaceName: exampleEventHubNamespace.name,
+    resourceGroupName: exampleResourceGroup.name,
+    listen: true,
+    send: false,
+    manage: false,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EventHubNamespaceAuthorizationRule Resource {#create}
@@ -472,6 +533,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span>Primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Primary Connection String for the Authorization Rule, which is generated when disaster recovery is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Primary<wbr>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -486,6 +556,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Secondary Connection String for the Authorization Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Secondary Connection String for the Authorization Rule, which is generated when disaster recovery is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -523,6 +602,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span>Primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Primary Connection String for the Authorization Rule, which is generated when disaster recovery is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Primary<wbr>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -537,6 +625,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Secondary Connection String for the Authorization Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Secondary Connection String for the Authorization Rule, which is generated when disaster recovery is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -574,6 +671,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span>primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Primary Connection String for the Authorization Rule, which is generated when disaster recovery is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>primary<wbr>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -588,6 +694,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Secondary Connection String for the Authorization Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Secondary Connection String for the Authorization Rule, which is generated when disaster recovery is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -625,6 +740,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span>primary_<wbr>connection_<wbr>string_<wbr>alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Primary Connection String for the Authorization Rule, which is generated when disaster recovery is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>primary_<wbr>key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -639,6 +763,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Secondary Connection String for the Authorization Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>secondary_<wbr>connection_<wbr>string_<wbr>alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Secondary Connection String for the Authorization Rule, which is generated when disaster recovery is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -669,7 +802,7 @@ Get an existing EventHubNamespaceAuthorizationRule resource's state with the giv
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>listen=None<span class="p">, </span>manage=None<span class="p">, </span>name=None<span class="p">, </span>namespace_name=None<span class="p">, </span>primary_connection_string=None<span class="p">, </span>primary_key=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>secondary_connection_string=None<span class="p">, </span>secondary_key=None<span class="p">, </span>send=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>listen=None<span class="p">, </span>manage=None<span class="p">, </span>name=None<span class="p">, </span>namespace_name=None<span class="p">, </span>primary_connection_string=None<span class="p">, </span>primary_connection_string_alias=None<span class="p">, </span>primary_key=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>secondary_connection_string=None<span class="p">, </span>secondary_connection_string_alias=None<span class="p">, </span>secondary_key=None<span class="p">, </span>send=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -830,6 +963,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Primary Connection String for the Authorization Rule, which is generated when disaster recovery is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Primary<wbr>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -853,6 +995,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Secondary Connection String for the Authorization Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Secondary Connection String for the Authorization Rule, which is generated when disaster recovery is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -927,6 +1078,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Primary Connection String for the Authorization Rule, which is generated when disaster recovery is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Primary<wbr>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -950,6 +1110,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Secondary Connection String for the Authorization Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Secondary Connection String for the Authorization Rule, which is generated when disaster recovery is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1024,6 +1193,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Primary Connection String for the Authorization Rule, which is generated when disaster recovery is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>primary<wbr>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1047,6 +1225,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Secondary Connection String for the Authorization Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Secondary Connection String for the Authorization Rule, which is generated when disaster recovery is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1121,6 +1308,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>primary_<wbr>connection_<wbr>string_<wbr>alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Primary Connection String for the Authorization Rule, which is generated when disaster recovery is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>primary_<wbr>key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1144,6 +1340,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Secondary Connection String for the Authorization Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>secondary_<wbr>connection_<wbr>string_<wbr>alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Secondary Connection String for the Authorization Rule, which is generated when disaster recovery is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

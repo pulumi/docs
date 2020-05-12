@@ -17,6 +17,109 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.frontdoor.FirewallPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.frontdoor.</code><code class="sig-name descname">FirewallPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_block_response_body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_block_response_status_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">managed_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redirect_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Front Door Web Application Firewall Policy instance.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US 2&quot;</span><span class="p">)</span>
+<span class="n">example_firewall_policy</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">frontdoor</span><span class="o">.</span><span class="n">FirewallPolicy</span><span class="p">(</span><span class="s2">&quot;exampleFirewallPolicy&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;Prevention&quot;</span><span class="p">,</span>
+    <span class="n">redirect_url</span><span class="o">=</span><span class="s2">&quot;https://www.contoso.com&quot;</span><span class="p">,</span>
+    <span class="n">custom_block_response_status_code</span><span class="o">=</span><span class="mi">403</span><span class="p">,</span>
+    <span class="n">custom_block_response_body</span><span class="o">=</span><span class="s2">&quot;PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==&quot;</span><span class="p">,</span>
+    <span class="n">custom_rule</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Rule1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;rateLimitDurationInMinutes&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;rateLimitThreshold&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MatchRule&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Block&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;match_condition&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;matchVariable&quot;</span><span class="p">:</span> <span class="s2">&quot;RemoteAddr&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;IPMatch&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;negationCondition&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                <span class="s2">&quot;matchValues&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;192.168.1.0/24&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;10.0.0.0/24&quot;</span><span class="p">,</span>
+                <span class="p">],</span>
+            <span class="p">}],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Rule2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="s2">&quot;rateLimitDurationInMinutes&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;rateLimitThreshold&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MatchRule&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Block&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;match_condition&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;matchVariable&quot;</span><span class="p">:</span> <span class="s2">&quot;RemoteAddr&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;IPMatch&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;negationCondition&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                    <span class="s2">&quot;matchValues&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;192.168.1.0/24&quot;</span><span class="p">],</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;matchVariable&quot;</span><span class="p">:</span> <span class="s2">&quot;RequestHeader&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;selector&quot;</span><span class="p">:</span> <span class="s2">&quot;UserAgent&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;Contains&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;negationCondition&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                    <span class="s2">&quot;matchValues&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;windows&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;transforms&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;Lowercase&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;Trim&quot;</span><span class="p">,</span>
+                    <span class="p">],</span>
+                <span class="p">},</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">managed_rule</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefaultRuleSet&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;exclusion&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;matchVariable&quot;</span><span class="p">:</span> <span class="s2">&quot;QueryStringArgNames&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;Equals&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;selector&quot;</span><span class="p">:</span> <span class="s2">&quot;not_suspicious&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+            <span class="s2">&quot;override&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;ruleGroupName&quot;</span><span class="p">:</span> <span class="s2">&quot;PHP&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                        <span class="s2">&quot;ruleId&quot;</span><span class="p">:</span> <span class="s2">&quot;933100&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                        <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Block&quot;</span><span class="p">,</span>
+                    <span class="p">}],</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;ruleGroupName&quot;</span><span class="p">:</span> <span class="s2">&quot;SQLI&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;exclusion&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                        <span class="s2">&quot;matchVariable&quot;</span><span class="p">:</span> <span class="s2">&quot;QueryStringArgNames&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;Equals&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;selector&quot;</span><span class="p">:</span> <span class="s2">&quot;really_not_suspicious&quot;</span><span class="p">,</span>
+                    <span class="p">}],</span>
+                    <span class="s2">&quot;rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                        <span class="s2">&quot;ruleId&quot;</span><span class="p">:</span> <span class="s2">&quot;942200&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Block&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;exclusion&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                            <span class="s2">&quot;matchVariable&quot;</span><span class="p">:</span> <span class="s2">&quot;QueryStringArgNames&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;Equals&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;selector&quot;</span><span class="p">:</span> <span class="s2">&quot;innocent&quot;</span><span class="p">,</span>
+                        <span class="p">}],</span>
+                    <span class="p">}],</span>
+                <span class="p">},</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Microsoft_BotManagerRuleSet&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -347,7 +450,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_azure.frontdoor.Frontdoor">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.frontdoor.</code><code class="sig-name descname">Frontdoor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_pool_health_probes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_pool_load_balancings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enforce_backend_pools_certificate_name_check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">friendly_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_endpoints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancer_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">routing_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.frontdoor.</code><code class="sig-name descname">Frontdoor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_pool_health_probes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_pool_load_balancings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_pools_send_receive_timeout_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enforce_backend_pools_certificate_name_check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">friendly_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_endpoints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancer_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">routing_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Front Door instance.</p>
 <p>Azure Front Door Service is Microsoft’s highly available and scalable web application acceleration platform and global HTTP(s) load balancer. It provides built-in DDoS protection and application layer security and caching. Front Door enables you to build applications that maximize and automate high-availability and performance for your end-users. Use Front Door with Azure services including Web/Mobile Apps, Cloud Services and Virtual Machines – or combine it with on-premises services for hybrid deployments and smooth cloud migration.</p>
 <p>Below are some of the key scenarios that Azure Front Door Service addresses:</p>
@@ -356,6 +459,50 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>Use Front Door to improve application performance with SSL offload and routing requests to the fastest available application backend.</p></li>
 <li><p>Use Front Door for application layer security and DDoS protection for your application.</p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;EastUS2&quot;</span><span class="p">)</span>
+<span class="n">example_frontdoor</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">frontdoor</span><span class="o">.</span><span class="n">Frontdoor</span><span class="p">(</span><span class="s2">&quot;exampleFrontdoor&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">enforce_backend_pools_certificate_name_check</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">routing_rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;exampleRoutingRule1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;acceptedProtocols&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;Http&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Https&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;patternsToMatches&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/*&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;frontendEndpoints&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;exampleFrontendEndpoint1&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;forwarding_configuration&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;forwardingProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;MatchRequest&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;backendPoolName&quot;</span><span class="p">:</span> <span class="s2">&quot;exampleBackendBing&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">}],</span>
+    <span class="n">backend_pool_load_balancing</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;exampleLoadBalancingSettings1&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">backend_pool_health_probe</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;exampleHealthProbeSetting1&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">backend_pool</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;exampleBackendBing&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;backend&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;hostHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;www.bing.com&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;www.bing.com&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;httpPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+            <span class="s2">&quot;httpsPort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;loadBalancingName&quot;</span><span class="p">:</span> <span class="s2">&quot;exampleLoadBalancingSettings1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;healthProbeName&quot;</span><span class="p">:</span> <span class="s2">&quot;exampleHealthProbeSetting1&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">frontend_endpoint</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;exampleFrontendEndpoint1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hostName&quot;</span><span class="p">:</span> <span class="s2">&quot;example-FrontDoor.azurefd.net&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;customHttpsProvisioningEnabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -364,6 +511,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>backend_pool_health_probes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">backend_pool_health_probe</span></code> block as defined below.</p></li>
 <li><p><strong>backend_pool_load_balancings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">backend_pool_load_balancing</span></code> block as defined below.</p></li>
 <li><p><strong>backend_pools</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">backend_pool</span></code> block as defined below.</p></li>
+<li><p><strong>backend_pools_send_receive_timeout_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the send and receive timeout on forwarding request to the backend. When the timeout is reached, the request fails and returns. Possible values are between <code class="docutils literal notranslate"><span class="pre">0</span></code> - <code class="docutils literal notranslate"><span class="pre">240</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">60</span></code>.</p></li>
 <li><p><strong>enforce_backend_pools_certificate_name_check</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enforce certificate name check on <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code> requests to all backend pools, this setting will have no effect on <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> requests. Permitted values are <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>friendly_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name for the Front Door service.</p></li>
 <li><p><strong>frontend_endpoints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">frontend_endpoint</span></code> block as defined below.</p></li>
@@ -513,6 +661,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_azure.frontdoor.Frontdoor.backend_pools_send_receive_timeout_seconds">
+<code class="sig-name descname">backend_pools_send_receive_timeout_seconds</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.backend_pools_send_receive_timeout_seconds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the send and receive timeout on forwarding request to the backend. When the timeout is reached, the request fails and returns. Possible values are between <code class="docutils literal notranslate"><span class="pre">0</span></code> - <code class="docutils literal notranslate"><span class="pre">240</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">60</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.Frontdoor.cname">
 <code class="sig-name descname">cname</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.cname" title="Permalink to this definition">¶</a></dt>
 <dd><p>The host that each frontendEndpoint must CNAME to.</p>
@@ -616,7 +770,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py method">
 <dt id="pulumi_azure.frontdoor.Frontdoor.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_pool_health_probes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_pool_load_balancings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enforce_backend_pools_certificate_name_check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">friendly_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_endpoints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancer_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">routing_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_pool_health_probes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_pool_load_balancings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_pools_send_receive_timeout_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enforce_backend_pools_certificate_name_check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">friendly_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_endpoints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancer_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">routing_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Frontdoor resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -628,6 +782,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>backend_pool_health_probes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">backend_pool_health_probe</span></code> block as defined below.</p></li>
 <li><p><strong>backend_pool_load_balancings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">backend_pool_load_balancing</span></code> block as defined below.</p></li>
 <li><p><strong>backend_pools</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">backend_pool</span></code> block as defined below.</p></li>
+<li><p><strong>backend_pools_send_receive_timeout_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the send and receive timeout on forwarding request to the backend. When the timeout is reached, the request fails and returns. Possible values are between <code class="docutils literal notranslate"><span class="pre">0</span></code> - <code class="docutils literal notranslate"><span class="pre">240</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">60</span></code>.</p></li>
 <li><p><strong>cname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The host that each frontendEndpoint must CNAME to.</p></li>
 <li><p><strong>enforce_backend_pools_certificate_name_check</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enforce certificate name check on <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code> requests to all backend pools, this setting will have no effect on <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> requests. Permitted values are <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>friendly_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name for the Front Door service.</p></li>

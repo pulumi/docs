@@ -12,9 +12,60 @@ meta_desc: "Explore the Hub resource of the notificationhub module, including ex
 
 Manages a Notification Hub within a Notification Hub Namespace.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="Australia East")
+example_namespace = azure.notificationhub.Namespace("exampleNamespace",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    namespace_type="NotificationHub",
+    sku_name="Free")
+example_hub = azure.notificationhub.Hub("exampleHub",
+    namespace_name=example_namespace.name,
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "Australia East"});
+const exampleNamespace = new azure.notificationhub.Namespace("exampleNamespace", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    namespaceType: "NotificationHub",
+    skuName: "Free",
+});
+const exampleHub = new azure.notificationhub.Hub("exampleHub", {
+    namespaceName: exampleNamespace.name,
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Hub Resource {#create}

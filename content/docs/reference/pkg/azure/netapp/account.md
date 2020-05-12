@@ -36,6 +36,23 @@ const exampleAccount = new azure.netapp.Account("example", {
     resourceGroupName: exampleResourceGroup.name,
 });
 ```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.netapp.Account("exampleAccount",
+    active_directory={
+        "dnsServers": ["1.2.3.4"],
+        "domain": "westcentralus.com",
+        "organizationalUnit": "OU=FirstLevel",
+        "password": "aduserpwd",
+        "smbServerName": "SMBSERVER",
+        "username": "aduser",
+    },
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+```
 
 
 

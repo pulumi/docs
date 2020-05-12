@@ -12,9 +12,283 @@ meta_desc: "Explore the Dashboard resource of the dashboard module, including ex
 
 Manages a shared dashboard in the Azure Portal.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+config = pulumi.Config()
+md_content = config.get("mdContent")
+if md_content is None:
+    md_content = "# Hello all :)"
+video_link = config.get("videoLink")
+if video_link is None:
+    video_link = "https://www.youtube.com/watch?v=......"
+current = azure.core.get_subscription()
+my_group = azure.core.ResourceGroup("my-group", location="uksouth")
+my_board = azure.dashboard.Dashboard("my-board",
+    resource_group_name=my_group.name,
+    location=my_group.location,
+    tags={
+        "source": "managed",
+    },
+    dashboard_properties=f"""{{
+   "lenses": {{
+        "0": {{
+            "order": 0,
+            "parts": {{
+                "0": {{
+                    "position": {{
+                        "x": 0,
+                        "y": 0,
+                        "rowSpan": 2,
+                        "colSpan": 3
+                    }},
+                    "metadata": {{
+                        "inputs": [],
+                        "type": "Extension/HubsExtension/PartType/MarkdownPart",
+                        "settings": {{
+                            "content": {{
+                                "settings": {{
+                                    "content": "{md_content}",
+                                    "subtitle": "",
+                                    "title": ""
+                                }}
+                            }}
+                        }}
+                    }}
+                }},               
+                "1": {{
+                    "position": {{
+                        "x": 5,
+                        "y": 0,
+                        "rowSpan": 4,
+                        "colSpan": 6
+                    }},
+                    "metadata": {{
+                        "inputs": [],
+                        "type": "Extension/HubsExtension/PartType/VideoPart",
+                        "settings": {{
+                            "content": {{
+                                "settings": {{
+                                    "title": "Important Information",
+                                    "subtitle": "",
+                                    "src": "{video_link}",
+                                    "autoplay": true
+                                }}
+                            }}
+                        }}
+                    }}
+                }},
+                "2": {{
+                    "position": {{
+                        "x": 0,
+                        "y": 4,
+                        "rowSpan": 4,
+                        "colSpan": 6
+                    }},
+                    "metadata": {{
+                        "inputs": [
+                            {{
+                                "name": "ComponentId",
+                                "value": "/subscriptions/{current.subscription_id}/resourceGroups/myRG/providers/microsoft.insights/components/myWebApp"
+                            }}
+                        ],
+                        "type": "Extension/AppInsightsExtension/PartType/AppMapGalPt",
+                        "settings": {{}},
+                        "asset": {{
+                            "idInputName": "ComponentId",
+                            "type": "ApplicationInsights"
+                        }}
+                    }}
+                }}              
+            }}
+        }}
+    }},
+    "metadata": {{
+        "model": {{
+            "timeRange": {{
+                "value": {{
+                    "relative": {{
+                        "duration": 24,
+                        "timeUnit": 1
+                    }}
+                }},
+                "type": "MsPortalFx.Composition.Configuration.ValueTypes.TimeRange"
+            }},
+            "filterLocale": {{
+                "value": "en-us"
+            }},
+            "filters": {{
+                "value": {{
+                    "MsPortalFx_TimeRange": {{
+                        "model": {{
+                            "format": "utc",
+                            "granularity": "auto",
+                            "relative": "24h"
+                        }},
+                        "displayCache": {{
+                            "name": "UTC Time",
+                            "value": "Past 24 hours"
+                        }},
+                        "filteredPartIds": [
+                            "StartboardPart-UnboundPart-ae44fef5-76b8-46b0-86f0-2b3f47bad1c7"
+                        ]
+                    }}
+                }}
+            }}
+        }}
+    }}
+}}
+""")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const config = new pulumi.Config();
+const mdContent = config.get("mdContent") || "# Hello all :)";
+const videoLink = config.get("videoLink") || "https://www.youtube.com/watch?v=......";
+const current = azure.core.getSubscription({});
+const my-group = new azure.core.ResourceGroup("my-group", {location: "uksouth"});
+const my-board = new azure.dashboard.Dashboard("my-board", {
+    resourceGroupName: my-group.name,
+    location: my-group.location,
+    tags: {
+        source: "managed",
+    },
+    dashboardProperties: current.then(current => `{
+   "lenses": {
+        "0": {
+            "order": 0,
+            "parts": {
+                "0": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "rowSpan": 2,
+                        "colSpan": 3
+                    },
+                    "metadata": {
+                        "inputs": [],
+                        "type": "Extension/HubsExtension/PartType/MarkdownPart",
+                        "settings": {
+                            "content": {
+                                "settings": {
+                                    "content": "${mdContent}",
+                                    "subtitle": "",
+                                    "title": ""
+                                }
+                            }
+                        }
+                    }
+                },               
+                "1": {
+                    "position": {
+                        "x": 5,
+                        "y": 0,
+                        "rowSpan": 4,
+                        "colSpan": 6
+                    },
+                    "metadata": {
+                        "inputs": [],
+                        "type": "Extension/HubsExtension/PartType/VideoPart",
+                        "settings": {
+                            "content": {
+                                "settings": {
+                                    "title": "Important Information",
+                                    "subtitle": "",
+                                    "src": "${videoLink}",
+                                    "autoplay": true
+                                }
+                            }
+                        }
+                    }
+                },
+                "2": {
+                    "position": {
+                        "x": 0,
+                        "y": 4,
+                        "rowSpan": 4,
+                        "colSpan": 6
+                    },
+                    "metadata": {
+                        "inputs": [
+                            {
+                                "name": "ComponentId",
+                                "value": "/subscriptions/${current.subscriptionId}/resourceGroups/myRG/providers/microsoft.insights/components/myWebApp"
+                            }
+                        ],
+                        "type": "Extension/AppInsightsExtension/PartType/AppMapGalPt",
+                        "settings": {},
+                        "asset": {
+                            "idInputName": "ComponentId",
+                            "type": "ApplicationInsights"
+                        }
+                    }
+                }              
+            }
+        }
+    },
+    "metadata": {
+        "model": {
+            "timeRange": {
+                "value": {
+                    "relative": {
+                        "duration": 24,
+                        "timeUnit": 1
+                    }
+                },
+                "type": "MsPortalFx.Composition.Configuration.ValueTypes.TimeRange"
+            },
+            "filterLocale": {
+                "value": "en-us"
+            },
+            "filters": {
+                "value": {
+                    "MsPortalFx_TimeRange": {
+                        "model": {
+                            "format": "utc",
+                            "granularity": "auto",
+                            "relative": "24h"
+                        },
+                        "displayCache": {
+                            "name": "UTC Time",
+                            "value": "Past 24 hours"
+                        },
+                        "filteredPartIds": [
+                            "StartboardPart-UnboundPart-ae44fef5-76b8-46b0-86f0-2b3f47bad1c7"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
+`),
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Dashboard Resource {#create}

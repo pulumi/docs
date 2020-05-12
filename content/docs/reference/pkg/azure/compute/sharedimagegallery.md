@@ -12,9 +12,57 @@ meta_desc: "Explore the SharedImageGallery resource of the compute module, inclu
 
 Manages a Shared Image Gallery.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_shared_image_gallery = azure.compute.SharedImageGallery("exampleSharedImageGallery",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    description="Shared images and things.",
+    tags={
+        "Hello": "There",
+        "World": "Example",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleSharedImageGallery = new azure.compute.SharedImageGallery("exampleSharedImageGallery", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    description: "Shared images and things.",
+    tags: {
+        Hello: "There",
+        World: "Example",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SharedImageGallery Resource {#create}

@@ -12,9 +12,68 @@ meta_desc: "Explore the TriggerCustom resource of the logicapps module, includin
 
 Manages a Custom Trigger within a Logic App Workflow
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="East US")
+example_workflow = azure.logicapps.Workflow("exampleWorkflow",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_trigger_custom = azure.logicapps.TriggerCustom("exampleTriggerCustom",
+    logic_app_id=example_workflow.id,
+    body="""{
+  "recurrence": {
+    "frequency": "Day",
+    "interval": 1
+  },
+  "type": "Recurrence"
+}
+""")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "East US"});
+const exampleWorkflow = new azure.logicapps.Workflow("exampleWorkflow", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleTriggerCustom = new azure.logicapps.TriggerCustom("exampleTriggerCustom", {
+    logicAppId: exampleWorkflow.id,
+    body: `{
+  "recurrence": {
+    "frequency": "Day",
+    "interval": 1
+  },
+  "type": "Recurrence"
+}
+`,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TriggerCustom Resource {#create}

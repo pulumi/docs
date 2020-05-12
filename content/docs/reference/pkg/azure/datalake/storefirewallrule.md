@@ -12,9 +12,58 @@ meta_desc: "Explore the StoreFirewallRule resource of the datalake module, inclu
 
 Manages a Azure Data Lake Store Firewall Rule.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
+example_store = azure.datalake.Store("exampleStore",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location)
+example_store_firewall_rule = azure.datalake.StoreFirewallRule("exampleStoreFirewallRule",
+    account_name=example_store.name,
+    resource_group_name=example_resource_group.name,
+    start_ip_address="1.2.3.4",
+    end_ip_address="2.3.4.5")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "northeurope"});
+const exampleStore = new azure.datalake.Store("exampleStore", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+});
+const exampleStoreFirewallRule = new azure.datalake.StoreFirewallRule("exampleStoreFirewallRule", {
+    accountName: exampleStore.name,
+    resourceGroupName: exampleResourceGroup.name,
+    startIpAddress: "1.2.3.4",
+    endIpAddress: "2.3.4.5",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a StoreFirewallRule Resource {#create}

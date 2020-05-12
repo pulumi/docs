@@ -12,9 +12,101 @@ meta_desc: "Explore the CaaRecord resource of the dns module, including examples
 
 Enables you to manage DNS CAA Records within Azure DNS.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_zone = azure.dns.Zone("exampleZone", resource_group_name=example_resource_group.name)
+example_caa_record = azure.dns.CaaRecord("exampleCaaRecord",
+    zone_name=example_zone.name,
+    resource_group_name=example_resource_group.name,
+    ttl=300,
+    record=[
+        {
+            "flags": 0,
+            "tag": "issue",
+            "value": "example.com",
+        },
+        {
+            "flags": 0,
+            "tag": "issue",
+            "value": "example.net",
+        },
+        {
+            "flags": 0,
+            "tag": "issuewild",
+            "value": ";",
+        },
+        {
+            "flags": 0,
+            "tag": "iodef",
+            "value": "mailto:user@nonexisting.tld",
+        },
+    ],
+    tags={
+        "Environment": "Production",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleZone = new azure.dns.Zone("exampleZone", {resourceGroupName: exampleResourceGroup.name});
+const exampleCaaRecord = new azure.dns.CaaRecord("exampleCaaRecord", {
+    zoneName: exampleZone.name,
+    resourceGroupName: exampleResourceGroup.name,
+    ttl: 300,
+    record: [
+        {
+            flags: 0,
+            tag: "issue",
+            value: "example.com",
+        },
+        {
+            flags: 0,
+            tag: "issue",
+            value: "example.net",
+        },
+        {
+            flags: 0,
+            tag: "issuewild",
+            value: ";",
+        },
+        {
+            flags: 0,
+            tag: "iodef",
+            value: "mailto:user@nonexisting.tld",
+        },
+    ],
+    tags: {
+        Environment: "Production",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CaaRecord Resource {#create}

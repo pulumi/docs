@@ -28,7 +28,25 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_sql_server = azure.sql.SqlServer("exampleSqlServer",
+    administrator_login="4dm1n157r470r",
+    administrator_login_password="4-v3ry-53cr37-p455w0rd",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    version="12.0")
+example_active_directory_administrator = azure.sql.ActiveDirectoryAdministrator("exampleActiveDirectoryAdministrator",
+    login="sqladmin",
+    object_id=current.object_id,
+    resource_group_name=example_resource_group.name,
+    server_name=example_sql_server.name,
+    tenant_id=current.tenant_id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

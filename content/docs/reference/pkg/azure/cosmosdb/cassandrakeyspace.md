@@ -12,9 +12,80 @@ meta_desc: "Explore the CassandraKeyspace resource of the cosmosdb module, inclu
 
 Manages a Cassandra KeySpace within a Cosmos DB Account.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.get_resource_group(name="tflex-cosmosdb-account-rg")
+example_account = azure.cosmosdb.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    offer_type="Standard",
+    capabilities=[{
+        "name": "EnableCassandra",
+    }],
+    consistency_policy={
+        "consistencyLevel": "Strong",
+    },
+    geo_location=[{
+        "location": "West US",
+        "failoverPriority": 0,
+    }])
+example_cassandra_keyspace = azure.cosmosdb.CassandraKeyspace("exampleCassandraKeyspace",
+    resource_group_name=example_account.resource_group_name,
+    account_name=example_account.name,
+    throughput=400)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = azure.core.getResourceGroup({
+    name: "tflex-cosmosdb-account-rg",
+});
+const exampleAccount = new azure.cosmosdb.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.then(exampleResourceGroup => exampleResourceGroup.name),
+    location: exampleResourceGroup.then(exampleResourceGroup => exampleResourceGroup.location),
+    offerType: "Standard",
+    capabilities: [{
+        name: "EnableCassandra",
+    }],
+    consistency_policy: {
+        consistencyLevel: "Strong",
+    },
+    geo_location: [{
+        location: "West US",
+        failoverPriority: 0,
+    }],
+});
+const exampleCassandraKeyspace = new azure.cosmosdb.CassandraKeyspace("exampleCassandraKeyspace", {
+    resourceGroupName: exampleAccount.resourceGroupName,
+    accountName: exampleAccount.name,
+    throughput: 400,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CassandraKeyspace Resource {#create}

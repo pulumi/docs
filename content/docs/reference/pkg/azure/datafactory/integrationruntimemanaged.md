@@ -12,9 +12,58 @@ meta_desc: "Explore the IntegrationRuntimeManaged resource of the datafactory mo
 
 Manages an Azure Data Factory Managed Integration Runtime.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
+example_factory = azure.datafactory.Factory("exampleFactory",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_integration_runtime_managed = azure.datafactory.IntegrationRuntimeManaged("exampleIntegrationRuntimeManaged",
+    data_factory_name=example_factory.name,
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    node_size="Standard_D8_v3")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "northeurope"});
+const exampleFactory = new azure.datafactory.Factory("exampleFactory", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleIntegrationRuntimeManaged = new azure.datafactory.IntegrationRuntimeManaged("exampleIntegrationRuntimeManaged", {
+    dataFactoryName: exampleFactory.name,
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    nodeSize: "Standard_D8_v3",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IntegrationRuntimeManaged Resource {#create}

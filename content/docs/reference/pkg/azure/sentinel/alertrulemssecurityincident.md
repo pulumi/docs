@@ -12,9 +12,60 @@ meta_desc: "Explore the AlertRuleMsSecurityIncident resource of the sentinel mod
 
 Manages a Sentinel MS Security Incident Alert Rule.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_analytics_workspace = azure.operationalinsights.AnalyticsWorkspace("exampleAnalyticsWorkspace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="pergb2018")
+example_alert_rule_ms_security_incident = azure.sentinel.AlertRuleMsSecurityIncident("exampleAlertRuleMsSecurityIncident",
+    log_analytics_workspace_id=example_analytics_workspace.id,
+    product_filter="Microsoft Cloud App Security",
+    display_name="example rule",
+    severity_filters=["High"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAnalyticsWorkspace = new azure.operationalinsights.AnalyticsWorkspace("exampleAnalyticsWorkspace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "pergb2018",
+});
+const exampleAlertRuleMsSecurityIncident = new azure.sentinel.AlertRuleMsSecurityIncident("exampleAlertRuleMsSecurityIncident", {
+    logAnalyticsWorkspaceId: exampleAnalyticsWorkspace.id,
+    productFilter: "Microsoft Cloud App Security",
+    displayName: "example rule",
+    severityFilters: ["High"],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AlertRuleMsSecurityIncident Resource {#create}

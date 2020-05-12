@@ -12,9 +12,47 @@ meta_desc: "Explore the VirtualWan resource of the network module, including exa
 
 Manages a Virtual WAN.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_wan = azure.network.VirtualWan("exampleVirtualWan",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualWan = new azure.network.VirtualWan("exampleVirtualWan", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualWan Resource {#create}

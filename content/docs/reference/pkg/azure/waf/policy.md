@@ -12,9 +12,193 @@ meta_desc: "Explore the Policy resource of the waf module, including examples, i
 
 Manages a Azure Web Application Firewall Policy instance.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US 2")
+example_policy = azure.waf.Policy("examplePolicy",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    custom_rules=[
+        {
+            "name": "Rule1",
+            "priority": 1,
+            "ruleType": "MatchRule",
+            "match_conditions": [{
+                "match_variables": [{
+                    "variableName": "RemoteAddr",
+                }],
+                "operator": "IPMatch",
+                "negationCondition": False,
+                "matchValues": [
+                    "192.168.1.0/24",
+                    "10.0.0.0/24",
+                ],
+            }],
+            "action": "Block",
+        },
+        {
+            "name": "Rule2",
+            "priority": 2,
+            "ruleType": "MatchRule",
+            "match_conditions": [
+                {
+                    "match_variables": [{
+                        "variableName": "RemoteAddr",
+                    }],
+                    "operator": "IPMatch",
+                    "negationCondition": False,
+                    "matchValues": ["192.168.1.0/24"],
+                },
+                {
+                    "match_variables": [{
+                        "variableName": "RequestHeaders",
+                        "selector": "UserAgent",
+                    }],
+                    "operator": "Contains",
+                    "negationCondition": False,
+                    "matchValues": ["Windows"],
+                },
+            ],
+            "action": "Block",
+        },
+    ],
+    policy_settings={
+        "enabled": True,
+        "mode": "Prevention",
+    },
+    managed_rules={
+        "exclusion": [
+            {
+                "matchVariable": "RequestHeaderNames",
+                "selector": "x-company-secret-header",
+                "selectorMatchOperator": "Equals",
+            },
+            {
+                "matchVariable": "RequestCookieNames",
+                "selector": "too-tasty",
+                "selectorMatchOperator": "EndsWith",
+            },
+        ],
+        "managed_rule_set": [{
+            "ruleSetType": "OWASP",
+            "ruleSetVersion": "3.1",
+            "rule_group_override": [{
+                "ruleGroupName": "REQUEST-920-PROTOCOL-ENFORCEMENT",
+                "disabledRules": [
+                    "920300",
+                    "920440",
+                ],
+            }],
+        }],
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US 2"});
+const examplePolicy = new azure.waf.Policy("examplePolicy", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    custom_rules: [
+        {
+            name: "Rule1",
+            priority: 1,
+            ruleType: "MatchRule",
+            match_conditions: [{
+                match_variables: [{
+                    variableName: "RemoteAddr",
+                }],
+                operator: "IPMatch",
+                negationCondition: false,
+                matchValues: [
+                    "192.168.1.0/24",
+                    "10.0.0.0/24",
+                ],
+            }],
+            action: "Block",
+        },
+        {
+            name: "Rule2",
+            priority: 2,
+            ruleType: "MatchRule",
+            match_conditions: [
+                {
+                    match_variables: [{
+                        variableName: "RemoteAddr",
+                    }],
+                    operator: "IPMatch",
+                    negationCondition: false,
+                    matchValues: ["192.168.1.0/24"],
+                },
+                {
+                    match_variables: [{
+                        variableName: "RequestHeaders",
+                        selector: "UserAgent",
+                    }],
+                    operator: "Contains",
+                    negationCondition: false,
+                    matchValues: ["Windows"],
+                },
+            ],
+            action: "Block",
+        },
+    ],
+    policy_settings: {
+        enabled: true,
+        mode: "Prevention",
+    },
+    managed_rules: {
+        exclusion: [
+            {
+                matchVariable: "RequestHeaderNames",
+                selector: "x-company-secret-header",
+                selectorMatchOperator: "Equals",
+            },
+            {
+                matchVariable: "RequestCookieNames",
+                selector: "too-tasty",
+                selectorMatchOperator: "EndsWith",
+            },
+        ],
+        managed_rule_set: [{
+            ruleSetType: "OWASP",
+            ruleSetVersion: "3.1",
+            rule_group_override: [{
+                ruleGroupName: "REQUEST-920-PROTOCOL-ENFORCEMENT",
+                disabledRules: [
+                    "920300",
+                    "920440",
+                ],
+            }],
+        }],
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Policy Resource {#create}

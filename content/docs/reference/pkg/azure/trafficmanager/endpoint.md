@@ -12,11 +12,103 @@ meta_desc: "Explore the Endpoint resource of the trafficmanager module, includin
 
 Manages a Traffic Manager Endpoint.
 
-{{% examples %}}
-{{% /examples %}}
+
 
 Deprecated: azure.trafficmanager.Endpoint has been deprecated in favour of azure.network.TrafficManagerEndpoint
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+import pulumi_random as random
+
+server = random.RandomId("server",
+    keepers={
+        "azi_id": 1,
+    },
+    byte_length=8)
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_traffic_manager_profile = azure.network.TrafficManagerProfile("exampleTrafficManagerProfile",
+    resource_group_name=example_resource_group.name,
+    traffic_routing_method="Weighted",
+    dns_config={
+        "relativeName": server.hex,
+        "ttl": 100,
+    },
+    monitor_config={
+        "protocol": "http",
+        "port": 80,
+        "path": "/",
+        "intervalInSeconds": 30,
+        "timeoutInSeconds": 9,
+        "toleratedNumberOfFailures": 3,
+    },
+    tags={
+        "environment": "Production",
+    })
+example_traffic_manager_endpoint = azure.network.TrafficManagerEndpoint("exampleTrafficManagerEndpoint",
+    resource_group_name=example_resource_group.name,
+    profile_name=example_traffic_manager_profile.name,
+    type="externalEndpoints",
+    weight=100)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * as random from "@pulumi/random";
+
+const server = new random.RandomId("server", {
+    keepers: {
+        azi_id: 1,
+    },
+    byteLength: 8,
+});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleTrafficManagerProfile = new azure.network.TrafficManagerProfile("exampleTrafficManagerProfile", {
+    resourceGroupName: exampleResourceGroup.name,
+    trafficRoutingMethod: "Weighted",
+    dns_config: {
+        relativeName: server.hex,
+        ttl: 100,
+    },
+    monitor_config: {
+        protocol: "http",
+        port: 80,
+        path: "/",
+        intervalInSeconds: 30,
+        timeoutInSeconds: 9,
+        toleratedNumberOfFailures: 3,
+    },
+    tags: {
+        environment: "Production",
+    },
+});
+const exampleTrafficManagerEndpoint = new azure.network.TrafficManagerEndpoint("exampleTrafficManagerEndpoint", {
+    resourceGroupName: exampleResourceGroup.name,
+    profileName: exampleTrafficManagerProfile.name,
+    type: "externalEndpoints",
+    weight: 100,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 <p class="resource-deprecated">Deprecated: {{% md %}}azure.trafficmanager.Endpoint has been deprecated in favour of azure.network.TrafficManagerEndpoint{{% /md %}}</p>
 
 

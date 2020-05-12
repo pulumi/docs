@@ -12,6 +12,27 @@ meta_desc: "Explore the GetVirtualHub function of the network module, including 
 
 Uses this data source to access information about an existing Virtual Hub.
 
+## Virtual Hub Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.network.getVirtualHub({
+    name: "example-hub",
+    resourceGroupName: "example-resources",
+});
+export const virtualHubId = example.then(example => example.id);
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.network.get_virtual_hub(name="example-hub",
+    resource_group_name="example-resources")
+pulumi.export("virtualHubId", example.id)
+```
+
 
 
 ## Using GetVirtualHub {#using}

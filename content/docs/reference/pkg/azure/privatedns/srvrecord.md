@@ -12,9 +12,85 @@ meta_desc: "Explore the SRVRecord resource of the privatedns module, including e
 
 Enables you to manage DNS SRV Records within Azure Private DNS.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.core.ResourceGroup("example", location="West US")
+test_zone = azure.privatedns.Zone("testZone", resource_group_name=azurerm_resource_group["test"]["name"])
+test_srv_record = azure.privatedns.SRVRecord("testSRVRecord",
+    resource_group_name=azurerm_resource_group["test"]["name"],
+    zone_name=test_zone.name,
+    ttl=300,
+    record=[
+        {
+            "priority": 1,
+            "weight": 5,
+            "port": 8080,
+            "target": "target1.contoso.com",
+        },
+        {
+            "priority": 10,
+            "weight": 10,
+            "port": 8080,
+            "target": "target2.contoso.com",
+        },
+    ],
+    tags={
+        "Environment": "Production",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = new azure.core.ResourceGroup("example", {location: "West US"});
+const testZone = new azure.privatedns.Zone("testZone", {resourceGroupName: azurerm_resource_group.test.name});
+const testSRVRecord = new azure.privatedns.SRVRecord("testSRVRecord", {
+    resourceGroupName: azurerm_resource_group.test.name,
+    zoneName: testZone.name,
+    ttl: 300,
+    record: [
+        {
+            priority: 1,
+            weight: 5,
+            port: 8080,
+            target: "target1.contoso.com",
+        },
+        {
+            priority: 10,
+            weight: 10,
+            port: 8080,
+            target: "target2.contoso.com",
+        },
+    ],
+    tags: {
+        Environment: "Production",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SRVRecord Resource {#create}

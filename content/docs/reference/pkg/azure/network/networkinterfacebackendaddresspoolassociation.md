@@ -12,9 +12,115 @@ meta_desc: "Explore the NetworkInterfaceBackendAddressPoolAssociation resource o
 
 Manages the association between a Network Interface and a Load Balancer's Backend Address Pool.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.2.0/24")
+example_public_ip = azure.network.PublicIp("examplePublicIp",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    allocation_method="Static")
+example_load_balancer = azure.lb.LoadBalancer("exampleLoadBalancer",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    frontend_ip_configuration=[{
+        "name": "primary",
+        "publicIpAddressId": example_public_ip.id,
+    }])
+example_backend_address_pool = azure.lb.BackendAddressPool("exampleBackendAddressPool",
+    resource_group_name=example_resource_group.name,
+    loadbalancer_id=example_load_balancer.id)
+example_network_interface = azure.network.NetworkInterface("exampleNetworkInterface",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    ip_configuration=[{
+        "name": "testconfiguration1",
+        "subnetId": example_subnet.id,
+        "privateIpAddressAllocation": "Dynamic",
+    }])
+example_network_interface_backend_address_pool_association = azure.network.NetworkInterfaceBackendAddressPoolAssociation("exampleNetworkInterfaceBackendAddressPoolAssociation",
+    network_interface_id=example_network_interface.id,
+    ip_configuration_name="testconfiguration1",
+    backend_address_pool_id=example_backend_address_pool.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+});
+const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    allocationMethod: "Static",
+});
+const exampleLoadBalancer = new azure.lb.LoadBalancer("exampleLoadBalancer", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    frontend_ip_configuration: [{
+        name: "primary",
+        publicIpAddressId: examplePublicIp.id,
+    }],
+});
+const exampleBackendAddressPool = new azure.lb.BackendAddressPool("exampleBackendAddressPool", {
+    resourceGroupName: exampleResourceGroup.name,
+    loadbalancerId: exampleLoadBalancer.id,
+});
+const exampleNetworkInterface = new azure.network.NetworkInterface("exampleNetworkInterface", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    ip_configuration: [{
+        name: "testconfiguration1",
+        subnetId: exampleSubnet.id,
+        privateIpAddressAllocation: "Dynamic",
+    }],
+});
+const exampleNetworkInterfaceBackendAddressPoolAssociation = new azure.network.NetworkInterfaceBackendAddressPoolAssociation("exampleNetworkInterfaceBackendAddressPoolAssociation", {
+    networkInterfaceId: exampleNetworkInterface.id,
+    ipConfigurationName: "testconfiguration1",
+    backendAddressPoolId: exampleBackendAddressPool.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NetworkInterfaceBackendAddressPoolAssociation Resource {#create}

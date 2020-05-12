@@ -12,9 +12,46 @@ meta_desc: "Explore the GetDefinition function of the managedapplication module,
 
 Uses this data source to access information about an existing Managed Application Definition.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.managedapplication.get_definition(name="example-managedappdef",
+    resource_group_name="example-resources")
+pulumi.export("id", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.managedapplication.getDefinition({
+    name: "example-managedappdef",
+    resourceGroupName: "example-resources",
+});
+export const id = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetDefinition {#using}

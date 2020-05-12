@@ -12,9 +12,46 @@ meta_desc: "Explore the GetDnsZone function of the privatedns module, including 
 
 Use this data source to access information about an existing Private DNS Zone.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.privatedns.get_dns_zone(name="contoso.internal",
+    resource_group_name="contoso-dns")
+pulumi.export("privateDnsZoneId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.privatedns.getDnsZone({
+    name: "contoso.internal",
+    resourceGroupName: "contoso-dns",
+});
+export const privateDnsZoneId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetDnsZone {#using}

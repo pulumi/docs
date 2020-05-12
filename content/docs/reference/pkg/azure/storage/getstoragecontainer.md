@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.storage.get_storage_container(name="example-container-name",
+    storage_account_name="example-storage-account-name")
+```
 {{% /example %}}
 
 {{% example typescript %}}

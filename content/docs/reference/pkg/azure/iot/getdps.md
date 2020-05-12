@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.iot.get_dps(name="iot_hub_dps_test",
+    resource_group_name="iothub_dps_rg")
+```
 {{% /example %}}
 
 {{% example typescript %}}

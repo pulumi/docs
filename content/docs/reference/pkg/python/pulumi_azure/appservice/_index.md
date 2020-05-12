@@ -20,6 +20,26 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>Note:</strong> When using Slots - the <code class="docutils literal notranslate"><span class="pre">app_settings</span></code>, <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> and <code class="docutils literal notranslate"><span class="pre">site_config</span></code> blocks on the <code class="docutils literal notranslate"><span class="pre">appservice.AppService</span></code> resource will be overwritten when promoting a Slot using the <code class="docutils literal notranslate"><span class="pre">appservice.ActiveSlot</span></code> resource.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+<span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
+
+<span class="n">server</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">RandomId</span><span class="p">(</span><span class="s2">&quot;server&quot;</span><span class="p">)</span>
+<span class="c1"># ...</span>
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">)</span>
+<span class="c1"># ...</span>
+<span class="n">example_plan</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">Plan</span><span class="p">(</span><span class="s2">&quot;examplePlan&quot;</span><span class="p">)</span>
+<span class="c1"># ...</span>
+<span class="n">example_app_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">AppService</span><span class="p">(</span><span class="s2">&quot;exampleAppService&quot;</span><span class="p">)</span>
+<span class="c1"># ...</span>
+<span class="n">example_slot</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">Slot</span><span class="p">(</span><span class="s2">&quot;exampleSlot&quot;</span><span class="p">)</span>
+<span class="c1"># ...</span>
+<span class="n">example_active_slot</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">ActiveSlot</span><span class="p">(</span><span class="s2">&quot;exampleActiveSlot&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">app_service_name</span><span class="o">=</span><span class="n">example_app_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">app_service_slot_name</span><span class="o">=</span><span class="n">example_slot</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -113,6 +133,35 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> When using Slots - the <code class="docutils literal notranslate"><span class="pre">app_settings</span></code>, <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> and <code class="docutils literal notranslate"><span class="pre">site_config</span></code> blocks on the <code class="docutils literal notranslate"><span class="pre">appservice.AppService</span></code> resource will be overwritten when promoting a Slot using the <code class="docutils literal notranslate"><span class="pre">appservice.ActiveSlot</span></code> resource.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_plan</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">Plan</span><span class="p">(</span><span class="s2">&quot;examplePlan&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_app_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">AppService</span><span class="p">(</span><span class="s2">&quot;exampleAppService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">app_service_plan_id</span><span class="o">=</span><span class="n">example_plan</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">site_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;dotnetFrameworkVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;v4.0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;scmType&quot;</span><span class="p">:</span> <span class="s2">&quot;LocalGit&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">app_settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;SOME_KEY&quot;</span><span class="p">:</span> <span class="s2">&quot;some-value&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">connection_string</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Database&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;SQLServer&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Server=some-server.mydomain.com;Integrated Security=SSPI&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -256,10 +305,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultDocuments</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The ordering of default documents to load, if an address isn’t specified.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dotnetFrameworkVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The version of the .net framework’s CLR used in this App Service. Possible values are <code class="docutils literal notranslate"><span class="pre">v2.0</span></code> (which will use the latest version of the .net framework for the .net CLR v2 - currently <code class="docutils literal notranslate"><span class="pre">.net</span> <span class="pre">3.5</span></code>) and <code class="docutils literal notranslate"><span class="pre">v4.0</span></code> (which corresponds to the latest version of the .net CLR v4 - which at the time of writing is <code class="docutils literal notranslate"><span class="pre">.net</span> <span class="pre">4.7.1</span></code>). <a class="reference external" href="https://en.wikipedia.org/wiki/.NET_Framework_version_history#Overview">For more information on which .net CLR version to use based on the .net framework you’re targeting - please see this table</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">v4.0</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ftpsState</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - State of FTP / FTPS service for this App Service. Possible values include: <code class="docutils literal notranslate"><span class="pre">AllAllowed</span></code>, <code class="docutils literal notranslate"><span class="pre">FtpsOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">healthCheckPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The health check path to be pinged by App Service. <a class="reference external" href="https://github.com/projectkudu/kudu/wiki/Health-Check-(Preview">For more information - please see the corresponding Kudu Wiki page</a>).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">http2Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is HTTP2 Enabled on this App Service? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipRestrictions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of objects representing ip restrictions as defined below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP Address used for this IP Restriction in CIDR notation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name for this IP Restriction.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkSubnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Virtual Network Subnet ID used for this IP Restriction.</p></li>
 </ul>
 </li>
@@ -506,10 +558,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultDocuments</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The ordering of default documents to load, if an address isn’t specified.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dotnetFrameworkVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The version of the .net framework’s CLR used in this App Service. Possible values are <code class="docutils literal notranslate"><span class="pre">v2.0</span></code> (which will use the latest version of the .net framework for the .net CLR v2 - currently <code class="docutils literal notranslate"><span class="pre">.net</span> <span class="pre">3.5</span></code>) and <code class="docutils literal notranslate"><span class="pre">v4.0</span></code> (which corresponds to the latest version of the .net CLR v4 - which at the time of writing is <code class="docutils literal notranslate"><span class="pre">.net</span> <span class="pre">4.7.1</span></code>). <a class="reference external" href="https://en.wikipedia.org/wiki/.NET_Framework_version_history#Overview">For more information on which .net CLR version to use based on the .net framework you’re targeting - please see this table</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">v4.0</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ftpsState</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - State of FTP / FTPS service for this App Service. Possible values include: <code class="docutils literal notranslate"><span class="pre">AllAllowed</span></code>, <code class="docutils literal notranslate"><span class="pre">FtpsOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">healthCheckPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The health check path to be pinged by App Service. <a class="reference external" href="https://github.com/projectkudu/kudu/wiki/Health-Check-(Preview">For more information - please see the corresponding Kudu Wiki page</a>).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">http2Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is HTTP2 Enabled on this App Service? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipRestrictions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of objects representing ip restrictions as defined below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP Address used for this IP Restriction in CIDR notation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name for this IP Restriction.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkSubnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Virtual Network Subnet ID used for this IP Restriction.</p></li>
 </ul>
 </li>
@@ -725,10 +780,13 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultDocuments</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The ordering of default documents to load, if an address isn’t specified.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dotnetFrameworkVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The version of the .net framework’s CLR used in this App Service. Possible values are <code class="docutils literal notranslate"><span class="pre">v2.0</span></code> (which will use the latest version of the .net framework for the .net CLR v2 - currently <code class="docutils literal notranslate"><span class="pre">.net</span> <span class="pre">3.5</span></code>) and <code class="docutils literal notranslate"><span class="pre">v4.0</span></code> (which corresponds to the latest version of the .net CLR v4 - which at the time of writing is <code class="docutils literal notranslate"><span class="pre">.net</span> <span class="pre">4.7.1</span></code>). <a class="reference external" href="https://en.wikipedia.org/wiki/.NET_Framework_version_history#Overview">For more information on which .net CLR version to use based on the .net framework you’re targeting - please see this table</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">v4.0</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ftpsState</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - State of FTP / FTPS service for this App Service. Possible values include: <code class="docutils literal notranslate"><span class="pre">AllAllowed</span></code>, <code class="docutils literal notranslate"><span class="pre">FtpsOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">healthCheckPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The health check path to be pinged by App Service. <a class="reference external" href="https://github.com/projectkudu/kudu/wiki/Health-Check-(Preview">For more information - please see the corresponding Kudu Wiki page</a>).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">http2Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is HTTP2 Enabled on this App Service? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipRestrictions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of objects representing ip restrictions as defined below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP Address used for this IP Restriction in CIDR notation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name for this IP Restriction.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkSubnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Virtual Network Subnet ID used for this IP Restriction.</p></li>
 </ul>
 </li>
@@ -1004,6 +1062,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.CertificateOrder">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">CertificateOrder</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_renew</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">csr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">distinguished_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">product_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">validity_in_years</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an App Service Certificate Order.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_certificate_order</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">CertificateOrder</span><span class="p">(</span><span class="s2">&quot;exampleCertificateOrder&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">,</span>
+    <span class="n">distinguished_name</span><span class="o">=</span><span class="s2">&quot;CN=example.com&quot;</span><span class="p">,</span>
+    <span class="n">product_type</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1226,6 +1295,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.CustomHostnameBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">CustomHostnameBinding</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssl_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thumbprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.CustomHostnameBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Hostname Binding within an App Service.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+<span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
+
+<span class="n">server</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">RandomId</span><span class="p">(</span><span class="s2">&quot;server&quot;</span><span class="p">,</span>
+    <span class="n">keepers</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;azi_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">byte_length</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_plan</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">Plan</span><span class="p">(</span><span class="s2">&quot;examplePlan&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_app_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">AppService</span><span class="p">(</span><span class="s2">&quot;exampleAppService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">app_service_plan_id</span><span class="o">=</span><span class="n">example_plan</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">example_custom_hostname_binding</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">CustomHostnameBinding</span><span class="p">(</span><span class="s2">&quot;exampleCustomHostnameBinding&quot;</span><span class="p">,</span>
+    <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;www.mywebsite.com&quot;</span><span class="p">,</span>
+    <span class="n">app_service_name</span><span class="o">=</span><span class="n">example_app_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1339,6 +1435,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.Environment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">Environment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">front_end_scale_factor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internal_load_balancing_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pricing_tier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Environment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an App Service Environment.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;westeurope&quot;</span><span class="p">)</span>
+<span class="n">example_virtual_network</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;exampleVirtualNetwork&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_spaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">])</span>
+<span class="n">ase</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;ase&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">example_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">)</span>
+<span class="n">gateway</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;gateway&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">example_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">)</span>
+<span class="n">example_environment</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">Environment</span><span class="p">(</span><span class="s2">&quot;exampleEnvironment&quot;</span><span class="p">,</span>
+    <span class="n">subnet_id</span><span class="o">=</span><span class="n">ase</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">pricing_tier</span><span class="o">=</span><span class="s2">&quot;I2&quot;</span><span class="p">,</span>
+    <span class="n">front_end_scale_factor</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1451,6 +1569,55 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.FunctionApp">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">FunctionApp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_service_plan_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auth_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_affinity_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_strings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">daily_memory_time_quota</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_builtin_logging</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">https_only</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">os_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">site_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_access_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_connection_string</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.FunctionApp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Function App.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;westus2&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_plan</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">Plan</span><span class="p">(</span><span class="s2">&quot;examplePlan&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_function_app</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">FunctionApp</span><span class="p">(</span><span class="s2">&quot;exampleFunctionApp&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">app_service_plan_id</span><span class="o">=</span><span class="n">example_plan</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_access_key</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;westus2&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_plan</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">Plan</span><span class="p">(</span><span class="s2">&quot;examplePlan&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;FunctionApp&quot;</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;Y1&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_function_app</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">FunctionApp</span><span class="p">(</span><span class="s2">&quot;exampleFunctionApp&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">app_service_plan_id</span><span class="o">=</span><span class="n">example_plan</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_access_key</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1952,6 +2119,523 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_azure.appservice.FunctionAppSlot">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">FunctionAppSlot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_service_plan_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auth_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_affinity_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_strings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">daily_memory_time_quota</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_builtin_logging</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">function_app_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">https_only</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">os_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">site_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_access_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a Function App deployment Slot.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;westus2&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_plan</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">Plan</span><span class="p">(</span><span class="s2">&quot;examplePlan&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_function_app</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">FunctionApp</span><span class="p">(</span><span class="s2">&quot;exampleFunctionApp&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">app_service_plan_id</span><span class="o">=</span><span class="n">example_plan</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">storage_connection_string</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_connection_string</span><span class="p">)</span>
+<span class="n">example_function_app_slot</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">FunctionAppSlot</span><span class="p">(</span><span class="s2">&quot;exampleFunctionAppSlot&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">app_service_plan_id</span><span class="o">=</span><span class="n">example_plan</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">function_app_name</span><span class="o">=</span><span class="n">example_function_app</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_connection_string</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_connection_string</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_service_plan_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the App Service Plan within which to create this Function App.</p></li>
+<li><p><strong>app_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A key-value pair of App Settings.</p></li>
+<li><p><strong>auth_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">auth_settings</span></code> block as defined below.</p></li>
+<li><p><strong>client_affinity_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?</p></li>
+<li><p><strong>connection_strings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> block as defined below.</p></li>
+<li><p><strong>daily_memory_time_quota</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of memory in gigabyte-seconds that your application is allowed to consume per day. Setting this value only affects function apps under the consumption plan. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
+<li><p><strong>enable_builtin_logging</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the built-in logging of this Function App be enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is the Function App enabled?</p></li>
+<li><p><strong>https_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Can the Function App only be accessed via HTTPS? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Function App. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>os_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string indicating the Operating System type for this function app.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Function App.</p></li>
+<li><p><strong>site_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">site_config</span></code> object as defined below.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The runtime version associated with the Function App. Defaults to <code class="docutils literal notranslate"><span class="pre">~1</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>auth_settings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">active_directory</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - An <code class="docutils literal notranslate"><span class="pre">active_directory</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedAudiences</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Allowed audience values to consider when validating JWTs issued by Azure Active Directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Client ID of this relying party application. Enables OpenIDConnection authentication with Azure Active Directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Client Secret of this relying party application. If no secret is provided, implicit flow will be used.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalLoginParams</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Login parameters to send to the OpenID Connect authorization endpoint when a user logs in. Each parameter must be in the form “key=value”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedExternalRedirectUrls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - External URLs that can be redirected to as part of logging in or logging out of the app.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default provider to use when multiple providers have been set up. Possible values are <code class="docutils literal notranslate"><span class="pre">AzureActiveDirectory</span></code>, <code class="docutils literal notranslate"><span class="pre">Facebook</span></code>, <code class="docutils literal notranslate"><span class="pre">Google</span></code>, <code class="docutils literal notranslate"><span class="pre">MicrosoftAccount</span></code> and <code class="docutils literal notranslate"><span class="pre">Twitter</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is Authentication enabled?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">facebook</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">facebook</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">app_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The App ID of the Facebook app used for login</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">app_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The App Secret of the Facebook app used for Facebook Login.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The OAuth 2.0 scopes that will be requested as part of Facebook Login authentication. <a class="reference external" href="https://developers.facebook.com/docs/facebook-login">https://developers.facebook.com/docs/facebook-login</a></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">google</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">google</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OpenID Connect Client ID for the Google web application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The client secret associated with the Google web application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication. <a class="reference external" href="https://developers.google.com/identity/sign-in/web/">https://developers.google.com/identity/sign-in/web/</a></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Issuer URI. When using Azure Active Directory, this value is the URI of the directory tenant, e.g. <a class="reference external" href="https://sts.windows.net">https://sts.windows.net</a>/{tenant-guid}/.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">microsoft</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">microsoft</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client ID that was created for the app used for authentication.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client secret that was created for the app used for authentication.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication. <a class="reference external" href="https://msdn.microsoft.com/en-us/library/dn631845.aspx">https://msdn.microsoft.com/en-us/library/dn631845.aspx</a></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runtimeVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The runtime version of the Authentication/Authorization module.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tokenRefreshExtensionHours</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of hours after session token expiration that a session token can be used to call the token refresh API. Defaults to 72.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tokenStoreEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If enabled the module will durably store platform-specific security tokens that are obtained during login flows. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">twitter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">twitter</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unauthenticatedClientAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The action to take when an unauthenticated client attempts to access the app. Possible values are <code class="docutils literal notranslate"><span class="pre">AllowAnonymous</span></code> and <code class="docutils literal notranslate"><span class="pre">RedirectToLoginPage</span></code>.</p></li>
+</ul>
+<p>The <strong>connection_strings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Connection String.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of the Connection String. Possible values are <code class="docutils literal notranslate"><span class="pre">APIHub</span></code>, <code class="docutils literal notranslate"><span class="pre">Custom</span></code>, <code class="docutils literal notranslate"><span class="pre">DocDb</span></code>, <code class="docutils literal notranslate"><span class="pre">EventHub</span></code>, <code class="docutils literal notranslate"><span class="pre">MySQL</span></code>, <code class="docutils literal notranslate"><span class="pre">NotificationHub</span></code>, <code class="docutils literal notranslate"><span class="pre">PostgreSQL</span></code>, <code class="docutils literal notranslate"><span class="pre">RedisCache</span></code>, <code class="docutils literal notranslate"><span class="pre">ServiceBus</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLAzure</span></code> and  <code class="docutils literal notranslate"><span class="pre">SQLServer</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value for the Connection String.</p></li>
+</ul>
+<p>The <strong>identity</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies a list of user managed identity ids to be assigned. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Principal ID for the Service Principal associated with the Managed Service Identity of this App Service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tenant ID for the Service Principal associated with the Managed Service Identity of this App Service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identity type of the Function App. Possible values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code> (where Azure will generate a Service Principal for you), <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code> where you can specify the Service Principal IDs in the <code class="docutils literal notranslate"><span class="pre">identity_ids</span></code> field, and <code class="docutils literal notranslate"><span class="pre">SystemAssigned,</span> <span class="pre">UserAssigned</span></code> which assigns both a system managed identity as well as the specified user assigned identities.</p></li>
+</ul>
+<p>The <strong>site_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">alwaysOn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the Function App be loaded at all times? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cors</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">cors</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of origins which should be able to make cross-origin calls. <code class="docutils literal notranslate"><span class="pre">*</span></code> can be used to allow all calls.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">supportCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Are credentials supported?</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ftpsState</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - State of FTP / FTPS service for this function app. Possible values include: <code class="docutils literal notranslate"><span class="pre">AllAllowed</span></code>, <code class="docutils literal notranslate"><span class="pre">FtpsOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">http2Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether or not the http2 protocol should be enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipRestrictions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">List of objects</a> representing ip restrictions as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP Address CIDR notation used for this IP Restriction.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Subnet ID used for this IP Restriction.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linuxFxVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Linux App Framework and version for the AppService, e.g. <code class="docutils literal notranslate"><span class="pre">DOCKER|(golang:latest)</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minTlsVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The minimum supported TLS version for the function app. Possible values are <code class="docutils literal notranslate"><span class="pre">1.0</span></code>, <code class="docutils literal notranslate"><span class="pre">1.1</span></code>, and <code class="docutils literal notranslate"><span class="pre">1.2</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">1.2</span></code> for new function apps.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preWarmedInstanceCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of pre-warmed instances for this function app. Only affects apps on the Premium plan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">use32BitWorkerProcess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the Function App run in 32 bit mode, rather than 64 bit mode? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">websocketsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should WebSockets be enabled?</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.app_service_plan_id">
+<code class="sig-name descname">app_service_plan_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.app_service_plan_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the App Service Plan within which to create this Function App.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.app_settings">
+<code class="sig-name descname">app_settings</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.app_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>A key-value pair of App Settings.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.auth_settings">
+<code class="sig-name descname">auth_settings</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.auth_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>An <code class="docutils literal notranslate"><span class="pre">auth_settings</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">active_directory</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - An <code class="docutils literal notranslate"><span class="pre">active_directory</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedAudiences</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Allowed audience values to consider when validating JWTs issued by Azure Active Directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Client ID of this relying party application. Enables OpenIDConnection authentication with Azure Active Directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Client Secret of this relying party application. If no secret is provided, implicit flow will be used.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalLoginParams</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Login parameters to send to the OpenID Connect authorization endpoint when a user logs in. Each parameter must be in the form “key=value”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedExternalRedirectUrls</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - External URLs that can be redirected to as part of logging in or logging out of the app.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The default provider to use when multiple providers have been set up. Possible values are <code class="docutils literal notranslate"><span class="pre">AzureActiveDirectory</span></code>, <code class="docutils literal notranslate"><span class="pre">Facebook</span></code>, <code class="docutils literal notranslate"><span class="pre">Google</span></code>, <code class="docutils literal notranslate"><span class="pre">MicrosoftAccount</span></code> and <code class="docutils literal notranslate"><span class="pre">Twitter</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is Authentication enabled?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">facebook</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">facebook</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">app_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The App ID of the Facebook app used for login</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">app_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The App Secret of the Facebook app used for Facebook Login.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The OAuth 2.0 scopes that will be requested as part of Facebook Login authentication. <a class="reference external" href="https://developers.facebook.com/docs/facebook-login">https://developers.facebook.com/docs/facebook-login</a></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">google</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">google</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The OpenID Connect Client ID for the Google web application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The client secret associated with the Google web application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication. <a class="reference external" href="https://developers.google.com/identity/sign-in/web/">https://developers.google.com/identity/sign-in/web/</a></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Issuer URI. When using Azure Active Directory, this value is the URI of the directory tenant, e.g. <a class="reference external" href="https://sts.windows.net">https://sts.windows.net</a>/{tenant-guid}/.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">microsoft</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">microsoft</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The OAuth 2.0 client ID that was created for the app used for authentication.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The OAuth 2.0 client secret that was created for the app used for authentication.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication. <a class="reference external" href="https://msdn.microsoft.com/en-us/library/dn631845.aspx">https://msdn.microsoft.com/en-us/library/dn631845.aspx</a></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runtimeVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The runtime version of the Authentication/Authorization module.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tokenRefreshExtensionHours</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of hours after session token expiration that a session token can be used to call the token refresh API. Defaults to 72.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tokenStoreEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If enabled the module will durably store platform-specific security tokens that are obtained during login flows. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">twitter</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">twitter</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unauthenticatedClientAction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The action to take when an unauthenticated client attempts to access the app. Possible values are <code class="docutils literal notranslate"><span class="pre">AllowAnonymous</span></code> and <code class="docutils literal notranslate"><span class="pre">RedirectToLoginPage</span></code>.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.client_affinity_enabled">
+<code class="sig-name descname">client_affinity_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.client_affinity_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.connection_strings">
+<code class="sig-name descname">connection_strings</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.connection_strings" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Connection String.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of the Connection String. Possible values are <code class="docutils literal notranslate"><span class="pre">APIHub</span></code>, <code class="docutils literal notranslate"><span class="pre">Custom</span></code>, <code class="docutils literal notranslate"><span class="pre">DocDb</span></code>, <code class="docutils literal notranslate"><span class="pre">EventHub</span></code>, <code class="docutils literal notranslate"><span class="pre">MySQL</span></code>, <code class="docutils literal notranslate"><span class="pre">NotificationHub</span></code>, <code class="docutils literal notranslate"><span class="pre">PostgreSQL</span></code>, <code class="docutils literal notranslate"><span class="pre">RedisCache</span></code>, <code class="docutils literal notranslate"><span class="pre">ServiceBus</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLAzure</span></code> and  <code class="docutils literal notranslate"><span class="pre">SQLServer</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value for the Connection String.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.daily_memory_time_quota">
+<code class="sig-name descname">daily_memory_time_quota</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.daily_memory_time_quota" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of memory in gigabyte-seconds that your application is allowed to consume per day. Setting this value only affects function apps under the consumption plan. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.default_hostname">
+<code class="sig-name descname">default_hostname</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.default_hostname" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default hostname associated with the Function App - such as <code class="docutils literal notranslate"><span class="pre">mysite.azurewebsites.net</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.enable_builtin_logging">
+<code class="sig-name descname">enable_builtin_logging</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.enable_builtin_logging" title="Permalink to this definition">¶</a></dt>
+<dd><p>Should the built-in logging of this Function App be enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.enabled">
+<code class="sig-name descname">enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is the Function App enabled?</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.https_only">
+<code class="sig-name descname">https_only</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.https_only" title="Permalink to this definition">¶</a></dt>
+<dd><p>Can the Function App only be accessed via HTTPS? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.identity">
+<code class="sig-name descname">identity</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.identity" title="Permalink to this definition">¶</a></dt>
+<dd><p>An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies a list of user managed identity ids to be assigned. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Principal ID for the Service Principal associated with the Managed Service Identity of this App Service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Tenant ID for the Service Principal associated with the Managed Service Identity of this App Service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the identity type of the Function App. Possible values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code> (where Azure will generate a Service Principal for you), <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code> where you can specify the Service Principal IDs in the <code class="docutils literal notranslate"><span class="pre">identity_ids</span></code> field, and <code class="docutils literal notranslate"><span class="pre">SystemAssigned,</span> <span class="pre">UserAssigned</span></code> which assigns both a system managed identity as well as the specified user assigned identities.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.kind">
+<code class="sig-name descname">kind</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.kind" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Function App kind - such as <code class="docutils literal notranslate"><span class="pre">functionapp,linux,container</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.location">
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the Function App. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.os_type">
+<code class="sig-name descname">os_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.os_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>A string indicating the Operating System type for this function app.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.outbound_ip_addresses">
+<code class="sig-name descname">outbound_ip_addresses</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.outbound_ip_addresses" title="Permalink to this definition">¶</a></dt>
+<dd><p>A comma separated list of outbound IP addresses - such as <code class="docutils literal notranslate"><span class="pre">52.23.25.3,52.143.43.12</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.possible_outbound_ip_addresses">
+<code class="sig-name descname">possible_outbound_ip_addresses</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.possible_outbound_ip_addresses" title="Permalink to this definition">¶</a></dt>
+<dd><p>A comma separated list of outbound IP addresses - such as <code class="docutils literal notranslate"><span class="pre">52.23.25.3,52.143.43.12,52.143.43.17</span></code> - not all of which are necessarily in use. Superset of <code class="docutils literal notranslate"><span class="pre">outbound_ip_addresses</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which to create the Function App.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.site_config">
+<code class="sig-name descname">site_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.site_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">site_config</span></code> object as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">alwaysOn</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should the Function App be loaded at all times? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cors</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">cors</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of origins which should be able to make cross-origin calls. <code class="docutils literal notranslate"><span class="pre">*</span></code> can be used to allow all calls.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">supportCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Are credentials supported?</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ftpsState</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - State of FTP / FTPS service for this function app. Possible values include: <code class="docutils literal notranslate"><span class="pre">AllAllowed</span></code>, <code class="docutils literal notranslate"><span class="pre">FtpsOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">http2Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies whether or not the http2 protocol should be enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipRestrictions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">List of objects</a> representing ip restrictions as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP Address CIDR notation used for this IP Restriction.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Subnet ID used for this IP Restriction.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linuxFxVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Linux App Framework and version for the AppService, e.g. <code class="docutils literal notranslate"><span class="pre">DOCKER|(golang:latest)</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minTlsVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The minimum supported TLS version for the function app. Possible values are <code class="docutils literal notranslate"><span class="pre">1.0</span></code>, <code class="docutils literal notranslate"><span class="pre">1.1</span></code>, and <code class="docutils literal notranslate"><span class="pre">1.2</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">1.2</span></code> for new function apps.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preWarmedInstanceCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of pre-warmed instances for this function app. Only affects apps on the Premium plan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">use32BitWorkerProcess</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should the Function App run in 32 bit mode, rather than 64 bit mode? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">websocketsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should WebSockets be enabled?</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.site_credentials">
+<code class="sig-name descname">site_credentials</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.site_credentials" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">site_credential</span></code> block as defined below, which contains the site-level credentials used to publish to this App Service.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password associated with the username, which can be used to publish to this App Service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The username which can be used to publish to this App Service</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.tags">
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.version">
+<code class="sig-name descname">version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The runtime version associated with the Function App. Defaults to <code class="docutils literal notranslate"><span class="pre">~1</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_service_plan_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auth_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_affinity_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_strings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">daily_memory_time_quota</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_builtin_logging</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">function_app_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">https_only</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kind</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">os_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outbound_ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">possible_outbound_ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">site_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">site_credentials</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_access_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing FunctionAppSlot resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_service_plan_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the App Service Plan within which to create this Function App.</p></li>
+<li><p><strong>app_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A key-value pair of App Settings.</p></li>
+<li><p><strong>auth_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">auth_settings</span></code> block as defined below.</p></li>
+<li><p><strong>client_affinity_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?</p></li>
+<li><p><strong>connection_strings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> block as defined below.</p></li>
+<li><p><strong>daily_memory_time_quota</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of memory in gigabyte-seconds that your application is allowed to consume per day. Setting this value only affects function apps under the consumption plan. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
+<li><p><strong>default_hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default hostname associated with the Function App - such as <code class="docutils literal notranslate"><span class="pre">mysite.azurewebsites.net</span></code></p></li>
+<li><p><strong>enable_builtin_logging</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the built-in logging of this Function App be enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is the Function App enabled?</p></li>
+<li><p><strong>https_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Can the Function App only be accessed via HTTPS? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p></li>
+<li><p><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Function App kind - such as <code class="docutils literal notranslate"><span class="pre">functionapp,linux,container</span></code></p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Function App. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>os_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string indicating the Operating System type for this function app.</p></li>
+<li><p><strong>outbound_ip_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A comma separated list of outbound IP addresses - such as <code class="docutils literal notranslate"><span class="pre">52.23.25.3,52.143.43.12</span></code></p></li>
+<li><p><strong>possible_outbound_ip_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A comma separated list of outbound IP addresses - such as <code class="docutils literal notranslate"><span class="pre">52.23.25.3,52.143.43.12,52.143.43.17</span></code> - not all of which are necessarily in use. Superset of <code class="docutils literal notranslate"><span class="pre">outbound_ip_addresses</span></code>.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Function App.</p></li>
+<li><p><strong>site_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">site_config</span></code> object as defined below.</p></li>
+<li><p><strong>site_credentials</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">site_credential</span></code> block as defined below, which contains the site-level credentials used to publish to this App Service.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The runtime version associated with the Function App. Defaults to <code class="docutils literal notranslate"><span class="pre">~1</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>auth_settings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">active_directory</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - An <code class="docutils literal notranslate"><span class="pre">active_directory</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedAudiences</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Allowed audience values to consider when validating JWTs issued by Azure Active Directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Client ID of this relying party application. Enables OpenIDConnection authentication with Azure Active Directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Client Secret of this relying party application. If no secret is provided, implicit flow will be used.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalLoginParams</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Login parameters to send to the OpenID Connect authorization endpoint when a user logs in. Each parameter must be in the form “key=value”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedExternalRedirectUrls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - External URLs that can be redirected to as part of logging in or logging out of the app.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default provider to use when multiple providers have been set up. Possible values are <code class="docutils literal notranslate"><span class="pre">AzureActiveDirectory</span></code>, <code class="docutils literal notranslate"><span class="pre">Facebook</span></code>, <code class="docutils literal notranslate"><span class="pre">Google</span></code>, <code class="docutils literal notranslate"><span class="pre">MicrosoftAccount</span></code> and <code class="docutils literal notranslate"><span class="pre">Twitter</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is Authentication enabled?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">facebook</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">facebook</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">app_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The App ID of the Facebook app used for login</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">app_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The App Secret of the Facebook app used for Facebook Login.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The OAuth 2.0 scopes that will be requested as part of Facebook Login authentication. <a class="reference external" href="https://developers.facebook.com/docs/facebook-login">https://developers.facebook.com/docs/facebook-login</a></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">google</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">google</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OpenID Connect Client ID for the Google web application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The client secret associated with the Google web application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication. <a class="reference external" href="https://developers.google.com/identity/sign-in/web/">https://developers.google.com/identity/sign-in/web/</a></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Issuer URI. When using Azure Active Directory, this value is the URI of the directory tenant, e.g. <a class="reference external" href="https://sts.windows.net">https://sts.windows.net</a>/{tenant-guid}/.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">microsoft</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">microsoft</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client ID that was created for the app used for authentication.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client secret that was created for the app used for authentication.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication. <a class="reference external" href="https://msdn.microsoft.com/en-us/library/dn631845.aspx">https://msdn.microsoft.com/en-us/library/dn631845.aspx</a></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runtimeVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The runtime version of the Authentication/Authorization module.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tokenRefreshExtensionHours</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of hours after session token expiration that a session token can be used to call the token refresh API. Defaults to 72.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tokenStoreEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If enabled the module will durably store platform-specific security tokens that are obtained during login flows. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">twitter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">twitter</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unauthenticatedClientAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The action to take when an unauthenticated client attempts to access the app. Possible values are <code class="docutils literal notranslate"><span class="pre">AllowAnonymous</span></code> and <code class="docutils literal notranslate"><span class="pre">RedirectToLoginPage</span></code>.</p></li>
+</ul>
+<p>The <strong>connection_strings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Connection String.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of the Connection String. Possible values are <code class="docutils literal notranslate"><span class="pre">APIHub</span></code>, <code class="docutils literal notranslate"><span class="pre">Custom</span></code>, <code class="docutils literal notranslate"><span class="pre">DocDb</span></code>, <code class="docutils literal notranslate"><span class="pre">EventHub</span></code>, <code class="docutils literal notranslate"><span class="pre">MySQL</span></code>, <code class="docutils literal notranslate"><span class="pre">NotificationHub</span></code>, <code class="docutils literal notranslate"><span class="pre">PostgreSQL</span></code>, <code class="docutils literal notranslate"><span class="pre">RedisCache</span></code>, <code class="docutils literal notranslate"><span class="pre">ServiceBus</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLAzure</span></code> and  <code class="docutils literal notranslate"><span class="pre">SQLServer</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value for the Connection String.</p></li>
+</ul>
+<p>The <strong>identity</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies a list of user managed identity ids to be assigned. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Principal ID for the Service Principal associated with the Managed Service Identity of this App Service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tenant ID for the Service Principal associated with the Managed Service Identity of this App Service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identity type of the Function App. Possible values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code> (where Azure will generate a Service Principal for you), <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code> where you can specify the Service Principal IDs in the <code class="docutils literal notranslate"><span class="pre">identity_ids</span></code> field, and <code class="docutils literal notranslate"><span class="pre">SystemAssigned,</span> <span class="pre">UserAssigned</span></code> which assigns both a system managed identity as well as the specified user assigned identities.</p></li>
+</ul>
+<p>The <strong>site_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">alwaysOn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the Function App be loaded at all times? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cors</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">cors</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of origins which should be able to make cross-origin calls. <code class="docutils literal notranslate"><span class="pre">*</span></code> can be used to allow all calls.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">supportCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Are credentials supported?</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ftpsState</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - State of FTP / FTPS service for this function app. Possible values include: <code class="docutils literal notranslate"><span class="pre">AllAllowed</span></code>, <code class="docutils literal notranslate"><span class="pre">FtpsOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">http2Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether or not the http2 protocol should be enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipRestrictions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">List of objects</a> representing ip restrictions as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP Address CIDR notation used for this IP Restriction.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Subnet ID used for this IP Restriction.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linuxFxVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Linux App Framework and version for the AppService, e.g. <code class="docutils literal notranslate"><span class="pre">DOCKER|(golang:latest)</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minTlsVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The minimum supported TLS version for the function app. Possible values are <code class="docutils literal notranslate"><span class="pre">1.0</span></code>, <code class="docutils literal notranslate"><span class="pre">1.1</span></code>, and <code class="docutils literal notranslate"><span class="pre">1.2</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">1.2</span></code> for new function apps.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preWarmedInstanceCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of pre-warmed instances for this function app. Only affects apps on the Premium plan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">use32BitWorkerProcess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the Function App run in 32 bit mode, rather than 64 bit mode? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">websocketsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should WebSockets be enabled?</p></li>
+</ul>
+<p>The <strong>site_credentials</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password associated with the username, which can be used to publish to this App Service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username which can be used to publish to this App Service</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.appservice.FunctionAppSlot.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.FunctionAppSlot.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_azure.appservice.GetAppServiceEnvironmentResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">GetAppServiceEnvironmentResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">front_end_scale_factor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pricing_tier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.GetAppServiceEnvironmentResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAppServiceEnvironment.</p>
@@ -2126,7 +2810,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_azure.appservice.GetAppServiceResult.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetAppServiceResult.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the Connection String.</p>
+<dd><p>The name for this IP Restriction.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2399,6 +3083,63 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.Plan">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">Plan</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_service_environment_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_xenon</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kind</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maximum_elastic_worker_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">per_site_scaling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reserved</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Plan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an App Service Plan component.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_plan</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">Plan</span><span class="p">(</span><span class="s2">&quot;examplePlan&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_plan</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">Plan</span><span class="p">(</span><span class="s2">&quot;examplePlan&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;FunctionApp&quot;</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;Y1&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_plan</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">Plan</span><span class="p">(</span><span class="s2">&quot;examplePlan&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;Linux&quot;</span><span class="p">,</span>
+    <span class="n">reserved</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_plan</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">Plan</span><span class="p">(</span><span class="s2">&quot;examplePlan&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;xenon&quot;</span><span class="p">,</span>
+    <span class="n">is_xenon</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;PremiumContainer&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;PC2&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2572,6 +3313,94 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> When using Slots - the <code class="docutils literal notranslate"><span class="pre">app_settings</span></code>, <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> and <code class="docutils literal notranslate"><span class="pre">site_config</span></code> blocks on the <code class="docutils literal notranslate"><span class="pre">appservice.AppService</span></code> resource will be overwritten when promoting a Slot using the <code class="docutils literal notranslate"><span class="pre">appservice.ActiveSlot</span></code> resource.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+<span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
+
+<span class="n">server</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">RandomId</span><span class="p">(</span><span class="s2">&quot;server&quot;</span><span class="p">,</span>
+    <span class="n">keepers</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;azi_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">byte_length</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_plan</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">Plan</span><span class="p">(</span><span class="s2">&quot;examplePlan&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_app_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">AppService</span><span class="p">(</span><span class="s2">&quot;exampleAppService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">app_service_plan_id</span><span class="o">=</span><span class="n">example_plan</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">site_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;dotnetFrameworkVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;v4.0&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">app_settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;SOME_KEY&quot;</span><span class="p">:</span> <span class="s2">&quot;some-value&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">connection_string</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Database&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;SQLServer&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Server=some-server.mydomain.com;Integrated Security=SSPI&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">example_slot</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">Slot</span><span class="p">(</span><span class="s2">&quot;exampleSlot&quot;</span><span class="p">,</span>
+    <span class="n">app_service_name</span><span class="o">=</span><span class="n">example_app_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">app_service_plan_id</span><span class="o">=</span><span class="n">example_plan</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">site_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;dotnetFrameworkVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;v4.0&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">app_settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;SOME_KEY&quot;</span><span class="p">:</span> <span class="s2">&quot;some-value&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">connection_string</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Database&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;SQLServer&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Server=some-server.mydomain.com;Integrated Security=SSPI&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+<span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
+
+<span class="n">server</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">RandomId</span><span class="p">(</span><span class="s2">&quot;server&quot;</span><span class="p">,</span>
+    <span class="n">keepers</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;azi_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">byte_length</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_plan</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">Plan</span><span class="p">(</span><span class="s2">&quot;examplePlan&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_app_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">AppService</span><span class="p">(</span><span class="s2">&quot;exampleAppService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">app_service_plan_id</span><span class="o">=</span><span class="n">example_plan</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">site_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;javaVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;1.8&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;javaContainer&quot;</span><span class="p">:</span> <span class="s2">&quot;JETTY&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;javaContainerVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;9.3&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_slot</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">Slot</span><span class="p">(</span><span class="s2">&quot;exampleSlot&quot;</span><span class="p">,</span>
+    <span class="n">app_service_name</span><span class="o">=</span><span class="n">example_app_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">app_service_plan_id</span><span class="o">=</span><span class="n">example_plan</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">site_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;javaVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;1.8&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;javaContainer&quot;</span><span class="p">:</span> <span class="s2">&quot;JETTY&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;javaContainerVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;9.3&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2697,10 +3526,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultDocuments</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The ordering of default documents to load, if an address isn’t specified.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dotnetFrameworkVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The version of the .net framework’s CLR used in this App Service Slot. Possible values are <code class="docutils literal notranslate"><span class="pre">v2.0</span></code> (which will use the latest version of the .net framework for the .net CLR v2 - currently <code class="docutils literal notranslate"><span class="pre">.net</span> <span class="pre">3.5</span></code>) and <code class="docutils literal notranslate"><span class="pre">v4.0</span></code> (which corresponds to the latest version of the .net CLR v4 - which at the time of writing is <code class="docutils literal notranslate"><span class="pre">.net</span> <span class="pre">4.7.1</span></code>). <a class="reference external" href="https://en.wikipedia.org/wiki/.NET_Framework_version_history#Overview">For more information on which .net CLR version to use based on the .net framework you’re targeting - please see this table</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">v4.0</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ftpsState</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">healthCheckPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">http2Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is HTTP2 Enabled on this App Service? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipRestrictions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of objects representing ip restrictions as defined below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP Address used for this IP Restriction.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the App Service Slot component. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkSubnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Optional.The Virtual Network Subnet ID used for this IP Restriction.</p></li>
 </ul>
 </li>
@@ -2871,10 +3703,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultDocuments</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The ordering of default documents to load, if an address isn’t specified.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dotnetFrameworkVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The version of the .net framework’s CLR used in this App Service Slot. Possible values are <code class="docutils literal notranslate"><span class="pre">v2.0</span></code> (which will use the latest version of the .net framework for the .net CLR v2 - currently <code class="docutils literal notranslate"><span class="pre">.net</span> <span class="pre">3.5</span></code>) and <code class="docutils literal notranslate"><span class="pre">v4.0</span></code> (which corresponds to the latest version of the .net CLR v4 - which at the time of writing is <code class="docutils literal notranslate"><span class="pre">.net</span> <span class="pre">4.7.1</span></code>). <a class="reference external" href="https://en.wikipedia.org/wiki/.NET_Framework_version_history#Overview">For more information on which .net CLR version to use based on the .net framework you’re targeting - please see this table</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">v4.0</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ftpsState</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">healthCheckPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">http2Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is HTTP2 Enabled on this App Service? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipRestrictions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of objects representing ip restrictions as defined below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP Address used for this IP Restriction.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the App Service Slot component. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkSubnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - (Optional.The Virtual Network Subnet ID used for this IP Restriction.</p></li>
 </ul>
 </li>
@@ -3045,10 +3880,13 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultDocuments</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The ordering of default documents to load, if an address isn’t specified.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dotnetFrameworkVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The version of the .net framework’s CLR used in this App Service Slot. Possible values are <code class="docutils literal notranslate"><span class="pre">v2.0</span></code> (which will use the latest version of the .net framework for the .net CLR v2 - currently <code class="docutils literal notranslate"><span class="pre">.net</span> <span class="pre">3.5</span></code>) and <code class="docutils literal notranslate"><span class="pre">v4.0</span></code> (which corresponds to the latest version of the .net CLR v4 - which at the time of writing is <code class="docutils literal notranslate"><span class="pre">.net</span> <span class="pre">4.7.1</span></code>). <a class="reference external" href="https://en.wikipedia.org/wiki/.NET_Framework_version_history#Overview">For more information on which .net CLR version to use based on the .net framework you’re targeting - please see this table</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">v4.0</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ftpsState</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">healthCheckPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">http2Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is HTTP2 Enabled on this App Service? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipRestrictions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of objects representing ip restrictions as defined below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP Address used for this IP Restriction.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the App Service Slot component. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkSubnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Optional.The Virtual Network Subnet ID used for this IP Restriction.</p></li>
 </ul>
 </li>
@@ -3120,6 +3958,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Source Control Tokens are configured at the subscription level, not on each App Service - as such this can only be configured Subscription-wide</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">SourceCodeToken</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">token</span><span class="o">=</span><span class="s2">&quot;7e57735e77e577e57&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;GitHub&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3210,6 +4056,41 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.VirtualNetworkSwiftConnection">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">VirtualNetworkSwiftConnection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_service_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.VirtualNetworkSwiftConnection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an App Service Virtual Network Association (this is for the <a class="reference external" href="https://docs.microsoft.com/en-us/azure/app-service/web-sites-integrate-with-vnet#regional-vnet-integration">Regional VNet Integration</a> which is still in preview).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">test_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;testResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;uksouth&quot;</span><span class="p">)</span>
+<span class="n">test_virtual_network</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;testVirtualNetwork&quot;</span><span class="p">,</span>
+    <span class="n">address_spaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">],</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">test_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">test_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">test1</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;test1&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">test_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">test_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">,</span>
+    <span class="n">delegation</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestdelegation&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;service_delegation&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Microsoft.Web/serverFarms&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Microsoft.Network/virtualNetworks/subnets/action&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">}])</span>
+<span class="n">test_plan</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">Plan</span><span class="p">(</span><span class="s2">&quot;testPlan&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">test_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">test_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">test_app_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">AppService</span><span class="p">(</span><span class="s2">&quot;testAppService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">test_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">test_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">app_service_plan_id</span><span class="o">=</span><span class="n">test_plan</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">test_virtual_network_swift_connection</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">VirtualNetworkSwiftConnection</span><span class="p">(</span><span class="s2">&quot;testVirtualNetworkSwiftConnection&quot;</span><span class="p">,</span>
+    <span class="n">app_service_id</span><span class="o">=</span><span class="n">test_app_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">subnet_id</span><span class="o">=</span><span class="n">test1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3292,6 +4173,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.get_app_service">
 <code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">get_app_service</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.get_app_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing App Service.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">get_app_service</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;search-app-service&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;search-service&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;appServiceId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3306,6 +4195,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.get_app_service_environment">
 <code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">get_app_service_environment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.get_app_service_environment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing App Service Environment</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">get_app_service_environment</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-ase&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-rg&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;appServiceEnvironmentId&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;appservice.Environment&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3320,6 +4217,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.get_app_service_plan">
 <code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">get_app_service_plan</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.get_app_service_plan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing App Service Plan (formerly known as a <code class="docutils literal notranslate"><span class="pre">Server</span> <span class="pre">Farm</span></code>).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">get_app_service_plan</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;search-app-service-plan&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;search-service&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;appServicePlanId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3334,6 +4239,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.get_certificate">
 <code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">get_certificate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.get_certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an App Service Certificate.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">get_certificate</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-app-service-certificate&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-rg&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;appServiceCertificateId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3348,6 +4261,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.get_certificate_order">
 <code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">get_certificate_order</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.get_certificate_order" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing App Service Certificate Order.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">get_certificate_order</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-cert-order&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-resources&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;certificateOrderId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3362,6 +4283,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.get_function_app">
 <code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">get_function_app</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.get_function_app" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about a Function App.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">get_function_app</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;test-azure-functions&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">azurerm_resource_group</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

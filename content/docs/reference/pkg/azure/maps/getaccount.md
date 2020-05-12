@@ -12,9 +12,46 @@ meta_desc: "Explore the GetAccount function of the maps module, including exampl
 
 Use this data source to access information about an existing Azure Maps Account.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.maps.get_account(name="production",
+    resource_group_name="maps")
+pulumi.export("mapsAccountId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.maps.getAccount({
+    name: "production",
+    resourceGroupName: "maps",
+});
+export const mapsAccountId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAccount {#using}

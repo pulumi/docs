@@ -12,11 +12,77 @@ meta_desc: "Explore the Subscription resource of the eventhub module, including 
 
 Manages a ServiceBus Subscription.
 
-{{% examples %}}
-{{% /examples %}}
+
 
 Deprecated: azure.eventhub.Subscription has been deprecated in favour of azure.servicebus.Subscription
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_namespace = azure.servicebus.Namespace("exampleNamespace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="Standard",
+    tags={
+        "source": "example",
+    })
+example_topic = azure.servicebus.Topic("exampleTopic",
+    resource_group_name=example_resource_group.name,
+    namespace_name=example_namespace.name,
+    enable_partitioning=True)
+example_subscription = azure.servicebus.Subscription("exampleSubscription",
+    resource_group_name=example_resource_group.name,
+    namespace_name=example_namespace.name,
+    topic_name=example_topic.name,
+    max_delivery_count=1)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "Standard",
+    tags: {
+        source: "example",
+    },
+});
+const exampleTopic = new azure.servicebus.Topic("exampleTopic", {
+    resourceGroupName: exampleResourceGroup.name,
+    namespaceName: exampleNamespace.name,
+    enablePartitioning: true,
+});
+const exampleSubscription = new azure.servicebus.Subscription("exampleSubscription", {
+    resourceGroupName: exampleResourceGroup.name,
+    namespaceName: exampleNamespace.name,
+    topicName: exampleTopic.name,
+    maxDeliveryCount: 1,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 <p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.Subscription has been deprecated in favour of azure.servicebus.Subscription{{% /md %}}</p>
 
 

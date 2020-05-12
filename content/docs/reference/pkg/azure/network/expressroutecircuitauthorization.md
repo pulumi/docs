@@ -12,9 +12,76 @@ meta_desc: "Explore the ExpressRouteCircuitAuthorization resource of the network
 
 Manages an ExpressRoute Circuit Authorization.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_express_route_circuit = azure.network.ExpressRouteCircuit("exampleExpressRouteCircuit",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    service_provider_name="Equinix",
+    peering_location="Silicon Valley",
+    bandwidth_in_mbps=50,
+    sku={
+        "tier": "Standard",
+        "family": "MeteredData",
+    },
+    allow_classic_operations=False,
+    tags={
+        "environment": "Production",
+    })
+example_express_route_circuit_authorization = azure.network.ExpressRouteCircuitAuthorization("exampleExpressRouteCircuitAuthorization",
+    express_route_circuit_name=example_express_route_circuit.name,
+    resource_group_name=example_resource_group.name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleExpressRouteCircuit = new azure.network.ExpressRouteCircuit("exampleExpressRouteCircuit", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    serviceProviderName: "Equinix",
+    peeringLocation: "Silicon Valley",
+    bandwidthInMbps: 50,
+    sku: {
+        tier: "Standard",
+        family: "MeteredData",
+    },
+    allowClassicOperations: false,
+    tags: {
+        environment: "Production",
+    },
+});
+const exampleExpressRouteCircuitAuthorization = new azure.network.ExpressRouteCircuitAuthorization("exampleExpressRouteCircuitAuthorization", {
+    expressRouteCircuitName: exampleExpressRouteCircuit.name,
+    resourceGroupName: exampleResourceGroup.name,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ExpressRouteCircuitAuthorization Resource {#create}

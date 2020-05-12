@@ -17,9 +17,115 @@ optionally be configured with a security group to be associated with the subnet.
 provides both a standalone Subnet resource, and allows for Subnets to be defined in-line within the Virtual Network resource.
 At this time you cannot use a Virtual Network with in-line Subnets in conjunction with any Subnet resources. Doing so will cause a conflict of Subnet configurations and will overwrite Subnet's.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_network_security_group = azure.network.NetworkSecurityGroup("exampleNetworkSecurityGroup",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_ddos_protection_plan = azure.network.DdosProtectionPlan("exampleDdosProtectionPlan",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    address_spaces=["10.0.0.0/16"],
+    dns_servers=[
+        "10.0.0.4",
+        "10.0.0.5",
+    ],
+    ddos_protection_plan={
+        "id": example_ddos_protection_plan.id,
+        "enable": True,
+    },
+    subnet=[
+        {
+            "name": "subnet1",
+            "addressPrefix": "10.0.1.0/24",
+        },
+        {
+            "name": "subnet2",
+            "addressPrefix": "10.0.2.0/24",
+        },
+        {
+            "name": "subnet3",
+            "addressPrefix": "10.0.3.0/24",
+            "securityGroup": example_network_security_group.id,
+        },
+    ],
+    tags={
+        "environment": "Production",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleNetworkSecurityGroup = new azure.network.NetworkSecurityGroup("exampleNetworkSecurityGroup", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleDdosProtectionPlan = new azure.network.DdosProtectionPlan("exampleDdosProtectionPlan", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    addressSpaces: ["10.0.0.0/16"],
+    dnsServers: [
+        "10.0.0.4",
+        "10.0.0.5",
+    ],
+    ddos_protection_plan: {
+        id: exampleDdosProtectionPlan.id,
+        enable: true,
+    },
+    subnet: [
+        {
+            name: "subnet1",
+            addressPrefix: "10.0.1.0/24",
+        },
+        {
+            name: "subnet2",
+            addressPrefix: "10.0.2.0/24",
+        },
+        {
+            name: "subnet3",
+            addressPrefix: "10.0.3.0/24",
+            securityGroup: exampleNetworkSecurityGroup.id,
+        },
+    ],
+    tags: {
+        environment: "Production",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualNetwork Resource {#create}

@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.batch.get_pool(account_name="testbatchaccount",
+    name="testbatchpool",
+    resource_group_name="test")
+```
 {{% /example %}}
 
 {{% example typescript %}}

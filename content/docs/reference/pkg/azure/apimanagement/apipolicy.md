@@ -13,50 +13,9 @@ meta_desc: "Explore the ApiPolicy resource of the apimanagement module, includin
 Manages an API Management API Policy
 
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const exampleApi = pulumi.output(azure.apimanagement.getApi({
-    apiManagementName: "example-apim",
-    apiName: "my-api",
-    resourceGroupName: "search-service",
-}, { async: true }));
-const exampleApiPolicy = new azure.apimanagement.ApiPolicy("example", {
-    apiManagementName: exampleApi.apiManagementName,
-    apiName: exampleApi.name,
-    resourceGroupName: exampleApi.resourceGroupName,
-    xmlContent: `<policies>
-  <inbound>
-    <find-and-replace from="xyz" to="abc" />
-  </inbound>
-</policies>
-`,
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a ApiPolicy Resource {#create}

@@ -12,9 +12,113 @@ meta_desc: "Explore the ApiKey resource of the appinsights module, including exa
 
 Manages an Application Insights API key.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_insights = azure.appinsights.Insights("exampleInsights",
+    location="West Europe",
+    resource_group_name=example_resource_group.name,
+    application_type="web")
+read_telemetry = azure.appinsights.ApiKey("readTelemetry",
+    application_insights_id=example_insights.id,
+    read_permissions=[
+        "aggregate",
+        "api",
+        "draft",
+        "extendqueries",
+        "search",
+    ])
+write_annotations = azure.appinsights.ApiKey("writeAnnotations",
+    application_insights_id=example_insights.id,
+    write_permissions=["annotations"])
+authenticate_sdk_control_channel_api_key = azure.appinsights.ApiKey("authenticateSdkControlChannelApiKey",
+    application_insights_id=example_insights.id,
+    read_permissions=["agentconfig"])
+full_permissions = azure.appinsights.ApiKey("fullPermissions",
+    application_insights_id=example_insights.id,
+    read_permissions=[
+        "agentconfig",
+        "aggregate",
+        "api",
+        "draft",
+        "extendqueries",
+        "search",
+    ],
+    write_permissions=["annotations"])
+pulumi.export("readTelemetryApiKey", read_telemetry.api_key)
+pulumi.export("writeAnnotationsApiKey", write_annotations.api_key)
+pulumi.export("authenticateSdkControlChannel", authenticate_sdk_control_channel_api_key.api_key)
+pulumi.export("fullPermissionsApiKey", full_permissions.api_key)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleInsights = new azure.appinsights.Insights("exampleInsights", {
+    location: "West Europe",
+    resourceGroupName: exampleResourceGroup.name,
+    applicationType: "web",
+});
+const readTelemetry = new azure.appinsights.ApiKey("readTelemetry", {
+    applicationInsightsId: exampleInsights.id,
+    readPermissions: [
+        "aggregate",
+        "api",
+        "draft",
+        "extendqueries",
+        "search",
+    ],
+});
+const writeAnnotations = new azure.appinsights.ApiKey("writeAnnotations", {
+    applicationInsightsId: exampleInsights.id,
+    writePermissions: ["annotations"],
+});
+const authenticateSdkControlChannelApiKey = new azure.appinsights.ApiKey("authenticateSdkControlChannelApiKey", {
+    applicationInsightsId: exampleInsights.id,
+    readPermissions: ["agentconfig"],
+});
+const fullPermissions = new azure.appinsights.ApiKey("fullPermissions", {
+    applicationInsightsId: exampleInsights.id,
+    readPermissions: [
+        "agentconfig",
+        "aggregate",
+        "api",
+        "draft",
+        "extendqueries",
+        "search",
+    ],
+    writePermissions: ["annotations"],
+});
+export const readTelemetryApiKey = readTelemetry.apiKey;
+export const writeAnnotationsApiKey = writeAnnotations.apiKey;
+export const authenticateSdkControlChannel = authenticateSdkControlChannelApiKey.apiKey;
+export const fullPermissionsApiKey = fullPermissions.apiKey;
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApiKey Resource {#create}

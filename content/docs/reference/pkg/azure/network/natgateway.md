@@ -12,9 +12,81 @@ meta_desc: "Explore the NatGateway resource of the network module, including exa
 
 Manages a Azure NAT Gateway.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="eastus2")
+example_public_ip = azure.network.PublicIp("examplePublicIp",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    allocation_method="Static",
+    sku="Standard",
+    zones=["1"])
+example_public_ip_prefix = azure.network.PublicIpPrefix("examplePublicIpPrefix",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    prefix_length=30,
+    zones=["1"])
+example_nat_gateway = azure.network.NatGateway("exampleNatGateway",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    public_ip_address_ids=[example_public_ip.id],
+    public_ip_prefix_ids=[example_public_ip_prefix.id],
+    sku_name="Standard",
+    idle_timeout_in_minutes=10,
+    zones=["1"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "eastus2"});
+const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    allocationMethod: "Static",
+    sku: "Standard",
+    zones: ["1"],
+});
+const examplePublicIpPrefix = new azure.network.PublicIpPrefix("examplePublicIpPrefix", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    prefixLength: 30,
+    zones: ["1"],
+});
+const exampleNatGateway = new azure.network.NatGateway("exampleNatGateway", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    publicIpAddressIds: [examplePublicIp.id],
+    publicIpPrefixIds: [examplePublicIpPrefix.id],
+    skuName: "Standard",
+    idleTimeoutInMinutes: 10,
+    zones: ["1"],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NatGateway Resource {#create}

@@ -32,7 +32,42 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+rg = azure.core.ResourceGroup("rg", location="West US")
+vault = azure.recoveryservices.Vault("vault",
+    location=rg.location,
+    resource_group_name=rg.name,
+    sku="Standard")
+sa = azure.storage.Account("sa",
+    account_replication_type="LRS",
+    account_tier="Standard",
+    location=rg.location,
+    resource_group_name=rg.name)
+example_share = azure.storage.Share("exampleShare", storage_account_name=sa.name)
+protection_container = azure.backup.ContainerStorageAccount("protection-container",
+    recovery_vault_name=vault.name,
+    resource_group_name=rg.name,
+    storage_account_id=sa.id)
+example_policy_file_share = azure.backup.PolicyFileShare("examplePolicyFileShare",
+    backup={
+        "frequency": "Daily",
+        "time": "23:00",
+    },
+    recovery_vault_name=vault.name,
+    resource_group_name=rg.name,
+    retention_daily={
+        "count": 10,
+    })
+share1 = azure.backup.ProtectedFileShare("share1",
+    backup_policy_id=example_policy_file_share.id,
+    recovery_vault_name=vault.name,
+    resource_group_name=rg.name,
+    source_file_share_name=example_share.name,
+    source_storage_account_id=protection_container.storage_account_id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

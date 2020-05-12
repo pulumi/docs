@@ -12,9 +12,48 @@ meta_desc: "Explore the GetCertificate function of the batch module, including e
 
 Use this data source to access information about an existing certificate in a Batch Account.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.batch.get_certificate(name="SHA1-42C107874FD0E4A9583292A2F1098E8FE4B2EDDA",
+    account_name="examplebatchaccount",
+    resource_group_name="example")
+pulumi.export("thumbprint", example.thumbprint)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.batch.getCertificate({
+    name: "SHA1-42C107874FD0E4A9583292A2F1098E8FE4B2EDDA",
+    accountName: "examplebatchaccount",
+    resourceGroupName: "example",
+});
+export const thumbprint = example.then(example => example.thumbprint);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetCertificate {#using}

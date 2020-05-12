@@ -12,9 +12,50 @@ meta_desc: "Explore the GetPlatformImage function of the compute module, includi
 
 Use this data source to access information about a Platform Image.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.compute.get_platform_image(location="West Europe",
+    publisher="Canonical",
+    offer="UbuntuServer",
+    sku="16.04-LTS")
+pulumi.export("version", example.version)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.compute.getPlatformImage({
+    location: "West Europe",
+    publisher: "Canonical",
+    offer: "UbuntuServer",
+    sku: "16.04-LTS",
+});
+export const version = example.then(example => example.version);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetPlatformImage {#using}

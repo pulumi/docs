@@ -12,9 +12,87 @@ meta_desc: "Explore the OutputServicebusTopic resource of the streamanalytics mo
 
 Manages a Stream Analytics Output to a ServiceBus Topic.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.get_resource_group(name="example-resources")
+example_job = azure.streamanalytics.get_job(name="example-job",
+    resource_group_name=azurerm_resource_group["example"]["name"])
+example_namespace = azure.servicebus.Namespace("exampleNamespace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="Standard")
+example_topic = azure.servicebus.Topic("exampleTopic",
+    resource_group_name=example_resource_group.name,
+    namespace_name=example_namespace.name,
+    enable_partitioning=True)
+example_output_servicebus_topic = azure.streamanalytics.OutputServicebusTopic("exampleOutputServicebusTopic",
+    stream_analytics_job_name=example_job.name,
+    resource_group_name=example_job.resource_group_name,
+    topic_name=example_topic.name,
+    servicebus_namespace=example_namespace.name,
+    shared_access_policy_key=example_namespace.default_primary_key,
+    shared_access_policy_name="RootManageSharedAccessKey",
+    serialization={
+        "format": "Avro",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = azure.core.getResourceGroup({
+    name: "example-resources",
+});
+const exampleJob = azure.streamanalytics.getJob({
+    name: "example-job",
+    resourceGroupName: azurerm_resource_group.example.name,
+});
+const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
+    location: exampleResourceGroup.then(exampleResourceGroup => exampleResourceGroup.location),
+    resourceGroupName: exampleResourceGroup.then(exampleResourceGroup => exampleResourceGroup.name),
+    sku: "Standard",
+});
+const exampleTopic = new azure.servicebus.Topic("exampleTopic", {
+    resourceGroupName: exampleResourceGroup.then(exampleResourceGroup => exampleResourceGroup.name),
+    namespaceName: exampleNamespace.name,
+    enablePartitioning: true,
+});
+const exampleOutputServicebusTopic = new azure.streamanalytics.OutputServicebusTopic("exampleOutputServicebusTopic", {
+    streamAnalyticsJobName: exampleJob.then(exampleJob => exampleJob.name),
+    resourceGroupName: exampleJob.then(exampleJob => exampleJob.resourceGroupName),
+    topicName: exampleTopic.name,
+    servicebusNamespace: exampleNamespace.name,
+    sharedAccessPolicyKey: exampleNamespace.defaultPrimaryKey,
+    sharedAccessPolicyName: "RootManageSharedAccessKey",
+    serialization: {
+        format: "Avro",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a OutputServicebusTopic Resource {#create}

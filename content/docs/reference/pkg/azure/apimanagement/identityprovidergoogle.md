@@ -12,9 +12,64 @@ meta_desc: "Explore the IdentityProviderGoogle resource of the apimanagement mod
 
 Manages an API Management Google Identity Provider.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_service = azure.apimanagement.Service("exampleService",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    publisher_name="My Company",
+    publisher_email="company@mycompany.io",
+    sku_name="Developer_1")
+example_identity_provider_google = azure.apimanagement.IdentityProviderGoogle("exampleIdentityProviderGoogle",
+    resource_group_name=example_resource_group.name,
+    api_management_name=example_service.name,
+    client_id="00000000.apps.googleusercontent.com",
+    client_secret="00000000000000000000000000000000")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleService = new azure.apimanagement.Service("exampleService", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    publisherName: "My Company",
+    publisherEmail: "company@mycompany.io",
+    skuName: "Developer_1",
+});
+const exampleIdentityProviderGoogle = new azure.apimanagement.IdentityProviderGoogle("exampleIdentityProviderGoogle", {
+    resourceGroupName: exampleResourceGroup.name,
+    apiManagementName: exampleService.name,
+    clientId: "00000000.apps.googleusercontent.com",
+    clientSecret: "00000000000000000000000000000000",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IdentityProviderGoogle Resource {#create}

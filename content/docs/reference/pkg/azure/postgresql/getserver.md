@@ -12,9 +12,46 @@ meta_desc: "Explore the GetServer function of the postgresql module, including e
 
 Use this data source to access information about an existing PostgreSQL Azure Database Server.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.postgresql.get_server(name="postgresql-server-1",
+    resource_group_name="api-rg-pro")
+pulumi.export("postgresqlServerId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.postgresql.getServer({
+    name: "postgresql-server-1",
+    resourceGroupName: "api-rg-pro",
+});
+export const postgresqlServerId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetServer {#using}

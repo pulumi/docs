@@ -12,9 +12,71 @@ meta_desc: "Explore the Server resource of the postgresql module, including exam
 
 Manages a PostgreSQL Server.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_server = azure.postgresql.Server("exampleServer",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    administrator_login="psqladminun",
+    administrator_login_password="H@Sh1CoR3!",
+    sku_name="GP_Gen5_4",
+    version="9.6",
+    storage_mb=640000,
+    backup_retention_days=7,
+    geo_redundant_backup_enabled=True,
+    auto_grow_enabled=True,
+    infrastructure_encryption_enabled=True,
+    public_network_access_enabled=False,
+    ssl_enforcement_enabled=True,
+    ssl_minimal_tls_version_enforced="TLS1_2")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleServer = new azure.postgresql.Server("exampleServer", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    administratorLogin: "psqladminun",
+    administratorLoginPassword: "H@Sh1CoR3!",
+    skuName: "GP_Gen5_4",
+    version: "9.6",
+    storageMb: 640000,
+    backupRetentionDays: 7,
+    geoRedundantBackupEnabled: true,
+    autoGrowEnabled: true,
+    infrastructureEncryptionEnabled: true,
+    publicNetworkAccessEnabled: false,
+    sslEnforcementEnabled: true,
+    sslMinimalTlsVersionEnforced: "TLS1_2",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Server Resource {#create}

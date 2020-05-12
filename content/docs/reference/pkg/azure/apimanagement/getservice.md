@@ -12,9 +12,46 @@ meta_desc: "Explore the GetService function of the apimanagement module, includi
 
 Use this data source to access information about an existing API Management Service.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.apimanagement.get_service(name="search-api",
+    resource_group_name="search-service")
+pulumi.export("apiManagementId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.apimanagement.getService({
+    name: "search-api",
+    resourceGroupName: "search-service",
+});
+export const apiManagementId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetService {#using}

@@ -12,9 +12,97 @@ meta_desc: "Explore the ActivityLogAlert resource of the monitoring module, incl
 
 Manages an Activity Log Alert within Azure Monitor.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+main_resource_group = azure.core.ResourceGroup("mainResourceGroup", location="West US")
+main_action_group = azure.monitoring.ActionGroup("mainActionGroup",
+    resource_group_name=main_resource_group.name,
+    short_name="p0action",
+    webhook_receiver=[{
+        "name": "callmyapi",
+        "serviceUri": "http://example.com/alert",
+    }])
+to_monitor = azure.storage.Account("toMonitor",
+    resource_group_name=main_resource_group.name,
+    location=main_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="GRS")
+main_activity_log_alert = azure.monitoring.ActivityLogAlert("mainActivityLogAlert",
+    resource_group_name=main_resource_group.name,
+    scopes=[main_resource_group.id],
+    description="This alert will monitor a specific storage account updates.",
+    criteria={
+        "resourceId": to_monitor.id,
+        "operationName": "Microsoft.Storage/storageAccounts/write",
+        "category": "Recommendation",
+    },
+    action=[{
+        "actionGroupId": main_action_group.id,
+        "webhookProperties": {
+            "from": "source",
+        },
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const mainResourceGroup = new azure.core.ResourceGroup("mainResourceGroup", {location: "West US"});
+const mainActionGroup = new azure.monitoring.ActionGroup("mainActionGroup", {
+    resourceGroupName: mainResourceGroup.name,
+    shortName: "p0action",
+    webhook_receiver: [{
+        name: "callmyapi",
+        serviceUri: "http://example.com/alert",
+    }],
+});
+const toMonitor = new azure.storage.Account("toMonitor", {
+    resourceGroupName: mainResourceGroup.name,
+    location: mainResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "GRS",
+});
+const mainActivityLogAlert = new azure.monitoring.ActivityLogAlert("mainActivityLogAlert", {
+    resourceGroupName: mainResourceGroup.name,
+    scopes: [mainResourceGroup.id],
+    description: "This alert will monitor a specific storage account updates.",
+    criteria: {
+        resourceId: toMonitor.id,
+        operationName: "Microsoft.Storage/storageAccounts/write",
+        category: "Recommendation",
+    },
+    action: [{
+        actionGroupId: mainActionGroup.id,
+        webhookProperties: {
+            from: "source",
+        },
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ActivityLogAlert Resource {#create}

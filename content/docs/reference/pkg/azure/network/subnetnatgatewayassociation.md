@@ -12,9 +12,72 @@ meta_desc: "Explore the SubnetNatGatewayAssociation resource of the network modu
 
 Associates a NAT Gateway with a Subnet within a Virtual Network.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="East US 2")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.2.0/24")
+example_nat_gateway = azure.network.NatGateway("exampleNatGateway",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet_nat_gateway_association = azure.network.SubnetNatGatewayAssociation("exampleSubnetNatGatewayAssociation",
+    subnet_id=example_subnet.id,
+    nat_gateway_id=example_nat_gateway.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "East US 2"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+});
+const exampleNatGateway = new azure.network.NatGateway("exampleNatGateway", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnetNatGatewayAssociation = new azure.network.SubnetNatGatewayAssociation("exampleSubnetNatGatewayAssociation", {
+    subnetId: exampleSubnet.id,
+    natGatewayId: exampleNatGateway.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SubnetNatGatewayAssociation Resource {#create}

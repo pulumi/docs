@@ -12,9 +12,53 @@ meta_desc: "Explore the Account resource of the maps module, including examples,
 
 Manages an Azure Maps Account.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.maps.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    sku_name="S1",
+    tags={
+        "environment": "Test",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = new azure.maps.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    skuName: "S1",
+    tags: {
+        environment: "Test",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Account Resource {#create}

@@ -12,9 +12,60 @@ meta_desc: "Explore the AnalyticsItem resource of the appinsights module, includ
 
 Manages an Application Insights Analytics Item component.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_insights = azure.appinsights.Insights("exampleInsights",
+    location="West Europe",
+    resource_group_name=example_resource_group.name,
+    application_type="web")
+example_analytics_item = azure.appinsights.AnalyticsItem("exampleAnalyticsItem",
+    application_insights_id=example_insights.id,
+    content="requests //simple example query",
+    scope="shared",
+    type="query")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleInsights = new azure.appinsights.Insights("exampleInsights", {
+    location: "West Europe",
+    resourceGroupName: exampleResourceGroup.name,
+    applicationType: "web",
+});
+const exampleAnalyticsItem = new azure.appinsights.AnalyticsItem("exampleAnalyticsItem", {
+    applicationInsightsId: exampleInsights.id,
+    content: "requests //simple example query",
+    scope: "shared",
+    type: "query",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AnalyticsItem Resource {#create}

@@ -12,9 +12,279 @@ meta_desc: "Explore the VirtualNetworkGatewayConnection resource of the network 
 
 Manages a connection in an existing Virtual Network Gateway.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Site-to-Site connection
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    address_spaces=["10.0.0.0/16"])
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.1.0/24")
+onpremise_local_network_gateway = azure.network.LocalNetworkGateway("onpremiseLocalNetworkGateway",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    gateway_address="168.62.225.23",
+    address_spaces=["10.1.1.0/24"])
+example_public_ip = azure.network.PublicIp("examplePublicIp",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    allocation_method="Dynamic")
+example_virtual_network_gateway = azure.network.VirtualNetworkGateway("exampleVirtualNetworkGateway",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    type="Vpn",
+    vpn_type="RouteBased",
+    active_active=False,
+    enable_bgp=False,
+    sku="Basic",
+    ip_configuration=[{
+        "publicIpAddressId": example_public_ip.id,
+        "privateIpAddressAllocation": "Dynamic",
+        "subnetId": example_subnet.id,
+    }])
+onpremise_virtual_network_gateway_connection = azure.network.VirtualNetworkGatewayConnection("onpremiseVirtualNetworkGatewayConnection",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    type="IPsec",
+    virtual_network_gateway_id=example_virtual_network_gateway.id,
+    local_network_gateway_id=onpremise_local_network_gateway.id,
+    shared_key="4-v3ry-53cr37-1p53c-5h4r3d-k3y")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    addressSpaces: ["10.0.0.0/16"],
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.1.0/24",
+});
+const onpremiseLocalNetworkGateway = new azure.network.LocalNetworkGateway("onpremiseLocalNetworkGateway", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    gatewayAddress: "168.62.225.23",
+    addressSpaces: ["10.1.1.0/24"],
+});
+const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    allocationMethod: "Dynamic",
+});
+const exampleVirtualNetworkGateway = new azure.network.VirtualNetworkGateway("exampleVirtualNetworkGateway", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    type: "Vpn",
+    vpnType: "RouteBased",
+    activeActive: false,
+    enableBgp: false,
+    sku: "Basic",
+    ip_configuration: [{
+        publicIpAddressId: examplePublicIp.id,
+        privateIpAddressAllocation: "Dynamic",
+        subnetId: exampleSubnet.id,
+    }],
+});
+const onpremiseVirtualNetworkGatewayConnection = new azure.network.VirtualNetworkGatewayConnection("onpremiseVirtualNetworkGatewayConnection", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    type: "IPsec",
+    virtualNetworkGatewayId: exampleVirtualNetworkGateway.id,
+    localNetworkGatewayId: onpremiseLocalNetworkGateway.id,
+    sharedKey: "4-v3ry-53cr37-1p53c-5h4r3d-k3y",
+});
+```
+{{% /example %}}
+
+### VNet-to-VNet connection
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+us_resource_group = azure.core.ResourceGroup("usResourceGroup", location="East US")
+us_virtual_network = azure.network.VirtualNetwork("usVirtualNetwork",
+    location=us_resource_group.location,
+    resource_group_name=us_resource_group.name,
+    address_spaces=["10.0.0.0/16"])
+us_gateway = azure.network.Subnet("usGateway",
+    resource_group_name=us_resource_group.name,
+    virtual_network_name=us_virtual_network.name,
+    address_prefix="10.0.1.0/24")
+us_public_ip = azure.network.PublicIp("usPublicIp",
+    location=us_resource_group.location,
+    resource_group_name=us_resource_group.name,
+    allocation_method="Dynamic")
+us_virtual_network_gateway = azure.network.VirtualNetworkGateway("usVirtualNetworkGateway",
+    location=us_resource_group.location,
+    resource_group_name=us_resource_group.name,
+    type="Vpn",
+    vpn_type="RouteBased",
+    sku="Basic",
+    ip_configuration=[{
+        "publicIpAddressId": us_public_ip.id,
+        "privateIpAddressAllocation": "Dynamic",
+        "subnetId": us_gateway.id,
+    }])
+europe_resource_group = azure.core.ResourceGroup("europeResourceGroup", location="West Europe")
+europe_virtual_network = azure.network.VirtualNetwork("europeVirtualNetwork",
+    location=europe_resource_group.location,
+    resource_group_name=europe_resource_group.name,
+    address_spaces=["10.1.0.0/16"])
+europe_gateway = azure.network.Subnet("europeGateway",
+    resource_group_name=europe_resource_group.name,
+    virtual_network_name=europe_virtual_network.name,
+    address_prefix="10.1.1.0/24")
+europe_public_ip = azure.network.PublicIp("europePublicIp",
+    location=europe_resource_group.location,
+    resource_group_name=europe_resource_group.name,
+    allocation_method="Dynamic")
+europe_virtual_network_gateway = azure.network.VirtualNetworkGateway("europeVirtualNetworkGateway",
+    location=europe_resource_group.location,
+    resource_group_name=europe_resource_group.name,
+    type="Vpn",
+    vpn_type="RouteBased",
+    sku="Basic",
+    ip_configuration=[{
+        "publicIpAddressId": europe_public_ip.id,
+        "privateIpAddressAllocation": "Dynamic",
+        "subnetId": europe_gateway.id,
+    }])
+us_to_europe = azure.network.VirtualNetworkGatewayConnection("usToEurope",
+    location=us_resource_group.location,
+    resource_group_name=us_resource_group.name,
+    type="Vnet2Vnet",
+    virtual_network_gateway_id=us_virtual_network_gateway.id,
+    peer_virtual_network_gateway_id=europe_virtual_network_gateway.id,
+    shared_key="4-v3ry-53cr37-1p53c-5h4r3d-k3y")
+europe_to_us = azure.network.VirtualNetworkGatewayConnection("europeToUs",
+    location=europe_resource_group.location,
+    resource_group_name=europe_resource_group.name,
+    type="Vnet2Vnet",
+    virtual_network_gateway_id=europe_virtual_network_gateway.id,
+    peer_virtual_network_gateway_id=us_virtual_network_gateway.id,
+    shared_key="4-v3ry-53cr37-1p53c-5h4r3d-k3y")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const usResourceGroup = new azure.core.ResourceGroup("usResourceGroup", {location: "East US"});
+const usVirtualNetwork = new azure.network.VirtualNetwork("usVirtualNetwork", {
+    location: usResourceGroup.location,
+    resourceGroupName: usResourceGroup.name,
+    addressSpaces: ["10.0.0.0/16"],
+});
+const usGateway = new azure.network.Subnet("usGateway", {
+    resourceGroupName: usResourceGroup.name,
+    virtualNetworkName: usVirtualNetwork.name,
+    addressPrefix: "10.0.1.0/24",
+});
+const usPublicIp = new azure.network.PublicIp("usPublicIp", {
+    location: usResourceGroup.location,
+    resourceGroupName: usResourceGroup.name,
+    allocationMethod: "Dynamic",
+});
+const usVirtualNetworkGateway = new azure.network.VirtualNetworkGateway("usVirtualNetworkGateway", {
+    location: usResourceGroup.location,
+    resourceGroupName: usResourceGroup.name,
+    type: "Vpn",
+    vpnType: "RouteBased",
+    sku: "Basic",
+    ip_configuration: [{
+        publicIpAddressId: usPublicIp.id,
+        privateIpAddressAllocation: "Dynamic",
+        subnetId: usGateway.id,
+    }],
+});
+const europeResourceGroup = new azure.core.ResourceGroup("europeResourceGroup", {location: "West Europe"});
+const europeVirtualNetwork = new azure.network.VirtualNetwork("europeVirtualNetwork", {
+    location: europeResourceGroup.location,
+    resourceGroupName: europeResourceGroup.name,
+    addressSpaces: ["10.1.0.0/16"],
+});
+const europeGateway = new azure.network.Subnet("europeGateway", {
+    resourceGroupName: europeResourceGroup.name,
+    virtualNetworkName: europeVirtualNetwork.name,
+    addressPrefix: "10.1.1.0/24",
+});
+const europePublicIp = new azure.network.PublicIp("europePublicIp", {
+    location: europeResourceGroup.location,
+    resourceGroupName: europeResourceGroup.name,
+    allocationMethod: "Dynamic",
+});
+const europeVirtualNetworkGateway = new azure.network.VirtualNetworkGateway("europeVirtualNetworkGateway", {
+    location: europeResourceGroup.location,
+    resourceGroupName: europeResourceGroup.name,
+    type: "Vpn",
+    vpnType: "RouteBased",
+    sku: "Basic",
+    ip_configuration: [{
+        publicIpAddressId: europePublicIp.id,
+        privateIpAddressAllocation: "Dynamic",
+        subnetId: europeGateway.id,
+    }],
+});
+const usToEurope = new azure.network.VirtualNetworkGatewayConnection("usToEurope", {
+    location: usResourceGroup.location,
+    resourceGroupName: usResourceGroup.name,
+    type: "Vnet2Vnet",
+    virtualNetworkGatewayId: usVirtualNetworkGateway.id,
+    peerVirtualNetworkGatewayId: europeVirtualNetworkGateway.id,
+    sharedKey: "4-v3ry-53cr37-1p53c-5h4r3d-k3y",
+});
+const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs", {
+    location: europeResourceGroup.location,
+    resourceGroupName: europeResourceGroup.name,
+    type: "Vnet2Vnet",
+    virtualNetworkGatewayId: europeVirtualNetworkGateway.id,
+    peerVirtualNetworkGatewayId: usVirtualNetworkGateway.id,
+    sharedKey: "4-v3ry-53cr37-1p53c-5h4r3d-k3y",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualNetworkGatewayConnection Resource {#create}

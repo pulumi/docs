@@ -12,9 +12,139 @@ meta_desc: "Explore the MLServicesCluster resource of the hdinsight module, incl
 
 Manages a HDInsight ML Services Cluster.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_container = azure.storage.Container("exampleContainer",
+    resource_group_name=example_resource_group.name,
+    storage_account_name=example_account.name,
+    container_access_type="private")
+example_ml_services_cluster = azure.hdinsight.MLServicesCluster("exampleMLServicesCluster",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    cluster_version="3.6",
+    tier="Standard",
+    rstudio=True,
+    gateway={
+        "enabled": True,
+        "username": "acctestusrgw",
+        "password": "Password123!",
+    },
+    storage_account=[{
+        "storageContainerId": example_container.id,
+        "storageAccountKey": example_account.primary_access_key,
+        "isDefault": True,
+    }],
+    roles={
+        "head_node": {
+            "vmSize": "Standard_D3_v2",
+            "username": "acctestusrvm",
+            "password": "AccTestvdSC4daf986!",
+        },
+        "worker_node": {
+            "vmSize": "Standard_D4_V2",
+            "username": "acctestusrvm",
+            "password": "AccTestvdSC4daf986!",
+            "targetInstanceCount": 3,
+        },
+        "zookeeper_node": {
+            "vmSize": "Standard_D3_v2",
+            "username": "acctestusrvm",
+            "password": "AccTestvdSC4daf986!",
+        },
+        "edge_node": {
+            "vmSize": "Standard_D3_v2",
+            "username": "acctestusrvm",
+            "password": "AccTestvdSC4daf986!",
+        },
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const exampleContainer = new azure.storage.Container("exampleContainer", {
+    resourceGroupName: exampleResourceGroup.name,
+    storageAccountName: exampleAccount.name,
+    containerAccessType: "private",
+});
+const exampleMLServicesCluster = new azure.hdinsight.MLServicesCluster("exampleMLServicesCluster", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    clusterVersion: "3.6",
+    tier: "Standard",
+    rstudio: true,
+    gateway: {
+        enabled: true,
+        username: "acctestusrgw",
+        password: "Password123!",
+    },
+    storage_account: [{
+        storageContainerId: exampleContainer.id,
+        storageAccountKey: exampleAccount.primaryAccessKey,
+        isDefault: true,
+    }],
+    roles: {
+        head_node: {
+            vmSize: "Standard_D3_v2",
+            username: "acctestusrvm",
+            password: "AccTestvdSC4daf986!",
+        },
+        worker_node: {
+            vmSize: "Standard_D4_V2",
+            username: "acctestusrvm",
+            password: "AccTestvdSC4daf986!",
+            targetInstanceCount: 3,
+        },
+        zookeeper_node: {
+            vmSize: "Standard_D3_v2",
+            username: "acctestusrvm",
+            password: "AccTestvdSC4daf986!",
+        },
+        edge_node: {
+            vmSize: "Standard_D3_v2",
+            username: "acctestusrvm",
+            password: "AccTestvdSC4daf986!",
+        },
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MLServicesCluster Resource {#create}

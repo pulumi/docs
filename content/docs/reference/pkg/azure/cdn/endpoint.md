@@ -12,9 +12,66 @@ meta_desc: "Explore the Endpoint resource of the cdn module, including examples,
 
 A CDN Endpoint is the entity within a CDN Profile containing configuration information regarding caching behaviours and origins. The CDN Endpoint is exposed using the URL format <endpointname>.azureedge.net.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_profile = azure.cdn.Profile("exampleProfile",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="Standard_Verizon")
+example_endpoint = azure.cdn.Endpoint("exampleEndpoint",
+    profile_name=example_profile.name,
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    origin=[{
+        "name": "example",
+        "hostName": "www.example.com",
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleProfile = new azure.cdn.Profile("exampleProfile", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "Standard_Verizon",
+});
+const exampleEndpoint = new azure.cdn.Endpoint("exampleEndpoint", {
+    profileName: exampleProfile.name,
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    origin: [{
+        name: "example",
+        hostName: "www.example.com",
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Endpoint Resource {#create}

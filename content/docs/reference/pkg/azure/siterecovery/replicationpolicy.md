@@ -12,9 +12,60 @@ meta_desc: "Explore the ReplicationPolicy resource of the siterecovery module, i
 
 Manages a Azure Site Recovery replication policy within a recovery vault. Replication policies define the frequency at which recovery points are created and how long they are stored.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+secondary = azure.core.ResourceGroup("secondary", location="East US")
+vault = azure.recoveryservices.Vault("vault",
+    location=secondary.location,
+    resource_group_name=secondary.name,
+    sku="Standard")
+policy = azure.siterecovery.ReplicationPolicy("policy",
+    resource_group_name=secondary.name,
+    recovery_vault_name=vault.name,
+    recovery_point_retention_in_minutes=24 * 60,
+    application_consistent_snapshot_frequency_in_minutes=4 * 60)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const secondary = new azure.core.ResourceGroup("secondary", {location: "East US"});
+const vault = new azure.recoveryservices.Vault("vault", {
+    location: secondary.location,
+    resourceGroupName: secondary.name,
+    sku: "Standard",
+});
+const policy = new azure.siterecovery.ReplicationPolicy("policy", {
+    resourceGroupName: secondary.name,
+    recoveryVaultName: vault.name,
+    recoveryPointRetentionInMinutes: 24 * 60,
+    applicationConsistentSnapshotFrequencyInMinutes: 4 * 60,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ReplicationPolicy Resource {#create}

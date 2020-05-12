@@ -14,9 +14,82 @@ Manages a Node Pool within a Kubernetes Cluster
 
 > **NOTE:** Multiple Node Pools are only supported when the Kubernetes Cluster is using Virtual Machine Scale Sets.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_kubernetes_cluster = azure.containerservice.KubernetesCluster("exampleKubernetesCluster",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    dns_prefix="exampleaks1",
+    default_node_pool={
+        "name": "default",
+        "nodeCount": 1,
+        "vmSize": "Standard_D2_v2",
+    },
+    service_principal={
+        "clientId": "00000000-0000-0000-0000-000000000000",
+        "clientSecret": "00000000000000000000000000000000",
+    })
+example_kubernetes_cluster_node_pool = azure.containerservice.KubernetesClusterNodePool("exampleKubernetesClusterNodePool",
+    kubernetes_cluster_id=example_kubernetes_cluster.id,
+    vm_size="Standard_DS2_v2",
+    node_count=1,
+    tags={
+        "Environment": "Production",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleKubernetesCluster = new azure.containerservice.KubernetesCluster("exampleKubernetesCluster", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    dnsPrefix: "exampleaks1",
+    default_node_pool: {
+        name: "default",
+        nodeCount: 1,
+        vmSize: "Standard_D2_v2",
+    },
+    service_principal: {
+        clientId: "00000000-0000-0000-0000-000000000000",
+        clientSecret: "00000000000000000000000000000000",
+    },
+});
+const exampleKubernetesClusterNodePool = new azure.containerservice.KubernetesClusterNodePool("exampleKubernetesClusterNodePool", {
+    kubernetesClusterId: exampleKubernetesCluster.id,
+    vmSize: "Standard_DS2_v2",
+    nodeCount: 1,
+    tags: {
+        Environment: "Production",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a KubernetesClusterNodePool Resource {#create}

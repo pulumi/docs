@@ -64,6 +64,42 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.healthcare.Service">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.healthcare.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_policy_object_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authentication_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cors_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cosmosdb_throughput</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kind</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.healthcare.Service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Healthcare Service.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">access_policy_object_ids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&quot;</span><span class="p">],</span>
+    <span class="n">authentication_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;audience&quot;</span><span class="p">:</span> <span class="s2">&quot;https://azurehealthcareapis.com/&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;authority&quot;</span><span class="p">:</span> <span class="s2">&quot;https://login.microsoftonline.com/$$%7Bdata.azurerm_client_config.current.tenant_id%7D&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;smartProxyEnabled&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">cors_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;allowCredentials&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;allowedHeaders&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;x-tempo-*&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;x-tempo2-*&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;allowedMethods&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;PUT&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;allowedOrigins&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;http://www.example.com&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;http://www.example2.com&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;maxAgeInSeconds&quot;</span><span class="p">:</span> <span class="s2">&quot;500&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">cosmosdb_throughput</span><span class="o">=</span><span class="s2">&quot;2000&quot;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;fhir-R4&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;westus2&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;sample-resource-group&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;testenv&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;purpose&quot;</span><span class="p">:</span> <span class="s2">&quot;AcceptanceTests&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -237,6 +273,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.healthcare.get_service">
 <code class="sig-prename descclassname">pulumi_azure.healthcare.</code><code class="sig-name descname">get_service</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.healthcare.get_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Healthcare Service</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">get_service</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-healthcare_service&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-resources&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;westus2&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;healthcareServiceId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

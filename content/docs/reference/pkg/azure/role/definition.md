@@ -12,11 +12,59 @@ meta_desc: "Explore the Definition resource of the role module, including exampl
 
 Manages a custom Role Definition, used to assign Roles to Users/Principals. See ['Understand role definitions'](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-definitions) in the Azure documentation for more details.
 
-{{% examples %}}
-{{% /examples %}}
+
 
 Deprecated: azure.role.Definition has been deprecated in favour of azure.authorization.RoleDefinition
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+primary = azure.core.get_subscription()
+example = azure.authorization.RoleDefinition("example",
+    scope=primary.id,
+    description="This is a custom role created",
+    permissions=[{
+        "actions": ["*"],
+        "notActions": [],
+    }],
+    assignable_scopes=[primary.id])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const primary = azure.core.getSubscription({});
+const example = new azure.authorization.RoleDefinition("example", {
+    scope: primary.then(primary => primary.id),
+    description: "This is a custom role created",
+    permissions: [{
+        actions: ["*"],
+        notActions: [],
+    }],
+    assignableScopes: [primary.then(primary => primary.id)],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 <p class="resource-deprecated">Deprecated: {{% md %}}azure.role.Definition has been deprecated in favour of azure.authorization.RoleDefinition{{% /md %}}</p>
 
 

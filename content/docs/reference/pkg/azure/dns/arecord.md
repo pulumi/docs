@@ -12,9 +12,91 @@ meta_desc: "Explore the ARecord resource of the dns module, including examples, 
 
 Enables you to manage DNS A Records within Azure DNS.
 
-{{% examples %}}
-{{% /examples %}}
 
+## Example Usage (Alias Record)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleZone = new azure.dns.Zone("exampleZone", {resourceGroupName: exampleResourceGroup.name});
+const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    allocationMethod: "Dynamic",
+    ipVersion: "IPv4",
+});
+const exampleARecord = new azure.dns.ARecord("exampleARecord", {
+    zoneName: exampleZone.name,
+    resourceGroupName: exampleResourceGroup.name,
+    ttl: 300,
+    targetResourceId: examplePublicIp.id,
+});
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_zone = azure.dns.Zone("exampleZone", resource_group_name=example_resource_group.name)
+example_public_ip = azure.network.PublicIp("examplePublicIp",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    allocation_method="Dynamic",
+    ip_version="IPv4")
+example_a_record = azure.dns.ARecord("exampleARecord",
+    zone_name=example_zone.name,
+    resource_group_name=example_resource_group.name,
+    ttl=300,
+    target_resource_id=example_public_ip.id)
+```
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_zone = azure.dns.Zone("exampleZone", resource_group_name=example_resource_group.name)
+example_a_record = azure.dns.ARecord("exampleARecord",
+    zone_name=example_zone.name,
+    resource_group_name=example_resource_group.name,
+    ttl=300,
+    records=["10.0.180.17"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleZone = new azure.dns.Zone("exampleZone", {resourceGroupName: exampleResourceGroup.name});
+const exampleARecord = new azure.dns.ARecord("exampleARecord", {
+    zoneName: exampleZone.name,
+    resourceGroupName: exampleResourceGroup.name,
+    ttl: 300,
+    records: ["10.0.180.17"],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ARecord Resource {#create}

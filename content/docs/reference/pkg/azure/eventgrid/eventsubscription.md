@@ -12,9 +12,77 @@ meta_desc: "Explore the EventSubscription resource of the eventgrid module, incl
 
 Manages an EventGrid Event Subscription
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+default_resource_group = azure.core.ResourceGroup("defaultResourceGroup", location="West US 2")
+default_account = azure.storage.Account("defaultAccount",
+    resource_group_name=default_resource_group.name,
+    location=default_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS",
+    tags={
+        "environment": "staging",
+    })
+default_queue = azure.storage.Queue("defaultQueue",
+    resource_group_name=default_resource_group.name,
+    storage_account_name=default_account.name)
+default_event_subscription = azure.eventgrid.EventSubscription("defaultEventSubscription",
+    scope=default_resource_group.id,
+    storage_queue_endpoint={
+        "storageAccountId": default_account.id,
+        "queueName": default_queue.name,
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const defaultResourceGroup = new azure.core.ResourceGroup("defaultResourceGroup", {location: "West US 2"});
+const defaultAccount = new azure.storage.Account("defaultAccount", {
+    resourceGroupName: defaultResourceGroup.name,
+    location: defaultResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+    tags: {
+        environment: "staging",
+    },
+});
+const defaultQueue = new azure.storage.Queue("defaultQueue", {
+    resourceGroupName: defaultResourceGroup.name,
+    storageAccountName: defaultAccount.name,
+});
+const defaultEventSubscription = new azure.eventgrid.EventSubscription("defaultEventSubscription", {
+    scope: defaultResourceGroup.id,
+    storage_queue_endpoint: {
+        storageAccountId: defaultAccount.id,
+        queueName: defaultQueue.name,
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EventSubscription Resource {#create}

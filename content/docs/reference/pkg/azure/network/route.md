@@ -16,9 +16,58 @@ Manages a Route within a Route Table.
 provides both a standalone Route resource, and allows for Routes to be defined in-line within the Route Table resource.
 At this time you cannot use a Route Table with in-line Routes in conjunction with any Route resources. Doing so will cause a conflict of Route configurations and will overwrite Routes.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_route_table = azure.network.RouteTable("exampleRouteTable",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_route = azure.network.Route("exampleRoute",
+    resource_group_name=example_resource_group.name,
+    route_table_name=example_route_table.name,
+    address_prefix="10.1.0.0/16",
+    next_hop_type="vnetlocal")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleRouteTable = new azure.network.RouteTable("exampleRouteTable", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleRoute = new azure.network.Route("exampleRoute", {
+    resourceGroupName: exampleResourceGroup.name,
+    routeTableName: exampleRouteTable.name,
+    addressPrefix: "10.1.0.0/16",
+    nextHopType: "vnetlocal",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Route Resource {#create}

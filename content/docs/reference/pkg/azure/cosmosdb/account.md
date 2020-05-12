@@ -12,9 +12,94 @@ meta_desc: "Explore the Account resource of the cosmosdb module, including examp
 
 Manages a CosmosDB (formally DocumentDB) Account.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+import pulumi_random as random
+
+rg = azure.core.ResourceGroup("rg", location=var["resource_group_location"])
+ri = random.RandomInteger("ri",
+    min=10000,
+    max=99999)
+db = azure.cosmosdb.Account("db",
+    location=rg.location,
+    resource_group_name=rg.name,
+    offer_type="Standard",
+    kind="GlobalDocumentDB",
+    enable_automatic_failover=True,
+    consistency_policy={
+        "consistencyLevel": "BoundedStaleness",
+        "maxIntervalInSeconds": 10,
+        "maxStalenessPrefix": 200,
+    },
+    geo_location=[
+        {
+            "location": var["failover_location"],
+            "failoverPriority": 1,
+        },
+        {
+            "prefix": ri.result.apply(lambda result: f"tfex-cosmos-db-{result}-customid"),
+            "location": rg.location,
+            "failoverPriority": 0,
+        },
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * as random from "@pulumi/random";
+
+const rg = new azure.core.ResourceGroup("rg", {location: var.resource_group_location});
+const ri = new random.RandomInteger("ri", {
+    min: 10000,
+    max: 99999,
+});
+const db = new azure.cosmosdb.Account("db", {
+    location: rg.location,
+    resourceGroupName: rg.name,
+    offerType: "Standard",
+    kind: "GlobalDocumentDB",
+    enableAutomaticFailover: true,
+    consistency_policy: {
+        consistencyLevel: "BoundedStaleness",
+        maxIntervalInSeconds: 10,
+        maxStalenessPrefix: 200,
+    },
+    geo_location: [
+        {
+            location: var.failover_location,
+            failoverPriority: 1,
+        },
+        {
+            prefix: pulumi.interpolate`tfex-cosmos-db-${ri.result}-customid`,
+            location: rg.location,
+            failoverPriority: 0,
+        },
+    ],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Account Resource {#create}

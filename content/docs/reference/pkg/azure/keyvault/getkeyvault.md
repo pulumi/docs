@@ -12,9 +12,46 @@ meta_desc: "Explore the GetKeyVault function of the keyvault module, including e
 
 Use this data source to access information about an existing Key Vault.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.keyvault.get_key_vault(name="mykeyvault",
+    resource_group_name="some-resource-group")
+pulumi.export("vaultUri", example.vault_uri)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.keyvault.getKeyVault({
+    name: "mykeyvault",
+    resourceGroupName: "some-resource-group",
+});
+export const vaultUri = example.then(example => example.vaultUri);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetKeyVault {#using}

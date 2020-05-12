@@ -13,9 +13,82 @@ meta_desc: "Explore the Schedule resource of the devtest module, including examp
 Manages automated startup and shutdown schedules for Azure Dev Test Lab.
 
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+sample_resource_group = azure.core.ResourceGroup("sampleResourceGroup", location="West US")
+sample_lab = azure.devtest.Lab("sampleLab",
+    location=azurerm_resource_group["example"]["location"],
+    resource_group_name=azurerm_resource_group["example"]["name"])
+sample_schedule = azure.devtest.Schedule("sampleSchedule",
+    location=azurerm_resource_group["example"]["location"],
+    resource_group_name=azurerm_resource_group["example"]["name"],
+    lab_name=azurerm_dev_test_lab["example"]["name"],
+    weekly_recurrence={
+        "time": "1100",
+        "weekDays": [
+            "Monday",
+            "Tuesday",
+        ],
+    },
+    time_zone_id="Pacific Standard Time",
+    task_type="LabVmsStartupTask",
+    notification_settings={},
+    tags={
+        "environment": "Production",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const sampleResourceGroup = new azure.core.ResourceGroup("sampleResourceGroup", {location: "West US"});
+const sampleLab = new azure.devtest.Lab("sampleLab", {
+    location: azurerm_resource_group.example.location,
+    resourceGroupName: azurerm_resource_group.example.name,
+});
+const sampleSchedule = new azure.devtest.Schedule("sampleSchedule", {
+    location: azurerm_resource_group.example.location,
+    resourceGroupName: azurerm_resource_group.example.name,
+    labName: azurerm_dev_test_lab.example.name,
+    weekly_recurrence: {
+        time: "1100",
+        weekDays: [
+            "Monday",
+            "Tuesday",
+        ],
+    },
+    timeZoneId: "Pacific Standard Time",
+    taskType: "LabVmsStartupTask",
+    notification_settings: {},
+    tags: {
+        environment: "Production",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Schedule Resource {#create}

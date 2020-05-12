@@ -12,9 +12,96 @@ meta_desc: "Explore the GremlinGraph resource of the cosmosdb module, including 
 
 Manages a Gremlin Graph within a Cosmos DB Account.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_account = azure.cosmosdb.get_account(name="tfex-cosmosdb-account",
+    resource_group_name="tfex-cosmosdb-account-rg")
+example_gremlin_database = azure.cosmosdb.GremlinDatabase("exampleGremlinDatabase",
+    resource_group_name=example_account.resource_group_name,
+    account_name=example_account.name)
+example_gremlin_graph = azure.cosmosdb.GremlinGraph("exampleGremlinGraph",
+    resource_group_name=azurerm_cosmosdb_account["example"]["resource_group_name"],
+    account_name=azurerm_cosmosdb_account["example"]["name"],
+    database_name=example_gremlin_database.name,
+    partition_key_path="/Example",
+    throughput=400,
+    index_policy=[{
+        "automatic": True,
+        "indexingMode": "Consistent",
+        "includedPaths": ["/*"],
+        "excludedPaths": ["/\"_etag\"/?"],
+    }],
+    conflict_resolution_policy=[{
+        "mode": "LastWriterWins",
+        "conflictResolutionPath": "/_ts",
+    }],
+    unique_key=[{
+        "paths": [
+            "/definition/id1",
+            "/definition/id2",
+        ],
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleAccount = azure.cosmosdb.getAccount({
+    name: "tfex-cosmosdb-account",
+    resourceGroupName: "tfex-cosmosdb-account-rg",
+});
+const exampleGremlinDatabase = new azure.cosmosdb.GremlinDatabase("exampleGremlinDatabase", {
+    resourceGroupName: exampleAccount.then(exampleAccount => exampleAccount.resourceGroupName),
+    accountName: exampleAccount.then(exampleAccount => exampleAccount.name),
+});
+const exampleGremlinGraph = new azure.cosmosdb.GremlinGraph("exampleGremlinGraph", {
+    resourceGroupName: azurerm_cosmosdb_account.example.resource_group_name,
+    accountName: azurerm_cosmosdb_account.example.name,
+    databaseName: exampleGremlinDatabase.name,
+    partitionKeyPath: "/Example",
+    throughput: 400,
+    index_policy: [{
+        automatic: true,
+        indexingMode: "Consistent",
+        includedPaths: ["/*"],
+        excludedPaths: ["/\"_etag\"/?"],
+    }],
+    conflict_resolution_policy: [{
+        mode: "LastWriterWins",
+        conflictResolutionPath: "/_ts",
+    }],
+    unique_key: [{
+        paths: [
+            "/definition/id1",
+            "/definition/id2",
+        ],
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GremlinGraph Resource {#create}

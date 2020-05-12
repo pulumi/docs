@@ -17,6 +17,32 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.logicapps.ActionCustom">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">ActionCustom</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logic_app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.ActionCustom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Custom Action within a Logic App Workflow</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;East US&quot;</span><span class="p">)</span>
+<span class="n">example_workflow</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">logicapps</span><span class="o">.</span><span class="n">Workflow</span><span class="p">(</span><span class="s2">&quot;exampleWorkflow&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_action_custom</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">logicapps</span><span class="o">.</span><span class="n">ActionCustom</span><span class="p">(</span><span class="s2">&quot;exampleActionCustom&quot;</span><span class="p">,</span>
+    <span class="n">logic_app_id</span><span class="o">=</span><span class="n">example_workflow</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">body</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">    &quot;description&quot;: &quot;A variable to configure the auto expiration age in days. Configured in negative number. Default is -30 (30 days old).&quot;,</span>
+<span class="s2">    &quot;inputs&quot;: {</span>
+<span class="s2">        &quot;variables&quot;: [</span>
+<span class="s2">            {</span>
+<span class="s2">                &quot;name&quot;: &quot;ExpirationAgeInDays&quot;,</span>
+<span class="s2">                &quot;type&quot;: &quot;Integer&quot;,</span>
+<span class="s2">                &quot;value&quot;: -30</span>
+<span class="s2">            }</span>
+<span class="s2">        ]</span>
+<span class="s2">    },</span>
+<span class="s2">    &quot;runAfter&quot;: </span><span class="si">{}</span><span class="s2">,</span>
+<span class="s2">    &quot;type&quot;: &quot;InitializeVariable&quot;</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -107,6 +133,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.logicapps.ActionHttp">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">ActionHttp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">headers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logic_app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.ActionHttp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an HTTP Action within a Logic App Workflow</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;East US&quot;</span><span class="p">)</span>
+<span class="n">example_workflow</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">logicapps</span><span class="o">.</span><span class="n">Workflow</span><span class="p">(</span><span class="s2">&quot;exampleWorkflow&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_action_http</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">logicapps</span><span class="o">.</span><span class="n">ActionHttp</span><span class="p">(</span><span class="s2">&quot;exampleActionHttp&quot;</span><span class="p">,</span>
+    <span class="n">logic_app_id</span><span class="o">=</span><span class="n">example_workflow</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">method</span><span class="o">=</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="n">uri</span><span class="o">=</span><span class="s2">&quot;http://example.com/some-webhook&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -298,6 +337,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.logicapps.TriggerCustom">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">TriggerCustom</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logic_app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerCustom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Custom Trigger within a Logic App Workflow</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;East US&quot;</span><span class="p">)</span>
+<span class="n">example_workflow</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">logicapps</span><span class="o">.</span><span class="n">Workflow</span><span class="p">(</span><span class="s2">&quot;exampleWorkflow&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_trigger_custom</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">logicapps</span><span class="o">.</span><span class="n">TriggerCustom</span><span class="p">(</span><span class="s2">&quot;exampleTriggerCustom&quot;</span><span class="p">,</span>
+    <span class="n">logic_app_id</span><span class="o">=</span><span class="n">example_workflow</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">body</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;recurrence&quot;: {</span>
+<span class="s2">    &quot;frequency&quot;: &quot;Day&quot;,</span>
+<span class="s2">    &quot;interval&quot;: 1</span>
+<span class="s2">  },</span>
+<span class="s2">  &quot;type&quot;: &quot;Recurrence&quot;</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -388,6 +446,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.logicapps.TriggerHttpRequest">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">TriggerHttpRequest</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logic_app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">relative_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schema</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerHttpRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HTTP Request Trigger within a Logic App Workflow</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;East US&quot;</span><span class="p">)</span>
+<span class="n">example_workflow</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">logicapps</span><span class="o">.</span><span class="n">Workflow</span><span class="p">(</span><span class="s2">&quot;exampleWorkflow&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_trigger_http_request</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">logicapps</span><span class="o">.</span><span class="n">TriggerHttpRequest</span><span class="p">(</span><span class="s2">&quot;exampleTriggerHttpRequest&quot;</span><span class="p">,</span>
+    <span class="n">logic_app_id</span><span class="o">=</span><span class="n">example_workflow</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">schema</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">    &quot;type&quot;: &quot;object&quot;,</span>
+<span class="s2">    &quot;properties&quot;: {</span>
+<span class="s2">        &quot;hello&quot;: {</span>
+<span class="s2">            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s2">        }</span>
+<span class="s2">    }</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -494,6 +572,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.logicapps.TriggerRecurrence">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">TriggerRecurrence</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frequency</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logic_app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerRecurrence" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Recurrence Trigger within a Logic App Workflow</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;East US&quot;</span><span class="p">)</span>
+<span class="n">example_workflow</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">logicapps</span><span class="o">.</span><span class="n">Workflow</span><span class="p">(</span><span class="s2">&quot;exampleWorkflow&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_trigger_recurrence</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">logicapps</span><span class="o">.</span><span class="n">TriggerRecurrence</span><span class="p">(</span><span class="s2">&quot;exampleTriggerRecurrence&quot;</span><span class="p">,</span>
+    <span class="n">logic_app_id</span><span class="o">=</span><span class="n">example_workflow</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">frequency</span><span class="o">=</span><span class="s2">&quot;Day&quot;</span><span class="p">,</span>
+    <span class="n">interval</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -600,6 +691,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.logicapps.Workflow">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">Workflow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workflow_schema</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workflow_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.Workflow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Logic App Workflow.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;East US&quot;</span><span class="p">)</span>
+<span class="n">example_workflow</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">logicapps</span><span class="o">.</span><span class="n">Workflow</span><span class="p">(</span><span class="s2">&quot;exampleWorkflow&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -757,6 +857,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.logicapps.get_workflow">
 <code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">get_workflow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.get_workflow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Logic App Workflow.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">logicapps</span><span class="o">.</span><span class="n">get_workflow</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;workflow1&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;my-resource-group&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;accessEndpoint&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">access_endpoint</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -12,9 +12,60 @@ meta_desc: "Explore the DataSourceWindowsEvent resource of the loganalytics modu
 
 Manages a Log Analytics Windows Event DataSource.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_analytics_workspace = azure.operationalinsights.AnalyticsWorkspace("exampleAnalyticsWorkspace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="PerGB2018")
+example_data_source_windows_event = azure.loganalytics.DataSourceWindowsEvent("exampleDataSourceWindowsEvent",
+    resource_group_name=example_resource_group.name,
+    workspace_name=example_analytics_workspace.name,
+    event_log_name="Application",
+    event_types=["error"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAnalyticsWorkspace = new azure.operationalinsights.AnalyticsWorkspace("exampleAnalyticsWorkspace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "PerGB2018",
+});
+const exampleDataSourceWindowsEvent = new azure.loganalytics.DataSourceWindowsEvent("exampleDataSourceWindowsEvent", {
+    resourceGroupName: exampleResourceGroup.name,
+    workspaceName: exampleAnalyticsWorkspace.name,
+    eventLogName: "Application",
+    eventTypes: ["error"],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DataSourceWindowsEvent Resource {#create}

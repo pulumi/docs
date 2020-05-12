@@ -12,9 +12,65 @@ meta_desc: "Explore the DatasetSqlServerTable resource of the datafactory module
 
 Manages a SQL Server Table Dataset inside a Azure Data Factory.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
+example_factory = azure.datafactory.Factory("exampleFactory",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_linked_service_sql_server = azure.datafactory.LinkedServiceSqlServer("exampleLinkedServiceSqlServer",
+    resource_group_name=example_resource_group.name,
+    data_factory_name=example_factory.name,
+    connection_string="Integrated Security=False;Data Source=test;Initial Catalog=test;User ID=test;Password=test")
+example_dataset_sql_server_table = azure.datafactory.DatasetSqlServerTable("exampleDatasetSqlServerTable",
+    resource_group_name=example_resource_group.name,
+    data_factory_name=example_factory.name,
+    linked_service_name=example_linked_service_sql_server.name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "northeurope"});
+const exampleFactory = new azure.datafactory.Factory("exampleFactory", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleLinkedServiceSqlServer = new azure.datafactory.LinkedServiceSqlServer("exampleLinkedServiceSqlServer", {
+    resourceGroupName: exampleResourceGroup.name,
+    dataFactoryName: exampleFactory.name,
+    connectionString: "Integrated Security=False;Data Source=test;Initial Catalog=test;User ID=test;Password=test",
+});
+const exampleDatasetSqlServerTable = new azure.datafactory.DatasetSqlServerTable("exampleDatasetSqlServerTable", {
+    resourceGroupName: exampleResourceGroup.name,
+    dataFactoryName: exampleFactory.name,
+    linkedServiceName: exampleLinkedServiceSqlServer.name,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DatasetSqlServerTable Resource {#create}

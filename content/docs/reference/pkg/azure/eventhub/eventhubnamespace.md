@@ -12,9 +12,57 @@ meta_desc: "Explore the EventHubNamespace resource of the eventhub module, inclu
 
 Manages an EventHub Namespace.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_event_hub_namespace = azure.eventhub.EventHubNamespace("exampleEventHubNamespace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="Standard",
+    capacity=2,
+    tags={
+        "environment": "Production",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleEventHubNamespace = new azure.eventhub.EventHubNamespace("exampleEventHubNamespace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "Standard",
+    capacity: 2,
+    tags: {
+        environment: "Production",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EventHubNamespace Resource {#create}
@@ -573,6 +621,16 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
+        <span>Default<wbr>Primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the primary connection string for the authorization
+rule `RootManageSharedAccessKey`, which is generated when disaster recovery is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Default<wbr>Primary<wbr>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -588,6 +646,16 @@ rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}The secondary connection string for the
 authorization rule `RootManageSharedAccessKey`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Default<wbr>Secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the secondary connection string for the
+authorization rule `RootManageSharedAccessKey`, which is generated when disaster recovery is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -626,6 +694,16 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
+        <span>Default<wbr>Primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the primary connection string for the authorization
+rule `RootManageSharedAccessKey`, which is generated when disaster recovery is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Default<wbr>Primary<wbr>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -641,6 +719,16 @@ rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}The secondary connection string for the
 authorization rule `RootManageSharedAccessKey`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Default<wbr>Secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the secondary connection string for the
+authorization rule `RootManageSharedAccessKey`, which is generated when disaster recovery is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -679,6 +767,16 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
+        <span>default<wbr>Primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the primary connection string for the authorization
+rule `RootManageSharedAccessKey`, which is generated when disaster recovery is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>default<wbr>Primary<wbr>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -694,6 +792,16 @@ rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}The secondary connection string for the
 authorization rule `RootManageSharedAccessKey`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>default<wbr>Secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the secondary connection string for the
+authorization rule `RootManageSharedAccessKey`, which is generated when disaster recovery is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -732,6 +840,16 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
+        <span>default_<wbr>primary_<wbr>connection_<wbr>string_<wbr>alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the primary connection string for the authorization
+rule `RootManageSharedAccessKey`, which is generated when disaster recovery is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>default_<wbr>primary_<wbr>key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -747,6 +865,16 @@ rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}The secondary connection string for the
 authorization rule `RootManageSharedAccessKey`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>default_<wbr>secondary_<wbr>connection_<wbr>string_<wbr>alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the secondary connection string for the
+authorization rule `RootManageSharedAccessKey`, which is generated when disaster recovery is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -785,7 +913,7 @@ Get an existing EventHubNamespace resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_inflate_enabled=None<span class="p">, </span>capacity=None<span class="p">, </span>default_primary_connection_string=None<span class="p">, </span>default_primary_key=None<span class="p">, </span>default_secondary_connection_string=None<span class="p">, </span>default_secondary_key=None<span class="p">, </span>location=None<span class="p">, </span>maximum_throughput_units=None<span class="p">, </span>name=None<span class="p">, </span>network_rulesets=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_inflate_enabled=None<span class="p">, </span>capacity=None<span class="p">, </span>default_primary_connection_string=None<span class="p">, </span>default_primary_connection_string_alias=None<span class="p">, </span>default_primary_key=None<span class="p">, </span>default_secondary_connection_string=None<span class="p">, </span>default_secondary_connection_string_alias=None<span class="p">, </span>default_secondary_key=None<span class="p">, </span>location=None<span class="p">, </span>maximum_throughput_units=None<span class="p">, </span>name=None<span class="p">, </span>network_rulesets=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -929,6 +1057,16 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Default<wbr>Primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the primary connection string for the authorization
+rule `RootManageSharedAccessKey`, which is generated when disaster recovery is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Default<wbr>Primary<wbr>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -944,6 +1082,16 @@ rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}The secondary connection string for the
 authorization rule `RootManageSharedAccessKey`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the secondary connection string for the
+authorization rule `RootManageSharedAccessKey`, which is generated when disaster recovery is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1055,6 +1203,16 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Default<wbr>Primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the primary connection string for the authorization
+rule `RootManageSharedAccessKey`, which is generated when disaster recovery is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Default<wbr>Primary<wbr>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1070,6 +1228,16 @@ rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}The secondary connection string for the
 authorization rule `RootManageSharedAccessKey`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the secondary connection string for the
+authorization rule `RootManageSharedAccessKey`, which is generated when disaster recovery is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1181,6 +1349,16 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>default<wbr>Primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the primary connection string for the authorization
+rule `RootManageSharedAccessKey`, which is generated when disaster recovery is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>default<wbr>Primary<wbr>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1196,6 +1374,16 @@ rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}The secondary connection string for the
 authorization rule `RootManageSharedAccessKey`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default<wbr>Secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the secondary connection string for the
+authorization rule `RootManageSharedAccessKey`, which is generated when disaster recovery is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1307,6 +1495,16 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>default_<wbr>primary_<wbr>connection_<wbr>string_<wbr>alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the primary connection string for the authorization
+rule `RootManageSharedAccessKey`, which is generated when disaster recovery is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>default_<wbr>primary_<wbr>key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1322,6 +1520,16 @@ rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}The secondary connection string for the
 authorization rule `RootManageSharedAccessKey`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default_<wbr>secondary_<wbr>connection_<wbr>string_<wbr>alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the secondary connection string for the
+authorization rule `RootManageSharedAccessKey`, which is generated when disaster recovery is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1435,7 +1643,7 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The default action to take when a rule is not matched. Possible values are `Allow` and `Deny`.
+    <dd>{{% md %}}The default action to take when a rule is not matched. Possible values are `Allow` and `Deny`. Defaults to `Deny`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1469,7 +1677,7 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The default action to take when a rule is not matched. Possible values are `Allow` and `Deny`.
+    <dd>{{% md %}}The default action to take when a rule is not matched. Possible values are `Allow` and `Deny`. Defaults to `Deny`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1503,7 +1711,7 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The default action to take when a rule is not matched. Possible values are `Allow` and `Deny`.
+    <dd>{{% md %}}The default action to take when a rule is not matched. Possible values are `Allow` and `Deny`. Defaults to `Deny`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1537,7 +1745,7 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The default action to take when a rule is not matched. Possible values are `Allow` and `Deny`.
+    <dd>{{% md %}}The default action to take when a rule is not matched. Possible values are `Allow` and `Deny`. Defaults to `Deny`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

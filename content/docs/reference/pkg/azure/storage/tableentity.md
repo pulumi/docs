@@ -12,9 +12,75 @@ meta_desc: "Explore the TableEntity resource of the storage module, including ex
 
 Manages an Entity within a Table in an Azure Storage Account.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="westus")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_table = azure.storage.Table("exampleTable",
+    resource_group_name=example_resource_group.name,
+    storage_account_name=example_account.name)
+example_table_entity = azure.storage.TableEntity("exampleTableEntity",
+    storage_account_name=example_account.name,
+    table_name=example_table.name,
+    partition_key="examplepartition",
+    row_key="exmamplerow",
+    entity={
+        "example": "sample",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "westus"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const exampleTable = new azure.storage.Table("exampleTable", {
+    resourceGroupName: exampleResourceGroup.name,
+    storageAccountName: exampleAccount.name,
+});
+const exampleTableEntity = new azure.storage.TableEntity("exampleTableEntity", {
+    storageAccountName: exampleAccount.name,
+    tableName: exampleTable.name,
+    partitionKey: "examplepartition",
+    rowKey: "exmamplerow",
+    entity: {
+        example: "sample",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TableEntity Resource {#create}

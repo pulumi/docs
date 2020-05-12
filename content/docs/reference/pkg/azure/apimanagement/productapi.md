@@ -12,9 +12,73 @@ meta_desc: "Explore the ProductApi resource of the apimanagement module, includi
 
 Manages an API Management API Assignment to a Product.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_service = azure.apimanagement.get_service(name="example-api",
+    resource_group_name="example-resources")
+example_api = azure.apimanagement.get_api(name="search-api",
+    api_management_name=example_service.name,
+    resource_group_name=example_service.resource_group_name,
+    revision="2")
+example_product = azure.apimanagement.get_product(product_id="my-product",
+    api_management_name=example_service.name,
+    resource_group_name=example_service.resource_group_name)
+example_product_api = azure.apimanagement.ProductApi("exampleProductApi",
+    api_name=example_api.name,
+    product_id=example_product.product_id,
+    api_management_name=example_service.name,
+    resource_group_name=example_service.resource_group_name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleService = azure.apimanagement.getService({
+    name: "example-api",
+    resourceGroupName: "example-resources",
+});
+const exampleApi = Promise.all([exampleService, exampleService]).then(([exampleService, exampleService1]) => azure.apimanagement.getApi({
+    name: "search-api",
+    apiManagementName: exampleService.name,
+    resourceGroupName: exampleService1.resourceGroupName,
+    revision: "2",
+}));
+const exampleProduct = Promise.all([exampleService, exampleService]).then(([exampleService, exampleService1]) => azure.apimanagement.getProduct({
+    productId: "my-product",
+    apiManagementName: exampleService.name,
+    resourceGroupName: exampleService1.resourceGroupName,
+}));
+const exampleProductApi = new azure.apimanagement.ProductApi("exampleProductApi", {
+    apiName: exampleApi.then(exampleApi => exampleApi.name),
+    productId: exampleProduct.then(exampleProduct => exampleProduct.productId),
+    apiManagementName: exampleService.then(exampleService => exampleService.name),
+    resourceGroupName: exampleService.then(exampleService => exampleService.resourceGroupName),
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ProductApi Resource {#create}

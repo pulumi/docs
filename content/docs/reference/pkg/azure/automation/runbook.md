@@ -12,9 +12,76 @@ meta_desc: "Explore the RunBook resource of the automation module, including exa
 
 Manages a Automation Runbook.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.automation.Account("exampleAccount",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku=[{
+        "name": "Basic",
+    }])
+example_run_book = azure.automation.RunBook("exampleRunBook",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    automation_account_name=example_account.name,
+    log_verbose="true",
+    log_progress="true",
+    description="This is an example runbook",
+    runbook_type="PowerShellWorkflow",
+    publish_content_link={
+        "uri": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/c4935ffb69246a6058eb24f54640f53f69d3ac9f/101-automation-runbook-getvms/Runbooks/Get-AzureVMTutorial.ps1",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = new azure.automation.Account("exampleAccount", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: [{
+        name: "Basic",
+    }],
+});
+const exampleRunBook = new azure.automation.RunBook("exampleRunBook", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    automationAccountName: exampleAccount.name,
+    logVerbose: "true",
+    logProgress: "true",
+    description: "This is an example runbook",
+    runbookType: "PowerShellWorkflow",
+    publish_content_link: {
+        uri: "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/c4935ffb69246a6058eb24f54640f53f69d3ac9f/101-automation-runbook-getvms/Runbooks/Get-AzureVMTutorial.ps1",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RunBook Resource {#create}
@@ -227,15 +294,6 @@ The RunBook resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Publish<wbr>Content<wbr>Link</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookpublishcontentlink">Run<wbr>Book<wbr>Publish<wbr>Content<wbr>Link<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The published runbook content link.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -286,6 +344,15 @@ The RunBook resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Runbook. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Publish<wbr>Content<wbr>Link</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#runbookpublishcontentlink">Run<wbr>Book<wbr>Publish<wbr>Content<wbr>Link<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The published runbook content link.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -333,15 +400,6 @@ The RunBook resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Publish<wbr>Content<wbr>Link</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookpublishcontentlink">Run<wbr>Book<wbr>Publish<wbr>Content<wbr>Link</a></span>
-    </dt>
-    <dd>{{% md %}}The published runbook content link.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -396,6 +454,15 @@ The RunBook resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span>Publish<wbr>Content<wbr>Link</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#runbookpublishcontentlink">Run<wbr>Book<wbr>Publish<wbr>Content<wbr>Link</a></span>
+    </dt>
+    <dd>{{% md %}}The published runbook content link.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
@@ -435,15 +502,6 @@ The RunBook resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Verbose log option.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>publish<wbr>Content<wbr>Link</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookpublishcontentlink">Run<wbr>Book<wbr>Publish<wbr>Content<wbr>Link</a></span>
-    </dt>
-    <dd>{{% md %}}The published runbook content link.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -502,6 +560,15 @@ The RunBook resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span>publish<wbr>Content<wbr>Link</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#runbookpublishcontentlink">Run<wbr>Book<wbr>Publish<wbr>Content<wbr>Link</a></span>
+    </dt>
+    <dd>{{% md %}}The published runbook content link.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
@@ -541,15 +608,6 @@ The RunBook resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Verbose log option.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>publish_<wbr>content_<wbr>link</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookpublishcontentlink">Dict[Run<wbr>Book<wbr>Publish<wbr>Content<wbr>Link]</a></span>
-    </dt>
-    <dd>{{% md %}}The published runbook content link.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -604,6 +662,15 @@ The RunBook resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Runbook. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>publish_<wbr>content_<wbr>link</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#runbookpublishcontentlink">Dict[Run<wbr>Book<wbr>Publish<wbr>Content<wbr>Link]</a></span>
+    </dt>
+    <dd>{{% md %}}The published runbook content link.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

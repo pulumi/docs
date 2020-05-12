@@ -12,9 +12,46 @@ meta_desc: "Explore the GetKubernetesServiceVersions function of the containerse
 
 Use this data source to retrieve the version of Kubernetes supported by Azure Kubernetes Service.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.containerservice.get_kubernetes_service_versions(location="West Europe")
+pulumi.export("versions", current.versions)
+pulumi.export("latestVersion", current.latest_version)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.containerservice.getKubernetesServiceVersions({
+    location: "West Europe",
+});
+export const versions = current.then(current => current.versions);
+export const latestVersion = current.then(current => current.latestVersion);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetKubernetesServiceVersions {#using}

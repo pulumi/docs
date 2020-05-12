@@ -12,6 +12,31 @@ meta_desc: "Explore the GetVolume function of the netapp module, including examp
 
 Uses this data source to access information about an existing NetApp Volume.
 
+## NetApp Volume Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.netapp.getVolume({
+    resourceGroupName: "acctestRG",
+    accountName: "acctestnetappaccount",
+    poolName: "acctestnetapppool",
+    name: "example-volume",
+});
+export const netappVolumeId = example.then(example => example.id);
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.netapp.get_volume(resource_group_name="acctestRG",
+    account_name="acctestnetappaccount",
+    pool_name="acctestnetapppool",
+    name="example-volume")
+pulumi.export("netappVolumeId", example.id)
+```
+
 
 
 ## Using GetVolume {#using}

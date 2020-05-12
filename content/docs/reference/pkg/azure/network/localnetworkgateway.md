@@ -12,9 +12,51 @@ meta_desc: "Explore the LocalNetworkGateway resource of the network module, incl
 
 Manages a local network gateway connection over which specific connections can be configured.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.core.ResourceGroup("example", location="West US")
+home = azure.network.LocalNetworkGateway("home",
+    resource_group_name=example.name,
+    location=example.location,
+    gateway_address="12.13.14.15",
+    address_spaces=["10.0.0.0/16"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = new azure.core.ResourceGroup("example", {location: "West US"});
+const home = new azure.network.LocalNetworkGateway("home", {
+    resourceGroupName: example.name,
+    location: example.location,
+    gatewayAddress: "12.13.14.15",
+    addressSpaces: ["10.0.0.0/16"],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LocalNetworkGateway Resource {#create}

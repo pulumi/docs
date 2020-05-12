@@ -12,9 +12,77 @@ meta_desc: "Explore the TopicAuthorizationRule resource of the servicebus module
 
 Manages a ServiceBus Topic authorization Rule within a ServiceBus Topic.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_namespace = azure.servicebus.Namespace("exampleNamespace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="Standard",
+    tags={
+        "source": "example",
+    })
+example_topic = azure.servicebus.Topic("exampleTopic",
+    resource_group_name=example_resource_group.name,
+    namespace_name=example_namespace.name)
+example_topic_authorization_rule = azure.servicebus.TopicAuthorizationRule("exampleTopicAuthorizationRule",
+    namespace_name=example_namespace.name,
+    topic_name=example_topic.name,
+    resource_group_name=example_resource_group.name,
+    listen=True,
+    send=False,
+    manage=False)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "Standard",
+    tags: {
+        source: "example",
+    },
+});
+const exampleTopic = new azure.servicebus.Topic("exampleTopic", {
+    resourceGroupName: exampleResourceGroup.name,
+    namespaceName: exampleNamespace.name,
+});
+const exampleTopicAuthorizationRule = new azure.servicebus.TopicAuthorizationRule("exampleTopicAuthorizationRule", {
+    namespaceName: exampleNamespace.name,
+    topicName: exampleTopic.name,
+    resourceGroupName: exampleResourceGroup.name,
+    listen: true,
+    send: false,
+    manage: false,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TopicAuthorizationRule Resource {#create}

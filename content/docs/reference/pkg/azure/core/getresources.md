@@ -12,9 +12,30 @@ meta_desc: "Explore the GetResources function of the core module, including exam
 
 Use this data source to access information about existing resources.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+Coming soon!
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetResources {#using}

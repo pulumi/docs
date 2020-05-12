@@ -12,9 +12,46 @@ meta_desc: "Explore the GetDedicatedHostGroup function of the compute module, in
 
 Use this data source to access information about an existing Dedicated Host Group.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.compute.get_dedicated_host_group(name="example-dedicated-host-group",
+    resource_group_name="example-rg")
+pulumi.export("id", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.compute.getDedicatedHostGroup({
+    name: "example-dedicated-host-group",
+    resourceGroupName: "example-rg",
+});
+export const id = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetDedicatedHostGroup {#using}

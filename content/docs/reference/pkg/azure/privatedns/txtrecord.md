@@ -12,9 +12,57 @@ meta_desc: "Explore the TxtRecord resource of the privatedns module, including e
 
 Enables you to manage DNS TXT Records within Azure Private DNS.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.core.ResourceGroup("example", location="West US")
+test_zone = azure.privatedns.Zone("testZone", resource_group_name=azurerm_resource_group["test"]["name"])
+test_txt_record = azure.privatedns.TxtRecord("testTxtRecord",
+    resource_group_name=azurerm_resource_group["test"]["name"],
+    zone_name=test_zone.name,
+    ttl=300,
+    record=[{
+        "value": "v=spf1 mx ~all",
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = new azure.core.ResourceGroup("example", {location: "West US"});
+const testZone = new azure.privatedns.Zone("testZone", {resourceGroupName: azurerm_resource_group.test.name});
+const testTxtRecord = new azure.privatedns.TxtRecord("testTxtRecord", {
+    resourceGroupName: azurerm_resource_group.test.name,
+    zoneName: testZone.name,
+    ttl: 300,
+    record: [{
+        value: "v=spf1 mx ~all",
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TxtRecord Resource {#create}

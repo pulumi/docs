@@ -12,9 +12,46 @@ meta_desc: "Explore the GetDatabase function of the mssql module, including exam
 
 Use this data source to access information about an existing SQL database.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.mssql.get_database(name="example-mssql-db",
+    server_id="example-mssql-server-id")
+pulumi.export("databaseId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.mssql.getDatabase({
+    name: "example-mssql-db",
+    serverId: "example-mssql-server-id",
+});
+export const databaseId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetDatabase {#using}

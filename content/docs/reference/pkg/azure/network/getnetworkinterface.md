@@ -12,9 +12,46 @@ meta_desc: "Explore the GetNetworkInterface function of the network module, incl
 
 Use this data source to access information about an existing Network Interface.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.network.get_network_interface(name="acctest-nic",
+    resource_group_name="networking")
+pulumi.export("networkInterfaceId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.network.getNetworkInterface({
+    name: "acctest-nic",
+    resourceGroupName: "networking",
+});
+export const networkInterfaceId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetNetworkInterface {#using}

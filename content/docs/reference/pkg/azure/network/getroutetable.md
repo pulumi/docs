@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.network.get_route_table(name="myroutetable",
+    resource_group_name="some-resource-group")
+```
 {{% /example %}}
 
 {{% example typescript %}}

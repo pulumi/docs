@@ -12,9 +12,46 @@ meta_desc: "Explore the GetWorkflow function of the logicapps module, including 
 
 Use this data source to access information about an existing Logic App Workflow.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.logicapps.get_workflow(name="workflow1",
+    resource_group_name="my-resource-group")
+pulumi.export("accessEndpoint", example.access_endpoint)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.logicapps.getWorkflow({
+    name: "workflow1",
+    resourceGroupName: "my-resource-group",
+});
+export const accessEndpoint = example.then(example => example.accessEndpoint);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetWorkflow {#using}

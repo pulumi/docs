@@ -12,9 +12,46 @@ meta_desc: "Explore the GetConfiguration function of the maintenance module, inc
 
 Use this data source to access information about an existing Maintenance Configuration.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+existing = azure.maintenance.get_configuration(name="example-mc",
+    resource_group_name="example-resources")
+pulumi.export("id", azurerm_maintenance_configuration["existing"]["id"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const existing = azure.maintenance.getConfiguration({
+    name: "example-mc",
+    resourceGroupName: "example-resources",
+});
+export const id = azurerm_maintenance_configuration.existing.id;
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetConfiguration {#using}

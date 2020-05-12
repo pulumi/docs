@@ -12,9 +12,82 @@ meta_desc: "Explore the VirtualNetworkRule resource of the sql module, including
 
 Allows you to add, update, or remove an Azure SQL server to a subnet of a virtual network.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.core.ResourceGroup("example", location="West US")
+vnet = azure.network.VirtualNetwork("vnet",
+    address_spaces=["10.7.29.0/29"],
+    location=example.location,
+    resource_group_name=example.name)
+subnet = azure.network.Subnet("subnet",
+    resource_group_name=example.name,
+    virtual_network_name=vnet.name,
+    address_prefix="10.7.29.0/29",
+    service_endpoints=["Microsoft.Sql"])
+sqlserver = azure.sql.SqlServer("sqlserver",
+    resource_group_name=example.name,
+    location=example.location,
+    version="12.0",
+    administrator_login="4dm1n157r470r",
+    administrator_login_password="4-v3ry-53cr37-p455w0rd")
+sqlvnetrule = azure.sql.VirtualNetworkRule("sqlvnetrule",
+    resource_group_name=example.name,
+    server_name=sqlserver.name,
+    subnet_id=subnet.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = new azure.core.ResourceGroup("example", {location: "West US"});
+const vnet = new azure.network.VirtualNetwork("vnet", {
+    addressSpaces: ["10.7.29.0/29"],
+    location: example.location,
+    resourceGroupName: example.name,
+});
+const subnet = new azure.network.Subnet("subnet", {
+    resourceGroupName: example.name,
+    virtualNetworkName: vnet.name,
+    addressPrefix: "10.7.29.0/29",
+    serviceEndpoints: ["Microsoft.Sql"],
+});
+const sqlserver = new azure.sql.SqlServer("sqlserver", {
+    resourceGroupName: example.name,
+    location: example.location,
+    version: "12.0",
+    administratorLogin: "4dm1n157r470r",
+    administratorLoginPassword: "4-v3ry-53cr37-p455w0rd",
+});
+const sqlvnetrule = new azure.sql.VirtualNetworkRule("sqlvnetrule", {
+    resourceGroupName: example.name,
+    serverName: sqlserver.name,
+    subnetId: subnet.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualNetworkRule Resource {#create}

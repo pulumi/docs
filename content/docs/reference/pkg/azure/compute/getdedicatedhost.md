@@ -12,9 +12,48 @@ meta_desc: "Explore the GetDedicatedHost function of the compute module, includi
 
 Use this data source to access information about an existing Dedicated Host.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.compute.get_dedicated_host(name="example-host",
+    dedicated_host_group_name="example-host-group",
+    resource_group_name="example-resources")
+pulumi.export("dedicatedHostId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.compute.getDedicatedHost({
+    name: "example-host",
+    dedicatedHostGroupName: "example-host-group",
+    resourceGroupName: "example-resources",
+});
+export const dedicatedHostId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetDedicatedHost {#using}

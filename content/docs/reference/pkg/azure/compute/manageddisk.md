@@ -12,6 +12,95 @@ meta_desc: "Explore the ManagedDisk resource of the compute module, including ex
 
 Manages a managed disk.
 
+## Example Usage with Create Empty
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US 2"});
+const exampleManagedDisk = new azure.compute.ManagedDisk("exampleManagedDisk", {
+    location: "West US 2",
+    resourceGroupName: exampleResourceGroup.name,
+    storageAccountType: "Standard_LRS",
+    createOption: "Empty",
+    diskSizeGb: "1",
+    tags: {
+        environment: "staging",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US 2")
+example_managed_disk = azure.compute.ManagedDisk("exampleManagedDisk",
+    location="West US 2",
+    resource_group_name=example_resource_group.name,
+    storage_account_type="Standard_LRS",
+    create_option="Empty",
+    disk_size_gb="1",
+    tags={
+        "environment": "staging",
+    })
+```
+
+## Example Usage with Create Copy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = new azure.core.ResourceGroup("example", {location: "West US 2"});
+const source = new azure.compute.ManagedDisk("source", {
+    location: "West US 2",
+    resourceGroupName: example.name,
+    storageAccountType: "Standard_LRS",
+    createOption: "Empty",
+    diskSizeGb: "1",
+    tags: {
+        environment: "staging",
+    },
+});
+const copy = new azure.compute.ManagedDisk("copy", {
+    location: "West US 2",
+    resourceGroupName: example.name,
+    storageAccountType: "Standard_LRS",
+    createOption: "Copy",
+    sourceResourceId: source.id,
+    diskSizeGb: "1",
+    tags: {
+        environment: "staging",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.core.ResourceGroup("example", location="West US 2")
+source = azure.compute.ManagedDisk("source",
+    location="West US 2",
+    resource_group_name=example.name,
+    storage_account_type="Standard_LRS",
+    create_option="Empty",
+    disk_size_gb="1",
+    tags={
+        "environment": "staging",
+    })
+copy = azure.compute.ManagedDisk("copy",
+    location="West US 2",
+    resource_group_name=example.name,
+    storage_account_type="Standard_LRS",
+    create_option="Copy",
+    source_resource_id=source.id,
+    disk_size_gb="1",
+    tags={
+        "environment": "staging",
+    })
+```
+
 
 
 ## Create a ManagedDisk Resource {#create}

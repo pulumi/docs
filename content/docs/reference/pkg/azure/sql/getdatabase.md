@@ -12,9 +12,48 @@ meta_desc: "Explore the GetDatabase function of the sql module, including exampl
 
 Use this data source to access information about an existing SQL Azure Database.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.sql.get_database(name="example_db",
+    server_name="example_db_server",
+    resource_group_name="example-resources")
+pulumi.export("sqlDatabaseId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.sql.getDatabase({
+    name: "example_db",
+    serverName: "example_db_server",
+    resourceGroupName: "example-resources",
+});
+export const sqlDatabaseId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetDatabase {#using}

@@ -12,9 +12,46 @@ meta_desc: "Explore the GetInsights function of the appinsights module, includin
 
 Use this data source to access information about an existing Application Insights component.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.appinsights.get_insights(name="production",
+    resource_group_name="networking")
+pulumi.export("applicationInsightsInstrumentationKey", example.instrumentation_key)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.appinsights.getInsights({
+    name: "production",
+    resourceGroupName: "networking",
+});
+export const applicationInsightsInstrumentationKey = example.then(example => example.instrumentationKey);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetInsights {#using}

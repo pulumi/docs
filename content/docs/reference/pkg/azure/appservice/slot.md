@@ -15,6 +15,197 @@ Manages an App Service Slot (within an App Service).
 > **Note:** When using Slots - the `app_settings`, `connection_string` and `site_config` blocks on the `azure.appservice.AppService` resource will be overwritten when promoting a Slot using the `azure.appservice.ActiveSlot` resource.
 
 
+## Example Usage (.net 4.x)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * as random from "@pulumi/random";
+
+const server = new random.RandomId("server", {
+    keepers: {
+        azi_id: 1,
+    },
+    byteLength: 8,
+});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const examplePlan = new azure.appservice.Plan("examplePlan", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: {
+        tier: "Standard",
+        size: "S1",
+    },
+});
+const exampleAppService = new azure.appservice.AppService("exampleAppService", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    appServicePlanId: examplePlan.id,
+    site_config: {
+        dotnetFrameworkVersion: "v4.0",
+    },
+    appSettings: {
+        SOME_KEY: "some-value",
+    },
+    connection_string: [{
+        name: "Database",
+        type: "SQLServer",
+        value: "Server=some-server.mydomain.com;Integrated Security=SSPI",
+    }],
+});
+const exampleSlot = new azure.appservice.Slot("exampleSlot", {
+    appServiceName: exampleAppService.name,
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    appServicePlanId: examplePlan.id,
+    site_config: {
+        dotnetFrameworkVersion: "v4.0",
+    },
+    appSettings: {
+        SOME_KEY: "some-value",
+    },
+    connection_string: [{
+        name: "Database",
+        type: "SQLServer",
+        value: "Server=some-server.mydomain.com;Integrated Security=SSPI",
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_azure as azure
+import pulumi_random as random
+
+server = random.RandomId("server",
+    keepers={
+        "azi_id": 1,
+    },
+    byte_length=8)
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_plan = azure.appservice.Plan("examplePlan",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku={
+        "tier": "Standard",
+        "size": "S1",
+    })
+example_app_service = azure.appservice.AppService("exampleAppService",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    app_service_plan_id=example_plan.id,
+    site_config={
+        "dotnetFrameworkVersion": "v4.0",
+    },
+    app_settings={
+        "SOME_KEY": "some-value",
+    },
+    connection_string=[{
+        "name": "Database",
+        "type": "SQLServer",
+        "value": "Server=some-server.mydomain.com;Integrated Security=SSPI",
+    }])
+example_slot = azure.appservice.Slot("exampleSlot",
+    app_service_name=example_app_service.name,
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    app_service_plan_id=example_plan.id,
+    site_config={
+        "dotnetFrameworkVersion": "v4.0",
+    },
+    app_settings={
+        "SOME_KEY": "some-value",
+    },
+    connection_string=[{
+        "name": "Database",
+        "type": "SQLServer",
+        "value": "Server=some-server.mydomain.com;Integrated Security=SSPI",
+    }])
+```
+
+## Example Usage (Java 1.8)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * as random from "@pulumi/random";
+
+const server = new random.RandomId("server", {
+    keepers: {
+        azi_id: 1,
+    },
+    byteLength: 8,
+});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const examplePlan = new azure.appservice.Plan("examplePlan", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: {
+        tier: "Standard",
+        size: "S1",
+    },
+});
+const exampleAppService = new azure.appservice.AppService("exampleAppService", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    appServicePlanId: examplePlan.id,
+    site_config: {
+        javaVersion: "1.8",
+        javaContainer: "JETTY",
+        javaContainerVersion: "9.3",
+    },
+});
+const exampleSlot = new azure.appservice.Slot("exampleSlot", {
+    appServiceName: exampleAppService.name,
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    appServicePlanId: examplePlan.id,
+    site_config: {
+        javaVersion: "1.8",
+        javaContainer: "JETTY",
+        javaContainerVersion: "9.3",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_azure as azure
+import pulumi_random as random
+
+server = random.RandomId("server",
+    keepers={
+        "azi_id": 1,
+    },
+    byte_length=8)
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_plan = azure.appservice.Plan("examplePlan",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku={
+        "tier": "Standard",
+        "size": "S1",
+    })
+example_app_service = azure.appservice.AppService("exampleAppService",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    app_service_plan_id=example_plan.id,
+    site_config={
+        "javaVersion": "1.8",
+        "javaContainer": "JETTY",
+        "javaContainerVersion": "9.3",
+    })
+example_slot = azure.appservice.Slot("exampleSlot",
+    app_service_name=example_app_service.name,
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    app_service_plan_id=example_plan.id,
+    site_config={
+        "javaVersion": "1.8",
+        "javaContainer": "JETTY",
+        "javaContainerVersion": "9.3",
+    })
+```
+
+
 
 ## Create a Slot Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
@@ -4076,6 +4267,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Health<wbr>Check<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Http2Enabled</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
@@ -4289,6 +4488,14 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>Ftps<wbr>State</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Health<wbr>Check<wbr>Path</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4516,6 +4723,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>health<wbr>Check<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>http2Enabled</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
@@ -4729,6 +4944,14 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>ftps<wbr>State</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>health<wbr>Check<wbr>Path</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5039,6 +5262,23 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the App Service Slot component. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Virtual<wbr>Network<wbr>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -5061,6 +5301,23 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The IP Address used for this IP Restriction.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the App Service Slot component. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5089,6 +5346,23 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the App Service Slot component. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>virtual<wbr>Network<wbr>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -5111,6 +5385,23 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The IP Address used for this IP Restriction.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the App Service Slot component. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

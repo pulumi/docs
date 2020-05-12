@@ -12,9 +12,95 @@ meta_desc: "Explore the Group resource of the containerservice module, including
 
 Manages as an Azure Container Group instance.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_group = azure.containerservice.Group("exampleGroup",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    ip_address_type="public",
+    dns_name_label="aci-label",
+    os_type="Linux",
+    container=[
+        {
+            "name": "hello-world",
+            "image": "microsoft/aci-helloworld:latest",
+            "cpu": "0.5",
+            "memory": "1.5",
+            "ports": [{
+                "port": 443,
+                "protocol": "TCP",
+            }],
+        },
+        {
+            "name": "sidecar",
+            "image": "microsoft/aci-tutorial-sidecar",
+            "cpu": "0.5",
+            "memory": "1.5",
+        },
+    ],
+    tags={
+        "environment": "testing",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleGroup = new azure.containerservice.Group("exampleGroup", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    ipAddressType: "public",
+    dnsNameLabel: "aci-label",
+    osType: "Linux",
+    container: [
+        {
+            name: "hello-world",
+            image: "microsoft/aci-helloworld:latest",
+            cpu: "0.5",
+            memory: "1.5",
+            ports: [{
+                port: 443,
+                protocol: "TCP",
+            }],
+        },
+        {
+            name: "sidecar",
+            image: "microsoft/aci-tutorial-sidecar",
+            cpu: "0.5",
+            memory: "1.5",
+        },
+    ],
+    tags: {
+        environment: "testing",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Group Resource {#create}

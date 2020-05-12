@@ -12,9 +12,65 @@ meta_desc: "Explore the DatasetMysql resource of the datafactory module, includi
 
 Manages a MySQL Dataset inside a Azure Data Factory.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
+example_factory = azure.datafactory.Factory("exampleFactory",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_linked_service_mysql = azure.datafactory.LinkedServiceMysql("exampleLinkedServiceMysql",
+    resource_group_name=example_resource_group.name,
+    data_factory_name=example_factory.name,
+    connection_string="Server=test;Port=3306;Database=test;User=test;SSLMode=1;UseSystemTrustStore=0;Password=test")
+example_dataset_mysql = azure.datafactory.DatasetMysql("exampleDatasetMysql",
+    resource_group_name=example_resource_group.name,
+    data_factory_name=example_factory.name,
+    linked_service_name=example_linked_service_mysql.name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "northeurope"});
+const exampleFactory = new azure.datafactory.Factory("exampleFactory", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleLinkedServiceMysql = new azure.datafactory.LinkedServiceMysql("exampleLinkedServiceMysql", {
+    resourceGroupName: exampleResourceGroup.name,
+    dataFactoryName: exampleFactory.name,
+    connectionString: "Server=test;Port=3306;Database=test;User=test;SSLMode=1;UseSystemTrustStore=0;Password=test",
+});
+const exampleDatasetMysql = new azure.datafactory.DatasetMysql("exampleDatasetMysql", {
+    resourceGroupName: exampleResourceGroup.name,
+    dataFactoryName: exampleFactory.name,
+    linkedServiceName: exampleLinkedServiceMysql.name,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DatasetMysql Resource {#create}

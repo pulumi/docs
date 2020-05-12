@@ -28,7 +28,20 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.automation.JobSchedule("example",
+    automation_account_name="tf-automation-account",
+    parameters={
+        "resourcegroup": "tf-rgr-vm",
+        "vmname": "TF-VM-01",
+    },
+    resource_group_name="tf-rgr-automation",
+    runbook_name="Get-VirtualMachine",
+    schedule_name="hour")
+```
 {{% /example %}}
 
 {{% example typescript %}}

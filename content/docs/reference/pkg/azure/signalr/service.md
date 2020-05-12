@@ -12,9 +12,69 @@ meta_desc: "Explore the Service resource of the signalr module, including exampl
 
 Manages an Azure SignalR service.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_service = azure.signalr.Service("exampleService",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku={
+        "name": "Free_F1",
+        "capacity": 1,
+    },
+    cors=[{
+        "allowedOrigins": ["http://www.example.com"],
+    }],
+    features=[{
+        "flag": "ServiceMode",
+        "value": "Default",
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleService = new azure.signalr.Service("exampleService", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: {
+        name: "Free_F1",
+        capacity: 1,
+    },
+    cors: [{
+        allowedOrigins: ["http://www.example.com"],
+    }],
+    features: [{
+        flag: "ServiceMode",
+        value: "Default",
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Service Resource {#create}

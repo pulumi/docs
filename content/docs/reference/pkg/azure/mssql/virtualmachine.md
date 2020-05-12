@@ -12,9 +12,71 @@ meta_desc: "Explore the VirtualMachine resource of the mssql module, including e
 
 Manages a Microsoft SQL Virtual Machine
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_virtual_machine = azure.compute.get_virtual_machine(name="example-vm",
+    resource_group_name="example-resources")
+example_mssql_virtual_machine_virtual_machine = azure.mssql.VirtualMachine("exampleMssql/virtualMachineVirtualMachine",
+    virtual_machine_id=example_virtual_machine.id,
+    sql_license_type="PAYG",
+    r_services_enabled=True,
+    sql_connectivity_port=1433,
+    sql_connectivity_type="PRIVATE",
+    sql_connectivity_update_password="Password1234!",
+    sql_connectivity_update_username="sqllogin",
+    auto_patching={
+        "dayOfWeek": "Sunday",
+        "maintenanceWindowDurationInMinutes": 60,
+        "maintenanceWindowStartingHour": 2,
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleVirtualMachine = azure.compute.getVirtualMachine({
+    name: "example-vm",
+    resourceGroupName: "example-resources",
+});
+const exampleMssql/virtualMachineVirtualMachine = new azure.mssql.VirtualMachine("exampleMssql/virtualMachineVirtualMachine", {
+    virtualMachineId: exampleVirtualMachine.then(exampleVirtualMachine => exampleVirtualMachine.id),
+    sqlLicenseType: "PAYG",
+    rServicesEnabled: true,
+    sqlConnectivityPort: 1433,
+    sqlConnectivityType: "PRIVATE",
+    sqlConnectivityUpdatePassword: "Password1234!",
+    sqlConnectivityUpdateUsername: "sqllogin",
+    auto_patching: {
+        dayOfWeek: "Sunday",
+        maintenanceWindowDurationInMinutes: 60,
+        maintenanceWindowStartingHour: 2,
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualMachine Resource {#create}

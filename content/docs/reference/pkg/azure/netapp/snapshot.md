@@ -12,6 +12,111 @@ meta_desc: "Explore the Snapshot resource of the netapp module, including exampl
 
 Manages a NetApp Snapshot.
 
+## NetApp Snapshot Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+    delegation: [{
+        name: "netapp",
+        service_delegation: {
+            name: "Microsoft.Netapp/volumes",
+            actions: [
+                "Microsoft.Network/networkinterfaces/*",
+                "Microsoft.Network/virtualNetworks/subnets/join/action",
+            ],
+        },
+    }],
+});
+const exampleAccount = new azure.netapp.Account("exampleAccount", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const examplePool = new azure.netapp.Pool("examplePool", {
+    accountName: exampleAccount.name,
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    serviceLevel: "Premium",
+    sizeInTb: "4",
+});
+const exampleVolume = new azure.netapp.Volume("exampleVolume", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    accountName: exampleAccount.name,
+    poolName: examplePool.name,
+    volumePath: "my-unique-file-path",
+    serviceLevel: "Premium",
+    subnetId: azurerm_subnet.test.id,
+    storageQuotaInGb: "100",
+});
+const exampleSnapshot = new azure.netapp.Snapshot("exampleSnapshot", {
+    accountName: exampleAccount.name,
+    poolName: examplePool.name,
+    volumeName: exampleVolume.name,
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.2.0/24",
+    delegation=[{
+        "name": "netapp",
+        "service_delegation": {
+            "name": "Microsoft.Netapp/volumes",
+            "actions": [
+                "Microsoft.Network/networkinterfaces/*",
+                "Microsoft.Network/virtualNetworks/subnets/join/action",
+            ],
+        },
+    }])
+example_account = azure.netapp.Account("exampleAccount",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_pool = azure.netapp.Pool("examplePool",
+    account_name=example_account.name,
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    service_level="Premium",
+    size_in_tb="4")
+example_volume = azure.netapp.Volume("exampleVolume",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    account_name=example_account.name,
+    pool_name=example_pool.name,
+    volume_path="my-unique-file-path",
+    service_level="Premium",
+    subnet_id=azurerm_subnet["test"]["id"],
+    storage_quota_in_gb="100")
+example_snapshot = azure.netapp.Snapshot("exampleSnapshot",
+    account_name=example_account.name,
+    pool_name=example_pool.name,
+    volume_name=example_volume.name,
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+```
+
 
 
 ## Create a Snapshot Resource {#create}

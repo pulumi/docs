@@ -12,9 +12,64 @@ meta_desc: "Explore the Snapshot resource of the compute module, including examp
 
 Manages a Disk Snapshot.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_managed_disk = azure.compute.ManagedDisk("exampleManagedDisk",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    storage_account_type="Standard_LRS",
+    create_option="Empty",
+    disk_size_gb="10")
+example_snapshot = azure.compute.Snapshot("exampleSnapshot",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    create_option="Copy",
+    source_uri=example_managed_disk.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleManagedDisk = new azure.compute.ManagedDisk("exampleManagedDisk", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    storageAccountType: "Standard_LRS",
+    createOption: "Empty",
+    diskSizeGb: "10",
+});
+const exampleSnapshot = new azure.compute.Snapshot("exampleSnapshot", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    createOption: "Copy",
+    sourceUri: exampleManagedDisk.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Snapshot Resource {#create}

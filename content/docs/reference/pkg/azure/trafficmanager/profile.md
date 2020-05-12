@@ -12,11 +12,92 @@ meta_desc: "Explore the Profile resource of the trafficmanager module, including
 
 Manages a Traffic Manager Profile to which multiple endpoints can be attached.
 
-{{% examples %}}
-{{% /examples %}}
+
 
 Deprecated: azure.trafficmanager.Profile has been deprecated in favour of azure.network.TrafficManagerProfile
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+import pulumi_random as random
+
+server = random.RandomId("server",
+    keepers={
+        "azi_id": 1,
+    },
+    byte_length=8)
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_traffic_manager_profile = azure.network.TrafficManagerProfile("exampleTrafficManagerProfile",
+    resource_group_name=example_resource_group.name,
+    traffic_routing_method="Weighted",
+    dns_config={
+        "relativeName": server.hex,
+        "ttl": 100,
+    },
+    monitor_config={
+        "protocol": "http",
+        "port": 80,
+        "path": "/",
+        "intervalInSeconds": 30,
+        "timeoutInSeconds": 9,
+        "toleratedNumberOfFailures": 3,
+    },
+    tags={
+        "environment": "Production",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * as random from "@pulumi/random";
+
+const server = new random.RandomId("server", {
+    keepers: {
+        azi_id: 1,
+    },
+    byteLength: 8,
+});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleTrafficManagerProfile = new azure.network.TrafficManagerProfile("exampleTrafficManagerProfile", {
+    resourceGroupName: exampleResourceGroup.name,
+    trafficRoutingMethod: "Weighted",
+    dns_config: {
+        relativeName: server.hex,
+        ttl: 100,
+    },
+    monitor_config: {
+        protocol: "http",
+        port: 80,
+        path: "/",
+        intervalInSeconds: 30,
+        timeoutInSeconds: 9,
+        toleratedNumberOfFailures: 3,
+    },
+    tags: {
+        environment: "Production",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 <p class="resource-deprecated">Deprecated: {{% md %}}azure.trafficmanager.Profile has been deprecated in favour of azure.network.TrafficManagerProfile{{% /md %}}</p>
 
 

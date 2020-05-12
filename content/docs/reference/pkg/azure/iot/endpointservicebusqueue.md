@@ -14,9 +14,105 @@ Manages an IotHub ServiceBus Queue Endpoint
 
 > **NOTE:** Endpoints can be defined either directly on the `azure.iot.IoTHub` resource, or using the `azurerm_iothub_endpoint_*` resources - but the two ways of defining the endpoints cannot be used together. If both are used against the same IoTHub, spurious changes will occur. Also, defining a `azurerm_iothub_endpoint_*` resource and another endpoint of a different type directly on the `azure.iot.IoTHub` resource is not supported.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="East US")
+example_namespace = azure.servicebus.Namespace("exampleNamespace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="Standard")
+example_queue = azure.servicebus.Queue("exampleQueue",
+    resource_group_name=example_resource_group.name,
+    namespace_name=example_namespace.name,
+    enable_partitioning=True)
+example_queue_authorization_rule = azure.servicebus.QueueAuthorizationRule("exampleQueueAuthorizationRule",
+    namespace_name=example_namespace.name,
+    queue_name=example_queue.name,
+    resource_group_name=example_resource_group.name,
+    listen=False,
+    send=True,
+    manage=False)
+example_io_t_hub = azure.iot.IoTHub("exampleIoTHub",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    sku={
+        "name": "B1",
+        "tier": "Basic",
+        "capacity": "1",
+    },
+    tags={
+        "purpose": "example",
+    })
+example_endpoint_servicebus_queue = azure.iot.EndpointServicebusQueue("exampleEndpointServicebusQueue",
+    resource_group_name=example_resource_group.name,
+    iothub_name=example_io_t_hub.name,
+    connection_string=example_queue_authorization_rule.primary_connection_string)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "East US"});
+const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "Standard",
+});
+const exampleQueue = new azure.servicebus.Queue("exampleQueue", {
+    resourceGroupName: exampleResourceGroup.name,
+    namespaceName: exampleNamespace.name,
+    enablePartitioning: true,
+});
+const exampleQueueAuthorizationRule = new azure.servicebus.QueueAuthorizationRule("exampleQueueAuthorizationRule", {
+    namespaceName: exampleNamespace.name,
+    queueName: exampleQueue.name,
+    resourceGroupName: exampleResourceGroup.name,
+    listen: false,
+    send: true,
+    manage: false,
+});
+const exampleIoTHub = new azure.iot.IoTHub("exampleIoTHub", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    sku: {
+        name: "B1",
+        tier: "Basic",
+        capacity: "1",
+    },
+    tags: {
+        purpose: "example",
+    },
+});
+const exampleEndpointServicebusQueue = new azure.iot.EndpointServicebusQueue("exampleEndpointServicebusQueue", {
+    resourceGroupName: exampleResourceGroup.name,
+    iothubName: exampleIoTHub.name,
+    connectionString: exampleQueueAuthorizationRule.primaryConnectionString,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EndpointServicebusQueue Resource {#create}

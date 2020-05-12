@@ -17,9 +17,183 @@ and run automated tasks.
 
 > **NOTE:** Custom Script Extensions require that the Azure Virtual Machine Guest Agent is running on the Virtual Machine.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.2.0/24")
+example_network_interface = azure.network.NetworkInterface("exampleNetworkInterface",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    ip_configuration=[{
+        "name": "testconfiguration1",
+        "subnetId": example_subnet.id,
+        "privateIpAddressAllocation": "Dynamic",
+    }])
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS",
+    tags={
+        "environment": "staging",
+    })
+example_container = azure.storage.Container("exampleContainer",
+    resource_group_name=example_resource_group.name,
+    storage_account_name=example_account.name,
+    container_access_type="private")
+example_virtual_machine = azure.compute.VirtualMachine("exampleVirtualMachine",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    network_interface_ids=[example_network_interface.id],
+    vm_size="Standard_F2",
+    storage_image_reference={
+        "publisher": "Canonical",
+        "offer": "UbuntuServer",
+        "sku": "16.04-LTS",
+        "version": "latest",
+    },
+    storage_os_disk={
+        "name": "myosdisk1",
+        "vhdUri": pulumi.Output.all(example_account.primary_blob_endpoint, example_container.name).apply(lambda primary_blob_endpoint, name: f"{primary_blob_endpoint}{name}/myosdisk1.vhd"),
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+    },
+    os_profile={
+        "computerName": "hostname",
+        "adminUsername": "testadmin",
+        "adminPassword": "Password1234!",
+    },
+    os_profile_linux_config={
+        "disablePasswordAuthentication": False,
+    },
+    tags={
+        "environment": "staging",
+    })
+example_extension = azure.compute.Extension("exampleExtension",
+    virtual_machine_id=example_virtual_machine.id,
+    publisher="Microsoft.Azure.Extensions",
+    type="CustomScript",
+    type_handler_version="2.0",
+    settings="""	{
+		"commandToExecute": "hostname && uptime"
+	}
+""",
+    tags={
+        "environment": "Production",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+});
+const exampleNetworkInterface = new azure.network.NetworkInterface("exampleNetworkInterface", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    ip_configuration: [{
+        name: "testconfiguration1",
+        subnetId: exampleSubnet.id,
+        privateIpAddressAllocation: "Dynamic",
+    }],
+});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+    tags: {
+        environment: "staging",
+    },
+});
+const exampleContainer = new azure.storage.Container("exampleContainer", {
+    resourceGroupName: exampleResourceGroup.name,
+    storageAccountName: exampleAccount.name,
+    containerAccessType: "private",
+});
+const exampleVirtualMachine = new azure.compute.VirtualMachine("exampleVirtualMachine", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    networkInterfaceIds: [exampleNetworkInterface.id],
+    vmSize: "Standard_F2",
+    storage_image_reference: {
+        publisher: "Canonical",
+        offer: "UbuntuServer",
+        sku: "16.04-LTS",
+        version: "latest",
+    },
+    storage_os_disk: {
+        name: "myosdisk1",
+        vhdUri: pulumi.interpolate`${exampleAccount.primaryBlobEndpoint}${exampleContainer.name}/myosdisk1.vhd`,
+        caching: "ReadWrite",
+        createOption: "FromImage",
+    },
+    os_profile: {
+        computerName: "hostname",
+        adminUsername: "testadmin",
+        adminPassword: "Password1234!",
+    },
+    os_profile_linux_config: {
+        disablePasswordAuthentication: false,
+    },
+    tags: {
+        environment: "staging",
+    },
+});
+const exampleExtension = new azure.compute.Extension("exampleExtension", {
+    virtualMachineId: exampleVirtualMachine.id,
+    publisher: "Microsoft.Azure.Extensions",
+    type: "CustomScript",
+    typeHandlerVersion: "2.0",
+    settings: `	{
+		"commandToExecute": "hostname && uptime"
+	}
+`,
+    tags: {
+        environment: "Production",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Extension Resource {#create}

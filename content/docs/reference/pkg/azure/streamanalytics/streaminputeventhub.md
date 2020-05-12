@@ -12,9 +12,104 @@ meta_desc: "Explore the StreamInputEventHub resource of the streamanalytics modu
 
 Manages a Stream Analytics Stream Input EventHub.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.get_resource_group(name="example-resources")
+example_job = azure.streamanalytics.get_job(name="example-job",
+    resource_group_name=azurerm_resource_group["example"]["name"])
+example_event_hub_namespace = azure.eventhub.EventHubNamespace("exampleEventHubNamespace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="Standard",
+    capacity=1)
+example_event_hub = azure.eventhub.EventHub("exampleEventHub",
+    namespace_name=example_event_hub_namespace.name,
+    resource_group_name=example_resource_group.name,
+    partition_count=2,
+    message_retention=1)
+example_consumer_group = azure.eventhub.ConsumerGroup("exampleConsumerGroup",
+    namespace_name=example_event_hub_namespace.name,
+    eventhub_name=example_event_hub.name,
+    resource_group_name=example_resource_group.name)
+example_stream_input_event_hub = azure.streamanalytics.StreamInputEventHub("exampleStreamInputEventHub",
+    stream_analytics_job_name=example_job.name,
+    resource_group_name=example_job.resource_group_name,
+    eventhub_consumer_group_name=example_consumer_group.name,
+    eventhub_name=example_event_hub.name,
+    servicebus_namespace=example_event_hub_namespace.name,
+    shared_access_policy_key=example_event_hub_namespace.default_primary_key,
+    shared_access_policy_name="RootManageSharedAccessKey",
+    serialization={
+        "type": "Json",
+        "encoding": "UTF8",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = azure.core.getResourceGroup({
+    name: "example-resources",
+});
+const exampleJob = azure.streamanalytics.getJob({
+    name: "example-job",
+    resourceGroupName: azurerm_resource_group.example.name,
+});
+const exampleEventHubNamespace = new azure.eventhub.EventHubNamespace("exampleEventHubNamespace", {
+    location: exampleResourceGroup.then(exampleResourceGroup => exampleResourceGroup.location),
+    resourceGroupName: exampleResourceGroup.then(exampleResourceGroup => exampleResourceGroup.name),
+    sku: "Standard",
+    capacity: 1,
+});
+const exampleEventHub = new azure.eventhub.EventHub("exampleEventHub", {
+    namespaceName: exampleEventHubNamespace.name,
+    resourceGroupName: exampleResourceGroup.then(exampleResourceGroup => exampleResourceGroup.name),
+    partitionCount: 2,
+    messageRetention: 1,
+});
+const exampleConsumerGroup = new azure.eventhub.ConsumerGroup("exampleConsumerGroup", {
+    namespaceName: exampleEventHubNamespace.name,
+    eventhubName: exampleEventHub.name,
+    resourceGroupName: exampleResourceGroup.then(exampleResourceGroup => exampleResourceGroup.name),
+});
+const exampleStreamInputEventHub = new azure.streamanalytics.StreamInputEventHub("exampleStreamInputEventHub", {
+    streamAnalyticsJobName: exampleJob.then(exampleJob => exampleJob.name),
+    resourceGroupName: exampleJob.then(exampleJob => exampleJob.resourceGroupName),
+    eventhubConsumerGroupName: exampleConsumerGroup.name,
+    eventhubName: exampleEventHub.name,
+    servicebusNamespace: exampleEventHubNamespace.name,
+    sharedAccessPolicyKey: exampleEventHubNamespace.defaultPrimaryKey,
+    sharedAccessPolicyName: "RootManageSharedAccessKey",
+    serialization: {
+        type: "Json",
+        encoding: "UTF8",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a StreamInputEventHub Resource {#create}

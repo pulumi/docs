@@ -28,7 +28,42 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.healthcare.Service("example",
+    access_policy_object_ids=["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"],
+    authentication_configuration={
+        "audience": "https://azurehealthcareapis.com/",
+        "authority": "https://login.microsoftonline.com/$$%7Bdata.azurerm_client_config.current.tenant_id%7D",
+        "smartProxyEnabled": "true",
+    },
+    cors_configuration={
+        "allowCredentials": "true",
+        "allowedHeaders": [
+            "x-tempo-*",
+            "x-tempo2-*",
+        ],
+        "allowedMethods": [
+            "GET",
+            "PUT",
+        ],
+        "allowedOrigins": [
+            "http://www.example.com",
+            "http://www.example2.com",
+        ],
+        "maxAgeInSeconds": "500",
+    },
+    cosmosdb_throughput="2000",
+    kind="fhir-R4",
+    location="westus2",
+    resource_group_name="sample-resource-group",
+    tags={
+        "environment": "testenv",
+        "purpose": "AcceptanceTests",
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}

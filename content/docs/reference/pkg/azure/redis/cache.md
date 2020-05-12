@@ -12,8 +12,7 @@ meta_desc: "Explore the Cache resource of the redis module, including examples, 
 
 Manages a Redis Cache.
 
-{{% examples %}}
-{{% /examples %}}
+
 ## Default Redis Configuration Values
 
 | Redis Value                     | Basic        | Standard     | Premium      |
@@ -41,6 +40,59 @@ A `patch_schedule` block supports the following:
  - [Azure Redis Cache: SKU specific configuration limitations](https://azure.microsoft.com/en-us/documentation/articles/cache-configure/#advanced-settings)
  - [Redis: Available Configuration Settings](http://redis.io/topics/config)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+# NOTE: the Name used for Redis needs to be globally unique
+example_cache = azure.redis.Cache("exampleCache",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    capacity=2,
+    family="C",
+    sku_name="Standard",
+    enable_non_ssl_port=False,
+    minimum_tls_version="1.2",
+    redis_configuration={})
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+// NOTE: the Name used for Redis needs to be globally unique
+const exampleCache = new azure.redis.Cache("exampleCache", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    capacity: 2,
+    family: "C",
+    skuName: "Standard",
+    enableNonSslPort: false,
+    minimumTlsVersion: "1.2",
+    redis_configuration: {},
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cache Resource {#create}

@@ -18,9 +18,87 @@ Manages a Key Vault.
 
 > **Note:** This provi will automatically recover a soft-deleted Key Vault during Creation if one is found - you can opt out of this using the `features` configuration within the Provider configuration block.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    enabled_for_disk_encryption=True,
+    tenant_id=current.tenant_id,
+    soft_delete_enabled=True,
+    purge_protection_enabled=False,
+    sku_name="standard",
+    access_policy=[{
+        "tenantId": current.tenant_id,
+        "objectId": current.object_id,
+        "keyPermissions": ["get"],
+        "secretPermissions": ["get"],
+        "storagePermissions": ["get"],
+    }],
+    network_acls={
+        "defaultAction": "Deny",
+        "bypass": "AzureServices",
+    },
+    tags={
+        "environment": "Testing",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    enabledForDiskEncryption: true,
+    tenantId: current.then(current => current.tenantId),
+    softDeleteEnabled: true,
+    purgeProtectionEnabled: false,
+    skuName: "standard",
+    access_policy: [{
+        tenantId: current.then(current => current.tenantId),
+        objectId: current.then(current => current.objectId),
+        keyPermissions: ["get"],
+        secretPermissions: ["get"],
+        storagePermissions: ["get"],
+    }],
+    network_acls: {
+        defaultAction: "Deny",
+        bypass: "AzureServices",
+    },
+    tags: {
+        environment: "Testing",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a KeyVault Resource {#create}

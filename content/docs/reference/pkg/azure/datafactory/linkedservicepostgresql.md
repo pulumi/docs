@@ -12,9 +12,56 @@ meta_desc: "Explore the LinkedServicePostgresql resource of the datafactory modu
 
 Manages a Linked Service (connection) between PostgreSQL and Azure Data Factory.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
+example_factory = azure.datafactory.Factory("exampleFactory",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_linked_service_postgresql = azure.datafactory.LinkedServicePostgresql("exampleLinkedServicePostgresql",
+    resource_group_name=example_resource_group.name,
+    data_factory_name=example_factory.name,
+    connection_string="Host=example;Port=5432;Database=example;UID=example;EncryptionMethod=0;Password=example")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "northeurope"});
+const exampleFactory = new azure.datafactory.Factory("exampleFactory", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleLinkedServicePostgresql = new azure.datafactory.LinkedServicePostgresql("exampleLinkedServicePostgresql", {
+    resourceGroupName: exampleResourceGroup.name,
+    dataFactoryName: exampleFactory.name,
+    connectionString: "Host=example;Port=5432;Database=example;UID=example;EncryptionMethod=0;Password=example",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LinkedServicePostgresql Resource {#create}

@@ -14,9 +14,98 @@ Manages a PostgreSQL Virtual Network Rule.
 
 > **NOTE:** PostgreSQL Virtual Network Rules [can only be used with SKU Tiers of `GeneralPurpose` or `MemoryOptimized`](https://docs.microsoft.com/en-us/azure/postgresql/concepts-data-access-and-security-vnet)
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.7.29.0/29"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+internal = azure.network.Subnet("internal",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.7.29.0/29",
+    service_endpoints=["Microsoft.Sql"])
+example_server = azure.postgresql.Server("exampleServer",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku_name="B_Gen5_2",
+    storage_profile={
+        "storageMb": 5120,
+        "backupRetentionDays": 7,
+        "geoRedundantBackup": "Disabled",
+    },
+    administrator_login="psqladminun",
+    administrator_login_password="H@Sh1CoR3!",
+    version="9.5",
+    ssl_enforcement="Enabled")
+example_virtual_network_rule = azure.postgresql.VirtualNetworkRule("exampleVirtualNetworkRule",
+    resource_group_name=example_resource_group.name,
+    server_name=example_server.name,
+    subnet_id=internal.id,
+    ignore_missing_vnet_service_endpoint=True)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.7.29.0/29"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const internal = new azure.network.Subnet("internal", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.7.29.0/29",
+    serviceEndpoints: ["Microsoft.Sql"],
+});
+const exampleServer = new azure.postgresql.Server("exampleServer", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    skuName: "B_Gen5_2",
+    storage_profile: {
+        storageMb: 5120,
+        backupRetentionDays: 7,
+        geoRedundantBackup: "Disabled",
+    },
+    administratorLogin: "psqladminun",
+    administratorLoginPassword: "H@Sh1CoR3!",
+    version: "9.5",
+    sslEnforcement: "Enabled",
+});
+const exampleVirtualNetworkRule = new azure.postgresql.VirtualNetworkRule("exampleVirtualNetworkRule", {
+    resourceGroupName: exampleResourceGroup.name,
+    serverName: exampleServer.name,
+    subnetId: internal.id,
+    ignoreMissingVnetServiceEndpoint: true,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualNetworkRule Resource {#create}

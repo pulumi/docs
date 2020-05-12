@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.containerservice.get_kubernetes_cluster(name="myakscluster",
+    resource_group_name="my-example-resource-group")
+```
 {{% /example %}}
 
 {{% example typescript %}}

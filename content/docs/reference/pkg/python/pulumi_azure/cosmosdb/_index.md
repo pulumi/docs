@@ -17,6 +17,38 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.cosmosdb.Account">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.cosmosdb.</code><code class="sig-name descname">Account</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consistency_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_automatic_failover</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_multiple_write_locations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">geo_locations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_range_filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_virtual_network_filter_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kind</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">offer_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_network_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.Account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a CosmosDB (formally DocumentDB) Account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+<span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
+
+<span class="n">rg</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;rg&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;resource_group_location&quot;</span><span class="p">])</span>
+<span class="n">ri</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">RandomInteger</span><span class="p">(</span><span class="s2">&quot;ri&quot;</span><span class="p">,</span>
+    <span class="nb">min</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span>
+    <span class="nb">max</span><span class="o">=</span><span class="mi">99999</span><span class="p">)</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">cosmosdb</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;db&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">offer_type</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;GlobalDocumentDB&quot;</span><span class="p">,</span>
+    <span class="n">enable_automatic_failover</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">consistency_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;consistencyLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;BoundedStaleness&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxIntervalInSeconds&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;maxStalenessPrefix&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">geo_location</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="n">var</span><span class="p">[</span><span class="s2">&quot;failover_location&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;failoverPriority&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="n">ri</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">result</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;tfex-cosmos-db-</span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">-customid&quot;</span><span class="p">),</span>
+            <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="n">rg</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+            <span class="s2">&quot;failoverPriority&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -315,6 +347,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.cosmosdb.CassandraKeyspace">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.cosmosdb.</code><code class="sig-name descname">CassandraKeyspace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">throughput</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.CassandraKeyspace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Cassandra KeySpace within a Cosmos DB Account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_resource_group</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;tflex-cosmosdb-account-rg&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">cosmosdb</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">offer_type</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">capabilities</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;EnableCassandra&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">consistency_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;consistencyLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;Strong&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">geo_location</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;West US&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;failoverPriority&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">example_cassandra_keyspace</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">cosmosdb</span><span class="o">.</span><span class="n">CassandraKeyspace</span><span class="p">(</span><span class="s2">&quot;exampleCassandraKeyspace&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">,</span>
+    <span class="n">account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">throughput</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -527,6 +583,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.cosmosdb.GremlinDatabase">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.cosmosdb.</code><code class="sig-name descname">GremlinDatabase</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">throughput</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.GremlinDatabase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Gremlin Database within a Cosmos DB Account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">cosmosdb</span><span class="o">.</span><span class="n">get_account</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;tfex-cosmosdb-account&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;tfex-cosmosdb-account-rg&quot;</span><span class="p">)</span>
+<span class="n">example_gremlin_database</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">cosmosdb</span><span class="o">.</span><span class="n">GremlinDatabase</span><span class="p">(</span><span class="s2">&quot;exampleGremlinDatabase&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">,</span>
+    <span class="n">account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">throughput</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -625,6 +692,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.cosmosdb.GremlinGraph">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.cosmosdb.</code><code class="sig-name descname">GremlinGraph</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">conflict_resolution_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">index_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partition_key_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">throughput</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">unique_keys</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.GremlinGraph" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Gremlin Graph within a Cosmos DB Account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">cosmosdb</span><span class="o">.</span><span class="n">get_account</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;tfex-cosmosdb-account&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;tfex-cosmosdb-account-rg&quot;</span><span class="p">)</span>
+<span class="n">example_gremlin_database</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">cosmosdb</span><span class="o">.</span><span class="n">GremlinDatabase</span><span class="p">(</span><span class="s2">&quot;exampleGremlinDatabase&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">,</span>
+    <span class="n">account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_gremlin_graph</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">cosmosdb</span><span class="o">.</span><span class="n">GremlinGraph</span><span class="p">(</span><span class="s2">&quot;exampleGremlinGraph&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">azurerm_cosmosdb_account</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;resource_group_name&quot;</span><span class="p">],</span>
+    <span class="n">account_name</span><span class="o">=</span><span class="n">azurerm_cosmosdb_account</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="n">example_gremlin_database</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">partition_key_path</span><span class="o">=</span><span class="s2">&quot;/Example&quot;</span><span class="p">,</span>
+    <span class="n">throughput</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
+    <span class="n">index_policy</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;automatic&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;indexingMode&quot;</span><span class="p">:</span> <span class="s2">&quot;Consistent&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;includedPaths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/*&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;excludedPaths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/&quot;</span><span class="n">_etag</span><span class="s2">&quot;/?&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">conflict_resolution_policy</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;LastWriterWins&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;conflictResolutionPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/_ts&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">unique_key</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;/definition/id1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;/definition/id2&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -811,6 +910,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.cosmosdb.MongoCollection">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.cosmosdb.</code><code class="sig-name descname">MongoCollection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_ttl_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">indices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shard_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">throughput</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.MongoCollection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Mongo Collection within a Cosmos DB Account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">cosmosdb</span><span class="o">.</span><span class="n">get_account</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;tfex-cosmosdb-account&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;tfex-cosmosdb-account-rg&quot;</span><span class="p">)</span>
+<span class="n">example_mongo_database</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">cosmosdb</span><span class="o">.</span><span class="n">MongoDatabase</span><span class="p">(</span><span class="s2">&quot;exampleMongoDatabase&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">,</span>
+    <span class="n">account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_mongo_collection</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">cosmosdb</span><span class="o">.</span><span class="n">MongoCollection</span><span class="p">(</span><span class="s2">&quot;exampleMongoCollection&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">,</span>
+    <span class="n">account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="n">example_mongo_database</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">default_ttl_seconds</span><span class="o">=</span><span class="s2">&quot;777&quot;</span><span class="p">,</span>
+    <span class="n">shard_key</span><span class="o">=</span><span class="s2">&quot;uniqueKey&quot;</span><span class="p">,</span>
+    <span class="n">throughput</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -963,6 +1079,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.cosmosdb.MongoDatabase">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.cosmosdb.</code><code class="sig-name descname">MongoDatabase</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">throughput</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.MongoDatabase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Mongo Database within a Cosmos DB Account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">cosmosdb</span><span class="o">.</span><span class="n">get_account</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;tfex-cosmosdb-account&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;tfex-cosmosdb-account-rg&quot;</span><span class="p">)</span>
+<span class="n">example_mongo_database</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">cosmosdb</span><span class="o">.</span><span class="n">MongoDatabase</span><span class="p">(</span><span class="s2">&quot;exampleMongoDatabase&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">,</span>
+    <span class="n">account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">throughput</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1061,6 +1188,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.cosmosdb.SqlContainer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.cosmosdb.</code><code class="sig-name descname">SqlContainer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partition_key_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">throughput</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">unique_keys</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.SqlContainer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a SQL Container within a Cosmos DB Account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">cosmosdb</span><span class="o">.</span><span class="n">SqlContainer</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">azurerm_cosmosdb_account</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;resource_group_name&quot;</span><span class="p">],</span>
+    <span class="n">account_name</span><span class="o">=</span><span class="n">azurerm_cosmosdb_account</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="n">azurerm_cosmosdb_sql_database</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">partition_key_path</span><span class="o">=</span><span class="s2">&quot;/definition/id&quot;</span><span class="p">,</span>
+    <span class="n">throughput</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
+    <span class="n">unique_key</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;/definition/idlong&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;/definition/idshort&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1202,6 +1346,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.cosmosdb.SqlDatabase">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.cosmosdb.</code><code class="sig-name descname">SqlDatabase</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">throughput</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.SqlDatabase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a SQL Database within a Cosmos DB Account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">cosmosdb</span><span class="o">.</span><span class="n">get_account</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;tfex-cosmosdb-account&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;tfex-cosmosdb-account-rg&quot;</span><span class="p">)</span>
+<span class="n">example_sql_database</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">cosmosdb</span><span class="o">.</span><span class="n">SqlDatabase</span><span class="p">(</span><span class="s2">&quot;exampleSqlDatabase&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">,</span>
+    <span class="n">account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">throughput</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1300,6 +1455,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.cosmosdb.Table">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.cosmosdb.</code><code class="sig-name descname">Table</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">throughput</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.Table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Table within a Cosmos DB Account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">cosmosdb</span><span class="o">.</span><span class="n">get_account</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;tfex-cosmosdb-account&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;tfex-cosmosdb-account-rg&quot;</span><span class="p">)</span>
+<span class="n">example_table</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">cosmosdb</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="s2">&quot;exampleTable&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">,</span>
+    <span class="n">account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">throughput</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1398,6 +1564,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.cosmosdb.get_account">
 <code class="sig-prename descclassname">pulumi_azure.cosmosdb.</code><code class="sig-name descname">get_account</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.get_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing CosmosDB (formally DocumentDB) Account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">cosmosdb</span><span class="o">.</span><span class="n">get_account</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;tfex-cosmosdb-account&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;tfex-cosmosdb-account-rg&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;cosmosdbAccountEndpoint&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;cosmosdb.Account&quot;</span><span class="p">][</span><span class="s2">&quot;jobs&quot;</span><span class="p">][</span><span class="s2">&quot;endpoint&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
