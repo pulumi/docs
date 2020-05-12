@@ -31,7 +31,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_github as github
+
+# Add a team to the organization
+some_team = github.Team("someTeam",
+    description="Some cool team",
+    privacy="closed")
+```
 {{% /example %}}
 
 {{% example typescript %}}

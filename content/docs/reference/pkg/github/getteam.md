@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_github as github
+
+example = github.get_team(slug="example")
+```
 {{% /example %}}
 
 {{% example typescript %}}

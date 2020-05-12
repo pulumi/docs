@@ -30,7 +30,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_github as github
+
+gitignore = github.RepositoryFile("gitignore",
+    content="**/*.tfstate",
+    file=".gitignore",
+    repository="example")
+```
 {{% /example %}}
 
 {{% example typescript %}}

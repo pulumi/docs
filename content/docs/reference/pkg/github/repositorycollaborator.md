@@ -42,7 +42,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_github as github
+
+# Add a collaborator to a repository
+a_repo_collaborator = github.RepositoryCollaborator("aRepoCollaborator",
+    permission="admin",
+    repository="our-cool-repo",
+    username="SomeUser")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -36,7 +36,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_github as github
+
+# Add a repository to the team
+some_team = github.Team("someTeam", description="Some cool team")
+some_repo = github.Repository("someRepo")
+some_team_repo = github.TeamRepository("someTeamRepo",
+    permission="pull",
+    repository=some_repo.name,
+    team_id=some_team.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

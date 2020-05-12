@@ -28,7 +28,19 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_github as github
+import pulumi_pulumi as pulumi
+
+example_repository = github.Repository("exampleRepository")
+example_repository_collaborator = github.RepositoryCollaborator("exampleRepositoryCollaborator",
+    permission="push",
+    repository=example_repository.name,
+    username="example-username")
+invitee = pulumi.providers.Github("invitee", token=var["invitee_token"])
+example_user_invitation_accepter = github.UserInvitationAccepter("exampleUserInvitationAccepter", invitation_id=example_repository_collaborator.invitation_id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

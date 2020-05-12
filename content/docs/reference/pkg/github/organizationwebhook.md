@@ -28,7 +28,19 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_github as github
+
+foo = github.OrganizationWebhook("foo",
+    active=False,
+    configuration={
+        "contentType": "form",
+        "insecureSsl": False,
+        "url": "https://google.de/",
+    },
+    events=["issues"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

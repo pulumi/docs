@@ -30,7 +30,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_github as github
+
+example = github.UserSshKey("example",
+    key=(lambda path: open(path).read())("~/.ssh/id_rsa.pub"),
+    title="example title")
+```
 {{% /example %}}
 
 {{% example typescript %}}

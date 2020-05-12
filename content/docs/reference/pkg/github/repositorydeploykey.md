@@ -37,7 +37,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_github as github
+
+# Add a deploy key
+example_repository_deploy_key = github.RepositoryDeployKey("exampleRepositoryDeployKey",
+    key="ssh-rsa AAA...",
+    read_only="false",
+    repository="test-repo",
+    title="Repository test key")
+```
 {{% /example %}}
 
 {{% example typescript %}}
