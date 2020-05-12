@@ -31,7 +31,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mailgun as mailgun
+
+# Create a new Mailgun domain
+default = mailgun.Domain("default",
+    region="us",
+    spam_action="disabled")
+```
 {{% /example %}}
 
 {{% example typescript %}}
