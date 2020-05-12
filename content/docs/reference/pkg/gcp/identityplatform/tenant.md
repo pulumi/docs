@@ -33,6 +33,14 @@ const tenant = new gcp.identityplatform.Tenant("tenant", {
     displayName: "tenant",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+tenant = gcp.identityplatform.Tenant("tenant",
+    allow_password_signup=True,
+    display_name="tenant")
+```
 
 
 

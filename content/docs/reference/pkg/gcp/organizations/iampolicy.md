@@ -25,9 +25,55 @@ Allows management of the entire IAM policy for an existing Google Cloud Platform
    `gcp.organizations.IAMMember` or `gcp.organizations.IAMBinding`
    or they will fight over what your policy should be.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/editor",
+    "members": ["user:jane@example.com"],
+}])
+policy = gcp.organizations.IAMPolicy("policy",
+    org_id="123456789",
+    policy_data=admin.policy_data)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const policy = new gcp.organizations.IAMPolicy("policy", {
+    orgId: "123456789",
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IAMPolicy Resource {#create}

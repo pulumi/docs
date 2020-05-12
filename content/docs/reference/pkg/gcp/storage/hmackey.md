@@ -25,6 +25,27 @@ To get more information about HmacKey, see:
 state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 On import, the `secret` value will not be retrieved.
 
+> **Warning:** All arguments including `secret` will be stored in the raw
+state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
+
+## Example Usage - Storage Hmac Key
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const serviceAccount = new gcp.serviceAccount.Account("serviceAccount", {accountId: "my-svc-acc"});
+const key = new gcp.storage.HmacKey("key", {serviceAccountEmail: serviceAccount.email});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+service_account = gcp.service_account.Account("serviceAccount", account_id="my-svc-acc")
+key = gcp.storage.HmacKey("key", service_account_email=service_account.email)
+```
+
 
 
 ## Create a HmacKey Resource {#create}

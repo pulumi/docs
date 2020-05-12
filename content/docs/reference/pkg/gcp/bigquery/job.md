@@ -1293,7 +1293,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1324,7 +1324,7 @@ The default value is CREATE_IF_NEEDED. Creation, truncation and append actions o
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -1353,7 +1353,7 @@ Creation, truncation and append actions occur as one atomic update upon job comp
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1384,7 +1384,7 @@ The default value is CREATE_IF_NEEDED. Creation, truncation and append actions o
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -1413,7 +1413,7 @@ Creation, truncation and append actions occur as one atomic update upon job comp
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1444,7 +1444,7 @@ The default value is CREATE_IF_NEEDED. Creation, truncation and append actions o
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -1473,7 +1473,7 @@ Creation, truncation and append actions occur as one atomic update upon job comp
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1504,7 +1504,7 @@ The default value is CREATE_IF_NEEDED. Creation, truncation and append actions o
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -2647,7 +2647,7 @@ The default value is false.
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2799,7 +2799,7 @@ For orc, specify "ORC". The default value is CSV.
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -2872,7 +2872,7 @@ The default value is false.
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3024,7 +3024,7 @@ For orc, specify "ORC". The default value is CSV.
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -3097,7 +3097,7 @@ The default value is false.
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3249,7 +3249,7 @@ For orc, specify "ORC". The default value is CSV.
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -3322,7 +3322,7 @@ The default value is false.
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3474,7 +3474,7 @@ For orc, specify "ORC". The default value is CSV.
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -3938,7 +3938,7 @@ However, you must still set destinationTable when result size exceeds the allowe
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4013,7 +4013,7 @@ If unspecified, this will be set to your project default.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a priority for the query. Possible values include INTERACTIVE and BATCH. The default value is INTERACTIVE.
+    <dd>{{% md %}}Specifies a priority for the query.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4079,7 +4079,7 @@ The default value is true.
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -4119,7 +4119,7 @@ However, you must still set destinationTable when result size exceeds the allowe
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4194,7 +4194,7 @@ If unspecified, this will be set to your project default.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a priority for the query. Possible values include INTERACTIVE and BATCH. The default value is INTERACTIVE.
+    <dd>{{% md %}}Specifies a priority for the query.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4260,7 +4260,7 @@ The default value is true.
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -4300,7 +4300,7 @@ However, you must still set destinationTable when result size exceeds the allowe
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4375,7 +4375,7 @@ If unspecified, this will be set to your project default.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a priority for the query. Possible values include INTERACTIVE and BATCH. The default value is INTERACTIVE.
+    <dd>{{% md %}}Specifies a priority for the query.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4441,7 +4441,7 @@ The default value is true.
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -4481,7 +4481,7 @@ However, you must still set destinationTable when result size exceeds the allowe
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion
+Creation, truncation and append actions occur as one atomic update upon job completion
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4556,7 +4556,7 @@ If unspecified, this will be set to your project default.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a priority for the query. Possible values include INTERACTIVE and BATCH. The default value is INTERACTIVE.
+    <dd>{{% md %}}Specifies a priority for the query.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4622,7 +4622,7 @@ The default value is true.
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
 {{% /md %}}</dd>
 
@@ -5016,7 +5016,7 @@ The BigQuery Service Account associated with your project requires access to thi
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Determines which statement in the script represents the "key result",
-used to populate the schema and query results of the script job. Default is LAST.
+used to populate the schema and query results of the script job.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5051,7 +5051,7 @@ used to populate the schema and query results of the script job. Default is LAST
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Determines which statement in the script represents the "key result",
-used to populate the schema and query results of the script job. Default is LAST.
+used to populate the schema and query results of the script job.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5086,7 +5086,7 @@ used to populate the schema and query results of the script job. Default is LAST
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Determines which statement in the script represents the "key result",
-used to populate the schema and query results of the script job. Default is LAST.
+used to populate the schema and query results of the script job.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5121,7 +5121,7 @@ used to populate the schema and query results of the script job. Default is LAST
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Determines which statement in the script represents the "key result",
-used to populate the schema and query results of the script job. Default is LAST.
+used to populate the schema and query results of the script job.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

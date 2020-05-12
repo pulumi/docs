@@ -28,6 +28,12 @@ import * as gcp from "@pulumi/gcp";
 
 const vpcNetwork = new gcp.compute.Network("vpc_network", {});
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+vpc_network = gcp.compute.Network("vpcNetwork")
+```
 
 
 

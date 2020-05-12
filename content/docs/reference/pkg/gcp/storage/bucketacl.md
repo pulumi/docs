@@ -21,9 +21,53 @@ Permissions can be granted either by ACLs or Cloud IAM policies. In general, per
 
 **NOTE** This resource will not remove the `project-owners-<project_id>` entity from the `OWNER` role.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+image_store = gcp.storage.Bucket("image-store", location="EU")
+image_store_acl = gcp.storage.BucketACL("image-store-acl",
+    bucket=image_store.name,
+    role_entities=[
+        "OWNER:user-my.email@gmail.com",
+        "READER:group-mygroup",
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const image-store = new gcp.storage.Bucket("image-store", {location: "EU"});
+const image-store-acl = new gcp.storage.BucketACL("image-store-acl", {
+    bucket: image-store.name,
+    roleEntities: [
+        "OWNER:user-my.email@gmail.com",
+        "READER:group-mygroup",
+    ],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BucketACL Resource {#create}

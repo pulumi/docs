@@ -15,9 +15,57 @@ Get the DNSKEY and DS records of DNSSEC-signed managed zones. For more informati
 and [API](https://cloud.google.com/dns/docs/reference/v1/dnsKeys).
 
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+foo = gcp.dns.ManagedZone("foo",
+    dns_name="foo.bar.",
+    dnssec_config={
+        "state": "on",
+        "nonExistence": "nsec3",
+    })
+foo_dns_keys = foo.id.apply(lambda id: gcp.dns.get_keys(managed_zone=id))
+pulumi.export("fooDnsDsRecord", foo_dns_keys.key_signing_keys[0]["dsRecord"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const foo = new gcp.dns.ManagedZone("foo", {
+    dnsName: "foo.bar.",
+    dnssec_config: {
+        state: "on",
+        nonExistence: "nsec3",
+    },
+});
+const fooDnsKeys = foo.id.apply(id => gcp.dns.getKeys({
+    managedZone: id,
+}));
+export const fooDnsDsRecord = fooDnsKeys.keySigningKeys[0].dsRecord;
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetKeys {#using}

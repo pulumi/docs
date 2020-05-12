@@ -22,6 +22,88 @@ Three different resources help you manage your IAM policy for Cloud Pub/Sub Topi
 
 
 
+## google\_pubsub\_topic\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/viewer",
+        members: ["user:jane@example.com"],
+    }],
+});
+const policy = new gcp.pubsub.TopicIAMPolicy("policy", {
+    project: google_pubsub_topic.example.project,
+    topic: google_pubsub_topic.example.name,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/viewer",
+    "members": ["user:jane@example.com"],
+}])
+policy = gcp.pubsub.TopicIAMPolicy("policy",
+    project=google_pubsub_topic["example"]["project"],
+    topic=google_pubsub_topic["example"]["name"],
+    policy_data=admin.policy_data)
+```
+
+## google\_pubsub\_topic\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const binding = new gcp.pubsub.TopicIAMBinding("binding", {
+    project: google_pubsub_topic.example.project,
+    topic: google_pubsub_topic.example.name,
+    role: "roles/viewer",
+    members: ["user:jane@example.com"],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+binding = gcp.pubsub.TopicIAMBinding("binding",
+    project=google_pubsub_topic["example"]["project"],
+    topic=google_pubsub_topic["example"]["name"],
+    role="roles/viewer",
+    members=["user:jane@example.com"])
+```
+
+## google\_pubsub\_topic\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const member = new gcp.pubsub.TopicIAMMember("member", {
+    project: google_pubsub_topic.example.project,
+    topic: google_pubsub_topic.example.name,
+    role: "roles/viewer",
+    member: "user:jane@example.com",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+member = gcp.pubsub.TopicIAMMember("member",
+    project=google_pubsub_topic["example"]["project"],
+    topic=google_pubsub_topic["example"]["name"],
+    role="roles/viewer",
+    member="user:jane@example.com")
+```
+
+
+
 ## Create a TopicIAMMember Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

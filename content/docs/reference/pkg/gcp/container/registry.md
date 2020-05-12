@@ -15,9 +15,45 @@ Ensures that the Google Cloud Storage bucket that backs Google Container Registr
 This resource can be used to ensure that the GCS bucket exists prior to assigning permissions. For more information see the [access control page](https://cloud.google.com/container-registry/docs/access-control) for GCR.
 
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+registry = gcp.container.Registry("registry",
+    location="EU",
+    project="my-project")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const registry = new gcp.container.Registry("registry", {
+    location: "EU",
+    project: "my-project",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Registry Resource {#create}

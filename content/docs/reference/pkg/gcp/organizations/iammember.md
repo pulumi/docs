@@ -33,7 +33,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+binding = gcp.organizations.IAMMember("binding",
+    member="user:alice@gmail.com",
+    org_id="0123456789",
+    role="roles/editor")
+```
 {{% /example %}}
 
 {{% example typescript %}}

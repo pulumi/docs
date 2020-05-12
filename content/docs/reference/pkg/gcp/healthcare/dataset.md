@@ -30,6 +30,14 @@ const defaultDataset = new gcp.healthcare.Dataset("default", {
     timeZone: "UTC",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.healthcare.Dataset("default",
+    location="us-central1",
+    time_zone="UTC")
+```
 
 
 

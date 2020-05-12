@@ -23,6 +23,36 @@ Three different resources help you manage your IAM policy for a Spanner instance
 
 > **Note:** `gcp.spanner.InstanceIAMBinding` resources **can be** used in conjunction with `gcp.spanner.InstanceIAMMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_spanner\_instance\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const instance = new gcp.spanner.InstanceIAMPolicy("instance", {
+    instance: "your-instance-name",
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/editor",
+    "members": ["user:jane@example.com"],
+}])
+instance = gcp.spanner.InstanceIAMPolicy("instance",
+    instance="your-instance-name",
+    policy_data=admin.policy_data)
+```
+
 ## google\_spanner\_instance\_iam\_binding
 
 ```typescript
@@ -34,6 +64,15 @@ const instance = new gcp.spanner.InstanceIAMBinding("instance", {
     members: ["user:jane@example.com"],
     role: "roles/compute.networkUser",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.spanner.InstanceIAMBinding("instance",
+    instance="your-instance-name",
+    members=["user:jane@example.com"],
+    role="roles/compute.networkUser")
 ```
 
 ## google\_spanner\_instance\_iam\_member
@@ -47,6 +86,15 @@ const instance = new gcp.spanner.InstanceIAMMember("instance", {
     member: "user:jane@example.com",
     role: "roles/compute.networkUser",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.spanner.InstanceIAMMember("instance",
+    instance="your-instance-name",
+    member="user:jane@example.com",
+    role="roles/compute.networkUser")
 ```
 
 

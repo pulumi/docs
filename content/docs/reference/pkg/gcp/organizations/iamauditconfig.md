@@ -28,7 +28,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+config = gcp.organizations.IamAuditConfig("config",
+    audit_log_configs=[{
+        "exemptedMembers": ["user:joebloggs@hashicorp.com"],
+        "logType": "DATA_READ",
+    }],
+    org_id="your-organization-id",
+    service="allServices")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -38,6 +38,21 @@ const filename_trigger = new gcp.cloudbuild.Trigger("filename-trigger", {
     },
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+filename_trigger = gcp.cloudbuild.Trigger("filename-trigger",
+    filename="cloudbuild.yaml",
+    substitutions={
+        "_BAZ": "qux",
+        "_FOO": "bar",
+    },
+    trigger_template={
+        "branchName": "master",
+        "repoName": "my-repo",
+    })
+```
 
 
 

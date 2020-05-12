@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_forwarding_rule = gcp.compute.get_forwarding_rule(name="forwarding-rule-us-east1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

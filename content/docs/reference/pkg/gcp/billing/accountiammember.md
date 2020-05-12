@@ -33,7 +33,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+binding = gcp.billing.AccountIamMember("binding",
+    billing_account_id="00AA00-000AAA-00AA0A",
+    member="user:alice@gmail.com",
+    role="roles/billing.viewer")
+```
 {{% /example %}}
 
 {{% example typescript %}}

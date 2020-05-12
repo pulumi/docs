@@ -13,9 +13,55 @@ meta_desc: "Explore the GetAddress function of the compute module, including exa
 Get the IP address from a static address. For more information see
 the official [API](https://cloud.google.com/compute/docs/reference/latest/addresses/get) documentation.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_address = gcp.compute.get_address(name="foobar")
+prod = gcp.dns.ManagedZone("prod", dns_name="prod.mydomain.com.")
+frontend = gcp.dns.RecordSet("frontend",
+    type="A",
+    ttl=300,
+    managed_zone=prod.name,
+    rrdatas=[my_address.address])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myAddress = gcp.compute.getAddress({
+    name: "foobar",
+});
+const prod = new gcp.dns.ManagedZone("prod", {dnsName: "prod.mydomain.com."});
+const frontend = new gcp.dns.RecordSet("frontend", {
+    type: "A",
+    ttl: 300,
+    managedZone: prod.name,
+    rrdatas: [myAddress.then(myAddress => myAddress.address)],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAddress {#using}

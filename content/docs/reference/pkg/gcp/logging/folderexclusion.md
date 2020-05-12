@@ -17,9 +17,54 @@ Manages a folder-level logging exclusion. For more information see
 Note that you must have the "Logs Configuration Writer" IAM role (`roles/logging.configWriter`)
 granted to the credentials used with this provider.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_folder = gcp.organizations.Folder("my-folder",
+    display_name="My folder",
+    parent="organizations/123456")
+my_exclusion = gcp.logging.FolderExclusion("my-exclusion",
+    folder=my_folder.name,
+    description="Exclude GCE instance debug logs",
+    filter="resource.type = gce_instance AND severity <= DEBUG")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my-folder = new gcp.organizations.Folder("my-folder", {
+    displayName: "My folder",
+    parent: "organizations/123456",
+});
+const my-exclusion = new gcp.logging.FolderExclusion("my-exclusion", {
+    folder: my-folder.name,
+    description: "Exclude GCE instance debug logs",
+    filter: "resource.type = gce_instance AND severity <= DEBUG",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FolderExclusion Resource {#create}

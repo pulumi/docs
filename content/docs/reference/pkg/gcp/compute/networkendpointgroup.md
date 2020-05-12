@@ -28,6 +28,42 @@ To get more information about NetworkEndpointGroup, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/load-balancing/docs/negs/)
 
+## Example Usage - Network Endpoint Group
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultNetwork = new gcp.compute.Network("defaultNetwork", {autoCreateSubnetworks: false});
+const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
+    ipCidrRange: "10.0.0.0/16",
+    region: "us-central1",
+    network: defaultNetwork.selfLink,
+});
+const neg = new gcp.compute.NetworkEndpointGroup("neg", {
+    network: defaultNetwork.selfLink,
+    subnetwork: defaultSubnetwork.selfLink,
+    defaultPort: "90",
+    zone: "us-central1-a",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_network = gcp.compute.Network("defaultNetwork", auto_create_subnetworks=False)
+default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
+    ip_cidr_range="10.0.0.0/16",
+    region="us-central1",
+    network=default_network.self_link)
+neg = gcp.compute.NetworkEndpointGroup("neg",
+    network=default_network.self_link,
+    subnetwork=default_subnetwork.self_link,
+    default_port="90",
+    zone="us-central1-a")
+```
+
 
 
 ## Create a NetworkEndpointGroup Resource {#create}
@@ -262,7 +298,7 @@ character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. The only supported value is GCE_VM_IP_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -351,7 +387,7 @@ character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. The only supported value is GCE_VM_IP_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -440,7 +476,7 @@ character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. The only supported value is GCE_VM_IP_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -529,7 +565,7 @@ character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. The only supported value is GCE_VM_IP_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -887,7 +923,7 @@ Uses "default" project network if unspecified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. The only supported value is GCE_VM_IP_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -994,7 +1030,7 @@ Uses "default" project network if unspecified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. The only supported value is GCE_VM_IP_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1101,7 +1137,7 @@ Uses "default" project network if unspecified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. The only supported value is GCE_VM_IP_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1208,7 +1244,7 @@ Uses "default" project network if unspecified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. The only supported value is GCE_VM_IP_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

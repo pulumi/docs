@@ -11,9 +11,9 @@ meta_desc: "Explore the Registry resource of the kms module, including examples,
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-Deprecated: gcp.Registry has been deprecated in favour of gcp.Registry
+Deprecated: gcp.kms.Registry has been deprecated in favour of gcp.iot.Registry
 
-<p class="resource-deprecated">Deprecated: {{% md %}}gcp.Registry has been deprecated in favour of gcp.Registry{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}gcp.kms.Registry has been deprecated in favour of gcp.iot.Registry{{% /md %}}</p>
 
 
 ## Create a Registry Resource {#create}

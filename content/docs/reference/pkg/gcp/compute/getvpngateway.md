@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_vpn_gateway = gcp.compute.get_vpn_gateway(name="vpn-gateway-us-east1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

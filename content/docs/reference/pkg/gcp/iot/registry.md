@@ -15,9 +15,82 @@ meta_desc: "Explore the Registry resource of the iot module, including examples,
 [API](https://cloud.google.com/iot/docs/reference/cloudiot/rest/v1/projects.locations.registries).
 
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_devicestatus = gcp.pubsub.Topic("default-devicestatus")
+default_telemetry = gcp.pubsub.Topic("default-telemetry")
+default_registry = gcp.iot.Registry("default-registry",
+    event_notification_configs=[{
+        "pubsubTopicName": default_telemetry.id,
+    }],
+    state_notification_config={
+        "pubsub_topic_name": default_devicestatus.id,
+    },
+    http_config={
+        "http_enabled_state": "HTTP_ENABLED",
+    },
+    mqtt_config={
+        "mqtt_enabled_state": "MQTT_ENABLED",
+    },
+    credentials=[{
+        "publicKeyCertificate": {
+            "format": "X509_CERTIFICATE_PEM",
+            "certificate": (lambda path: open(path).read())("rsa_cert.pem"),
+        },
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const default-devicestatus = new gcp.pubsub.Topic("default-devicestatus", {});
+const default-telemetry = new gcp.pubsub.Topic("default-telemetry", {});
+const default-registry = new gcp.iot.Registry("default-registry", {
+    event_notification_configs: [{
+        pubsubTopicName: default-telemetry.id,
+    }],
+    stateNotificationConfig: {
+        pubsub_topic_name: default-devicestatus.id,
+    },
+    httpConfig: {
+        http_enabled_state: "HTTP_ENABLED",
+    },
+    mqttConfig: {
+        mqtt_enabled_state: "MQTT_ENABLED",
+    },
+    credentials: [{
+        publicKeyCertificate: {
+            format: "X509_CERTIFICATE_PEM",
+            certificate: fs.readFileSync("rsa_cert.pem"),
+        },
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Registry Resource {#create}

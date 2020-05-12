@@ -56,7 +56,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+master = gcp.sql.DatabaseInstance("master",
+    database_version="POSTGRES_11",
+    region="us-central1",
+    settings={
+        "tier": "db-f1-micro",
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -71,6 +81,76 @@ const master = new gcp.sql.DatabaseInstance("master", {
         // Second-generation instance tiers are based on the machine
         // type. See argument reference below.
         tier: "db-f1-micro",
+    },
+});
+```
+{{% /example %}}
+
+### Private IP Instance
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+import pulumi_random as random
+
+private_network = gcp.compute.Network("privateNetwork")
+private_ip_address = gcp.compute.GlobalAddress("privateIpAddress",
+    purpose="VPC_PEERING",
+    address_type="INTERNAL",
+    prefix_length=16,
+    network=private_network.self_link)
+private_vpc_connection = gcp.servicenetworking.Connection("privateVpcConnection",
+    network=private_network.self_link,
+    service="servicenetworking.googleapis.com",
+    reserved_peering_ranges=[private_ip_address.name])
+db_name_suffix = random.RandomId("dbNameSuffix", byte_length=4)
+instance = gcp.sql.DatabaseInstance("instance",
+    region="us-central1",
+    settings={
+        "tier": "db-f1-micro",
+        "ip_configuration": {
+            "ipv4Enabled": False,
+            "privateNetwork": private_network.self_link,
+        },
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * as random from "@pulumi/random";
+
+const privateNetwork = new gcp.compute.Network("privateNetwork", {});
+const privateIpAddress = new gcp.compute.GlobalAddress("privateIpAddress", {
+    purpose: "VPC_PEERING",
+    addressType: "INTERNAL",
+    prefixLength: 16,
+    network: privateNetwork.selfLink,
+});
+const privateVpcConnection = new gcp.servicenetworking.Connection("privateVpcConnection", {
+    network: privateNetwork.selfLink,
+    service: "servicenetworking.googleapis.com",
+    reservedPeeringRanges: [privateIpAddress.name],
+});
+const dbNameSuffix = new random.RandomId("dbNameSuffix", {byteLength: 4});
+const instance = new gcp.sql.DatabaseInstance("instance", {
+    region: "us-central1",
+    settings: {
+        tier: "db-f1-micro",
+        ip_configuration: {
+            ipv4Enabled: false,
+            privateNetwork: privateNetwork.selfLink,
+        },
     },
 });
 ```

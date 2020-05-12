@@ -17,6 +17,93 @@ which will be applied to this disk for scheduling snapshot creation.
 
 
 
+## Example Usage - Region Disk Resource Policy Attachment Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const disk = new gcp.compute.Disk("disk", {
+    image: "debian-cloud/debian-9",
+    size: 50,
+    type: "pd-ssd",
+    zone: "us-central1-a",
+});
+const snapdisk = new gcp.compute.Snapshot("snapdisk", {
+    sourceDisk: disk.name,
+    zone: "us-central1-a",
+});
+const ssd = new gcp.compute.RegionDisk("ssd", {
+    replicaZones: [
+        "us-central1-a",
+        "us-central1-f",
+    ],
+    snapshot: snapdisk.selfLink,
+    size: 50,
+    type: "pd-ssd",
+    region: "us-central1",
+});
+const attachment = new gcp.compute.RegionDiskResourcePolicyAttachment("attachment", {
+    disk: ssd.name,
+    region: "us-central1",
+});
+const policy = new gcp.compute.ResourcePolicy("policy", {
+    region: "us-central1",
+    snapshot_schedule_policy: {
+        schedule: {
+            daily_schedule: {
+                daysInCycle: 1,
+                startTime: "04:00",
+            },
+        },
+    },
+});
+const myImage = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+disk = gcp.compute.Disk("disk",
+    image="debian-cloud/debian-9",
+    size=50,
+    type="pd-ssd",
+    zone="us-central1-a")
+snapdisk = gcp.compute.Snapshot("snapdisk",
+    source_disk=disk.name,
+    zone="us-central1-a")
+ssd = gcp.compute.RegionDisk("ssd",
+    replica_zones=[
+        "us-central1-a",
+        "us-central1-f",
+    ],
+    snapshot=snapdisk.self_link,
+    size=50,
+    type="pd-ssd",
+    region="us-central1")
+attachment = gcp.compute.RegionDiskResourcePolicyAttachment("attachment",
+    disk=ssd.name,
+    region="us-central1")
+policy = gcp.compute.ResourcePolicy("policy",
+    region="us-central1",
+    snapshot_schedule_policy={
+        "schedule": {
+            "daily_schedule": {
+                "daysInCycle": 1,
+                "startTime": "04:00",
+            },
+        },
+    })
+my_image = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+```
+
+
+
 ## Create a RegionDiskResourcePolicyAttachment Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

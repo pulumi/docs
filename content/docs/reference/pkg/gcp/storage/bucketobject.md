@@ -34,7 +34,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+picture = gcp.storage.BucketObject("picture",
+    bucket="image-store",
+    source=pulumi.FileAsset("/images/nature/garden-tiger-moth.jpg"))
+```
 {{% /example %}}
 
 {{% example typescript %}}

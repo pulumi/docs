@@ -12,9 +12,56 @@ meta_desc: "Explore the GetCluster function of the container module, including e
 
 Get info about a GKE cluster from its name and location.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_cluster = gcp.container.get_cluster(name="my-cluster",
+    location="us-east1-a")
+pulumi.export("clusterUsername", my_cluster.master_auths[0]["username"])
+pulumi.export("clusterPassword", my_cluster.master_auths[0]["password"])
+pulumi.export("endpoint", my_cluster.endpoint)
+pulumi.export("instanceGroupUrls", my_cluster.instance_group_urls)
+pulumi.export("nodeConfig", my_cluster.node_configs)
+pulumi.export("nodePools", my_cluster.node_pools)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myCluster = gcp.container.getCluster({
+    name: "my-cluster",
+    location: "us-east1-a",
+});
+export const clusterUsername = myCluster.then(myCluster => myCluster.masterAuths[0].username);
+export const clusterPassword = myCluster.then(myCluster => myCluster.masterAuths[0].password);
+export const endpoint = myCluster.then(myCluster => myCluster.endpoint);
+export const instanceGroupUrls = myCluster.then(myCluster => myCluster.instanceGroupUrls);
+export const nodeConfig = myCluster.then(myCluster => myCluster.nodeConfigs);
+export const nodePools = myCluster.then(myCluster => myCluster.nodePools);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetCluster {#using}

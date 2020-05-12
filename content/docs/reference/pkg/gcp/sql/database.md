@@ -15,6 +15,35 @@ Google's cloud.
 
 
 
+## Example Usage - Sql Database Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.sql.DatabaseInstance("instance", {
+    region: "us-central1",
+    settings: {
+        tier: "db-f1-micro",
+    },
+});
+const database = new gcp.sql.Database("database", {instance: instance.name});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.sql.DatabaseInstance("instance",
+    region="us-central1",
+    settings={
+        "tier": "db-f1-micro",
+    })
+database = gcp.sql.Database("database", instance=instance.name)
+```
+
+
+
 ## Create a Database Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

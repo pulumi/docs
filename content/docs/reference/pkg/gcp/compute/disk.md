@@ -33,9 +33,8 @@ To get more information about Disk, see:
 * How-to Guides
     * [Adding a persistent disk](https://cloud.google.com/compute/docs/disks/add-persistent-disk)
 
-> **Warning:** All arguments including the disk encryption key will be stored in the raw
-state as plain-text.
-[Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
+> **Warning:** All arguments including `disk_encryption_key.raw_key` will be stored in the raw
+state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 ## Example Usage - Disk Basic
 
@@ -53,6 +52,19 @@ const defaultDisk = new gcp.compute.Disk("default", {
     type: "pd-ssd",
     zone: "us-central1-a",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.Disk("default",
+    image="debian-8-jessie-v20170523",
+    labels={
+        "environment": "dev",
+    },
+    physical_block_size_bytes=4096,
+    type="pd-ssd",
+    zone="us-central1-a")
 ```
 
 

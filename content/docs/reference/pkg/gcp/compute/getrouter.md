@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_router = gcp.compute.get_router(name="myrouter-us-east1",
+    network="my-network")
+```
 {{% /example %}}
 
 {{% example typescript %}}

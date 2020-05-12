@@ -20,9 +20,84 @@ This resource is specifically to create a compute instance from a given
 `gcp.compute.Instance` resource.
 
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+tpl_instance_template = gcp.compute.InstanceTemplate("tplInstanceTemplate",
+    machine_type="n1-standard-1",
+    disk=[{
+        "sourceImage": "debian-cloud/debian-9",
+        "autoDelete": True,
+        "diskSizeGb": 100,
+        "boot": True,
+    }],
+    network_interface=[{
+        "network": "default",
+    }],
+    metadata={
+        "foo": "bar",
+    },
+    can_ip_forward=True)
+tpl_instance_from_template = gcp.compute.InstanceFromTemplate("tplInstanceFromTemplate",
+    zone="us-central1-a",
+    source_instance_template=tpl_instance_template.self_link,
+    can_ip_forward=False,
+    labels={
+        "my_key": "my_value",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const tplInstanceTemplate = new gcp.compute.InstanceTemplate("tplInstanceTemplate", {
+    machineType: "n1-standard-1",
+    disk: [{
+        sourceImage: "debian-cloud/debian-9",
+        autoDelete: true,
+        diskSizeGb: 100,
+        boot: true,
+    }],
+    network_interface: [{
+        network: "default",
+    }],
+    metadata: {
+        foo: "bar",
+    },
+    canIpForward: true,
+});
+const tplInstanceFromTemplate = new gcp.compute.InstanceFromTemplate("tplInstanceFromTemplate", {
+    zone: "us-central1-a",
+    sourceInstanceTemplate: tplInstanceTemplate.selfLink,
+    canIpForward: false,
+    labels: {
+        my_key: "my_value",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a InstanceFromTemplate Resource {#create}

@@ -41,6 +41,22 @@ const instance = new gcp.filestore.Instance("instance", {
     zone: "us-central1-b",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.filestore.Instance("instance",
+    file_shares={
+        "capacityGb": 2660,
+        "name": "share1",
+    },
+    networks=[{
+        "modes": ["MODE_IPV4"],
+        "network": "default",
+    }],
+    tier="PREMIUM",
+    zone="us-central1-b")
+```
 
 
 

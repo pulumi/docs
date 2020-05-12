@@ -16,6 +16,32 @@ For more information see
 and
 [API](https://cloud.google.com/dns/api/v1/managedZones).
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const envDnsZone = gcp.dns.getManagedZone({
+    name: "qa-zone",
+});
+const dns = new gcp.dns.RecordSet("dns", {
+    type: "TXT",
+    ttl: 300,
+    managedZone: envDnsZone.then(envDnsZone => envDnsZone.name),
+    rrdatas: ["test"],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+env_dns_zone = gcp.dns.get_managed_zone(name="qa-zone")
+dns = gcp.dns.RecordSet("dns",
+    type="TXT",
+    ttl=300,
+    managed_zone=env_dns_zone.name,
+    rrdatas=["test"])
+```
+
 
 
 ## Using GetManagedZone {#using}

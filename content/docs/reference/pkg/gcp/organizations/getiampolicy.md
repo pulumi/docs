@@ -49,6 +49,36 @@ const admin = pulumi.output(gcp.organizations.getIAMPolicy({
     ],
 }, { async: true }));
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(audit_configs=[{
+        "auditLogConfigs": [
+            {
+                "exemptedMembers": ["user:you@domain.com"],
+                "logType": "DATA_READ",
+            },
+            {
+                "logType": "DATA_WRITE",
+            },
+            {
+                "logType": "ADMIN_READ",
+            },
+        ],
+        "service": "cloudkms.googleapis.com",
+    }],
+    bindings=[
+        {
+            "members": ["serviceAccount:your-custom-sa@your-project.iam.gserviceaccount.com"],
+            "role": "roles/compute.instanceAdmin",
+        },
+        {
+            "members": ["user:alice@gmail.com"],
+            "role": "roles/storage.objectViewer",
+        },
+    ])
+```
 
 This data source is used to define IAM policies to apply to other resources.
 Currently, defining a policy through a datasource and referencing that policy

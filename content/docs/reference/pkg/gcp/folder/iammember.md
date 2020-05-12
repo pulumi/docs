@@ -18,9 +18,54 @@ the IAM policy for an existing Google Cloud Platform folder.
    should be. Similarly, roles controlled by `gcp.folder.IAMBinding`
    should not be assigned to using `gcp.folder.IAMMember`.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+department1 = gcp.organizations.Folder("department1",
+    display_name="Department 1",
+    parent="organizations/1234567")
+admin = gcp.folder.IAMMember("admin",
+    folder=department1.name,
+    role="roles/editor",
+    member="user:alice@gmail.com")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const department1 = new gcp.organizations.Folder("department1", {
+    displayName: "Department 1",
+    parent: "organizations/1234567",
+});
+const admin = new gcp.folder.IAMMember("admin", {
+    folder: department1.name,
+    role: "roles/editor",
+    member: "user:alice@gmail.com",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IAMMember Resource {#create}

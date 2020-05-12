@@ -12,9 +12,42 @@ meta_desc: "Explore the GetDefaultServiceAccount function of the compute module,
 
 Use this data source to retrieve default service account for this project
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.get_default_service_account()
+pulumi.export("defaultAccount", default.email)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default = gcp.compute.getDefaultServiceAccount({});
+export const defaultAccount = default.then(_default => _default.email);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetDefaultServiceAccount {#using}

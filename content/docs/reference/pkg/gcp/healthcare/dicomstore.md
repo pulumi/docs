@@ -19,6 +19,41 @@ To get more information about DicomStore, see:
 * How-to Guides
     * [Creating a DICOM store](https://cloud.google.com/healthcare/docs/how-tos/dicom)
 
+## Example Usage - Healthcare Dicom Store Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const topic = new gcp.pubsub.Topic("topic", {});
+const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"});
+const default = new gcp.healthcare.DicomStore("default", {
+    dataset: dataset.id,
+    notification_config: {
+        pubsubTopic: topic.id,
+    },
+    labels: {
+        label1: "labelvalue1",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+topic = gcp.pubsub.Topic("topic")
+dataset = gcp.healthcare.Dataset("dataset", location="us-central1")
+default = gcp.healthcare.DicomStore("default",
+    dataset=dataset.id,
+    notification_config={
+        "pubsubTopic": topic.id,
+    },
+    labels={
+        "label1": "labelvalue1",
+    })
+```
+
 
 
 ## Create a DicomStore Resource {#create}

@@ -32,7 +32,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+picture = gcp.storage.get_bucket_object(bucket="image-store",
+    name="folder/butterfly01.jpg")
+```
 {{% /example %}}
 
 {{% example typescript %}}

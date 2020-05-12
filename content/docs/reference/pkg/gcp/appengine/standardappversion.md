@@ -11,8 +11,9 @@ meta_desc: "Explore the StandardAppVersion resource of the appengine module, inc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Standard App Version resource to create a new version of standard GAE Application.
+Learn about the differences between the standard environment and the flexible environment
+at https://cloud.google.com/appengine/docs/the-appengine-environments.
 Currently supporting Zip and File Containers.
-Currently does not support async operation checking.
 
 
 To get more information about StandardAppVersion, see:
@@ -20,6 +21,127 @@ To get more information about StandardAppVersion, see:
 * [API documentation](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/appengine/docs/standard)
+
+## Example Usage - App Engine Standard App Version
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bucket = new gcp.storage.Bucket("bucket", {});
+const object = new gcp.storage.BucketObject("object", {
+    bucket: bucket.name,
+    source: new pulumi.asset.FileAsset("./test-fixtures/appengine/hello-world.zip"),
+});
+const myappV1 = new gcp.appengine.StandardAppVersion("myappV1", {
+    versionId: "v1",
+    service: "myapp",
+    runtime: "nodejs10",
+    entrypoint: {
+        shell: "node ./app.js",
+    },
+    deployment: {
+        zip: {
+            sourceUrl: pulumi.interpolate`https://storage.googleapis.com/${bucket.name}/${object.name}`,
+        },
+    },
+    envVariables: {
+        port: "8080",
+    },
+    automatic_scaling: [{
+        maxConcurrentRequests: 10,
+        minIdleInstances: 1,
+        maxIdleInstances: 3,
+        minPendingLatency: "1s",
+        maxPendingLatency: "5s",
+        standard_scheduler_settings: [{
+            targetCpuUtilization: 0.5,
+            targetThroughputUtilization: 0.75,
+            minInstances: 2,
+            maxInstances: 10,
+        }],
+    }],
+    deleteServiceOnDestroy: true,
+});
+const myappV2 = new gcp.appengine.StandardAppVersion("myappV2", {
+    versionId: "v2",
+    service: "myapp",
+    runtime: "nodejs10",
+    entrypoint: {
+        shell: "node ./app.js",
+    },
+    deployment: {
+        zip: {
+            sourceUrl: pulumi.interpolate`https://storage.googleapis.com/${bucket.name}/${object.name}`,
+        },
+    },
+    envVariables: {
+        port: "8080",
+    },
+    basic_scaling: [{
+        maxInstances: 5,
+    }],
+    noopOnDestroy: true,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bucket = gcp.storage.Bucket("bucket")
+object = gcp.storage.BucketObject("object",
+    bucket=bucket.name,
+    source=pulumi.FileAsset("./test-fixtures/appengine/hello-world.zip"))
+myapp_v1 = gcp.appengine.StandardAppVersion("myappV1",
+    version_id="v1",
+    service="myapp",
+    runtime="nodejs10",
+    entrypoint={
+        "shell": "node ./app.js",
+    },
+    deployment={
+        "zip": {
+            "sourceUrl": pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
+        },
+    },
+    env_variables={
+        "port": "8080",
+    },
+    automatic_scaling=[{
+        "maxConcurrentRequests": 10,
+        "minIdleInstances": 1,
+        "maxIdleInstances": 3,
+        "minPendingLatency": "1s",
+        "maxPendingLatency": "5s",
+        "standard_scheduler_settings": [{
+            "targetCpuUtilization": 0.5,
+            "targetThroughputUtilization": 0.75,
+            "minInstances": 2,
+            "maxInstances": 10,
+        }],
+    }],
+    delete_service_on_destroy=True)
+myapp_v2 = gcp.appengine.StandardAppVersion("myappV2",
+    version_id="v2",
+    service="myapp",
+    runtime="nodejs10",
+    entrypoint={
+        "shell": "node ./app.js",
+    },
+    deployment={
+        "zip": {
+            "sourceUrl": pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
+        },
+    },
+    env_variables={
+        "port": "8080",
+    },
+    basic_scaling=[{
+        "maxInstances": 5,
+    }],
+    noop_on_destroy=True)
+```
 
 
 
@@ -32,7 +154,7 @@ To get more information about StandardAppVersion, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">StandardAppVersion</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>delete_service_on_destroy=None<span class="p">, </span>deployment=None<span class="p">, </span>entrypoint=None<span class="p">, </span>env_variables=None<span class="p">, </span>handlers=None<span class="p">, </span>instance_class=None<span class="p">, </span>libraries=None<span class="p">, </span>noop_on_destroy=None<span class="p">, </span>project=None<span class="p">, </span>runtime=None<span class="p">, </span>runtime_api_version=None<span class="p">, </span>service=None<span class="p">, </span>threadsafe=None<span class="p">, </span>version_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">StandardAppVersion</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>automatic_scaling=None<span class="p">, </span>basic_scaling=None<span class="p">, </span>delete_service_on_destroy=None<span class="p">, </span>deployment=None<span class="p">, </span>entrypoint=None<span class="p">, </span>env_variables=None<span class="p">, </span>handlers=None<span class="p">, </span>instance_class=None<span class="p">, </span>libraries=None<span class="p">, </span>manual_scaling=None<span class="p">, </span>noop_on_destroy=None<span class="p">, </span>project=None<span class="p">, </span>runtime=None<span class="p">, </span>runtime_api_version=None<span class="p">, </span>service=None<span class="p">, </span>threadsafe=None<span class="p">, </span>version_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -206,6 +328,15 @@ The StandardAppVersion resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
+        <span>Deployment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>Runtime</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -215,20 +346,29 @@ The StandardAppVersion resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
+        <span>Automatic<wbr>Scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionautomaticscaling">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Basic<wbr>Scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionbasicscaling">Standard<wbr>App<wbr>Version<wbr>Basic<wbr>Scaling<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Delete<wbr>Service<wbr>On<wbr>Destroy</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.    
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Deployment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -266,8 +406,9 @@ The first matching URL handles the request and other request handlers are not at
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Instance class that is used to run this version. Valid values are
-AutomaticScaling F1, F2, F4, F4_1G
-(Only AutomaticScaling is supported at the moment)
+AutomaticScaling: F1, F2, F4, F4_1G
+BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8
+Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -277,6 +418,15 @@ AutomaticScaling F1, F2, F4, F4_1G
         <span class="property-type"><a href="#standardappversionlibrary">List&lt;Standard<wbr>App<wbr>Version<wbr>Library<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Manual<wbr>Scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionmanualscaling">Standard<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -344,6 +494,15 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 
     <dt class="property-required"
             title="Required">
+        <span>Deployment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment</a></span>
+    </dt>
+    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>Runtime</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -353,20 +512,29 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 
     <dt class="property-optional"
             title="Optional">
+        <span>Automatic<wbr>Scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionautomaticscaling">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling</a></span>
+    </dt>
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Basic<wbr>Scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionbasicscaling">Standard<wbr>App<wbr>Version<wbr>Basic<wbr>Scaling</a></span>
+    </dt>
+    <dd>{{% md %}}Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Delete<wbr>Service<wbr>On<wbr>Destroy</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.    
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Deployment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment</a></span>
-    </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -404,8 +572,9 @@ The first matching URL handles the request and other request handlers are not at
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Instance class that is used to run this version. Valid values are
-AutomaticScaling F1, F2, F4, F4_1G
-(Only AutomaticScaling is supported at the moment)
+AutomaticScaling: F1, F2, F4, F4_1G
+BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8
+Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -415,6 +584,15 @@ AutomaticScaling F1, F2, F4, F4_1G
         <span class="property-type"><a href="#standardappversionlibrary">[]Standard<wbr>App<wbr>Version<wbr>Library</a></span>
     </dt>
     <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Manual<wbr>Scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionmanualscaling">Standard<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling</a></span>
+    </dt>
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -482,6 +660,15 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 
     <dt class="property-required"
             title="Required">
+        <span>deployment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment</a></span>
+    </dt>
+    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>runtime</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -491,20 +678,29 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 
     <dt class="property-optional"
             title="Optional">
+        <span>automatic<wbr>Scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionautomaticscaling">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling</a></span>
+    </dt>
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>basic<wbr>Scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionbasicscaling">Standard<wbr>App<wbr>Version<wbr>Basic<wbr>Scaling</a></span>
+    </dt>
+    <dd>{{% md %}}Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>delete<wbr>Service<wbr>On<wbr>Destroy</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.    
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>deployment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment</a></span>
-    </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -542,8 +738,9 @@ The first matching URL handles the request and other request handlers are not at
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Instance class that is used to run this version. Valid values are
-AutomaticScaling F1, F2, F4, F4_1G
-(Only AutomaticScaling is supported at the moment)
+AutomaticScaling: F1, F2, F4, F4_1G
+BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8
+Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -553,6 +750,15 @@ AutomaticScaling F1, F2, F4, F4_1G
         <span class="property-type"><a href="#standardappversionlibrary">Standard<wbr>App<wbr>Version<wbr>Library[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>manual<wbr>Scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionmanualscaling">Standard<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling</a></span>
+    </dt>
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -620,6 +826,15 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 
     <dt class="property-required"
             title="Required">
+        <span>deployment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversiondeployment">Dict[Standard<wbr>App<wbr>Version<wbr>Deployment]</a></span>
+    </dt>
+    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>runtime</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -629,20 +844,29 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 
     <dt class="property-optional"
             title="Optional">
+        <span>automatic_<wbr>scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionautomaticscaling">Dict[Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling]</a></span>
+    </dt>
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>basic_<wbr>scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionbasicscaling">Dict[Standard<wbr>App<wbr>Version<wbr>Basic<wbr>Scaling]</a></span>
+    </dt>
+    <dd>{{% md %}}Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>delete_<wbr>service_<wbr>on_<wbr>destroy</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.    
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>deployment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeployment">Dict[Standard<wbr>App<wbr>Version<wbr>Deployment]</a></span>
-    </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -680,8 +904,9 @@ The first matching URL handles the request and other request handlers are not at
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Instance class that is used to run this version. Valid values are
-AutomaticScaling F1, F2, F4, F4_1G
-(Only AutomaticScaling is supported at the moment)
+AutomaticScaling: F1, F2, F4, F4_1G
+BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8
+Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -691,6 +916,15 @@ AutomaticScaling F1, F2, F4, F4_1G
         <span class="property-type"><a href="#standardappversionlibrary">List[Standard<wbr>App<wbr>Version<wbr>Library]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>manual_<wbr>scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionmanualscaling">Dict[Standard<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling]</a></span>
+    </dt>
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -781,7 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier for this object. Format specified above.
+    <dd>{{% md %}}Name of the library. Example "django".
 {{% /md %}}</dd>
 
 </dl>
@@ -805,7 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier for this object. Format specified above.
+    <dd>{{% md %}}Name of the library. Example "django".
 {{% /md %}}</dd>
 
 </dl>
@@ -829,7 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier for this object. Format specified above.
+    <dd>{{% md %}}Name of the library. Example "django".
 {{% /md %}}</dd>
 
 </dl>
@@ -853,7 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The identifier for this object. Format specified above.
+    <dd>{{% md %}}Name of the library. Example "django".
 {{% /md %}}</dd>
 
 </dl>
@@ -875,7 +1109,7 @@ Get an existing StandardAppVersion resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>delete_service_on_destroy=None<span class="p">, </span>deployment=None<span class="p">, </span>entrypoint=None<span class="p">, </span>env_variables=None<span class="p">, </span>handlers=None<span class="p">, </span>instance_class=None<span class="p">, </span>libraries=None<span class="p">, </span>name=None<span class="p">, </span>noop_on_destroy=None<span class="p">, </span>project=None<span class="p">, </span>runtime=None<span class="p">, </span>runtime_api_version=None<span class="p">, </span>service=None<span class="p">, </span>threadsafe=None<span class="p">, </span>version_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>automatic_scaling=None<span class="p">, </span>basic_scaling=None<span class="p">, </span>delete_service_on_destroy=None<span class="p">, </span>deployment=None<span class="p">, </span>entrypoint=None<span class="p">, </span>env_variables=None<span class="p">, </span>handlers=None<span class="p">, </span>instance_class=None<span class="p">, </span>libraries=None<span class="p">, </span>manual_scaling=None<span class="p">, </span>name=None<span class="p">, </span>noop_on_destroy=None<span class="p">, </span>project=None<span class="p">, </span>runtime=None<span class="p">, </span>runtime_api_version=None<span class="p">, </span>service=None<span class="p">, </span>threadsafe=None<span class="p">, </span>version_id=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -991,6 +1225,24 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Automatic<wbr>Scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionautomaticscaling">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Basic<wbr>Scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionbasicscaling">Standard<wbr>App<wbr>Version<wbr>Basic<wbr>Scaling<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Delete<wbr>Service<wbr>On<wbr>Destroy</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
@@ -1042,8 +1294,9 @@ The first matching URL handles the request and other request handlers are not at
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Instance class that is used to run this version. Valid values are
-AutomaticScaling F1, F2, F4, F4_1G
-(Only AutomaticScaling is supported at the moment)
+AutomaticScaling: F1, F2, F4, F4_1G
+BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8
+Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1057,11 +1310,20 @@ AutomaticScaling F1, F2, F4, F4_1G
 
     <dt class="property-optional"
             title="Optional">
+        <span>Manual<wbr>Scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionmanualscaling">Standard<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier for this object. Format specified above.
+    <dd>{{% md %}}Name of the library. Example "django".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1138,6 +1400,24 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 
     <dt class="property-optional"
             title="Optional">
+        <span>Automatic<wbr>Scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionautomaticscaling">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling</a></span>
+    </dt>
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Basic<wbr>Scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionbasicscaling">Standard<wbr>App<wbr>Version<wbr>Basic<wbr>Scaling</a></span>
+    </dt>
+    <dd>{{% md %}}Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Delete<wbr>Service<wbr>On<wbr>Destroy</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
@@ -1189,8 +1469,9 @@ The first matching URL handles the request and other request handlers are not at
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Instance class that is used to run this version. Valid values are
-AutomaticScaling F1, F2, F4, F4_1G
-(Only AutomaticScaling is supported at the moment)
+AutomaticScaling: F1, F2, F4, F4_1G
+BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8
+Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1204,11 +1485,20 @@ AutomaticScaling F1, F2, F4, F4_1G
 
     <dt class="property-optional"
             title="Optional">
+        <span>Manual<wbr>Scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionmanualscaling">Standard<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling</a></span>
+    </dt>
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier for this object. Format specified above.
+    <dd>{{% md %}}Name of the library. Example "django".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1285,6 +1575,24 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 
     <dt class="property-optional"
             title="Optional">
+        <span>automatic<wbr>Scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionautomaticscaling">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling</a></span>
+    </dt>
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>basic<wbr>Scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionbasicscaling">Standard<wbr>App<wbr>Version<wbr>Basic<wbr>Scaling</a></span>
+    </dt>
+    <dd>{{% md %}}Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>delete<wbr>Service<wbr>On<wbr>Destroy</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
@@ -1336,8 +1644,9 @@ The first matching URL handles the request and other request handlers are not at
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Instance class that is used to run this version. Valid values are
-AutomaticScaling F1, F2, F4, F4_1G
-(Only AutomaticScaling is supported at the moment)
+AutomaticScaling: F1, F2, F4, F4_1G
+BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8
+Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1351,11 +1660,20 @@ AutomaticScaling F1, F2, F4, F4_1G
 
     <dt class="property-optional"
             title="Optional">
+        <span>manual<wbr>Scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionmanualscaling">Standard<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling</a></span>
+    </dt>
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier for this object. Format specified above.
+    <dd>{{% md %}}Name of the library. Example "django".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1432,6 +1750,24 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 
     <dt class="property-optional"
             title="Optional">
+        <span>automatic_<wbr>scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionautomaticscaling">Dict[Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling]</a></span>
+    </dt>
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>basic_<wbr>scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionbasicscaling">Dict[Standard<wbr>App<wbr>Version<wbr>Basic<wbr>Scaling]</a></span>
+    </dt>
+    <dd>{{% md %}}Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>delete_<wbr>service_<wbr>on_<wbr>destroy</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1483,8 +1819,9 @@ The first matching URL handles the request and other request handlers are not at
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Instance class that is used to run this version. Valid values are
-AutomaticScaling F1, F2, F4, F4_1G
-(Only AutomaticScaling is supported at the moment)
+AutomaticScaling: F1, F2, F4, F4_1G
+BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8
+Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1498,11 +1835,20 @@ AutomaticScaling F1, F2, F4, F4_1G
 
     <dt class="property-optional"
             title="Optional">
+        <span>manual_<wbr>scaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionmanualscaling">Dict[Standard<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling]</a></span>
+    </dt>
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The identifier for this object. Format specified above.
+    <dd>{{% md %}}Name of the library. Example "django".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1583,6 +1929,592 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 
 
 ## Supporting Types
+
+
+<h4 id="standardappversionautomaticscaling">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionAutomaticScaling">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#StandardAppVersionAutomaticScaling">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#StandardAppVersionAutomaticScalingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#StandardAppVersionAutomaticScalingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.StandardAppVersionAutomaticScalingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.StandardAppVersionAutomaticScaling.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Concurrent<wbr>Requests</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
+Defaults to a runtime-specific value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Idle<wbr>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of idle instances that should be maintained for this version.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Pending<wbr>Latency</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Min<wbr>Idle<wbr>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Min<wbr>Pending<wbr>Latency</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Standard<wbr>Scheduler<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionautomaticscalingstandardschedulersettings">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Standard<wbr>Scheduler<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Scheduler settings for standard environment.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Concurrent<wbr>Requests</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
+Defaults to a runtime-specific value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Idle<wbr>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of idle instances that should be maintained for this version.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Pending<wbr>Latency</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Min<wbr>Idle<wbr>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Min<wbr>Pending<wbr>Latency</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Standard<wbr>Scheduler<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionautomaticscalingstandardschedulersettings">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Standard<wbr>Scheduler<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Scheduler settings for standard environment.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Concurrent<wbr>Requests</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
+Defaults to a runtime-specific value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Idle<wbr>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of idle instances that should be maintained for this version.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Pending<wbr>Latency</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>min<wbr>Idle<wbr>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>min<wbr>Pending<wbr>Latency</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>standard<wbr>Scheduler<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionautomaticscalingstandardschedulersettings">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Standard<wbr>Scheduler<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Scheduler settings for standard environment.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Concurrent<wbr>Requests</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
+Defaults to a runtime-specific value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Idle<wbr>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of idle instances that should be maintained for this version.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Pending<wbr>Latency</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>min<wbr>Idle<wbr>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>min<wbr>Pending<wbr>Latency</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>standard<wbr>Scheduler<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#standardappversionautomaticscalingstandardschedulersettings">Dict[Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Standard<wbr>Scheduler<wbr>Settings]</a></span>
+    </dt>
+    <dd>{{% md %}}Scheduler settings for standard environment.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="standardappversionautomaticscalingstandardschedulersettings">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Standard<wbr>Scheduler<wbr>Settings</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionAutomaticScalingStandardSchedulerSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#StandardAppVersionAutomaticScalingStandardSchedulerSettings">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#StandardAppVersionAutomaticScalingStandardSchedulerSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#StandardAppVersionAutomaticScalingStandardSchedulerSettingsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.StandardAppVersionAutomaticScalingStandardSchedulerSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.StandardAppVersionAutomaticScalingStandardSchedulerSettings.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Min<wbr>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum number of instances to run for this version. Set to zero to disable minInstances configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Target<wbr>Cpu<wbr>Utilization</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Target CPU utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Target<wbr>Throughput<wbr>Utilization</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Target throughput utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Min<wbr>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum number of instances to run for this version. Set to zero to disable minInstances configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Target<wbr>Cpu<wbr>Utilization</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Target CPU utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Target<wbr>Throughput<wbr>Utilization</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Target throughput utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>min<wbr>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum number of instances to run for this version. Set to zero to disable minInstances configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>target<wbr>Cpu<wbr>Utilization</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Target CPU utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>target<wbr>Throughput<wbr>Utilization</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Target throughput utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max_<wbr>instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>min<wbr>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum number of instances to run for this version. Set to zero to disable minInstances configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>target<wbr>Cpu<wbr>Utilization</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Target CPU utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>target<wbr>Throughput<wbr>Utilization</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Target throughput utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="standardappversionbasicscaling">Standard<wbr>App<wbr>Version<wbr>Basic<wbr>Scaling</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionBasicScaling">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#StandardAppVersionBasicScaling">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#StandardAppVersionBasicScalingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#StandardAppVersionBasicScalingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.StandardAppVersionBasicScalingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.StandardAppVersionBasicScaling.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Max<wbr>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Idle<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Duration of time after the last request that an instance must wait before the instance is shut down.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Max<wbr>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Idle<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Duration of time after the last request that an instance must wait before the instance is shut down.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>max<wbr>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>idle<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Duration of time after the last request that an instance must wait before the instance is shut down.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>max_<wbr>instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>idle<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Duration of time after the last request that an instance must wait before the instance is shut down.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment</h4>
@@ -1731,7 +2663,7 @@ All files must be readable using the credentials supplied with this call.  Struc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier for this object. Format specified above.
+    <dd>{{% md %}}Name of the library. Example "django".
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1765,7 +2697,7 @@ All files must be readable using the credentials supplied with this call.  Struc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier for this object. Format specified above.
+    <dd>{{% md %}}Name of the library. Example "django".
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1799,7 +2731,7 @@ All files must be readable using the credentials supplied with this call.  Struc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier for this object. Format specified above.
+    <dd>{{% md %}}Name of the library. Example "django".
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1833,7 +2765,7 @@ All files must be readable using the credentials supplied with this call.  Struc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The identifier for this object. Format specified above.
+    <dd>{{% md %}}Name of the library. Example "django".
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2783,7 +3715,7 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier for this object. Format specified above.
+    <dd>{{% md %}}Name of the library. Example "django".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2808,7 +3740,7 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier for this object. Format specified above.
+    <dd>{{% md %}}Name of the library. Example "django".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2833,7 +3765,7 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier for this object. Format specified above.
+    <dd>{{% md %}}Name of the library. Example "django".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2858,7 +3790,7 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The identifier for this object. Format specified above.
+    <dd>{{% md %}}Name of the library. Example "django".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2868,6 +3800,96 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Version of the library to select, or "latest".
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="standardappversionmanualscaling">Standard<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionManualScaling">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#StandardAppVersionManualScaling">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#StandardAppVersionManualScalingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#StandardAppVersionManualScalingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.StandardAppVersionManualScalingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.StandardAppVersionManualScaling.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of instances to assign to the service at the start.
+**Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manual_scaling"[0].instances]` to prevent drift detection.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of instances to assign to the service at the start.
+**Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manual_scaling"[0].instances]` to prevent drift detection.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of instances to assign to the service at the start.
+**Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manual_scaling"[0].instances]` to prevent drift detection.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Number of instances to assign to the service at the start.
+**Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manual_scaling"[0].instances]` to prevent drift detection.
 {{% /md %}}</dd>
 
 </dl>

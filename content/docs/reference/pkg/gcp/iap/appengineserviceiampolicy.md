@@ -22,6 +22,83 @@ Three different resources help you manage your IAM policy for Identity-Aware Pro
 
 
 
+## google\_iap\_app\_engine\_service\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/iap.httpsResourceAccessor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const policy = new gcp.iap.AppEngineServiceIamPolicy("policy", {
+    project: google_app_engine_standard_app_version.version.project,
+    appId: google_app_engine_standard_app_version.version.project,
+    service: google_app_engine_standard_app_version.version.service,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/iap.httpsResourceAccessor",
+    "members": ["user:jane@example.com"],
+}])
+policy = gcp.iap.AppEngineServiceIamPolicy("policy",
+    project=google_app_engine_standard_app_version["version"]["project"],
+    app_id=google_app_engine_standard_app_version["version"]["project"],
+    service=google_app_engine_standard_app_version["version"]["service"],
+    policy_data=admin.policy_data)
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/iap.httpsResourceAccessor",
+        members: ["user:jane@example.com"],
+        condition: {
+            title: "expires_after_2019_12_31",
+            description: "Expiring at midnight of 2019-12-31",
+            expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        },
+    }],
+});
+const policy = new gcp.iap.AppEngineServiceIamPolicy("policy", {
+    project: google_app_engine_standard_app_version.version.project,
+    appId: google_app_engine_standard_app_version.version.project,
+    service: google_app_engine_standard_app_version.version.service,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/iap.httpsResourceAccessor",
+    "members": ["user:jane@example.com"],
+    "condition": {
+        "title": "expires_after_2019_12_31",
+        "description": "Expiring at midnight of 2019-12-31",
+        "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    },
+}])
+policy = gcp.iap.AppEngineServiceIamPolicy("policy",
+    project=google_app_engine_standard_app_version["version"]["project"],
+    app_id=google_app_engine_standard_app_version["version"]["project"],
+    service=google_app_engine_standard_app_version["version"]["service"],
+    policy_data=admin.policy_data)
+```
 ## google\_iap\_app\_engine\_service\_iam\_binding
 
 ```typescript
@@ -35,6 +112,17 @@ const binding = new gcp.iap.AppEngineServiceIamBinding("binding", {
     role: "roles/iap.httpsResourceAccessor",
     service: google_app_engine_standard_app_version_version.service,
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+binding = gcp.iap.AppEngineServiceIamBinding("binding",
+    app_id=google_app_engine_standard_app_version["version"]["project"],
+    members=["user:jane@example.com"],
+    project=google_app_engine_standard_app_version["version"]["project"],
+    role="roles/iap.httpsResourceAccessor",
+    service=google_app_engine_standard_app_version["version"]["service"])
 ```
 
 With IAM Conditions:
@@ -55,6 +143,22 @@ const binding = new gcp.iap.AppEngineServiceIamBinding("binding", {
     role: "roles/iap.httpsResourceAccessor",
     service: google_app_engine_standard_app_version_version.service,
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+binding = gcp.iap.AppEngineServiceIamBinding("binding",
+    app_id=google_app_engine_standard_app_version["version"]["project"],
+    condition={
+        "description": "Expiring at midnight of 2019-12-31",
+        "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        "title": "expires_after_2019_12_31",
+    },
+    members=["user:jane@example.com"],
+    project=google_app_engine_standard_app_version["version"]["project"],
+    role="roles/iap.httpsResourceAccessor",
+    service=google_app_engine_standard_app_version["version"]["service"])
 ```
 ## google\_iap\_app\_engine\_service\_iam\_member
 
@@ -70,6 +174,17 @@ const member = new gcp.iap.AppEngineServiceIamMember("member", {
     service: google_app_engine_standard_app_version_version.service,
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+member = gcp.iap.AppEngineServiceIamMember("member",
+    app_id=google_app_engine_standard_app_version["version"]["project"],
+    member="user:jane@example.com",
+    project=google_app_engine_standard_app_version["version"]["project"],
+    role="roles/iap.httpsResourceAccessor",
+    service=google_app_engine_standard_app_version["version"]["service"])
+```
 
 With IAM Conditions:
 
@@ -89,6 +204,22 @@ const member = new gcp.iap.AppEngineServiceIamMember("member", {
     role: "roles/iap.httpsResourceAccessor",
     service: google_app_engine_standard_app_version_version.service,
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+member = gcp.iap.AppEngineServiceIamMember("member",
+    app_id=google_app_engine_standard_app_version["version"]["project"],
+    condition={
+        "description": "Expiring at midnight of 2019-12-31",
+        "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        "title": "expires_after_2019_12_31",
+    },
+    member="user:jane@example.com",
+    project=google_app_engine_standard_app_version["version"]["project"],
+    role="roles/iap.httpsResourceAccessor",
+    service=google_app_engine_standard_app_version["version"]["service"])
 ```
 
 

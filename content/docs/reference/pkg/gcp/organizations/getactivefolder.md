@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+department1 = gcp.organizations.get_active_folder(display_name="Department 1",
+    parent="organizations/1234567")
+```
 {{% /example %}}
 
 {{% example typescript %}}

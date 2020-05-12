@@ -29,7 +29,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_ssl_policy = gcp.compute.get_ssl_policy(name="production-ssl-policy")
+```
 {{% /example %}}
 
 {{% example typescript %}}

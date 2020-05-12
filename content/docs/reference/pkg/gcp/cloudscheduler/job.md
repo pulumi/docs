@@ -42,6 +42,20 @@ const job = new gcp.cloudscheduler.Job("job", {
     timeZone: "America/New_York",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+job = gcp.cloudscheduler.Job("job",
+    attempt_deadline="320s",
+    description="test http job",
+    http_target={
+        "httpMethod": "POST",
+        "uri": "https://example.com/ping",
+    },
+    schedule="*/8 * * * *",
+    time_zone="America/New_York")
+```
 ## Example Usage - Scheduler Job App Engine
 
 
@@ -64,6 +78,105 @@ const job = new gcp.cloudscheduler.Job("job", {
     schedule: "*/4 * * * *",
     timeZone: "Europe/London",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+job = gcp.cloudscheduler.Job("job",
+    app_engine_http_target={
+        "appEngineRouting": {
+            "instance": "my-instance-001",
+            "service": "web",
+            "version": "prod",
+        },
+        "httpMethod": "POST",
+        "relativeUri": "/ping",
+    },
+    attempt_deadline="320s",
+    description="test app engine job",
+    schedule="*/4 * * * *",
+    time_zone="Europe/London")
+```
+## Example Usage - Scheduler Job Oauth
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default = gcp.compute.getDefaultServiceAccount({});
+const job = new gcp.cloudscheduler.Job("job", {
+    description: "test http job",
+    schedule: "*/8 * * * *",
+    timeZone: "America/New_York",
+    attemptDeadline: "320s",
+    http_target: {
+        httpMethod: "GET",
+        uri: "https://cloudscheduler.googleapis.com/v1/projects/my-project-name/locations/us-west1/jobs",
+        oauth_token: {
+            serviceAccountEmail: default.then(_default => _default.email),
+        },
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.get_default_service_account()
+job = gcp.cloudscheduler.Job("job",
+    description="test http job",
+    schedule="*/8 * * * *",
+    time_zone="America/New_York",
+    attempt_deadline="320s",
+    http_target={
+        "httpMethod": "GET",
+        "uri": "https://cloudscheduler.googleapis.com/v1/projects/my-project-name/locations/us-west1/jobs",
+        "oauth_token": {
+            "serviceAccountEmail": default.email,
+        },
+    })
+```
+## Example Usage - Scheduler Job Oidc
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default = gcp.compute.getDefaultServiceAccount({});
+const job = new gcp.cloudscheduler.Job("job", {
+    description: "test http job",
+    schedule: "*/8 * * * *",
+    timeZone: "America/New_York",
+    attemptDeadline: "320s",
+    http_target: {
+        httpMethod: "GET",
+        uri: "https://example.com/ping",
+        oidc_token: {
+            serviceAccountEmail: default.then(_default => _default.email),
+        },
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.get_default_service_account()
+job = gcp.cloudscheduler.Job("job",
+    description="test http job",
+    schedule="*/8 * * * *",
+    time_zone="America/New_York",
+    attempt_deadline="320s",
+    http_target={
+        "httpMethod": "GET",
+        "uri": "https://example.com/ping",
+        "oidc_token": {
+            "serviceAccountEmail": default.email,
+        },
+    })
 ```
 
 

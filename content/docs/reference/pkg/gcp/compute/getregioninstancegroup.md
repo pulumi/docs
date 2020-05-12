@@ -21,6 +21,12 @@ const group = pulumi.output(gcp.compute.getRegionInstanceGroup({
     name: "instance-group-name",
 }, { async: true }));
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+group = gcp.compute.get_region_instance_group(name="instance-group-name")
+```
 
 The most common use of this datasource will be to fetch information about the instances inside regional managed instance groups, for instance:
 

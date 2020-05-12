@@ -32,6 +32,16 @@ const idpConfig = new gcp.identityplatform.DefaultSupportedIdpConfig("idp_config
     idpId: "playgames.google.com",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+idp_config = gcp.identityplatform.DefaultSupportedIdpConfig("idpConfig",
+    client_id="client-id",
+    client_secret="secret",
+    enabled=True,
+    idp_id="playgames.google.com")
+```
 
 
 

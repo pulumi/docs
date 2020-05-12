@@ -14,6 +14,27 @@ Retrieve information about a set of projects based on a filter. See the
 [REST API](https://cloud.google.com/resource-manager/reference/rest/v1/projects/list)
 for more details.
 
+## Example Usage - searching for projects about to be deleted in an org
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my-org-projects = gcp.projects.getProject({
+    filter: "parent.id:012345678910 lifecycleState:DELETE_REQUESTED",
+});
+const deletion-candidate = my-org-projects.then(my_org_projects => gcp.organizations.getProject({
+    projectId: my_org_projects.projects[0].projectId,
+}));
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_org_projects = gcp.projects.get_project(filter="parent.id:012345678910 lifecycleState:DELETE_REQUESTED")
+deletion_candidate = gcp.organizations.get_project(project_id=my_org_projects.projects[0]["project_id"])
+```
+
 
 
 ## Using GetProject {#using}

@@ -13,9 +13,62 @@ meta_desc: "Explore the IAMPolicy resource of the folder module, including examp
 Allows creation and management of the IAM policy for an existing Google Cloud
 Platform folder.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+department1 = gcp.organizations.Folder("department1",
+    display_name="Department 1",
+    parent="organizations/1234567")
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/editor",
+    "members": ["user:jane@example.com"],
+}])
+folder_admin_policy = gcp.folder.IAMPolicy("folderAdminPolicy",
+    folder=department1.name,
+    policy_data=admin.policy_data)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const department1 = new gcp.organizations.Folder("department1", {
+    displayName: "Department 1",
+    parent: "organizations/1234567",
+});
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const folderAdminPolicy = new gcp.folder.IAMPolicy("folderAdminPolicy", {
+    folder: department1.name,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IAMPolicy Resource {#create}

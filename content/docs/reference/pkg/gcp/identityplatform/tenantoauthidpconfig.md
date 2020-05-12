@@ -18,6 +18,39 @@ the marketplace prior to using this resource.
 
 
 
+## Example Usage - Identity Platform Tenant Oauth Idp Config Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const tenant = new gcp.identityplatform.Tenant("tenant", {displayName: "tenant"});
+const tenantOauthIdpConfig = new gcp.identityplatform.TenantOauthIdpConfig("tenantOauthIdpConfig", {
+    tenant: tenant.name,
+    displayName: "Display Name",
+    clientId: "client-id",
+    issuer: "issuer",
+    enabled: true,
+    clientSecret: "secret",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+tenant = gcp.identityplatform.Tenant("tenant", display_name="tenant")
+tenant_oauth_idp_config = gcp.identityplatform.TenantOauthIdpConfig("tenantOauthIdpConfig",
+    tenant=tenant.name,
+    display_name="Display Name",
+    client_id="client-id",
+    issuer="issuer",
+    enabled=True,
+    client_secret="secret")
+```
+
+
+
 ## Create a TenantOauthIdpConfig Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

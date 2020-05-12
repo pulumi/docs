@@ -34,7 +34,7 @@ const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
                 osConstraints: [{
                     osType: "DESKTOP_CHROME_OS",
                 }],
-                requireScreenLock: false,
+                requireScreenLock: true,
             },
             regions: [
                 "CH",
@@ -50,6 +50,32 @@ const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy",
     parent: "organizations/123456789",
     title: "my policy",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+access_level = gcp.accesscontextmanager.AccessLevel("access-level",
+    basic={
+        "conditions": [{
+            "devicePolicy": {
+                "osConstraints": [{
+                    "osType": "DESKTOP_CHROME_OS",
+                }],
+                "requireScreenLock": True,
+            },
+            "regions": [
+                "CH",
+                "IT",
+                "US",
+            ],
+        }],
+    },
+    parent=f"accessPolicies/{google_access_context_manager_access_policy['test-access']['name']}",
+    title="chromeos_no_lock")
+access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
+    parent="organizations/123456789",
+    title="my policy")
 ```
 
 
@@ -917,7 +943,7 @@ Format: accessPolicies/{policy_id}
 is granted this AccessLevel. If AND is used, each Condition in
 conditions must be satisfied for the AccessLevel to be applied. If
 OR is used, at least one Condition in conditions must be satisfied
-for the AccessLevel to be applied. Defaults to AND if unspecified.
+for the AccessLevel to be applied.
 {{% /md %}}</dd>
 
 </dl>
@@ -946,7 +972,7 @@ for the AccessLevel to be applied. Defaults to AND if unspecified.
 is granted this AccessLevel. If AND is used, each Condition in
 conditions must be satisfied for the AccessLevel to be applied. If
 OR is used, at least one Condition in conditions must be satisfied
-for the AccessLevel to be applied. Defaults to AND if unspecified.
+for the AccessLevel to be applied.
 {{% /md %}}</dd>
 
 </dl>
@@ -975,7 +1001,7 @@ for the AccessLevel to be applied. Defaults to AND if unspecified.
 is granted this AccessLevel. If AND is used, each Condition in
 conditions must be satisfied for the AccessLevel to be applied. If
 OR is used, at least one Condition in conditions must be satisfied
-for the AccessLevel to be applied. Defaults to AND if unspecified.
+for the AccessLevel to be applied.
 {{% /md %}}</dd>
 
 </dl>
@@ -1004,7 +1030,7 @@ for the AccessLevel to be applied. Defaults to AND if unspecified.
 is granted this AccessLevel. If AND is used, each Condition in
 conditions must be satisfied for the AccessLevel to be applied. If
 OR is used, at least one Condition in conditions must be satisfied
-for the AccessLevel to be applied. Defaults to AND if unspecified.
+for the AccessLevel to be applied.
 {{% /md %}}</dd>
 
 </dl>

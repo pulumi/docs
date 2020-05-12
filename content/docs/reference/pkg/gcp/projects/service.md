@@ -31,7 +31,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+project = gcp.projects.Service("project",
+    disable_dependent_services=True,
+    project="your-project-id",
+    service="iam.googleapis.com")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -18,6 +18,31 @@ To get more information about Realm, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/game-servers/docs)
 
+## Example Usage - Game Service Realm Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default = new gcp.gameservices.Realm("default", {
+    realmId: "tf-test-realm",
+    timeZone: "EST",
+    location: "global",
+    description: "one of the nine",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.gameservices.Realm("default",
+    realm_id="tf-test-realm",
+    time_zone="EST",
+    location="global",
+    description="one of the nine")
+```
+
 
 
 ## Create a Realm Resource {#create}

@@ -38,6 +38,18 @@ const peer = new gcp.compute.RouterPeer("peer", {
     router: "my-router",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+peer = gcp.compute.RouterPeer("peer",
+    advertised_route_priority=100,
+    interface="interface-1",
+    peer_asn=65513,
+    peer_ip_address="169.254.1.2",
+    region="us-central1",
+    router="my-router")
+```
 
 
 

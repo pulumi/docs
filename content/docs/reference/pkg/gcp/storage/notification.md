@@ -25,9 +25,80 @@ for an example of enabling notifications by granting the correct IAM permission.
 >**NOTE**: This resource can affect your storage IAM policy. If you are using this in the same config as your storage IAM policy resources, consider
 making this resource dependent on those IAM resources via `depends_on`. This will safeguard against errors due to IAM race conditions.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+gcs_account = gcp.storage.get_project_service_account()
+topic = gcp.pubsub.Topic("topic")
+binding = gcp.pubsub.TopicIAMBinding("binding",
+    topic=topic.id,
+    role="roles/pubsub.publisher",
+    members=[f"serviceAccount:{gcs_account.email_address}"])
+# End enabling notifications
+bucket = gcp.storage.Bucket("bucket")
+notification = gcp.storage.Notification("notification",
+    bucket=bucket.name,
+    payload_format="JSON_API_V1",
+    topic=topic.id,
+    event_types=[
+        "OBJECT_FINALIZE",
+        "OBJECT_METADATA_UPDATE",
+    ],
+    custom_attributes={
+        "new-attribute": "new-attribute-value",
+    })
+# Enable notifications by giving the correct IAM permission to the unique service account.
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const gcsAccount = gcp.storage.getProjectServiceAccount({});
+const topic = new gcp.pubsub.Topic("topic", {});
+const binding = new gcp.pubsub.TopicIAMBinding("binding", {
+    topic: topic.id,
+    role: "roles/pubsub.publisher",
+    members: [gcsAccount.then(gcsAccount => `serviceAccount:${gcsAccount.emailAddress}`)],
+});
+// End enabling notifications
+const bucket = new gcp.storage.Bucket("bucket", {});
+const notification = new gcp.storage.Notification("notification", {
+    bucket: bucket.name,
+    payloadFormat: "JSON_API_V1",
+    topic: topic.id,
+    eventTypes: [
+        "OBJECT_FINALIZE",
+        "OBJECT_METADATA_UPDATE",
+    ],
+    customAttributes: {
+        "new-attribute": "new-attribute-value",
+    },
+});
+// Enable notifications by giving the correct IAM permission to the unique service account.
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Notification Resource {#create}

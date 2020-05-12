@@ -19,9 +19,54 @@ Manages a billing account logging sink. For more information see
 the credentials used with this provider. [IAM roles granted on a billing account](https://cloud.google.com/billing/docs/how-to/billing-access) are separate from the
 typical IAM roles granted on a project.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+log_bucket = gcp.storage.Bucket("log-bucket")
+my_sink = gcp.logging.BillingAccountSink("my-sink",
+    billing_account="ABCDEF-012345-GHIJKL",
+    destination=log_bucket.name.apply(lambda name: f"storage.googleapis.com/{name}"))
+log_writer = gcp.projects.IAMBinding("log-writer",
+    role="roles/storage.objectCreator",
+    members=[my_sink.writer_identity])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const log-bucket = new gcp.storage.Bucket("log-bucket", {});
+const my-sink = new gcp.logging.BillingAccountSink("my-sink", {
+    billingAccount: "ABCDEF-012345-GHIJKL",
+    destination: pulumi.interpolate`storage.googleapis.com/${log-bucket.name}`,
+});
+const log-writer = new gcp.projects.IAMBinding("log-writer", {
+    role: "roles/storage.objectCreator",
+    members: [my-sink.writerIdentity],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BillingAccountSink Resource {#create}
@@ -225,6 +270,9 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -283,6 +331,9 @@ write a filter.
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
@@ -343,6 +394,9 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -401,6 +455,9 @@ write a filter.
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
@@ -707,6 +764,9 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -775,6 +835,9 @@ configured `destination`.
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
@@ -845,6 +908,9 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -913,6 +979,9 @@ configured `destination`.
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>

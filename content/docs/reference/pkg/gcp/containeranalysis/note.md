@@ -34,6 +34,16 @@ const note = new gcp.containeranalysis.Note("note", {
     },
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+note = gcp.containeranalysis.Note("note", attestation_authority={
+    "hint": {
+        "humanReadableName": "Attestor Note",
+    },
+})
+```
 
 
 

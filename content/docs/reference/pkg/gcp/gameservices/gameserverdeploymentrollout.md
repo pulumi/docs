@@ -19,6 +19,88 @@ To get more information about GameServerDeploymentRollout, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/game-servers/docs)
 
+## Example Usage - Game Service Deployment Rollout Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultGameServerDeployment = new gcp.gameservices.GameServerDeployment("defaultGameServerDeployment", {
+    deploymentId: "tf-test-deployment",
+    description: "a deployment description",
+});
+const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGameServerConfig", {
+    configId: "tf-test-config",
+    deploymentId: defaultGameServerDeployment.deploymentId,
+    description: "a config description",
+    fleet_configs: [{
+        name: "some-non-guid",
+        fleetSpec: JSON.stringify({
+            replicas: 1,
+            scheduling: "Packed",
+            template: {
+                metadata: {
+                    name: "tf-test-game-server-template",
+                },
+                spec: {
+                    template: {
+                        spec: {
+                            containers: [{
+                                name: "simple-udp-server",
+                                image: "gcr.io/agones-images/udp-server:0.14",
+                            }],
+                        },
+                    },
+                },
+            },
+        }),
+    }],
+});
+const defaultGameServerDeploymentRollout = new gcp.gameservices.GameServerDeploymentRollout("defaultGameServerDeploymentRollout", {
+    deploymentId: defaultGameServerDeployment.deploymentId,
+    defaultGameServerConfig: defaultGameServerConfig.name,
+});
+```
+```python
+import pulumi
+import json
+import pulumi_gcp as gcp
+
+default_game_server_deployment = gcp.gameservices.GameServerDeployment("defaultGameServerDeployment",
+    deployment_id="tf-test-deployment",
+    description="a deployment description")
+default_game_server_config = gcp.gameservices.GameServerConfig("defaultGameServerConfig",
+    config_id="tf-test-config",
+    deployment_id=default_game_server_deployment.deployment_id,
+    description="a config description",
+    fleet_configs=[{
+        "name": "some-non-guid",
+        "fleetSpec": json.dumps({
+            "replicas": 1,
+            "scheduling": "Packed",
+            "template": {
+                "metadata": {
+                    "name": "tf-test-game-server-template",
+                },
+                "spec": {
+                    "template": {
+                        "spec": {
+                            "containers": [{
+                                "name": "simple-udp-server",
+                                "image": "gcr.io/agones-images/udp-server:0.14",
+                            }],
+                        },
+                    },
+                },
+            },
+        }),
+    }])
+default_game_server_deployment_rollout = gcp.gameservices.GameServerDeploymentRollout("defaultGameServerDeploymentRollout",
+    deployment_id=default_game_server_deployment.deployment_id,
+    default_game_server_config=default_game_server_config.name)
+```
+
 
 
 ## Create a GameServerDeploymentRollout Resource {#create}

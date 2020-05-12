@@ -20,6 +20,245 @@ https://cloud.google.com/compute/docs/load-balancing/http/
 
 
 
+## Example Usage - Global Forwarding Rule Http
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultHttpHealthCheck = new gcp.compute.HttpHealthCheck("defaultHttpHealthCheck", {
+    requestPath: "/",
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+});
+const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {
+    portName: "http",
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [defaultHttpHealthCheck.selfLink],
+});
+const defaultURLMap = new gcp.compute.URLMap("defaultURLMap", {
+    description: "a description",
+    defaultService: defaultBackendService.selfLink,
+    host_rule: [{
+        hosts: ["mysite.com"],
+        pathMatcher: "allpaths",
+    }],
+    path_matcher: [{
+        name: "allpaths",
+        defaultService: defaultBackendService.selfLink,
+        path_rule: [{
+            paths: ["/*"],
+            service: defaultBackendService.selfLink,
+        }],
+    }],
+});
+const defaultTargetHttpProxy = new gcp.compute.TargetHttpProxy("defaultTargetHttpProxy", {
+    description: "a description",
+    urlMap: defaultURLMap.selfLink,
+});
+const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaultGlobalForwardingRule", {
+    target: defaultTargetHttpProxy.selfLink,
+    portRange: "80",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_http_health_check = gcp.compute.HttpHealthCheck("defaultHttpHealthCheck",
+    request_path="/",
+    check_interval_sec=1,
+    timeout_sec=1)
+default_backend_service = gcp.compute.BackendService("defaultBackendService",
+    port_name="http",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default_http_health_check.self_link])
+default_url_map = gcp.compute.URLMap("defaultURLMap",
+    description="a description",
+    default_service=default_backend_service.self_link,
+    host_rule=[{
+        "hosts": ["mysite.com"],
+        "pathMatcher": "allpaths",
+    }],
+    path_matcher=[{
+        "name": "allpaths",
+        "defaultService": default_backend_service.self_link,
+        "path_rule": [{
+            "paths": ["/*"],
+            "service": default_backend_service.self_link,
+        }],
+    }])
+default_target_http_proxy = gcp.compute.TargetHttpProxy("defaultTargetHttpProxy",
+    description="a description",
+    url_map=default_url_map.self_link)
+default_global_forwarding_rule = gcp.compute.GlobalForwardingRule("defaultGlobalForwardingRule",
+    target=default_target_http_proxy.self_link,
+    port_range="80")
+```
+## Example Usage - Global Forwarding Rule Internal
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const debianImage = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const instanceTemplate = new gcp.compute.InstanceTemplate("instanceTemplate", {
+    machineType: "n1-standard-1",
+    network_interface: [{
+        network: "default",
+    }],
+    disk: [{
+        sourceImage: debianImage.then(debianImage => debianImage.selfLink),
+        autoDelete: true,
+        boot: true,
+    }],
+});
+const igm = new gcp.compute.InstanceGroupManager("igm", {
+    version: [{
+        instanceTemplate: instanceTemplate.selfLink,
+        name: "primary",
+    }],
+    baseInstanceName: "internal-glb",
+    zone: "us-central1-f",
+    targetSize: 1,
+});
+const defaultHealthCheck = new gcp.compute.HealthCheck("defaultHealthCheck", {
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+    tcp_health_check: {
+        port: "80",
+    },
+});
+const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {
+    portName: "http",
+    protocol: "HTTP",
+    timeoutSec: 10,
+    loadBalancingScheme: "INTERNAL_SELF_MANAGED",
+    backend: [{
+        group: igm.instanceGroup,
+        balancingMode: "RATE",
+        capacityScaler: 0.4,
+        maxRatePerInstance: 50,
+    }],
+    healthChecks: [defaultHealthCheck.selfLink],
+});
+const defaultURLMap = new gcp.compute.URLMap("defaultURLMap", {
+    description: "a description",
+    defaultService: defaultBackendService.selfLink,
+    host_rule: [{
+        hosts: ["mysite.com"],
+        pathMatcher: "allpaths",
+    }],
+    path_matcher: [{
+        name: "allpaths",
+        defaultService: defaultBackendService.selfLink,
+        path_rule: [{
+            paths: ["/*"],
+            service: defaultBackendService.selfLink,
+        }],
+    }],
+});
+const defaultTargetHttpProxy = new gcp.compute.TargetHttpProxy("defaultTargetHttpProxy", {
+    description: "a description",
+    urlMap: defaultURLMap.selfLink,
+});
+const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaultGlobalForwardingRule", {
+    target: defaultTargetHttpProxy.selfLink,
+    portRange: "80",
+    loadBalancingScheme: "INTERNAL_SELF_MANAGED",
+    ipAddress: "0.0.0.0",
+    metadata_filters: [{
+        filterMatchCriteria: "MATCH_ANY",
+        filter_labels: [{
+            name: "PLANET",
+            value: "MARS",
+        }],
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+debian_image = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+instance_template = gcp.compute.InstanceTemplate("instanceTemplate",
+    machine_type="n1-standard-1",
+    network_interface=[{
+        "network": "default",
+    }],
+    disk=[{
+        "sourceImage": debian_image.self_link,
+        "autoDelete": True,
+        "boot": True,
+    }])
+igm = gcp.compute.InstanceGroupManager("igm",
+    version=[{
+        "instanceTemplate": instance_template.self_link,
+        "name": "primary",
+    }],
+    base_instance_name="internal-glb",
+    zone="us-central1-f",
+    target_size=1)
+default_health_check = gcp.compute.HealthCheck("defaultHealthCheck",
+    check_interval_sec=1,
+    timeout_sec=1,
+    tcp_health_check={
+        "port": "80",
+    })
+default_backend_service = gcp.compute.BackendService("defaultBackendService",
+    port_name="http",
+    protocol="HTTP",
+    timeout_sec=10,
+    load_balancing_scheme="INTERNAL_SELF_MANAGED",
+    backend=[{
+        "group": igm.instance_group,
+        "balancingMode": "RATE",
+        "capacityScaler": 0.4,
+        "maxRatePerInstance": 50,
+    }],
+    health_checks=[default_health_check.self_link])
+default_url_map = gcp.compute.URLMap("defaultURLMap",
+    description="a description",
+    default_service=default_backend_service.self_link,
+    host_rule=[{
+        "hosts": ["mysite.com"],
+        "pathMatcher": "allpaths",
+    }],
+    path_matcher=[{
+        "name": "allpaths",
+        "defaultService": default_backend_service.self_link,
+        "path_rule": [{
+            "paths": ["/*"],
+            "service": default_backend_service.self_link,
+        }],
+    }])
+default_target_http_proxy = gcp.compute.TargetHttpProxy("defaultTargetHttpProxy",
+    description="a description",
+    url_map=default_url_map.self_link)
+default_global_forwarding_rule = gcp.compute.GlobalForwardingRule("defaultGlobalForwardingRule",
+    target=default_target_http_proxy.self_link,
+    port_range="80",
+    load_balancing_scheme="INTERNAL_SELF_MANAGED",
+    ip_address="0.0.0.0",
+    metadata_filters=[{
+        "filterMatchCriteria": "MATCH_ANY",
+        "filter_labels": [{
+            "name": "PLANET",
+            "value": "MARS",
+        }],
+    }])
+```
+
+
+
 ## Create a GlobalForwardingRule Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -257,8 +496,7 @@ or unnecessary diffs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP protocol to which this rule applies. Valid options are TCP,
-UDP, ESP, AH, SCTP or ICMP. When the load balancing scheme is
+    <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
 INTERNAL_SELF_MANAGED, only TCP is valid.
 {{% /md %}}</dd>
 
@@ -269,7 +507,6 @@ INTERNAL_SELF_MANAGED, only TCP is valid.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
-Valid options are IPV4 or IPV6.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -438,8 +675,7 @@ or unnecessary diffs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP protocol to which this rule applies. Valid options are TCP,
-UDP, ESP, AH, SCTP or ICMP. When the load balancing scheme is
+    <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
 INTERNAL_SELF_MANAGED, only TCP is valid.
 {{% /md %}}</dd>
 
@@ -450,7 +686,6 @@ INTERNAL_SELF_MANAGED, only TCP is valid.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
-Valid options are IPV4 or IPV6.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -619,8 +854,7 @@ or unnecessary diffs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP protocol to which this rule applies. Valid options are TCP,
-UDP, ESP, AH, SCTP or ICMP. When the load balancing scheme is
+    <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
 INTERNAL_SELF_MANAGED, only TCP is valid.
 {{% /md %}}</dd>
 
@@ -631,7 +865,6 @@ INTERNAL_SELF_MANAGED, only TCP is valid.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
-Valid options are IPV4 or IPV6.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -800,8 +1033,7 @@ or unnecessary diffs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The IP protocol to which this rule applies. Valid options are TCP,
-UDP, ESP, AH, SCTP or ICMP. When the load balancing scheme is
+    <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
 INTERNAL_SELF_MANAGED, only TCP is valid.
 {{% /md %}}</dd>
 
@@ -812,7 +1044,6 @@ INTERNAL_SELF_MANAGED, only TCP is valid.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
-Valid options are IPV4 or IPV6.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1238,8 +1469,7 @@ or unnecessary diffs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP protocol to which this rule applies. Valid options are TCP,
-UDP, ESP, AH, SCTP or ICMP. When the load balancing scheme is
+    <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
 INTERNAL_SELF_MANAGED, only TCP is valid.
 {{% /md %}}</dd>
 
@@ -1250,7 +1480,6 @@ INTERNAL_SELF_MANAGED, only TCP is valid.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
-Valid options are IPV4 or IPV6.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1437,8 +1666,7 @@ or unnecessary diffs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP protocol to which this rule applies. Valid options are TCP,
-UDP, ESP, AH, SCTP or ICMP. When the load balancing scheme is
+    <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
 INTERNAL_SELF_MANAGED, only TCP is valid.
 {{% /md %}}</dd>
 
@@ -1449,7 +1677,6 @@ INTERNAL_SELF_MANAGED, only TCP is valid.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
-Valid options are IPV4 or IPV6.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1636,8 +1863,7 @@ or unnecessary diffs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP protocol to which this rule applies. Valid options are TCP,
-UDP, ESP, AH, SCTP or ICMP. When the load balancing scheme is
+    <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
 INTERNAL_SELF_MANAGED, only TCP is valid.
 {{% /md %}}</dd>
 
@@ -1648,7 +1874,6 @@ INTERNAL_SELF_MANAGED, only TCP is valid.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
-Valid options are IPV4 or IPV6.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1835,8 +2060,7 @@ or unnecessary diffs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The IP protocol to which this rule applies. Valid options are TCP,
-UDP, ESP, AH, SCTP or ICMP. When the load balancing scheme is
+    <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
 INTERNAL_SELF_MANAGED, only TCP is valid.
 {{% /md %}}</dd>
 
@@ -1847,7 +2071,6 @@ INTERNAL_SELF_MANAGED, only TCP is valid.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
-Valid options are IPV4 or IPV6.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

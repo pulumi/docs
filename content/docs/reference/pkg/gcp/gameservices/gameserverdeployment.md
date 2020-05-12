@@ -18,6 +18,27 @@ To get more information about GameServerDeployment, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/game-servers/docs)
 
+## Example Usage - Game Service Deployment Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default = new gcp.gameservices.GameServerDeployment("default", {
+    deploymentId: "tf-test-deployment",
+    description: "a deployment description",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.gameservices.GameServerDeployment("default",
+    deployment_id="tf-test-deployment",
+    description="a deployment description")
+```
+
 
 
 ## Create a GameServerDeployment Resource {#create}

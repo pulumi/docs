@@ -52,6 +52,31 @@ const static_site = new gcp.storage.Bucket("static-site", {
     },
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+static_site = gcp.storage.Bucket("static-site",
+    bucket_policy_only=True,
+    cors=[{
+        "maxAgeSeconds": 3600,
+        "method": [
+            "GET",
+            "HEAD",
+            "PUT",
+            "POST",
+            "DELETE",
+        ],
+        "origin": ["http://image-store.com"],
+        "responseHeader": ["*"],
+    }],
+    force_destroy=True,
+    location="EU",
+    website={
+        "mainPageSuffix": "index.html",
+        "notFoundPage": "404.html",
+    })
+```
 
 ## Example Usage - Life cycle settings for storage bucket objects
 
@@ -71,6 +96,22 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
     }],
     location: "US",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+auto_expire = gcp.storage.Bucket("auto-expire",
+    force_destroy=True,
+    lifecycle_rules=[{
+        "action": {
+            "type": "Delete",
+        },
+        "condition": {
+            "age": "3",
+        },
+    }],
+    location="US")
 ```
 
 

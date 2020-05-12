@@ -20,6 +20,40 @@ Three different resources help you manage IAM policies on dataproc jobs. Each of
 
 > **Note:** `gcp.dataproc.JobIAMBinding` resources **can be** used in conjunction with `gcp.dataproc.JobIAMMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_pubsub\_subscription\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const editor = new gcp.dataproc.JobIAMPolicy("editor", {
+    project: "your-project",
+    region: "your-region",
+    jobId: "your-dataproc-job",
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/editor",
+    "members": ["user:jane@example.com"],
+}])
+editor = gcp.dataproc.JobIAMPolicy("editor",
+    project="your-project",
+    region="your-region",
+    job_id="your-dataproc-job",
+    policy_data=admin.policy_data)
+```
+
 ## google\_pubsub\_subscription\_iam\_binding
 
 ```typescript
@@ -31,6 +65,15 @@ const editor = new gcp.dataproc.JobIAMBinding("editor", {
     members: ["user:jane@example.com"],
     role: "roles/editor",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+editor = gcp.dataproc.JobIAMBinding("editor",
+    job_id="your-dataproc-job",
+    members=["user:jane@example.com"],
+    role="roles/editor")
 ```
 
 ## google\_pubsub\_subscription\_iam\_member
@@ -44,6 +87,15 @@ const editor = new gcp.dataproc.JobIAMMember("editor", {
     member: "user:jane@example.com",
     role: "roles/editor",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+editor = gcp.dataproc.JobIAMMember("editor",
+    job_id="your-dataproc-job",
+    member="user:jane@example.com",
+    role="roles/editor")
 ```
 
 

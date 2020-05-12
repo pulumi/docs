@@ -17,6 +17,86 @@ To get more information about ApplicationUrlDispatchRules, see:
 
 * [API documentation](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps#UrlDispatchRule)
 
+## Example Usage - App Engine Application Url Dispatch Rules Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bucket = new gcp.storage.Bucket("bucket", {});
+const object = new gcp.storage.BucketObject("object", {
+    bucket: bucket.name,
+    source: new pulumi.asset.FileAsset("./test-fixtures/appengine/hello-world.zip"),
+});
+const adminV3 = new gcp.appengine.StandardAppVersion("adminV3", {
+    versionId: "v3",
+    service: "admin",
+    runtime: "nodejs10",
+    entrypoint: {
+        shell: "node ./app.js",
+    },
+    deployment: {
+        zip: {
+            sourceUrl: pulumi.interpolate`https://storage.googleapis.com/${bucket.name}/${object.name}`,
+        },
+    },
+    envVariables: {
+        port: "8080",
+    },
+    noopOnDestroy: true,
+});
+const webService = new gcp.appengine.ApplicationUrlDispatchRules("webService", {dispatch_rules: [
+    {
+        domain: "*",
+        path: "/*",
+        service: "default",
+    },
+    {
+        domain: "*",
+        path: "/admin/*",
+        service: adminV3.service,
+    },
+]});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bucket = gcp.storage.Bucket("bucket")
+object = gcp.storage.BucketObject("object",
+    bucket=bucket.name,
+    source=pulumi.FileAsset("./test-fixtures/appengine/hello-world.zip"))
+admin_v3 = gcp.appengine.StandardAppVersion("adminV3",
+    version_id="v3",
+    service="admin",
+    runtime="nodejs10",
+    entrypoint={
+        "shell": "node ./app.js",
+    },
+    deployment={
+        "zip": {
+            "sourceUrl": pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
+        },
+    },
+    env_variables={
+        "port": "8080",
+    },
+    noop_on_destroy=True)
+web_service = gcp.appengine.ApplicationUrlDispatchRules("webService", dispatch_rules=[
+    {
+        "domain": "*",
+        "path": "/*",
+        "service": "default",
+    },
+    {
+        "domain": "*",
+        "path": "/admin/*",
+        "service": admin_v3.service,
+    },
+])
+```
+
 
 
 ## Create a ApplicationUrlDispatchRules Resource {#create}

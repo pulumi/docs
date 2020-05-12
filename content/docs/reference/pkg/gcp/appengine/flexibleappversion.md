@@ -25,6 +25,122 @@ To get more information about FlexibleAppVersion, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/appengine/docs/flexible)
 
+## Example Usage - App Engine Flexible App Version
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myProject = new gcp.organizations.Project("myProject", {
+    projectId: "appeng-flex",
+    orgId: "123456789",
+    billingAccount: "000000-0000000-0000000-000000",
+});
+const app = new gcp.appengine.Application("app", {
+    project: myProject.projectId,
+    locationId: "us-central",
+});
+const service = new gcp.projects.Service("service", {
+    project: myProject.projectId,
+    service: "appengineflex.googleapis.com",
+    disableDependentServices: false,
+});
+const gaeApi = new gcp.projects.IAMMember("gaeApi", {
+    project: service.project,
+    role: "roles/compute.networkUser",
+    member: pulumi.interpolate`serviceAccount:service-${myProject.number}@gae-api-prod.google.com.iam.gserviceaccount.com`,
+});
+const bucket = new gcp.storage.Bucket("bucket", {project: myProject.projectId});
+const object = new gcp.storage.BucketObject("object", {
+    bucket: bucket.name,
+    source: new pulumi.asset.FileAsset("./test-fixtures/appengine/hello-world.zip"),
+});
+const myappV1 = new gcp.appengine.FlexibleAppVersion("myappV1", {
+    versionId: "v1",
+    project: gaeApi.project,
+    service: "default",
+    runtime: "nodejs",
+    entrypoint: {
+        shell: "node ./app.js",
+    },
+    deployment: {
+        zip: {
+            sourceUrl: pulumi.interpolate`https://storage.googleapis.com/${bucket.name}/${object.name}`,
+        },
+    },
+    liveness_check: {
+        path: "/",
+    },
+    readiness_check: {
+        path: "/",
+    },
+    envVariables: {
+        port: "8080",
+    },
+    automatic_scaling: {
+        coolDownPeriod: "120s",
+        cpu_utilization: {
+            targetUtilization: 0.5,
+        },
+    },
+    noopOnDestroy: true,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_project = gcp.organizations.Project("myProject",
+    project_id="appeng-flex",
+    org_id="123456789",
+    billing_account="000000-0000000-0000000-000000")
+app = gcp.appengine.Application("app",
+    project=my_project.project_id,
+    location_id="us-central")
+service = gcp.projects.Service("service",
+    project=my_project.project_id,
+    service="appengineflex.googleapis.com",
+    disable_dependent_services=False)
+gae_api = gcp.projects.IAMMember("gaeApi",
+    project=service.project,
+    role="roles/compute.networkUser",
+    member=my_project.number.apply(lambda number: f"serviceAccount:service-{number}@gae-api-prod.google.com.iam.gserviceaccount.com"))
+bucket = gcp.storage.Bucket("bucket", project=my_project.project_id)
+object = gcp.storage.BucketObject("object",
+    bucket=bucket.name,
+    source=pulumi.FileAsset("./test-fixtures/appengine/hello-world.zip"))
+myapp_v1 = gcp.appengine.FlexibleAppVersion("myappV1",
+    version_id="v1",
+    project=gae_api.project,
+    service="default",
+    runtime="nodejs",
+    entrypoint={
+        "shell": "node ./app.js",
+    },
+    deployment={
+        "zip": {
+            "sourceUrl": pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
+        },
+    },
+    liveness_check={
+        "path": "/",
+    },
+    readiness_check={
+        "path": "/",
+    },
+    env_variables={
+        "port": "8080",
+    },
+    automatic_scaling={
+        "coolDownPeriod": "120s",
+        "cpu_utilization": {
+            "targetUtilization": 0.5,
+        },
+    },
+    noop_on_destroy=True)
+```
+
 
 
 ## Create a FlexibleAppVersion Resource {#create}
@@ -437,7 +553,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
-Defaults to SERVING.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -695,7 +810,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
-Defaults to SERVING.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -953,7 +1067,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
-Defaults to SERVING.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1211,7 +1324,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
-Defaults to SERVING.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1711,7 +1823,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
-Defaults to SERVING.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1978,7 +2089,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
-Defaults to SERVING.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2245,7 +2355,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
-Defaults to SERVING.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2512,7 +2621,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
-Defaults to SERVING.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2582,7 +2690,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Action to take when users access resources that require authentication. Defaults to "AUTH_FAIL_ACTION_REDIRECT".
+    <dd>{{% md %}}Action to take when users access resources that require authentication.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2591,7 +2699,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Level of login required to access this resource. Defaults to "LOGIN_OPTIONAL".
+    <dd>{{% md %}}Level of login required to access this resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2634,7 +2742,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Action to take when users access resources that require authentication. Defaults to "AUTH_FAIL_ACTION_REDIRECT".
+    <dd>{{% md %}}Action to take when users access resources that require authentication.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2643,7 +2751,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Level of login required to access this resource. Defaults to "LOGIN_OPTIONAL".
+    <dd>{{% md %}}Level of login required to access this resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2686,7 +2794,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Action to take when users access resources that require authentication. Defaults to "AUTH_FAIL_ACTION_REDIRECT".
+    <dd>{{% md %}}Action to take when users access resources that require authentication.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2695,7 +2803,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Level of login required to access this resource. Defaults to "LOGIN_OPTIONAL".
+    <dd>{{% md %}}Level of login required to access this resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2738,7 +2846,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Action to take when users access resources that require authentication. Defaults to "AUTH_FAIL_ACTION_REDIRECT".
+    <dd>{{% md %}}Action to take when users access resources that require authentication.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2747,7 +2855,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Level of login required to access this resource. Defaults to "LOGIN_OPTIONAL".
+    <dd>{{% md %}}Level of login required to access this resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4611,7 +4719,7 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted. Default is "FIXED".
+    <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.
 {{% /md %}}</dd>
 
 </dl>
@@ -4659,7 +4767,7 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted. Default is "FIXED".
+    <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.
 {{% /md %}}</dd>
 
 </dl>
@@ -4707,7 +4815,7 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted. Default is "FIXED".
+    <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.
 {{% /md %}}</dd>
 
 </dl>
@@ -4755,7 +4863,7 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted. Default is "FIXED".
+    <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.
 {{% /md %}}</dd>
 
 </dl>
@@ -5169,7 +5277,9 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of instances to assign to the service at the start. This number can later be altered by using the Modules API set_num_instances() function.
+    <dd>{{% md %}}Number of instances to assign to the service at the start.
+**Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manual_scaling"[0].instances]` to prevent drift detection.
 {{% /md %}}</dd>
 
 </dl>
@@ -5185,7 +5295,9 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of instances to assign to the service at the start. This number can later be altered by using the Modules API set_num_instances() function.
+    <dd>{{% md %}}Number of instances to assign to the service at the start.
+**Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manual_scaling"[0].instances]` to prevent drift detection.
 {{% /md %}}</dd>
 
 </dl>
@@ -5201,7 +5313,9 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Number of instances to assign to the service at the start. This number can later be altered by using the Modules API set_num_instances() function.
+    <dd>{{% md %}}Number of instances to assign to the service at the start.
+**Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manual_scaling"[0].instances]` to prevent drift detection.
 {{% /md %}}</dd>
 
 </dl>
@@ -5217,7 +5331,9 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Number of instances to assign to the service at the start. This number can later be altered by using the Modules API set_num_instances() function.
+    <dd>{{% md %}}Number of instances to assign to the service at the start.
+**Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manual_scaling"[0].instances]` to prevent drift detection.
 {{% /md %}}</dd>
 
 </dl>

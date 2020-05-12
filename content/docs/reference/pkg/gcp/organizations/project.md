@@ -21,9 +21,45 @@ resource must have `roles/resourcemanager.projectCreator`. See the
 doc for more information.
 
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_project = gcp.organizations.Project("myProject",
+    org_id="1234567",
+    project_id="your-project-id")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myProject = new gcp.organizations.Project("my_project", {
+    orgId: "1234567",
+    projectId: "your-project-id",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Project Resource {#create}

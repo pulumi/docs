@@ -33,6 +33,17 @@ const oauthIdpConfig = new gcp.identityplatform.OauthIdpConfig("oauth_idp_config
     issuer: "issuer",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+oauth_idp_config = gcp.identityplatform.OauthIdpConfig("oauthIdpConfig",
+    client_id="client-id",
+    client_secret="secret",
+    display_name="Display Name",
+    enabled=True,
+    issuer="issuer")
+```
 
 
 

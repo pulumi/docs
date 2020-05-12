@@ -38,7 +38,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_custom_role = gcp.organizations.IAMCustomRole("my-custom-role",
+    description="A description",
+    org_id="123456789",
+    permissions=[
+        "iam.roles.list",
+        "iam.roles.create",
+        "iam.roles.delete",
+    ],
+    role_id="myCustomRole",
+    title="My Custom Role")
+```
 {{% /example %}}
 
 {{% example typescript %}}

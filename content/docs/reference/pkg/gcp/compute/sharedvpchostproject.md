@@ -18,9 +18,60 @@ For more information, see,
 [the Project API documentation](https://cloud.google.com/compute/docs/reference/latest/projects),
 where the Shared VPC feature is referred to by its former name "XPN".
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+# A host project provides network resources to associated service projects.
+host = gcp.compute.SharedVPCHostProject("host", project="host-project-id")
+# A service project gains access to network resources provided by its
+# associated host project.
+service1 = gcp.compute.SharedVPCServiceProject("service1",
+    host_project=host.project,
+    service_project="service-project-id-1")
+service2 = gcp.compute.SharedVPCServiceProject("service2",
+    host_project=host.project,
+    service_project="service-project-id-2")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+// A host project provides network resources to associated service projects.
+const host = new gcp.compute.SharedVPCHostProject("host", {project: "host-project-id"});
+// A service project gains access to network resources provided by its
+// associated host project.
+const service1 = new gcp.compute.SharedVPCServiceProject("service1", {
+    hostProject: host.project,
+    serviceProject: "service-project-id-1",
+});
+const service2 = new gcp.compute.SharedVPCServiceProject("service2", {
+    hostProject: host.project,
+    serviceProject: "service-project-id-2",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SharedVPCHostProject Resource {#create}

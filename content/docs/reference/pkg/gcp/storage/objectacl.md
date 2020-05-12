@@ -22,9 +22,62 @@ and
 > Want fine-grained control over object ACLs? Use `gcp.storage.ObjectAccessControl` to control individual
 role entity pairs.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+image_store = gcp.storage.Bucket("image-store", location="EU")
+image = gcp.storage.BucketObject("image",
+    bucket=image_store.name,
+    source=pulumi.FileAsset("image1.jpg"))
+image_store_acl = gcp.storage.ObjectACL("image-store-acl",
+    bucket=image_store.name,
+    object=image.output_name,
+    role_entities=[
+        "OWNER:user-my.email@gmail.com",
+        "READER:group-mygroup",
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const image-store = new gcp.storage.Bucket("image-store", {location: "EU"});
+const image = new gcp.storage.BucketObject("image", {
+    bucket: image-store.name,
+    source: new pulumi.asset.FileAsset("image1.jpg"),
+});
+const image-store-acl = new gcp.storage.ObjectACL("image-store-acl", {
+    bucket: image-store.name,
+    object: image.outputName,
+    roleEntities: [
+        "OWNER:user-my.email@gmail.com",
+        "READER:group-mygroup",
+    ],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ObjectACL Resource {#create}

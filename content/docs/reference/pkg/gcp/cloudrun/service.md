@@ -53,6 +53,24 @@ const defaultService = new gcp.cloudrun.Service("default", {
     }],
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.cloudrun.Service("default",
+    location="us-central1",
+    template={
+        "spec": {
+            "containers": [{
+                "image": "gcr.io/cloudrun/hello",
+            }],
+        },
+    },
+    traffics=[{
+        "latestRevision": True,
+        "percent": 100,
+    }])
+```
 ## Example Usage - Cloud Run Service Sql
 
 
@@ -84,6 +102,86 @@ const defaultService = new gcp.cloudrun.Service("default", {
         },
     },
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.sql.DatabaseInstance("instance",
+    region="us-east1",
+    settings={
+        "tier": "db-f1-micro",
+    })
+default = gcp.cloudrun.Service("default",
+    autogenerate_revision_name=True,
+    location="us-central1",
+    template={
+        "metadata": {
+            "annotations": {
+                "autoscaling.knative.dev/maxScale": "1000",
+                "run.googleapis.com/client-name": "cloud-console",
+                "run.googleapis.com/cloudsql-instances": instance.name.apply(lambda name: f"my-project-name:us-central1:{name}"),
+            },
+        },
+        "spec": {
+            "containers": [{
+                "image": "gcr.io/cloudrun/hello",
+            }],
+        },
+    })
+```
+## Example Usage - Cloud Run Service Noauth
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default = new gcp.cloudrun.Service("default", {
+    location: "us-central1",
+    template: {
+        spec: {
+            containers: [{
+                image: "gcr.io/cloudrun/hello",
+            }],
+        },
+    },
+});
+const noauthIAMPolicy = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/run.invoker",
+        members: ["allUsers"],
+    }],
+});
+const noauthIamPolicy = new gcp.cloudrun.IamPolicy("noauthIamPolicy", {
+    location: default.location,
+    project: default.project,
+    service: default.name,
+    policyData: noauthIAMPolicy.then(noauthIAMPolicy => noauthIAMPolicy.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.cloudrun.Service("default",
+    location="us-central1",
+    template={
+        "spec": {
+            "containers": [{
+                "image": "gcr.io/cloudrun/hello",
+            }],
+        },
+    })
+noauth_iam_policy = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/run.invoker",
+    "members": ["allUsers"],
+}])
+noauth_iam_policy = gcp.cloudrun.IamPolicy("noauthIamPolicy",
+    location=default.location,
+    project=default.project,
+    service=default.name,
+    policy_data=noauth_iam_policy.policy_data)
 ```
 ## Example Usage - Cloud Run Service Multiple Environment Variables
 
@@ -117,6 +215,35 @@ const defaultService = new gcp.cloudrun.Service("default", {
         percent: 100,
     }],
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.cloudrun.Service("default",
+    autogenerate_revision_name=True,
+    location="us-central1",
+    template={
+        "spec": {
+            "containers": [{
+                "env": [
+                    {
+                        "name": "SOURCE",
+                        "value": "remote",
+                    },
+                    {
+                        "name": "TARGET",
+                        "value": "home",
+                    },
+                ],
+                "image": "gcr.io/cloudrun/hello",
+            }],
+        },
+    },
+    traffics=[{
+        "latestRevision": True,
+        "percent": 100,
+    }])
 ```
 
 
@@ -2761,7 +2888,7 @@ https://github.com/knative/serving/blob/master/docs/runtime-contract.md  Structu
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Account<wbr>Name</span>
+        <span>service_<wbr>account_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

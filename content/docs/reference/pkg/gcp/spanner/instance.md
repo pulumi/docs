@@ -36,6 +36,18 @@ const example = new gcp.spanner.Instance("example", {
     numNodes: 2,
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example = gcp.spanner.Instance("example",
+    config="regional-us-central1",
+    display_name="Test Spanner Instance",
+    labels={
+        "foo": "bar",
+    },
+    num_nodes=2)
+```
 
 
 

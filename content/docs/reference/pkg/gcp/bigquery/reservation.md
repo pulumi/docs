@@ -18,6 +18,29 @@ To get more information about Reservation, see:
 * How-to Guides
     * [Introduction to Reservations](https://cloud.google.com/bigquery/docs/reservations-intro)
 
+## Example Usage - Bigquery Reservation Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const reservation = new gcp.bigquery.Reservation("reservation", {
+    location: "asia-northeast1",
+    slotCapacity: 0,
+    ignoreIdleSlots: true,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+reservation = gcp.bigquery.Reservation("reservation",
+    location="asia-northeast1",
+    slot_capacity=0,
+    ignore_idle_slots=True)
+```
+
 
 
 ## Create a Reservation Resource {#create}

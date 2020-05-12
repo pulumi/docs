@@ -22,6 +22,94 @@ Three different resources help you manage your IAM policy for Cloud Functions Cl
 
 
 
+## google\_cloudfunctions\_function\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/viewer",
+        members: ["user:jane@example.com"],
+    }],
+});
+const policy = new gcp.cloudfunctions.FunctionIamPolicy("policy", {
+    project: google_cloudfunctions_function["function"].project,
+    region: google_cloudfunctions_function["function"].region,
+    cloudFunction: google_cloudfunctions_function["function"].name,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/viewer",
+    "members": ["user:jane@example.com"],
+}])
+policy = gcp.cloudfunctions.FunctionIamPolicy("policy",
+    project=google_cloudfunctions_function["function"]["project"],
+    region=google_cloudfunctions_function["function"]["region"],
+    cloud_function=google_cloudfunctions_function["function"]["name"],
+    policy_data=admin.policy_data)
+```
+
+## google\_cloudfunctions\_function\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const binding = new gcp.cloudfunctions.FunctionIamBinding("binding", {
+    project: google_cloudfunctions_function["function"].project,
+    region: google_cloudfunctions_function["function"].region,
+    cloudFunction: google_cloudfunctions_function["function"].name,
+    role: "roles/viewer",
+    members: ["user:jane@example.com"],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+binding = gcp.cloudfunctions.FunctionIamBinding("binding",
+    project=google_cloudfunctions_function["function"]["project"],
+    region=google_cloudfunctions_function["function"]["region"],
+    cloud_function=google_cloudfunctions_function["function"]["name"],
+    role="roles/viewer",
+    members=["user:jane@example.com"])
+```
+
+## google\_cloudfunctions\_function\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const member = new gcp.cloudfunctions.FunctionIamMember("member", {
+    project: google_cloudfunctions_function["function"].project,
+    region: google_cloudfunctions_function["function"].region,
+    cloudFunction: google_cloudfunctions_function["function"].name,
+    role: "roles/viewer",
+    member: "user:jane@example.com",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+member = gcp.cloudfunctions.FunctionIamMember("member",
+    project=google_cloudfunctions_function["function"]["project"],
+    region=google_cloudfunctions_function["function"]["region"],
+    cloud_function=google_cloudfunctions_function["function"]["name"],
+    role="roles/viewer",
+    member="user:jane@example.com")
+```
+
+
+
 ## Create a FunctionIamPolicy Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

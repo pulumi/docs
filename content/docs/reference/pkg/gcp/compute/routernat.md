@@ -19,6 +19,122 @@ To get more information about RouterNat, see:
 * How-to Guides
     * [Google Cloud Router](https://cloud.google.com/router/docs/)
 
+## Example Usage - Router Nat Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const net = new gcp.compute.Network("net", {});
+const subnet = new gcp.compute.Subnetwork("subnet", {
+    network: net.selfLink,
+    ipCidrRange: "10.0.0.0/16",
+    region: "us-central1",
+});
+const router = new gcp.compute.Router("router", {
+    region: subnet.region,
+    network: net.selfLink,
+    bgp: {
+        asn: 64514,
+    },
+});
+const nat = new gcp.compute.RouterNat("nat", {
+    router: router.name,
+    region: router.region,
+    natIpAllocateOption: "AUTO_ONLY",
+    sourceSubnetworkIpRangesToNat: "ALL_SUBNETWORKS_ALL_IP_RANGES",
+    log_config: {
+        enable: true,
+        filter: "ERRORS_ONLY",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+net = gcp.compute.Network("net")
+subnet = gcp.compute.Subnetwork("subnet",
+    network=net.self_link,
+    ip_cidr_range="10.0.0.0/16",
+    region="us-central1")
+router = gcp.compute.Router("router",
+    region=subnet.region,
+    network=net.self_link,
+    bgp={
+        "asn": 64514,
+    })
+nat = gcp.compute.RouterNat("nat",
+    router=router.name,
+    region=router.region,
+    nat_ip_allocate_option="AUTO_ONLY",
+    source_subnetwork_ip_ranges_to_nat="ALL_SUBNETWORKS_ALL_IP_RANGES",
+    log_config={
+        "enable": True,
+        "filter": "ERRORS_ONLY",
+    })
+```
+## Example Usage - Router Nat Manual Ips
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const net = new gcp.compute.Network("net", {});
+const subnet = new gcp.compute.Subnetwork("subnet", {
+    network: net.selfLink,
+    ipCidrRange: "10.0.0.0/16",
+    region: "us-central1",
+});
+const router = new gcp.compute.Router("router", {
+    region: subnet.region,
+    network: net.selfLink,
+});
+const address: gcp.compute.Address[];
+for (const range = {value: 0}; range.value < 2; range.value++) {
+    address.push(new gcp.compute.Address(`address-${range.value}`, {region: subnet.region}));
+}
+const natManual = new gcp.compute.RouterNat("natManual", {
+    router: router.name,
+    region: router.region,
+    natIpAllocateOption: "MANUAL_ONLY",
+    natIps: address.map(__item => __item.selfLink),
+    sourceSubnetworkIpRangesToNat: "LIST_OF_SUBNETWORKS",
+    subnetwork: [{
+        name: google_compute_subnetwork["default"].self_link,
+        sourceIpRangesToNats: ["ALL_IP_RANGES"],
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+net = gcp.compute.Network("net")
+subnet = gcp.compute.Subnetwork("subnet",
+    network=net.self_link,
+    ip_cidr_range="10.0.0.0/16",
+    region="us-central1")
+router = gcp.compute.Router("router",
+    region=subnet.region,
+    network=net.self_link)
+address = []
+for range in [{"value": i} for i in range(0, 2)]:
+    address.append(gcp.compute.Address(f"address-{range['value']}", region=subnet.region))
+nat_manual = gcp.compute.RouterNat("natManual",
+    router=router.name,
+    region=router.region,
+    nat_ip_allocate_option="MANUAL_ONLY",
+    nat_ips=[__item.self_link for __item in address],
+    source_subnetwork_ip_ranges_to_nat="LIST_OF_SUBNETWORKS",
+    subnetwork=[{
+        "name": google_compute_subnetwork["default"]["self_link"],
+        "sourceIpRangesToNats": ["ALL_IP_RANGES"],
+    }])
+```
+
 
 
 ## Create a RouterNat Resource {#create}
@@ -1712,8 +1828,7 @@ Defaults to 30s if not set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the desired filtering of logs on this NAT. Valid
-values are: `"ERRORS_ONLY"`, `"TRANSLATIONS_ONLY"`, `"ALL"`
+    <dd>{{% md %}}Specifies the desired filtering of logs on this NAT.
 {{% /md %}}</dd>
 
 </dl>
@@ -1738,8 +1853,7 @@ values are: `"ERRORS_ONLY"`, `"TRANSLATIONS_ONLY"`, `"ALL"`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the desired filtering of logs on this NAT. Valid
-values are: `"ERRORS_ONLY"`, `"TRANSLATIONS_ONLY"`, `"ALL"`
+    <dd>{{% md %}}Specifies the desired filtering of logs on this NAT.
 {{% /md %}}</dd>
 
 </dl>
@@ -1764,8 +1878,7 @@ values are: `"ERRORS_ONLY"`, `"TRANSLATIONS_ONLY"`, `"ALL"`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the desired filtering of logs on this NAT. Valid
-values are: `"ERRORS_ONLY"`, `"TRANSLATIONS_ONLY"`, `"ALL"`
+    <dd>{{% md %}}Specifies the desired filtering of logs on this NAT.
 {{% /md %}}</dd>
 
 </dl>
@@ -1790,8 +1903,7 @@ values are: `"ERRORS_ONLY"`, `"TRANSLATIONS_ONLY"`, `"ALL"`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the desired filtering of logs on this NAT. Valid
-values are: `"ERRORS_ONLY"`, `"TRANSLATIONS_ONLY"`, `"ALL"`
+    <dd>{{% md %}}Specifies the desired filtering of logs on this NAT.
 {{% /md %}}</dd>
 
 </dl>

@@ -30,6 +30,53 @@ To get more information about Snapshot, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/disks/create-snapshots)
 
+> **Warning:** All arguments including `snapshot_encryption_key.raw_key` and `source_disk_encryption_key.raw_key` will be stored in the raw
+state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
+
+## Example Usage - Snapshot Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const debian = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const persistent = new gcp.compute.Disk("persistent", {
+    image: debian.then(debian => debian.selfLink),
+    size: 10,
+    type: "pd-ssd",
+    zone: "us-central1-a",
+});
+const snapshot = new gcp.compute.Snapshot("snapshot", {
+    sourceDisk: persistent.name,
+    zone: "us-central1-a",
+    labels: {
+        my_label: "value",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+debian = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+persistent = gcp.compute.Disk("persistent",
+    image=debian.self_link,
+    size=10,
+    type="pd-ssd",
+    zone="us-central1-a")
+snapshot = gcp.compute.Snapshot("snapshot",
+    source_disk=persistent.name,
+    zone="us-central1-a",
+    labels={
+        "my_label": "value",
+    })
+```
+
 
 
 ## Create a Snapshot Resource {#create}
@@ -1747,7 +1794,7 @@ snapshot creation/deletion.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.
+RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1775,7 +1822,7 @@ encryption key that protects this resource.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.
+RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1803,7 +1850,7 @@ encryption key that protects this resource.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.
+RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1831,7 +1878,7 @@ encryption key that protects this resource.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.
+RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1877,7 +1924,7 @@ encryption key that protects this resource.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.
+RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -1894,7 +1941,7 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.
+RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -1911,7 +1958,7 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.
+RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -1928,7 +1975,7 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.
+RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>

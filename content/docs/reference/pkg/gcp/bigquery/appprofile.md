@@ -14,6 +14,87 @@ App profile is a configuration object describing how Cloud Bigtable should treat
 
 
 
+## Example Usage - Bigtable App Profile Multicluster
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.bigtable.Instance("instance", {cluster: [{
+    clusterId: "bt-instance",
+    zone: "us-central1-b",
+    numNodes: 3,
+    storageType: "HDD",
+}]});
+const ap = new gcp.bigquery.AppProfile("ap", {
+    instance: instance.name,
+    appProfileId: "bt-profile",
+    multiClusterRoutingUseAny: true,
+    ignoreWarnings: true,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.bigtable.Instance("instance", cluster=[{
+    "clusterId": "bt-instance",
+    "zone": "us-central1-b",
+    "numNodes": 3,
+    "storageType": "HDD",
+}])
+ap = gcp.bigquery.AppProfile("ap",
+    instance=instance.name,
+    app_profile_id="bt-profile",
+    multi_cluster_routing_use_any=True,
+    ignore_warnings=True)
+```
+## Example Usage - Bigtable App Profile Singlecluster
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.bigtable.Instance("instance", {cluster: [{
+    clusterId: "bt-instance",
+    zone: "us-central1-b",
+    numNodes: 3,
+    storageType: "HDD",
+}]});
+const ap = new gcp.bigquery.AppProfile("ap", {
+    instance: instance.name,
+    appProfileId: "bt-profile",
+    single_cluster_routing: {
+        clusterId: "bt-instance",
+        allowTransactionalWrites: true,
+    },
+    ignoreWarnings: true,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.bigtable.Instance("instance", cluster=[{
+    "clusterId": "bt-instance",
+    "zone": "us-central1-b",
+    "numNodes": 3,
+    "storageType": "HDD",
+}])
+ap = gcp.bigquery.AppProfile("ap",
+    instance=instance.name,
+    app_profile_id="bt-profile",
+    single_cluster_routing={
+        "clusterId": "bt-instance",
+        "allowTransactionalWrites": True,
+    },
+    ignore_warnings=True)
+```
+
+
+
 ## Create a AppProfile Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

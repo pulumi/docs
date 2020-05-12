@@ -22,6 +22,53 @@ To get more information about NetworkPeeringRoutesConfig, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/vpc/docs/vpc-peering)
 
+## Example Usage - Network Peering Routes Config Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const networkPrimary = new gcp.compute.Network("networkPrimary", {autoCreateSubnetworks: "false"});
+const networkSecondary = new gcp.compute.Network("networkSecondary", {autoCreateSubnetworks: "false"});
+const peeringPrimary = new gcp.compute.NetworkPeering("peeringPrimary", {
+    network: networkPrimary.selfLink,
+    peerNetwork: networkSecondary.selfLink,
+    importCustomRoutes: true,
+    exportCustomRoutes: true,
+});
+const peeringPrimaryRoutes = new gcp.compute.NetworkPeeringRoutesConfig("peeringPrimaryRoutes", {
+    peering: peeringPrimary.name,
+    network: networkPrimary.name,
+    importCustomRoutes: true,
+    exportCustomRoutes: true,
+});
+const peeringSecondary = new gcp.compute.NetworkPeering("peeringSecondary", {
+    network: networkSecondary.selfLink,
+    peerNetwork: networkPrimary.selfLink,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network_primary = gcp.compute.Network("networkPrimary", auto_create_subnetworks="false")
+network_secondary = gcp.compute.Network("networkSecondary", auto_create_subnetworks="false")
+peering_primary = gcp.compute.NetworkPeering("peeringPrimary",
+    network=network_primary.self_link,
+    peer_network=network_secondary.self_link,
+    import_custom_routes=True,
+    export_custom_routes=True)
+peering_primary_routes = gcp.compute.NetworkPeeringRoutesConfig("peeringPrimaryRoutes",
+    peering=peering_primary.name,
+    network=network_primary.name,
+    import_custom_routes=True,
+    export_custom_routes=True)
+peering_secondary = gcp.compute.NetworkPeering("peeringSecondary",
+    network=network_secondary.self_link,
+    peer_network=network_primary.self_link)
+```
+
 
 
 ## Create a NetworkPeeringRoutesConfig Resource {#create}

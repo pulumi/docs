@@ -13,9 +13,56 @@ meta_desc: "Explore the GetImage function of the compute module, including examp
 Get information about a Google Compute Image. Check that your service account has the `compute.imageUser` role if you want to share [custom images](https://cloud.google.com/compute/docs/images/sharing-images-across-projects) from another project. If you want to use [public images][pubimg], do not forget to specify the dedicated project. For more information see
 [the official documentation](https://cloud.google.com/compute/docs/images) and its [API](https://cloud.google.com/compute/docs/reference/latest/images).
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_image = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+# ...
+default = gcp.compute.Instance("default", boot_disk={
+    "initialize_params": {
+        "image": my_image.self_link,
+    },
+})
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myImage = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+// ...
+const default = new gcp.compute.Instance("default", {boot_disk: {
+    initialize_params: {
+        image: myImage.then(myImage => myImage.selfLink),
+    },
+}});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetImage {#using}

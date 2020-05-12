@@ -44,6 +44,17 @@ const tcp_region_health_check = new gcp.compute.RegionHealthCheck("tcp-region-he
     timeoutSec: 1,
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+tcp_region_health_check = gcp.compute.RegionHealthCheck("tcp-region-health-check",
+    check_interval_sec=1,
+    tcp_health_check={
+        "port": "80",
+    },
+    timeout_sec=1)
+```
 ## Example Usage - Region Health Check Tcp Full
 
 
@@ -66,6 +77,24 @@ const tcp_region_health_check = new gcp.compute.RegionHealthCheck("tcp-region-he
     unhealthyThreshold: 5,
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+tcp_region_health_check = gcp.compute.RegionHealthCheck("tcp-region-health-check",
+    check_interval_sec=1,
+    description="Health check via tcp",
+    healthy_threshold=4,
+    tcp_health_check={
+        "portName": "health-check-port",
+        "portSpecification": "USE_NAMED_PORT",
+        "proxyHeader": "NONE",
+        "request": "ARE YOU HEALTHY?",
+        "response": "I AM HEALTHY",
+    },
+    timeout_sec=1,
+    unhealthy_threshold=5)
+```
 ## Example Usage - Region Health Check Ssl
 
 
@@ -80,6 +109,17 @@ const ssl_region_health_check = new gcp.compute.RegionHealthCheck("ssl-region-he
     },
     timeoutSec: 1,
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+ssl_region_health_check = gcp.compute.RegionHealthCheck("ssl-region-health-check",
+    check_interval_sec=1,
+    ssl_health_check={
+        "port": "443",
+    },
+    timeout_sec=1)
 ```
 ## Example Usage - Region Health Check Ssl Full
 
@@ -103,6 +143,24 @@ const ssl_region_health_check = new gcp.compute.RegionHealthCheck("ssl-region-he
     unhealthyThreshold: 5,
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+ssl_region_health_check = gcp.compute.RegionHealthCheck("ssl-region-health-check",
+    check_interval_sec=1,
+    description="Health check via ssl",
+    healthy_threshold=4,
+    ssl_health_check={
+        "portName": "health-check-port",
+        "portSpecification": "USE_NAMED_PORT",
+        "proxyHeader": "NONE",
+        "request": "ARE YOU HEALTHY?",
+        "response": "I AM HEALTHY",
+    },
+    timeout_sec=1,
+    unhealthy_threshold=5)
+```
 ## Example Usage - Region Health Check Http
 
 
@@ -117,6 +175,49 @@ const http_region_health_check = new gcp.compute.RegionHealthCheck("http-region-
     },
     timeoutSec: 1,
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+http_region_health_check = gcp.compute.RegionHealthCheck("http-region-health-check",
+    check_interval_sec=1,
+    http_health_check={
+        "port": "80",
+    },
+    timeout_sec=1)
+```
+## Example Usage - Region Health Check Http Logs
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const http-region-health-check = new gcp.compute.RegionHealthCheck("http-region-health-check", {
+    timeoutSec: 1,
+    checkIntervalSec: 1,
+    http_health_check: {
+        port: "80",
+    },
+    log_config: {
+        enable: true,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+http_region_health_check = gcp.compute.RegionHealthCheck("http-region-health-check",
+    timeout_sec=1,
+    check_interval_sec=1,
+    http_health_check={
+        "port": "80",
+    },
+    log_config={
+        "enable": True,
+    })
 ```
 ## Example Usage - Region Health Check Http Full
 
@@ -141,6 +242,25 @@ const http_region_health_check = new gcp.compute.RegionHealthCheck("http-region-
     unhealthyThreshold: 5,
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+http_region_health_check = gcp.compute.RegionHealthCheck("http-region-health-check",
+    check_interval_sec=1,
+    description="Health check via http",
+    healthy_threshold=4,
+    http_health_check={
+        "host": "1.2.3.4",
+        "portName": "health-check-port",
+        "portSpecification": "USE_NAMED_PORT",
+        "proxyHeader": "NONE",
+        "requestPath": "/mypath",
+        "response": "I AM HEALTHY",
+    },
+    timeout_sec=1,
+    unhealthy_threshold=5)
+```
 ## Example Usage - Region Health Check Https
 
 
@@ -155,6 +275,17 @@ const https_region_health_check = new gcp.compute.RegionHealthCheck("https-regio
     },
     timeoutSec: 1,
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+https_region_health_check = gcp.compute.RegionHealthCheck("https-region-health-check",
+    check_interval_sec=1,
+    https_health_check={
+        "port": "443",
+    },
+    timeout_sec=1)
 ```
 ## Example Usage - Region Health Check Https Full
 
@@ -179,6 +310,25 @@ const https_region_health_check = new gcp.compute.RegionHealthCheck("https-regio
     unhealthyThreshold: 5,
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+https_region_health_check = gcp.compute.RegionHealthCheck("https-region-health-check",
+    check_interval_sec=1,
+    description="Health check via https",
+    healthy_threshold=4,
+    https_health_check={
+        "host": "1.2.3.4",
+        "portName": "health-check-port",
+        "portSpecification": "USE_NAMED_PORT",
+        "proxyHeader": "NONE",
+        "requestPath": "/mypath",
+        "response": "I AM HEALTHY",
+    },
+    timeout_sec=1,
+    unhealthy_threshold=5)
+```
 ## Example Usage - Region Health Check Http2
 
 
@@ -193,6 +343,17 @@ const http2_region_health_check = new gcp.compute.RegionHealthCheck("http2-regio
     },
     timeoutSec: 1,
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+http2_region_health_check = gcp.compute.RegionHealthCheck("http2-region-health-check",
+    check_interval_sec=1,
+    http2_health_check={
+        "port": "443",
+    },
+    timeout_sec=1)
 ```
 ## Example Usage - Region Health Check Http2 Full
 
@@ -216,6 +377,25 @@ const http2_region_health_check = new gcp.compute.RegionHealthCheck("http2-regio
     timeoutSec: 1,
     unhealthyThreshold: 5,
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+http2_region_health_check = gcp.compute.RegionHealthCheck("http2-region-health-check",
+    check_interval_sec=1,
+    description="Health check via http2",
+    healthy_threshold=4,
+    http2_health_check={
+        "host": "1.2.3.4",
+        "portName": "health-check-port",
+        "portSpecification": "USE_NAMED_PORT",
+        "proxyHeader": "NONE",
+        "requestPath": "/mypath",
+        "response": "I AM HEALTHY",
+    },
+    timeout_sec=1,
+    unhealthy_threshold=5)
 ```
 
 
@@ -2072,7 +2252,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2159,7 +2339,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2246,7 +2426,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2333,7 +2513,7 @@ port_name are defined, port takes precedence.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2438,7 +2618,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2525,7 +2705,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2612,7 +2792,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2699,7 +2879,7 @@ port_name are defined, port takes precedence.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2804,7 +2984,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2891,7 +3071,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2978,7 +3158,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3065,7 +3245,7 @@ port_name are defined, port takes precedence.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3245,7 +3425,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3323,7 +3503,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3401,7 +3581,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3479,7 +3659,7 @@ port_name are defined, port takes precedence.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3575,7 +3755,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3653,7 +3833,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3731,7 +3911,7 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3809,7 +3989,7 @@ port_name are defined, port takes precedence.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
-backend, either NONE or PROXY_V1. The default is NONE.
+backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -31,7 +31,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.ProjectMetadataItem("default",
+    key="my_metadata",
+    value="my_value")
+```
 {{% /example %}}
 
 {{% example typescript %}}

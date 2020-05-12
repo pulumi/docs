@@ -30,7 +30,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_function = gcp.cloudfunctions.get_function(name="function")
+```
 {{% /example %}}
 
 {{% example typescript %}}

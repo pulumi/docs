@@ -37,7 +37,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+big_data_job = gcp.dataflow.Job("bigDataJob",
+    parameters={
+        "baz": "qux",
+        "foo": "bar",
+    },
+    temp_gcs_location="gs://my-bucket/tmp_dir",
+    template_gcs_path="gs://my-bucket/templates/template_file")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -68,7 +79,7 @@ const bigDataJob = new gcp.dataflow.Job("big_data_job", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Job</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>ip_configuration=None<span class="p">, </span>labels=None<span class="p">, </span>machine_type=None<span class="p">, </span>max_workers=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>on_delete=None<span class="p">, </span>parameters=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>service_account_email=None<span class="p">, </span>subnetwork=None<span class="p">, </span>temp_gcs_location=None<span class="p">, </span>template_gcs_path=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Job</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>additional_experiments=None<span class="p">, </span>ip_configuration=None<span class="p">, </span>labels=None<span class="p">, </span>machine_type=None<span class="p">, </span>max_workers=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>on_delete=None<span class="p">, </span>parameters=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>service_account_email=None<span class="p">, </span>subnetwork=None<span class="p">, </span>temp_gcs_location=None<span class="p">, </span>template_gcs_path=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -260,6 +271,15 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-optional"
             title="Optional">
+        <span>Additional<wbr>Experiments</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Ip<wbr>Configuration</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -400,6 +420,15 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The GCS path to the Dataflow job template.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Additional<wbr>Experiments</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -548,6 +577,15 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
 
     <dt class="property-optional"
             title="Optional">
+        <span>additional<wbr>Experiments</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>ip<wbr>Configuration</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -688,6 +726,15 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The GCS path to the Dataflow job template.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>additional_<wbr>experiments</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1007,7 +1054,7 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>ip_configuration=None<span class="p">, </span>job_id=None<span class="p">, </span>labels=None<span class="p">, </span>machine_type=None<span class="p">, </span>max_workers=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>on_delete=None<span class="p">, </span>parameters=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>service_account_email=None<span class="p">, </span>state=None<span class="p">, </span>subnetwork=None<span class="p">, </span>temp_gcs_location=None<span class="p">, </span>template_gcs_path=None<span class="p">, </span>type=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>additional_experiments=None<span class="p">, </span>ip_configuration=None<span class="p">, </span>job_id=None<span class="p">, </span>labels=None<span class="p">, </span>machine_type=None<span class="p">, </span>max_workers=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>on_delete=None<span class="p">, </span>parameters=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>service_account_email=None<span class="p">, </span>state=None<span class="p">, </span>subnetwork=None<span class="p">, </span>temp_gcs_location=None<span class="p">, </span>template_gcs_path=None<span class="p">, </span>type=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1120,6 +1167,15 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Additional<wbr>Experiments</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1294,6 +1350,15 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
 
     <dt class="property-optional"
             title="Optional">
+        <span>Additional<wbr>Experiments</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Ip<wbr>Configuration</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1465,6 +1530,15 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
 
     <dt class="property-optional"
             title="Optional">
+        <span>additional<wbr>Experiments</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>ip<wbr>Configuration</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1633,6 +1707,15 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>additional_<wbr>experiments</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

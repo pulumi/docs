@@ -31,6 +31,31 @@ To get more information about DefaultObjectAccessControl, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/storage/docs/access-control/create-manage-lists)
 
+## Example Usage - Storage Default Object Access Control Public
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bucket = new gcp.storage.Bucket("bucket", {});
+const publicRule = new gcp.storage.DefaultObjectAccessControl("publicRule", {
+    bucket: bucket.name,
+    role: "READER",
+    entity: "allUsers",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bucket = gcp.storage.Bucket("bucket")
+public_rule = gcp.storage.DefaultObjectAccessControl("publicRule",
+    bucket=bucket.name,
+    role="READER",
+    entity="allUsers")
+```
+
 
 
 ## Create a DefaultObjectAccessControl Resource {#create}

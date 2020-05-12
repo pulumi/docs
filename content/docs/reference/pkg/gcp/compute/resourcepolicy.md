@@ -33,6 +33,21 @@ const foo = new gcp.compute.ResourcePolicy("foo", {
     },
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+foo = gcp.compute.ResourcePolicy("foo",
+    region="us-central1",
+    snapshot_schedule_policy={
+        "schedule": {
+            "dailySchedule": {
+                "daysInCycle": 1,
+                "startTime": "04:00",
+            },
+        },
+    })
+```
 ## Example Usage - Resource Policy Full
 
 
@@ -63,6 +78,32 @@ const bar = new gcp.compute.ResourcePolicy("bar", {
     },
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bar = gcp.compute.ResourcePolicy("bar",
+    region="us-central1",
+    snapshot_schedule_policy={
+        "retentionPolicy": {
+            "maxRetentionDays": 10,
+            "onSourceDiskDelete": "KEEP_AUTO_SNAPSHOTS",
+        },
+        "schedule": {
+            "hourlySchedule": {
+                "hoursInCycle": 20,
+                "startTime": "23:00",
+            },
+        },
+        "snapshotProperties": {
+            "guestFlush": True,
+            "labels": {
+                "myLabel": "value",
+            },
+            "storageLocations": "us",
+        },
+    })
+```
 ## Example Usage - Resource Policy Placement Policy
 
 
@@ -71,12 +112,23 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const baz = new gcp.compute.ResourcePolicy("baz", {
-    groupPlacementPolicy: {
+    groupPlacementPolicy: [{
         collocation: "COLLOCATED",
         vmCount: 2,
-    },
+    }],
     region: "us-central1",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+baz = gcp.compute.ResourcePolicy("baz",
+    group_placement_policy=[{
+        "collocation": "COLLOCATED",
+        "vmCount": 2,
+    }],
+    region="us-central1")
 ```
 
 
@@ -1370,7 +1422,6 @@ attached.
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when
 the source disk is deleted.
-Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY
 {{% /md %}}</dd>
 
 </dl>
@@ -1397,7 +1448,6 @@ Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when
 the source disk is deleted.
-Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY
 {{% /md %}}</dd>
 
 </dl>
@@ -1424,7 +1474,6 @@ Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when
 the source disk is deleted.
-Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY
 {{% /md %}}</dd>
 
 </dl>
@@ -1451,7 +1500,6 @@ Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when
 the source disk is deleted.
-Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY
 {{% /md %}}</dd>
 
 </dl>

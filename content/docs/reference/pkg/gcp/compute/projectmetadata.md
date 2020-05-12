@@ -36,7 +36,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.ProjectMetadata("default", metadata={
+    "13": "42",
+    "fizz": "buzz",
+    "foo": "bar",
+})
+```
 {{% /example %}}
 
 {{% example typescript %}}

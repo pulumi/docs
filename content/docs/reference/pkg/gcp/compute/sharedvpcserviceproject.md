@@ -35,7 +35,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+service1 = gcp.compute.SharedVPCServiceProject("service1",
+    host_project="host-project-id",
+    service_project="service-project-id-1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

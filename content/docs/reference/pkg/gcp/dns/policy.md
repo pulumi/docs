@@ -19,6 +19,67 @@ To get more information about Policy, see:
 * How-to Guides
     * [Using DNS server policies](https://cloud.google.com/dns/zones/#using-dns-server-policies)
 
+## Example Usage - Dns Policy Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const network-1 = new gcp.compute.Network("network-1", {autoCreateSubnetworks: false});
+const network-2 = new gcp.compute.Network("network-2", {autoCreateSubnetworks: false});
+const example-policy = new gcp.dns.Policy("example-policy", {
+    enableInboundForwarding: true,
+    enableLogging: true,
+    alternative_name_server_config: {
+        target_name_servers: [
+            {
+                ipv4Address: "172.16.1.10",
+            },
+            {
+                ipv4Address: "172.16.1.20",
+            },
+        ],
+    },
+    networks: [
+        {
+            networkUrl: network-1.selfLink,
+        },
+        {
+            networkUrl: network-2.selfLink,
+        },
+    ],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network_1 = gcp.compute.Network("network-1", auto_create_subnetworks=False)
+network_2 = gcp.compute.Network("network-2", auto_create_subnetworks=False)
+example_policy = gcp.dns.Policy("example-policy",
+    enable_inbound_forwarding=True,
+    enable_logging=True,
+    alternative_name_server_config={
+        "target_name_servers": [
+            {
+                "ipv4Address": "172.16.1.10",
+            },
+            {
+                "ipv4Address": "172.16.1.20",
+            },
+        ],
+    },
+    networks=[
+        {
+            "networkUrl": network_1.self_link,
+        },
+        {
+            "networkUrl": network_2.self_link,
+        },
+    ])
+```
+
 
 
 ## Create a Policy Resource {#create}

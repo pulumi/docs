@@ -32,7 +32,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+service_account = gcp.service_account.Account("serviceAccount",
+    account_id="service_account_id",
+    display_name="Service Account")
+```
 {{% /example %}}
 
 {{% example typescript %}}

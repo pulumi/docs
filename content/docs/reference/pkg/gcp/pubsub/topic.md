@@ -32,6 +32,33 @@ const example = new gcp.pubsub.Topic("example", {
     },
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example = gcp.pubsub.Topic("example", labels={
+    "foo": "bar",
+})
+```
+## Example Usage - Pubsub Topic Cmek
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyRing = new gcp.kms.KeyRing("keyRing", {location: "global"});
+const cryptoKey = new gcp.kms.CryptoKey("cryptoKey", {keyRing: keyRing.selfLink});
+const example = new gcp.pubsub.Topic("example", {kmsKeyName: cryptoKey.selfLink});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+key_ring = gcp.kms.KeyRing("keyRing", location="global")
+crypto_key = gcp.kms.CryptoKey("cryptoKey", key_ring=key_ring.self_link)
+example = gcp.pubsub.Topic("example", kms_key_name=crypto_key.self_link)
+```
 ## Example Usage - Pubsub Topic Geo Restricted
 
 
@@ -44,6 +71,14 @@ const example = new gcp.pubsub.Topic("example", {
         allowedPersistenceRegions: ["europe-west3"],
     },
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example = gcp.pubsub.Topic("example", message_storage_policy={
+    "allowedPersistenceRegions": ["europe-west3"],
+})
 ```
 
 

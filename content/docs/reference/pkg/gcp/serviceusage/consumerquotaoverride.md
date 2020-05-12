@@ -20,6 +20,42 @@ To get more information about ConsumerQuotaOverride, see:
     * [Getting Started](https://cloud.google.com/service-usage/docs/getting-started)
     * [REST API documentation](https://cloud.google.com/service-usage/docs/reference/rest/v1beta1/services.consumerQuotaMetrics.limits.consumerOverrides)
 
+## Example Usage - Consumer Quota Override
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myProject = new gcp.organizations.Project("myProject", {
+    projectId: "quota",
+    orgId: "123456789",
+});
+const override = new gcp.serviceusage.ConsumerQuotaOverride("override", {
+    project: myProject.projectId,
+    service: "servicemanagement.googleapis.com",
+    metric: `servicemanagement.googleapis.com%2Fdefault_requests`,
+    limit: `%2Fmin%2Fproject`,
+    overrideValue: "95",
+    force: true,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_project = gcp.organizations.Project("myProject",
+    project_id="quota",
+    org_id="123456789")
+override = gcp.serviceusage.ConsumerQuotaOverride("override",
+    project=my_project.project_id,
+    service="servicemanagement.googleapis.com",
+    metric="servicemanagement.googleapis.com%2Fdefault_requests",
+    limit="%2Fmin%2Fproject",
+    override_value="95",
+    force=True)
+```
+
 
 
 ## Create a ConsumerQuotaOverride Resource {#create}

@@ -13,9 +13,48 @@ meta_desc: "Explore the GetInstanceSerialPort function of the compute module, in
 Get the serial port output from a Compute Instance. For more information see
 the official [API](https://cloud.google.com/compute/docs/instances/viewing-serial-port-output) documentation.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+serial = gcp.compute.get_instance_serial_port(instance="my-instance",
+    zone="us-central1-a",
+    port=1)
+pulumi.export("serialOut", serial.contents)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const serial = gcp.compute.getInstanceSerialPort({
+    instance: "my-instance",
+    zone: "us-central1-a",
+    port: 1,
+});
+export const serialOut = serial.then(serial => serial.contents);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetInstanceSerialPort {#using}

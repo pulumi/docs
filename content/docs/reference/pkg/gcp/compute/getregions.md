@@ -13,6 +13,35 @@ meta_desc: "Explore the GetRegions function of the compute module, including exa
 Provides access to available Google Compute regions for a given project.
 See more about [regions and zones](https://cloud.google.com/compute/docs/regions-zones/) in the upstream docs.
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+export = async () => {
+    const available = gcp.compute.getRegions({});
+    const cluster: gcp.compute.Subnetwork[];
+    for (const range = {value: 0}; range.value < await available.then(available => available.names).length; range.value++) {
+        cluster.push(new gcp.compute.Subnetwork(`cluster-${range.value}`, {
+            ipCidrRange: `10.36.${range.value}.0/24`,
+            network: "my-network",
+            region: available.then(available => available.names[range.value]),
+        }));
+    }
+}
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+available = gcp.compute.get_regions()
+cluster = []
+for range in [{"value": i} for i in range(0, len(available.names))]:
+    cluster.append(gcp.compute.Subnetwork(f"cluster-{range['value']}",
+        ip_cidr_range=f"10.36.{range['value']}.0/24",
+        network="my-network",
+        region=available.names[range["value"]]))
+```
+
 
 
 ## Using GetRegions {#using}

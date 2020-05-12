@@ -62,6 +62,43 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
     valueExtractor: "EXTRACT(jsonPayload.request)",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+logging_metric = gcp.logging.Metric("loggingMetric",
+    bucket_options={
+        "linearBuckets": {
+            "numFiniteBuckets": 3,
+            "offset": 1,
+            "width": 1,
+        },
+    },
+    filter="resource.type=gae_app AND severity>=ERROR",
+    label_extractors={
+        "mass": "EXTRACT(jsonPayload.request)",
+        "sku": "EXTRACT(jsonPayload.id)",
+    },
+    metric_descriptor={
+        "displayName": "My metric",
+        "labels": [
+            {
+                "description": "amount of matter",
+                "key": "mass",
+                "valueType": "STRING",
+            },
+            {
+                "description": "Identifying number for item",
+                "key": "sku",
+                "valueType": "INT64",
+            },
+        ],
+        "metricKind": "DELTA",
+        "unit": "1",
+        "valueType": "DISTRIBUTION",
+    },
+    value_extractor="EXTRACT(jsonPayload.request)")
+```
 ## Example Usage - Logging Metric Counter Basic
 
 
@@ -76,6 +113,17 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
         valueType: "INT64",
     },
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+logging_metric = gcp.logging.Metric("loggingMetric",
+    filter="resource.type=gae_app AND severity>=ERROR",
+    metric_descriptor={
+        "metricKind": "DELTA",
+        "valueType": "INT64",
+    })
 ```
 ## Example Usage - Logging Metric Counter Labels
 
@@ -99,6 +147,25 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
         valueType: "INT64",
     },
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+logging_metric = gcp.logging.Metric("loggingMetric",
+    filter="resource.type=gae_app AND severity>=ERROR",
+    label_extractors={
+        "mass": "EXTRACT(jsonPayload.request)",
+    },
+    metric_descriptor={
+        "labels": [{
+            "description": "amount of matter",
+            "key": "mass",
+            "valueType": "STRING",
+        }],
+        "metricKind": "DELTA",
+        "valueType": "INT64",
+    })
 ```
 
 

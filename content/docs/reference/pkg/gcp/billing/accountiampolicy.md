@@ -22,9 +22,55 @@ by use of this resource. The safest alternative is to use multiple `gcp.billing.
    `gcp.billing.AccountIamMember` or `gcp.billing.AccountIamBinding`
    or they will fight over what your policy should be.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/billing.viewer",
+    "members": ["user:jane@example.com"],
+}])
+policy = gcp.billing.AccountIamPolicy("policy",
+    billing_account_id="00AA00-000AAA-00AA0A",
+    policy_data=admin.policy_data)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/billing.viewer",
+        members: ["user:jane@example.com"],
+    }],
+});
+const policy = new gcp.billing.AccountIamPolicy("policy", {
+    billingAccountId: "00AA00-000AAA-00AA0A",
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AccountIamPolicy Resource {#create}

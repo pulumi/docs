@@ -12,9 +12,55 @@ meta_desc: "Explore the SslCert resource of the sql module, including examples, 
 
 Creates a new Google SQL SSL Cert on a Google SQL Instance. For more information, see the [official documentation](https://cloud.google.com/sql/), or the [JSON API](https://cloud.google.com/sql/docs/mysql/admin-api/v1beta4/sslCerts).
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+import pulumi_random as random
+
+db_name_suffix = random.RandomId("dbNameSuffix", byte_length=4)
+master = gcp.sql.DatabaseInstance("master", settings={
+    "tier": "db-f1-micro",
+})
+client_cert = gcp.sql.SslCert("clientCert",
+    common_name="client-name",
+    instance=master.name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * as random from "@pulumi/random";
+
+const dbNameSuffix = new random.RandomId("dbNameSuffix", {byteLength: 4});
+const master = new gcp.sql.DatabaseInstance("master", {settings: {
+    tier: "db-f1-micro",
+}});
+const clientCert = new gcp.sql.SslCert("clientCert", {
+    commonName: "client-name",
+    instance: master.name,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SslCert Resource {#create}

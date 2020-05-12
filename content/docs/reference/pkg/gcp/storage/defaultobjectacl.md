@@ -24,9 +24,53 @@ and
 > Want fine-grained control over default object ACLs? Use `gcp.storage.DefaultObjectAccessControl`
 to control individual role entity pairs.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+image_store = gcp.storage.Bucket("image-store", location="EU")
+image_store_default_acl = gcp.storage.DefaultObjectACL("image-store-default-acl",
+    bucket=image_store.name,
+    role_entities=[
+        "OWNER:user-my.email@gmail.com",
+        "READER:group-mygroup",
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const image-store = new gcp.storage.Bucket("image-store", {location: "EU"});
+const image-store-default-acl = new gcp.storage.DefaultObjectACL("image-store-default-acl", {
+    bucket: image-store.name,
+    roleEntities: [
+        "OWNER:user-my.email@gmail.com",
+        "READER:group-mygroup",
+    ],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DefaultObjectACL Resource {#create}
