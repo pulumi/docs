@@ -26,3 +26,21 @@ Explore the resources and functions of the victorops module in the SignalFx pack
 	<dd>2.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.VictorOps.html" title="Pulumi.Signalfx.VictorOps">Pulumi.Signalfx.VictorOps</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/victorops?tab=doc#" title="signalfx/victorops">signalfx/victorops</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/victorops/#" title="@pulumi/signalfx/victorops">@pulumi/signalfx/victorops</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_signalfx/victorops" title="pulumi_signalfx/victorops">pulumi_signalfx/victorops</a></dd>
+
+</dl>
+

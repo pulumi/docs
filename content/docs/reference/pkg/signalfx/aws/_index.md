@@ -28,3 +28,21 @@ Explore the resources and functions of the aws module in the SignalFx package.
 	<dd>2.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.Aws.html" title="Pulumi.Signalfx.Aws">Pulumi.Signalfx.Aws</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/aws?tab=doc#" title="signalfx/aws">signalfx/aws</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/aws/#" title="@pulumi/signalfx/aws">@pulumi/signalfx/aws</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_signalfx/aws" title="pulumi_signalfx/aws">pulumi_signalfx/aws</a></dd>
+
+</dl>
+

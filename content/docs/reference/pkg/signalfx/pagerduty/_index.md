@@ -26,3 +26,21 @@ Explore the resources and functions of the pagerduty module in the SignalFx pack
 	<dd>2.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.PagerDuty.html" title="Pulumi.Signalfx.PagerDuty">Pulumi.Signalfx.PagerDuty</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/pagerduty?tab=doc#" title="signalfx/pagerduty">signalfx/pagerduty</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/pagerduty/#" title="@pulumi/signalfx/pagerduty">@pulumi/signalfx/pagerduty</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_signalfx/pagerduty" title="pulumi_signalfx/pagerduty">pulumi_signalfx/pagerduty</a></dd>
+
+</dl>
+

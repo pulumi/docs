@@ -26,3 +26,21 @@ Explore the resources and functions of the gcp module in the SignalFx package.
 	<dd>2.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.Gcp.html" title="Pulumi.Signalfx.Gcp">Pulumi.Signalfx.Gcp</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/gcp?tab=doc#" title="signalfx/gcp">signalfx/gcp</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/gcp/#" title="@pulumi/signalfx/gcp">@pulumi/signalfx/gcp</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_signalfx/gcp" title="pulumi_signalfx/gcp">pulumi_signalfx/gcp</a></dd>
+
+</dl>
+
