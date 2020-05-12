@@ -273,7 +273,6 @@ func makeLangMap(tutorials []tutorial, include []string, exclude []string) (map[
 		"py": nil,
 		"go": nil,
 		"cs": nil,
-		"fs": nil,
 	}
 	var c int
 	for _, tut := range tutorials {
