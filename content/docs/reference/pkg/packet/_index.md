@@ -55,3 +55,21 @@ A Pulumi package for creating and managing X cloud resources.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.html" title="Pulumi.Packet">Pulumi.Packet</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#" title="packet">packet</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/packet/#" title="@pulumi/packet">@pulumi/packet</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_packet" title="pulumi_packet">pulumi_packet</a></dd>
+
+</dl>
+
