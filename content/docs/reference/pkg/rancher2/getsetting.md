@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+server_image = rancher2.get_setting(name="server-image")
+```
 {{% /example %}}
 
 {{% example typescript %}}

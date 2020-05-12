@@ -30,7 +30,20 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+# Create a new rancher2 User
+foo_user = rancher2.User("fooUser",
+    enabled=True,
+    password="changeme",
+    username="foo")
+# Create a new rancher2 global_role_binding for User
+foo_global_role_binding = rancher2.GlobalRoleBinding("fooGlobalRoleBinding",
+    global_role_id="user-base",
+    user_id=foo_user.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

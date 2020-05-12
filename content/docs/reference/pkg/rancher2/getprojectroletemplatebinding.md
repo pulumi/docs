@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+foo = rancher2.get_project_role_template_binding(name="foo",
+    project_id="foo_id")
+```
 {{% /example %}}
 
 {{% example typescript %}}

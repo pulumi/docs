@@ -28,7 +28,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+# Create a new rancher2 Project Logging
+foo = rancher2.ProjectLogging("foo",
+    kind="syslog",
+    project_id="<project_id>",
+    syslog_config={
+        "endpoint": "<syslog_endpoint>",
+        "protocol": "udp",
+        "severity": "notice",
+        "sslVerify": False,
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}

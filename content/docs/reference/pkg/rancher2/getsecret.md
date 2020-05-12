@@ -32,7 +32,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+foo = rancher2.get_secret(name="<name>",
+    project_id="<project_id>")
+```
 {{% /example %}}
 
 {{% example typescript %}}

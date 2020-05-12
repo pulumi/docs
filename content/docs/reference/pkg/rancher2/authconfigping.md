@@ -30,7 +30,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+# Create a new rancher2 Auth Config Ping
+ping = rancher2.AuthConfigPing("ping",
+    display_name_field="<DISPLAY_NAME_FIELD>",
+    groups_field="<GROUPS_FIELD>",
+    idp_metadata_content="<IDP_METADATA_CONTENT>",
+    rancher_api_host="https://<RANCHER_API_HOST>",
+    sp_cert="<SP_CERT>",
+    sp_key="<SP_KEY>",
+    uid_field="<UID_FIELD>",
+    user_name_field="<USER_NAME_FIELD>")
+```
 {{% /example %}}
 
 {{% example typescript %}}

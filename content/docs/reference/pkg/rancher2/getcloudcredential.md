@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+test = rancher2.get_cloud_credential(name="test")
+```
 {{% /example %}}
 
 {{% example typescript %}}

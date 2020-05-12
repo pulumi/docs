@@ -34,7 +34,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+# Create a new rancher2 Token scoped
+foo = rancher2.Token("foo",
+    cluster_id="<cluster-id>",
+    description="foo token",
+    ttl=1200)
+```
 {{% /example %}}
 
 {{% example typescript %}}

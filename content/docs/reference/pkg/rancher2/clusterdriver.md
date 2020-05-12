@@ -28,7 +28,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+# Create a new Rancher2 Cluster Driver
+foo = rancher2.ClusterDriver("foo",
+    active=True,
+    builtin=False,
+    checksum="0x0",
+    description="Foo description",
+    external_id="foo_external",
+    ui_url="local://ui",
+    url="local://",
+    whitelist_domains=["*.foo.com"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

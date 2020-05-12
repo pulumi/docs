@@ -28,7 +28,32 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+# Create a new rancher2 Project
+foo = rancher2.Project("foo",
+    cluster_id="<CLUSTER_ID>",
+    container_resource_limit={
+        "limitsCpu": "20m",
+        "limitsMemory": "20Mi",
+        "requestsCpu": "1m",
+        "requestsMemory": "1Mi",
+    },
+    resource_quota={
+        "namespaceDefaultLimit": {
+            "limitsCpu": "2000m",
+            "limitsMemory": "500Mi",
+            "requestsStorage": "1Gi",
+        },
+        "projectLimit": {
+            "limitsCpu": "2000m",
+            "limitsMemory": "2000Mi",
+            "requestsStorage": "2Gi",
+        },
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -14,7 +14,7 @@ Use this data source to retrieve information about a Rancher v2 role template re
 
 
 
-Deprecated: rancher2.getRoleTempalte has been deprecated in favour of rancher2.getRoleTemplate
+Deprecated: rancher2.index.getRoleTempalte has been deprecated in favour of rancher2.index.getRoleTemplate
 
 {{% examples %}}
 ## Example Usage
@@ -30,7 +30,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+foo = rancher2.get_role_template(name="foo")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -45,7 +50,7 @@ const foo = pulumi.output(rancher2.getRoleTemplate({
 {{% /example %}}
 
 {{% /examples %}}
-<p class="resource-deprecated">Deprecated: {{% md %}}rancher2.getRoleTempalte has been deprecated in favour of rancher2.getRoleTemplate{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}rancher2.index.getRoleTempalte has been deprecated in favour of rancher2.index.getRoleTemplate{{% /md %}}</p>
 
 
 ## Using GetRoleTempalte {#using}

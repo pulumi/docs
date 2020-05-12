@@ -28,7 +28,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+# Create a new Rancher2 Global Catalog
+foo_global = rancher2.Catalog("foo-global", url="https://<CATALOG_URL>")
+# Create a new Rancher2 Cluster Catalog
+foo_cluster = rancher2.Catalog("foo-cluster",
+    scope="cluster",
+    url="https://<CATALOG_URL>")
+# Create a new Rancher2 Project Catalog
+foo_project = rancher2.Catalog("foo-project",
+    scope="project",
+    url="https://<CATALOG_URL>")
+```
 {{% /example %}}
 
 {{% example typescript %}}

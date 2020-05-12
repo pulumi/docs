@@ -28,7 +28,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+# Create a new Rancher2 Cluster Role Template Binding
+foo = rancher2.ClusterRoleTemplateBinding("foo",
+    cluster_id="<cluster_id>",
+    role_template_id="<role_template_id>",
+    user_id="<user_id>")
+```
 {{% /example %}}
 
 {{% example typescript %}}

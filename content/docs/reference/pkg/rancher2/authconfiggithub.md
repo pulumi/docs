@@ -30,7 +30,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+# Create a new rancher2 Auth Config Github
+github = rancher2.AuthConfigGithub("github",
+    client_id="<GITHUB_CLIENT_ID>",
+    client_secret="<GITHUB_CLIENT_SECRET>")
+```
 {{% /example %}}
 
 {{% example typescript %}}
