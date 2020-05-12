@@ -81,10 +81,10 @@ Next, we'll create a Pulumi program to describe the same infrastructure that exi
 
 ```bash
 $ pulumi new azure-typescript --force
-$ tf2pulumi < main.tf > index.ts
+$ tf2pulumi
 ```
 
-We now have a Pulumi program that describes the same infrastructure:
+We now have a Pulumi program in `index.ts` that describes the same infrastructure:
 
 ```ts
 import * as pulumi from "@pulumi/pulumi";

@@ -300,19 +300,33 @@ To use this tool, [first install it](https://github.com/pulumi/tf2pulumi#buildin
 
 > At the moment, this tool needs to be built from source. Regularly released binaries across macOS, Linux, and Windows [will soon be available](https://github.com/pulumi/tf2pulumi/issues/119).
 
-Next, `cd` into a Terraform project you'd like to convert. Create a new stack in a subdirectory:
+Next, `cd` into a Terraform project you'd like to convert. Create a new Pulumi project:
 
 ```bash
-$ pulumi new typescript --dir my-stack
+$ pulumi new typescript -f
 ```
 
-> At the moment, TypeScript is the only language target. [Python is under active development](https://github.com/pulumi/tf2pulumi/issues/98). Please let us know if your desired language isn't available.
+> At the moment, TypeScript and Python are the only language targets. Please let us know if your desired language isn't available.
 
-Next, run `tf2pulumi`. It will conver the entire project whose directory you are in and print the resulting code to `stdout`. You'll probably want to redirect its output, for instance to a file named `index.ts` in the directory that contains the Pulumi project you just created:
+Next, run `tf2pulumi`. It will convert the entire project whose directory you are in and put the resulting code in the local directory.
+
+{{< chooser language "typescript,python" >}}
+
+{{% choosable language typescript %}}
 
 ```bash
-$ tf2pulumi >my-stack/index.ts
+$ tf2pulumi
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```bash
+$ tf2pulumi --target-language python
+```
+
+{{% /choosable %}}
+{{% /chooser %}}
 
 This will generate a Pulumi TypeScript program in index.ts that when run with pulumi update will deploy the infrastructure originally described by the Terraform project. Note that if your infrastructure references files or directories with paths relative to the location of the Terraform project, you will most likely need to update these paths such that they are relative to the generated index.ts file.
 
