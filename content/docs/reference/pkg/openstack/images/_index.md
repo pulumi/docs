@@ -33,3 +33,21 @@ Explore the resources and functions of the images module in the Open Stack packa
 	<dd>2.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Images.html" title="Pulumi.Openstack.Images">Pulumi.Openstack.Images</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/images?tab=doc#" title="openstack/images">openstack/images</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/openstack/images/#" title="@pulumi/openstack/images">@pulumi/openstack/images</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_openstack/images" title="pulumi_openstack/images">pulumi_openstack/images</a></dd>
+
+</dl>
+

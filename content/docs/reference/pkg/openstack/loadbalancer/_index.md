@@ -37,3 +37,21 @@ Explore the resources and functions of the loadbalancer module in the Open Stack
 	<dd>2.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.LoadBalancer.html" title="Pulumi.Openstack.LoadBalancer">Pulumi.Openstack.LoadBalancer</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/loadbalancer?tab=doc#" title="openstack/loadbalancer">openstack/loadbalancer</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/openstack/loadbalancer/#" title="@pulumi/openstack/loadbalancer">@pulumi/openstack/loadbalancer</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_openstack/loadbalancer" title="pulumi_openstack/loadbalancer">pulumi_openstack/loadbalancer</a></dd>
+
+</dl>
+

@@ -29,3 +29,21 @@ Explore the resources and functions of the database module in the Open Stack pac
 	<dd>2.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Database.html" title="Pulumi.Openstack.Database">Pulumi.Openstack.Database</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/database?tab=doc#" title="openstack/database">openstack/database</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/openstack/database/#" title="@pulumi/openstack/database">@pulumi/openstack/database</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_openstack/database" title="pulumi_openstack/database">pulumi_openstack/database</a></dd>
+
+</dl>
+

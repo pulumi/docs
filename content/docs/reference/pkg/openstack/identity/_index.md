@@ -43,3 +43,21 @@ Explore the resources and functions of the identity module in the Open Stack pac
 	<dd>2.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Identity.html" title="Pulumi.Openstack.Identity">Pulumi.Openstack.Identity</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/identity?tab=doc#" title="openstack/identity">openstack/identity</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/openstack/identity/#" title="@pulumi/openstack/identity">@pulumi/openstack/identity</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_openstack/identity" title="pulumi_openstack/identity">pulumi_openstack/identity</a></dd>
+
+</dl>
+

@@ -33,3 +33,21 @@ Explore the resources and functions of the containerinfra module in the Open Sta
 	<dd>2.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.ContainerInfra.html" title="Pulumi.Openstack.ContainerInfra">Pulumi.Openstack.ContainerInfra</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/containerinfra?tab=doc#" title="openstack/containerinfra">openstack/containerinfra</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/openstack/containerinfra/#" title="@pulumi/openstack/containerinfra">@pulumi/openstack/containerinfra</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_openstack/containerinfra" title="pulumi_openstack/containerinfra">pulumi_openstack/containerinfra</a></dd>
+
+</dl>
+
