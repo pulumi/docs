@@ -22,7 +22,7 @@ meta_desc: "Explore the MrScalar resource of the aws module, including examples,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">MrScalar</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>additional_info=None<span class="p">, </span>additional_primary_security_groups=None<span class="p">, </span>additional_replica_security_groups=None<span class="p">, </span>applications=None<span class="p">, </span>availability_zones=None<span class="p">, </span>bootstrap_actions_files=None<span class="p">, </span>cluster_id=None<span class="p">, </span>configurations_files=None<span class="p">, </span>core_desired_capacity=None<span class="p">, </span>core_ebs_block_devices=None<span class="p">, </span>core_ebs_optimized=None<span class="p">, </span>core_instance_types=None<span class="p">, </span>core_lifecycle=None<span class="p">, </span>core_max_size=None<span class="p">, </span>core_min_size=None<span class="p">, </span>core_scaling_down_policies=None<span class="p">, </span>core_scaling_up_policies=None<span class="p">, </span>custom_ami_id=None<span class="p">, </span>description=None<span class="p">, </span>ebs_root_volume_size=None<span class="p">, </span>ec2_key_name=None<span class="p">, </span>expose_cluster_id=None<span class="p">, </span>instance_weights=None<span class="p">, </span>job_flow_role=None<span class="p">, </span>keep_job_flow_alive=None<span class="p">, </span>log_uri=None<span class="p">, </span>managed_primary_security_group=None<span class="p">, </span>managed_replica_security_group=None<span class="p">, </span>master_ebs_block_devices=None<span class="p">, </span>master_ebs_optimized=None<span class="p">, </span>master_instance_types=None<span class="p">, </span>master_lifecycle=None<span class="p">, </span>name=None<span class="p">, </span>provisioning_timeout=None<span class="p">, </span>region=None<span class="p">, </span>release_label=None<span class="p">, </span>repo_upgrade_on_boot=None<span class="p">, </span>retries=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>security_config=None<span class="p">, </span>service_access_security_group=None<span class="p">, </span>service_role=None<span class="p">, </span>steps_files=None<span class="p">, </span>strategy=None<span class="p">, </span>tags=None<span class="p">, </span>task_desired_capacity=None<span class="p">, </span>task_ebs_block_devices=None<span class="p">, </span>task_ebs_optimized=None<span class="p">, </span>task_instance_types=None<span class="p">, </span>task_lifecycle=None<span class="p">, </span>task_max_size=None<span class="p">, </span>task_min_size=None<span class="p">, </span>task_scaling_down_policies=None<span class="p">, </span>task_scaling_up_policies=None<span class="p">, </span>termination_protected=None<span class="p">, </span>visible_to_all_users=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">MrScalar</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>additional_info=None<span class="p">, </span>additional_primary_security_groups=None<span class="p">, </span>additional_replica_security_groups=None<span class="p">, </span>applications=None<span class="p">, </span>availability_zones=None<span class="p">, </span>bootstrap_actions_files=None<span class="p">, </span>cluster_id=None<span class="p">, </span>configurations_files=None<span class="p">, </span>core_desired_capacity=None<span class="p">, </span>core_ebs_block_devices=None<span class="p">, </span>core_ebs_optimized=None<span class="p">, </span>core_instance_types=None<span class="p">, </span>core_lifecycle=None<span class="p">, </span>core_max_size=None<span class="p">, </span>core_min_size=None<span class="p">, </span>core_scaling_down_policies=None<span class="p">, </span>core_scaling_up_policies=None<span class="p">, </span>core_unit=None<span class="p">, </span>custom_ami_id=None<span class="p">, </span>description=None<span class="p">, </span>ebs_root_volume_size=None<span class="p">, </span>ec2_key_name=None<span class="p">, </span>expose_cluster_id=None<span class="p">, </span>instance_weights=None<span class="p">, </span>job_flow_role=None<span class="p">, </span>keep_job_flow_alive=None<span class="p">, </span>log_uri=None<span class="p">, </span>managed_primary_security_group=None<span class="p">, </span>managed_replica_security_group=None<span class="p">, </span>master_ebs_block_devices=None<span class="p">, </span>master_ebs_optimized=None<span class="p">, </span>master_instance_types=None<span class="p">, </span>master_lifecycle=None<span class="p">, </span>name=None<span class="p">, </span>provisioning_timeout=None<span class="p">, </span>region=None<span class="p">, </span>release_label=None<span class="p">, </span>repo_upgrade_on_boot=None<span class="p">, </span>retries=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>security_config=None<span class="p">, </span>service_access_security_group=None<span class="p">, </span>service_role=None<span class="p">, </span>steps_files=None<span class="p">, </span>strategy=None<span class="p">, </span>tags=None<span class="p">, </span>task_desired_capacity=None<span class="p">, </span>task_ebs_block_devices=None<span class="p">, </span>task_ebs_optimized=None<span class="p">, </span>task_instance_types=None<span class="p">, </span>task_lifecycle=None<span class="p">, </span>task_max_size=None<span class="p">, </span>task_min_size=None<span class="p">, </span>task_scaling_down_policies=None<span class="p">, </span>task_scaling_up_policies=None<span class="p">, </span>task_unit=None<span class="p">, </span>termination_policies=None<span class="p">, </span>termination_protected=None<span class="p">, </span>visible_to_all_users=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -342,6 +342,14 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span>Core<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Custom<wbr>Ami<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -633,6 +641,23 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span>Task<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Termination<wbr>Policies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalarterminationpolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Termination<wbr>Policy<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Allows defining termination policies for EMR clusters based on CloudWatch Metrics.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Termination<wbr>Protected</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
@@ -797,6 +822,14 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span>Core<wbr>Scaling<wbr>Up<wbr>Policies</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarcorescalinguppolicy">[]Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Core<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1093,6 +1126,23 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span>Task<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Termination<wbr>Policies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalarterminationpolicy">[]Mr<wbr>Scalar<wbr>Termination<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Allows defining termination policies for EMR clusters based on CloudWatch Metrics.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Termination<wbr>Protected</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
@@ -1257,6 +1307,14 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span>core<wbr>Scaling<wbr>Up<wbr>Policies</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarcorescalinguppolicy">Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>core<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1553,6 +1611,23 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span>task<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>termination<wbr>Policies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalarterminationpolicy">Mr<wbr>Scalar<wbr>Termination<wbr>Policy[]</a></span>
+    </dt>
+    <dd>{{% md %}}Allows defining termination policies for EMR clusters based on CloudWatch Metrics.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>termination<wbr>Protected</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
@@ -1717,6 +1792,14 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span>core_<wbr>scaling_<wbr>up_<wbr>policies</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarcorescalinguppolicy">List[Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>core_<wbr>unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2013,6 +2096,23 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span>task_<wbr>unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>termination_<wbr>policies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalarterminationpolicy">List[Mr<wbr>Scalar<wbr>Termination<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}Allows defining termination policies for EMR clusters based on CloudWatch Metrics.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>termination_<wbr>protected</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2149,7 +2249,7 @@ Get an existing MrScalar resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>additional_info=None<span class="p">, </span>additional_primary_security_groups=None<span class="p">, </span>additional_replica_security_groups=None<span class="p">, </span>applications=None<span class="p">, </span>availability_zones=None<span class="p">, </span>bootstrap_actions_files=None<span class="p">, </span>cluster_id=None<span class="p">, </span>configurations_files=None<span class="p">, </span>core_desired_capacity=None<span class="p">, </span>core_ebs_block_devices=None<span class="p">, </span>core_ebs_optimized=None<span class="p">, </span>core_instance_types=None<span class="p">, </span>core_lifecycle=None<span class="p">, </span>core_max_size=None<span class="p">, </span>core_min_size=None<span class="p">, </span>core_scaling_down_policies=None<span class="p">, </span>core_scaling_up_policies=None<span class="p">, </span>custom_ami_id=None<span class="p">, </span>description=None<span class="p">, </span>ebs_root_volume_size=None<span class="p">, </span>ec2_key_name=None<span class="p">, </span>expose_cluster_id=None<span class="p">, </span>instance_weights=None<span class="p">, </span>job_flow_role=None<span class="p">, </span>keep_job_flow_alive=None<span class="p">, </span>log_uri=None<span class="p">, </span>managed_primary_security_group=None<span class="p">, </span>managed_replica_security_group=None<span class="p">, </span>master_ebs_block_devices=None<span class="p">, </span>master_ebs_optimized=None<span class="p">, </span>master_instance_types=None<span class="p">, </span>master_lifecycle=None<span class="p">, </span>name=None<span class="p">, </span>output_cluster_id=None<span class="p">, </span>provisioning_timeout=None<span class="p">, </span>region=None<span class="p">, </span>release_label=None<span class="p">, </span>repo_upgrade_on_boot=None<span class="p">, </span>retries=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>security_config=None<span class="p">, </span>service_access_security_group=None<span class="p">, </span>service_role=None<span class="p">, </span>steps_files=None<span class="p">, </span>strategy=None<span class="p">, </span>tags=None<span class="p">, </span>task_desired_capacity=None<span class="p">, </span>task_ebs_block_devices=None<span class="p">, </span>task_ebs_optimized=None<span class="p">, </span>task_instance_types=None<span class="p">, </span>task_lifecycle=None<span class="p">, </span>task_max_size=None<span class="p">, </span>task_min_size=None<span class="p">, </span>task_scaling_down_policies=None<span class="p">, </span>task_scaling_up_policies=None<span class="p">, </span>termination_protected=None<span class="p">, </span>visible_to_all_users=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>additional_info=None<span class="p">, </span>additional_primary_security_groups=None<span class="p">, </span>additional_replica_security_groups=None<span class="p">, </span>applications=None<span class="p">, </span>availability_zones=None<span class="p">, </span>bootstrap_actions_files=None<span class="p">, </span>cluster_id=None<span class="p">, </span>configurations_files=None<span class="p">, </span>core_desired_capacity=None<span class="p">, </span>core_ebs_block_devices=None<span class="p">, </span>core_ebs_optimized=None<span class="p">, </span>core_instance_types=None<span class="p">, </span>core_lifecycle=None<span class="p">, </span>core_max_size=None<span class="p">, </span>core_min_size=None<span class="p">, </span>core_scaling_down_policies=None<span class="p">, </span>core_scaling_up_policies=None<span class="p">, </span>core_unit=None<span class="p">, </span>custom_ami_id=None<span class="p">, </span>description=None<span class="p">, </span>ebs_root_volume_size=None<span class="p">, </span>ec2_key_name=None<span class="p">, </span>expose_cluster_id=None<span class="p">, </span>instance_weights=None<span class="p">, </span>job_flow_role=None<span class="p">, </span>keep_job_flow_alive=None<span class="p">, </span>log_uri=None<span class="p">, </span>managed_primary_security_group=None<span class="p">, </span>managed_replica_security_group=None<span class="p">, </span>master_ebs_block_devices=None<span class="p">, </span>master_ebs_optimized=None<span class="p">, </span>master_instance_types=None<span class="p">, </span>master_lifecycle=None<span class="p">, </span>name=None<span class="p">, </span>output_cluster_id=None<span class="p">, </span>provisioning_timeout=None<span class="p">, </span>region=None<span class="p">, </span>release_label=None<span class="p">, </span>repo_upgrade_on_boot=None<span class="p">, </span>retries=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>security_config=None<span class="p">, </span>service_access_security_group=None<span class="p">, </span>service_role=None<span class="p">, </span>steps_files=None<span class="p">, </span>strategy=None<span class="p">, </span>tags=None<span class="p">, </span>task_desired_capacity=None<span class="p">, </span>task_ebs_block_devices=None<span class="p">, </span>task_ebs_optimized=None<span class="p">, </span>task_instance_types=None<span class="p">, </span>task_lifecycle=None<span class="p">, </span>task_max_size=None<span class="p">, </span>task_min_size=None<span class="p">, </span>task_scaling_down_policies=None<span class="p">, </span>task_scaling_up_policies=None<span class="p">, </span>task_unit=None<span class="p">, </span>termination_policies=None<span class="p">, </span>termination_protected=None<span class="p">, </span>visible_to_all_users=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2402,6 +2502,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Core<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Custom<wbr>Ami<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -2710,6 +2818,23 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Task<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Termination<wbr>Policies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalarterminationpolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Termination<wbr>Policy<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Allows defining termination policies for EMR clusters based on CloudWatch Metrics.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Termination<wbr>Protected</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
@@ -2865,6 +2990,14 @@ The following state arguments are supported:
         <span>Core<wbr>Scaling<wbr>Up<wbr>Policies</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarcorescalinguppolicy">[]Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Core<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3178,6 +3311,23 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Task<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Termination<wbr>Policies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalarterminationpolicy">[]Mr<wbr>Scalar<wbr>Termination<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Allows defining termination policies for EMR clusters based on CloudWatch Metrics.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Termination<wbr>Protected</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
@@ -3333,6 +3483,14 @@ The following state arguments are supported:
         <span>core<wbr>Scaling<wbr>Up<wbr>Policies</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarcorescalinguppolicy">Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>core<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3646,6 +3804,23 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>task<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>termination<wbr>Policies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalarterminationpolicy">Mr<wbr>Scalar<wbr>Termination<wbr>Policy[]</a></span>
+    </dt>
+    <dd>{{% md %}}Allows defining termination policies for EMR clusters based on CloudWatch Metrics.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>termination<wbr>Protected</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
@@ -3801,6 +3976,14 @@ The following state arguments are supported:
         <span>core_<wbr>scaling_<wbr>up_<wbr>policies</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarcorescalinguppolicy">List[Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>core_<wbr>unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4111,6 +4294,23 @@ The following state arguments are supported:
         <span class="property-type"><a href="#mrscalartaskscalinguppolicy">List[Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Up<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>task_<wbr>unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>termination_<wbr>policies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalarterminationpolicy">List[Mr<wbr>Scalar<wbr>Termination<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}Allows defining termination policies for EMR clusters based on CloudWatch Metrics.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4707,7 +4907,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the metric in CloudWatch which the statement will be based on.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4715,7 +4916,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Must contain the value: `AWS/ElasticMapReduce`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4731,7 +4933,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value that the specified statistic is compared to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4739,7 +4942,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`                     
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4779,7 +4983,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4819,7 +5024,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4827,7 +5033,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time window in seconds over which the statistic is applied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4835,7 +5042,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`                 
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4858,7 +5066,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the metric in CloudWatch which the statement will be based on.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4866,7 +5075,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Must contain the value: `AWS/ElasticMapReduce`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4882,7 +5092,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value that the specified statistic is compared to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4890,7 +5101,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`                     
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4930,7 +5142,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4970,7 +5183,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4978,7 +5192,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time window in seconds over which the statistic is applied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4986,7 +5201,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`                 
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5009,7 +5225,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the metric in CloudWatch which the statement will be based on.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5017,7 +5234,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Must contain the value: `AWS/ElasticMapReduce`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5033,7 +5251,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value that the specified statistic is compared to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5041,7 +5260,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`                     
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5081,7 +5301,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5121,7 +5342,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5129,7 +5351,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time window in seconds over which the statistic is applied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5137,7 +5360,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`                 
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5160,7 +5384,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the metric in CloudWatch which the statement will be based on.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5168,7 +5393,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Must contain the value: `AWS/ElasticMapReduce`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5184,7 +5410,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value that the specified statistic is compared to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5192,7 +5419,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`                     
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5232,7 +5460,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5272,7 +5501,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5280,7 +5510,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time window in seconds over which the statistic is applied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5288,7 +5519,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`                 
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5329,7 +5561,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the metric in CloudWatch which the statement will be based on.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5337,7 +5570,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Must contain the value: `AWS/ElasticMapReduce`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5353,7 +5587,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value that the specified statistic is compared to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5361,7 +5596,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`                     
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5401,7 +5637,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5441,7 +5678,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5449,7 +5687,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time window in seconds over which the statistic is applied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5457,7 +5696,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`                 
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5480,7 +5720,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the metric in CloudWatch which the statement will be based on.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5488,7 +5729,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Must contain the value: `AWS/ElasticMapReduce`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5504,7 +5746,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value that the specified statistic is compared to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5512,7 +5755,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`                     
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5552,7 +5796,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5592,7 +5837,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5600,7 +5846,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time window in seconds over which the statistic is applied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5608,7 +5855,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`                 
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5631,7 +5879,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the metric in CloudWatch which the statement will be based on.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5639,7 +5888,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Must contain the value: `AWS/ElasticMapReduce`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5655,7 +5905,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value that the specified statistic is compared to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5663,7 +5914,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`                     
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5703,7 +5955,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5743,7 +5996,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5751,7 +6005,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time window in seconds over which the statistic is applied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5759,7 +6014,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`                 
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5782,7 +6038,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the metric in CloudWatch which the statement will be based on.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5790,7 +6047,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Must contain the value: `AWS/ElasticMapReduce`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5806,7 +6064,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value that the specified statistic is compared to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5814,7 +6073,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`                     
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5854,7 +6114,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5894,7 +6155,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5902,7 +6164,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time window in seconds over which the statistic is applied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5910,7 +6173,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`                 
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7009,7 +7273,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the metric in CloudWatch which the statement will be based on.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7017,7 +7282,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Must contain the value: `AWS/ElasticMapReduce`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7033,7 +7299,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value that the specified statistic is compared to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7041,7 +7308,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`                     
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7081,7 +7349,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7121,7 +7390,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7129,7 +7399,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time window in seconds over which the statistic is applied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7137,7 +7408,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`                 
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7160,7 +7432,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the metric in CloudWatch which the statement will be based on.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7168,7 +7441,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Must contain the value: `AWS/ElasticMapReduce`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7184,7 +7458,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value that the specified statistic is compared to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7192,7 +7467,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`                     
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7232,7 +7508,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7272,7 +7549,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7280,7 +7558,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time window in seconds over which the statistic is applied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7288,7 +7567,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`                 
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7311,7 +7591,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the metric in CloudWatch which the statement will be based on.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7319,7 +7600,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Must contain the value: `AWS/ElasticMapReduce`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7335,7 +7617,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value that the specified statistic is compared to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7343,7 +7626,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`                     
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7383,7 +7667,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7423,7 +7708,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7431,7 +7717,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time window in seconds over which the statistic is applied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7439,7 +7726,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`                 
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7462,7 +7750,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the metric in CloudWatch which the statement will be based on.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7470,7 +7759,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Must contain the value: `AWS/ElasticMapReduce`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7486,7 +7776,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value that the specified statistic is compared to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7494,7 +7785,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`                     
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7534,7 +7826,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7574,7 +7867,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7582,7 +7876,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time window in seconds over which the statistic is applied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7590,7 +7885,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`                 
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7631,7 +7927,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the metric in CloudWatch which the statement will be based on.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7639,7 +7936,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Must contain the value: `AWS/ElasticMapReduce`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7655,7 +7953,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value that the specified statistic is compared to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7663,7 +7962,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`                     
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7703,7 +8003,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7743,7 +8044,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7751,7 +8053,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time window in seconds over which the statistic is applied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7759,7 +8062,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`                 
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7782,7 +8086,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the metric in CloudWatch which the statement will be based on.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7790,7 +8095,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Must contain the value: `AWS/ElasticMapReduce`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7806,7 +8112,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value that the specified statistic is compared to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7814,7 +8121,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`                     
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7854,7 +8162,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7894,7 +8203,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7902,7 +8212,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time window in seconds over which the statistic is applied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7910,7 +8221,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`                 
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7933,7 +8245,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the metric in CloudWatch which the statement will be based on.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7941,7 +8254,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Must contain the value: `AWS/ElasticMapReduce`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7957,7 +8271,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value that the specified statistic is compared to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7965,7 +8280,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`                     
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8005,7 +8321,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8045,7 +8362,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8053,7 +8371,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time window in seconds over which the statistic is applied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8061,7 +8380,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`                 
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8084,7 +8404,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the metric in CloudWatch which the statement will be based on.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8092,7 +8413,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Must contain the value: `AWS/ElasticMapReduce`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8108,7 +8430,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value that the specified statistic is compared to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8116,7 +8439,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`                     
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8156,7 +8480,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8196,7 +8521,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8204,7 +8530,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time window in seconds over which the statistic is applied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8212,7 +8539,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`                 
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8221,6 +8549,418 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="mrscalarterminationpolicy">Mr<wbr>Scalar<wbr>Termination<wbr>Policy</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#MrScalarTerminationPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#MrScalarTerminationPolicy">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarTerminationPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarTerminationPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.MrScalarTerminationPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.MrScalarTerminationPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Statements</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalarterminationpolicystatement">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Termination<wbr>Policy<wbr>Statement<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Statements</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalarterminationpolicystatement">[]Mr<wbr>Scalar<wbr>Termination<wbr>Policy<wbr>Statement</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>statements</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalarterminationpolicystatement">Mr<wbr>Scalar<wbr>Termination<wbr>Policy<wbr>Statement[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>statements</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalarterminationpolicystatement">List[Mr<wbr>Scalar<wbr>Termination<wbr>Policy<wbr>Statement]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="mrscalarterminationpolicystatement">Mr<wbr>Scalar<wbr>Termination<wbr>Policy<wbr>Statement</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#MrScalarTerminationPolicyStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#MrScalarTerminationPolicyStatement">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarTerminationPolicyStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarTerminationPolicyStatementOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.MrScalarTerminationPolicyStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.MrScalarTerminationPolicyStatement.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Metric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the metric in CloudWatch which the statement will be based on.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Must contain the value: `AWS/ElasticMapReduce`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The value that the specified statistic is compared to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Evaluation<wbr>Periods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The time window in seconds over which the statistic is applied.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`                 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`                     
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Metric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the metric in CloudWatch which the statement will be based on.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Must contain the value: `AWS/ElasticMapReduce`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The value that the specified statistic is compared to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Evaluation<wbr>Periods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The time window in seconds over which the statistic is applied.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`                 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`                     
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>metric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the metric in CloudWatch which the statement will be based on.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Must contain the value: `AWS/ElasticMapReduce`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The value that the specified statistic is compared to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>evaluation<wbr>Periods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The time window in seconds over which the statistic is applied.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`                 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`                     
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>metric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the metric in CloudWatch which the statement will be based on.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Must contain the value: `AWS/ElasticMapReduce`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The value that the specified statistic is compared to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>evaluation<wbr>Periods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The time window in seconds over which the statistic is applied.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`                 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`                     
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

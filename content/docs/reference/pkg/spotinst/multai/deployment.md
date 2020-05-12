@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_spotinst as spotinst
+
+my_deployment = spotinst.multai.Deployment("myDeployment")
+```
 {{% /example %}}
 
 {{% example typescript %}}

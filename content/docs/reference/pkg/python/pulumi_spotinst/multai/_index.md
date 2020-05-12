@@ -17,6 +17,21 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_spotinst.multai.Balancer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.multai.</code><code class="sig-name descname">Balancer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_timeouts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_cname_aliases</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheme</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.multai.Balancer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Spotinst Multai Balancer.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_spotinst</span> <span class="k">as</span> <span class="nn">spotinst</span>
+
+<span class="n">my_balancer</span> <span class="o">=</span> <span class="n">spotinst</span><span class="o">.</span><span class="n">multai</span><span class="o">.</span><span class="n">Balancer</span><span class="p">(</span><span class="s2">&quot;myBalancer&quot;</span><span class="p">,</span>
+    <span class="n">connection_timeouts</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;draining&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;idle&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">scheme</span><span class="o">=</span><span class="s2">&quot;internal&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;env&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;prod&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -123,6 +138,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_spotinst.multai.Deployment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.multai.</code><code class="sig-name descname">Deployment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.multai.Deployment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Spotinst Multai Deployment.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_spotinst</span> <span class="k">as</span> <span class="nn">spotinst</span>
+
+<span class="n">my_deployment</span> <span class="o">=</span> <span class="n">spotinst</span><span class="o">.</span><span class="n">multai</span><span class="o">.</span><span class="n">Deployment</span><span class="p">(</span><span class="s2">&quot;myDeployment&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -197,6 +218,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_spotinst.multai.Listener">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.multai.</code><code class="sig-name descname">Listener</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">balancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tls_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.multai.Listener" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Spotinst Multai Listener.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_spotinst</span> <span class="k">as</span> <span class="nn">spotinst</span>
+
+<span class="n">my_listener</span> <span class="o">=</span> <span class="n">spotinst</span><span class="o">.</span><span class="n">multai</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="s2">&quot;myListener&quot;</span><span class="p">,</span>
+    <span class="n">balancer_id</span><span class="o">=</span><span class="s2">&quot;b-12345&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">1337</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;http&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;env&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;prod&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">tls_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;certificateIds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ce-12345&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;cipherSuites&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;maxVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;TLS12&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;minVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;TLS10&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;preferServerCipherSuites&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;sessionTicketsDisabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -343,6 +386,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_spotinst.multai.RoutingRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.multai.</code><code class="sig-name descname">RoutingRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">balancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">listener_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">middleware_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">route</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_set_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.multai.RoutingRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Spotinst Multai Routing Rule.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_spotinst</span> <span class="k">as</span> <span class="nn">spotinst</span>
+
+<span class="n">my_routing_rule</span> <span class="o">=</span> <span class="n">spotinst</span><span class="o">.</span><span class="n">multai</span><span class="o">.</span><span class="n">RoutingRule</span><span class="p">(</span><span class="s2">&quot;myRoutingRule&quot;</span><span class="p">,</span>
+    <span class="n">balancer_id</span><span class="o">=</span><span class="s2">&quot;b-12345&quot;</span><span class="p">,</span>
+    <span class="n">listener_id</span><span class="o">=</span><span class="s2">&quot;l-98765&quot;</span><span class="p">,</span>
+    <span class="n">route</span><span class="o">=</span><span class="s2">&quot;Path(`/bar`)&quot;</span><span class="p">,</span>
+    <span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;LEASTCONN&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;env&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;prod&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -463,6 +520,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_spotinst.multai.Target">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.multai.</code><code class="sig-name descname">Target</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">balancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_set_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">weight</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.multai.Target" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Spotinst Multai Target.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_spotinst</span> <span class="k">as</span> <span class="nn">spotinst</span>
+
+<span class="n">my_target</span> <span class="o">=</span> <span class="n">spotinst</span><span class="o">.</span><span class="n">multai</span><span class="o">.</span><span class="n">Target</span><span class="p">(</span><span class="s2">&quot;myTarget&quot;</span><span class="p">,</span>
+    <span class="n">balancer_id</span><span class="o">=</span><span class="s2">&quot;b-12345&quot;</span><span class="p">,</span>
+    <span class="n">host</span><span class="o">=</span><span class="s2">&quot;host&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">1338</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;env&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;prod&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">target_set_id</span><span class="o">=</span><span class="s2">&quot;l-98765&quot;</span><span class="p">,</span>
+    <span class="n">weight</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -599,6 +671,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_spotinst.multai.TargetSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.multai.</code><code class="sig-name descname">TargetSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">balancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deployment_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">weight</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.multai.TargetSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Spotinst Multai Target Set.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_spotinst</span> <span class="k">as</span> <span class="nn">spotinst</span>
+
+<span class="n">my_target_set</span> <span class="o">=</span> <span class="n">spotinst</span><span class="o">.</span><span class="n">multai</span><span class="o">.</span><span class="n">TargetSet</span><span class="p">(</span><span class="s2">&quot;myTargetSet&quot;</span><span class="p">,</span>
+    <span class="n">balancer_id</span><span class="o">=</span><span class="s2">&quot;b-12345&quot;</span><span class="p">,</span>
+    <span class="n">deployment_id</span><span class="o">=</span><span class="s2">&quot;dp-12345&quot;</span><span class="p">,</span>
+    <span class="n">health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;healthyThreshold&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;interval&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">3001</span><span class="p">,</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;timeout&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;unhealthyThreshold&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">1338</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;http&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;env&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;prod&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">weight</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -28,7 +28,24 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_spotinst as spotinst
+
+http_check = spotinst.HealthCheck("httpCheck",
+    check={
+        "endpoint": "http://endpoint.com",
+        "healthy": 1,
+        "interval": 10,
+        "port": 1337,
+        "protocol": "http",
+        "timeout": 10,
+        "unhealthy": 1,
+    },
+    proxy_address="http://proxy.com",
+    proxy_port=80,
+    resource_id="sig-123")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -39,20 +56,16 @@ import * as spotinst from "@pulumi/spotinst";
 const httpCheck = new spotinst.HealthCheck("http_check", {
     check: {
         endpoint: "http://endpoint.com",
+        healthy: 1,
         interval: 10,
         port: 1337,
         protocol: "http",
         timeout: 10,
-    },
-    proxy: [{
-        addr: "http://proxy.com",
-        port: 80,
-    }],
-    resourceId: "sig-123",
-    threshold: [{
-        healthy: 1,
         unhealthy: 1,
-    }],
+    },
+    proxyAddress: "http://proxy.com",
+    proxyPort: 80,
+    resourceId: "sig-123",
 });
 ```
 {{% /example %}}
@@ -866,11 +879,12 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>End<wbr>Point</span>
+        <span>Endpoint</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The destination for the request.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -910,11 +924,12 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Time<wbr>Out</span>
+        <span>Timeout</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}the amount of time (in seconds) to wait when receiving a response from the health check.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -934,11 +949,12 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>End<wbr>Point</span>
+        <span>Endpoint</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The destination for the request.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -978,11 +994,12 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Time<wbr>Out</span>
+        <span>Timeout</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}the amount of time (in seconds) to wait when receiving a response from the health check.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1002,11 +1019,12 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>end<wbr>Point</span>
+        <span>endpoint</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The destination for the request.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1046,11 +1064,12 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>time<wbr>Out</span>
+        <span>timeout</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}the amount of time (in seconds) to wait when receiving a response from the health check.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1070,11 +1089,12 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>end<wbr>Point</span>
+        <span>endpoint</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The destination for the request.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1114,11 +1134,12 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>time<wbr>Out</span>
+        <span>timeout</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}the amount of time (in seconds) to wait when receiving a response from the health check.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
