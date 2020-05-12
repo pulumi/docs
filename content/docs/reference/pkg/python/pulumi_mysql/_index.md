@@ -25,6 +25,12 @@ consider setting
 <cite>``prevent_destroy`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/configuration/resources.html#prevent_destroy">https://www.terraform.io/docs/configuration/resources.html#prevent_destroy</a>&gt;`_
 on your database resources as an extra safety measure.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mysql</span> <span class="k">as</span> <span class="nn">mysql</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s2">&quot;app&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -137,6 +143,51 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mysql.</code><code class="sig-name descname">Grant</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grant</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">privileges</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">table</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tls_option</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Grant" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Grant</span></code> resource creates and manages privileges given to
 a user on a MySQL server.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mysql</span> <span class="k">as</span> <span class="nn">mysql</span>
+
+<span class="n">jdoe_user</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;jdoeUser&quot;</span><span class="p">,</span>
+    <span class="n">host</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="n">plaintext_password</span><span class="o">=</span><span class="s2">&quot;password&quot;</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="s2">&quot;jdoe&quot;</span><span class="p">)</span>
+<span class="n">jdoe_grant</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">Grant</span><span class="p">(</span><span class="s2">&quot;jdoeGrant&quot;</span><span class="p">,</span>
+    <span class="n">database</span><span class="o">=</span><span class="s2">&quot;app&quot;</span><span class="p">,</span>
+    <span class="n">host</span><span class="o">=</span><span class="n">jdoe_user</span><span class="o">.</span><span class="n">host</span><span class="p">,</span>
+    <span class="n">privileges</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;SELECT&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;UPDATE&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">user</span><span class="o">=</span><span class="n">jdoe_user</span><span class="o">.</span><span class="n">user</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mysql</span> <span class="k">as</span> <span class="nn">mysql</span>
+
+<span class="n">developer_role</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;developerRole&quot;</span><span class="p">)</span>
+<span class="n">developer_grant</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">Grant</span><span class="p">(</span><span class="s2">&quot;developerGrant&quot;</span><span class="p">,</span>
+    <span class="n">database</span><span class="o">=</span><span class="s2">&quot;app&quot;</span><span class="p">,</span>
+    <span class="n">privileges</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;SELECT&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;UPDATE&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">developer_role</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mysql</span> <span class="k">as</span> <span class="nn">mysql</span>
+
+<span class="n">jdoe</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;jdoe&quot;</span><span class="p">,</span>
+    <span class="n">host</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="n">plaintext_password</span><span class="o">=</span><span class="s2">&quot;password&quot;</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="s2">&quot;jdoe&quot;</span><span class="p">)</span>
+<span class="n">developer_role</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;developerRole&quot;</span><span class="p">)</span>
+<span class="n">developer_grant</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">Grant</span><span class="p">(</span><span class="s2">&quot;developerGrant&quot;</span><span class="p">,</span>
+    <span class="n">database</span><span class="o">=</span><span class="s2">&quot;app&quot;</span><span class="p">,</span>
+    <span class="n">host</span><span class="o">=</span><span class="n">jdoe</span><span class="o">.</span><span class="n">host</span><span class="p">,</span>
+    <span class="n">roles</span><span class="o">=</span><span class="p">[</span><span class="n">developer_role</span><span class="o">.</span><span class="n">name</span><span class="p">],</span>
+    <span class="n">user</span><span class="o">=</span><span class="n">jdoe</span><span class="o">.</span><span class="n">user</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -333,6 +384,12 @@ server.</p>
 <blockquote>
 <div><p><strong>Note:</strong> MySQL introduced roles in version 8. They do not work on MySQL 5 and lower.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mysql</span> <span class="k">as</span> <span class="nn">mysql</span>
+
+<span class="n">developer</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;developer&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -414,6 +471,24 @@ obscured by an unsalted hash in the state
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.
 Care is required when using this resource, to avoid disclosing the password.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mysql</span> <span class="k">as</span> <span class="nn">mysql</span>
+
+<span class="n">jdoe</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;jdoe&quot;</span><span class="p">,</span>
+    <span class="n">host</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="n">plaintext_password</span><span class="o">=</span><span class="s2">&quot;password&quot;</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="s2">&quot;jdoe&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mysql</span> <span class="k">as</span> <span class="nn">mysql</span>
+
+<span class="n">nologin</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;nologin&quot;</span><span class="p">,</span>
+    <span class="n">auth_plugin</span><span class="o">=</span><span class="s2">&quot;mysql_no_login&quot;</span><span class="p">,</span>
+    <span class="n">host</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="s2">&quot;nologin&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

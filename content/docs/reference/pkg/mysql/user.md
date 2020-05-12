@@ -31,6 +31,15 @@ const nologin = new mysql.User("nologin", {
     user: "nologin",
 });
 ```
+```python
+import pulumi
+import pulumi_mysql as mysql
+
+nologin = mysql.User("nologin",
+    auth_plugin="mysql_no_login",
+    host="example.com",
+    user="nologin")
+```
 
 {{% examples %}}
 ## Example Usage
@@ -46,7 +55,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mysql as mysql
+
+jdoe = mysql.User("jdoe",
+    host="example.com",
+    plaintext_password="password",
+    user="jdoe")
+```
 {{% /example %}}
 
 {{% example typescript %}}
