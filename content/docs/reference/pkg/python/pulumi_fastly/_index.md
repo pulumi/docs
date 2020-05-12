@@ -1722,6 +1722,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_fastly.</code><code class="sig-name descname">Userv1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_fastly.Userv1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Fastly User, representing the configuration for a user account for interacting with Fastly.</p>
 <p>The User resource requires a login and name, and optionally a role.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_fastly</span> <span class="k">as</span> <span class="nn">fastly</span>
+
+<span class="n">demo</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">Userv1</span><span class="p">(</span><span class="s2">&quot;demo&quot;</span><span class="p">,</span> <span class="n">login</span><span class="o">=</span><span class="s2">&quot;demo@example.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1813,6 +1819,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_fastly.get_fastly_ip_ranges">
 <code class="sig-prename descclassname">pulumi_fastly.</code><code class="sig-name descname">get_fastly_ip_ranges</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_fastly.get_fastly_ip_ranges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the <a class="reference external" href="https://docs.fastly.com/guides/securing-communications/accessing-fastlys-ip-ranges">IP ranges</a> of Fastly edge nodes.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_fastly</span> <span class="k">as</span> <span class="nn">fastly</span>
+
+<span class="n">fastly</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">get_fastly_ip_ranges</span><span class="p">()</span>
+<span class="n">from_fastly</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;fromFastly&quot;</span><span class="p">,</span> <span class="n">ingress</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;cidrBlocks&quot;</span><span class="p">:</span> <span class="n">fastly</span><span class="o">.</span><span class="n">cidr_blocks</span><span class="p">,</span>
+    <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </div>

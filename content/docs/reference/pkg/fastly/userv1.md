@@ -30,7 +30,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_fastly as fastly
+
+demo = fastly.Userv1("demo", login="demo@example.com")
+```
 {{% /example %}}
 
 {{% example typescript %}}

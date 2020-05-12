@@ -18,46 +18,9 @@ The Service resource requires a domain name that is correctly set up to direct
 traffic to the Fastly service. See Fastly's guide on [Adding CNAME Records][fastly-cname]
 on their documentation site for guidance.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as fastly from "@pulumi/fastly";
-
-const demo = new fastly.Servicev1("demo", {
-    backends: [{
-        address: "127.0.0.1",
-        name: "localhost",
-        port: 80,
-    }],
-    domains: [{
-        comment: "demo",
-        name: "demo.notexample.com",
-    }],
-    forceDestroy: true,
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a Servicev1 Resource {#create}
