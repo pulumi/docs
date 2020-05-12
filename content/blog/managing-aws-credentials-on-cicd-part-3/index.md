@@ -72,7 +72,6 @@ And just to show a more real-world example, we'll do this using _multiple_ AWS a
 resources are housed in a "production" AWS account, and the `cicd-bot` IAM User is defined in a
 [bastion AWS account](https://blog.coinbase.com/you-need-more-than-one-aws-account-aws-bastions-and-assume-role-23946c6dfde3).
 
-
 ### Creating the IAM Role
 
 The following snippet creates an [IAM Role]({{< ref "/docs/reference/pkg/aws/iam/role" >}}) resource using Pulumi. The
@@ -153,12 +152,12 @@ good introduction to some of the "worst-case scenarios" that could arise from a 
 see [this blog post from BishopFox](https://know.bishopfox.com/research/privilege-escalation-in-aws).
 
 The following is a hypothetical IAM policy that restricts the operations performed to just those for the
-AWS CloudFront and S3 products. (Which might be sufficient for 
+AWS CloudFront and S3 products. (Which might be sufficient for
 [updating a CDN-based website hosted on AWS]({{< relref "serving-a-static-website-on-aws-with-pulumi" >}}), but
 likely not much else.)
 
 ```typescript
-// Policy document defining the permissions granted to the WebsiteStackUpdaterRole. 
+// Policy document defining the permissions granted to the WebsiteStackUpdaterRole.
 export const websiteUpdaterPolicyDocument: aws.iam.PolicyDocument = {
     Version: "2012-10-17",
     Statement: [
@@ -314,7 +313,7 @@ scheme for your own. (And we won't take it personally, promise.)
 When you create a new stack using [pulumi stack init]({{< ref "/docs/reference/cli/pulumi_stack_init" >}}), you can optionally
 specify a `--secrets-provider` flag. That will determine the where and how of how secrets get managed on your stack.
 
-For example, to use your own KMS key for encrypting data, you can pass the secrets provider 
+For example, to use your own KMS key for encrypting data, you can pass the secrets provider
 `"awskms://alias/ExampleAlias?region=us-east-1"`. The Pulumi command-line will work and behave the same. Except that
 whenever it needs to encrypt or decrypt some data, it will refer to the custom provider.
 
