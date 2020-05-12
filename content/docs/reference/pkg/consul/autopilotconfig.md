@@ -32,7 +32,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_consul as consul
+
+config = consul.AutopilotConfig("config",
+    cleanup_dead_servers=False,
+    last_contact_threshold="1s",
+    max_trailing_logs=500)
+```
 {{% /example %}}
 
 {{% example typescript %}}

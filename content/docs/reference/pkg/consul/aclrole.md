@@ -29,7 +29,20 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_consul as consul
+
+read_policy = consul.AclPolicy("read-policy",
+    datacenters=["dc1"],
+    rules="node \"\" { policy = \"read\" }")
+read = consul.AclRole("read",
+    description="bar",
+    policies=[read_policy.id],
+    service_identities=[{
+        "serviceName": "foo",
+    }])
+```
 {{% /example %}}
 
 {{% example typescript %}}

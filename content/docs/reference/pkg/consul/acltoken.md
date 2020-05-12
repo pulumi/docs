@@ -28,7 +28,20 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_consul as consul
+
+agent = consul.AclPolicy("agent", rules="""node_prefix "" {
+  policy = "read"
+}
+
+""")
+test = consul.AclToken("test",
+    description="my test token",
+    local=True,
+    policies=[agent.name])
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -34,7 +34,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_consul as consul
+
+database = consul.Intention("database",
+    action="allow",
+    destination_name="db",
+    source_name="api")
+```
 {{% /example %}}
 
 {{% example typescript %}}

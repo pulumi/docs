@@ -34,7 +34,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_consul as consul
+
+app = consul.AgentService("app",
+    address="www.google.com",
+    port=80,
+    tags=[
+        "tag0",
+        "tag1",
+    ])
+```
 {{% /example %}}
 
 {{% example typescript %}}

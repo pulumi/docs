@@ -32,7 +32,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_consul as consul
+
+test = consul.get_acl_token(accessor_id="00000000-0000-0000-0000-000000000002")
+pulumi.export("consulAclPolicies", test.policies)
+```
 {{% /example %}}
 
 {{% example typescript %}}

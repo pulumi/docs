@@ -30,7 +30,28 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_consul as consul
+
+minikube = consul.AclAuthMethod("minikube",
+    config={
+        "CACert": """-----BEGIN CERTIFICATE-----
+...-----END CERTIFICATE-----
+
+""",
+        "Host": "https://192.0.2.42:8443",
+        "ServiceAccountJWT": "eyJhbGciOiJSUzI1NiIsImtpZCI6IiJ9...",
+    },
+    description="dev minikube cluster",
+    type="kubernetes")
+test = consul.AclBindingRule("test",
+    auth_method=minikube.name,
+    bind_name="minikube",
+    bind_type="service",
+    description="foobar",
+    selector="serviceaccount.namespace==default")
+```
 {{% /example %}}
 
 {{% example typescript %}}

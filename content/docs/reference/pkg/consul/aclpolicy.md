@@ -29,7 +29,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_consul as consul
+
+test = consul.AclPolicy("test",
+    datacenters=["dc1"],
+    rules="""node_prefix "" {
+  policy = "read"
+}
+
+""")
+```
 {{% /example %}}
 
 {{% example typescript %}}

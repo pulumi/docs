@@ -14,9 +14,44 @@ The `consul..AclPolicy` data source returns the information related to a
 [Consul ACL Policy](https://www.consul.io/docs/acl/acl-system.html#acl-policies).
 
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_consul as consul
+
+agent = consul.get_acl_policy(name="agent")
+pulumi.export("consulAclPolicy", agent.rules)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as consul from "@pulumi/consul";
+
+const agent = consul.getAclPolicy({
+    name: "agent",
+});
+export const consulAclPolicy = agent.then(agent => agent.rules);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAclPolicy {#using}

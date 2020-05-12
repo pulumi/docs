@@ -13,9 +13,44 @@ meta_desc: "Explore the GetAclAuthMethod function of the Consul package, includi
 The `consul..AclAuthMethod` data source returns the information related to a
 [Consul Auth Method](https://www.consul.io/docs/acl/acl-auth-methods.html).
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_consul as consul
+
+test = consul.get_acl_auth_method(name="minikube")
+pulumi.export("consulAclAuthMethod", test.config)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as consul from "@pulumi/consul";
+
+const test = consul.getAclAuthMethod({
+    name: "minikube",
+});
+export const consulAclAuthMethod = test.then(test => test.config);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAclAuthMethod {#using}
