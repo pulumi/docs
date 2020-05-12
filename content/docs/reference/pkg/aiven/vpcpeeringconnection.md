@@ -26,7 +26,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aiven as aiven
+
+mypeeringconnection = aiven.VpcPeeringConnection("mypeeringconnection",
+    peer_cloud_account="<PEER_ACCOUNT_ID>",
+    peer_region="<PEER_REGION>",
+    peer_vpc="<PEER_VPC_ID/NAME>",
+    vpc_id=aiven_project_vpc["myvpc"]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

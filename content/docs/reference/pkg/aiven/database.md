@@ -26,7 +26,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aiven as aiven
+
+mydatabase = aiven.Database("mydatabase",
+    database_name="<DATABASE_NAME>",
+    project=aiven_project["myproject"]["project"],
+    service_name=aiven_service["myservice"]["service_name"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

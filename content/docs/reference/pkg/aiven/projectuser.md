@@ -26,7 +26,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aiven as aiven
+
+mytestuser = aiven.ProjectUser("mytestuser",
+    email="john.doe@example.com",
+    member_type="admin",
+    project=aiven_project["myproject"]["project"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -26,7 +26,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aiven as aiven
+
+foo = aiven.get_account_team_member(account_id=aiven_account["developers"]["account_id"],
+    team_id=aiven_account["developers"]["account_id"],
+    user_email="user+1@example.com")
+```
 {{% /example %}}
 
 {{% example typescript %}}

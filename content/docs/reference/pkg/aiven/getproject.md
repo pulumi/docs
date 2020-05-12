@@ -26,7 +26,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aiven as aiven
+
+myproject = aiven.get_project(project="<PROJECT_NAME>")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -26,7 +26,23 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aiven as aiven
+
+myservice = aiven.Service("myservice",
+    cloud_name="google-europe-west1",
+    pg_user_config={
+        "ipFilter": ["0.0.0.0/0"],
+        "pgVersion": "10",
+    },
+    plan="business-8",
+    project=aiven_project["myproject"]["project"],
+    project_vpc_id=aiven_project_vpc["vpc_gcp_europe_west1"]["id"],
+    service_name="<SERVICE_NAME>",
+    service_type="pg",
+    termination_protection=True)
+```
 {{% /example %}}
 
 {{% example typescript %}}
