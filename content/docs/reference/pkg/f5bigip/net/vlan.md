@@ -31,7 +31,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+vlan1 = f5bigip.net.Vlan("vlan1",
+    interfaces=[{
+        "tagged": False,
+        "vlanport": 1.2,
+    }],
+    name="/Common/Internal",
+    tag=101)
+```
 {{% /example %}}
 
 {{% example typescript %}}

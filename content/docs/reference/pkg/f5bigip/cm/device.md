@@ -29,7 +29,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+my_new_device = f5bigip.cm.Device("myNewDevice",
+    configsync_ip="2.2.2.2",
+    mirror_ip="10.10.10.10",
+    mirror_secondary_ip="11.11.11.11",
+    name="bigip300.f5.com")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -30,7 +30,20 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+nyhttp2 = f5bigip.ltm.ProfileHttp2("nyhttp2",
+    activation_modes=[
+        "alpn",
+        "npn",
+    ],
+    concurrent_streams_per_connection=10,
+    connection_idle_timeout=30,
+    defaults_from="/Common/http2",
+    name="/Common/NewYork_http2")
+```
 {{% /example %}}
 
 {{% example typescript %}}

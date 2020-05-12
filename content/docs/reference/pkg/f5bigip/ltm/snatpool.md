@@ -31,7 +31,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+snatpool_sanjose = f5bigip.ltm.SnatPool("snatpoolSanjose",
+    members=[
+        "191.1.1.1",
+        "194.2.2.2",
+    ],
+    name="/Common/snatpool_sanjose")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -31,7 +31,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+sjhttpcompression = f5bigip.ltm.ProfileHttpCompress("sjhttpcompression",
+    content_type_excludes=["nicecontentexclude.com"],
+    content_type_includes=["nicecontent.com"],
+    defaults_from="/Common/httpcompression",
+    name="/Common/sjhttpcompression2",
+    uri_excludes=[
+        "www.abc.f5.com",
+        "www.abc2.f5.com",
+    ],
+    uri_includes=["www.xyzbc.cisco.com"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

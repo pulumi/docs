@@ -30,7 +30,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+test__client_ssl = f5bigip.ltm.ProfileClientSsl("test-ClientSsl",
+    authenticate="always",
+    ciphers="DEFAULT",
+    defaults_from="/Common/clientssl",
+    name="/Common/test-ClientSsl",
+    partition="Common")
+```
 {{% /example %}}
 
 {{% example typescript %}}

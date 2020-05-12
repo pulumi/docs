@@ -30,7 +30,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+sanjose_http = f5bigip.ltm.ProfileHttp("sanjose-http",
+    defaults_from="/Common/http",
+    description="some http",
+    fallback_host="titanic",
+    fallback_status_codes=[
+        "400",
+        "500",
+        "300",
+    ],
+    name="/Common/sanjose-http")
+```
 {{% /example %}}
 
 {{% example typescript %}}

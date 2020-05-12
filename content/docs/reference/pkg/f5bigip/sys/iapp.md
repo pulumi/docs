@@ -12,12 +12,14 @@ meta_desc: "Explore the IApp resource of the sys module, including examples, inp
 
 `f5bigip.sys.IApp` resource helps you to deploy Application Services template that can be used to automate and orchestrate Layer 4-7 applications service deployments using F5 Network.  
 
-{{% examples %}}
-{{% /examples %}}
+
 ## Example Usage of Json file
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 
  * `description` - User defined description.
@@ -36,6 +38,44 @@ import * as pulumi from "@pulumi/pulumi";
  * `tables` - Values provided like pool name, nodes etc.
  * `variables` - Name, values, encrypted or not
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+simplehttp = f5bigip.sys.IApp("simplehttp",
+    name="simplehttp",
+    jsonfile=(lambda path: open(path).read())("simplehttp.json"))
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as f5bigip from "@pulumi/f5bigip";
+import * from "fs";
+
+const simplehttp = new f5bigip.sys.IApp("simplehttp", {
+    name: "simplehttp",
+    jsonfile: fs.readFileSync("simplehttp.json"),
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IApp Resource {#create}

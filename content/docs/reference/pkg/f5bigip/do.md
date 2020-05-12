@@ -29,7 +29,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+do_example = f5bigip.Do("do-example",
+    do_json=(lambda path: open(path).read())("example.json"),
+    tenant_name="sample_test1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

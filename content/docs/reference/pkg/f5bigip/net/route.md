@@ -31,7 +31,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+route2 = f5bigip.net.Route("route2",
+    gw="1.1.1.2",
+    name="external-route",
+    network="10.10.10.0/24")
+```
 {{% /example %}}
 
 {{% example typescript %}}

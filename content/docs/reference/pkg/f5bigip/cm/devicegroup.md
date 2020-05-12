@@ -29,7 +29,24 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+my_new_devicegroup = f5bigip.cm.DeviceGroup("myNewDevicegroup",
+    auto_sync="enabled",
+    devices=[
+        {
+            "name": "bigip1.cisco.com",
+        },
+        {
+            "name": "bigip200.f5.com",
+        },
+    ],
+    full_load_on_sync="true",
+    name="sanjose_devicegroup",
+    type="sync-only")
+```
 {{% /example %}}
 
 {{% example typescript %}}

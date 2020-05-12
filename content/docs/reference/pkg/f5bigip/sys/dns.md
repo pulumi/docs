@@ -31,7 +31,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+dns1 = f5bigip.sys.Dns("dns1",
+    description="/Common/DNS1",
+    name_servers=["1.1.1.1"],
+    number_of_dots=2,
+    searches=["f5.com"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -30,7 +30,20 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+sanjose_tcp_lan_profile = f5bigip.ltm.ProfileTcp("sanjose-tcp-lan-profile",
+    close_wait_timeout=5,
+    deferred_accept="enabled",
+    fast_open="enabled",
+    finwait2timeout=5,
+    finwait_timeout=300,
+    idle_timeout=200,
+    keepalive_interval=1700,
+    name="sanjose-tcp-lan-profile")
+```
 {{% /example %}}
 
 {{% example typescript %}}

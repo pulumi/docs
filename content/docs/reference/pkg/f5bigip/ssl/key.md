@@ -14,9 +14,48 @@ meta_desc: "Explore the Key resource of the ssl module, including examples, inpu
 Certificate key can be imported from certificate key files on the local disk, in PEM format
 
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+test_key = f5bigip.ssl.Key("test-key",
+    name="serverkey.key",
+    content=(lambda path: open(path).read())("serverkey.key"),
+    partition="Common")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as f5bigip from "@pulumi/f5bigip";
+import * from "fs";
+
+const test-key = new f5bigip.ssl.Key("test-key", {
+    name: "serverkey.key",
+    content: fs.readFileSync("serverkey.key"),
+    partition: "Common",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Key Resource {#create}

@@ -14,9 +14,48 @@ meta_desc: "Explore the Certificate resource of the ssl module, including exampl
 Certificates can be imported from certificate files on the local disk, in PEM format
 
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+test_cert = f5bigip.ssl.Certificate("test-cert",
+    name="servercert.crt",
+    content=(lambda path: open(path).read())("servercert.crt"),
+    partition="Common")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as f5bigip from "@pulumi/f5bigip";
+import * from "fs";
+
+const test-cert = new f5bigip.ssl.Certificate("test-cert", {
+    name: "servercert.crt",
+    content: fs.readFileSync("servercert.crt"),
+    partition: "Common",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Certificate Resource {#create}
