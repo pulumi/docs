@@ -21,9 +21,62 @@ state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 This resource *does* use a cryptographic random number generator.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_random as random
+
+password = random.RandomPassword("password",
+    length=16,
+    special=True,
+    override_special="_%@")
+example = aws.rds.Instance("example",
+    instance_class="db.t3.micro",
+    allocated_storage=64,
+    engine="mysql",
+    username="someone",
+    password=random_string["password"]["result"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as random from "@pulumi/random";
+
+const password = new random.RandomPassword("password", {
+    length: 16,
+    special: true,
+    overrideSpecial: `_%@`,
+});
+const example = new aws.rds.Instance("example", {
+    instanceClass: "db.t3.micro",
+    allocatedStorage: 64,
+    engine: "mysql",
+    username: "someone",
+    password: random_string.password.result,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RandomPassword Resource {#create}

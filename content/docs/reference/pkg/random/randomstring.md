@@ -36,7 +36,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_random as random
+
+random = random.RandomString("random",
+    length=16,
+    override_special="/@£$$",
+    special=True)
+```
 {{% /example %}}
 
 {{% example typescript %}}
