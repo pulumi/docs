@@ -14,57 +14,9 @@ meta_desc: "Explore the GetPrivateEndpointInterfaceLink function of the mongodba
 
 > **NOTE:** Groups and projects are synonymous terms. You may find group_id in the official documentation.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * as mongodbatlas from "@pulumi/mongodbatlas";
-
-const testPrivateEndpoint = new mongodbatlas.PrivateEndpoint("test", {
-    projectId: "<PROJECT_ID>",
-    providerName: "AWS",
-    region: "us-east-1",
-});
-const ptfeService = new aws.ec2.VpcEndpoint("ptfe_service", {
-    securityGroupIds: ["sg-3f238186"],
-    serviceName: testPrivateEndpoint.endpointServiceName,
-    subnetIds: ["subnet-de0406d2"],
-    vpcEndpointType: "Interface",
-    vpcId: "vpc-7fc0a543",
-});
-const testMongodbatlasPrivateEndpointLink = new mongodbatlas.PrivateEndpointLink("test", {
-    interfaceEndpointId: ptfeService.id,
-    privateLinkId: testPrivateEndpoint.privateLinkId,
-    projectId: testPrivateEndpoint.projectId,
-});
-const testPrivateEndpointLink = pulumi.all([testMongodbatlasPrivateEndpointLink.interfaceEndpointId, testMongodbatlasPrivateEndpointLink.privateLinkId, testMongodbatlasPrivateEndpointLink.projectId]).apply(([interfaceEndpointId, privateLinkId, projectId]) => mongodbatlas.PrivateEndpointLink({
-    interfaceEndpointId: interfaceEndpointId,
-    privateLinkId: privateLinkId,
-    projectId: projectId,
-}, { async: true }));
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Using GetPrivateEndpointInterfaceLink {#using}

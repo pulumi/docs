@@ -14,9 +14,30 @@ meta_desc: "Explore the GetTeam function of the mongodbatlas package, including 
 
 > **NOTE:** Groups and projects are synonymous terms. You may find group_id in the official documentation.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+Coming soon!
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetTeam {#using}

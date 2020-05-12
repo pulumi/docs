@@ -35,7 +35,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+test = mongodbatlas.PrivateEndpoint("test",
+    project_id="<PROJECT-ID>",
+    provider_name="AWS",
+    region="us-east-1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

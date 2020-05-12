@@ -34,7 +34,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+test = mongodbatlas.Teams("test",
+    org_id="<ORGANIZATION-ID>",
+    usernames=[
+        "user1",
+        "user2",
+        "user3",
+    ])
+```
 {{% /example %}}
 
 {{% example typescript %}}

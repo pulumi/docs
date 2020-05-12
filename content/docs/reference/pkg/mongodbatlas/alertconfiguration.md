@@ -30,7 +30,38 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+test = mongodbatlas.AlertConfiguration("test",
+    enabled=True,
+    event_type="OUTSIDE_METRIC_THRESHOLD",
+    matchers=[{
+        "fieldName": "HOSTNAME_AND_PORT",
+        "operator": "EQUALS",
+        "value": "SECONDARY",
+    }],
+    metric_threshold={
+        "metric_name": "ASSERT_REGULAR",
+        "mode": "AVERAGE",
+        "operator": "LESS_THAN",
+        "threshold": 99,
+        "units": "RAW",
+    },
+    notifications=[{
+        "delayMin": 0,
+        "emailEnabled": True,
+        "intervalMin": 5,
+        "roles": [
+            "GROUP_CHARTS_ADMIN",
+            "GROUP_CLUSTER_MANAGER",
+        ],
+        "smsEnabled": False,
+        "typeName": "GROUP",
+    }],
+    project_id="<PROJECT-ID>")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -20,6 +20,38 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">AlertConfiguration</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">event_type</span><span class="o">=</span><span class="s2">&quot;OUTSIDE_METRIC_THRESHOLD&quot;</span><span class="p">,</span>
+    <span class="n">matchers</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;fieldName&quot;</span><span class="p">:</span> <span class="s2">&quot;HOSTNAME_AND_PORT&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;EQUALS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;SECONDARY&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">metric_threshold</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;metric_name&quot;</span><span class="p">:</span> <span class="s2">&quot;ASSERT_REGULAR&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;AVERAGE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;LESS_THAN&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mi">99</span><span class="p">,</span>
+        <span class="s2">&quot;units&quot;</span><span class="p">:</span> <span class="s2">&quot;RAW&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">notifications</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;delayMin&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;emailEnabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;intervalMin&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;roles&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;GROUP_CHARTS_ADMIN&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;GROUP_CLUSTER_MANAGER&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;smsEnabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;typeName&quot;</span><span class="p">:</span> <span class="s2">&quot;GROUP&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -470,6 +502,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_mongodbatlas.Auditing">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">Auditing</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">audit_authorization_success</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">audit_filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.Auditing" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">.Auditing</span></code> provides an Auditing resource. This allows auditing to be created.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Auditing</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">audit_authorization_success</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">audit_filter</span><span class="o">=</span><span class="s2">&quot;{ &#39;atype&#39;: &#39;authenticate&#39;, &#39;param&#39;: {   &#39;user&#39;: &#39;auditAdmin&#39;,   &#39;db&#39;: &#39;admin&#39;,   &#39;mechanism&#39;: &#39;SCRAM-SHA-1&#39; }}&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;project-id&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -725,6 +767,32 @@ On-demand snapshots happen immediately, unlike scheduled snapshots which occur a
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">my_cluster</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;myCluster&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;5cf5a45a9ccf6400e60981b6&quot;</span><span class="p">,</span>
+    <span class="n">disk_size_gb</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">provider_region_name</span><span class="o">=</span><span class="s2">&quot;EU_WEST_2&quot;</span><span class="p">,</span>
+    <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M10&quot;</span><span class="p">,</span>
+    <span class="n">provider_backup_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">provider_disk_iops</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">provider_encrypt_ebs_volume</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">test_cloud_provider_snapshot</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">CloudProviderSnapshot</span><span class="p">(</span><span class="s2">&quot;testCloudProviderSnapshot&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">my_cluster</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span>
+    <span class="n">cluster_name</span><span class="o">=</span><span class="n">my_cluster</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;myDescription&quot;</span><span class="p">,</span>
+    <span class="n">retention_in_days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">test_cloud_provider_snapshot_restore_job</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">CloudProviderSnapshotRestoreJob</span><span class="p">(</span><span class="s2">&quot;testCloudProviderSnapshotRestoreJob&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">test_cloud_provider_snapshot</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span>
+    <span class="n">cluster_name</span><span class="o">=</span><span class="n">test_cloud_provider_snapshot</span><span class="o">.</span><span class="n">cluster_name</span><span class="p">,</span>
+    <span class="n">snapshot_id</span><span class="o">=</span><span class="n">test_cloud_provider_snapshot</span><span class="o">.</span><span class="n">snapshot_id</span><span class="p">,</span>
+    <span class="n">delivery_type</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;download&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -889,6 +957,59 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">my_cluster</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;myCluster&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">disk_size_gb</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">provider_region_name</span><span class="o">=</span><span class="s2">&quot;EU_CENTRAL_1&quot;</span><span class="p">,</span>
+    <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M10&quot;</span><span class="p">,</span>
+    <span class="n">provider_backup_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">provider_disk_iops</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">provider_encrypt_ebs_volume</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">CloudProviderSnapshotBackupPolicy</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">my_cluster</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span>
+    <span class="n">cluster_name</span><span class="o">=</span><span class="n">my_cluster</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">reference_hour_of_day</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">reference_minute_of_hour</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span>
+    <span class="n">restore_window_days</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">policies</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">my_cluster</span><span class="o">.</span><span class="n">snapshot_backup_policies</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;policies&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;policy_item&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">my_cluster</span><span class="o">.</span><span class="n">snapshot_backup_policies</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;policies&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;policyItems&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;frequencyInterval&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;frequencyType&quot;</span><span class="p">:</span> <span class="s2">&quot;hourly&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;retentionUnit&quot;</span><span class="p">:</span> <span class="s2">&quot;days&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;retentionValue&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">my_cluster</span><span class="o">.</span><span class="n">snapshot_backup_policies</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;policies&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;policyItems&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;frequencyInterval&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;frequencyType&quot;</span><span class="p">:</span> <span class="s2">&quot;daily&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;retentionUnit&quot;</span><span class="p">:</span> <span class="s2">&quot;days&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;retentionValue&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">my_cluster</span><span class="o">.</span><span class="n">snapshot_backup_policies</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;policies&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;policyItems&quot;</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;frequencyInterval&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="s2">&quot;frequencyType&quot;</span><span class="p">:</span> <span class="s2">&quot;weekly&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;retentionUnit&quot;</span><span class="p">:</span> <span class="s2">&quot;weeks&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;retentionValue&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">my_cluster</span><span class="o">.</span><span class="n">snapshot_backup_policies</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;policies&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;policyItems&quot;</span><span class="p">][</span><span class="mi">3</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;frequencyInterval&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+                <span class="s2">&quot;frequencyType&quot;</span><span class="p">:</span> <span class="s2">&quot;monthly&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;retentionUnit&quot;</span><span class="p">:</span> <span class="s2">&quot;months&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;retentionValue&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1092,6 +1213,60 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">my_cluster</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;myCluster&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;5cf5a45a9ccf6400e60981b6&quot;</span><span class="p">,</span>
+    <span class="n">disk_size_gb</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">provider_region_name</span><span class="o">=</span><span class="s2">&quot;EU_WEST_2&quot;</span><span class="p">,</span>
+    <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M10&quot;</span><span class="p">,</span>
+    <span class="n">provider_backup_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">provider_disk_iops</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">provider_encrypt_ebs_volume</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">test_cloud_provider_snapshot</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">CloudProviderSnapshot</span><span class="p">(</span><span class="s2">&quot;testCloudProviderSnapshot&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">my_cluster</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span>
+    <span class="n">cluster_name</span><span class="o">=</span><span class="n">my_cluster</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;myDescription&quot;</span><span class="p">,</span>
+    <span class="n">retention_in_days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">test_cloud_provider_snapshot_restore_job</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">CloudProviderSnapshotRestoreJob</span><span class="p">(</span><span class="s2">&quot;testCloudProviderSnapshotRestoreJob&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">test_cloud_provider_snapshot</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span>
+    <span class="n">cluster_name</span><span class="o">=</span><span class="n">test_cloud_provider_snapshot</span><span class="o">.</span><span class="n">cluster_name</span><span class="p">,</span>
+    <span class="n">snapshot_id</span><span class="o">=</span><span class="n">test_cloud_provider_snapshot</span><span class="o">.</span><span class="n">snapshot_id</span><span class="p">,</span>
+    <span class="n">delivery_type</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;automated&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;target_cluster_name&quot;</span><span class="p">:</span> <span class="s2">&quot;MyCluster&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;target_project_id&quot;</span><span class="p">:</span> <span class="s2">&quot;5cf5a45a9ccf6400e60981b6&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">my_cluster</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;myCluster&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;5cf5a45a9ccf6400e60981b6&quot;</span><span class="p">,</span>
+    <span class="n">disk_size_gb</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">provider_region_name</span><span class="o">=</span><span class="s2">&quot;EU_WEST_2&quot;</span><span class="p">,</span>
+    <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M10&quot;</span><span class="p">,</span>
+    <span class="n">provider_backup_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">provider_disk_iops</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">provider_encrypt_ebs_volume</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">test_cloud_provider_snapshot</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">CloudProviderSnapshot</span><span class="p">(</span><span class="s2">&quot;testCloudProviderSnapshot&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">my_cluster</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span>
+    <span class="n">cluster_name</span><span class="o">=</span><span class="n">my_cluster</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;myDescription&quot;</span><span class="p">,</span>
+    <span class="n">retention_in_days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">test_cloud_provider_snapshot_restore_job</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">CloudProviderSnapshotRestoreJob</span><span class="p">(</span><span class="s2">&quot;testCloudProviderSnapshotRestoreJob&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">test_cloud_provider_snapshot</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span>
+    <span class="n">cluster_name</span><span class="o">=</span><span class="n">test_cloud_provider_snapshot</span><span class="o">.</span><span class="n">cluster_name</span><span class="p">,</span>
+    <span class="n">snapshot_id</span><span class="o">=</span><span class="n">test_cloud_provider_snapshot</span><span class="o">.</span><span class="n">snapshot_id</span><span class="p">,</span>
+    <span class="n">delivery_type</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;download&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1274,6 +1449,146 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="raw-html-m2r"><br></span> &amp;#8226; Changes to cluster configurations can affect costs. Before making changes, please see <a class="reference external" href="https://docs.atlas.mongodb.com/billing/">Billing</a>.
 <span class="raw-html-m2r"><br></span> &amp;#8226; If your Atlas project contains a custom role that uses actions introduced in a specific MongoDB version, you cannot create a cluster with a MongoDB version less than that version unless you delete the custom role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">cluster_test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;cluster-test&quot;</span><span class="p">,</span>
+    <span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">disk_size_gb</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">mongo_db_major_version</span><span class="o">=</span><span class="s2">&quot;4.0&quot;</span><span class="p">,</span>
+    <span class="n">num_shards</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR-PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">provider_backup_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">provider_disk_iops</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">provider_encrypt_ebs_volume</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M40&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">provider_region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_1&quot;</span><span class="p">,</span>
+    <span class="n">provider_volume_type</span><span class="o">=</span><span class="s2">&quot;STANDARD&quot;</span><span class="p">,</span>
+    <span class="n">replication_factor</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">mongo_db_major_version</span><span class="o">=</span><span class="s2">&quot;4.0&quot;</span><span class="p">,</span>
+    <span class="n">num_shards</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR-PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">provider_backup_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">provider_disk_type_name</span><span class="o">=</span><span class="s2">&quot;P6&quot;</span><span class="p">,</span>
+    <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M30&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AZURE&quot;</span><span class="p">,</span>
+    <span class="n">provider_region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_2&quot;</span><span class="p">,</span>
+    <span class="n">replication_factor</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">disk_size_gb</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
+    <span class="n">mongo_db_major_version</span><span class="o">=</span><span class="s2">&quot;4.0&quot;</span><span class="p">,</span>
+    <span class="n">num_shards</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR-PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">provider_backup_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M30&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;GCP&quot;</span><span class="p">,</span>
+    <span class="n">provider_region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_4&quot;</span><span class="p">,</span>
+    <span class="n">replication_factor</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">cluster_test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;cluster-test&quot;</span><span class="p">,</span>
+    <span class="n">cluster_type</span><span class="o">=</span><span class="s2">&quot;REPLICASET&quot;</span><span class="p">,</span>
+    <span class="n">disk_size_gb</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">num_shards</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR-PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">provider_backup_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">provider_disk_iops</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M10&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">provider_volume_type</span><span class="o">=</span><span class="s2">&quot;STANDARD&quot;</span><span class="p">,</span>
+    <span class="n">replication_specs</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;numShards&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;regionsConfig&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;electableNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+                <span class="s2">&quot;readOnlyNodes&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;regionName&quot;</span><span class="p">:</span> <span class="s2">&quot;US_EAST_1&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;electableNodes&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+                <span class="s2">&quot;readOnlyNodes&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;regionName&quot;</span><span class="p">:</span> <span class="s2">&quot;US_EAST_2&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;electableNodes&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+                <span class="s2">&quot;readOnlyNodes&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;regionName&quot;</span><span class="p">:</span> <span class="s2">&quot;US_WEST_1&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">cluster_test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;cluster-test&quot;</span><span class="p">,</span>
+    <span class="n">cluster_type</span><span class="o">=</span><span class="s2">&quot;GEOSHARDED&quot;</span><span class="p">,</span>
+    <span class="n">disk_size_gb</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
+    <span class="n">num_shards</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR-PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">provider_backup_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">provider_disk_iops</span><span class="o">=</span><span class="mi">240</span><span class="p">,</span>
+    <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M30&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">provider_volume_type</span><span class="o">=</span><span class="s2">&quot;STANDARD&quot;</span><span class="p">,</span>
+    <span class="n">replication_specs</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;numShards&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="s2">&quot;regionsConfig&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;electableNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+                <span class="s2">&quot;readOnlyNodes&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;regionName&quot;</span><span class="p">:</span> <span class="s2">&quot;US_EAST_1&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+            <span class="s2">&quot;zoneName&quot;</span><span class="p">:</span> <span class="s2">&quot;Zone 1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;numShards&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="s2">&quot;regionsConfig&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;electableNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+                <span class="s2">&quot;readOnlyNodes&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;regionName&quot;</span><span class="p">:</span> <span class="s2">&quot;EU_CENTRAL_1&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+            <span class="s2">&quot;zoneName&quot;</span><span class="p">:</span> <span class="s2">&quot;Zone 2&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">cluster_test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;cluster-test&quot;</span><span class="p">,</span>
+    <span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="p">,</span>
+    <span class="n">backing_provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">disk_size_gb</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+    <span class="n">mongo_db_major_version</span><span class="o">=</span><span class="s2">&quot;4.2&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR-PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M2&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;TENANT&quot;</span><span class="p">,</span>
+    <span class="n">provider_region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1846,6 +2161,90 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>IMPORTANT</strong> Custom roles cannot use actions unavailable to any cluster version in your project. Custom roles are defined at the project level, and must be compatible with each MongoDB version used by your project’s clusters. If you have a cluster in your project with MongoDB 3.4, you cannot create a custom role that uses actions introduced in MongoDB 3.6, such as useUUID.</p>
 <p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test_role</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">CustomDbRole</span><span class="p">(</span><span class="s2">&quot;testRole&quot;</span><span class="p">,</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;UPDATE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;collectionName&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;INSERT&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;collectionName&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;REMOVE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;collectionName&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">role_name</span><span class="o">=</span><span class="s2">&quot;myCustomRole&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">inherited_role_one</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">CustomDbRole</span><span class="p">(</span><span class="s2">&quot;inheritedRoleOne&quot;</span><span class="p">,</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;INSERT&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;collectionName&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">}],</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">role_name</span><span class="o">=</span><span class="s2">&quot;insertRole&quot;</span><span class="p">)</span>
+<span class="n">inherited_role_two</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">CustomDbRole</span><span class="p">(</span><span class="s2">&quot;inheritedRoleTwo&quot;</span><span class="p">,</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;SERVER_STATUS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;cluster&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">}],</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">inherited_role_one</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span>
+    <span class="n">role_name</span><span class="o">=</span><span class="s2">&quot;statusServerRole&quot;</span><span class="p">)</span>
+<span class="n">test_role</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">CustomDbRole</span><span class="p">(</span><span class="s2">&quot;testRole&quot;</span><span class="p">,</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;UPDATE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;collectionName&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;REMOVE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;collectionName&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">inherited_roles</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;roleName&quot;</span><span class="p">:</span> <span class="n">inherited_role_one</span><span class="o">.</span><span class="n">role_name</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;roleName&quot;</span><span class="p">:</span> <span class="n">inherited_role_two</span><span class="o">.</span><span class="n">role_name</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">inherited_role_one</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span>
+    <span class="n">role_name</span><span class="o">=</span><span class="s2">&quot;myCustomRole&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2110,6 +2509,36 @@ You can use the following clouds: AWS CMK, AZURE KEY VAULT and GOOGLE KEY VAULT 
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">EncryptionAtRest</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">aws_kms</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;access_key_id&quot;</span><span class="p">:</span> <span class="s2">&quot;AKIAIOSFODNN7EXAMPLE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;customer_master_key_id&quot;</span><span class="p">:</span> <span class="s2">&quot;030gce02-586d-48d2-a966-05ea954fde0g&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;US_EAST_1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;secret_access_key&quot;</span><span class="p">:</span> <span class="s2">&quot;wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">azure_key_vault</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;azure_environment&quot;</span><span class="p">:</span> <span class="s2">&quot;AZURE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;client_id&quot;</span><span class="p">:</span> <span class="s2">&quot;g54f9e2-89e3-40fd-8188-EXAMPLEID&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;key_identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;https://EXAMPLEKeyVault.vault.azure.net/keys/EXAMPLEKey/d891821e3d364e9eb88fbd3d11807b86&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;key_vault_name&quot;</span><span class="p">:</span> <span class="s2">&quot;EXAMPLEKeyVault&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;resource_group_name&quot;</span><span class="p">:</span> <span class="s2">&quot;ExampleRGName&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;secret&quot;</span><span class="p">:</span> <span class="s2">&quot;EXAMPLESECRET&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subscription_id&quot;</span><span class="p">:</span> <span class="s2">&quot;0ec944e3-g725-44f9-a147-EXAMPLEID&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tenant_id&quot;</span><span class="p">:</span> <span class="s2">&quot;e8e4b6ba-ff32-4c88-a9af-EXAMPLEID&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">google_cloud_kms</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;key_version_resource_id&quot;</span><span class="p">:</span> <span class="s2">&quot;projects/my-project-common-0/locations/us-east4/keyRings/my-key-ring-0/cryptoKeys/my-key-0/cryptoKeyVersions/1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;service_account_key&quot;</span><span class="p">:</span> <span class="s2">&quot;{&quot;</span><span class="nb">type</span><span class="s2">&quot;: &quot;</span><span class="n">service_account</span><span class="s2">&quot;,&quot;</span><span class="n">project_id</span><span class="s2">&quot;: &quot;</span><span class="n">my</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">common</span><span class="o">-</span><span class="mi">0</span><span class="s2">&quot;,&quot;</span><span class="n">private_key_id</span><span class="s2">&quot;: &quot;</span><span class="n">e120598ea4f88249469fcdd75a9a785c1bb3</span><span class="s2">&quot;,&quot;</span><span class="n">private_key</span><span class="s2">&quot;: &quot;</span><span class="o">-----</span><span class="n">BEGIN</span> <span class="n">PRIVATE</span> <span class="n">KEY</span><span class="o">-----</span>\<span class="n">nMIIEuwIBA</span><span class="p">(</span><span class="n">truncated</span><span class="p">)</span><span class="n">SfecnS0mT94D9</span>\<span class="n">n</span><span class="o">-----</span><span class="n">END</span> <span class="n">PRIVATE</span> <span class="n">KEY</span><span class="o">-----</span>\<span class="n">n</span><span class="s2">&quot;,&quot;</span><span class="n">client_email</span><span class="s2">&quot;: &quot;</span><span class="n">my</span><span class="o">-</span><span class="n">email</span><span class="o">-</span><span class="n">kms</span><span class="o">-</span><span class="mi">0</span><span class="nd">@my</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">common</span><span class="o">-</span><span class="mf">0.</span><span class="n">iam</span><span class="o">.</span><span class="n">gserviceaccount</span><span class="o">.</span><span class="n">com</span><span class="s2">&quot;,&quot;</span><span class="n">client_id</span><span class="s2">&quot;: &quot;</span><span class="mi">10180967717292066</span><span class="s2">&quot;,&quot;</span><span class="n">auth_uri</span><span class="s2">&quot;: &quot;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">accounts</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">o</span><span class="o">/</span><span class="n">oauth2</span><span class="o">/</span><span class="n">auth</span><span class="s2">&quot;,&quot;</span><span class="n">token_uri</span><span class="s2">&quot;: &quot;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">accounts</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">o</span><span class="o">/</span><span class="n">oauth2</span><span class="o">/</span><span class="n">token</span><span class="s2">&quot;,&quot;</span><span class="n">auth_provider_x509_cert_url</span><span class="s2">&quot;: &quot;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">googleapis</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">oauth2</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">certs</span><span class="s2">&quot;,&quot;</span><span class="n">client_x509_cert_url</span><span class="s2">&quot;: &quot;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">googleapis</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">robot</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">metadata</span><span class="o">/</span><span class="n">x509</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">email</span><span class="o">-</span><span class="n">kms</span><span class="o">-</span><span class="mi">0</span><span class="o">%</span><span class="mi">40</span><span class="n">my</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">common</span><span class="o">-</span><span class="mf">0.</span><span class="n">iam</span><span class="o">.</span><span class="n">gserviceaccount</span><span class="o">.</span><span class="n">com</span><span class="s2">&quot;}&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3392,6 +3821,84 @@ The following are valid roles:</p></li>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR-PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">disk_size_gb</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
+    <span class="n">backup_enabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">provider_backup_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">cluster_type</span><span class="o">=</span><span class="s2">&quot;GEOSHARDED&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">provider_disk_iops</span><span class="o">=</span><span class="mi">240</span><span class="p">,</span>
+    <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M30&quot;</span><span class="p">,</span>
+    <span class="n">replication_specs</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;zoneName&quot;</span><span class="p">:</span> <span class="s2">&quot;Zone 1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;numShards&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;regions_config&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;regionName&quot;</span><span class="p">:</span> <span class="s2">&quot;EU_CENTRAL_1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;electableNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+                <span class="s2">&quot;readOnlyNodes&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="p">}],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;zoneName&quot;</span><span class="p">:</span> <span class="s2">&quot;Zone 2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;numShards&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;regions_config&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;regionName&quot;</span><span class="p">:</span> <span class="s2">&quot;US_EAST_2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;electableNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+                <span class="s2">&quot;readOnlyNodes&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="p">}],</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">GlobalClusterConfig</span><span class="p">(</span><span class="s2">&quot;config&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">test</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span>
+    <span class="n">cluster_name</span><span class="o">=</span><span class="n">test</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">managed_namespaces</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;db&quot;</span><span class="p">:</span> <span class="s2">&quot;mydata&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;collection&quot;</span><span class="p">:</span> <span class="s2">&quot;publishers&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;customShardKey&quot;</span><span class="p">:</span> <span class="s2">&quot;city&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">custom_zone_mappings</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;CA&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;zone&quot;</span><span class="p">:</span> <span class="s2">&quot;Zone 1&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">cluster_test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;cluster-test&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR-PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">num_shards</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">replication_factor</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">backup_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">mongo_db_major_version</span><span class="o">=</span><span class="s2">&quot;4.0&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">disk_size_gb</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">provider_disk_iops</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">provider_encrypt_ebs_volume</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M40&quot;</span><span class="p">,</span>
+    <span class="n">provider_region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_1&quot;</span><span class="p">)</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">GlobalClusterConfig</span><span class="p">(</span><span class="s2">&quot;config&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">mongodbatlas_cluster</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
+    <span class="n">cluster_name</span><span class="o">=</span><span class="n">mongodbatlas_cluster</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">managed_namespaces</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;db&quot;</span><span class="p">:</span> <span class="s2">&quot;mydata&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;collection&quot;</span><span class="p">:</span> <span class="s2">&quot;publishers&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;customShardKey&quot;</span><span class="p">:</span> <span class="s2">&quot;city&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">custom_zone_mappings</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;CA&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;zone&quot;</span><span class="p">:</span> <span class="s2">&quot;Zone 1&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3542,6 +4049,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>Maintenance Requires Replica Set Elections: Atlas performs maintenance the same way as the manual maintenance procedure. This requires at least one replica set election during the maintenance window per replica set.</p></li>
 <li><p>Maintenance Starts As Close to the Hour As Possible: Maintenance always begins as close to the scheduled hour as possible, but in-progress cluster updates or expected system issues could delay the start time.</p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">MaintenanceWindow</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">day_of_week</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">hour_of_day</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;your-project-id&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3666,6 +4182,35 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <strong>group_id</strong> in the official documentation.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">NetworkContainer</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">atlas_cidr_block</span><span class="o">=</span><span class="s2">&quot;10.8.0.0/21&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR-PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">NetworkContainer</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">atlas_cidr_block</span><span class="o">=</span><span class="s2">&quot;10.8.0.0/21&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR-PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;GCP&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">NetworkContainer</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">atlas_cidr_block</span><span class="o">=</span><span class="s2">&quot;10.8.0.0/21&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR-PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AZURE&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;US_EAST_2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4069,6 +4614,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">PrivateEndpoint</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4263,6 +4817,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test_private_endpoint</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">PrivateEndpoint</span><span class="p">(</span><span class="s2">&quot;testPrivateEndpoint&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT_ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">)</span>
+<span class="n">ptfe_service</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcEndpoint</span><span class="p">(</span><span class="s2">&quot;ptfeService&quot;</span><span class="p">,</span>
+    <span class="n">security_group_ids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;sg-3f238186&quot;</span><span class="p">],</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="n">test_private_endpoint</span><span class="o">.</span><span class="n">endpoint_service_name</span><span class="p">,</span>
+    <span class="n">subnet_ids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;subnet-de0406d2&quot;</span><span class="p">],</span>
+    <span class="n">vpc_endpoint_type</span><span class="o">=</span><span class="s2">&quot;Interface&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="s2">&quot;vpc-7fc0a543&quot;</span><span class="p">)</span>
+<span class="n">test_private_endpoint_interface_link</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">PrivateEndpointInterfaceLink</span><span class="p">(</span><span class="s2">&quot;testPrivateEndpointInterfaceLink&quot;</span><span class="p">,</span>
+    <span class="n">interface_endpoint_id</span><span class="o">=</span><span class="n">ptfe_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">private_link_id</span><span class="o">=</span><span class="n">test_private_endpoint</span><span class="o">.</span><span class="n">private_link_id</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">test_private_endpoint</span><span class="o">.</span><span class="n">project_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4379,6 +4953,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Deprecated Feature</strong>: <span class="raw-html-m2r"><br></span> This feature has been deprecated. Use <a class="reference external" href="https://dochub.mongodb.org/core/atlas-horizon-faq">Split Horizon connection strings</a> to connect to your cluster. These connection strings allow you to connect using both VPC/VNet Peering and whitelisted public IP addresses. To learn more about support for Split Horizon, see <a class="reference external" href="https://dochub.mongodb.org/core/atlas-horizon-faq">this FAQ</a>. You need this endpoint to <a class="reference external" href="https://docs.atlas.mongodb.com/reference/faq/connection-changes/#disable-peering-mode">disable Peering Only</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">my_private_ip_mode</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">PrivateIpMode</span><span class="p">(</span><span class="s2">&quot;myPrivateIpMode&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR PROJECT ID&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4586,6 +5168,46 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>IMPORTANT:</strong>
 When you remove an entry from the whitelist, existing connections from the removed address(es) may remain open for a variable amount of time. How much time passes before Atlas closes the connection depends on several factors, including how the connection was established, the particular behavior of the application or driver using the address, and the connection protocol (e.g., TCP or UDP). This is particularly important to consider when changing an existing IP address or CIDR block as they cannot be updated via the Provider (comments can however), hence a change will force the destruction and recreation of entries.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">ProjectIpWhitelist</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;1.2.3.4/32&quot;</span><span class="p">,</span>
+    <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;cidr block for tf acc testing&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">ProjectIpWhitelist</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;ip address for tf acc testing&quot;</span><span class="p">,</span>
+    <span class="n">ip_address</span><span class="o">=</span><span class="s2">&quot;2.3.4.5&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test_network_container</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">NetworkContainer</span><span class="p">(</span><span class="s2">&quot;testNetworkContainer&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">atlas_cidr_block</span><span class="o">=</span><span class="s2">&quot;192.168.208.0/21&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_1&quot;</span><span class="p">)</span>
+<span class="n">test_network_peering</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">NetworkPeering</span><span class="p">(</span><span class="s2">&quot;testNetworkPeering&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">container_id</span><span class="o">=</span><span class="n">test_network_container</span><span class="o">.</span><span class="n">container_id</span><span class="p">,</span>
+    <span class="n">accepter_region_name</span><span class="o">=</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">route_table_cidr_block</span><span class="o">=</span><span class="s2">&quot;172.31.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="s2">&quot;vpc-0d93d6f69f1578bd8&quot;</span><span class="p">,</span>
+    <span class="n">aws_account_id</span><span class="o">=</span><span class="s2">&quot;232589400519&quot;</span><span class="p">)</span>
+<span class="n">test_project_ip_whitelist</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">ProjectIpWhitelist</span><span class="p">(</span><span class="s2">&quot;testProjectIpWhitelist&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">aws_security_group</span><span class="o">=</span><span class="s2">&quot;sg-0026348ec11780bd1&quot;</span><span class="p">,</span>
+    <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;TestAcc for awsSecurityGroup&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4752,6 +5374,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
 </div></blockquote>
 <p>MongoDB Atlas Team limits: max 250 teams in an organization and max 100 teams per project.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Teams</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">org_id</span><span class="o">=</span><span class="s2">&quot;&lt;ORGANIZATION-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">usernames</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;user1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;user2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;user3&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4931,6 +5565,53 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">user</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">DatabaseUser</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;$$external&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;My Key&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;My Value&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">roles</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;roleName&quot;</span><span class="p">:</span> <span class="s2">&quot;atlasAdmin&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;myUsername&quot;</span><span class="p">,</span>
+    <span class="n">x509_type</span><span class="o">=</span><span class="s2">&quot;MANAGED&quot;</span><span class="p">)</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">X509AuthenticationDatabaseUser</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">months_until_expiration</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">user</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">X509AuthenticationDatabaseUser</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">customer_x509_cas</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;  -----BEGIN CERTIFICATE-----</span>
+<span class="s2">  MIICmTCCAgICCQDZnHzklxsT9TANBgkqhkiG9w0BAQsFADCBkDELMAkGA1UEBhMC</span>
+<span class="s2">  VVMxDjAMBgNVBAgMBVRleGFzMQ8wDQYDVQQHDAZBdXN0aW4xETAPBgNVBAoMCHRl</span>
+<span class="s2">  c3QuY29tMQ0wCwYDVQQLDARUZXN0MREwDwYDVQQDDAh0ZXN0LmNvbTErMCkGCSqG</span>
+<span class="s2">  SIb3DQEJARYcbWVsaXNzYS5wbHVua2V0dEBtb25nb2RiLmNvbTAeFw0yMDAyMDQy</span>
+<span class="s2">  MDQ2MDFaFw0yMTAyMDMyMDQ2MDFaMIGQMQswCQYDVQQGEwJVUzEOMAwGA1UECAwF</span>
+<span class="s2">  VGV4YXMxDzANBgNVBAcMBkF1c3RpbjERMA8GA1UECgwIdGVzdC5jb20xDTALBgNV</span>
+<span class="s2">  BAsMBFRlc3QxETAPBgNVBAMMCHRlc3QuY29tMSswKQYJKoZIhvcNAQkBFhxtZWxp</span>
+<span class="s2">  c3NhLnBsdW5rZXR0QG1vbmdvZGIuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCB</span>
+<span class="s2">  iQKBgQCf1LRqr1zftzdYx2Aj9G76tb0noMPtj6faGLlPji1+m6Rn7RWD9L0ntWAr</span>
+<span class="s2">  cURxvypa9jZ9MXFzDtLevvd3tHEmfrUT3ukNDX6+Jtc4kWm+Dh2A70Pd+deKZ2/O</span>
+<span class="s2">  Fh8audEKAESGXnTbeJCeQa1XKlIkjqQHBNwES5h1b9vJtFoLJwIDAQABMA0GCSqG</span>
+<span class="s2">  SIb3DQEBCwUAA4GBADMUncjEPV/MiZUcVNGmktP6BPmEqMXQWUDpdGW2+Tg2JtUA</span>
+<span class="s2">  7MMILtepBkFzLO+GlpZxeAlXO0wxiNgEmCRONgh4+t2w3e7a8GFijYQ99FHrAC5A</span>
+<span class="s2">  iul59bdl18gVqXia1Yeq/iK7Ohfy/Jwd7Hsm530elwkM/ZEkYDjBlZSXYdyz</span>
+<span class="s2">  -----END CERTIFICATE-----&quot;</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5061,6 +5742,56 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">user</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">DatabaseUser</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;$$external&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;My Key&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;My Value&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">roles</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;roleName&quot;</span><span class="p">:</span> <span class="s2">&quot;atlasAdmin&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;myUsername&quot;</span><span class="p">,</span>
+    <span class="n">x509_type</span><span class="o">=</span><span class="s2">&quot;MANAGED&quot;</span><span class="p">)</span>
+<span class="n">test_x509_authentication_database_user</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">X509AuthenticationDatabaseUser</span><span class="p">(</span><span class="s2">&quot;testX509AuthenticationDatabaseUser&quot;</span><span class="p">,</span>
+    <span class="n">months_until_expiration</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">user</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">)</span>
+<span class="n">test509_authentication_database_user</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">test_x509_authentication_database_user</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span> <span class="n">test_x509_authentication_database_user</span><span class="o">.</span><span class="n">username</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">project_id</span><span class="p">,</span> <span class="n">username</span><span class="p">:</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">get509_authentication_database_user</span><span class="p">(</span><span class="n">project_id</span><span class="o">=</span><span class="n">project_id</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test_x509_authentication_database_user</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">X509AuthenticationDatabaseUser</span><span class="p">(</span><span class="s2">&quot;testX509AuthenticationDatabaseUser&quot;</span><span class="p">,</span>
+    <span class="n">customer_x509_cas</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;  -----BEGIN CERTIFICATE-----</span>
+<span class="s2">  MIICmTCCAgICCQDZnHzklxsT9TANBgkqhkiG9w0BAQsFADCBkDELMAkGA1UEBhMC</span>
+<span class="s2">  VVMxDjAMBgNVBAgMBVRleGFzMQ8wDQYDVQQHDAZBdXN0aW4xETAPBgNVBAoMCHRl</span>
+<span class="s2">  c3QuY29tMQ0wCwYDVQQLDARUZXN0MREwDwYDVQQDDAh0ZXN0LmNvbTErMCkGCSqG</span>
+<span class="s2">  SIb3DQEJARYcbWVsaXNzYS5wbHVua2V0dEBtb25nb2RiLmNvbTAeFw0yMDAyMDQy</span>
+<span class="s2">  MDQ2MDFaFw0yMTAyMDMyMDQ2MDFaMIGQMQswCQYDVQQGEwJVUzEOMAwGA1UECAwF</span>
+<span class="s2">  VGV4YXMxDzANBgNVBAcMBkF1c3RpbjERMA8GA1UECgwIdGVzdC5jb20xDTALBgNV</span>
+<span class="s2">  BAsMBFRlc3QxETAPBgNVBAMMCHRlc3QuY29tMSswKQYJKoZIhvcNAQkBFhxtZWxp</span>
+<span class="s2">  c3NhLnBsdW5rZXR0QG1vbmdvZGIuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCB</span>
+<span class="s2">  iQKBgQCf1LRqr1zftzdYx2Aj9G76tb0noMPtj6faGLlPji1+m6Rn7RWD9L0ntWAr</span>
+<span class="s2">  cURxvypa9jZ9MXFzDtLevvd3tHEmfrUT3ukNDX6+Jtc4kWm+Dh2A70Pd+deKZ2/O</span>
+<span class="s2">  Fh8audEKAESGXnTbeJCeQa1XKlIkjqQHBNwES5h1b9vJtFoLJwIDAQABMA0GCSqG</span>
+<span class="s2">  SIb3DQEBCwUAA4GBADMUncjEPV/MiZUcVNGmktP6BPmEqMXQWUDpdGW2+Tg2JtUA</span>
+<span class="s2">  7MMILtepBkFzLO+GlpZxeAlXO0wxiNgEmCRONgh4+t2w3e7a8GFijYQ99FHrAC5A</span>
+<span class="s2">  iul59bdl18gVqXia1Yeq/iK7Ohfy/Jwd7Hsm530elwkM/ZEkYDjBlZSXYdyz</span>
+<span class="s2">  -----END CERTIFICATE-----&quot;</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">)</span>
+<span class="n">test509_authentication_database_user</span> <span class="o">=</span> <span class="n">test_x509_authentication_database_user</span><span class="o">.</span><span class="n">project_id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">project_id</span><span class="p">:</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">get509_authentication_database_user</span><span class="p">(</span><span class="n">project_id</span><span class="o">=</span><span class="n">project_id</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5161,6 +5892,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test_cloud_provider_snapshot</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">CloudProviderSnapshot</span><span class="p">(</span><span class="s2">&quot;testCloudProviderSnapshot&quot;</span><span class="p">,</span>
+    <span class="n">cluster_name</span><span class="o">=</span><span class="s2">&quot;MyCluster&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;MyDescription&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;5cf5a45a9ccf6400e60981b6&quot;</span><span class="p">,</span>
+    <span class="n">retention_in_days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">test_cloud_provider_snapshot_restore_job</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">CloudProviderSnapshotRestoreJob</span><span class="p">(</span><span class="s2">&quot;testCloudProviderSnapshotRestoreJob&quot;</span><span class="p">,</span>
+    <span class="n">cluster_name</span><span class="o">=</span><span class="s2">&quot;MyCluster&quot;</span><span class="p">,</span>
+    <span class="n">delivery_type</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;automated&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;target_cluster_name&quot;</span><span class="p">:</span> <span class="s2">&quot;MyCluster&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;target_project_id&quot;</span><span class="p">:</span> <span class="s2">&quot;5cf5a45a9ccf6400e60981b6&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;5cf5a45a9ccf6400e60981b6&quot;</span><span class="p">,</span>
+    <span class="n">snapshot_id</span><span class="o">=</span><span class="n">test_cloud_provider_snapshot</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">test_cloud_provider_snapshot_restore_jobs</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">test_cloud_provider_snapshot_restore_job</span><span class="o">.</span><span class="n">cluster_name</span><span class="p">,</span> <span class="n">test_cloud_provider_snapshot_restore_job</span><span class="o">.</span><span class="n">project_id</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">cluster_name</span><span class="p">,</span> <span class="n">project_id</span><span class="p">:</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">get_cloud_provider_snapshot_restore_jobs</span><span class="p">(</span><span class="n">cluster_name</span><span class="o">=</span><span class="n">cluster_name</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">project_id</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5215,6 +5967,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="raw-html-m2r"><br></span> &amp;#8226; Changes to cluster configurations can affect costs. Before making changes, please see <a class="reference external" href="https://docs.atlas.mongodb.com/billing/">Billing</a>.
 <span class="raw-html-m2r"><br></span> &amp;#8226; If your Atlas project contains a custom role that uses actions introduced in a specific MongoDB version, you cannot create a cluster with a MongoDB version less than that version unless you delete the custom role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test_cluster</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;testCluster&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR-PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">disk_size_gb</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">num_shards</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">replication_factor</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">provider_backup_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">provider_disk_iops</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">provider_volume_type</span><span class="o">=</span><span class="s2">&quot;STANDARD&quot;</span><span class="p">,</span>
+    <span class="n">provider_encrypt_ebs_volume</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M40&quot;</span><span class="p">,</span>
+    <span class="n">provider_region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_1&quot;</span><span class="p">)</span>
+<span class="n">test_clusters</span> <span class="o">=</span> <span class="n">test_cluster</span><span class="o">.</span><span class="n">project_id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">project_id</span><span class="p">:</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">get_clusters</span><span class="p">(</span><span class="n">project_id</span><span class="o">=</span><span class="n">project_id</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>project_id</strong> (<em>str</em>) – The unique ID for the project to get the clusters.</p>
@@ -5229,6 +6000,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test_role</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">CustomDbRole</span><span class="p">(</span><span class="s2">&quot;testRole&quot;</span><span class="p">,</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;UPDATE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;collectionName&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;INSERT&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;collectionName&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">role_name</span><span class="o">=</span><span class="s2">&quot;myCustomRole&quot;</span><span class="p">)</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">test_role</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span> <span class="n">test_role</span><span class="o">.</span><span class="n">role_name</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">project_id</span><span class="p">,</span> <span class="n">role_name</span><span class="p">:</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">get_custom_db_role</span><span class="p">(</span><span class="n">project_id</span><span class="o">=</span><span class="n">project_id</span><span class="p">,</span>
+    <span class="n">role_name</span><span class="o">=</span><span class="n">role_name</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5251,6 +6048,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test_database_user</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">DatabaseUser</span><span class="p">(</span><span class="s2">&quot;testDatabaseUser&quot;</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;test-acc-password&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">roles</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;roleName&quot;</span><span class="p">:</span> <span class="s2">&quot;readWrite&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;roleName&quot;</span><span class="p">:</span> <span class="s2">&quot;atlasAdmin&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;test-acc-username&quot;</span><span class="p">)</span>
+<span class="n">test_custom_db_roles</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">get_custom_db_roles</span><span class="p">(</span><span class="n">project_id</span><span class="o">=</span><span class="n">mongodbatlas_custom_db_role</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;project_id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>project_id</strong> (<em>str</em>) – The unique ID for the project to get all custom db roles.</p>
@@ -5286,6 +6104,37 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test_database_user</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">DatabaseUser</span><span class="p">(</span><span class="s2">&quot;testDatabaseUser&quot;</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;test-acc-username&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;test-acc-password&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">auth_database_name</span><span class="o">=</span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+    <span class="n">roles</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;roleName&quot;</span><span class="p">:</span> <span class="s2">&quot;readWrite&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;roleName&quot;</span><span class="p">:</span> <span class="s2">&quot;atlasAdmin&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;key 1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;value 1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;key 2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;value 2&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+<span class="n">test_database_users</span> <span class="o">=</span> <span class="n">test_database_user</span><span class="o">.</span><span class="n">project_id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">project_id</span><span class="p">:</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">get_database_users</span><span class="p">(</span><span class="n">project_id</span><span class="o">=</span><span class="n">project_id</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>project_id</strong> (<em>str</em>) – The unique ID for the project to get all database users.</p>
@@ -5359,6 +6208,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <strong>group_id</strong> in the official documentation.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test_network_container</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">NetworkContainer</span><span class="p">(</span><span class="s2">&quot;testNetworkContainer&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR-PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">atlas_cidr_block</span><span class="o">=</span><span class="s2">&quot;10.8.0.0/21&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_1&quot;</span><span class="p">)</span>
+<span class="n">test_network_containers</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">test_network_container</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span> <span class="n">test_network_container</span><span class="o">.</span><span class="n">provider_name</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">project_id</span><span class="p">,</span> <span class="n">provider_name</span><span class="p">:</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">get_network_containers</span><span class="p">(</span><span class="n">project_id</span><span class="o">=</span><span class="n">project_id</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="n">provider_name</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5393,6 +6254,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <strong>group_id</strong> in the official documentation.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test_network_peering</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">NetworkPeering</span><span class="p">(</span><span class="s2">&quot;testNetworkPeering&quot;</span><span class="p">,</span>
+    <span class="n">accepter_region_name</span><span class="o">=</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR-PROJEC-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">container_id</span><span class="o">=</span><span class="s2">&quot;507f1f77bcf86cd799439011&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">route_table_cidr_block</span><span class="o">=</span><span class="s2">&quot;192.168.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="s2">&quot;vpc-abc123abc123&quot;</span><span class="p">,</span>
+    <span class="n">aws_account_id</span><span class="o">=</span><span class="s2">&quot;abc123abc123&quot;</span><span class="p">)</span>
+<span class="n">test_network_peerings</span> <span class="o">=</span> <span class="n">test_network_peering</span><span class="o">.</span><span class="n">project_id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">project_id</span><span class="p">:</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">get_network_peerings</span><span class="p">(</span><span class="n">project_id</span><span class="o">=</span><span class="n">project_id</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>project_id</strong> (<em>str</em>) – The unique ID for the project to create the database user.</p>

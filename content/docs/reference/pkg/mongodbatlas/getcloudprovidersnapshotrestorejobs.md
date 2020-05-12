@@ -30,7 +30,27 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+test_cloud_provider_snapshot = mongodbatlas.CloudProviderSnapshot("testCloudProviderSnapshot",
+    cluster_name="MyCluster",
+    description="MyDescription",
+    project_id="5cf5a45a9ccf6400e60981b6",
+    retention_in_days=1)
+test_cloud_provider_snapshot_restore_job = mongodbatlas.CloudProviderSnapshotRestoreJob("testCloudProviderSnapshotRestoreJob",
+    cluster_name="MyCluster",
+    delivery_type={
+        "automated": True,
+        "target_cluster_name": "MyCluster",
+        "target_project_id": "5cf5a45a9ccf6400e60981b6",
+    },
+    project_id="5cf5a45a9ccf6400e60981b6",
+    snapshot_id=test_cloud_provider_snapshot.id)
+test_cloud_provider_snapshot_restore_jobs = pulumi.Output.all(test_cloud_provider_snapshot_restore_job.cluster_name, test_cloud_provider_snapshot_restore_job.project_id).apply(lambda cluster_name, project_id: mongodbatlas.get_cloud_provider_snapshot_restore_jobs(cluster_name=cluster_name,
+    project_id=project_id))
+```
 {{% /example %}}
 
 {{% example typescript %}}

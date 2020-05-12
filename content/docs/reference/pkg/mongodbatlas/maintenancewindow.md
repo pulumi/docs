@@ -39,7 +39,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+test = mongodbatlas.MaintenanceWindow("test",
+    day_of_week=3,
+    hour_of_day=4,
+    project_id="<your-project-id>")
+```
 {{% /example %}}
 
 {{% example typescript %}}

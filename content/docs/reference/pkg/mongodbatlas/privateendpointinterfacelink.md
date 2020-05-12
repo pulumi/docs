@@ -35,7 +35,26 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_mongodbatlas as mongodbatlas
+
+test_private_endpoint = mongodbatlas.PrivateEndpoint("testPrivateEndpoint",
+    project_id="<PROJECT_ID>",
+    provider_name="AWS",
+    region="us-east-1")
+ptfe_service = aws.ec2.VpcEndpoint("ptfeService",
+    security_group_ids=["sg-3f238186"],
+    service_name=test_private_endpoint.endpoint_service_name,
+    subnet_ids=["subnet-de0406d2"],
+    vpc_endpoint_type="Interface",
+    vpc_id="vpc-7fc0a543")
+test_private_endpoint_interface_link = mongodbatlas.PrivateEndpointInterfaceLink("testPrivateEndpointInterfaceLink",
+    interface_endpoint_id=ptfe_service.id,
+    private_link_id=test_private_endpoint.private_link_id,
+    project_id=test_private_endpoint.project_id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -37,7 +37,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+test = mongodbatlas.NetworkContainer("test",
+    atlas_cidr_block="10.8.0.0/21",
+    project_id="<YOUR-PROJECT-ID>",
+    provider_name="AWS",
+    region_name="US_EAST_1")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -64,7 +73,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+test = mongodbatlas.NetworkContainer("test",
+    atlas_cidr_block="10.8.0.0/21",
+    project_id="<YOUR-PROJECT-ID>",
+    provider_name="GCP")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -90,7 +107,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+test = mongodbatlas.NetworkContainer("test",
+    atlas_cidr_block="10.8.0.0/21",
+    project_id="<YOUR-PROJECT-ID>",
+    provider_name="AZURE",
+    region="US_EAST_2")
+```
 {{% /example %}}
 
 {{% example typescript %}}

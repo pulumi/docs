@@ -15,9 +15,83 @@ On-demand snapshots happen immediately, unlike scheduled snapshots which occur a
 
 > **NOTE:** Groups and projects are synonymous terms. You may find `groupId` in the official documentation.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+my_cluster = mongodbatlas.Cluster("myCluster",
+    project_id="5cf5a45a9ccf6400e60981b6",
+    disk_size_gb=5,
+    provider_name="AWS",
+    provider_region_name="EU_WEST_2",
+    provider_instance_size_name="M10",
+    provider_backup_enabled=True,
+    provider_disk_iops=100,
+    provider_encrypt_ebs_volume=False)
+test_cloud_provider_snapshot = mongodbatlas.CloudProviderSnapshot("testCloudProviderSnapshot",
+    project_id=my_cluster.project_id,
+    cluster_name=my_cluster.name,
+    description="myDescription",
+    retention_in_days=1)
+test_cloud_provider_snapshot_restore_job = mongodbatlas.CloudProviderSnapshotRestoreJob("testCloudProviderSnapshotRestoreJob",
+    project_id=test_cloud_provider_snapshot.project_id,
+    cluster_name=test_cloud_provider_snapshot.cluster_name,
+    snapshot_id=test_cloud_provider_snapshot.snapshot_id,
+    delivery_type={
+        "download": True,
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mongodbatlas from "@pulumi/mongodbatlas";
+
+const myCluster = new mongodbatlas.Cluster("myCluster", {
+    projectId: "5cf5a45a9ccf6400e60981b6",
+    diskSizeGb: 5,
+    providerName: "AWS",
+    providerRegionName: "EU_WEST_2",
+    providerInstanceSizeName: "M10",
+    providerBackupEnabled: true,
+    providerDiskIops: 100,
+    providerEncryptEbsVolume: false,
+});
+const testCloudProviderSnapshot = new mongodbatlas.CloudProviderSnapshot("testCloudProviderSnapshot", {
+    projectId: myCluster.projectId,
+    clusterName: myCluster.name,
+    description: "myDescription",
+    retentionInDays: 1,
+});
+const testCloudProviderSnapshotRestoreJob = new mongodbatlas.CloudProviderSnapshotRestoreJob("testCloudProviderSnapshotRestoreJob", {
+    projectId: testCloudProviderSnapshot.projectId,
+    clusterName: testCloudProviderSnapshot.clusterName,
+    snapshotId: testCloudProviderSnapshot.snapshotId,
+    deliveryType: {
+        download: true,
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CloudProviderSnapshot Resource {#create}
