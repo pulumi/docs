@@ -34,7 +34,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_consul as consul
+
+remote_agent = consul.get_agent_config()
+pulumi.export("consulVersion", remote_agent.version)
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -34,7 +34,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_consul as consul
+
+compute = consul.Node("compute", address="www.google.com")
+google = consul.Service("google",
+    node=compute.name,
+    port=80,
+    tags=["tag0"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

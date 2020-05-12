@@ -13,9 +13,44 @@ meta_desc: "Explore the GetAclRole function of the Consul package, including exa
 The `consul..AclRole` data source returns the information related to a
 [Consul ACL Role](https://www.consul.io/api/acl/roles.html).
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_consul as consul
+
+test = consul.get_acl_role(name="example-role")
+pulumi.export("consulAclRole", test.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as consul from "@pulumi/consul";
+
+const test = consul.getAclRole({
+    name: "example-role",
+});
+export const consulAclRole = test.then(test => test.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAclRole {#using}

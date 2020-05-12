@@ -29,7 +29,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_consul as consul
+
+foobar = consul.Node("foobar", address="192.168.10.10")
+```
 {{% /example %}}
 
 {{% example typescript %}}

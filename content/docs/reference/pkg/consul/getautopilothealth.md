@@ -30,7 +30,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_consul as consul
+
+read = consul.get_autopilot_health()
+pulumi.export("health", read.healthy)
+```
 {{% /example %}}
 
 {{% example typescript %}}

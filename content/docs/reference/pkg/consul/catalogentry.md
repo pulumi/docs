@@ -33,7 +33,24 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_consul as consul
+
+app = consul.CatalogEntry("app",
+    address="192.168.10.10",
+    node="foobar",
+    services=[{
+        "address": "127.0.0.1",
+        "id": "redis1",
+        "name": "redis",
+        "port": 8000,
+        "tags": [
+            "master",
+            "v1",
+        ],
+    }])
+```
 {{% /example %}}
 
 {{% example typescript %}}

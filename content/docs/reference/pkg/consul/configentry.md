@@ -14,9 +14,163 @@ The [Configuration Entry](https://www.consul.io/docs/agent/config_entries.html)
 resource can be used to provide cluster-wide defaults for various aspects of
 Consul.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import json
+import pulumi_consul as consul
+
+proxy_defaults = consul.ConfigEntry("proxyDefaults",
+    kind="proxy-defaults",
+    config_json=json.dumps({
+        "Config": {
+            "local_connect_timeout_ms": 1000,
+            "handshake_timeout_ms": 10000,
+        },
+    }))
+web = consul.ConfigEntry("web",
+    kind="service-defaults",
+    config_json=json.dumps({
+        "Protocol": "http",
+    }))
+admin = consul.ConfigEntry("admin",
+    kind="service-defaults",
+    config_json=json.dumps({
+        "Protocol": "http",
+    }))
+service_resolver = consul.ConfigEntry("serviceResolver",
+    kind="service-resolver",
+    config_json=json.dumps({
+        "DefaultSubset": "v1",
+        "Subsets": {
+            "v1": {
+                "Filter": "Service.Meta.version == v1",
+            },
+            "v2": {
+                "Filter": "Service.Meta.version == v2",
+            },
+        },
+    }))
+service_splitter = consul.ConfigEntry("serviceSplitter",
+    kind="service-splitter",
+    config_json=json.dumps({
+        "Splits": [
+            {
+                "Weight": 90,
+                "ServiceSubset": "v1",
+            },
+            {
+                "Weight": 10,
+                "ServiceSubset": "v2",
+            },
+        ],
+    }))
+service_router = consul.ConfigEntry("serviceRouter",
+    kind="service-router",
+    config_json=json.dumps({
+        "Routes": [{
+            "Match": {
+                "HTTP": {
+                    "PathPrefix": "/admin",
+                },
+            },
+            "Destination": {
+                "Service": "admin",
+            },
+        }],
+    }))
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as consul from "@pulumi/consul";
+
+const proxyDefaults = new consul.ConfigEntry("proxyDefaults", {
+    kind: "proxy-defaults",
+    configJson: JSON.stringify({
+        Config: {
+            local_connect_timeout_ms: 1000,
+            handshake_timeout_ms: 10000,
+        },
+    }),
+});
+const web = new consul.ConfigEntry("web", {
+    kind: "service-defaults",
+    configJson: JSON.stringify({
+        Protocol: "http",
+    }),
+});
+const admin = new consul.ConfigEntry("admin", {
+    kind: "service-defaults",
+    configJson: JSON.stringify({
+        Protocol: "http",
+    }),
+});
+const serviceResolver = new consul.ConfigEntry("serviceResolver", {
+    kind: "service-resolver",
+    configJson: JSON.stringify({
+        DefaultSubset: "v1",
+        Subsets: {
+            v1: {
+                Filter: "Service.Meta.version == v1",
+            },
+            v2: {
+                Filter: "Service.Meta.version == v2",
+            },
+        },
+    }),
+});
+const serviceSplitter = new consul.ConfigEntry("serviceSplitter", {
+    kind: "service-splitter",
+    configJson: JSON.stringify({
+        Splits: [
+            {
+                Weight: 90,
+                ServiceSubset: "v1",
+            },
+            {
+                Weight: 10,
+                ServiceSubset: "v2",
+            },
+        ],
+    }),
+});
+const serviceRouter = new consul.ConfigEntry("serviceRouter", {
+    kind: "service-router",
+    configJson: JSON.stringify({
+        Routes: [{
+            Match: {
+                HTTP: {
+                    PathPrefix: "/admin",
+                },
+            },
+            Destination: {
+                Service: "admin",
+            },
+        }],
+    }),
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ConfigEntry Resource {#create}

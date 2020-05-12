@@ -18,39 +18,9 @@ instance and its health-checks.
 This resource is likely to change as frequently as the health-checks are being
 updated, you should expect different results in a frequent basis.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as consul from "@pulumi/consul";
-import * as vault from "@pulumi/vault";
-
-const vaultServiceHealth = pulumi.output(consul.getServiceHealth({
-    passing: true,
-    service: "vault",
-}, { async: true }));
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Using GetServiceHealth {#using}

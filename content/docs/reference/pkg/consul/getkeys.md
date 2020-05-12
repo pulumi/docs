@@ -29,7 +29,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_consul as consul
+
+app_keys = consul.get_keys(datacenter="nyc1",
+    keys=[{
+        "default": "ami-1234",
+        "name": "ami",
+        "path": "service/app/launch_ami",
+    }],
+    token="abcd")
+# Start our instance with the dynamic ami value
+app_instance = aws.ec2.Instance("appInstance", ami=app_keys.var["ami"])
+```
 {{% /example %}}
 
 {{% example typescript %}}
