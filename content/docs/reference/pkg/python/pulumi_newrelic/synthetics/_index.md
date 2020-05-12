@@ -17,6 +17,16 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_newrelic.synthetics.AlertCondition">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">AlertCondition</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitor_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runbook_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.AlertCondition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this resource to create and manage synthetics alert conditions in New Relic.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_newrelic</span> <span class="k">as</span> <span class="nn">newrelic</span>
+
+<span class="n">foo_monitor</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">synthetics</span><span class="o">.</span><span class="n">get_monitor</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+<span class="n">foo_alert_condition</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">synthetics</span><span class="o">.</span><span class="n">AlertCondition</span><span class="p">(</span><span class="s2">&quot;fooAlertCondition&quot;</span><span class="p">,</span>
+    <span class="n">policy_id</span><span class="o">=</span><span class="n">newrelic_alert_policy</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">monitor_id</span><span class="o">=</span><span class="n">foo_monitor</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">runbook_url</span><span class="o">=</span><span class="s2">&quot;https://www.example.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -181,6 +191,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_newrelic.synthetics.Label">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">Label</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitor_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.Label" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this resource to create, update, and delete a Synthetics label in New Relic.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_newrelic</span> <span class="k">as</span> <span class="nn">newrelic</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">synthetics</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">monitor_id</span><span class="o">=</span><span class="n">newrelic_synthetics_monitor</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;MyCategory&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;MyValue&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -278,6 +297,62 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_newrelic.synthetics.Monitor">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">Monitor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bypass_head_request</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frequency</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">locations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sla_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">treat_redirect_as_failure</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">validation_string</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verify_ssl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.Monitor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this resource to create, update, and delete a synthetics monitor in New Relic.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_newrelic</span> <span class="k">as</span> <span class="nn">newrelic</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">synthetics</span><span class="o">.</span><span class="n">Monitor</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">frequency</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">locations</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;AWS_US_EAST_1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;AWS_US_EAST_2&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">status</span><span class="o">=</span><span class="s2">&quot;ENABLED&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;SIMPLE&quot;</span><span class="p">,</span>
+    <span class="n">uri</span><span class="o">=</span><span class="s2">&quot;https://example.com&quot;</span><span class="p">,</span>
+    <span class="n">validation_string</span><span class="o">=</span><span class="s2">&quot;add example validation check here&quot;</span><span class="p">,</span>
+    <span class="n">verify_ssl</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># Optional for type &quot;SIMPLE&quot; and &quot;BROWSER&quot;</span>
+</pre></div>
+</div>
+<p>Type: <code class="docutils literal notranslate"><span class="pre">BROWSER</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_newrelic</span> <span class="k">as</span> <span class="nn">newrelic</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">synthetics</span><span class="o">.</span><span class="n">Monitor</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">bypass_head_request</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">frequency</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">locations</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;AWS_US_EAST_1&quot;</span><span class="p">],</span>
+    <span class="n">status</span><span class="o">=</span><span class="s2">&quot;ENABLED&quot;</span><span class="p">,</span>
+    <span class="n">treat_redirect_as_failure</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;BROWSER&quot;</span><span class="p">,</span>
+    <span class="n">uri</span><span class="o">=</span><span class="s2">&quot;https://example.com&quot;</span><span class="p">,</span>
+    <span class="n">validation_string</span><span class="o">=</span><span class="s2">&quot;add example validation check here&quot;</span><span class="p">,</span>
+    <span class="n">verify_ssl</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># optional for type &quot;SIMPLE&quot; and &quot;BROWSER&quot;</span>
+</pre></div>
+</div>
+<p>Type: <code class="docutils literal notranslate"><span class="pre">SCRIPT_BROWSER</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_newrelic</span> <span class="k">as</span> <span class="nn">newrelic</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">synthetics</span><span class="o">.</span><span class="n">Monitor</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">frequency</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">locations</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;AWS_US_EAST_1&quot;</span><span class="p">],</span>
+    <span class="n">status</span><span class="o">=</span><span class="s2">&quot;ENABLED&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;SCRIPT_BROWSER&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Type: <code class="docutils literal notranslate"><span class="pre">SCRIPT_API</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_newrelic</span> <span class="k">as</span> <span class="nn">newrelic</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">synthetics</span><span class="o">.</span><span class="n">Monitor</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">frequency</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">locations</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;AWS_US_EAST_1&quot;</span><span class="p">],</span>
+    <span class="n">status</span><span class="o">=</span><span class="s2">&quot;ENABLED&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;SCRIPT_API&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -514,6 +589,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_newrelic.synthetics.SecureCredential">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">SecureCredential</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">last_updated</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.SecureCredential" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this resource to create and manage New Relic Synthetic secure credentials.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_newrelic</span> <span class="k">as</span> <span class="nn">newrelic</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">synthetics</span><span class="o">.</span><span class="n">SecureCredential</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;My description&quot;</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;MY_KEY&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;My value&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -620,6 +704,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_newrelic.synthetics.get_monitor">
 <code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">get_monitor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.get_monitor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a specific synthetics monitor in New Relic that already exists. This can be used to set up a Synthetics alert condition.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_newrelic</span> <span class="k">as</span> <span class="nn">newrelic</span>
+
+<span class="n">bar</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">synthetics</span><span class="o">.</span><span class="n">get_monitor</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">)</span>
+<span class="n">baz</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">synthetics</span><span class="o">.</span><span class="n">AlertCondition</span><span class="p">(</span><span class="s2">&quot;baz&quot;</span><span class="p">,</span>
+    <span class="n">policy_id</span><span class="o">=</span><span class="n">newrelic_alert_policy</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">monitor_id</span><span class="o">=</span><span class="n">bar</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">runbook_url</span><span class="o">=</span><span class="s2">&quot;https://www.example.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the synthetics monitor in New Relic.</p>
@@ -632,6 +726,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">get_secure_credential</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.get_secure_credential" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a specific Synthetics secure credential in New Relic that already exists.</p>
 <p>Note that the secure credential’s value is not returned as an attribute for security reasons.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_newrelic</span> <span class="k">as</span> <span class="nn">newrelic</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">synthetics</span><span class="o">.</span><span class="n">get_secure_credential</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="s2">&quot;MY_KEY&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>key</strong> (<em>str</em>) – The secure credential’s key name.  Regardless of the case used in the configuration, the provider will provide an upcased key to the underlying API.</p>

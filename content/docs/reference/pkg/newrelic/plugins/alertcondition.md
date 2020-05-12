@@ -12,8 +12,7 @@ meta_desc: "Explore the AlertCondition resource of the plugins module, including
 
 Use this resource to create and manage plugins alert conditions in New Relic.
 
-{{% examples %}}
-{{% /examples %}}
+
 ## Terms
 
 The `term` mapping supports the following arguments:
@@ -24,6 +23,79 @@ The `term` mapping supports the following arguments:
   * `threshold` - (Required) Must be 0 or greater.
   * `time_function` - (Required) `all` or `any`.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo_plugin = newrelic.plugins.get_plugin(guid="com.example.my-plugin")
+foo_plugin_component = newrelic.plugins.get_plugin_component(plugin_id=foo_plugin.id,
+    name="MyPlugin")
+foo_alert_policy = newrelic.AlertPolicy("fooAlertPolicy")
+foo_alert_condition = newrelic.plugins.AlertCondition("fooAlertCondition",
+    policy_id=foo_alert_policy.id,
+    entities=[foo_plugin_component.id],
+    metric="Component/Summary/Consumers[consumers]",
+    plugin_id=foo_plugin.id,
+    plugin_guid=foo_plugin.guid,
+    value_function="average",
+    metric_description="Queue consumers",
+    term=[{
+        "duration": 5,
+        "operator": "below",
+        "priority": "critical",
+        "threshold": "0.75",
+        "timeFunction": "all",
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const fooPlugin = newrelic.plugins.getPlugin({
+    guid: "com.example.my-plugin",
+});
+const fooPluginComponent = fooPlugin.then(fooPlugin => newrelic.plugins.getPluginComponent({
+    pluginId: fooPlugin.id,
+    name: "MyPlugin",
+}));
+const fooAlertPolicy = new newrelic.AlertPolicy("fooAlertPolicy", {});
+const fooAlertCondition = new newrelic.plugins.AlertCondition("fooAlertCondition", {
+    policyId: fooAlertPolicy.id,
+    entities: [fooPluginComponent.then(fooPluginComponent => fooPluginComponent.id)],
+    metric: "Component/Summary/Consumers[consumers]",
+    pluginId: fooPlugin.then(fooPlugin => fooPlugin.id),
+    pluginGuid: fooPlugin.then(fooPlugin => fooPlugin.guid),
+    valueFunction: "average",
+    metricDescription: "Queue consumers",
+    term: [{
+        duration: 5,
+        operator: "below",
+        priority: "critical",
+        threshold: "0.75",
+        timeFunction: "all",
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AlertCondition Resource {#create}

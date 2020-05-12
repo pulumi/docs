@@ -12,9 +12,89 @@ meta_desc: "Explore the AlertPolicyChannel resource of the New Relic package, in
 
 Use this resource to map alert policies to alert channels in New Relic.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+example_policy = newrelic.get_alert_policy(name="my-alert-policy")
+# Creates an email alert channel.
+email_channel = newrelic.AlertChannel("emailChannel",
+    type="email",
+    config={
+        "recipients": "foo@example.com",
+        "includeJsonAttachment": "1",
+    })
+# Creates a Slack alert channel.
+slack_channel = newrelic.AlertChannel("slackChannel",
+    type="slack",
+    config={
+        "channel": "#example-channel",
+        "url": "http://example-org.slack.com",
+    })
+# Applies the created channels above to the alert policy
+# referenced at the top of the config.
+foo = newrelic.AlertPolicyChannel("foo",
+    policy_id=newrelic_alert_policy["example_policy"]["id"],
+    channel_ids=[
+        email_channel.id,
+        slack_channel.id,
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const examplePolicy = newrelic.getAlertPolicy({
+    name: "my-alert-policy",
+});
+// Creates an email alert channel.
+const emailChannel = new newrelic.AlertChannel("emailChannel", {
+    type: "email",
+    config: {
+        recipients: "foo@example.com",
+        includeJsonAttachment: "1",
+    },
+});
+// Creates a Slack alert channel.
+const slackChannel = new newrelic.AlertChannel("slackChannel", {
+    type: "slack",
+    config: {
+        channel: "#example-channel",
+        url: "http://example-org.slack.com",
+    },
+});
+// Applies the created channels above to the alert policy
+// referenced at the top of the config.
+const foo = new newrelic.AlertPolicyChannel("foo", {
+    policyId: newrelic_alert_policy.example_policy.id,
+    channelIds: [
+        emailChannel.id,
+        slackChannel.id,
+    ],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AlertPolicyChannel Resource {#create}

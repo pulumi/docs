@@ -12,9 +12,51 @@ meta_desc: "Explore the AlertCondition resource of the synthetics module, includ
 
 Use this resource to create and manage synthetics alert conditions in New Relic.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo_monitor = newrelic.synthetics.get_monitor(name="foo")
+foo_alert_condition = newrelic.synthetics.AlertCondition("fooAlertCondition",
+    policy_id=newrelic_alert_policy["foo"]["id"],
+    monitor_id=foo_monitor.id,
+    runbook_url="https://www.example.com")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const fooMonitor = newrelic.synthetics.getMonitor({
+    name: "foo",
+});
+const fooAlertCondition = new newrelic.synthetics.AlertCondition("fooAlertCondition", {
+    policyId: newrelic_alert_policy.foo.id,
+    monitorId: fooMonitor.then(fooMonitor => fooMonitor.id),
+    runbookUrl: "https://www.example.com",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AlertCondition Resource {#create}

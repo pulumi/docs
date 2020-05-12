@@ -12,8 +12,7 @@ meta_desc: "Explore the NrqlAlertCondition resource of the New Relic package, in
 
 Use this resource to create and manage NRQL alert conditions in New Relic.
 
-{{% examples %}}
-{{% /examples %}}
+
 ## Terms
 
 The `term` mapping supports the following arguments:
@@ -31,6 +30,126 @@ The `nrql` attribute supports the following arguments:
 - `query` - (Required) The NRQL query to execute for the condition.
 - `since_value` - (Required) The value to be used in the `SINCE <X> MINUTES AGO` clause for the NRQL query. Must be between `1` and `20`.
 
+## Additional Examples
+
+##### Type: `outlier`
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const fooAlertPolicy = new newrelic.AlertPolicy("fooAlertPolicy", {});
+const fooNrqlAlertCondition = new newrelic.NrqlAlertCondition("fooNrqlAlertCondition", {
+    policyId: fooAlertPolicy.id,
+    runbookUrl: "https://bar.example.com",
+    enabled: true,
+    term: [{
+        duration: 10,
+        operator: "above",
+        priority: "critical",
+        threshold: "0.65",
+        timeFunction: "all",
+    }],
+    nrql: {
+        query: "SELECT percentile(duration, 99) FROM Transaction FACET remote_ip",
+        sinceValue: "3",
+    },
+    type: "outlier",
+    expectedGroups: 2,
+    ignoreOverlap: true,
+});
+```
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo_alert_policy = newrelic.AlertPolicy("fooAlertPolicy")
+foo_nrql_alert_condition = newrelic.NrqlAlertCondition("fooNrqlAlertCondition",
+    policy_id=foo_alert_policy.id,
+    runbook_url="https://bar.example.com",
+    enabled=True,
+    term=[{
+        "duration": 10,
+        "operator": "above",
+        "priority": "critical",
+        "threshold": "0.65",
+        "timeFunction": "all",
+    }],
+    nrql={
+        "query": "SELECT percentile(duration, 99) FROM Transaction FACET remote_ip",
+        "sinceValue": "3",
+    },
+    type="outlier",
+    expected_groups=2,
+    ignore_overlap=True)
+```
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Type: `static` (default)
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo_alert_policy = newrelic.AlertPolicy("fooAlertPolicy")
+foo_nrql_alert_condition = newrelic.NrqlAlertCondition("fooNrqlAlertCondition",
+    policy_id=foo_alert_policy.id,
+    type="static",
+    runbook_url="https://www.example.com",
+    enabled=True,
+    term=[{
+        "duration": 5,
+        "operator": "below",
+        "priority": "critical",
+        "threshold": "1",
+        "timeFunction": "all",
+    }],
+    nrql={
+        "query": "SELECT count(*) FROM SyntheticCheck WHERE monitorId = '<monitorId>'",
+        "sinceValue": "3",
+    },
+    value_function="single_value")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const fooAlertPolicy = new newrelic.AlertPolicy("fooAlertPolicy", {});
+const fooNrqlAlertCondition = new newrelic.NrqlAlertCondition("fooNrqlAlertCondition", {
+    policyId: fooAlertPolicy.id,
+    type: "static",
+    runbookUrl: "https://www.example.com",
+    enabled: true,
+    term: [{
+        duration: 5,
+        operator: "below",
+        priority: "critical",
+        threshold: "1",
+        timeFunction: "all",
+    }],
+    nrql: {
+        query: "SELECT count(*) FROM SyntheticCheck WHERE monitorId = '<monitorId>'",
+        sinceValue: "3",
+    },
+    valueFunction: "single_value",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NrqlAlertCondition Resource {#create}

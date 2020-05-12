@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo = newrelic.synthetics.SecureCredential("foo",
+    description="My description",
+    key="MY_KEY",
+    value="My value")
+```
 {{% /example %}}
 
 {{% example typescript %}}
