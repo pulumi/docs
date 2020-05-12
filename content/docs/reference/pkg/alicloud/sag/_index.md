@@ -26,3 +26,21 @@ Explore the resources and functions of the sag module in the AliCloud package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Sag.html" title="Pulumi.Alicloud.Sag">Pulumi.Alicloud.Sag</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/sag?tab=doc#" title="alicloud/sag">alicloud/sag</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/sag/#" title="@pulumi/alicloud/sag">@pulumi/alicloud/sag</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/sag" title="pulumi_alicloud/sag">pulumi_alicloud/sag</a></dd>
+
+</dl>
+

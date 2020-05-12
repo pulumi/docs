@@ -28,3 +28,21 @@ Explore the resources and functions of the cdn module in the AliCloud package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cdn.html" title="Pulumi.Alicloud.Cdn">Pulumi.Alicloud.Cdn</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cdn?tab=doc#" title="alicloud/cdn">alicloud/cdn</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cdn/#" title="@pulumi/alicloud/cdn">@pulumi/alicloud/cdn</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/cdn" title="pulumi_alicloud/cdn">pulumi_alicloud/cdn</a></dd>
+
+</dl>
+

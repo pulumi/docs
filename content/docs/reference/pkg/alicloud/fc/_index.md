@@ -36,3 +36,21 @@ Explore the resources and functions of the fc module in the AliCloud package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.FC.html" title="Pulumi.Alicloud.FC">Pulumi.Alicloud.FC</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/fc?tab=doc#" title="alicloud/fc">alicloud/fc</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/fc/#" title="@pulumi/alicloud/fc">@pulumi/alicloud/fc</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/fc" title="pulumi_alicloud/fc">pulumi_alicloud/fc</a></dd>
+
+</dl>
+

@@ -30,3 +30,21 @@ Explore the resources and functions of the alikafka module in the AliCloud packa
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.AliKafka.html" title="Pulumi.Alicloud.AliKafka">Pulumi.Alicloud.AliKafka</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/alikafka?tab=doc#" title="alicloud/alikafka">alicloud/alikafka</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/alikafka/#" title="@pulumi/alicloud/alikafka">@pulumi/alicloud/alikafka</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/alikafka" title="pulumi_alicloud/alikafka">pulumi_alicloud/alikafka</a></dd>
+
+</dl>
+

@@ -32,3 +32,21 @@ Explore the resources and functions of the hbase module in the AliCloud package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Hbase.html" title="Pulumi.Alicloud.Hbase">Pulumi.Alicloud.Hbase</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/hbase?tab=doc#" title="alicloud/hbase">alicloud/hbase</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/hbase/#" title="@pulumi/alicloud/hbase">@pulumi/alicloud/hbase</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/hbase" title="pulumi_alicloud/hbase">pulumi_alicloud/hbase</a></dd>
+
+</dl>
+

@@ -28,3 +28,21 @@ Explore the resources and functions of the ots module in the AliCloud package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ots.html" title="Pulumi.Alicloud.Ots">Pulumi.Alicloud.Ots</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ots?tab=doc#" title="alicloud/ots">alicloud/ots</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ots/#" title="@pulumi/alicloud/ots">@pulumi/alicloud/ots</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/ots" title="pulumi_alicloud/ots">pulumi_alicloud/ots</a></dd>
+
+</dl>
+

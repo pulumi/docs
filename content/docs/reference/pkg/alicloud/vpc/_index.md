@@ -60,3 +60,21 @@ Explore the resources and functions of the vpc module in the AliCloud package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Vpc.html" title="Pulumi.Alicloud.Vpc">Pulumi.Alicloud.Vpc</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#" title="alicloud/vpc">alicloud/vpc</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#" title="@pulumi/alicloud/vpc">@pulumi/alicloud/vpc</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/vpc" title="pulumi_alicloud/vpc">pulumi_alicloud/vpc</a></dd>
+
+</dl>
+

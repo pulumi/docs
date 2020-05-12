@@ -27,3 +27,21 @@ Explore the resources and functions of the cms module in the AliCloud package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cms.html" title="Pulumi.Alicloud.Cms">Pulumi.Alicloud.Cms</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cms?tab=doc#" title="alicloud/cms">alicloud/cms</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cms/#" title="@pulumi/alicloud/cms">@pulumi/alicloud/cms</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/cms" title="pulumi_alicloud/cms">pulumi_alicloud/cms</a></dd>
+
+</dl>
+

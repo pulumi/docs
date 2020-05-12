@@ -34,3 +34,21 @@ Explore the resources and functions of the pvtz module in the AliCloud package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Pvtz.html" title="Pulumi.Alicloud.Pvtz">Pulumi.Alicloud.Pvtz</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/pvtz?tab=doc#" title="alicloud/pvtz">alicloud/pvtz</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/pvtz/#" title="@pulumi/alicloud/pvtz">@pulumi/alicloud/pvtz</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/pvtz" title="pulumi_alicloud/pvtz">pulumi_alicloud/pvtz</a></dd>
+
+</dl>
+

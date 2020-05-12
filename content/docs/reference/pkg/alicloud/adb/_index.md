@@ -35,3 +35,21 @@ Explore the resources and functions of the adb module in the AliCloud package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Adb.html" title="Pulumi.Alicloud.Adb">Pulumi.Alicloud.Adb</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/adb?tab=doc#" title="alicloud/adb">alicloud/adb</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/adb/#" title="@pulumi/alicloud/adb">@pulumi/alicloud/adb</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/adb" title="pulumi_alicloud/adb">pulumi_alicloud/adb</a></dd>
+
+</dl>
+

@@ -33,3 +33,21 @@ Explore the resources and functions of the log module in the AliCloud package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Log.html" title="Pulumi.Alicloud.Log">Pulumi.Alicloud.Log</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/log?tab=doc#" title="alicloud/log">alicloud/log</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/log/#" title="@pulumi/alicloud/log">@pulumi/alicloud/log</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/log" title="pulumi_alicloud/log">pulumi_alicloud/log</a></dd>
+
+</dl>
+

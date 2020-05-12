@@ -46,3 +46,21 @@ Explore the resources and functions of the ess module in the AliCloud package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ess.html" title="Pulumi.Alicloud.Ess">Pulumi.Alicloud.Ess</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#" title="alicloud/ess">alicloud/ess</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ess/#" title="@pulumi/alicloud/ess">@pulumi/alicloud/ess</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/ess" title="pulumi_alicloud/ess">pulumi_alicloud/ess</a></dd>
+
+</dl>
+

@@ -44,3 +44,21 @@ Explore the resources and functions of the dns module in the AliCloud package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Dns.html" title="Pulumi.Alicloud.Dns">Pulumi.Alicloud.Dns</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/dns?tab=doc#" title="alicloud/dns">alicloud/dns</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/dns/#" title="@pulumi/alicloud/dns">@pulumi/alicloud/dns</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/dns" title="pulumi_alicloud/dns">pulumi_alicloud/dns</a></dd>
+
+</dl>
+

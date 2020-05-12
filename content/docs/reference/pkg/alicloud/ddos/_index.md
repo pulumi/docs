@@ -33,3 +33,21 @@ Explore the resources and functions of the ddos module in the AliCloud package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ddos.html" title="Pulumi.Alicloud.Ddos">Pulumi.Alicloud.Ddos</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ddos?tab=doc#" title="alicloud/ddos">alicloud/ddos</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ddos/#" title="@pulumi/alicloud/ddos">@pulumi/alicloud/ddos</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/ddos" title="pulumi_alicloud/ddos">pulumi_alicloud/ddos</a></dd>
+
+</dl>
+

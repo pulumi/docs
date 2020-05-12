@@ -37,3 +37,21 @@ Explore the resources and functions of the apigateway module in the AliCloud pac
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.ApiGateway.html" title="Pulumi.Alicloud.ApiGateway">Pulumi.Alicloud.ApiGateway</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/apigateway?tab=doc#" title="alicloud/apigateway">alicloud/apigateway</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/apigateway/#" title="@pulumi/alicloud/apigateway">@pulumi/alicloud/apigateway</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/apigateway" title="pulumi_alicloud/apigateway">pulumi_alicloud/apigateway</a></dd>
+
+</dl>
+
