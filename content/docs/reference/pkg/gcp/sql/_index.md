@@ -35,3 +35,21 @@ Explore the resources and functions of the sql module in the GCP package.
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.html" title="Pulumi.Gcp.Sql">Pulumi.Gcp.Sql</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#" title="gcp/sql">gcp/sql</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/sql/#" title="@pulumi/gcp/sql">@pulumi/gcp/sql</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/sql" title="pulumi_gcp/sql">pulumi_gcp/sql</a></dd>
+
+</dl>
+

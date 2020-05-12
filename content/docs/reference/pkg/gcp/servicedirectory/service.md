@@ -18,6 +18,42 @@ To get more information about Service, see:
 * How-to Guides
     * [Configuring a service](https://cloud.google.com/service-directory/docs/configuring-service-directory#configuring_a_service)
 
+## Example Usage - Service Directory Service Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleNamespace = new gcp.servicedirectory.Namespace("exampleNamespace", {
+    namespaceId: "example-namespace",
+    location: "us-central1",
+});
+const exampleService = new gcp.servicedirectory.Service("exampleService", {
+    serviceId: "example-service",
+    namespace: exampleNamespace.id,
+    metadata: {
+        stage: "prod",
+        region: "us-central1",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_namespace = gcp.servicedirectory.Namespace("exampleNamespace",
+    namespace_id="example-namespace",
+    location="us-central1")
+example_service = gcp.servicedirectory.Service("exampleService",
+    service_id="example-service",
+    namespace=example_namespace.id,
+    metadata={
+        "stage": "prod",
+        "region": "us-central1",
+    })
+```
+
 
 
 ## Create a Service Resource {#create}

@@ -39,3 +39,21 @@ Explore the resources and functions of the monitoring module in the GCP package.
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.html" title="Pulumi.Gcp.Monitoring">Pulumi.Gcp.Monitoring</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#" title="gcp/monitoring">gcp/monitoring</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#" title="@pulumi/gcp/monitoring">@pulumi/gcp/monitoring</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/monitoring" title="pulumi_gcp/monitoring">pulumi_gcp/monitoring</a></dd>
+
+</dl>
+

@@ -91,18 +91,18 @@ default_target_http_proxy = gcp.compute.TargetHttpProxy("defaultTargetHttpProxy"
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const defaultURLMap = new gcp.compute.URLMap("defaultURLMap", {default_url_redirect: [{
+const defaultURLMap = new gcp.compute.URLMap("defaultURLMap", {default_url_redirect: {
     httpsRedirect: true,
-}]});
+}});
 const defaultTargetHttpProxy = new gcp.compute.TargetHttpProxy("defaultTargetHttpProxy", {urlMap: defaultURLMap.selfLink});
 ```
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
-default_url_map = gcp.compute.URLMap("defaultURLMap", default_url_redirect=[{
+default_url_map = gcp.compute.URLMap("defaultURLMap", default_url_redirect={
     "httpsRedirect": True,
-}])
+})
 default_target_http_proxy = gcp.compute.TargetHttpProxy("defaultTargetHttpProxy", url_map=default_url_map.self_link)
 ```
 

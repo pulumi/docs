@@ -26,3 +26,21 @@ Explore the resources and functions of the iot module in the GCP package.
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.html" title="Pulumi.Gcp.Iot">Pulumi.Gcp.Iot</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#" title="gcp/iot">gcp/iot</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/iot/#" title="@pulumi/gcp/iot">@pulumi/gcp/iot</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/iot" title="pulumi_gcp/iot">pulumi_gcp/iot</a></dd>
+
+</dl>
+
