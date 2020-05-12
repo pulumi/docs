@@ -49,7 +49,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_linode as linode
+
+ns1_linode_com = linode.get_networking_ip(address="162.159.27.72")
+```
 {{% /example %}}
 
 {{% example typescript %}}

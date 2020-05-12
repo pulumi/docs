@@ -69,7 +69,9 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+```
 {{% /example %}}
 
 {{% example typescript %}}

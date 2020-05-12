@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_linode as linode
+
+region = linode.get_region(id="us-east")
+```
 {{% /example %}}
 
 {{% example typescript %}}

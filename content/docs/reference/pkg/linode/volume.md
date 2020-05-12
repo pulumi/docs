@@ -37,7 +37,20 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_linode as linode
+
+foobaz = linode.Instance("foobaz",
+    region="us-west",
+    root_pass="3X4mp13",
+    tags=["foobaz"],
+    type="g6-nanode-1")
+foobar = linode.Volume("foobar",
+    label="foo-volume",
+    linode_id=foobaz.id,
+    region=foobaz.region)
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -57,7 +57,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_linode as linode
+
+account = linode.get_account()
+```
 {{% /example %}}
 
 {{% example typescript %}}

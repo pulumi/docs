@@ -49,7 +49,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_linode as linode
+
+k8_master = linode.get_image(id="linode/debian8")
+```
 {{% /example %}}
 
 {{% example typescript %}}
