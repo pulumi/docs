@@ -2,7 +2,7 @@
 title: "Infrastructure Testing Just Got Better with Pulumi"
 date: 2020-05-13
 meta_desc: "Pulumi accelerates infrastructure testing 6000x with mocking and unit tests."
-meta_image: dustin-ferris.png
+meta_image: dustin-farris.png
 authors:
     - dustin-farris
 tags:
