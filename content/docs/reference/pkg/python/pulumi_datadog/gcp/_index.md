@@ -17,6 +17,23 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_datadog.gcp.Integration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.gcp.</code><code class="sig-name descname">Integration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.gcp.Integration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Datadog - Google Cloud Platform integration resource. This can be used to create and manage Datadog - Google Cloud Platform integration.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_datadog</span> <span class="k">as</span> <span class="nn">datadog</span>
+
+<span class="c1"># Create a new Datadog - Google Cloud Platform integration</span>
+<span class="n">awesome_gcp_project_integration</span> <span class="o">=</span> <span class="n">datadog</span><span class="o">.</span><span class="n">gcp</span><span class="o">.</span><span class="n">Integration</span><span class="p">(</span><span class="s2">&quot;awesomeGcpProjectIntegration&quot;</span><span class="p">,</span>
+    <span class="n">client_email</span><span class="o">=</span><span class="s2">&quot;awesome-service-account@awesome-project-id.iam.gserviceaccount.com&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;123456789012345678901&quot;</span><span class="p">,</span>
+    <span class="n">host_filters</span><span class="o">=</span><span class="s2">&quot;foo:bar,buzz:lightyear&quot;</span><span class="p">,</span>
+    <span class="n">private_key</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;-----BEGIN PRIVATE KEY-----</span>
+<span class="s2">...</span>
+<span class="s2">-----END PRIVATE KEY-----</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">private_key_id</span><span class="o">=</span><span class="s2">&quot;1234567890123456789012345678901234567890&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;awesome-project-id&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -133,6 +133,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_datadog.pagerduty.ServiceObject">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.pagerduty.</code><code class="sig-name descname">ServiceObject</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.pagerduty.ServiceObject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to individual Service Objects of Datadog - PagerDuty integrations. Note that the Datadog - PagerDuty integration must be activated (either manually in the Datadog UI or by using <a class="reference external" href="https://www.terraform.io/docs/providers/datadog/r/integration_pagerduty.html">pagerduty.Integration</a>) in order for this resource to be usable.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_datadog</span> <span class="k">as</span> <span class="nn">datadog</span>
+
+<span class="n">pd</span> <span class="o">=</span> <span class="n">datadog</span><span class="o">.</span><span class="n">pagerduty</span><span class="o">.</span><span class="n">Integration</span><span class="p">(</span><span class="s2">&quot;pd&quot;</span><span class="p">,</span>
+    <span class="n">api_token</span><span class="o">=</span><span class="s2">&quot;38457822378273432587234242874&quot;</span><span class="p">,</span>
+    <span class="n">individual_services</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">schedules</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;https://ddog.pagerduty.com/schedules/X123VF&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;https://ddog.pagerduty.com/schedules/X321XX&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">subdomain</span><span class="o">=</span><span class="s2">&quot;ddog&quot;</span><span class="p">)</span>
+<span class="n">testing_foo</span> <span class="o">=</span> <span class="n">datadog</span><span class="o">.</span><span class="n">pagerduty</span><span class="o">.</span><span class="n">ServiceObject</span><span class="p">(</span><span class="s2">&quot;testingFoo&quot;</span><span class="p">,</span>
+    <span class="n">service_key</span><span class="o">=</span><span class="s2">&quot;9876543210123456789&quot;</span><span class="p">,</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="s2">&quot;testing_foo&quot;</span><span class="p">)</span>
+<span class="n">testing_bar</span> <span class="o">=</span> <span class="n">datadog</span><span class="o">.</span><span class="n">pagerduty</span><span class="o">.</span><span class="n">ServiceObject</span><span class="p">(</span><span class="s2">&quot;testingBar&quot;</span><span class="p">,</span>
+    <span class="n">service_key</span><span class="o">=</span><span class="s2">&quot;54321098765432109876&quot;</span><span class="p">,</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="s2">&quot;testing_bar&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -12,9 +12,45 @@ meta_desc: "Explore the LogsIndexOrder resource of the Datadog package, includin
 
 Provides a Datadog [Logs Index API](https://docs.datadoghq.com/api/?lang=python#logs-indexes) resource. This can be used to manage the order of Datadog logs indexes.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_datadog as datadog
+
+sample_index_order = datadog.LogsIndexOrder("sampleIndexOrder",
+    name="sample_index_order",
+    indexes=[datadog_logs_index["sample_index"]["id"]])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as datadog from "@pulumi/datadog";
+
+const sampleIndexOrder = new datadog.LogsIndexOrder("sampleIndexOrder", {
+    name: "sample_index_order",
+    indexes: [datadog_logs_index.sample_index.id],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LogsIndexOrder Resource {#create}

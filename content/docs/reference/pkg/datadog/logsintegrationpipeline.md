@@ -35,7 +35,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_datadog as datadog
+
+python = datadog.LogsIntegrationPipeline("python", is_enabled=True)
+```
 {{% /example %}}
 
 {{% example typescript %}}

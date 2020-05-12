@@ -53,6 +53,6 @@ A Pulumi package for creating and managing Datadog resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
 	<dt>Version</dt>
-	<dd>2.1.0</dd>
+	<dd>2.1.1</dd>
 </dl>
 

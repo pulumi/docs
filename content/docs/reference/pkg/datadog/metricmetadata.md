@@ -28,7 +28,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_datadog as datadog
+
+# Manage a Datadog metric's metadata
+request_time = datadog.MetricMetadata("requestTime",
+    description="99th percentile request time in millseconds",
+    metric="request.time",
+    short_name="Request time",
+    type="gauge",
+    unit="millisecond")
+```
 {{% /example %}}
 
 {{% example typescript %}}
