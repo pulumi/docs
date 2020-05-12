@@ -47,6 +47,30 @@ const ldapUserFederation = new keycloak.ldap.UserFederation("ldap_user_federatio
     uuidLdapAttribute: "entryDN",
 });
 ```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+realm = keycloak.Realm("realm",
+    enabled=True,
+    realm="test")
+ldap_user_federation = keycloak.ldap.UserFederation("ldapUserFederation",
+    bind_credential="admin",
+    bind_dn="cn=admin,dc=example,dc=org",
+    connection_timeout="5s",
+    connection_url="ldap://openldap",
+    enabled=True,
+    rdn_ldap_attribute="cn",
+    read_timeout="10s",
+    realm_id=realm.id,
+    user_object_classes=[
+        "simpleSecurityObject",
+        "organizationalRole",
+    ],
+    username_ldap_attribute="cn",
+    users_dn="dc=example,dc=org",
+    uuid_ldap_attribute="entryDN")
+```
 
 ### Argument Reference
 

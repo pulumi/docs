@@ -48,6 +48,31 @@ const ldapFullNameMapper = new keycloak.ldap.FullNameMapper("ldap_full_name_mapp
     realmId: realm.id,
 });
 ```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+realm = keycloak.Realm("realm",
+    enabled=True,
+    realm="test")
+ldap_user_federation = keycloak.ldap.UserFederation("ldapUserFederation",
+    bind_credential="admin",
+    bind_dn="cn=admin,dc=example,dc=org",
+    connection_url="ldap://openldap",
+    rdn_ldap_attribute="cn",
+    realm_id=realm.id,
+    user_object_classes=[
+        "simpleSecurityObject",
+        "organizationalRole",
+    ],
+    username_ldap_attribute="cn",
+    users_dn="dc=example,dc=org",
+    uuid_ldap_attribute="entryDN")
+ldap_full_name_mapper = keycloak.ldap.FullNameMapper("ldapFullNameMapper",
+    ldap_full_name_attribute="cn",
+    ldap_user_federation_id=ldap_user_federation.id,
+    realm_id=realm.id)
+```
 
 ### Argument Reference
 

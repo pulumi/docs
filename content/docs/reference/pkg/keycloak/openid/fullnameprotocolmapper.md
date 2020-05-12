@@ -42,6 +42,23 @@ const fullNameMapper = new keycloak.openid.FullNameProtocolMapper("full_name_map
     realmId: realm.id,
 });
 ```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+realm = keycloak.Realm("realm",
+    enabled=True,
+    realm="my-realm")
+openid_client = keycloak.openid.Client("openidClient",
+    access_type="CONFIDENTIAL",
+    client_id="test-client",
+    enabled=True,
+    realm_id=realm.id,
+    valid_redirect_uris=["http://localhost:8080/openid-callback"])
+full_name_mapper = keycloak.openid.FullNameProtocolMapper("fullNameMapper",
+    client_id=openid_client.id,
+    realm_id=realm.id)
+```
 
 ### Example Usage (Client Scope)
 
@@ -60,6 +77,18 @@ const fullNameMapper = new keycloak.openid.FullNameProtocolMapper("full_name_map
     clientScopeId: clientScope.id,
     realmId: realm.id,
 });
+```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+realm = keycloak.Realm("realm",
+    enabled=True,
+    realm="my-realm")
+client_scope = keycloak.openid.ClientScope("clientScope", realm_id=realm.id)
+full_name_mapper = keycloak.openid.FullNameProtocolMapper("fullNameMapper",
+    client_scope_id=client_scope.id,
+    realm_id=realm.id)
 ```
 
 ### Argument Reference

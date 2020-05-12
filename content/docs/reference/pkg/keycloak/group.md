@@ -49,6 +49,25 @@ const childGroupWithOptionalAttributes = new keycloak.Group("child_group_with_op
     realmId: realm.id,
 });
 ```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+realm = keycloak.Realm("realm",
+    enabled=True,
+    realm="my-realm")
+parent_group = keycloak.Group("parentGroup", realm_id=realm.id)
+child_group = keycloak.Group("childGroup",
+    parent_id=parent_group.id,
+    realm_id=realm.id)
+child_group_with_optional_attributes = keycloak.Group("childGroupWithOptionalAttributes",
+    attributes={
+        "key1": "value1",
+        "key2": "value2",
+    },
+    parent_id=parent_group.id,
+    realm_id=realm.id)
+```
 
 ### Argument Reference
 

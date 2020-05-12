@@ -48,6 +48,28 @@ const samlHardcodeAttributeMapper = new keycloak.GenericClientProtocolMapper("sa
     realmId: realm.id,
 });
 ```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+realm = keycloak.Realm("realm",
+    enabled=True,
+    realm="my-realm")
+saml_client = keycloak.saml.Client("samlClient",
+    client_id="test-client",
+    realm_id=realm.id)
+saml_hardcode_attribute_mapper = keycloak.GenericClientProtocolMapper("samlHardcodeAttributeMapper",
+    client_id=saml_client.id,
+    config={
+        "attribute.name": "name",
+        "attribute.nameformat": "Basic",
+        "attribute.value": "value",
+        "friendly.name": "display name",
+    },
+    protocol="saml",
+    protocol_mapper="saml-hardcode-attribute-mapper",
+    realm_id=realm.id)
+```
 
 ### Argument Reference
 

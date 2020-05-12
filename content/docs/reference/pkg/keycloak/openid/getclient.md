@@ -14,6 +14,33 @@ meta_desc: "Explore the GetClient function of the openid module, including examp
 
 This data source can be used to fetch properties of a Keycloak OpenID client for usage with other resources.
 
+### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realmManagement = keycloak.openid.getClient({
+    realmId: "my-realm",
+    clientId: "realm-management",
+});
+const admin = realmManagement.then(realmManagement => keycloak.getRole({
+    realmId: "my-realm",
+    clientId: realmManagement.id,
+    name: "realm-admin",
+}));
+```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+realm_management = keycloak.openid.get_client(realm_id="my-realm",
+    client_id="realm-management")
+admin = keycloak.get_role(realm_id="my-realm",
+    client_id=realm_management.id,
+    name="realm-admin")
+```
+
 ### Argument Reference
 
 The following arguments are supported:

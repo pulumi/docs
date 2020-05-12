@@ -15,6 +15,37 @@ Keycloak. This mapper was added in Keycloak v4.6.0.Final.</p>
 <p>Audience protocol mappers allow you add audiences to the <code class="docutils literal notranslate"><span class="pre">aud</span></code> claim
 within issued tokens. The audience can be a custom string, or it can be
 mapped to the ID of a pre-existing client.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">)</span>
+<span class="n">openid_client</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s2">&quot;openidClient&quot;</span><span class="p">,</span>
+    <span class="n">access_type</span><span class="o">=</span><span class="s2">&quot;CONFIDENTIAL&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;test-client&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">valid_redirect_uris</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;http://localhost:8080/openid-callback&quot;</span><span class="p">])</span>
+<span class="n">audience_mapper</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">AudienceProtocolMapper</span><span class="p">(</span><span class="s2">&quot;audienceMapper&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">openid_client</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">included_custom_audience</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">)</span>
+<span class="n">client_scope</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">ClientScope</span><span class="p">(</span><span class="s2">&quot;clientScope&quot;</span><span class="p">,</span> <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">audience_mapper</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">AudienceProtocolMapper</span><span class="p">(</span><span class="s2">&quot;audienceMapper&quot;</span><span class="p">,</span>
+    <span class="n">client_scope_id</span><span class="o">=</span><span class="n">client_scope</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">included_custom_audience</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">realm_id</span></code> - (Required) The realm this protocol mapper exists within.</p></li>
@@ -174,6 +205,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>Clients are entities that can use Keycloak for user authentication. Typically,
 clients are applications that redirect users to Keycloak for authentication
 in order to take advantage of Keycloak’s user sessions for SSO.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">)</span>
+<span class="n">openid_client</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s2">&quot;openidClient&quot;</span><span class="p">,</span>
+    <span class="n">access_type</span><span class="o">=</span><span class="s2">&quot;CONFIDENTIAL&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;test-client&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">valid_redirect_uris</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;http://localhost:8080/openid-callback&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">realm_id</span></code> - (Required) The realm this client is attached to.</p></li>
@@ -923,6 +968,17 @@ clients that use the OpenID Connect protocol.</p>
 <p>Client Scopes can be used to share common protocol and role mappings between multiple
 clients within a realm. They can also be used by clients to conditionally request
 claims or roles for a user based on the OAuth 2.0 <code class="docutils literal notranslate"><span class="pre">scope</span></code> parameter.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">)</span>
+<span class="n">openid_client_scope</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">ClientScope</span><span class="p">(</span><span class="s2">&quot;openidClientScope&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;When requested, this scope will map a user&#39;s group memberships to a claim&quot;</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">realm_id</span></code> - (Required) The realm this client scope belongs to.</p></li>
@@ -1243,6 +1299,35 @@ Keycloak.</p>
 to the OpenID Connect <code class="docutils literal notranslate"><span class="pre">name</span></code> claim in a token. Protocol mappers can be defined
 for a single client, or they can be defined for a client scope which can
 be shared between multiple different clients.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">)</span>
+<span class="n">openid_client</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s2">&quot;openidClient&quot;</span><span class="p">,</span>
+    <span class="n">access_type</span><span class="o">=</span><span class="s2">&quot;CONFIDENTIAL&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;test-client&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">valid_redirect_uris</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;http://localhost:8080/openid-callback&quot;</span><span class="p">])</span>
+<span class="n">full_name_mapper</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">FullNameProtocolMapper</span><span class="p">(</span><span class="s2">&quot;fullNameMapper&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">openid_client</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">)</span>
+<span class="n">client_scope</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">ClientScope</span><span class="p">(</span><span class="s2">&quot;clientScope&quot;</span><span class="p">,</span> <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">full_name_mapper</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">FullNameProtocolMapper</span><span class="p">(</span><span class="s2">&quot;fullNameMapper&quot;</span><span class="p">,</span>
+    <span class="n">client_scope_id</span><span class="o">=</span><span class="n">client_scope</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">realm_id</span></code> - (Required) The realm this protocol mapper exists within.</p></li>
@@ -1392,6 +1477,37 @@ Keycloak.</p>
 to a claim in a token. Protocol mappers can be defined for a single client,
 or they can be defined for a client scope which can be shared between multiple
 different clients.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">)</span>
+<span class="n">openid_client</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s2">&quot;openidClient&quot;</span><span class="p">,</span>
+    <span class="n">access_type</span><span class="o">=</span><span class="s2">&quot;CONFIDENTIAL&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;test-client&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">valid_redirect_uris</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;http://localhost:8080/openid-callback&quot;</span><span class="p">])</span>
+<span class="n">group_membership_mapper</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">GroupMembershipProtocolMapper</span><span class="p">(</span><span class="s2">&quot;groupMembershipMapper&quot;</span><span class="p">,</span>
+    <span class="n">claim_name</span><span class="o">=</span><span class="s2">&quot;groups&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">openid_client</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">)</span>
+<span class="n">client_scope</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">ClientScope</span><span class="p">(</span><span class="s2">&quot;clientScope&quot;</span><span class="p">,</span> <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">group_membership_mapper</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">GroupMembershipProtocolMapper</span><span class="p">(</span><span class="s2">&quot;groupMembershipMapper&quot;</span><span class="p">,</span>
+    <span class="n">claim_name</span><span class="o">=</span><span class="s2">&quot;groups&quot;</span><span class="p">,</span>
+    <span class="n">client_scope_id</span><span class="o">=</span><span class="n">client_scope</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">realm_id</span></code> - (Required) The realm this protocol mapper exists within.</p></li>
@@ -1507,6 +1623,39 @@ Keycloak.</p>
 value. Protocol mappers can be defined for a single client, or they can
 be defined for a client scope which can be shared between multiple different
 clients.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">)</span>
+<span class="n">openid_client</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s2">&quot;openidClient&quot;</span><span class="p">,</span>
+    <span class="n">access_type</span><span class="o">=</span><span class="s2">&quot;CONFIDENTIAL&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;test-client&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">valid_redirect_uris</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;http://localhost:8080/openid-callback&quot;</span><span class="p">])</span>
+<span class="n">hardcoded_claim_mapper</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">HardcodedClaimProtocolMapper</span><span class="p">(</span><span class="s2">&quot;hardcodedClaimMapper&quot;</span><span class="p">,</span>
+    <span class="n">claim_name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">claim_value</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">openid_client</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">)</span>
+<span class="n">client_scope</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">ClientScope</span><span class="p">(</span><span class="s2">&quot;clientScope&quot;</span><span class="p">,</span> <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">hardcoded_claim_mapper</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">HardcodedClaimProtocolMapper</span><span class="p">(</span><span class="s2">&quot;hardcodedClaimMapper&quot;</span><span class="p">,</span>
+    <span class="n">claim_name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">claim_value</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">client_scope_id</span><span class="o">=</span><span class="n">client_scope</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">realm_id</span></code> - (Required) The realm this protocol mapper exists within.</p></li>
@@ -1655,6 +1804,39 @@ Keycloak.</p>
 always map to an access token for a client. Protocol mappers can be
 defined for a single client, or they can be defined for a client scope
 which can be shared between multiple different clients.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">)</span>
+<span class="n">role</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;role&quot;</span><span class="p">,</span> <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">openid_client</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s2">&quot;openidClient&quot;</span><span class="p">,</span>
+    <span class="n">access_type</span><span class="o">=</span><span class="s2">&quot;CONFIDENTIAL&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;test-client&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">valid_redirect_uris</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;http://localhost:8080/openid-callback&quot;</span><span class="p">])</span>
+<span class="n">hardcoded_role_mapper</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">HardcodedRoleProtocolMapper</span><span class="p">(</span><span class="s2">&quot;hardcodedRoleMapper&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">openid_client</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">role_id</span><span class="o">=</span><span class="n">role</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">)</span>
+<span class="n">role</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;role&quot;</span><span class="p">,</span> <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">client_scope</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">ClientScope</span><span class="p">(</span><span class="s2">&quot;clientScope&quot;</span><span class="p">,</span> <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">hardcoded_role_mapper</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">HardcodedRoleProtocolMapper</span><span class="p">(</span><span class="s2">&quot;hardcodedRoleMapper&quot;</span><span class="p">,</span>
+    <span class="n">client_scope_id</span><span class="o">=</span><span class="n">client_scope</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">role_id</span><span class="o">=</span><span class="n">role</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">realm_id</span></code> - (Required) The realm this protocol mapper exists within.</p></li>
@@ -1767,6 +1949,39 @@ Keycloak.</p>
 for a user within Keycloak to a claim in a token. Protocol mappers can be
 defined for a single client, or they can be defined for a client scope which
 can be shared between multiple different clients.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">)</span>
+<span class="n">openid_client</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s2">&quot;openidClient&quot;</span><span class="p">,</span>
+    <span class="n">access_type</span><span class="o">=</span><span class="s2">&quot;CONFIDENTIAL&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;test-client&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">valid_redirect_uris</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;http://localhost:8080/openid-callback&quot;</span><span class="p">])</span>
+<span class="n">user_attribute_mapper</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">UserAttributeProtocolMapper</span><span class="p">(</span><span class="s2">&quot;userAttributeMapper&quot;</span><span class="p">,</span>
+    <span class="n">claim_name</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">openid_client</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">user_attribute</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">)</span>
+<span class="n">client_scope</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">ClientScope</span><span class="p">(</span><span class="s2">&quot;clientScope&quot;</span><span class="p">,</span> <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">user_attribute_mapper</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">UserAttributeProtocolMapper</span><span class="p">(</span><span class="s2">&quot;userAttributeMapper&quot;</span><span class="p">,</span>
+    <span class="n">claim_name</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">client_scope_id</span><span class="o">=</span><span class="n">client_scope</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">user_attribute</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">realm_id</span></code> - (Required) The realm this protocol mapper exists within.</p></li>
@@ -1924,6 +2139,39 @@ Keycloak.</p>
 on the Keycloak user interface to a claim in a token. Protocol mappers can be
 defined for a single client, or they can be defined for a client scope which
 can be shared between multiple different clients.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">)</span>
+<span class="n">openid_client</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s2">&quot;openidClient&quot;</span><span class="p">,</span>
+    <span class="n">access_type</span><span class="o">=</span><span class="s2">&quot;CONFIDENTIAL&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;test-client&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">valid_redirect_uris</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;http://localhost:8080/openid-callback&quot;</span><span class="p">])</span>
+<span class="n">user_property_mapper</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">UserPropertyProtocolMapper</span><span class="p">(</span><span class="s2">&quot;userPropertyMapper&quot;</span><span class="p">,</span>
+    <span class="n">claim_name</span><span class="o">=</span><span class="s2">&quot;email&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">openid_client</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">user_property</span><span class="o">=</span><span class="s2">&quot;email&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">)</span>
+<span class="n">client_scope</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">ClientScope</span><span class="p">(</span><span class="s2">&quot;clientScope&quot;</span><span class="p">,</span> <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">user_property_mapper</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">UserPropertyProtocolMapper</span><span class="p">(</span><span class="s2">&quot;userPropertyMapper&quot;</span><span class="p">,</span>
+    <span class="n">claim_name</span><span class="o">=</span><span class="s2">&quot;email&quot;</span><span class="p">,</span>
+    <span class="n">client_scope_id</span><span class="o">=</span><span class="n">client_scope</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">user_property</span><span class="o">=</span><span class="s2">&quot;email&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">realm_id</span></code> - (Required) The realm this protocol mapper exists within.</p></li>
@@ -2072,6 +2320,37 @@ Keycloak.</p>
 Protocol mappers can be defined for a single client, or they can
 be defined for a client scope which can be shared between multiple different
 clients.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">)</span>
+<span class="n">openid_client</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s2">&quot;openidClient&quot;</span><span class="p">,</span>
+    <span class="n">access_type</span><span class="o">=</span><span class="s2">&quot;CONFIDENTIAL&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;test-client&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">valid_redirect_uris</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;http://localhost:8080/openid-callback&quot;</span><span class="p">])</span>
+<span class="n">user_realm_role_mapper</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">UserRealmRoleProtocolMapper</span><span class="p">(</span><span class="s2">&quot;userRealmRoleMapper&quot;</span><span class="p">,</span>
+    <span class="n">claim_name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">openid_client</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">)</span>
+<span class="n">client_scope</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">ClientScope</span><span class="p">(</span><span class="s2">&quot;clientScope&quot;</span><span class="p">,</span> <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">user_realm_role_mapper</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">UserRealmRoleProtocolMapper</span><span class="p">(</span><span class="s2">&quot;userRealmRoleMapper&quot;</span><span class="p">,</span>
+    <span class="n">claim_name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">client_scope_id</span><span class="o">=</span><span class="n">client_scope</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">realm_id</span></code> - (Required) The realm this protocol mapper exists within.</p></li>
@@ -2232,6 +2511,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_keycloak.openid.get_client">
 <code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">get_client</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.get_client" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source can be used to fetch properties of a Keycloak OpenID client for usage with other resources.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm_management</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">openid</span><span class="o">.</span><span class="n">get_client</span><span class="p">(</span><span class="n">realm_id</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;realm-management&quot;</span><span class="p">)</span>
+<span class="n">admin</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">get_role</span><span class="p">(</span><span class="n">realm_id</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">realm_management</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;realm-admin&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">realm_id</span></code> - (Required) The realm id.</p></li>

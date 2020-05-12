@@ -34,6 +34,17 @@ const openidClientScope = new keycloak.openid.ClientScope("openid_client_scope",
     realmId: realm.id,
 });
 ```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+realm = keycloak.Realm("realm",
+    enabled=True,
+    realm="my-realm")
+openid_client_scope = keycloak.openid.ClientScope("openidClientScope",
+    description="When requested, this scope will map a user's group memberships to a claim",
+    realm_id=realm.id)
+```
 
 ### Argument Reference
 

@@ -38,6 +38,21 @@ const groupRoles = new keycloak.GroupRoles("group_roles", {
     roles: [offlineAccess.id],
 });
 ```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+realm = keycloak.Realm("realm",
+    enabled=True,
+    realm="my-realm")
+offline_access = realm.id.apply(lambda id: keycloak.get_role(name="offline_access",
+    realm_id=id))
+group = keycloak.Group("group", realm_id=realm.id)
+group_roles = keycloak.GroupRoles("groupRoles",
+    group_id=group.id,
+    realm_id=realm.id,
+    roles=[offline_access.id])
+```
 
 ### Argument Reference
 
