@@ -2,8 +2,7 @@
     @apply mt-4 py-4 hidden;
 
     h4 {
-        @apply text-blue-800 uppercase tracking-wide font-bold text-sm;
-        cursor: pointer;
+        @apply text-blue-800 uppercase tracking-wide font-bold text-sm cursor-pointer;
     }
 
     ul {

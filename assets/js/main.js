@@ -50,9 +50,7 @@ function generateOnThisPage() {
         if (found) {
             $(".on-this-page").show();
             $(".on-this-page").click(function(){
-                $("html, body").animate({
-                    scrollTop: 0
-                }, 100);
+                $(window).scrollTop(0); 
             });
 
             // Highlight the first heading whose offset from top is greater than the current scroll

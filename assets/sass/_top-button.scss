@@ -1,17 +1,15 @@
 .top-button {
+    @apply text-white cursor-pointer;
+    @include transition(all, .5s, ease-in-out);
+    @include bg-gradient(#90a4ae,#78909c, 30em, 0, 0);
     border-radius: 3px;
-    color: #fff!important;
     line-height: 25px;
-    transition: all .5s ease-in-out;
-    background: linear-gradient(180deg,#90a4ae,#78909c);
     width: 40px;
     height: 25px;
     position: fixed;
-    right: 27%;
+    right: 30%;
     bottom: 40px;
     opacity: 30%;
     z-index: 1000001;
-    cursor: pointer;
     text-align: center;
 }
-
