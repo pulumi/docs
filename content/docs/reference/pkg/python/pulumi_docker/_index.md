@@ -27,6 +27,15 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_docker.Container">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">Container</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attach</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">command</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_set</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_shares</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destroy_grace_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_searches</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domainname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entrypoints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">envs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_adds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">healthcheck</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hosts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipc_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">links</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_driver</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_retry_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_swap</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mounts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">must_run</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_aliases</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">networks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">networks_advanced</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pid_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">privileged</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">publish_all_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_only</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">restart</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shm_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sysctls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tmpfs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ulimits</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uploads</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">userns_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volumes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">working_dir</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.Container" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages the lifecycle of a Docker container.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_docker</span> <span class="k">as</span> <span class="nn">docker</span>
+
+<span class="c1"># Find the latest Ubuntu precise image.</span>
+<span class="n">ubuntu_remote_image</span> <span class="o">=</span> <span class="n">docker</span><span class="o">.</span><span class="n">RemoteImage</span><span class="p">(</span><span class="s2">&quot;ubuntuRemoteImage&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ubuntu:precise&quot;</span><span class="p">)</span>
+<span class="c1"># Start a container</span>
+<span class="n">ubuntu_container</span> <span class="o">=</span> <span class="n">docker</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;ubuntuContainer&quot;</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="n">ubuntu_remote_image</span><span class="o">.</span><span class="n">latest</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -960,6 +969,13 @@ See [docker docs][networkdocs] for more details.</p>
 <dd><p>Manages a Docker Network. This can be used alongside
 <a class="reference external" href="https://www.terraform.io/docs/providers/docker/r/container.html">docker_container</a>
 to create virtual networks within the docker environment.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_docker</span> <span class="k">as</span> <span class="nn">docker</span>
+
+<span class="c1"># Create a new docker network</span>
+<span class="n">private_network</span> <span class="o">=</span> <span class="n">docker</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;privateNetwork&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1244,6 +1260,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>This resource will <em>not</em> pull new layers of the image automatically unless used in
 conjunction with <cite>`</cite>.getRegistryImage`` &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/docker/d/registry_image.html">https://www.terraform.io/docs/providers/docker/d/registry_image.html</a>&gt;`_
 data source to update the <code class="docutils literal notranslate"><span class="pre">pull_triggers</span></code> field.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_docker</span> <span class="k">as</span> <span class="nn">docker</span>
+
+<span class="c1"># Find the latest Ubuntu precise image.</span>
+<span class="n">ubuntu</span> <span class="o">=</span> <span class="n">docker</span><span class="o">.</span><span class="n">RemoteImage</span><span class="p">(</span><span class="s2">&quot;ubuntu&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ubuntu:precise&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_docker</span> <span class="k">as</span> <span class="nn">docker</span>
+
+<span class="n">ubuntu_registry_image</span> <span class="o">=</span> <span class="n">docker</span><span class="o">.</span><span class="n">get_registry_image</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;ubuntu:precise&quot;</span><span class="p">)</span>
+<span class="n">ubuntu_remote_image</span> <span class="o">=</span> <span class="n">docker</span><span class="o">.</span><span class="n">RemoteImage</span><span class="p">(</span><span class="s2">&quot;ubuntuRemoteImage&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="n">ubuntu_registry_image</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">pull_triggers</span><span class="o">=</span><span class="p">[</span><span class="n">ubuntu_registry_image</span><span class="o">.</span><span class="n">sha256_digest</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1358,6 +1390,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_docker.Secret">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">Secret</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.Secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages the secrets of a Docker service in a swarm.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_docker</span> <span class="k">as</span> <span class="nn">docker</span>
+
+<span class="c1"># Creates a secret</span>
+<span class="n">foo_secret</span> <span class="o">=</span> <span class="n">docker</span><span class="o">.</span><span class="n">Secret</span><span class="p">(</span><span class="s2">&quot;fooSecret&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="s2">&quot;ewogICJzZXJsaasIfQo=&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2294,6 +2333,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_docker.ServiceConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">ServiceConfig</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.ServiceConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages the configuration of a Docker service in a swarm.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_docker</span> <span class="k">as</span> <span class="nn">docker</span>
+
+<span class="c1"># Creates a config</span>
+<span class="n">foo_config</span> <span class="o">=</span> <span class="n">docker</span><span class="o">.</span><span class="n">ServiceConfig</span><span class="p">(</span><span class="s2">&quot;fooConfig&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="s2">&quot;ewogICJzZXJIfQo=&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2378,6 +2424,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Creates and destroys a volume in Docker. This can be used alongside
 <a class="reference external" href="https://www.terraform.io/docs/providers/docker/r/container.html">docker_container</a>
 to prepare volumes that can be shared across containers.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_docker</span> <span class="k">as</span> <span class="nn">docker</span>
+
+<span class="c1"># Creates a docker volume &quot;shared_volume&quot;.</span>
+<span class="n">shared_volume</span> <span class="o">=</span> <span class="n">docker</span><span class="o">.</span><span class="n">Volume</span><span class="p">(</span><span class="s2">&quot;sharedVolume&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2493,6 +2546,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_docker.get_network">
 <code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">get_network</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.get_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finds a specific docker network and returns information about it.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_docker</span> <span class="k">as</span> <span class="nn">docker</span>
+
+<span class="n">main</span> <span class="o">=</span> <span class="n">docker</span><span class="o">.</span><span class="n">get_network</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;main&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2509,6 +2568,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Reads the image metadata from a Docker Registry. Used in conjunction with the
 <a class="reference external" href="https://www.terraform.io/docs/providers/docker/r/image.html">docker_image</a> resource to keep an image up
 to date on the latest available version of the tag.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_docker</span> <span class="k">as</span> <span class="nn">docker</span>
+
+<span class="n">ubuntu_registry_image</span> <span class="o">=</span> <span class="n">docker</span><span class="o">.</span><span class="n">get_registry_image</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;ubuntu:precise&quot;</span><span class="p">)</span>
+<span class="n">ubuntu_remote_image</span> <span class="o">=</span> <span class="n">docker</span><span class="o">.</span><span class="n">RemoteImage</span><span class="p">(</span><span class="s2">&quot;ubuntuRemoteImage&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="n">ubuntu_registry_image</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">pull_triggers</span><span class="o">=</span><span class="p">[</span><span class="n">ubuntu_registry_image</span><span class="o">.</span><span class="n">sha256_digest</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the Docker image, including any tags. e.g. <code class="docutils literal notranslate"><span class="pre">alpine:latest</span></code></p>

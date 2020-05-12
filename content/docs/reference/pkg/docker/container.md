@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_docker as docker
+
+# Find the latest Ubuntu precise image.
+ubuntu_remote_image = docker.RemoteImage("ubuntuRemoteImage", name="ubuntu:precise")
+# Start a container
+ubuntu_container = docker.Container("ubuntuContainer", image=ubuntu_remote_image.latest)
+```
 {{% /example %}}
 
 {{% example typescript %}}

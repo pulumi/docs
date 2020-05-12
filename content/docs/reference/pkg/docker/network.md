@@ -30,7 +30,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_docker as docker
+
+# Create a new docker network
+private_network = docker.Network("privateNetwork")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -30,7 +30,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_docker as docker
+
+# Creates a docker volume "shared_volume".
+shared_volume = docker.Volume("sharedVolume")
+```
 {{% /example %}}
 
 {{% example typescript %}}
