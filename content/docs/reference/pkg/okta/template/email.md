@@ -30,7 +30,25 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.template.Email("example",
+    translations=[
+        {
+            "language": "en",
+            "subject": "Stuff",
+            "template": f"Hi {user['firstName']},<br/><br/>Blah blah {reset_password_link}",
+        },
+        {
+            "language": "es",
+            "subject": "Cosas",
+            "template": f"Hola {user['firstName']},<br/><br/>Puedo ir al bano {reset_password_link}",
+        },
+    ],
+    type="email.forgotPassword")
+```
 {{% /example %}}
 
 {{% example typescript %}}

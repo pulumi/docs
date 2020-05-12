@@ -18,6 +18,21 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.network.</code><code class="sig-name descname">Zone</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dynamic_locations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gateways</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.network.Zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Okta Network Zone.</p>
 <p>This resource allows you to create and configure an Okta Network Zone.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_okta</span> <span class="k">as</span> <span class="nn">okta</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">okta</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">gateways</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;1.2.3.4/24&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;2.3.4.5-2.3.4.15&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">proxies</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;2.2.3.4/24&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;3.3.4.5-3.3.4.15&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;IP&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

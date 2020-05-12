@@ -30,7 +30,22 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.policy.RuleIdpDiscovery("example",
+    idp_id="<idp id>",
+    idp_type="SAML2",
+    policyid="<policy id>",
+    priority=1,
+    user_identifier_attribute="company",
+    user_identifier_patterns=[{
+        "matchType": "EQUALS",
+        "value": "Articulate",
+    }],
+    user_identifier_type="ATTRIBUTE")
+```
 {{% /example %}}
 
 {{% example typescript %}}

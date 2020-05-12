@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.auth.get_server(name="Example Auth")
+```
 {{% /example %}}
 
 {{% example typescript %}}

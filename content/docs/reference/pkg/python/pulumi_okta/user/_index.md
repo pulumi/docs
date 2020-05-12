@@ -33,6 +33,16 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.user.</code><code class="sig-name descname">BaseSchema</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">index</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">required</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.user.BaseSchema" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a User Base Schema property.</p>
 <p>This resource allows you to configure a base user schema property.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_okta</span> <span class="k">as</span> <span class="nn">okta</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">okta</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">BaseSchema</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">index</span><span class="o">=</span><span class="s2">&quot;customPropertyName&quot;</span><span class="p">,</span>
+    <span class="n">master</span><span class="o">=</span><span class="s2">&quot;OKTA&quot;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;customPropertyName&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -412,6 +422,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.user.</code><code class="sig-name descname">Schema</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">array_enums</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">array_one_ofs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">array_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enums</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">external_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">index</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_length</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_length</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">one_ofs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">required</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.user.Schema" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a User Schema property.</p>
 <p>This resource allows you to create and configure a custom user schema property.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_okta</span> <span class="k">as</span> <span class="nn">okta</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">okta</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">Schema</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;My custom property name&quot;</span><span class="p">,</span>
+    <span class="n">index</span><span class="o">=</span><span class="s2">&quot;customPropertyName&quot;</span><span class="p">,</span>
+    <span class="n">master</span><span class="o">=</span><span class="s2">&quot;OKTA&quot;</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="s2">&quot;SELF&quot;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;customPropertyName&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -635,6 +657,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.user.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">city</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cost_center</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_profile_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">department</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">division</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">employee_number</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">first_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_memberships</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">honorific_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">honorific_suffix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">last_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">locale</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">manager</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">manager_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">middle_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mobile_phone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nick_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">postal_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">preferred_language</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">primary_phone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">profile_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">recovery_answer</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">recovery_question</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">second_email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">street_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timezone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zip_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.user.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Okta User.</p>
 <p>This resource allows you to create and configure an Okta User.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_okta</span> <span class="k">as</span> <span class="nn">okta</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">okta</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;My custom property name&quot;</span><span class="p">,</span>
+    <span class="n">index</span><span class="o">=</span><span class="s2">&quot;customPropertyName&quot;</span><span class="p">,</span>
+    <span class="n">master</span><span class="o">=</span><span class="s2">&quot;OKTA&quot;</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="s2">&quot;SELF&quot;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;customPropertyName&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1012,6 +1046,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_okta.user.get_user">
 <code class="sig-prename descclassname">pulumi_okta.user.</code><code class="sig-name descname">get_user</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">searches</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.user.get_user" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve a users from Okta.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_okta</span> <span class="k">as</span> <span class="nn">okta</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">okta</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="n">searches</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;profile.firstName&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;profile.lastName&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Doe&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>searches</strong> (<em>list</em>) – Map of search criteria. It supports the following properties.</p>
@@ -1029,12 +1078,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_okta.user.get_user_profile_mapping_source">
 <code class="sig-prename descclassname">pulumi_okta.user.</code><code class="sig-name descname">get_user_profile_mapping_source</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.user.get_user_profile_mapping_source" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve the base user Profile Mapping source or target from Okta.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_okta</span> <span class="k">as</span> <span class="nn">okta</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">okta</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">get_user_profile_mapping_source</span><span class="p">()</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py function">
 <dt id="pulumi_okta.user.get_users">
 <code class="sig-prename descclassname">pulumi_okta.user.</code><code class="sig-name descname">get_users</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">searches</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">users</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.user.get_users" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve a list of users from Okta.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_okta</span> <span class="k">as</span> <span class="nn">okta</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">okta</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">get_users</span><span class="p">(</span><span class="n">searches</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;comparison&quot;</span><span class="p">:</span> <span class="s2">&quot;sw&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;profile.company&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Articulate&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

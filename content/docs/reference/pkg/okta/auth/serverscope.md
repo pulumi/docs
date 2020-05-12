@@ -30,7 +30,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.auth.ServerScope("example",
+    auth_server_id="<auth server id>",
+    consent="IMPLICIT",
+    metadata_publish="NO_CLIENTS")
+```
 {{% /example %}}
 
 {{% example typescript %}}

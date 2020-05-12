@@ -30,7 +30,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.policy.Signon("example",
+    description="Example",
+    groups_includeds=[data["okta.group.Group"]["everyone"]["id"]],
+    status="ACTIVE")
+```
 {{% /example %}}
 
 {{% example typescript %}}

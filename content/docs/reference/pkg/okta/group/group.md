@@ -30,7 +30,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.group.Group("example", description="My Example Group")
+```
 {{% /example %}}
 
 {{% example typescript %}}

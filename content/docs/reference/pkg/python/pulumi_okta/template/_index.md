@@ -18,6 +18,25 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.template.</code><code class="sig-name descname">Email</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_language</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">translations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.template.Email" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Okta Email Template.</p>
 <p>This resource allows you to create and configure an Okta Email Template.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_okta</span> <span class="k">as</span> <span class="nn">okta</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">okta</span><span class="o">.</span><span class="n">template</span><span class="o">.</span><span class="n">Email</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">translations</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;subject&quot;</span><span class="p">:</span> <span class="s2">&quot;Stuff&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;template&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Hi </span><span class="si">{</span><span class="n">user</span><span class="p">[</span><span class="s1">&#39;firstName&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">,&lt;br/&gt;&lt;br/&gt;Blah blah </span><span class="si">{</span><span class="n">reset_password_link</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;es&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;subject&quot;</span><span class="p">:</span> <span class="s2">&quot;Cosas&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;template&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Hola </span><span class="si">{</span><span class="n">user</span><span class="p">[</span><span class="s1">&#39;firstName&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">,&lt;br/&gt;&lt;br/&gt;Puedo ir al bano </span><span class="si">{</span><span class="n">reset_password_link</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;email.forgotPassword&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

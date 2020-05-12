@@ -30,7 +30,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.app.AutoLogin("example",
+    credentials_scheme="EDIT_USERNAME_AND_PASSWORD",
+    label="Example App",
+    reveal_password=True,
+    sign_on_redirect_url="https://example.com",
+    sign_on_url="https://example.com/login.html")
+```
 {{% /example %}}
 
 {{% example typescript %}}

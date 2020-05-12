@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.app.get_app(label="Example App")
+```
 {{% /example %}}
 
 {{% example typescript %}}

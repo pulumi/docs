@@ -30,7 +30,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.idp.SamlKey("example", x5cs=[okta_app_saml["example"]["certificate"]])
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -30,7 +30,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.group.Roles("example",
+    admin_roles=["SUPER_ADMIN"],
+    group_id="<group id>")
+```
 {{% /example %}}
 
 {{% example typescript %}}

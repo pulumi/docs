@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.policy.get_policy(name="Password Policy Example",
+    type="PASSWORD")
+```
 {{% /example %}}
 
 {{% example typescript %}}

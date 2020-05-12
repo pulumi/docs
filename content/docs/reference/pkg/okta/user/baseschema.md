@@ -30,7 +30,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.user.BaseSchema("example",
+    index="customPropertyName",
+    master="OKTA",
+    title="customPropertyName",
+    type="string")
+```
 {{% /example %}}
 
 {{% example typescript %}}

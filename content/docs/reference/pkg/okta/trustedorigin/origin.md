@@ -30,7 +30,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.trustedorigin.Origin("example",
+    origin="https://example.com",
+    scopes=["CORS"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

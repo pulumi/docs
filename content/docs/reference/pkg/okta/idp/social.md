@@ -30,7 +30,23 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.idp.Social("example",
+    client_id="abcd123",
+    client_secret="abcd123",
+    match_attribute="customfieldId",
+    match_type="CUSTOM_ATTRIBUTE",
+    protocol_type="OAUTH2",
+    scopes=[
+        "public_profile",
+        "email",
+    ],
+    type="FACEBOOK",
+    username_template="idpuser.email")
+```
 {{% /example %}}
 
 {{% example typescript %}}
