@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_github as github
+
+example = github.get_release(owner="example-owner",
+    repository="example-repository",
+    retrieve_by="latest")
+```
 {{% /example %}}
 
 {{% example typescript %}}

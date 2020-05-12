@@ -32,7 +32,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_github as github
+
+# Add a user to the organization
+membership_for_some_user = github.Membership("membershipForSomeUser",
+    role="member",
+    username="SomeUser")
+```
 {{% /example %}}
 
 {{% example typescript %}}

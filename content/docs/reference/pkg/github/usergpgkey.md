@@ -30,7 +30,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_github as github
+
+example = github.UserGpgKey("example", armored_public_key="""-----BEGIN PGP PUBLIC KEY BLOCK-----
+...
+-----END PGP PUBLIC KEY BLOCK-----
+""")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_github as github
+
+development = github.get_branch(branch="development",
+    repository="example")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -36,7 +42,7 @@ Coming soon!
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
 
-const development = pulumi.output(github.Branch({
+const development = pulumi.output(github.getBranch({
     branch: "development",
     repository: "example",
 }, { async: true }));

@@ -30,7 +30,40 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_github as github
+
+example_team = github.Team("exampleTeam")
+# Protect the master branch of the foo repository. Additionally, require that
+# the "ci/travis" context to be passing and only allow the engineers team merge
+# to the branch.
+example_branch_protection = github.BranchProtection("exampleBranchProtection",
+    branch="master",
+    enforce_admins=True,
+    repository=github_repository["example"]["name"],
+    required_pull_request_reviews={
+        "dismissStaleReviews": True,
+        "dismissalTeams": [
+            example_team.slug,
+            github_team["second"]["slug"],
+        ],
+        "dismissalUsers": ["foo-user"],
+    },
+    required_status_checks={
+        "contexts": ["ci/travis"],
+        "strict": False,
+    },
+    restrictions={
+        "apps": ["foo-app"],
+        "teams": [example_team.slug],
+        "users": ["foo-user"],
+    })
+example_team_repository = github.TeamRepository("exampleTeamRepository",
+    permission="pull",
+    repository=github_repository["example"]["name"],
+    team_id=example_team.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

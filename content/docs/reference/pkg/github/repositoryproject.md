@@ -28,7 +28,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_github as github
+
+example = github.Repository("example",
+    description="My awesome codebase",
+    has_projects=True)
+project = github.RepositoryProject("project",
+    body="This is a repository project.",
+    repository=example.name)
+```
 {{% /example %}}
 
 {{% example typescript %}}

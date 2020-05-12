@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_github as github
+
+project = github.OrganizationProject("project", body="This is a organization project.")
+```
 {{% /example %}}
 
 {{% example typescript %}}

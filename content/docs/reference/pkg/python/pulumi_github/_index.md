@@ -167,6 +167,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This resource allows you to create and manage branches within your repository.</p>
 <p>Additional constraints can be applied to ensure your branch is created from
 another branch or commit.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="n">development</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">Branch</span><span class="p">(</span><span class="s2">&quot;development&quot;</span><span class="p">,</span>
+    <span class="n">branch</span><span class="o">=</span><span class="s2">&quot;development&quot;</span><span class="p">,</span>
+    <span class="n">repository</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -287,6 +295,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">BranchProtection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">branch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enforce_admins</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">require_signed_commits</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">required_pull_request_reviews</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">required_status_checks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">restrictions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.BranchProtection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Protects a GitHub branch.</p>
 <p>This resource allows you to configure branch protection for repositories in your organization. When applied, the branch will be protected from forced pushes and deletion. Additional constraints, such as required status checks or restrictions on users, teams, and apps, can also be configured.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="n">example_team</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">Team</span><span class="p">(</span><span class="s2">&quot;exampleTeam&quot;</span><span class="p">)</span>
+<span class="c1"># Protect the master branch of the foo repository. Additionally, require that</span>
+<span class="c1"># the &quot;ci/travis&quot; context to be passing and only allow the engineers team merge</span>
+<span class="c1"># to the branch.</span>
+<span class="n">example_branch_protection</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">BranchProtection</span><span class="p">(</span><span class="s2">&quot;exampleBranchProtection&quot;</span><span class="p">,</span>
+    <span class="n">branch</span><span class="o">=</span><span class="s2">&quot;master&quot;</span><span class="p">,</span>
+    <span class="n">enforce_admins</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">repository</span><span class="o">=</span><span class="n">github_repository</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">required_pull_request_reviews</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;dismissStaleReviews&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;dismissalTeams&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="n">example_team</span><span class="o">.</span><span class="n">slug</span><span class="p">,</span>
+            <span class="n">github_team</span><span class="p">[</span><span class="s2">&quot;second&quot;</span><span class="p">][</span><span class="s2">&quot;slug&quot;</span><span class="p">],</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;dismissalUsers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;foo-user&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">required_status_checks</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;contexts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ci/travis&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;strict&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">restrictions</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;apps&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;foo-app&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;teams&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">example_team</span><span class="o">.</span><span class="n">slug</span><span class="p">],</span>
+        <span class="s2">&quot;users&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;foo-user&quot;</span><span class="p">],</span>
+    <span class="p">})</span>
+<span class="n">example_team_repository</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">TeamRepository</span><span class="p">(</span><span class="s2">&quot;exampleTeamRepository&quot;</span><span class="p">,</span>
+    <span class="n">permission</span><span class="o">=</span><span class="s2">&quot;pull&quot;</span><span class="p">,</span>
+    <span class="n">repository</span><span class="o">=</span><span class="n">github_repository</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">team_id</span><span class="o">=</span><span class="n">example_team</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1105,6 +1147,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>This resource allows you to add/remove users from your organization. When applied,
 an invitation will be sent to the user to become part of the organization. When
 destroyed, either the invitation will be cancelled or the user will be removed.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="c1"># Add a user to the organization</span>
+<span class="n">membership_for_some_user</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">Membership</span><span class="p">(</span><span class="s2">&quot;membershipForSomeUser&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;member&quot;</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;SomeUser&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1190,6 +1241,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_github.OrganizationBlock">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">OrganizationBlock</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.OrganizationBlock" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to create and manage blocks for GitHub organizations.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">OrganizationBlock</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="s2">&quot;paultyng&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1264,6 +1321,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_github.OrganizationProject">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">OrganizationProject</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.OrganizationProject" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to create and manage projects for GitHub organization.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">OrganizationProject</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="s2">&quot;This is a organization project.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1353,6 +1416,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_github.OrganizationWebhook">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">OrganizationWebhook</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">active</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.OrganizationWebhook" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to create and manage webhooks for GitHub organization.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">OrganizationWebhook</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">active</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;contentType&quot;</span><span class="p">:</span> <span class="s2">&quot;form&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;insecureSsl&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://google.de/&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">events</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;issues&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1471,6 +1547,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_github.ProjectColumn">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">ProjectColumn</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.ProjectColumn" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to create and manage columns for GitHub projects.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">OrganizationProject</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="s2">&quot;This is an organization project.&quot;</span><span class="p">)</span>
+<span class="n">column</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">ProjectColumn</span><span class="p">(</span><span class="s2">&quot;column&quot;</span><span class="p">,</span> <span class="n">project_id</span><span class="o">=</span><span class="n">project</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1612,23 +1695,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_github.Repository">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">Repository</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_merge_commit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_rebase_merge</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_squash_merge</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">archived</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_init</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_branch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delete_branch_on_merge</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gitignore_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">has_downloads</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">has_issues</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">has_projects</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">has_wiki</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">homepage_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.Repository" title="Permalink to this definition">¶</a></dt>
-<dd><p>This resource allows you to create and manage repositories within your
-GitHub organization.</p>
-<p>This resource cannot currently be used to manage <em>personal</em> repositories,
-outside of organizations.</p>
+<dd><p>Create a Repository resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] allow_merge_commit: Set to <code class="docutils literal notranslate"><span class="pre">false</span></code> to disable merge commits on the repository.
+:param pulumi.Input[bool] allow_rebase_merge: Set to <code class="docutils literal notranslate"><span class="pre">false</span></code> to disable rebase merges on the repository.
+:param pulumi.Input[bool] allow_squash_merge: Set to <code class="docutils literal notranslate"><span class="pre">false</span></code> to disable squash merges on the repository.
+:param pulumi.Input[bool] archived: Specifies if the repository should be archived. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. <strong>NOTE</strong> Currently, the API does not support unarchiving.
+:param pulumi.Input[bool] auto_init: Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to produce an initial commit in the repository.
+:param pulumi.Input[str] default_branch: The name of the default branch of the repository. <strong>NOTE:</strong> This can only be set after a repository has already been created,</p>
+<blockquote>
+<div><p>and after a correct reference has been created for the target branch inside the repository. This means a user will have to omit this parameter from the
+initial repository creation and create the target branch inside of the repository prior to setting this attribute.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>allow_merge_commit</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">false</span></code> to disable merge commits on the repository.</p></li>
-<li><p><strong>allow_rebase_merge</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">false</span></code> to disable rebase merges on the repository.</p></li>
-<li><p><strong>allow_squash_merge</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">false</span></code> to disable squash merges on the repository.</p></li>
-<li><p><strong>archived</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if the repository should be archived. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. <strong>NOTE</strong> Currently, the API does not support unarchiving.</p></li>
-<li><p><strong>auto_init</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to produce an initial commit in the repository.</p></li>
-<li><p><strong>default_branch</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the default branch of the repository. <strong>NOTE:</strong> This can only be set after a repository has already been created,
-and after a correct reference has been created for the target branch inside the repository. This means a user will have to omit this parameter from the
-initial repository creation and create the target branch inside of the repository prior to setting this attribute.</p></li>
 <li><p><strong>delete_branch_on_merge</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Automatically delete head branch after a pull request is merged. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the repository.</p></li>
 <li><p><strong>gitignore_template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Use the <a class="reference external" href="https://github.com/github/gitignore">name of the template</a> without the extension. For example, “Haskell”.</p></li>
@@ -1930,6 +2012,16 @@ collaborator will be removed from the repository.</p>
 <li><p><a class="reference external" href="https://help.github.com/articles/adding-outside-collaborators-to-repositories-in-your-organization/">Adding outside collaborators to repositories in your organization</a></p></li>
 <li><p><a class="reference external" href="https://help.github.com/articles/converting-an-organization-member-to-an-outside-collaborator/">Converting an organization member to an outside collaborator</a></p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="c1"># Add a collaborator to a repository</span>
+<span class="n">a_repo_collaborator</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">RepositoryCollaborator</span><span class="p">(</span><span class="s2">&quot;aRepoCollaborator&quot;</span><span class="p">,</span>
+    <span class="n">permission</span><span class="o">=</span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+    <span class="n">repository</span><span class="o">=</span><span class="s2">&quot;our-cool-repo&quot;</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;SomeUser&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2038,6 +2130,17 @@ account.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://developer.github.com/guides/managing-deploy-keys/#deploy-keys">About deploy keys</a></p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="c1"># Add a deploy key</span>
+<span class="n">example_repository_deploy_key</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">RepositoryDeployKey</span><span class="p">(</span><span class="s2">&quot;exampleRepositoryDeployKey&quot;</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;ssh-rsa AAA...&quot;</span><span class="p">,</span>
+    <span class="n">read_only</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="p">,</span>
+    <span class="n">repository</span><span class="o">=</span><span class="s2">&quot;test-repo&quot;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Repository test key&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2137,6 +2240,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">RepositoryFile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">branch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">commit_author</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">commit_email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">commit_message</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.RepositoryFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to create and manage files within a
 GitHub repository.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="n">gitignore</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">RepositoryFile</span><span class="p">(</span><span class="s2">&quot;gitignore&quot;</span><span class="p">,</span>
+    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;**/*.tfstate&quot;</span><span class="p">,</span>
+    <span class="n">file</span><span class="o">=</span><span class="s2">&quot;.gitignore&quot;</span><span class="p">,</span>
+    <span class="n">repository</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2269,6 +2381,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_github.RepositoryProject">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">RepositoryProject</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.RepositoryProject" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to create and manage projects for GitHub repository.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">Repository</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;My awesome codebase&quot;</span><span class="p">,</span>
+    <span class="n">has_projects</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">project</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">RepositoryProject</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">body</span><span class="o">=</span><span class="s2">&quot;This is a repository project.&quot;</span><span class="p">,</span>
+    <span class="n">repository</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2365,23 +2488,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_github.RepositoryWebhook">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">RepositoryWebhook</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">active</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.RepositoryWebhook" title="Permalink to this definition">¶</a></dt>
-<dd><p>This resource allows you to create and manage webhooks for repositories within your
-GitHub organization.</p>
-<p>This resource cannot currently be used to manage webhooks for <em>personal</em> repositories,
-outside of organizations.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>active</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicate of the webhook should receive events. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
-<li><p><strong>configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – key/value pair of configuration for this webhook. Available keys are <code class="docutils literal notranslate"><span class="pre">url</span></code>, <code class="docutils literal notranslate"><span class="pre">content_type</span></code>, <code class="docutils literal notranslate"><span class="pre">secret</span></code> and <code class="docutils literal notranslate"><span class="pre">insecure_ssl</span></code>. <code class="docutils literal notranslate"><span class="pre">secret</span></code> is <a class="reference external" href="https://developer.github.com/v3/repos/hooks/#create-a-hook">the shared secret, see API documentation</a>.</p></li>
-<li><p><strong>events</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of events which should trigger the webhook. See a list of <a class="reference external" href="https://developer.github.com/v3/activity/events/types/">available events</a>.</p>
-</p></li>
-<li><p><strong>repository</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The repository of the webhook.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a RepositoryWebhook resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] active: Indicate of the webhook should receive events. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+:param pulumi.Input[dict] configuration: key/value pair of configuration for this webhook. Available keys are <code class="docutils literal notranslate"><span class="pre">url</span></code>, <code class="docutils literal notranslate"><span class="pre">content_type</span></code>, <code class="docutils literal notranslate"><span class="pre">secret</span></code> and <code class="docutils literal notranslate"><span class="pre">insecure_ssl</span></code>. <code class="docutils literal notranslate"><span class="pre">secret</span></code> is <a class="reference external" href="https://developer.github.com/v3/repos/hooks/#create-a-hook">the shared secret, see API documentation</a>.
+:param pulumi.Input[list] events: A list of events which should trigger the webhook. See a list of <a class="reference external" href="https://developer.github.com/v3/activity/events/types/">available events</a>.
+:param pulumi.Input[str] repository: The repository of the webhook.</p>
 <p>The <strong>configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">contentType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -2499,6 +2612,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a GitHub team resource.</p>
 <p>This resource allows you to add/remove teams from your organization. When applied,
 a new team will be created. When destroyed, that team will be removed.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="c1"># Add a team to the organization</span>
+<span class="n">some_team</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">Team</span><span class="p">(</span><span class="s2">&quot;someTeam&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Some cool team&quot;</span><span class="p">,</span>
+    <span class="n">privacy</span><span class="o">=</span><span class="s2">&quot;closed&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2623,6 +2745,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 the user will be added to the team. If the user hasn’t accepted their invitation to the
 organization, they won’t be part of the team until they do. When
 destroyed, the user will be removed from the team.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="c1"># Add a user to the organization</span>
+<span class="n">membership_for_some_user</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">Membership</span><span class="p">(</span><span class="s2">&quot;membershipForSomeUser&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;member&quot;</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;SomeUser&quot;</span><span class="p">)</span>
+<span class="n">some_team</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">Team</span><span class="p">(</span><span class="s2">&quot;someTeam&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Some cool team&quot;</span><span class="p">)</span>
+<span class="n">some_team_membership</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">TeamMembership</span><span class="p">(</span><span class="s2">&quot;someTeamMembership&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;member&quot;</span><span class="p">,</span>
+    <span class="n">team_id</span><span class="o">=</span><span class="n">some_team</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;SomeUser&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2722,6 +2858,18 @@ particular repository.</p>
 <p>The repository and the team must both belong to the same organization
 on GitHub. This resource does not actually <em>create</em> any repositories;
 to do that, see <code class="docutils literal notranslate"><span class="pre">.Repository</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="c1"># Add a repository to the team</span>
+<span class="n">some_team</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">Team</span><span class="p">(</span><span class="s2">&quot;someTeam&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Some cool team&quot;</span><span class="p">)</span>
+<span class="n">some_repo</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">Repository</span><span class="p">(</span><span class="s2">&quot;someRepo&quot;</span><span class="p">)</span>
+<span class="n">some_team_repo</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">TeamRepository</span><span class="p">(</span><span class="s2">&quot;someTeamRepo&quot;</span><span class="p">,</span>
+    <span class="n">permission</span><span class="o">=</span><span class="s2">&quot;pull&quot;</span><span class="p">,</span>
+    <span class="n">repository</span><span class="o">=</span><span class="n">some_repo</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">team_id</span><span class="o">=</span><span class="n">some_team</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2816,6 +2964,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">UserGpgKey</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">armored_public_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.UserGpgKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a GitHub user’s GPG key resource.</p>
 <p>This resource allows you to add/remove GPG keys from your user account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">UserGpgKey</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">armored_public_key</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;-----BEGIN PGP PUBLIC KEY BLOCK-----</span>
+<span class="s2">...</span>
+<span class="s2">-----END PGP PUBLIC KEY BLOCK-----</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2901,6 +3058,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_github.UserInvitationAccepter">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">UserInvitationAccepter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">invitation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.UserInvitationAccepter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage GitHub repository collaborator invitations.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+<span class="kn">import</span> <span class="nn">pulumi_pulumi</span> <span class="k">as</span> <span class="nn">pulumi</span>
+
+<span class="n">example_repository</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">Repository</span><span class="p">(</span><span class="s2">&quot;exampleRepository&quot;</span><span class="p">)</span>
+<span class="n">example_repository_collaborator</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">RepositoryCollaborator</span><span class="p">(</span><span class="s2">&quot;exampleRepositoryCollaborator&quot;</span><span class="p">,</span>
+    <span class="n">permission</span><span class="o">=</span><span class="s2">&quot;push&quot;</span><span class="p">,</span>
+    <span class="n">repository</span><span class="o">=</span><span class="n">example_repository</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;example-username&quot;</span><span class="p">)</span>
+<span class="n">invitee</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">Github</span><span class="p">(</span><span class="s2">&quot;invitee&quot;</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;invitee_token&quot;</span><span class="p">])</span>
+<span class="n">example_user_invitation_accepter</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">UserInvitationAccepter</span><span class="p">(</span><span class="s2">&quot;exampleUserInvitationAccepter&quot;</span><span class="p">,</span> <span class="n">invitation_id</span><span class="o">=</span><span class="n">example_repository_collaborator</span><span class="o">.</span><span class="n">invitation_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2976,6 +3146,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">UserSshKey</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.UserSshKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a GitHub user’s SSH key resource.</p>
 <p>This resource allows you to add/remove SSH keys from your user account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">UserSshKey</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;~/.ssh/id_rsa.pub&quot;</span><span class="p">),</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;example title&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3077,6 +3255,13 @@ Note that the provider <code class="docutils literal notranslate"><span class="p
 <dt id="pulumi_github.get_branch">
 <code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">get_branch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">branch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.get_branch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a repository branch.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="n">development</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">get_branch</span><span class="p">(</span><span class="n">branch</span><span class="o">=</span><span class="s2">&quot;development&quot;</span><span class="p">,</span>
+    <span class="n">repository</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3091,6 +3276,13 @@ Note that the provider <code class="docutils literal notranslate"><span class="p
 <dt id="pulumi_github.get_collaborators">
 <code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">get_collaborators</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">affiliation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.get_collaborators" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve the collaborators for a given repository.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">get_collaborators</span><span class="p">(</span><span class="n">owner</span><span class="o">=</span><span class="s2">&quot;example_owner&quot;</span><span class="p">,</span>
+    <span class="n">repository</span><span class="o">=</span><span class="s2">&quot;example_repository&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3103,9 +3295,26 @@ Note that the provider <code class="docutils literal notranslate"><span class="p
 </dd></dl>
 
 <dl class="py function">
+<dt id="pulumi_github.get_ip_ranges">
+<code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">get_ip_ranges</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.get_ip_ranges" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">get_ip_ranges</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
 <dt id="pulumi_github.get_membership">
 <code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">get_membership</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.get_membership" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="n">membership_for_some_user</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">get_membership</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s2">&quot;SomeUser&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>username</strong> (<em>str</em>) – The username to lookup in the organization.</p>
 </dd>
@@ -3116,6 +3325,14 @@ Note that the provider <code class="docutils literal notranslate"><span class="p
 <dt id="pulumi_github.get_release">
 <code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">get_release</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">owner</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">release_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">release_tag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retrieve_by</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.get_release" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a GitHub release in a specific repository.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">get_release</span><span class="p">(</span><span class="n">owner</span><span class="o">=</span><span class="s2">&quot;example-owner&quot;</span><span class="p">,</span>
+    <span class="n">repository</span><span class="o">=</span><span class="s2">&quot;example-repository&quot;</span><span class="p">,</span>
+    <span class="n">retrieve_by</span><span class="o">=</span><span class="s2">&quot;latest&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3139,6 +3356,12 @@ Note that the provider <code class="docutils literal notranslate"><span class="p
 </dl>
 </div></blockquote>
 <p>Use this data source to retrieve a list of GitHub repositories using a search query.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">get_repositories</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="s2">&quot;org:hashicorp language:Go&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3152,7 +3375,7 @@ Note that the provider <code class="docutils literal notranslate"><span class="p
 <dl class="py function">
 <dt id="pulumi_github.get_repository">
 <code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">get_repository</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">full_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.get_repository" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to retrieve information about a GitHub repository.</p>
+<dd><p>Use this data source to access information about an existing resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3167,6 +3390,12 @@ Note that the provider <code class="docutils literal notranslate"><span class="p
 <dt id="pulumi_github.get_team">
 <code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">get_team</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">slug</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.get_team" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a GitHub team.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">get_team</span><span class="p">(</span><span class="n">slug</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>slug</strong> (<em>str</em>) – The team slug.</p>
@@ -3178,6 +3407,12 @@ Note that the provider <code class="docutils literal notranslate"><span class="p
 <dt id="pulumi_github.get_user">
 <code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">get_user</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.get_user" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a GitHub user.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>username</strong> (<em>str</em>) – The username.</p>

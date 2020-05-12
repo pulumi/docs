@@ -26,7 +26,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_github as github
+
+membership_for_some_user = github.get_membership(username="SomeUser")
+```
 {{% /example %}}
 
 {{% example typescript %}}

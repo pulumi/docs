@@ -31,7 +31,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_github as github
+
+example = github.get_repositories(query="org:hashicorp language:Go")
+```
 {{% /example %}}
 
 {{% example typescript %}}

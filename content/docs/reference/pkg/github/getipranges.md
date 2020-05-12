@@ -26,7 +26,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_github as github
+
+test = github.get_ip_ranges()
+```
 {{% /example %}}
 
 {{% example typescript %}}

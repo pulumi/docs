@@ -13,37 +13,9 @@ meta_desc: "Explore the GetActionsPublicKey function of the GitHub package, incl
 Use this data source to retrieve information about a GitHub Actions public key. This data source is required to be used with other GitHub secrets interactions.
 Note that the provider `token` must have admin rights to a repository to retrieve it's action public key.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as github from "@pulumi/github";
-
-const example = pulumi.output(github.SecretsPublicKey({
-    repository: "example_repo",
-}, { async: true }));
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Using GetActionsPublicKey {#using}
