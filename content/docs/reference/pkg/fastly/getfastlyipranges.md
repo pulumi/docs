@@ -28,7 +28,19 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_fastly as fastly
+
+fastly = fastly.get_fastly_ip_ranges()
+from_fastly = aws.ec2.SecurityGroup("fromFastly", ingress=[{
+    "cidrBlocks": fastly.cidr_blocks,
+    "fromPort": "443",
+    "protocol": "tcp",
+    "toPort": "443",
+}])
+```
 {{% /example %}}
 
 {{% example typescript %}}
