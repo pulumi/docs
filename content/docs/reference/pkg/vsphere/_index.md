@@ -87,3 +87,21 @@ A Pulumi package for creating vsphere resources
 	<dd>2.3.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.html" title="Pulumi.Vsphere">Pulumi.Vsphere</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#" title="vsphere">vsphere</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#" title="@pulumi/vsphere">@pulumi/vsphere</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_vsphere" title="pulumi_vsphere">pulumi_vsphere</a></dd>
+
+</dl>
+
