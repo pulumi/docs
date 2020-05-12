@@ -51,3 +51,21 @@ A Pulumi package for creating and managing New Relic resources.
 	<dd>2.2.2</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.Newrelic.html" title="Pulumi.Newrelic">Pulumi.Newrelic</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#" title="newrelic">newrelic</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/#" title="@pulumi/newrelic">@pulumi/newrelic</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_newrelic" title="pulumi_newrelic">pulumi_newrelic</a></dd>
+
+</dl>
+

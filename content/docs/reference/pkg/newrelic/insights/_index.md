@@ -26,3 +26,21 @@ Explore the resources and functions of the insights module in the New Relic pack
 	<dd>2.2.2</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.Newrelic.Insights.html" title="Pulumi.Newrelic.Insights">Pulumi.Newrelic.Insights</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/insights?tab=doc#" title="newrelic/insights">newrelic/insights</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/insights/#" title="@pulumi/newrelic/insights">@pulumi/newrelic/insights</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_newrelic/insights" title="pulumi_newrelic/insights">pulumi_newrelic/insights</a></dd>
+
+</dl>
+
