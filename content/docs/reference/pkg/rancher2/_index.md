@@ -107,3 +107,21 @@ A Pulumi package for creating and managing rancher2 resources.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.html" title="Pulumi.Rancher2">Pulumi.Rancher2</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#" title="rancher2">rancher2</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#" title="@pulumi/rancher2">@pulumi/rancher2</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_rancher2" title="pulumi_rancher2">pulumi_rancher2</a></dd>
+
+</dl>
+
