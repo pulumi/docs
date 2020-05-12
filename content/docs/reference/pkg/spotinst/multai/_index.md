@@ -31,3 +31,21 @@ Explore the resources and functions of the multai module in the Spotinst package
 	<dd>2.2.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Multai.html" title="Pulumi.Spotinst.Multai">Pulumi.Spotinst.Multai</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/multai?tab=doc#" title="spotinst/multai">spotinst/multai</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/multai/#" title="@pulumi/spotinst/multai">@pulumi/spotinst/multai</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_spotinst/multai" title="pulumi_spotinst/multai">pulumi_spotinst/multai</a></dd>
+
+</dl>
+

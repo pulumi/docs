@@ -41,3 +41,21 @@ A Pulumi package for creating and managing spotinst cloud resources.
 	<dd>2.2.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.html" title="Pulumi.Spotinst">Pulumi.Spotinst</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/?tab=doc#" title="spotinst">spotinst</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/#" title="@pulumi/spotinst">@pulumi/spotinst</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_spotinst" title="pulumi_spotinst">pulumi_spotinst</a></dd>
+
+</dl>
+

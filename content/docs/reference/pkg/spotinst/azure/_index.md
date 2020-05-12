@@ -26,3 +26,21 @@ Explore the resources and functions of the azure module in the Spotinst package.
 	<dd>2.2.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Azure.html" title="Pulumi.Spotinst.Azure">Pulumi.Spotinst.Azure</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#" title="spotinst/azure">spotinst/azure</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/azure/#" title="@pulumi/spotinst/azure">@pulumi/spotinst/azure</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_spotinst/azure" title="pulumi_spotinst/azure">pulumi_spotinst/azure</a></dd>
+
+</dl>
+
