@@ -29,3 +29,21 @@ Explore the resources and functions of the authentication module in the Keycloak
 	<dd>2.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Authentication.html" title="Pulumi.Keycloak.Authentication">Pulumi.Keycloak.Authentication</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/authentication?tab=doc#" title="keycloak/authentication">keycloak/authentication</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/authentication/#" title="@pulumi/keycloak/authentication">@pulumi/keycloak/authentication</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_keycloak/authentication" title="pulumi_keycloak/authentication">pulumi_keycloak/authentication</a></dd>
+
+</dl>
+

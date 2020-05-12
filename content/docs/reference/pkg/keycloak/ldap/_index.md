@@ -34,3 +34,21 @@ Explore the resources and functions of the ldap module in the Keycloak package.
 	<dd>2.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Ldap.html" title="Pulumi.Keycloak.Ldap">Pulumi.Keycloak.Ldap</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/ldap?tab=doc#" title="keycloak/ldap">keycloak/ldap</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/ldap/#" title="@pulumi/keycloak/ldap">@pulumi/keycloak/ldap</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_keycloak/ldap" title="pulumi_keycloak/ldap">pulumi_keycloak/ldap</a></dd>
+
+</dl>
+
