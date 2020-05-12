@@ -34,3 +34,21 @@ A Pulumi package for creating and managing mysql cloud resources.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Mysql/Pulumi.Mysql.html" title="Pulumi.Mysql">Pulumi.Mysql</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mysql/sdk/v2/go/mysql/?tab=doc#" title="mysql">mysql</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/mysql/#" title="@pulumi/mysql">@pulumi/mysql</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_mysql" title="pulumi_mysql">pulumi_mysql</a></dd>
+
+</dl>
+
