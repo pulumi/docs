@@ -12,9 +12,77 @@ meta_desc: "Explore the ZoneSettingsOverride resource of the Cloudflare package,
 
 Provides a resource which customizes Cloudflare zone settings. Note that after destroying this resource Zone Settings will be reset to their initial values.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+test = cloudflare.ZoneSettingsOverride("test",
+    zone_id=var["cloudflare_zone_id"],
+    settings={
+        "brotli": "on",
+        "challengeTtl": 2700,
+        "securityLevel": "high",
+        "opportunisticEncryption": "on",
+        "automaticHttpsRewrites": "on",
+        "mirage": "on",
+        "waf": "on",
+        "minify": {
+            "css": "on",
+            "js": "off",
+            "html": "off",
+        },
+        "security_header": {
+            "enabled": True,
+        },
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+const test = new cloudflare.ZoneSettingsOverride("test", {
+    zoneId: var.cloudflare_zone_id,
+    settings: {
+        brotli: "on",
+        challengeTtl: 2700,
+        securityLevel: "high",
+        opportunisticEncryption: "on",
+        automaticHttpsRewrites: "on",
+        mirage: "on",
+        waf: "on",
+        minify: {
+            css: "on",
+            js: "off",
+            html: "off",
+        },
+        security_header: {
+            enabled: true,
+        },
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ZoneSettingsOverride Resource {#create}

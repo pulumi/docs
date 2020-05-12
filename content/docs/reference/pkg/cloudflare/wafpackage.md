@@ -28,7 +28,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+owasp = cloudflare.WafPackage("owasp",
+    action_mode="simulate",
+    package_id="a25a9a7e9c00afc1fb2e0245519d725b",
+    sensitivity="medium",
+    zone_id="ae36f999674d196762efcc5abb06b345")
+```
 {{% /example %}}
 
 {{% example typescript %}}

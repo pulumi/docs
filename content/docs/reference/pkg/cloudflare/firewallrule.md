@@ -15,9 +15,58 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
 
 Filter expressions needs to be created first before using Firewall Rule. See Filter.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+wordpress_filter = cloudflare.Filter("wordpressFilter",
+    zone_id="d41d8cd98f00b204e9800998ecf8427e",
+    description="Wordpress break-in attempts that are outside of the office",
+    expression="(http.request.uri.path ~ \".*wp-login.php\" or http.request.uri.path ~ \".*xmlrpc.php\") and ip.src ne 192.0.2.1")
+wordpress_firewall_rule = cloudflare.FirewallRule("wordpressFirewallRule",
+    zone_id="d41d8cd98f00b204e9800998ecf8427e",
+    description="Block wordpress break-in attempts",
+    filter_id=wordpress_filter.id,
+    action="block")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+const wordpressFilter = new cloudflare.Filter("wordpressFilter", {
+    zoneId: "d41d8cd98f00b204e9800998ecf8427e",
+    description: "Wordpress break-in attempts that are outside of the office",
+    expression: "(http.request.uri.path ~ \".*wp-login.php\" or http.request.uri.path ~ \".*xmlrpc.php\") and ip.src ne 192.0.2.1",
+});
+const wordpressFirewallRule = new cloudflare.FirewallRule("wordpressFirewallRule", {
+    zoneId: "d41d8cd98f00b204e9800998ecf8427e",
+    description: "Block wordpress break-in attempts",
+    filterId: wordpressFilter.id,
+    action: "block",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FirewallRule Resource {#create}

@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+example = cloudflare.Argo("example",
+    smart_routing="on",
+    tiered_caching="on",
+    zone_id="d41d8cd98f00b204e9800998ecf8427e")
+```
 {{% /example %}}
 
 {{% example typescript %}}

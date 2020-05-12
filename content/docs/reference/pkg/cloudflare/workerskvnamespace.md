@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+example = cloudflare.WorkersKvNamespace("example", title="test-namespace")
+```
 {{% /example %}}
 
 {{% example typescript %}}

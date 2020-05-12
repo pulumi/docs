@@ -28,7 +28,27 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+http_monitor = cloudflare.LoadBalancerMonitor("httpMonitor",
+    allow_insecure=False,
+    description="example http load balancer",
+    expected_body="alive",
+    expected_codes="2xx",
+    follow_redirects=True,
+    headers=[{
+        "header": "Host",
+        "values": ["example.com"],
+    }],
+    interval=60,
+    method="GET",
+    path="/health",
+    retries=5,
+    timeout=7,
+    type="http")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -66,7 +86,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+tcp_monitor = cloudflare.LoadBalancerMonitor("tcpMonitor",
+    description="example tcp load balancer",
+    interval=60,
+    method="connection_established",
+    retries=5,
+    timeout=7,
+    type="tcp")
+```
 {{% /example %}}
 
 {{% example typescript %}}

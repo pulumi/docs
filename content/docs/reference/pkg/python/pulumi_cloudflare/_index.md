@@ -19,6 +19,16 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides a Cloudflare Access Application resource. Access Applications
 are used to restrict access to a whole application using an
 authorisation gateway managed by Cloudflare.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">staging_app</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">AccessApplication</span><span class="p">(</span><span class="s2">&quot;stagingApp&quot;</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;staging.example.com&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;staging application&quot;</span><span class="p">,</span>
+    <span class="n">session_duration</span><span class="o">=</span><span class="s2">&quot;24h&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;1d5fdc9e88c8a8c4518b068cd94331fe&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -132,6 +142,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Cloudflare Access Group resource. Access Groups are used
 in conjunction with Access Policies to restrict access to a
 particular resource based on group membership.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="c1"># Allowing access to `test@example.com` email address only</span>
+<span class="n">test_group_access_group</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">AccessGroup</span><span class="p">(</span><span class="s2">&quot;testGroupAccessGroup&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;975ecf5a45e3bcb680dba0722a420ad9&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;staging group&quot;</span><span class="p">,</span>
+    <span class="n">include</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;emails&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;test@example.com&quot;</span><span class="p">],</span>
+    <span class="p">}])</span>
+<span class="c1"># Allowing `test@example.com` to access but only when coming from a</span>
+<span class="c1"># specific IP.</span>
+<span class="n">test_group_index_access_group_access_group</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">AccessGroup</span><span class="p">(</span><span class="s2">&quot;testGroupIndex/accessGroupAccessGroup&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;975ecf5a45e3bcb680dba0722a420ad9&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;staging group&quot;</span><span class="p">,</span>
+    <span class="n">include</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;emails&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;test@example.com&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">requires</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;ips&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;office_ip&quot;</span><span class="p">]],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <p><code class="docutils literal notranslate"><span class="pre">require</span></code>, <code class="docutils literal notranslate"><span class="pre">exclude</span></code> and <code class="docutils literal notranslate"><span class="pre">include</span></code> arguments share the available
 conditions which can be applied. The conditions are:</p>
 <ul>
@@ -712,6 +745,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AccessIdentityProvider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccessIdentityProvider" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Access Identity Provider resource. Identity Providers are
 used as an authentication or authorisation source within Access.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="c1"># one time pin</span>
+<span class="n">pin_login</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">AccessIdentityProvider</span><span class="p">(</span><span class="s2">&quot;pinLogin&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;1d5fdc9e88c8a8c4518b068cd94331fe&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;PIN login&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;onetimepin&quot;</span><span class="p">)</span>
+<span class="c1"># oauth</span>
+<span class="n">github_oauth</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">AccessIdentityProvider</span><span class="p">(</span><span class="s2">&quot;githubOauth&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;1d5fdc9e88c8a8c4518b068cd94331fe&quot;</span><span class="p">,</span>
+    <span class="n">configs</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;clientId&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;clientSecret&quot;</span><span class="p">:</span> <span class="s2">&quot;secret_key&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;GitHub OAuth&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;github&quot;</span><span class="p">)</span>
+<span class="c1"># saml</span>
+<span class="n">jumpcloud_saml</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">AccessIdentityProvider</span><span class="p">(</span><span class="s2">&quot;jumpcloudSaml&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;1d5fdc9e88c8a8c4518b068cd94331fe&quot;</span><span class="p">,</span>
+    <span class="n">configs</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;email&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;idpPublicCert&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;MIIDpDCCAoygAwIBAgIGAV2ka+55MA0GCSqGSIb3DQEBCwUAMIGSMQswCQ...GF/Q2/MHadws97cZg</span>
+<span class="s2">uTnQyuOqPuHbnN83d/2l1NSYKCbHt24o</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;issuerUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;jumpcloud&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;signRequest&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;ssoTargetUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;https://sso.myexample.jumpcloud.com/saml2/cloudflareaccess&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;JumpCloud SAML&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;saml&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -875,6 +944,35 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Cloudflare Access Policy resource. Access Policies are used
 in conjunction with Access Applications to restrict access to a
 particular resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="c1"># Allowing access to `test@example.com` email address only</span>
+<span class="n">test_policy_access_policy</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">AccessPolicy</span><span class="p">(</span><span class="s2">&quot;testPolicyAccessPolicy&quot;</span><span class="p">,</span>
+    <span class="n">application_id</span><span class="o">=</span><span class="s2">&quot;cb029e245cfdd66dc8d2e570d5dd3322&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;staging policy&quot;</span><span class="p">,</span>
+    <span class="n">precedence</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="n">decision</span><span class="o">=</span><span class="s2">&quot;allow&quot;</span><span class="p">,</span>
+    <span class="n">include</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;emails&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;test@example.com&quot;</span><span class="p">],</span>
+    <span class="p">}])</span>
+<span class="c1"># Allowing `test@example.com` to access but only when coming from a</span>
+<span class="c1"># specific IP.</span>
+<span class="n">test_policy_index_access_policy_access_policy</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">AccessPolicy</span><span class="p">(</span><span class="s2">&quot;testPolicyIndex/accessPolicyAccessPolicy&quot;</span><span class="p">,</span>
+    <span class="n">application_id</span><span class="o">=</span><span class="s2">&quot;cb029e245cfdd66dc8d2e570d5dd3322&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;staging policy&quot;</span><span class="p">,</span>
+    <span class="n">precedence</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="n">decision</span><span class="o">=</span><span class="s2">&quot;allow&quot;</span><span class="p">,</span>
+    <span class="n">include</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;emails&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;test@example.com&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">requires</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;ips&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;office_ip&quot;</span><span class="p">]],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1516,6 +1614,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AccessServiceToken</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccessServiceToken" title="Permalink to this definition">¶</a></dt>
 <dd><p>Access Service Tokens are used for service-to-service communication
 when an application is behind Cloudflare Access.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">my_app</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">AccessServiceToken</span><span class="p">(</span><span class="s2">&quot;myApp&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;CI/CD app&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1615,6 +1721,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.AccountMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AccountMember</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccountMember" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource which manages Cloudflare account members.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">example_user</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">AccountMember</span><span class="p">(</span><span class="s2">&quot;exampleUser&quot;</span><span class="p">,</span>
+    <span class="n">email_address</span><span class="o">=</span><span class="s2">&quot;user@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role_ids</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;68b329da9893e34099c7d8ad5cb9c940&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;d784fa8b6d98d27699781bd9a7cf19f0&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1697,6 +1814,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.Argo">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">Argo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">smart_routing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tiered_caching</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Argo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cloudflare Argo controls the routing to your origin and tiered caching options to speed up your website browsing experience.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">Argo</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">smart_routing</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="p">,</span>
+    <span class="n">tiered_caching</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1812,6 +1938,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.CustomPages">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">CustomPages</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.CustomPages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource which manages Cloudflare custom error pages.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">basic_challenge</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">CustomPages</span><span class="p">(</span><span class="s2">&quot;basicChallenge&quot;</span><span class="p">,</span>
+    <span class="n">state</span><span class="o">=</span><span class="s2">&quot;customized&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;basic_challenge&quot;</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://example.com/challenge.html&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1928,6 +2064,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.CustomSsl">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">CustomSsl</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_ssl_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_ssl_priorities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.CustomSsl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare custom ssl resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">cloudflare_zone_id</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;cloudflareZoneId&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">cloudflare_zone_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">cloudflare_zone_id</span> <span class="o">=</span> <span class="s2">&quot;1d5fdc9e88c8a8c4518b068cd94331fe&quot;</span>
+<span class="c1"># Add a custom ssl certificate to the domain</span>
+<span class="n">foossl</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">CustomSsl</span><span class="p">(</span><span class="s2">&quot;foossl&quot;</span><span class="p">,</span>
+    <span class="n">custom_ssl_options</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;bundle_method&quot;</span><span class="p">:</span> <span class="s2">&quot;ubiquitous&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;certificate&quot;</span><span class="p">:</span> <span class="s2">&quot;-----INSERT CERTIFICATE-----&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;geo_restrictions&quot;</span><span class="p">:</span> <span class="s2">&quot;us&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;private_key&quot;</span><span class="p">:</span> <span class="s2">&quot;-----INSERT PRIVATE KEY-----&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;legacy_custom&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">cloudflare_zone_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2043,6 +2198,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.Filter">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">Filter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expression</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">paused</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ref</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Filter expressions that can be referenced across multiple features, e.g. Firewall Rule. The expression format is similar to <a class="reference external" href="https://www.wireshark.org/docs/man-pages/wireshark-filter.html">Wireshark Display Filter</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">wordpress</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">Filter</span><span class="p">(</span><span class="s2">&quot;wordpress&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Wordpress break-in attempts that are outside of the office&quot;</span><span class="p">,</span>
+    <span class="n">expression</span><span class="o">=</span><span class="s2">&quot;(http.request.uri.path ~ &quot;</span><span class="o">.*</span><span class="n">wp</span><span class="o">-</span><span class="n">login</span><span class="o">.</span><span class="n">php</span><span class="s2">&quot; or http.request.uri.path ~ &quot;</span><span class="o">.*</span><span class="n">xmlrpc</span><span class="o">.</span><span class="n">php</span><span class="s2">&quot;) and ip.src ne 192.0.2.1&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2151,6 +2315,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Define Firewall rules using filter expressions for more control over how traffic is matched to the rule.
 A filter expression permits selecting traffic by multiple criteria allowing greater freedom in rule creation.</p>
 <p>Filter expressions needs to be created first before using Firewall Rule. See Filter.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">wordpress_filter</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">Filter</span><span class="p">(</span><span class="s2">&quot;wordpressFilter&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Wordpress break-in attempts that are outside of the office&quot;</span><span class="p">,</span>
+    <span class="n">expression</span><span class="o">=</span><span class="s2">&quot;(http.request.uri.path ~ &quot;</span><span class="o">.*</span><span class="n">wp</span><span class="o">-</span><span class="n">login</span><span class="o">.</span><span class="n">php</span><span class="s2">&quot; or http.request.uri.path ~ &quot;</span><span class="o">.*</span><span class="n">xmlrpc</span><span class="o">.</span><span class="n">php</span><span class="s2">&quot;) and ip.src ne 192.0.2.1&quot;</span><span class="p">)</span>
+<span class="n">wordpress_firewall_rule</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">FirewallRule</span><span class="p">(</span><span class="s2">&quot;wordpressFirewallRule&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Block wordpress break-in attempts&quot;</span><span class="p">,</span>
+    <span class="n">filter_id</span><span class="o">=</span><span class="n">wordpress_filter</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">action</span><span class="o">=</span><span class="s2">&quot;block&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2325,6 +2503,37 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.LoadBalancer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">LoadBalancer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_pool_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fallback_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pop_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxied</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">session_affinity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">steering_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LoadBalancer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Load Balancer resource. This sits in front of a number of defined pools of origins and provides various options for geographically-aware load balancing. Note that the load balancing feature must be enabled in your Cloudflare account before you can use this resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">LoadBalancerPool</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-lb-pool&quot;</span><span class="p">,</span>
+    <span class="n">origins</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;example-1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;192.0.2.1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="c1"># Define a load balancer which always points to a pool we define below</span>
+<span class="c1"># In normal usage, would have different pools set for different pops (cloudflare points-of-presence) and/or for different regions</span>
+<span class="c1"># Within each pop or region we can define multiple pools in failover order</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-load-balancer&quot;</span><span class="p">,</span>
+    <span class="n">fallback_pool_id</span><span class="o">=</span><span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">default_pool_ids</span><span class="o">=</span><span class="p">[</span><span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;example load balancer using geo-balancing&quot;</span><span class="p">,</span>
+    <span class="n">proxied</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">steering_policy</span><span class="o">=</span><span class="s2">&quot;geo&quot;</span><span class="p">,</span>
+    <span class="n">pop_pools</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;pop&quot;</span><span class="p">:</span> <span class="s2">&quot;LAX&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;poolIds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">region_pools</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;WNAM&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;poolIds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2529,6 +2738,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.LoadBalancerMonitor">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">LoadBalancerMonitor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_insecure</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expected_body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expected_codes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">follow_redirects</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">headers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LoadBalancerMonitor" title="Permalink to this definition">¶</a></dt>
 <dd><p>If you’re using Cloudflare’s Load Balancing to load-balance across multiple origin servers or data centers, you configure one of these Monitors to actively check the availability of those servers over HTTP(S) or TCP.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">http_monitor</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">LoadBalancerMonitor</span><span class="p">(</span><span class="s2">&quot;httpMonitor&quot;</span><span class="p">,</span>
+    <span class="n">allow_insecure</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;example http load balancer&quot;</span><span class="p">,</span>
+    <span class="n">expected_body</span><span class="o">=</span><span class="s2">&quot;alive&quot;</span><span class="p">,</span>
+    <span class="n">expected_codes</span><span class="o">=</span><span class="s2">&quot;2xx&quot;</span><span class="p">,</span>
+    <span class="n">follow_redirects</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">headers</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;header&quot;</span><span class="p">:</span> <span class="s2">&quot;Host&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;example.com&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">interval</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+    <span class="n">method</span><span class="o">=</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="n">path</span><span class="o">=</span><span class="s2">&quot;/health&quot;</span><span class="p">,</span>
+    <span class="n">retries</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">timeout</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;http&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">tcp_monitor</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">LoadBalancerMonitor</span><span class="p">(</span><span class="s2">&quot;tcpMonitor&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;example tcp load balancer&quot;</span><span class="p">,</span>
+    <span class="n">interval</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+    <span class="n">method</span><span class="o">=</span><span class="s2">&quot;connection_established&quot;</span><span class="p">,</span>
+    <span class="n">retries</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">timeout</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;tcp&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2719,6 +2961,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.LoadBalancerPool">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">LoadBalancerPool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_regions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimum_origins</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">origins</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LoadBalancerPool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Load Balancer pool resource. This provides a pool of origins that can be used by a Cloudflare Load Balancer. Note that the load balancing feature must be enabled in your Cloudflare account before you can use this resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">LoadBalancerPool</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;example load balancer pool&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">minimum_origins</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-pool&quot;</span><span class="p">,</span>
+    <span class="n">notification_email</span><span class="o">=</span><span class="s2">&quot;someone@example.com&quot;</span><span class="p">,</span>
+    <span class="n">origins</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;192.0.2.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;example-1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;192.0.2.2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;example-2&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2885,6 +3149,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.LogpushJob">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">LogpushJob</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataset</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_conf</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logpull_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ownership_challenge</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LogpushJob" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource which manages Cloudflare logpush jobs.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">example_job</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">LogpushJob</span><span class="p">(</span><span class="s2">&quot;exampleJob&quot;</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="o">=</span><span class="s2">&quot;http_requests&quot;</span><span class="p">,</span>
+    <span class="n">destination_conf</span><span class="o">=</span><span class="s2">&quot;s3://my-bucket-path?region=us-west-2&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">logpull_options</span><span class="o">=</span><span class="s2">&quot;fields=RayID,ClientIP,EdgeStartTimestamp&amp;timestamps=rfc3339&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;My-logpush-job&quot;</span><span class="p">,</span>
+    <span class="n">ownership_challenge</span><span class="o">=</span><span class="s2">&quot;00000000000000000&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3115,6 +3392,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.PageRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">PageRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.PageRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare page rule resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="c1"># Add a page rule to the domain</span>
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">PageRule</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;cloudflare_zone_id&quot;</span><span class="p">],</span>
+    <span class="n">target</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;sub.</span><span class="si">{</span><span class="n">var</span><span class="p">[</span><span class="s1">&#39;cloudflare_zone&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/page&quot;</span><span class="p">,</span>
+    <span class="n">priority</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;ssl&quot;</span><span class="p">:</span> <span class="s2">&quot;flexible&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;emailObfuscation&quot;</span><span class="p">:</span> <span class="s2">&quot;on&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;minify&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;html&quot;</span><span class="p">:</span> <span class="s2">&quot;off&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;css&quot;</span><span class="p">:</span> <span class="s2">&quot;on&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;js&quot;</span><span class="p">:</span> <span class="s2">&quot;on&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3431,6 +3727,59 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.RateLimit">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">RateLimit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bypass_url_patterns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">correlate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">match</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.RateLimit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare rate limit resource for a given zone. This can be used to limit the traffic you receive zone-wide, or matching more specific types of requests/responses.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">RateLimit</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;cloudflare_zone_id&quot;</span><span class="p">],</span>
+    <span class="n">threshold</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span>
+    <span class="n">period</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">match</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;request&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;urlPattern&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">var</span><span class="p">[</span><span class="s1">&#39;cloudflare_zone&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/*&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;schemes&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;HTTPS&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;methods&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;PUT&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;DELETE&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;PATCH&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;HEAD&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;statuses&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="mi">200</span><span class="p">,</span>
+                <span class="mi">201</span><span class="p">,</span>
+                <span class="mi">202</span><span class="p">,</span>
+                <span class="mi">301</span><span class="p">,</span>
+                <span class="mi">429</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;originTraffic&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">action</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;simulate&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;timeout&quot;</span><span class="p">:</span> <span class="mi">43200</span><span class="p">,</span>
+        <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;contentType&quot;</span><span class="p">:</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;body&quot;</span><span class="p">:</span> <span class="s2">&quot;custom response body&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">correlate</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;by&quot;</span><span class="p">:</span> <span class="s2">&quot;nat&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;example rate limit for a zone&quot;</span><span class="p">,</span>
+    <span class="n">bypass_url_patterns</span><span class="o">=</span><span class="p">[</span>
+        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">var</span><span class="p">[</span><span class="s1">&#39;cloudflare_zone&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/bypass1&quot;</span><span class="p">,</span>
+        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">var</span><span class="p">[</span><span class="s1">&#39;cloudflare_zone&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/bypass2&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3658,23 +4007,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_cloudflare.Record">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">Record</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxied</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Record" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Cloudflare record resource.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>data</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of attributes that constitute the record value. Primarily used for LOC and SRV record types. Either this or <code class="docutils literal notranslate"><span class="pre">value</span></code> must be specified</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the record</p></li>
-<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of the record</p></li>
-<li><p><strong>proxied</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the record gets Cloudflare’s origin protection; defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The TTL of the record (<a class="reference external" href="https://api.cloudflare.com/#dns-records-for-a-zone-create-dns-record">automatic: ‘1’</a>)</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the record</p></li>
-<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The (string) value of the record. Either this or <code class="docutils literal notranslate"><span class="pre">data</span></code> must be specified</p></li>
-<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone ID to add the record to</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Record resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] data: Map of attributes that constitute the record value. Primarily used for LOC and SRV record types. Either this or <code class="docutils literal notranslate"><span class="pre">value</span></code> must be specified
+:param pulumi.Input[str] name: The name of the record
+:param pulumi.Input[float] priority: The priority of the record
+:param pulumi.Input[bool] proxied: Whether the record gets Cloudflare’s origin protection; defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[float] ttl: The TTL of the record (<a class="reference external" href="https://api.cloudflare.com/#dns-records-for-a-zone-create-dns-record">automatic: ‘1’</a>)
+:param pulumi.Input[str] type: The type of the record
+:param pulumi.Input[str] value: The (string) value of the record. Either this or <code class="docutils literal notranslate"><span class="pre">data</span></code> must be specified
+:param pulumi.Input[str] zone_id: The DNS zone ID to add the record to</p>
 <p>The <strong>data</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
@@ -3944,6 +4287,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.SpectrumApplication">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">SpectrumApplication</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">argo_smart_routing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">edge_ip_connectivity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">edge_ips</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_firewall</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">origin_directs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">origin_dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">origin_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy_protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">traffic_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.SpectrumApplication" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Spectrum Application. You can extend the power of Cloudflare’s DDoS, TLS, and IP Firewall to your other TCP-based services.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="c1"># Define a spectrum application proxies ssh traffic</span>
+<span class="n">ssh_proxy</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">SpectrumApplication</span><span class="p">(</span><span class="s2">&quot;sshProxy&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;cloudflare_zone_id&quot;</span><span class="p">],</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;tcp/22&quot;</span><span class="p">,</span>
+    <span class="n">traffic_type</span><span class="o">=</span><span class="s2">&quot;direct&quot;</span><span class="p">,</span>
+    <span class="n">dns</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;CNAME&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;ssh.example.com&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">origin_directs</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;tcp://109.151.40.129:22&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4140,6 +4498,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.WafGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WafGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">package_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare WAF rule group resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall groups.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">honey_pot</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">WafGroup</span><span class="p">(</span><span class="s2">&quot;honeyPot&quot;</span><span class="p">,</span>
+    <span class="n">group_id</span><span class="o">=</span><span class="s2">&quot;de677e5818985db1285d0e80225f06e5&quot;</span><span class="p">,</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;ae36f999674d196762efcc5abb06b345&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4238,6 +4605,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.WafPackage">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WafPackage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">action_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">package_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sensitivity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafPackage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare WAF rule package resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall packages.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">owasp</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">WafPackage</span><span class="p">(</span><span class="s2">&quot;owasp&quot;</span><span class="p">,</span>
+    <span class="n">action_mode</span><span class="o">=</span><span class="s2">&quot;simulate&quot;</span><span class="p">,</span>
+    <span class="n">package_id</span><span class="o">=</span><span class="s2">&quot;a25a9a7e9c00afc1fb2e0245519d725b&quot;</span><span class="p">,</span>
+    <span class="n">sensitivity</span><span class="o">=</span><span class="s2">&quot;medium&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;ae36f999674d196762efcc5abb06b345&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4336,6 +4713,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.WafRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WafRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">package_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rule_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare WAF rule resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall rules.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">_100000</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">WafRule</span><span class="p">(</span><span class="s2">&quot;100000&quot;</span><span class="p">,</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;simulate&quot;</span><span class="p">,</span>
+    <span class="n">rule_id</span><span class="o">=</span><span class="s2">&quot;100000&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;ae36f999674d196762efcc5abb06b345&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4441,6 +4827,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.WorkerRoute">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WorkerRoute</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pattern</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">script_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkerRoute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare worker route resource. A route will also require a <code class="docutils literal notranslate"><span class="pre">.WorkerScript</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">my_script</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">WorkerScript</span><span class="p">(</span><span class="s2">&quot;myScript&quot;</span><span class="p">)</span>
+<span class="c1"># see &quot;.WorkerScript&quot; documentation ...</span>
+<span class="c1"># Runs the specified worker script for all URLs that match `example.com/*`</span>
+<span class="n">my_route</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">WorkerRoute</span><span class="p">(</span><span class="s2">&quot;myRoute&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span><span class="p">,</span>
+    <span class="n">pattern</span><span class="o">=</span><span class="s2">&quot;example.com/*&quot;</span><span class="p">,</span>
+    <span class="n">script_name</span><span class="o">=</span><span class="n">my_script</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4532,6 +4930,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.WorkerScript">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WorkerScript</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kv_namespace_bindings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkerScript" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare worker script resource. In order for a script to be active, you’ll also need to setup a <code class="docutils literal notranslate"><span class="pre">.WorkerRoute</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">my_namespace</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">WorkersKvNamespace</span><span class="p">(</span><span class="s2">&quot;myNamespace&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+<span class="c1"># Sets the script with the name &quot;script_1&quot;</span>
+<span class="n">my_script</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">WorkerScript</span><span class="p">(</span><span class="s2">&quot;myScript&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;script_1&quot;</span><span class="p">,</span>
+    <span class="n">content</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;script.js&quot;</span><span class="p">),</span>
+    <span class="n">kv_namespace_binding</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;my_binding&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;namespaceId&quot;</span><span class="p">:</span> <span class="n">my_namespace</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4624,6 +5036,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.WorkersKv">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WorkersKv</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkersKv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Workers KV Pair.  <em>NOTE:</em>  This resource uses the Cloudflare account APIs.  This requires setting the <code class="docutils literal notranslate"><span class="pre">CLOUDFLARE_ACCOUNT_ID</span></code> environment variable or <code class="docutils literal notranslate"><span class="pre">account_id</span></code> provider argument.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">example_ns</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">WorkersKvNamespace</span><span class="p">(</span><span class="s2">&quot;exampleNs&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;test-namespace&quot;</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">WorkersKv</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">namespace_id</span><span class="o">=</span><span class="n">example_ns</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;test-key&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;test value&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4714,6 +5136,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.WorkersKvNamespace">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WorkersKvNamespace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkersKvNamespace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Workers KV Namespace</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">WorkersKvNamespace</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;test-namespace&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4788,6 +5216,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.Zone">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">Zone</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">jump_start</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">paused</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Zone resource. Zone is the basic resource for working with Cloudflare and is roughly equivalent to a domain name that the user purchases.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4941,6 +5375,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.ZoneLockdown">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">ZoneLockdown</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">configurations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">paused</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ZoneLockdown" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Zone Lockdown resource. Zone Lockdown allows you to define one or more URLs (with wildcard matching on the domain or path) that will only permit access if the request originates from an IP address that matches a safelist of one or more IP addresses and/or IP ranges.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="c1"># Restrict access to these endpoints to requests from a known IP address.</span>
+<span class="n">endpoint_lockdown</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">ZoneLockdown</span><span class="p">(</span><span class="s2">&quot;endpointLockdown&quot;</span><span class="p">,</span>
+    <span class="n">configurations</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;ip&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;198.51.100.4&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Restrict access to these endpoints to requests from a known IP address&quot;</span><span class="p">,</span>
+    <span class="n">paused</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="p">,</span>
+    <span class="n">urls</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;api.mysite.com/some/endpoint*&quot;</span><span class="p">],</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5061,6 +5510,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.ZoneSettingsOverride">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">ZoneSettingsOverride</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ZoneSettingsOverride" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource which customizes Cloudflare zone settings. Note that after destroying this resource Zone Settings will be reset to their initial values.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">ZoneSettingsOverride</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;cloudflare_zone_id&quot;</span><span class="p">],</span>
+    <span class="n">settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;brotli&quot;</span><span class="p">:</span> <span class="s2">&quot;on&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;challengeTtl&quot;</span><span class="p">:</span> <span class="mi">2700</span><span class="p">,</span>
+        <span class="s2">&quot;securityLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;high&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;opportunisticEncryption&quot;</span><span class="p">:</span> <span class="s2">&quot;on&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;automaticHttpsRewrites&quot;</span><span class="p">:</span> <span class="s2">&quot;on&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;mirage&quot;</span><span class="p">:</span> <span class="s2">&quot;on&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;waf&quot;</span><span class="p">:</span> <span class="s2">&quot;on&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;minify&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;css&quot;</span><span class="p">:</span> <span class="s2">&quot;on&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;js&quot;</span><span class="p">:</span> <span class="s2">&quot;off&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;html&quot;</span><span class="p">:</span> <span class="s2">&quot;off&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;security_header&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5514,6 +5987,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.get_ip_ranges">
 <code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">get_ip_ranges</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.get_ip_ranges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the <a class="reference external" href="https://www.cloudflare.com/ips/">IP ranges</a> of Cloudflare edge nodes.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">cloudflare</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">get_ip_ranges</span><span class="p">()</span>
+<span class="n">allow_cloudflare_ingress</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Firewall</span><span class="p">(</span><span class="s2">&quot;allowCloudflareIngress&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">source_ranges</span><span class="o">=</span><span class="n">cloudflare</span><span class="o">.</span><span class="n">ipv4_cidr_blocks</span><span class="p">,</span>
+    <span class="n">allow</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;ports&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py function">
@@ -5544,6 +6031,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.get_waf_rules">
 <code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">get_waf_rules</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">package_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.get_waf_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to look up <a class="reference external" href="https://api.cloudflare.com/#waf-rule-groups-properties">WAF Rules</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">get_waf_rules</span><span class="p">(</span><span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;ae36f999674d196762efcc5abb06b345&quot;</span><span class="p">,</span>
+    <span class="n">package_id</span><span class="o">=</span><span class="s2">&quot;a25a9a7e9c00afc1fb2e0245519d725b&quot;</span><span class="p">,</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;.*example.*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;on&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;groupId&quot;</span><span class="p">:</span> <span class="s2">&quot;de677e5818985db1285d0e80225f06e5&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;wafRules&quot;</span><span class="p">,</span> <span class="n">test</span><span class="o">.</span><span class="n">rules</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The <strong>filter</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -5556,6 +6056,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.get_zones">
 <code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">get_zones</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.get_zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to look up <a class="reference external" href="https://api.cloudflare.com/#zone-properties">Zone</a> records.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="nb">filter</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;example.*&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;paused&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;active&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">endpoint_lockdown</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">ZoneLockdown</span><span class="p">(</span><span class="s2">&quot;endpointLockdown&quot;</span><span class="p">,</span>
+    <span class="n">configurations</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;ip&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;198.51.100.4&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Restrict access to these endpoints to requests from a known IP address&quot;</span><span class="p">,</span>
+    <span class="n">paused</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="p">,</span>
+    <span class="n">urls</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;api.mysite.com/some/endpoint*&quot;</span><span class="p">],</span>
+    <span class="n">zone</span><span class="o">=</span><span class="n">test</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <p>The <strong>filter</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>

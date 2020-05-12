@@ -12,9 +12,57 @@ meta_desc: "Explore the GetIpRanges function of the Cloudflare package, includin
 
 Use this data source to get the [IP ranges](https://www.cloudflare.com/ips/) of Cloudflare edge nodes.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+import pulumi_gcp as gcp
+
+cloudflare = cloudflare.get_ip_ranges()
+allow_cloudflare_ingress = gcp.compute.Firewall("allowCloudflareIngress",
+    network="default",
+    source_ranges=cloudflare.ipv4_cidr_blocks,
+    allow=[{
+        "ports": "443",
+        "protocol": "tcp",
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+import * as gcp from "@pulumi/gcp";
+
+const cloudflare = cloudflare.getIpRanges({});
+const allowCloudflareIngress = new gcp.compute.Firewall("allowCloudflareIngress", {
+    network: "default",
+    sourceRanges: cloudflare.then(cloudflare => cloudflare.ipv4CidrBlocks),
+    allow: [{
+        ports: "443",
+        protocol: "tcp",
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetIpRanges {#using}

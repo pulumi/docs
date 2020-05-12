@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+honey_pot = cloudflare.WafGroup("honeyPot",
+    group_id="de677e5818985db1285d0e80225f06e5",
+    mode="on",
+    zone_id="ae36f999674d196762efcc5abb06b345")
+```
 {{% /example %}}
 
 {{% example typescript %}}

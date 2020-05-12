@@ -29,7 +29,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+my_app = cloudflare.AccessServiceToken("myApp",
+    account_id="d41d8cd98f00b204e9800998ecf8427e",
+    name="CI/CD app")
+```
 {{% /example %}}
 
 {{% example typescript %}}

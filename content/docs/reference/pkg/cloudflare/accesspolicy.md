@@ -14,9 +14,88 @@ Provides a Cloudflare Access Policy resource. Access Policies are used
 in conjunction with Access Applications to restrict access to a
 particular resource.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+# Allowing access to `test@example.com` email address only
+test_policy_access_policy = cloudflare.AccessPolicy("testPolicyAccessPolicy",
+    application_id="cb029e245cfdd66dc8d2e570d5dd3322",
+    zone_id="d41d8cd98f00b204e9800998ecf8427e",
+    name="staging policy",
+    precedence="1",
+    decision="allow",
+    include=[{
+        "emails": ["test@example.com"],
+    }])
+# Allowing `test@example.com` to access but only when coming from a
+# specific IP.
+test_policy_index_access_policy_access_policy = cloudflare.AccessPolicy("testPolicyIndex/accessPolicyAccessPolicy",
+    application_id="cb029e245cfdd66dc8d2e570d5dd3322",
+    zone_id="d41d8cd98f00b204e9800998ecf8427e",
+    name="staging policy",
+    precedence="1",
+    decision="allow",
+    include=[{
+        "emails": ["test@example.com"],
+    }],
+    requires={
+        "ips": [var["office_ip"]],
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+// Allowing access to `test@example.com` email address only
+const testPolicyAccessPolicy = new cloudflare.AccessPolicy("testPolicyAccessPolicy", {
+    applicationId: "cb029e245cfdd66dc8d2e570d5dd3322",
+    zoneId: "d41d8cd98f00b204e9800998ecf8427e",
+    name: "staging policy",
+    precedence: "1",
+    decision: "allow",
+    include: [{
+        emails: ["test@example.com"],
+    }],
+});
+// Allowing `test@example.com` to access but only when coming from a
+// specific IP.
+const testPolicyIndex/accessPolicyAccessPolicy = new cloudflare.AccessPolicy("testPolicyIndex/accessPolicyAccessPolicy", {
+    applicationId: "cb029e245cfdd66dc8d2e570d5dd3322",
+    zoneId: "d41d8cd98f00b204e9800998ecf8427e",
+    name: "staging policy",
+    precedence: "1",
+    decision: "allow",
+    include: [{
+        emails: ["test@example.com"],
+    }],
+    requires: {
+        ips: [var.office_ip],
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AccessPolicy Resource {#create}
