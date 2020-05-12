@@ -35,7 +35,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mysql as mysql
+
+app = mysql.Database("app")
+```
 {{% /example %}}
 
 {{% example typescript %}}

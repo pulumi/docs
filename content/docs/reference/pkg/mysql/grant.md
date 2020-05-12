@@ -34,6 +34,23 @@ const jdoeGrant = new mysql.Grant("jdoe", {
     user: jdoeUser.user,
 });
 ```
+```python
+import pulumi
+import pulumi_mysql as mysql
+
+jdoe_user = mysql.User("jdoeUser",
+    host="example.com",
+    plaintext_password="password",
+    user="jdoe")
+jdoe_grant = mysql.Grant("jdoeGrant",
+    database="app",
+    host=jdoe_user.host,
+    privileges=[
+        "SELECT",
+        "UPDATE",
+    ],
+    user=jdoe_user.user)
+```
 
 ## Granting Privileges to a Role
 
@@ -50,6 +67,19 @@ const developerGrant = new mysql.Grant("developer", {
     ],
     role: developerRole.name,
 });
+```
+```python
+import pulumi
+import pulumi_mysql as mysql
+
+developer_role = mysql.Role("developerRole")
+developer_grant = mysql.Grant("developerGrant",
+    database="app",
+    privileges=[
+        "SELECT",
+        "UPDATE",
+    ],
+    role=developer_role.name)
 ```
 
 ## Adding a Role to a User
@@ -70,6 +100,21 @@ const developerGrant = new mysql.Grant("developer", {
     roles: [developerRole.name],
     user: jdoe.user,
 });
+```
+```python
+import pulumi
+import pulumi_mysql as mysql
+
+jdoe = mysql.User("jdoe",
+    host="example.com",
+    plaintext_password="password",
+    user="jdoe")
+developer_role = mysql.Role("developerRole")
+developer_grant = mysql.Grant("developerGrant",
+    database="app",
+    host=jdoe.host,
+    roles=[developer_role.name],
+    user=jdoe.user)
 ```
 
 

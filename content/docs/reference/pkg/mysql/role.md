@@ -31,7 +31,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mysql as mysql
+
+developer = mysql.Role("developer")
+```
 {{% /example %}}
 
 {{% example typescript %}}
