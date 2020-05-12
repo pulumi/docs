@@ -534,6 +534,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AuthConfigAdfs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_principal_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name_field</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">groups_field</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">idp_metadata_content</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rancher_api_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sp_cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sp_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uid_field</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_name_field</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AuthConfigAdfs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config ADFS resource. This can be used to configure and enable Auth Config ADFS for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new rancher2 Auth Config ADFS</span>
+<span class="n">adfs</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">AuthConfigAdfs</span><span class="p">(</span><span class="s2">&quot;adfs&quot;</span><span class="p">,</span>
+    <span class="n">display_name_field</span><span class="o">=</span><span class="s2">&quot;&lt;DISPLAY_NAME_FIELD&gt;&quot;</span><span class="p">,</span>
+    <span class="n">groups_field</span><span class="o">=</span><span class="s2">&quot;&lt;GROUPS_FIELD&gt;&quot;</span><span class="p">,</span>
+    <span class="n">idp_metadata_content</span><span class="o">=</span><span class="s2">&quot;&lt;IDP_METADATA_CONTENT&gt;&quot;</span><span class="p">,</span>
+    <span class="n">rancher_api_host</span><span class="o">=</span><span class="s2">&quot;https://&lt;RANCHER_API_HOST&gt;&quot;</span><span class="p">,</span>
+    <span class="n">sp_cert</span><span class="o">=</span><span class="s2">&quot;&lt;SP_CERT&gt;&quot;</span><span class="p">,</span>
+    <span class="n">sp_key</span><span class="o">=</span><span class="s2">&quot;&lt;SP_KEY&gt;&quot;</span><span class="p">,</span>
+    <span class="n">uid_field</span><span class="o">=</span><span class="s2">&quot;&lt;UID_FIELD&gt;&quot;</span><span class="p">,</span>
+    <span class="n">user_name_field</span><span class="o">=</span><span class="s2">&quot;&lt;USER_NAME_FIELD&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -719,6 +734,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AuthConfigAzureAd</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_principal_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auth_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">graph_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rancher_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AuthConfigAzureAd" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config AzureAD resource. This can be used to configure and enable Auth Config AzureAD for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new rancher2 Auth Config AzureAD</span>
+<span class="n">azuread</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">AuthConfigAzureAd</span><span class="p">(</span><span class="s2">&quot;azuread&quot;</span><span class="p">,</span>
+    <span class="n">application_id</span><span class="o">=</span><span class="s2">&quot;&lt;AZUREAD_APP_ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">application_secret</span><span class="o">=</span><span class="s2">&quot;&lt;AZUREAD_APP_SECRET&gt;&quot;</span><span class="p">,</span>
+    <span class="n">auth_endpoint</span><span class="o">=</span><span class="s2">&quot;&lt;AZUREAD_AUTH_ENDPOINT&gt;&quot;</span><span class="p">,</span>
+    <span class="n">graph_endpoint</span><span class="o">=</span><span class="s2">&quot;&lt;AZUREAD_GRAPH_ENDPOINT&gt;&quot;</span><span class="p">,</span>
+    <span class="n">rancher_url</span><span class="o">=</span><span class="s2">&quot;&lt;RANCHER_URL&gt;&quot;</span><span class="p">,</span>
+    <span class="n">tenant_id</span><span class="o">=</span><span class="s2">&quot;&lt;AZUREAD_TENANT_ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">token_endpoint</span><span class="o">=</span><span class="s2">&quot;&lt;AZUREAD_TOKEN_ENDPOINT&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1209,6 +1238,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AuthConfigGithub</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_principal_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AuthConfigGithub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config Github resource. This can be used to configure and enable Auth Config Github for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new rancher2 Auth Config Github</span>
+<span class="n">github</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">AuthConfigGithub</span><span class="p">(</span><span class="s2">&quot;github&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;&lt;GITHUB_CLIENT_ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;&lt;GITHUB_CLIENT_SECRET&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1362,6 +1400,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AuthConfigKeycloak</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_principal_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name_field</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">groups_field</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">idp_metadata_content</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rancher_api_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sp_cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sp_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uid_field</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_name_field</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AuthConfigKeycloak" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config KeyCloak resource. This can be used to configure and enable Auth Config KeyCloak for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new rancher2 Auth Config KeyCloak</span>
+<span class="n">keycloak</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">AuthConfigKeycloak</span><span class="p">(</span><span class="s2">&quot;keycloak&quot;</span><span class="p">,</span>
+    <span class="n">display_name_field</span><span class="o">=</span><span class="s2">&quot;&lt;DISPLAY_NAME_FIELD&gt;&quot;</span><span class="p">,</span>
+    <span class="n">groups_field</span><span class="o">=</span><span class="s2">&quot;&lt;GROUPS_FIELD&gt;&quot;</span><span class="p">,</span>
+    <span class="n">idp_metadata_content</span><span class="o">=</span><span class="s2">&quot;&lt;IDP_METADATA_CONTENT&gt;&quot;</span><span class="p">,</span>
+    <span class="n">rancher_api_host</span><span class="o">=</span><span class="s2">&quot;https://&lt;RANCHER_API_HOST&gt;&quot;</span><span class="p">,</span>
+    <span class="n">sp_cert</span><span class="o">=</span><span class="s2">&quot;&lt;SP_CERT&gt;&quot;</span><span class="p">,</span>
+    <span class="n">sp_key</span><span class="o">=</span><span class="s2">&quot;&lt;SP_KEY&gt;&quot;</span><span class="p">,</span>
+    <span class="n">uid_field</span><span class="o">=</span><span class="s2">&quot;&lt;UID_FIELD&gt;&quot;</span><span class="p">,</span>
+    <span class="n">user_name_field</span><span class="o">=</span><span class="s2">&quot;&lt;USER_NAME_FIELD&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1547,6 +1600,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AuthConfigOkta</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_principal_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name_field</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">groups_field</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">idp_metadata_content</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rancher_api_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sp_cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sp_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uid_field</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_name_field</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AuthConfigOkta" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config OKTA resource. This can be used to configure and enable Auth Config OKTA for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new rancher2 Auth Config OKTA</span>
+<span class="n">okta</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">AuthConfigOkta</span><span class="p">(</span><span class="s2">&quot;okta&quot;</span><span class="p">,</span>
+    <span class="n">display_name_field</span><span class="o">=</span><span class="s2">&quot;&lt;DISPLAY_NAME_FIELD&gt;&quot;</span><span class="p">,</span>
+    <span class="n">groups_field</span><span class="o">=</span><span class="s2">&quot;&lt;GROUPS_FIELD&gt;&quot;</span><span class="p">,</span>
+    <span class="n">idp_metadata_content</span><span class="o">=</span><span class="s2">&quot;&lt;IDP_METADATA_CONTENT&gt;&quot;</span><span class="p">,</span>
+    <span class="n">rancher_api_host</span><span class="o">=</span><span class="s2">&quot;https://&lt;RANCHER_API_HOST&gt;&quot;</span><span class="p">,</span>
+    <span class="n">sp_cert</span><span class="o">=</span><span class="s2">&quot;&lt;SP_CERT&gt;&quot;</span><span class="p">,</span>
+    <span class="n">sp_key</span><span class="o">=</span><span class="s2">&quot;&lt;SP_KEY&gt;&quot;</span><span class="p">,</span>
+    <span class="n">uid_field</span><span class="o">=</span><span class="s2">&quot;&lt;UID_FIELD&gt;&quot;</span><span class="p">,</span>
+    <span class="n">user_name_field</span><span class="o">=</span><span class="s2">&quot;&lt;USER_NAME_FIELD&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2037,6 +2105,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AuthConfigPing</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_principal_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name_field</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">groups_field</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">idp_metadata_content</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rancher_api_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sp_cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sp_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uid_field</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_name_field</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AuthConfigPing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config Ping resource. This can be used to configure and enable Auth Config Ping for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new rancher2 Auth Config Ping</span>
+<span class="n">ping</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">AuthConfigPing</span><span class="p">(</span><span class="s2">&quot;ping&quot;</span><span class="p">,</span>
+    <span class="n">display_name_field</span><span class="o">=</span><span class="s2">&quot;&lt;DISPLAY_NAME_FIELD&gt;&quot;</span><span class="p">,</span>
+    <span class="n">groups_field</span><span class="o">=</span><span class="s2">&quot;&lt;GROUPS_FIELD&gt;&quot;</span><span class="p">,</span>
+    <span class="n">idp_metadata_content</span><span class="o">=</span><span class="s2">&quot;&lt;IDP_METADATA_CONTENT&gt;&quot;</span><span class="p">,</span>
+    <span class="n">rancher_api_host</span><span class="o">=</span><span class="s2">&quot;https://&lt;RANCHER_API_HOST&gt;&quot;</span><span class="p">,</span>
+    <span class="n">sp_cert</span><span class="o">=</span><span class="s2">&quot;&lt;SP_CERT&gt;&quot;</span><span class="p">,</span>
+    <span class="n">sp_key</span><span class="o">=</span><span class="s2">&quot;&lt;SP_KEY&gt;&quot;</span><span class="p">,</span>
+    <span class="n">uid_field</span><span class="o">=</span><span class="s2">&quot;&lt;UID_FIELD&gt;&quot;</span><span class="p">,</span>
+    <span class="n">user_name_field</span><span class="o">=</span><span class="s2">&quot;&lt;USER_NAME_FIELD&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2523,6 +2606,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.Catalog">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Catalog</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">branch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kind</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">refresh</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Catalog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Catalog resource. This can be used to create cluster, global and/or project catalogs for Rancher v2 environments and retrieve their information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new Rancher2 Global Catalog</span>
+<span class="n">foo_global</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">Catalog</span><span class="p">(</span><span class="s2">&quot;foo-global&quot;</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://&lt;CATALOG_URL&gt;&quot;</span><span class="p">)</span>
+<span class="c1"># Create a new Rancher2 Cluster Catalog</span>
+<span class="n">foo_cluster</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">Catalog</span><span class="p">(</span><span class="s2">&quot;foo-cluster&quot;</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="s2">&quot;cluster&quot;</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://&lt;CATALOG_URL&gt;&quot;</span><span class="p">)</span>
+<span class="c1"># Create a new Rancher2 Project Catalog</span>
+<span class="n">foo_project</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">Catalog</span><span class="p">(</span><span class="s2">&quot;foo-project&quot;</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://&lt;CATALOG_URL&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2837,6 +2935,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">CloudCredential</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">amazonec2_credential_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure_credential_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">digitalocean_credential_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">linode_credential_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">openstack_credential_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vsphere_credential_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.CloudCredential" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Cloud Credential resource. This can be used to create Cloud Credential for Rancher v2.2.x and retrieve their information.</p>
 <p>amazonec2, azure, digitalocean, linode, openstack and vsphere credentials config are supported for Cloud Credential.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new rancher2 Cloud Credential</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">CloudCredential</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">amazonec2_credential_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;accessKey&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;AWS_ACCESS_KEY&gt;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;secretKey&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;AWS_SECRET_KEY&gt;&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;foo test&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3148,7 +3258,7 @@ The **aks_config** object supports the following:
 
 The **cluster_auth_endpoint** object supports the following:
 
-  * `ca_certs` (`pulumi.Input[str]`) - CA certs for the authorized cluster endpoint (string)
+  * `caCerts` (`pulumi.Input[str]`) - CA certs for the authorized cluster endpoint (string)
   * `enabled` (`pulumi.Input[bool]`) - Enable scheduled cluster scan. Default: `false` (bool)
   * `fqdn` (`pulumi.Input[str]`) - FQDN for the authorized cluster endpoint (string)
 
@@ -3655,7 +3765,7 @@ The **scheduled_cluster_scan** object supports the following:
 <code class="sig-name descname">cluster_auth_endpoint</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Cluster.cluster_auth_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enabling the <a class="reference external" href="https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/rke-clusters/options/#local-cluster-auth-endpoint">local cluster authorized endpoint</a> allows direct communication with the cluster, bypassing the Rancher API proxy. (list maxitems:1)</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ca_certs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - CA certs for the authorized cluster endpoint (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caCerts</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - CA certs for the authorized cluster endpoint (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable scheduled cluster scan. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">fqdn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - FQDN for the authorized cluster endpoint (string)</p></li>
 </ul>
@@ -4379,7 +4489,7 @@ The **aks_config** object supports the following:
 
 The **cluster_auth_endpoint** object supports the following:
 
-  * `ca_certs` (`pulumi.Input[str]`) - CA certs for the authorized cluster endpoint (string)
+  * `caCerts` (`pulumi.Input[str]`) - CA certs for the authorized cluster endpoint (string)
   * `enabled` (`pulumi.Input[bool]`) - Enable scheduled cluster scan. Default: `false` (bool)
   * `fqdn` (`pulumi.Input[str]`) - FQDN for the authorized cluster endpoint (string)
 
@@ -4887,24 +4997,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_rancher2.ClusterAlterGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterAlterGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_interval_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_wait_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">recipients</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repeat_interval_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterAlterGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Rancher v2 Cluster Alert Group resource. This can be used to create Cluster Alert Group for Rancher v2 environments and retrieve their information.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert group annotations (map)</p></li>
-<li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster id where create cluster alert group (string)</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster alert group description (string)</p></li>
-<li><p><strong>group_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert group interval seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)</p></li>
-<li><p><strong>group_wait_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert group labels (map)</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster alert group name (string)</p></li>
-<li><p><strong>recipients</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The cluster alert group recipients (list)</p></li>
-<li><p><strong>repeat_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">3600</span></code> (int)</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ClusterAlterGroup resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] annotations: The cluster alert group annotations (map)
+:param pulumi.Input[str] cluster_id: The cluster id where create cluster alert group (string)
+:param pulumi.Input[str] description: The cluster alert group description (string)
+:param pulumi.Input[float] group_interval_seconds: The cluster alert group interval seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)
+:param pulumi.Input[float] group_wait_seconds: The cluster alert group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)
+:param pulumi.Input[dict] labels: The cluster alert group labels (map)
+:param pulumi.Input[str] name: The cluster alert group name (string)
+:param pulumi.Input[list] recipients: The cluster alert group recipients (list)
+:param pulumi.Input[float] repeat_interval_seconds: The cluster alert group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">3600</span></code> (int)</p>
 <p>The <strong>recipients</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultRecipient</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Use notifier default recipient, overriding <code class="docutils literal notranslate"><span class="pre">recipient</span></code> argument if set.  Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
@@ -5045,29 +5149,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_rancher2.ClusterAlterRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterAlterRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">event_rule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_interval_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_wait_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inherited</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric_rule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_rule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repeat_interval_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">severity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">system_service_rule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterAlterRule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Rancher v2 Cluster Alert Rule resource. This can be used to create Cluster Alert Rule for Rancher v2 environments and retrieve their information.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule annotations (map)</p></li>
-<li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster id where create cluster alert rule (string)</p></li>
-<li><p><strong>event_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule event rule. ConflictsWith: :raw-html-m2r:<a href="#id3"><span class="problematic" id="id4">`</span></a>&lt;code class=”docutils literal”&gt;&lt;span class=”pre”&gt;”metric_rule”, “node_rule”, “system_service_rule”`` (list Maxitems:1)</p></li>
-<li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster alert rule alert group ID (string)</p></li>
-<li><p><strong>group_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule group interval seconds. Default:&lt;/span&gt;&lt;/code&gt;`180<a href="#id5"><span class="problematic" id="id6">``</span></a>(int)</p></li>
-<li><p><strong>group_wait_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule group wait seconds. Default:<a href="#id7"><span class="problematic" id="id8">``</span></a>180<a href="#id9"><span class="problematic" id="id10">``</span></a>(int)</p></li>
-<li><p><strong>inherited</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The cluster alert rule inherited. Default:<a href="#id11"><span class="problematic" id="id12">``</span></a>true<a href="#id13"><span class="problematic" id="id14">``</span></a>(bool)</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule labels (map)</p></li>
-<li><p><strong>metric_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule metric rule. ConflictsWith:<a href="#id15"><span class="problematic" id="id16">``</span></a>”event_rule”, “node_rule”, “system_service_rule”<a href="#id17"><span class="problematic" id="id18">``</span></a>(list Maxitems:1)</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster alert rule name (string)</p></li>
-<li><p><strong>node_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule node rule. ConflictsWith: <cite>“event_rule”, “metric_rule”, “system_service_rule”`</cite> (list Maxitems:1)</p></li>
-<li><p><strong>repeat_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">3600</span></code> (int)</p></li>
-<li><p><strong>severity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster alert rule severity. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;critical&quot;</span> <span class="pre">|</span> <span class="pre">&quot;info&quot;</span> <span class="pre">|</span> <span class="pre">&quot;warning&quot;</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">critical</span></code> (string)</p></li>
-<li><p><strong>system_service_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule system service rule. ConflictsWith: <cite>“event_rule”, “metric_rule”, “node_rule”`</cite> (list Maxitems:1)</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ClusterAlterRule resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] annotations: The cluster alert rule annotations (map)
+:param pulumi.Input[str] cluster_id: The cluster id where create cluster alert rule (string)
+:param pulumi.Input[dict] event_rule: The cluster alert rule event rule. ConflictsWith: <span class="raw-html-m2r"><code class="docutils literal"><span class="pre">"metric_rule", "node_rule", "system_service_rule"&#96;&#96; (list Maxitems:1)
+:param pulumi.Input[str] group_id: The cluster alert rule alert group ID (string)
+:param pulumi.Input[float] group_interval_seconds: The cluster alert rule group interval seconds. Default:</span></code></span>180<code class="docutils literal notranslate"><span class="pre">(int)</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[float]</span> <span class="pre">group_wait_seconds:</span> <span class="pre">The</span> <span class="pre">cluster</span> <span class="pre">alert</span> <span class="pre">rule</span> <span class="pre">group</span> <span class="pre">wait</span> <span class="pre">seconds.</span> <span class="pre">Default:</span></code>180<code class="docutils literal notranslate"><span class="pre">(int)</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[bool]</span> <span class="pre">inherited:</span> <span class="pre">The</span> <span class="pre">cluster</span> <span class="pre">alert</span> <span class="pre">rule</span> <span class="pre">inherited.</span> <span class="pre">Default:</span></code>true<code class="docutils literal notranslate"><span class="pre">(bool)</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[dict]</span> <span class="pre">labels:</span> <span class="pre">The</span> <span class="pre">cluster</span> <span class="pre">alert</span> <span class="pre">rule</span> <span class="pre">labels</span> <span class="pre">(map)</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[dict]</span> <span class="pre">metric_rule:</span> <span class="pre">The</span> <span class="pre">cluster</span> <span class="pre">alert</span> <span class="pre">rule</span> <span class="pre">metric</span> <span class="pre">rule.</span> <span class="pre">ConflictsWith:</span></code>”event_rule”, “node_rule”, “system_service_rule”<code class="docutils literal notranslate"><span class="pre">(list</span> <span class="pre">Maxitems:1)</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">name:</span> <span class="pre">The</span> <span class="pre">cluster</span> <span class="pre">alert</span> <span class="pre">rule</span> <span class="pre">name</span> <span class="pre">(string)</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[dict]</span> <span class="pre">node_rule:</span> <span class="pre">The</span> <span class="pre">cluster</span> <span class="pre">alert</span> <span class="pre">rule</span> <span class="pre">node</span> <span class="pre">rule.</span> <span class="pre">ConflictsWith:</span> <span class="pre">`&quot;event_rule&quot;,</span> <span class="pre">&quot;metric_rule&quot;,</span> <span class="pre">&quot;system_service_rule&quot;</span></code> (list Maxitems:1)
+:param pulumi.Input[float] repeat_interval_seconds: The cluster alert rule wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">3600</span></code> (int)
+:param pulumi.Input[str] severity: The cluster alert rule severity. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;critical&quot;</span> <span class="pre">|</span> <span class="pre">&quot;info&quot;</span> <span class="pre">|</span> <span class="pre">&quot;warning&quot;</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">critical</span></code> (string)
+:param pulumi.Input[dict] system_service_rule: The cluster alert rule system service rule. ConflictsWith: <cite>“event_rule”, “metric_rule”, “node_rule”`</cite> (list Maxitems:1)</p>
 <p>The <strong>event_rule</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">eventType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Event type. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;Warning&quot;</span> <span class="pre">|</span> <span class="pre">&quot;Normal&quot;</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">Warning</span></code> (string)</p></li>
@@ -5211,13 +5309,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule annotations (map)</p></li>
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster id where create cluster alert rule (string)</p></li>
-<li><p><strong>event_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule event rule. ConflictsWith: :raw-html-m2r:<a href="#id19"><span class="problematic" id="id20">`</span></a>&lt;code class=”docutils literal”&gt;&lt;span class=”pre”&gt;”metric_rule”, “node_rule”, “system_service_rule”`` (list Maxitems:1)</p></li>
+<li><p><strong>event_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule event rule. ConflictsWith: :raw-html-m2r:<a href="#id3"><span class="problematic" id="id4">`</span></a>&lt;code class=”docutils literal”&gt;&lt;span class=”pre”&gt;”metric_rule”, “node_rule”, “system_service_rule”`` (list Maxitems:1)</p></li>
 <li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster alert rule alert group ID (string)</p></li>
-<li><p><strong>group_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule group interval seconds. Default:&lt;/span&gt;&lt;/code&gt;`180<a href="#id21"><span class="problematic" id="id22">``</span></a>(int)</p></li>
-<li><p><strong>group_wait_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule group wait seconds. Default:<a href="#id23"><span class="problematic" id="id24">``</span></a>180<a href="#id25"><span class="problematic" id="id26">``</span></a>(int)</p></li>
-<li><p><strong>inherited</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The cluster alert rule inherited. Default:<a href="#id27"><span class="problematic" id="id28">``</span></a>true<a href="#id29"><span class="problematic" id="id30">``</span></a>(bool)</p></li>
+<li><p><strong>group_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule group interval seconds. Default:&lt;/span&gt;&lt;/code&gt;`180<a href="#id5"><span class="problematic" id="id6">``</span></a>(int)</p></li>
+<li><p><strong>group_wait_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule group wait seconds. Default:<a href="#id7"><span class="problematic" id="id8">``</span></a>180<a href="#id9"><span class="problematic" id="id10">``</span></a>(int)</p></li>
+<li><p><strong>inherited</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The cluster alert rule inherited. Default:<a href="#id11"><span class="problematic" id="id12">``</span></a>true<a href="#id13"><span class="problematic" id="id14">``</span></a>(bool)</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule labels (map)</p></li>
-<li><p><strong>metric_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule metric rule. ConflictsWith:<a href="#id31"><span class="problematic" id="id32">``</span></a>”event_rule”, “node_rule”, “system_service_rule”<a href="#id33"><span class="problematic" id="id34">``</span></a>(list Maxitems:1)</p></li>
+<li><p><strong>metric_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule metric rule. ConflictsWith:<a href="#id15"><span class="problematic" id="id16">``</span></a>”event_rule”, “node_rule”, “system_service_rule”<a href="#id17"><span class="problematic" id="id18">``</span></a>(list Maxitems:1)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster alert rule name (string)</p></li>
 <li><p><strong>node_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule node rule. ConflictsWith: <cite>“event_rule”, “metric_rule”, “system_service_rule”`</cite> (list Maxitems:1)</p></li>
 <li><p><strong>repeat_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">3600</span></code> (int)</p></li>
@@ -5295,6 +5393,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ClusterDriver">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterDriver</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">active</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">actual_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">builtin</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">checksum</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ui_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">whitelist_domains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterDriver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Cluster Driver resource. This can be used to create Cluster Driver for Rancher v2.2.x Kontainer Engine clusters and retrieve their information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new Rancher2 Cluster Driver</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">ClusterDriver</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">active</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">builtin</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">checksum</span><span class="o">=</span><span class="s2">&quot;0x0&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Foo description&quot;</span><span class="p">,</span>
+    <span class="n">external_id</span><span class="o">=</span><span class="s2">&quot;foo_external&quot;</span><span class="p">,</span>
+    <span class="n">ui_url</span><span class="o">=</span><span class="s2">&quot;local://ui&quot;</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;local://&quot;</span><span class="p">,</span>
+    <span class="n">whitelist_domains</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;*.foo.com&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5441,6 +5554,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ClusterLogging">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterLogging</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_target_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_json_parsing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fluentd_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kind</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_flush_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">splunk_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">syslog_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterLogging" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Cluster Logging resource. This can be used to configure Cluster Logging for Rancher v2 environments and retrieve their information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new Rancher2 Cluster Logging</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">ClusterLogging</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">cluster_id</span><span class="o">=</span><span class="s2">&quot;&lt;cluster_id&gt;&quot;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;syslog&quot;</span><span class="p">,</span>
+    <span class="n">syslog_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;endpoint&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;syslog_endpoint&gt;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;udp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;severity&quot;</span><span class="p">:</span> <span class="s2">&quot;notice&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sslVerify&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5834,6 +5962,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ClusterRoleTemplateBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterRoleTemplateBinding</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_principal_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_template_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_principal_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterRoleTemplateBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Cluster Role Template Binding resource. This can be used to create Cluster Role Template Bindings for Rancher v2 environments and retrieve their information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new Rancher2 Cluster Role Template Binding</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">ClusterRoleTemplateBinding</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">cluster_id</span><span class="o">=</span><span class="s2">&quot;&lt;cluster_id&gt;&quot;</span><span class="p">,</span>
+    <span class="n">role_template_id</span><span class="o">=</span><span class="s2">&quot;&lt;role_template_id&gt;&quot;</span><span class="p">,</span>
+    <span class="n">user_id</span><span class="o">=</span><span class="s2">&quot;&lt;user_id&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6076,22 +6214,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_rancher2.ClusterTemplate">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterTemplate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">members</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_revisions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterTemplate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Rancher v2 Cluster Template resource. This can be used to create Cluster Templates for Rancher v2 RKE clusters and retrieve their information.</p>
-<p>Cluster Templates are available from Rancher v2.3.x and above.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Annotations for the cluster template revision (map)</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cluster template description</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels for the cluster template revision (map)</p></li>
-<li><p><strong>members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Cluster template members (list)</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster template revision name (string)</p></li>
-<li><p><strong>template_revisions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Cluster template revisions (list)</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ClusterTemplate resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] annotations: Annotations for the cluster template revision (map)
+:param pulumi.Input[str] description: Cluster template description
+:param pulumi.Input[dict] labels: Labels for the cluster template revision (map)
+:param pulumi.Input[list] members: Cluster template members (list)
+:param pulumi.Input[str] name: The cluster template revision name (string)
+:param pulumi.Input[list] template_revisions: Cluster template revisions (list)</p>
 <p>The <strong>members</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">accessType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Member access type. Valid values: <code class="docutils literal notranslate"><span class="pre">[&quot;read-only&quot;</span> <span class="pre">|</span> <span class="pre">&quot;owner&quot;]</span></code> (string)</p></li>
@@ -6105,7 +6236,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">cluster_auth_endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Local cluster auth endpoint (list maxitems: 1)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">ca_certs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caCerts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable cluster template revision. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">fqdn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
@@ -6616,7 +6747,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">cluster_auth_endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Local cluster auth endpoint (list maxitems: 1)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">ca_certs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caCerts</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable cluster template revision. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">fqdn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
@@ -7112,7 +7243,7 @@ properties used to qualify the lookup.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">cluster_auth_endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Local cluster auth endpoint (list maxitems: 1)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">ca_certs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caCerts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable cluster template revision. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">fqdn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
@@ -9653,6 +9784,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.GlobalRoleBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GlobalRoleBinding</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">global_role_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_principal_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GlobalRoleBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Global Role Binding resource. This can be used to create Global Role Bindings for Rancher v2 environments and retrieve their information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new rancher2 Global Role Binding using user_id</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">GlobalRoleBinding</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">global_role_id</span><span class="o">=</span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+    <span class="n">user_id</span><span class="o">=</span><span class="s2">&quot;user-XXXXX&quot;</span><span class="p">)</span>
+<span class="c1"># Create a new rancher2 Global Role Binding using group_principal_id</span>
+<span class="n">foo2</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">GlobalRoleBinding</span><span class="p">(</span><span class="s2">&quot;foo2&quot;</span><span class="p">,</span>
+    <span class="n">global_role_id</span><span class="o">=</span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+    <span class="n">group_principal_id</span><span class="o">=</span><span class="s2">&quot;local://g-XXXXX&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10026,6 +10170,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.Namespace">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Namespace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_resource_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_quota</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_cluster</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Namespace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Namespace resource. This can be used to create namespaces for Rancher v2 environments and retrieve their information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new rancher2 Namespace</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">Namespace</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">container_resource_limit</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;limitsCpu&quot;</span><span class="p">:</span> <span class="s2">&quot;20m&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;limitsMemory&quot;</span><span class="p">:</span> <span class="s2">&quot;20Mi&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;requestsCpu&quot;</span><span class="p">:</span> <span class="s2">&quot;1m&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;requestsMemory&quot;</span><span class="p">:</span> <span class="s2">&quot;1Mi&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;foo namespace&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT_ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">resource_quota</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;limit&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;limitsCpu&quot;</span><span class="p">:</span> <span class="s2">&quot;100m&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;limitsMemory&quot;</span><span class="p">:</span> <span class="s2">&quot;100Mi&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;requestsStorage&quot;</span><span class="p">:</span> <span class="s2">&quot;1Gi&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10235,6 +10401,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.NodeDriver">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">NodeDriver</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">active</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">builtin</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">checksum</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">external_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ui_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">whitelist_domains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.NodeDriver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Node Driver resource. This can be used to create Node Driver for Rancher v2 RKE clusters and retrieve their information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new rancher2 Node Driver</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">NodeDriver</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">active</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">builtin</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">checksum</span><span class="o">=</span><span class="s2">&quot;0x0&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Foo description&quot;</span><span class="p">,</span>
+    <span class="n">external_id</span><span class="o">=</span><span class="s2">&quot;foo_external&quot;</span><span class="p">,</span>
+    <span class="n">ui_url</span><span class="o">=</span><span class="s2">&quot;local://ui&quot;</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;local://&quot;</span><span class="p">,</span>
+    <span class="n">whitelist_domains</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;*.foo.com&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10388,27 +10569,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_rancher2.NodePool">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">NodePool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">control_plane</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delete_not_ready_after_secs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">etcd</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_taints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_template_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">quantity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">worker</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.NodePool" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Rancher v2 Node Pool resource. This can be used to create Node Pool, using Node template for Rancher v2 RKE clusters and retrieve their information.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Annotations for Node Pool object (map)</p></li>
-<li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The RKE cluster id to use Node Pool (string)</p></li>
-<li><p><strong>control_plane</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – RKE control plane role for created nodes (bool)</p></li>
-<li><p><strong>delete_not_ready_after_secs</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Delete not ready node after secs. For Rancher v2.3.3 or above. Default <code class="docutils literal notranslate"><span class="pre">0</span></code> (int)</p></li>
-<li><p><strong>etcd</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – RKE etcd role for created nodes (bool)</p></li>
-<li><p><strong>hostname_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The prefix for created nodes of the Node Pool (string)</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels for Node Pool object (map)</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Node Pool (string)</p></li>
-<li><p><strong>node_taints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Node taints. For Rancher v2.3.3 or above (List)</p></li>
-<li><p><strong>node_template_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Node Template ID to use for node creation (string)</p></li>
-<li><p><strong>quantity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of nodes to create on Node Pool. Default <code class="docutils literal notranslate"><span class="pre">1</span></code>. Only values &gt;= 1 allowed (int)</p></li>
-<li><p><strong>worker</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – RKE role role for created nodes (bool)</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a NodePool resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] annotations: Annotations for Node Pool object (map)
+:param pulumi.Input[str] cluster_id: The RKE cluster id to use Node Pool (string)
+:param pulumi.Input[bool] control_plane: RKE control plane role for created nodes (bool)
+:param pulumi.Input[float] delete_not_ready_after_secs: Delete not ready node after secs. For Rancher v2.3.3 or above. Default <code class="docutils literal notranslate"><span class="pre">0</span></code> (int)
+:param pulumi.Input[bool] etcd: RKE etcd role for created nodes (bool)
+:param pulumi.Input[str] hostname_prefix: The prefix for created nodes of the Node Pool (string)
+:param pulumi.Input[dict] labels: Labels for Node Pool object (map)
+:param pulumi.Input[str] name: The name of the Node Pool (string)
+:param pulumi.Input[list] node_taints: Node taints. For Rancher v2.3.3 or above (List)
+:param pulumi.Input[str] node_template_id: The Node Template ID to use for node creation (string)
+:param pulumi.Input[float] quantity: The number of nodes to create on Node Pool. Default <code class="docutils literal notranslate"><span class="pre">1</span></code>. Only values &gt;= 1 allowed (int)
+:param pulumi.Input[bool] worker: RKE role role for created nodes (bool)</p>
 <p>The <strong>node_taints</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">effect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Taint effect. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;NoExecute&quot;</span> <span class="pre">|</span> <span class="pre">&quot;NoSchedule&quot;</span> <span class="pre">|</span> <span class="pre">&quot;PreferNoSchedule&quot;</span></code> (string)</p></li>
@@ -10573,6 +10748,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Rancher v2 Node Template resource. This can be used to create Node Template for Rancher v2 and retrieve their information.</p>
 <p>amazonec2, azure, digitalocean, linode, opennebula, openstack, and vsphere drivers are supported for node templates.</p>
 <p><strong>Note</strong> If you are upgrading to Rancher v2.3.3, please take a look to final section</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new rancher2 Node Template up to Rancher 2.1.x</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">NodeTemplate</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">amazonec2_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;accessKey&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS_ACCESS_KEY&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ami&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;AMI_ID&gt;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;REGION&gt;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;secretKey&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;AWS_SECRET_KEY&gt;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;securityGroup&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;&lt;AWS_SECURITY_GROUP&gt;&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;SUBNET_ID&gt;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;vpcId&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;VPC_ID&gt;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;zone&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;ZONE&gt;&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;foo test&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -11386,26 +11579,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_rancher2.Notifier">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Notifier</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pagerduty_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">send_resolved</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">slack_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">smtp_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">webhook_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wechat_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Notifier" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Rancher v2 Notifier resource. This can be used to create notifiers for Rancher v2 environments and retrieve their information.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Annotations for notifier object (map)</p></li>
-<li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster id where create notifier (string)</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The notifier description (string)</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels for notifier object (map)</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the notifier (string)</p></li>
-<li><p><strong>pagerduty_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Pagerduty config for notifier (list maxitems:1)</p></li>
-<li><p><strong>send_resolved</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – = (Optional) Enable the notifier to send resolved notifications. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
-<li><p><strong>slack_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Slack config for notifier (list maxitems:1)</p></li>
-<li><p><strong>smtp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SMTP config for notifier (list maxitems:1)</p></li>
-<li><p><strong>webhook_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Webhook config for notifier (list maxitems:1)</p></li>
-<li><p><strong>wechat_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Wechat config for notifier (list maxitems:1)</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Notifier resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] annotations: Annotations for notifier object (map)
+:param pulumi.Input[str] cluster_id: The cluster id where create notifier (string)
+:param pulumi.Input[str] description: The notifier description (string)
+:param pulumi.Input[dict] labels: Labels for notifier object (map)
+:param pulumi.Input[str] name: The name of the notifier (string)
+:param pulumi.Input[dict] pagerduty_config: Pagerduty config for notifier (list maxitems:1)
+:param pulumi.Input[bool] send_resolved: = (Optional) Enable the notifier to send resolved notifications. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)
+:param pulumi.Input[dict] slack_config: Slack config for notifier (list maxitems:1)
+:param pulumi.Input[dict] smtp_config: SMTP config for notifier (list maxitems:1)
+:param pulumi.Input[dict] webhook_config: Webhook config for notifier (list maxitems:1)
+:param pulumi.Input[dict] wechat_config: Wechat config for notifier (list maxitems:1)</p>
 <p>The <strong>pagerduty_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">proxyUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Wechat proxy url (string)</p></li>
@@ -11640,43 +11827,37 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_rancher2.PodSecurityPolicyTemplate">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">PodSecurityPolicyTemplate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_privilege_escalation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_csi_drivers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_flex_volumes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_host_paths</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_proc_mount_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_unsafe_sysctls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_add_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_allow_privilege_escalation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">forbidden_sysctls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fs_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_ipc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_pid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">privileged</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_only_root_filesystem</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">required_drop_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">run_as_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">run_as_user</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runtime_class</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">se_linux</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">supplemental_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volumes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.PodSecurityPolicyTemplate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Rancher v2 PodSecurityPolicyTemplate resource. This can be used to create PodSecurityPolicyTemplates for Rancher v2 environments and retrieve their information.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>allow_privilege_escalation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – = (Optional)</p></li>
-<li><p><strong>allowed_capabilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (list)</p></li>
-<li><p><strong>allowed_csi_drivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (list)</p></li>
-<li><p><strong>allowed_flex_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (list)</p></li>
-<li><p><strong>allowed_host_paths</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (list)</p></li>
-<li><p><strong>allowed_proc_mount_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (list)</p></li>
-<li><p><strong>allowed_unsafe_sysctls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (list)</p></li>
-<li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Annotations for PodSecurityPolicyTemplate object (map)</p></li>
-<li><p><strong>default_add_capabilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (list)</p></li>
-<li><p><strong>default_allow_privilege_escalation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (list)</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PodSecurityPolicyTemplate description (string)</p></li>
-<li><p><strong>forbidden_sysctls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (list)</p></li>
-<li><p><strong>fs_group</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – (list maxitems:1)</p></li>
-<li><p><strong>host_ipc</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (bool)</p></li>
-<li><p><strong>host_network</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – hostNetwork determines if the policy allows the use of HostNetwork in the pod spec.</p></li>
-<li><p><strong>host_pid</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (bool)</p></li>
-<li><p><strong>host_ports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (list)</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels for PodSecurityPolicyTemplate object (map)</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the PodSecurityPolicyTemplate (string)</p></li>
-<li><p><strong>privileged</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (bool)</p></li>
-<li><p><strong>read_only_root_filesystem</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (bool)</p></li>
-<li><p><strong>required_drop_capabilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (list)</p></li>
-<li><p><strong>run_as_group</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – (list maxitems:1)</p></li>
-<li><p><strong>run_as_user</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – (list maxitems:1)</p></li>
-<li><p><strong>runtime_class</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – (list maxitems:1)</p></li>
-<li><p><strong>se_linux</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – (list maxitems:1)</p></li>
-<li><p><strong>supplemental_group</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – (list maxitems:1)</p></li>
-<li><p><strong>volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (list)</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a PodSecurityPolicyTemplate resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] allow_privilege_escalation: = (Optional)
+:param pulumi.Input[list] allowed_capabilities: (list)
+:param pulumi.Input[list] allowed_csi_drivers: (list)
+:param pulumi.Input[list] allowed_flex_volumes: (list)
+:param pulumi.Input[list] allowed_host_paths: (list)
+:param pulumi.Input[list] allowed_proc_mount_types: (list)
+:param pulumi.Input[list] allowed_unsafe_sysctls: (list)
+:param pulumi.Input[dict] annotations: Annotations for PodSecurityPolicyTemplate object (map)
+:param pulumi.Input[list] default_add_capabilities: (list)
+:param pulumi.Input[bool] default_allow_privilege_escalation: (list)
+:param pulumi.Input[str] description: The PodSecurityPolicyTemplate description (string)
+:param pulumi.Input[list] forbidden_sysctls: (list)
+:param pulumi.Input[dict] fs_group: (list maxitems:1)
+:param pulumi.Input[bool] host_ipc: (bool)
+:param pulumi.Input[bool] host_network: hostNetwork determines if the policy allows the use of HostNetwork in the pod spec.
+:param pulumi.Input[bool] host_pid: (bool)
+:param pulumi.Input[list] host_ports: (list)
+:param pulumi.Input[dict] labels: Labels for PodSecurityPolicyTemplate object (map)
+:param pulumi.Input[str] name: The name of the PodSecurityPolicyTemplate (string)
+:param pulumi.Input[bool] privileged: (bool)
+:param pulumi.Input[bool] read_only_root_filesystem: (bool)
+:param pulumi.Input[list] required_drop_capabilities: (list)
+:param pulumi.Input[dict] run_as_group: (list maxitems:1)
+:param pulumi.Input[dict] run_as_user: (list maxitems:1)
+:param pulumi.Input[dict] runtime_class: (list maxitems:1)
+:param pulumi.Input[dict] se_linux: (list maxitems:1)
+:param pulumi.Input[dict] supplemental_group: (list maxitems:1)
+:param pulumi.Input[list] volumes: (list)</p>
 <p>The <strong>allowed_csi_drivers</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the PodSecurityPolicyTemplate (string)</p></li>
@@ -12146,6 +12327,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.Project">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_resource_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_project_monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pod_security_policy_template_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_monitoring_input</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_quota</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_cluster</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Project resource. This can be used to create projects for Rancher v2 environments and retrieve their information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new rancher2 Project</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">cluster_id</span><span class="o">=</span><span class="s2">&quot;&lt;CLUSTER_ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">container_resource_limit</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;limitsCpu&quot;</span><span class="p">:</span> <span class="s2">&quot;20m&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;limitsMemory&quot;</span><span class="p">:</span> <span class="s2">&quot;20Mi&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;requestsCpu&quot;</span><span class="p">:</span> <span class="s2">&quot;1m&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;requestsMemory&quot;</span><span class="p">:</span> <span class="s2">&quot;1Mi&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">resource_quota</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;namespaceDefaultLimit&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;limitsCpu&quot;</span><span class="p">:</span> <span class="s2">&quot;2000m&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;limitsMemory&quot;</span><span class="p">:</span> <span class="s2">&quot;500Mi&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;requestsStorage&quot;</span><span class="p">:</span> <span class="s2">&quot;1Gi&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;projectLimit&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;limitsCpu&quot;</span><span class="p">:</span> <span class="s2">&quot;2000m&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;limitsMemory&quot;</span><span class="p">:</span> <span class="s2">&quot;2000Mi&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;requestsStorage&quot;</span><span class="p">:</span> <span class="s2">&quot;2Gi&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12445,24 +12652,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_rancher2.ProjectAlertGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ProjectAlertGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_interval_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_wait_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">recipients</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repeat_interval_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ProjectAlertGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Rancher v2 Project Alert Group resource. This can be used to create Project Alert Group for Rancher v2 environments and retrieve their information.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project alert group annotations (map)</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project alert group description (string)</p></li>
-<li><p><strong>group_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The project alert group interval seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)</p></li>
-<li><p><strong>group_wait_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The project alert group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project alert group labels (map)</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project alert group name (string)</p></li>
-<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project id where create project alert group (string)</p></li>
-<li><p><strong>recipients</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The project alert group recipients (list)</p></li>
-<li><p><strong>repeat_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The project alert group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">3600</span></code> (int)</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ProjectAlertGroup resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] annotations: The project alert group annotations (map)
+:param pulumi.Input[str] description: The project alert group description (string)
+:param pulumi.Input[float] group_interval_seconds: The project alert group interval seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)
+:param pulumi.Input[float] group_wait_seconds: The project alert group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)
+:param pulumi.Input[dict] labels: The project alert group labels (map)
+:param pulumi.Input[str] name: The project alert group name (string)
+:param pulumi.Input[str] project_id: The project id where create project alert group (string)
+:param pulumi.Input[list] recipients: The project alert group recipients (list)
+:param pulumi.Input[float] repeat_interval_seconds: The project alert group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">3600</span></code> (int)</p>
 <p>The <strong>recipients</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultRecipient</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
@@ -12603,28 +12804,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_rancher2.ProjectAlertRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ProjectAlertRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_interval_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_wait_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inherited</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric_rule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pod_rule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repeat_interval_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">severity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workload_rule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ProjectAlertRule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Rancher v2 Project Alert Rule resource. This can be used to create Project Alert Rule for Rancher v2 environments and retrieve their information.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project alert rule annotations (map)</p></li>
-<li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project alert rule alert group ID (string)</p></li>
-<li><p><strong>group_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The project alert rule group interval seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)</p></li>
-<li><p><strong>group_wait_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The project alert rule group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)</p></li>
-<li><p><strong>inherited</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The project alert rule inherited. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project alert rule labels (map)</p></li>
-<li><p><strong>metric_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project alert rule metric rule. ConflictsWith: :raw-html-m2r:<a href="#id40"><span class="problematic" id="id41">`</span></a>&lt;code class=”docutils literal”&gt;&lt;span class=”pre”&gt;”pod_rule”, “workload_rule”`` (list Maxitems:1)</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project alert rule name (string)</p></li>
-<li><p><strong>pod_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project alert rule pod rule. ConflictsWith:&lt;/span&gt;&lt;/code&gt;`”metric_rule”, “workload_rule”<a href="#id42"><span class="problematic" id="id43">``</span></a>(list Maxitems:1)</p></li>
-<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project id where create project alert rule (string)</p></li>
-<li><p><strong>repeat_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The project alert rule wait seconds. Default: <cite>3600</cite> (int)</p></li>
-<li><p><strong>severity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project alert rule severity. Supported values : <cite>“critical” | “info” | “warning”</cite>. Default: <cite>critical</cite> (string)</p></li>
-<li><p><strong>workload_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project alert rule workload rule. ConflictsWith: <cite>“metric_rule”, “pod_rule”`</cite> (list Maxitems:1)</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ProjectAlertRule resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] annotations: The project alert rule annotations (map)
+:param pulumi.Input[str] group_id: The project alert rule alert group ID (string)
+:param pulumi.Input[float] group_interval_seconds: The project alert rule group interval seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)
+:param pulumi.Input[float] group_wait_seconds: The project alert rule group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)
+:param pulumi.Input[bool] inherited: The project alert rule inherited. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)
+:param pulumi.Input[dict] labels: The project alert rule labels (map)
+:param pulumi.Input[dict] metric_rule: The project alert rule metric rule. ConflictsWith: <span class="raw-html-m2r"><code class="docutils literal"><span class="pre">"pod_rule", "workload_rule"&#96;&#96; (list Maxitems:1)
+:param pulumi.Input[str] name: The project alert rule name (string)
+:param pulumi.Input[dict] pod_rule: The project alert rule pod rule. ConflictsWith:</span></code></span>”metric_rule”, “workload_rule”<code class="docutils literal notranslate"><span class="pre">(list</span> <span class="pre">Maxitems:1)</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">project_id:</span> <span class="pre">The</span> <span class="pre">project</span> <span class="pre">id</span> <span class="pre">where</span> <span class="pre">create</span> <span class="pre">project</span> <span class="pre">alert</span> <span class="pre">rule</span> <span class="pre">(string)</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[float]</span> <span class="pre">repeat_interval_seconds:</span> <span class="pre">The</span> <span class="pre">project</span> <span class="pre">alert</span> <span class="pre">rule</span> <span class="pre">wait</span> <span class="pre">seconds.</span> <span class="pre">Default:</span> <span class="pre">`3600`</span> <span class="pre">(int)</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">severity:</span> <span class="pre">The</span> <span class="pre">project</span> <span class="pre">alert</span> <span class="pre">rule</span> <span class="pre">severity.</span> <span class="pre">Supported</span> <span class="pre">values</span> <span class="pre">:</span> <span class="pre">`&quot;critical&quot;</span> <span class="pre">|</span> <span class="pre">&quot;info&quot;</span> <span class="pre">|</span> <span class="pre">&quot;warning&quot;`.</span> <span class="pre">Default:</span> <span class="pre">`critical`</span> <span class="pre">(string)</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[dict]</span> <span class="pre">workload_rule:</span> <span class="pre">The</span> <span class="pre">project</span> <span class="pre">alert</span> <span class="pre">rule</span> <span class="pre">workload</span> <span class="pre">rule.</span> <span class="pre">ConflictsWith:</span> <span class="pre">`&quot;metric_rule&quot;,</span> <span class="pre">&quot;pod_rule&quot;</span></code> (list Maxitems:1)</p>
 <p>The <strong>metric_rule</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">comparison</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Metric rule comparison. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;equal&quot;</span> <span class="pre">|</span> <span class="pre">&quot;greater-or-equal&quot;</span> <span class="pre">|</span> <span class="pre">&quot;greater-than&quot;</span> <span class="pre">|</span> <span class="pre">&quot;less-or-equal&quot;</span> <span class="pre">|</span> <span class="pre">&quot;less-than&quot;</span> <span class="pre">|</span> <span class="pre">&quot;not-equal&quot;</span> <span class="pre">|</span> <span class="pre">&quot;has-value&quot;</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">equal</span></code>  (string)</p></li>
@@ -12759,9 +12954,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>group_wait_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The project alert rule group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)</p></li>
 <li><p><strong>inherited</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The project alert rule inherited. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project alert rule labels (map)</p></li>
-<li><p><strong>metric_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project alert rule metric rule. ConflictsWith: :raw-html-m2r:<a href="#id44"><span class="problematic" id="id45">`</span></a>&lt;code class=”docutils literal”&gt;&lt;span class=”pre”&gt;”pod_rule”, “workload_rule”`` (list Maxitems:1)</p></li>
+<li><p><strong>metric_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project alert rule metric rule. ConflictsWith: :raw-html-m2r:<a href="#id24"><span class="problematic" id="id25">`</span></a>&lt;code class=”docutils literal”&gt;&lt;span class=”pre”&gt;”pod_rule”, “workload_rule”`` (list Maxitems:1)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project alert rule name (string)</p></li>
-<li><p><strong>pod_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project alert rule pod rule. ConflictsWith:&lt;/span&gt;&lt;/code&gt;`”metric_rule”, “workload_rule”<a href="#id46"><span class="problematic" id="id47">``</span></a>(list Maxitems:1)</p></li>
+<li><p><strong>pod_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project alert rule pod rule. ConflictsWith:&lt;/span&gt;&lt;/code&gt;`”metric_rule”, “workload_rule”<a href="#id26"><span class="problematic" id="id27">``</span></a>(list Maxitems:1)</p></li>
 <li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project id where create project alert rule (string)</p></li>
 <li><p><strong>repeat_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The project alert rule wait seconds. Default: <cite>3600</cite> (int)</p></li>
 <li><p><strong>severity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project alert rule severity. Supported values : <cite>“critical” | “info” | “warning”</cite>. Default: <cite>critical</cite> (string)</p></li>
@@ -12834,6 +13029,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ProjectLogging">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ProjectLogging</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_target_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_json_parsing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fluentd_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kind</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_flush_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">splunk_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">syslog_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ProjectLogging" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Project Logging resource. This can be used to create Project Logging for Rancher v2 environments and retrieve their information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new rancher2 Project Logging</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">ProjectLogging</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;syslog&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;project_id&gt;&quot;</span><span class="p">,</span>
+    <span class="n">syslog_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;endpoint&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;syslog_endpoint&gt;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;udp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;severity&quot;</span><span class="p">:</span> <span class="s2">&quot;notice&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sslVerify&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13227,6 +13437,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ProjectRoleTemplateBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ProjectRoleTemplateBinding</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_principal_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_template_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_principal_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ProjectRoleTemplateBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Project Role Template Binding resource. This can be used to create Project Role Template Bindings for Rancher v2 environments and retrieve their information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new rancher2 Project Role Template Binding</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">ProjectRoleTemplateBinding</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;project_id&gt;&quot;</span><span class="p">,</span>
+    <span class="n">role_template_id</span><span class="o">=</span><span class="s2">&quot;&lt;role_template_id&gt;&quot;</span><span class="p">,</span>
+    <span class="n">user_id</span><span class="o">=</span><span class="s2">&quot;&lt;user_id&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13425,27 +13645,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_rancher2.Registry">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Registry</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Registry" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Rancher v2 Registry resource. This can be used to create docker registries for Rancher v2 environments and retrieve their information.</p>
-<p>Depending of the availability, there are 2 types of Rancher v2 docker registries:</p>
-<ul class="simple">
-<li><p>Project registry: Available to all namespaces in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
-<li><p>Namespaced regitry: Available to just <code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
-</ul>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Annotations for Registry object (map)</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A registry description (string)</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels for Registry object (map)</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the registry (string)</p></li>
-<li><p><strong>namespace_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace id where to assign the namespaced registry (string)</p></li>
-<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project id where to assign the registry (string)</p></li>
-<li><p><strong>registries</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Registries data for registry (list)</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Registry resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] annotations: Annotations for Registry object (map)
+:param pulumi.Input[str] description: A registry description (string)
+:param pulumi.Input[dict] labels: Labels for Registry object (map)
+:param pulumi.Input[str] name: The name of the registry (string)
+:param pulumi.Input[str] namespace_id: The namespace id where to assign the namespaced registry (string)
+:param pulumi.Input[str] project_id: The project id where to assign the registry (string)
+:param pulumi.Input[list] registries: Registries data for registry (list)</p>
 <p>The <strong>registries</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Address for registry.</p></li>
@@ -13569,28 +13778,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_rancher2.RoleTempalte">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">RoleTempalte</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">administrative</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">context</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">external</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hidden</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">locked</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_template_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.RoleTempalte" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Rancher v2 Role Template resource. This can be used to create Role Template for Rancher v2 and retrieve their information.</p>
-<p><code class="docutils literal notranslate"><span class="pre">cluster</span></code> and <code class="docutils literal notranslate"><span class="pre">project</span></code> scopes are supported for role templates.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>administrative</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Administrative role template. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
-<li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Annotations for role template object (map)</p></li>
-<li><p><strong>context</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role template context. <code class="docutils literal notranslate"><span class="pre">cluster</span></code> and <code class="docutils literal notranslate"><span class="pre">project</span></code> values are supported. Default: <code class="docutils literal notranslate"><span class="pre">cluster</span></code> (string)</p></li>
-<li><p><strong>default_role</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Default role template for new created cluster or project. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role template description (string)</p></li>
-<li><p><strong>external</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – External role template. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
-<li><p><strong>hidden</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Hidden role template. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels for role template object (map)</p></li>
-<li><p><strong>locked</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Locked role template. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role template name (string)</p></li>
-<li><p><strong>role_template_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Inherit role template IDs (list)</p></li>
-<li><p><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Role template policy rules (list)</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a RoleTempalte resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] administrative: Administrative role template. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)
+:param pulumi.Input[dict] annotations: Annotations for role template object (map)
+:param pulumi.Input[str] context: Role template context. <code class="docutils literal notranslate"><span class="pre">cluster</span></code> and <code class="docutils literal notranslate"><span class="pre">project</span></code> values are supported. Default: <code class="docutils literal notranslate"><span class="pre">cluster</span></code> (string)
+:param pulumi.Input[bool] default_role: Default role template for new created cluster or project. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)
+:param pulumi.Input[str] description: Role template description (string)
+:param pulumi.Input[bool] external: External role template. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)
+:param pulumi.Input[bool] hidden: Hidden role template. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)
+:param pulumi.Input[dict] labels: Labels for role template object (map)
+:param pulumi.Input[bool] locked: Locked role template. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)
+:param pulumi.Input[str] name: Role template name (string)
+:param pulumi.Input[list] role_template_ids: Inherit role template IDs (list)
+:param pulumi.Input[list] rules: Role template policy rules (list)</p>
 <p>The <strong>rules</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">apiGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Policy rule api groups (list)</p></li>
@@ -13892,6 +14094,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Rancher v2 Setting resource. This can be used to create settings for Rancher v2 environments and retrieve their information.</p>
 <p>On create, if setting already exists, provider will import it and update its value.</p>
 <p>On destroy, if setting is a system setting like <code class="docutils literal notranslate"><span class="pre">server-url</span></code>, provider’ll not delete it from Rancher, it’ll just update setting value to default and remove it from tfstate.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new rancher2 Setting</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">Setting</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;&lt;VALUE&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13996,6 +14205,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>scoped: valid for just a specific cluster (<code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> should be provided).</p></li>
 </ul>
 <p>Tokens can’t be updated once created. Any diff in token data will recreate the token. If any token expire, Rancher2 provider will generate a diff to regenerate it.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new rancher2 Token scoped</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">Token</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">cluster_id</span><span class="o">=</span><span class="s2">&quot;&lt;cluster-id&gt;&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;foo token&quot;</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">1200</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14160,6 +14379,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 User resource. This can be used to create Users for Rancher v2 environments and retrieve their information.</p>
 <p>When a Rancher User is created, it doesn’t have a global role binding. At least, <code class="docutils literal notranslate"><span class="pre">user-base</span></code> global role binding in needed in order to enable user login.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new rancher2 User</span>
+<span class="n">foo_user</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;fooUser&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;changeme&quot;</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+<span class="c1"># Create a new rancher2 global_role_binding for User</span>
+<span class="n">foo_global_role_binding</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">GlobalRoleBinding</span><span class="p">(</span><span class="s2">&quot;fooGlobalRoleBinding&quot;</span><span class="p">,</span>
+    <span class="n">global_role_id</span><span class="o">=</span><span class="s2">&quot;user-base&quot;</span><span class="p">,</span>
+    <span class="n">user_id</span><span class="o">=</span><span class="n">foo_user</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14273,6 +14506,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_app">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_app</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_namespace</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_app" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 app.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">rancher2</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_app</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;project_id&gt;&quot;</span><span class="p">,</span>
+    <span class="n">target_namespace</span><span class="o">=</span><span class="s2">&quot;&lt;namespace_name&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14289,6 +14530,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_catalog">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_catalog</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_catalog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 catalog.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">library</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_catalog</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;catalog&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14308,6 +14555,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>Project certificate: Available to all namespaces in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 <li><p>Namespaced certificate: Available to just <code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_certificate</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;&lt;name&gt;&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;project_id&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14323,6 +14577,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_cloud_credential">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cloud_credential</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cloud_credential" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 Cloud Credential.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_cloud_credential</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The Cloud Credential name.</p>
@@ -14334,6 +14594,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_cluster">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 cluster.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo_custom</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_cluster</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo-custom&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the Cluster (string)</p>
@@ -14345,6 +14611,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_cluster_alert_group">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cluster_alert_group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cluster_alert_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 cluster alert group.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_cluster_alert_group</span><span class="p">(</span><span class="n">cluster_id</span><span class="o">=</span><span class="s2">&quot;&lt;cluster_id&gt;&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;&lt;cluster_alert_group_name&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14359,6 +14632,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_cluster_alter_rule">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cluster_alter_rule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cluster_alter_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 cluster alert rule.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_cluster_alter_rule</span><span class="p">(</span><span class="n">cluster_id</span><span class="o">=</span><span class="s2">&quot;&lt;cluster_id&gt;&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;&lt;cluster_alert_rule_name&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14374,6 +14654,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_cluster_driver">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cluster_driver</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cluster_driver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 Cluster Driver resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_cluster_driver</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14388,6 +14674,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_cluster_logging">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cluster_logging</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cluster_logging" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 Cluster Logging.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_cluster_logging</span><span class="p">(</span><span class="n">cluster_id</span><span class="o">=</span><span class="s2">&quot;&lt;cluster_id&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>cluster_id</strong> (<em>str</em>) – The cluster id to configure logging (string)</p>
@@ -14399,6 +14691,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_cluster_role_template_binding">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cluster_role_template_binding</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_template_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cluster_role_template_binding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 cluster role template binding.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_cluster_role_template_binding</span><span class="p">(</span><span class="n">cluster_id</span><span class="o">=</span><span class="s2">&quot;foo_id&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14421,6 +14720,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cluster_template</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cluster_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 cluster template.</p>
 <p>Cluster Templates are available from Rancher v2.3.x and above.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_cluster_template</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14436,6 +14741,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_etcd_backup">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_etcd_backup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_etcd_backup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 etcd backup.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_etcd_backup</span><span class="p">(</span><span class="n">cluster_id</span><span class="o">=</span><span class="s2">&quot;&lt;CLUSTER_ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14450,6 +14762,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_global_role_binding">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_global_role_binding</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">global_role_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_global_role_binding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 global role binding.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_global_role_binding</span><span class="p">(</span><span class="n">global_role_id</span><span class="o">=</span><span class="s2">&quot;foo_id&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14464,6 +14783,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_multi_cluster_app">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_multi_cluster_app</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_multi_cluster_app" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 multi cluster app.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_multi_cluster_app</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The multi cluster app name (string)</p>
@@ -14475,6 +14800,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_namespace">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_namespace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_namespace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 namespace.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_namespace</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">rancher2_cluster</span><span class="p">[</span><span class="s2">&quot;foo-custom&quot;</span><span class="p">][</span><span class="s2">&quot;default_project_id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14489,6 +14821,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_node_driver">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_node_driver</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_node_driver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 Node Driver resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_node_driver</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14503,6 +14841,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_node_pool">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_node_pool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_template_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_node_pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 Node Pool resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_node_pool</span><span class="p">(</span><span class="n">cluster_id</span><span class="o">=</span><span class="n">rancher2_cluster</span><span class="p">[</span><span class="s2">&quot;foo-custom&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14518,6 +14863,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_node_template">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_node_template</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_internal_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_node_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 Node Template resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_node_template</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14532,6 +14883,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_notifier">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_notifier</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_notifier" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 notifier.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_notifier</span><span class="p">(</span><span class="n">cluster_id</span><span class="o">=</span><span class="s2">&quot;&lt;cluster_id&gt;&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14546,6 +14904,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_pod_security_policy_template">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_pod_security_policy_template</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">allow_privilege_escalation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_csi_drivers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_flex_volumes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_host_paths</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_proc_mount_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_unsafe_sysctls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_add_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_allow_privilege_escalation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">forbidden_sysctls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fs_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_ipc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_pid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">privileged</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_only_root_filesystem</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">required_drop_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">run_as_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">run_as_user</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runtime_class</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">se_linux</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">supplemental_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volumes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_pod_security_policy_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 PodSecurityPolicyTemplate.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_pod_security_policy_template</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14674,6 +15038,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_project_alert_group">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_project_alert_group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_project_alert_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 project alert group.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_project_alert_group</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;&lt;project_alert_group_name&gt;&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;project_id&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14688,6 +15059,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_project_alert_rule">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_project_alert_rule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_project_alert_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 project alert rule.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_project_alert_rule</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;&lt;project_alert_rule_name&gt;&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;project_id&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14703,6 +15081,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_project_logging">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_project_logging</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_project_logging" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 Project Logging.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_project_logging</span><span class="p">(</span><span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;project_id&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>project_id</strong> (<em>str</em>) – The project id to configure logging (string)</p>
@@ -14714,6 +15098,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_project_role_template_binding">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_project_role_template_binding</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_template_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_project_role_template_binding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 project role template binding.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_project_role_template_binding</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;foo_id&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14734,6 +15125,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>Project registry: Available to all namespaces in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 <li><p>Namespaced registry: Available to just <code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_registry</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;&lt;name&gt;&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;project_id&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14749,7 +15147,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_role_tempalte">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_role_tempalte</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">context</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_role_tempalte" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 role template resource.</p>
-<p>Deprecated: rancher2.getRoleTempalte has been deprecated in favour of rancher2.getRoleTemplate</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_role_template</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Deprecated: rancher2.index.getRoleTempalte has been deprecated in favour of rancher2.index.getRoleTemplate</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14764,6 +15168,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_role_template">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_role_template</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">context</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_role_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 role template resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_role_template</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14783,6 +15193,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>Project secret: Available to all namespaces in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 <li><p>Namespaced secret: Available to just <code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_secret</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;&lt;name&gt;&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;project_id&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14798,6 +15215,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_setting">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_setting</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_setting" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 setting.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">server_image</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_setting</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;server-image&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The setting name.</p>
@@ -14809,6 +15232,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_user">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_user</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">is_external</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_user" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 user</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

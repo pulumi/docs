@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+foo = rancher2.get_cluster_alter_rule(cluster_id="<cluster_id>",
+    name="<cluster_alert_rule_name>")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -30,7 +30,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+# Create a new rancher2 Cloud Credential
+foo = rancher2.CloudCredential("foo",
+    amazonec2_credential_config={
+        "accessKey": "<AWS_ACCESS_KEY>",
+        "secretKey": "<AWS_SECRET_KEY>",
+    },
+    description="foo test")
+```
 {{% /example %}}
 
 {{% example typescript %}}

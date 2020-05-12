@@ -28,7 +28,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+# Create a new Rancher2 Cluster Logging
+foo = rancher2.ClusterLogging("foo",
+    cluster_id="<cluster_id>",
+    kind="syslog",
+    syslog_config={
+        "endpoint": "<syslog_endpoint>",
+        "protocol": "udp",
+        "severity": "notice",
+        "sslVerify": False,
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}

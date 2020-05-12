@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+rancher2 = rancher2.get_app(name="foo",
+    project_id="<project_id>",
+    target_namespace="<namespace_name>")
+```
 {{% /example %}}
 
 {{% example typescript %}}

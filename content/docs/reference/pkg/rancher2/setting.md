@@ -32,7 +32,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+# Create a new rancher2 Setting
+foo = rancher2.Setting("foo", value="<VALUE>")
+```
 {{% /example %}}
 
 {{% example typescript %}}

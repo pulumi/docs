@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+foo = rancher2.get_cluster_role_template_binding(cluster_id="foo_id",
+    name="foo")
+```
 {{% /example %}}
 
 {{% example typescript %}}
