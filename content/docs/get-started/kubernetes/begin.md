@@ -4,6 +4,8 @@ h1: Before you begin
 linktitle: Before you begin
 meta_desc: This page provides an overview on how to get started with Pulumi when starting an Kubernetes project.
 weight: 10000
+block_external_search_index: true
+exclude_from_pulumi_search_index: true
 
 aliases: ["/docs/quickstart/kubernetes/begin/"]
 ---
