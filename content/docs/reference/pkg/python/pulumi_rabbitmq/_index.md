@@ -18,6 +18,39 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rabbitmq.</code><code class="sig-name descname">Binding</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arguments</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">routing_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vhost</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rabbitmq.Binding" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Binding</span></code> resource creates and manages a binding relationship
 between a queue an exchange.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rabbitmq</span> <span class="k">as</span> <span class="nn">rabbitmq</span>
+
+<span class="n">test_v_host</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">VHost</span><span class="p">(</span><span class="s2">&quot;testVHost&quot;</span><span class="p">)</span>
+<span class="n">guest</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">Permissions</span><span class="p">(</span><span class="s2">&quot;guest&quot;</span><span class="p">,</span>
+    <span class="n">permissions</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;configure&quot;</span><span class="p">:</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;read&quot;</span><span class="p">:</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;write&quot;</span><span class="p">:</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">user</span><span class="o">=</span><span class="s2">&quot;guest&quot;</span><span class="p">,</span>
+    <span class="n">vhost</span><span class="o">=</span><span class="n">test_v_host</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">test_exchange</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">Exchange</span><span class="p">(</span><span class="s2">&quot;testExchange&quot;</span><span class="p">,</span>
+    <span class="n">settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;autoDelete&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;durable&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;fanout&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vhost</span><span class="o">=</span><span class="n">guest</span><span class="o">.</span><span class="n">vhost</span><span class="p">)</span>
+<span class="n">test_queue</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">Queue</span><span class="p">(</span><span class="s2">&quot;testQueue&quot;</span><span class="p">,</span>
+    <span class="n">settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;autoDelete&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;durable&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vhost</span><span class="o">=</span><span class="n">guest</span><span class="o">.</span><span class="n">vhost</span><span class="p">)</span>
+<span class="n">test_binding</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">Binding</span><span class="p">(</span><span class="s2">&quot;testBinding&quot;</span><span class="p">,</span>
+    <span class="n">destination</span><span class="o">=</span><span class="n">test_queue</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">destination_type</span><span class="o">=</span><span class="s2">&quot;queue&quot;</span><span class="p">,</span>
+    <span class="n">routing_key</span><span class="o">=</span><span class="s2">&quot;#&quot;</span><span class="p">,</span>
+    <span class="n">source</span><span class="o">=</span><span class="n">test_exchange</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">vhost</span><span class="o">=</span><span class="n">test_v_host</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -139,6 +172,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rabbitmq.Exchange">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rabbitmq.</code><code class="sig-name descname">Exchange</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vhost</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rabbitmq.Exchange" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Exchange</span></code> resource creates and manages an exchange.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rabbitmq</span> <span class="k">as</span> <span class="nn">rabbitmq</span>
+
+<span class="n">test_v_host</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">VHost</span><span class="p">(</span><span class="s2">&quot;testVHost&quot;</span><span class="p">)</span>
+<span class="n">guest</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">Permissions</span><span class="p">(</span><span class="s2">&quot;guest&quot;</span><span class="p">,</span>
+    <span class="n">permissions</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;configure&quot;</span><span class="p">:</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;read&quot;</span><span class="p">:</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;write&quot;</span><span class="p">:</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">user</span><span class="o">=</span><span class="s2">&quot;guest&quot;</span><span class="p">,</span>
+    <span class="n">vhost</span><span class="o">=</span><span class="n">test_v_host</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">test_exchange</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">Exchange</span><span class="p">(</span><span class="s2">&quot;testExchange&quot;</span><span class="p">,</span>
+    <span class="n">settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;autoDelete&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;durable&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;fanout&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vhost</span><span class="o">=</span><span class="n">guest</span><span class="o">.</span><span class="n">vhost</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -259,6 +313,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rabbitmq.</code><code class="sig-name descname">Permissions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vhost</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rabbitmq.Permissions" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Permissions</span></code> resource creates and manages a user’s set of
 permissions.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rabbitmq</span> <span class="k">as</span> <span class="nn">rabbitmq</span>
+
+<span class="n">test_v_host</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">VHost</span><span class="p">(</span><span class="s2">&quot;testVHost&quot;</span><span class="p">)</span>
+<span class="n">test_user</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;testUser&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;administrator&quot;</span><span class="p">])</span>
+<span class="n">test_permissions</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">Permissions</span><span class="p">(</span><span class="s2">&quot;testPermissions&quot;</span><span class="p">,</span>
+    <span class="n">permissions</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;configure&quot;</span><span class="p">:</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;read&quot;</span><span class="p">:</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;write&quot;</span><span class="p">:</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">user</span><span class="o">=</span><span class="n">test_user</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">vhost</span><span class="o">=</span><span class="n">test_v_host</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -370,6 +441,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rabbitmq.</code><code class="sig-name descname">Policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vhost</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rabbitmq.Policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Policy</span></code> resource creates and manages policies for exchanges
 and queues.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rabbitmq</span> <span class="k">as</span> <span class="nn">rabbitmq</span>
+
+<span class="n">test_v_host</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">VHost</span><span class="p">(</span><span class="s2">&quot;testVHost&quot;</span><span class="p">)</span>
+<span class="n">guest</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">Permissions</span><span class="p">(</span><span class="s2">&quot;guest&quot;</span><span class="p">,</span>
+    <span class="n">permissions</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;configure&quot;</span><span class="p">:</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;read&quot;</span><span class="p">:</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;write&quot;</span><span class="p">:</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">user</span><span class="o">=</span><span class="s2">&quot;guest&quot;</span><span class="p">,</span>
+    <span class="n">vhost</span><span class="o">=</span><span class="n">test_v_host</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">test_policy</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;testPolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;applyTo&quot;</span><span class="p">:</span> <span class="s2">&quot;all&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;definition&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;ha-mode&quot;</span><span class="p">:</span> <span class="s2">&quot;all&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;pattern&quot;</span><span class="p">:</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vhost</span><span class="o">=</span><span class="n">guest</span><span class="o">.</span><span class="n">vhost</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -539,6 +634,55 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rabbitmq.Queue">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rabbitmq.</code><code class="sig-name descname">Queue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vhost</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rabbitmq.Queue" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Queue</span></code> resource creates and manages a queue.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rabbitmq</span> <span class="k">as</span> <span class="nn">rabbitmq</span>
+
+<span class="n">test_v_host</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">VHost</span><span class="p">(</span><span class="s2">&quot;testVHost&quot;</span><span class="p">)</span>
+<span class="n">guest</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">Permissions</span><span class="p">(</span><span class="s2">&quot;guest&quot;</span><span class="p">,</span>
+    <span class="n">permissions</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;configure&quot;</span><span class="p">:</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;read&quot;</span><span class="p">:</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;write&quot;</span><span class="p">:</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">user</span><span class="o">=</span><span class="s2">&quot;guest&quot;</span><span class="p">,</span>
+    <span class="n">vhost</span><span class="o">=</span><span class="n">test_v_host</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">test_queue</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">Queue</span><span class="p">(</span><span class="s2">&quot;testQueue&quot;</span><span class="p">,</span>
+    <span class="n">settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;autoDelete&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;durable&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vhost</span><span class="o">=</span><span class="n">guest</span><span class="o">.</span><span class="n">vhost</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rabbitmq</span> <span class="k">as</span> <span class="nn">rabbitmq</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">arguments</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;arguments&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">arguments</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">arguments</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;x-message-ttl&quot;: 5000</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">test_v_host</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">VHost</span><span class="p">(</span><span class="s2">&quot;testVHost&quot;</span><span class="p">)</span>
+<span class="n">guest</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">Permissions</span><span class="p">(</span><span class="s2">&quot;guest&quot;</span><span class="p">,</span>
+    <span class="n">permissions</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;configure&quot;</span><span class="p">:</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;read&quot;</span><span class="p">:</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;write&quot;</span><span class="p">:</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">user</span><span class="o">=</span><span class="s2">&quot;guest&quot;</span><span class="p">,</span>
+    <span class="n">vhost</span><span class="o">=</span><span class="n">test_v_host</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">test_queue</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">Queue</span><span class="p">(</span><span class="s2">&quot;testQueue&quot;</span><span class="p">,</span>
+    <span class="n">settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;argumentsJson&quot;</span><span class="p">:</span> <span class="n">arguments</span><span class="p">,</span>
+        <span class="s2">&quot;autoDelete&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;durable&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vhost</span><span class="o">=</span><span class="n">guest</span><span class="o">.</span><span class="n">vhost</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -671,6 +815,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rabbitmq.</code><code class="sig-name descname">TopicPermissions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vhost</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rabbitmq.TopicPermissions" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.TopicPermissions</span></code> resource creates and manages a user’s set of
 topic permissions.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rabbitmq</span> <span class="k">as</span> <span class="nn">rabbitmq</span>
+
+<span class="n">test_v_host</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">VHost</span><span class="p">(</span><span class="s2">&quot;testVHost&quot;</span><span class="p">)</span>
+<span class="n">test_user</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;testUser&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;administrator&quot;</span><span class="p">])</span>
+<span class="n">test_topic_permissions</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">TopicPermissions</span><span class="p">(</span><span class="s2">&quot;testTopicPermissions&quot;</span><span class="p">,</span>
+    <span class="n">permissions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;exchange&quot;</span><span class="p">:</span> <span class="s2">&quot;amq.topic&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;read&quot;</span><span class="p">:</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;write&quot;</span><span class="p">:</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">user</span><span class="o">=</span><span class="n">test_user</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">vhost</span><span class="o">=</span><span class="n">test_v_host</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -785,6 +946,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> All arguments including username and password will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rabbitmq</span> <span class="k">as</span> <span class="nn">rabbitmq</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;administrator&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;management&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -881,6 +1053,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rabbitmq.VHost">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rabbitmq.</code><code class="sig-name descname">VHost</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rabbitmq.VHost" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.VHost</span></code> resource creates and manages a vhost.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rabbitmq</span> <span class="k">as</span> <span class="nn">rabbitmq</span>
+
+<span class="n">my_vhost</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">VHost</span><span class="p">(</span><span class="s2">&quot;myVhost&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
