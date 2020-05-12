@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gitlab as gitlab
+
+foo = gitlab.get_group(group_id=123)
+```
 {{% /example %}}
 
 {{% example typescript %}}

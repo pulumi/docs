@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gitlab as gitlab
+
+example = gitlab.PipelineTrigger("example",
+    description="Used to trigger builds",
+    project="12345")
+```
 {{% /example %}}
 
 {{% example typescript %}}

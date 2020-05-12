@@ -31,7 +31,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gitlab as gitlab
+
+fixme = gitlab.GroupLabel("fixme",
+    color="#ffcc00",
+    description="issue with failing tests",
+    group="example")
+```
 {{% /example %}}
 
 {{% example typescript %}}

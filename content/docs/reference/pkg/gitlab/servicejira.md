@@ -28,7 +28,19 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gitlab as gitlab
+
+awesome_project = gitlab.Project("awesomeProject",
+    description="My awesome project.",
+    visibility_level="public")
+jira = gitlab.ServiceJira("jira",
+    password="mypass",
+    project=awesome_project.id,
+    url="https://jira.example.com",
+    username="user")
+```
 {{% /example %}}
 
 {{% example typescript %}}

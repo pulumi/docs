@@ -31,7 +31,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gitlab as gitlab
+
+example = gitlab.ProjectHook("example",
+    merge_requests_events=True,
+    project="example/hooked",
+    url="https://example.com/hook/example")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -28,7 +28,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gitlab as gitlab
+
+test = gitlab.GroupMembership("test",
+    access_level="guest",
+    expires_at="2020-12-31",
+    group_id="12345",
+    user_id=1337)
+```
 {{% /example %}}
 
 {{% example typescript %}}

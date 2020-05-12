@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gitlab as gitlab
+
+test = gitlab.ProjectMembership("test",
+    access_level="guest",
+    project_id="12345",
+    user_id=1337)
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gitlab as gitlab
+
+test = gitlab.ProjectShareGroup("test",
+    access_level="guest",
+    group_id=1337,
+    project_id="12345")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -29,7 +29,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gitlab as gitlab
+
+example = gitlab.DeployKey("example",
+    key="ssh-rsa AAAA...",
+    project="example/deploying",
+    title="Example deploy key")
+```
 {{% /example %}}
 
 {{% example typescript %}}
