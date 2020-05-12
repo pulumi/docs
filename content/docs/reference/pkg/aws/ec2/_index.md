@@ -58,6 +58,7 @@ Explore the resources and functions of the ec2 module in the AWS package.
     <li><a href="trafficmirrorfilterrule" title="TrafficMirrorFilterRule"><span class="symbol resource"></span>TrafficMirrorFilterRule</a></li>
     <li><a href="trafficmirrorsession" title="TrafficMirrorSession"><span class="symbol resource"></span>TrafficMirrorSession</a></li>
     <li><a href="trafficmirrortarget" title="TrafficMirrorTarget"><span class="symbol resource"></span>TrafficMirrorTarget</a></li>
+    <li><a href="transitgatewaypeeringattachmentaccepter" title="TransitGatewayPeeringAttachmentAccepter"><span class="symbol resource"></span>TransitGatewayPeeringAttachmentAccepter</a></li>
     <li><a href="volumeattachment" title="VolumeAttachment"><span class="symbol resource"></span>VolumeAttachment</a></li>
     <li><a href="vpc" title="Vpc"><span class="symbol resource"></span>Vpc</a></li>
     <li><a href="vpcdhcpoptions" title="VpcDhcpOptions"><span class="symbol resource"></span>VpcDhcpOptions</a></li>
@@ -80,6 +81,8 @@ Explore the resources and functions of the ec2 module in the AWS package.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getcoippool" title="GetCoipPool"><span class="symbol function"></span>GetCoipPool</a></li>
+    <li><a href="getcoippools" title="GetCoipPools"><span class="symbol function"></span>GetCoipPools</a></li>
     <li><a href="getcustomergateway" title="GetCustomerGateway"><span class="symbol function"></span>GetCustomerGateway</a></li>
     <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
     <li><a href="getinstancetypeoffering" title="GetInstanceTypeOffering"><span class="symbol function"></span>GetInstanceTypeOffering</a></li>
@@ -88,6 +91,10 @@ Explore the resources and functions of the ec2 module in the AWS package.
     <li><a href="getinternetgateway" title="GetInternetGateway"><span class="symbol function"></span>GetInternetGateway</a></li>
     <li><a href="getlaunchconfiguration" title="GetLaunchConfiguration"><span class="symbol function"></span>GetLaunchConfiguration</a></li>
     <li><a href="getlaunchtemplate" title="GetLaunchTemplate"><span class="symbol function"></span>GetLaunchTemplate</a></li>
+    <li><a href="getlocalgateway" title="GetLocalGateway"><span class="symbol function"></span>GetLocalGateway</a></li>
+    <li><a href="getlocalgatewayroutetable" title="GetLocalGatewayRouteTable"><span class="symbol function"></span>GetLocalGatewayRouteTable</a></li>
+    <li><a href="getlocalgatewayroutetables" title="GetLocalGatewayRouteTables"><span class="symbol function"></span>GetLocalGatewayRouteTables</a></li>
+    <li><a href="getlocalgateways" title="GetLocalGateways"><span class="symbol function"></span>GetLocalGateways</a></li>
     <li><a href="getnatgateway" title="GetNatGateway"><span class="symbol function"></span>GetNatGateway</a></li>
     <li><a href="getnetworkacls" title="GetNetworkAcls"><span class="symbol function"></span>GetNetworkAcls</a></li>
     <li><a href="getnetworkinterface" title="GetNetworkInterface"><span class="symbol function"></span>GetNetworkInterface</a></li>
@@ -117,6 +124,6 @@ Explore the resources and functions of the ec2 module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.3.0</dd>
+	<dd>2.4.0+dirty</dd>
 </dl>
 

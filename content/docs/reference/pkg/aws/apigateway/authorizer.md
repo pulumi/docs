@@ -12,92 +12,9 @@ meta_desc: "Explore the Authorizer resource of the apigateway module, including 
 
 Provides an API Gateway Authorizer.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const demoRestApi = new aws.apigateway.RestApi("demo", {});
-const invocationRole = new aws.iam.Role("invocation_role", {
-    assumeRolePolicy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "sts:AssumeRole",
-      "Principal": {
-        "Service": "apigateway.amazonaws.com"
-      },
-      "Effect": "Allow",
-      "Sid": ""
-    }
-  ]
-}
-`,
-    path: "/",
-});
-const lambda = new aws.iam.Role("lambda", {
-    assumeRolePolicy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "sts:AssumeRole",
-      "Principal": {
-        "Service": "lambda.amazonaws.com"
-      },
-      "Effect": "Allow",
-      "Sid": ""
-    }
-  ]
-}
-`,
-});
-const authorizer = new aws.lambda.Function("authorizer", {
-    code: new pulumi.asset.FileArchive("lambda-function.zip"),
-    handler: "exports.example",
-    role: lambda.arn,
-});
-const demoAuthorizer = new aws.apigateway.Authorizer("demo", {
-    authorizerCredentials: invocationRole.arn,
-    authorizerUri: authorizer.invokeArn,
-    restApi: demoRestApi.id,
-});
-const invocationPolicy = new aws.iam.RolePolicy("invocation_policy", {
-    policy: pulumi.interpolate`{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "lambda:InvokeFunction",
-      "Effect": "Allow",
-      "Resource": "${authorizer.arn}"
-    }
-  ]
-}
-`,
-    role: invocationRole.id,
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a Authorizer Resource {#create}

@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ec2transitgateway.get_vpn_attachment(transit_gateway_id=aws_ec2_transit_gateway["example"]["id"],
+    vpn_connection_id=aws_vpn_connection["example"]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -53,7 +59,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+test = aws.ec2transitgateway.get_vpn_attachment(filters=[{
+    "name": "resource-id",
+    "values": ["some-resource"],
+}])
+```
 {{% /example %}}
 
 {{% example typescript %}}

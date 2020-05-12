@@ -12,9 +12,195 @@ meta_desc: "Explore the FunctionEventInvokeConfig resource of the lambda module,
 
 Manages an asynchronous invocation configuration for a Lambda Function or Alias. More information about asynchronous invocations and the configurable values can be found in the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html).
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Destination Configuration
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.lambda_.FunctionEventInvokeConfig("example",
+    function_name=aws_lambda_alias["example"]["function_name"],
+    destination_config={
+        "on_failure": {
+            "destination": aws_sqs_queue["example"]["arn"],
+        },
+        "on_success": {
+            "destination": aws_sns_topic["example"]["arn"],
+        },
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.lambda.FunctionEventInvokeConfig("example", {
+    functionName: aws_lambda_alias.example.function_name,
+    destination_config: {
+        on_failure: {
+            destination: aws_sqs_queue.example.arn,
+        },
+        on_success: {
+            destination: aws_sns_topic.example.arn,
+        },
+    },
+});
+```
+{{% /example %}}
+
+### Error Handling Configuration
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.lambda_.FunctionEventInvokeConfig("example",
+    function_name=aws_lambda_alias["example"]["function_name"],
+    maximum_event_age_in_seconds=60,
+    maximum_retry_attempts=0)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.lambda.FunctionEventInvokeConfig("example", {
+    functionName: aws_lambda_alias.example.function_name,
+    maximumEventAgeInSeconds: 60,
+    maximumRetryAttempts: 0,
+});
+```
+{{% /example %}}
+
+### Configuration for Alias Name
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.lambda_.FunctionEventInvokeConfig("example",
+    function_name=aws_lambda_alias["example"]["function_name"],
+    qualifier=aws_lambda_alias["example"]["name"])
+# ... other configuration ...
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.lambda.FunctionEventInvokeConfig("example", {
+    functionName: aws_lambda_alias.example.function_name,
+    qualifier: aws_lambda_alias.example.name,
+});
+// ... other configuration ...
+```
+{{% /example %}}
+
+### Configuration for Function Latest Unpublished Version
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.lambda_.FunctionEventInvokeConfig("example",
+    function_name=aws_lambda_function["example"]["function_name"],
+    qualifier="$LATEST")
+# ... other configuration ...
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.lambda.FunctionEventInvokeConfig("example", {
+    functionName: aws_lambda_function.example.function_name,
+    qualifier: `$LATEST`,
+});
+// ... other configuration ...
+```
+{{% /example %}}
+
+### Configuration for Function Published Version
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.lambda_.FunctionEventInvokeConfig("example",
+    function_name=aws_lambda_function["example"]["function_name"],
+    qualifier=aws_lambda_function["example"]["version"])
+# ... other configuration ...
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.lambda.FunctionEventInvokeConfig("example", {
+    functionName: aws_lambda_function.example.function_name,
+    qualifier: aws_lambda_function.example.version,
+});
+// ... other configuration ...
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FunctionEventInvokeConfig Resource {#create}

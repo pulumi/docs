@@ -42,7 +42,32 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+foo = aws.ssm.Document("foo",
+    content="""  {
+    "schemaVersion": "1.2",
+    "description": "Check ip configuration of a Linux instance.",
+    "parameters": {
+
+    },
+    "runtimeConfig": {
+      "aws:runShellScript": {
+        "properties": [
+          {
+            "id": "0.aws:runShellScript",
+            "runCommand": ["ifconfig"]
+          }
+        ]
+      }
+    }
+  }
+
+""",
+    document_type="Command")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -307,7 +332,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentpermissions">Document<wbr>Permissions<wbr>Args</a></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Additional Permissions to attach to the document. See Permissions below for details.
 {{% /md %}}</dd>
@@ -386,7 +411,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentpermissions">Document<wbr>Permissions</a></span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Additional Permissions to attach to the document. See Permissions below for details.
 {{% /md %}}</dd>
@@ -465,7 +490,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span>permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentpermissions">Document<wbr>Permissions</a></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Additional Permissions to attach to the document. See Permissions below for details.
 {{% /md %}}</dd>
@@ -544,7 +569,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span>permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentpermissions">Dict[Document<wbr>Permissions]</a></span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Additional Permissions to attach to the document. See Permissions below for details.
 {{% /md %}}</dd>
@@ -1328,7 +1353,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentpermissions">Document<wbr>Permissions<wbr>Args</a></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Additional Permissions to attach to the document. See Permissions below for details.
 {{% /md %}}</dd>
@@ -1514,7 +1539,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentpermissions">Document<wbr>Permissions</a></span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Additional Permissions to attach to the document. See Permissions below for details.
 {{% /md %}}</dd>
@@ -1700,7 +1725,7 @@ The following state arguments are supported:
             title="Optional">
         <span>permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentpermissions">Document<wbr>Permissions</a></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Additional Permissions to attach to the document. See Permissions below for details.
 {{% /md %}}</dd>
@@ -1886,7 +1911,7 @@ The following state arguments are supported:
             title="Optional">
         <span>permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentpermissions">Dict[Document<wbr>Permissions]</a></span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Additional Permissions to attach to the document. See Permissions below for details.
 {{% /md %}}</dd>
@@ -2274,116 +2299,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="documentpermissions">Document<wbr>Permissions</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DocumentPermissions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DocumentPermissions">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#DocumentPermissionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#DocumentPermissionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.DocumentPermissionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.DocumentPermissions.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span>Account<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span>Account<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span>account<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span>account_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -23,8 +23,7 @@ a conflict of rule settings and will overwrite rules.
 
 > **NOTE:** Due to [AWS Lambda improved VPC networking changes that began deploying in September 2019](https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/), security groups associated with Lambda Functions can take up to 45 minutes to successfully delete.
 
-{{% examples %}}
-{{% /examples %}}
+
 ## Usage with prefix list IDs
 
 Prefix list IDs are managed by AWS internally. Prefix list IDs
@@ -38,7 +37,83 @@ import * as aws from "@pulumi/aws";
 // ...
 const myEndpoint = new aws.ec2.VpcEndpoint("my_endpoint", {});
 ```
+```python
+import pulumi
+import pulumi_aws as aws
 
+# ...
+my_endpoint = aws.ec2.VpcEndpoint("myEndpoint")
+```
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+allow_tls = aws.ec2.SecurityGroup("allowTls",
+    description="Allow TLS inbound traffic",
+    vpc_id=aws_vpc["main"]["id"],
+    ingress=[{
+        "description": "TLS from VPC",
+        "fromPort": 443,
+        "toPort": 443,
+        "protocol": "tcp",
+        "cidrBlocks": aws_vpc["main"]["cidr_block"],
+    }],
+    egress=[{
+        "fromPort": 0,
+        "toPort": 0,
+        "protocol": "-1",
+        "cidrBlocks": ["0.0.0.0/0"],
+    }],
+    tags={
+        "Name": "allow_tls",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const allowTls = new aws.ec2.SecurityGroup("allowTls", {
+    description: "Allow TLS inbound traffic",
+    vpcId: aws_vpc.main.id,
+    ingress: [{
+        description: "TLS from VPC",
+        fromPort: 443,
+        toPort: 443,
+        protocol: "tcp",
+        cidrBlocks: aws_vpc.main.cidr_block,
+    }],
+    egress: [{
+        fromPort: 0,
+        toPort: 0,
+        protocol: "-1",
+        cidrBlocks: ["0.0.0.0/0"],
+    }],
+    tags: {
+        Name: "allow_tls",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SecurityGroup Resource {#create}

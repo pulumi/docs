@@ -32,7 +32,33 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+primary = aws.ec2.Vpc("primary",
+    cidr_block="10.6.0.0/16",
+    enable_dns_hostnames=True,
+    enable_dns_support=True)
+secondary_vpc = aws.ec2.Vpc("secondaryVpc",
+    cidr_block="10.7.0.0/16",
+    enable_dns_hostnames=True,
+    enable_dns_support=True)
+example = aws.route53.Zone("example",
+    lifecycle={
+        "ignoreChanges": [
+            "vpcId",
+            "vpcRegion",
+            "vpcs",
+        ],
+    },
+    vpcs=[{
+        "vpcId": primary.id,
+    }])
+secondary_zone_association = aws.route53.ZoneAssociation("secondaryZoneAssociation",
+    vpc_id=secondary_vpc.id,
+    zone_id=example.zone_id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

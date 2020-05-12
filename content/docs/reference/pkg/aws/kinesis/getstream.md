@@ -31,7 +31,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+stream = aws.kinesis.get_stream(name="stream-name")
+```
 {{% /example %}}
 
 {{% example typescript %}}

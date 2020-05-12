@@ -40,6 +40,30 @@ const userUpdates = new aws.sns.Topic("user_updates", {
 `,
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+user_updates = aws.sns.Topic("userUpdates", delivery_policy="""{
+  "http": {
+    "defaultHealthyRetryPolicy": {
+      "minDelayTarget": 20,
+      "maxDelayTarget": 20,
+      "numRetries": 3,
+      "numMaxDelayRetries": 0,
+      "numNoDelayRetries": 0,
+      "numMinDelayRetries": 0,
+      "backoffFunction": "linear"
+    },
+    "disableSubscriptionOverrides": false,
+    "defaultThrottlePolicy": {
+      "maxReceivesPerSecond": 1
+    }
+  }
+}
+
+""")
+```
 
 ## Example with Server-side encryption (SSE)
 
@@ -50,6 +74,12 @@ import * as aws from "@pulumi/aws";
 const userUpdates = new aws.sns.Topic("user_updates", {
     kmsMasterKeyId: "alias/aws/sns",
 });
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+user_updates = aws.sns.Topic("userUpdates", kms_master_key_id="alias/aws/sns")
 ```
 
 ## Message Delivery Status Arguments
@@ -70,7 +100,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+user_updates = aws.sns.Topic("userUpdates")
+```
 {{% /example %}}
 
 {{% example typescript %}}

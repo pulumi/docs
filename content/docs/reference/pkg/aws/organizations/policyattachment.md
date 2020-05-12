@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+account = aws.organizations.PolicyAttachment("account",
+    policy_id=aws_organizations_policy["example"]["id"],
+    target_id="123456789012")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -53,7 +60,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+root = aws.organizations.PolicyAttachment("root",
+    policy_id=aws_organizations_policy["example"]["id"],
+    target_id=aws_organizations_organization["example"]["roots"][0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -78,7 +92,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+unit = aws.organizations.PolicyAttachment("unit",
+    policy_id=aws_organizations_policy["example"]["id"],
+    target_id=aws_organizations_organizational_unit["example"]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -31,7 +31,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+app = aws.pinpoint.App("app")
+apns_sandbox = aws.pinpoint.ApnsSandboxChannel("apnsSandbox",
+    application_id=app.application_id,
+    certificate=(lambda path: open(path).read())("./certificate.pem"),
+    private_key=(lambda path: open(path).read())("./private_key.key"))
+```
 {{% /example %}}
 
 {{% example typescript %}}

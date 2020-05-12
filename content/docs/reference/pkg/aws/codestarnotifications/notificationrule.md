@@ -12,9 +12,82 @@ meta_desc: "Explore the NotificationRule resource of the codestarnotifications m
 
 Provides a CodeStar Notifications Rule.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+code = aws.codecommit.Repository("code", repository_name="example-code-repo")
+notif = aws.sns.Topic("notif")
+notif_access = aws.iam.get_policy_document(statement=[{
+    "actions": ["sns:Publish"],
+    "principals": [{
+        "type": "Service",
+        "identifiers": ["codestar-notifications.amazonaws.com"],
+    }],
+    "resources": [notif.arn],
+}])
+default = aws.sns.TopicPolicy("default",
+    arn=notif.arn,
+    policy=notif_access.json)
+commits = aws.codestarnotifications.NotificationRule("commits",
+    detail_type="BASIC",
+    event_type_ids=["codecommit-repository-comments-on-commits"],
+    resource=code.arn,
+    target=[{
+        "address": notif.arn,
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const code = new aws.codecommit.Repository("code", {repositoryName: "example-code-repo"});
+const notif = new aws.sns.Topic("notif", {});
+const notifAccess = aws.iam.getPolicyDocument({
+    statement: [{
+        actions: ["sns:Publish"],
+        principals: [{
+            type: "Service",
+            identifiers: ["codestar-notifications.amazonaws.com"],
+        }],
+        resources: [notif.arn],
+    }],
+});
+const default = new aws.sns.TopicPolicy("default", {
+    arn: notif.arn,
+    policy: notifAccess.json,
+});
+const commits = new aws.codestarnotifications.NotificationRule("commits", {
+    detailType: "BASIC",
+    eventTypeIds: ["codecommit-repository-comments-on-commits"],
+    resource: code.arn,
+    target: [{
+        address: notif.arn,
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NotificationRule Resource {#create}

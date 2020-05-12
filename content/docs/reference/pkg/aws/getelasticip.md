@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+by_allocation_id = aws.get_elastic_ip(id="eipalloc-12345678")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -52,7 +57,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+by_filter = aws.get_elastic_ip(filters=[{
+    "name": "tag:Name",
+    "values": ["exampleNameTagValue"],
+}])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -79,7 +92,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+by_public_ip = aws.get_elastic_ip(public_ip="1.2.3.4")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -103,7 +121,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+by_tags = aws.get_elastic_ip(tags={
+    "Name": "exampleNameTagValue",
+})
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -353,6 +378,24 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Customer<wbr>Owned<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Owned IP.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Customer<wbr>Owned<wbr>Ipv4Pool</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of a Customer Owned IP Pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Domain</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -472,6 +515,24 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID representing the association of the address with an instance in a VPC.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Customer<wbr>Owned<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Owned IP.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Customer<wbr>Owned<wbr>Ipv4Pool</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of a Customer Owned IP Pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -599,6 +660,24 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>customer<wbr>Owned<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Owned IP.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>customer<wbr>Owned<wbr>Ipv4Pool</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of a Customer Owned IP Pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>domain</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -718,6 +797,24 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID representing the association of the address with an instance in a VPC.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>customer_<wbr>owned_<wbr>ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Owned IP.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>customer_<wbr>owned_<wbr>ipv4_<wbr>pool</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of a Customer Owned IP Pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
 {{% /md %}}</dd>
 
     <dt class="property-"

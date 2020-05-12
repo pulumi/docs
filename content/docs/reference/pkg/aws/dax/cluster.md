@@ -28,7 +28,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+bar = aws.dax.Cluster("bar",
+    cluster_name="cluster-example",
+    iam_role_arn=data["aws.iam.Role"]["example"]["arn"],
+    node_type="dax.r4.large",
+    replication_factor=1)
+```
 {{% /example %}}
 
 {{% example typescript %}}

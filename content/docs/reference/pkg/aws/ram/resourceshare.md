@@ -28,7 +28,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ram.ResourceShare("example",
+    allow_external_principals=True,
+    tags={
+        "Environment": "Production",
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}

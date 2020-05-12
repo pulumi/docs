@@ -28,7 +28,31 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+pubsub = aws.iot.Policy("pubsub", policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "iot:*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+
+""")
+cert = aws.iot.Certificate("cert",
+    active=True,
+    csr=(lambda path: open(path).read())("csr.pem"))
+att = aws.iot.PolicyAttachment("att",
+    policy=pubsub.name,
+    target=cert.arn)
+```
 {{% /example %}}
 
 {{% example typescript %}}

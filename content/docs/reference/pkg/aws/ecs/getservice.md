@@ -29,7 +29,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ecs.get_service(cluster_arn=data["aws.ecs.Cluster"]["example"]["arn"],
+    service_name="example")
+```
 {{% /example %}}
 
 {{% example typescript %}}

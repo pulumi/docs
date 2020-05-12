@@ -32,7 +32,25 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+test = aws.lb.LoadBalancer("test",
+    access_logs={
+        "bucket": aws_s3_bucket["lb_logs"]["bucket"],
+        "enabled": True,
+        "prefix": "test-lb",
+    },
+    enable_deletion_protection=True,
+    internal=False,
+    load_balancer_type="application",
+    security_groups=[aws_security_group["lb_sg"]["id"]],
+    subnets=[[__item["id"] for __item in aws_subnet["public"]]],
+    tags={
+        "Environment": "production",
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -68,7 +86,19 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+test = aws.lb.LoadBalancer("test",
+    enable_deletion_protection=True,
+    internal=False,
+    load_balancer_type="network",
+    subnets=[[__item["id"] for __item in aws_subnet["public"]]],
+    tags={
+        "Environment": "production",
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -98,7 +128,23 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.lb.LoadBalancer("example",
+    load_balancer_type="network",
+    subnet_mappings=[
+        {
+            "allocationId": aws_eip["example1"]["id"],
+            "subnetId": aws_subnet["example1"]["id"],
+        },
+        {
+            "allocationId": aws_eip["example2"]["id"],
+            "subnetId": aws_subnet["example2"]["id"],
+        },
+    ])
+```
 {{% /example %}}
 
 {{% example typescript %}}

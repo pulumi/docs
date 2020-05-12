@@ -33,7 +33,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+tftest = aws.elasticbeanstalk.Application("tftest",
+    appversion_lifecycle={
+        "deleteSourceFromS3": True,
+        "maxCount": 128,
+        "serviceRole": aws_iam_role["beanstalk_service"]["arn"],
+    },
+    description="tf-test-desc")
+```
 {{% /example %}}
 
 {{% example typescript %}}

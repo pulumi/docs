@@ -52,6 +52,31 @@ const bar = new aws.autoscaling.Group("bar", {
     minSize: 1,
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+ubuntu = aws.get_ami(filters=[
+        {
+            "name": "name",
+            "values": ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"],
+        },
+        {
+            "name": "virtualization-type",
+            "values": ["hvm"],
+        },
+    ],
+    most_recent=True,
+    owners=["099720109477"])
+as_conf = aws.ec2.LaunchConfiguration("asConf",
+    image_id=ubuntu.id,
+    instance_type="t2.micro",
+    name_prefix="lc-example-")
+bar = aws.autoscaling.Group("bar",
+    launch_configuration=as_conf.name,
+    max_size=2,
+    min_size=1)
+```
 
 With this setup this provider generates a unique name for your Launch
 Configuration and can then update the AutoScaling Group without conflict before
@@ -92,6 +117,28 @@ const asConf = new aws.ec2.LaunchConfiguration("as_conf", {
 const bar = new aws.autoscaling.Group("bar", {
     launchConfiguration: asConf.name,
 });
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+ubuntu = aws.get_ami(filters=[
+        {
+            "name": "name",
+            "values": ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"],
+        },
+        {
+            "name": "virtualization-type",
+            "values": ["hvm"],
+        },
+    ],
+    most_recent=True,
+    owners=["099720109477"])
+as_conf = aws.ec2.LaunchConfiguration("asConf",
+    image_id=ubuntu.id,
+    instance_type="m4.large",
+    spot_price="0.001")
+bar = aws.autoscaling.Group("bar", launch_configuration=as_conf.name)
 ```
 
 ## Block devices
@@ -164,7 +211,26 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+ubuntu = aws.get_ami(filters=[
+        {
+            "name": "name",
+            "values": ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"],
+        },
+        {
+            "name": "virtualization-type",
+            "values": ["hvm"],
+        },
+    ],
+    most_recent=True,
+    owners=["099720109477"])
+as_conf = aws.ec2.LaunchConfiguration("asConf",
+    image_id=ubuntu.id,
+    instance_type="t2.micro")
+```
 {{% /example %}}
 
 {{% example typescript %}}

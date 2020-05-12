@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+apns_application = aws.sns.PlatformApplication("apnsApplication",
+    platform="APNS",
+    platform_credential="<APNS PRIVATE KEY>",
+    platform_principal="<APNS CERTIFICATE>")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -54,7 +62,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+gcm_application = aws.sns.PlatformApplication("gcmApplication",
+    platform="GCM",
+    platform_credential="<GCM API KEY>")
+```
 {{% /example %}}
 
 {{% example typescript %}}

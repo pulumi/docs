@@ -14,9 +14,58 @@ Provides an ECS cluster capacity provider. More information can be found on the 
 
 > **NOTE:** The AWS API does not currently support deleting ECS cluster capacity providers. Removing this resource will only remove the state for it.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+test = aws.ecs.CapacityProvider("test", auto_scaling_group_provider={
+    "autoScalingGroupArn": aws_autoscaling_group["test"]["arn"],
+    "managedTerminationProtection": "ENABLED",
+    "managed_scaling": {
+        "maximumScalingStepSize": 1000,
+        "minimumScalingStepSize": 1,
+        "status": "ENABLED",
+        "targetCapacity": 10,
+    },
+})
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const test = new aws.ecs.CapacityProvider("test", {auto_scaling_group_provider: {
+    autoScalingGroupArn: aws_autoscaling_group.test.arn,
+    managedTerminationProtection: "ENABLED",
+    managed_scaling: {
+        maximumScalingStepSize: 1000,
+        minimumScalingStepSize: 1,
+        status: "ENABLED",
+        targetCapacity: 10,
+    },
+}});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CapacityProvider Resource {#create}

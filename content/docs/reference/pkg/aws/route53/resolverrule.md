@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+sys = aws.route53.ResolverRule("sys",
+    domain_name="subdomain.example.com",
+    rule_type="SYSTEM")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -53,7 +60,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+fwd = aws.route53.ResolverRule("fwd",
+    domain_name="example.com",
+    resolver_endpoint_id=aws_route53_resolver_endpoint["foo"]["id"],
+    rule_type="FORWARD",
+    tags={
+        "Environment": "Prod",
+    },
+    target_ips=[{
+        "ip": "123.45.67.89",
+    }])
+```
 {{% /example %}}
 
 {{% example typescript %}}

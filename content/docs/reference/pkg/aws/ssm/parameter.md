@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+foo = aws.ssm.Parameter("foo",
+    type="String",
+    value="bar")
+```
 {{% /example %}}
 
 {{% example typescript %}}

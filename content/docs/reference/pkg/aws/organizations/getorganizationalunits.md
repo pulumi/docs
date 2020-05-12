@@ -12,9 +12,44 @@ meta_desc: "Explore the GetOrganizationalUnits function of the organizations mod
 
 Get all direct child organizational units under a parent organizational unit. This only provides immediate children, not all children.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+org = aws.organizations.get_organization()
+ou = aws.organizations.get_organizational_units(parent_id=org.roots[0]["id"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const org = aws.organizations.getOrganization({});
+const ou = org.then(org => aws.organizations.getOrganizationalUnits({
+    parentId: org.roots[0].id,
+}));
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetOrganizationalUnits {#using}

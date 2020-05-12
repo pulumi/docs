@@ -25,6 +25,13 @@ import * as aws from "@pulumi/aws";
 // Create a new Lightsail Key Pair
 const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {});
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+# Create a new Lightsail Key Pair
+lg_key_pair = aws.lightsail.KeyPair("lgKeyPair")
+```
 
 ## Create new Key Pair, encrypting the private key with a PGP Key
 
@@ -35,6 +42,12 @@ import * as aws from "@pulumi/aws";
 const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {
     pgpKey: "keybase:keybaseusername",
 });
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+lg_key_pair = aws.lightsail.KeyPair("lgKeyPair", pgp_key="keybase:keybaseusername")
 ```
 
 ## Import an existing public key
@@ -47,6 +60,12 @@ import * as fs from "fs";
 const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {
     publicKey: fs.readFileSync("~/.ssh/id_rsa.pub", "utf-8"),
 });
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+lg_key_pair = aws.lightsail.KeyPair("lgKeyPair", public_key=(lambda path: open(path).read())("~/.ssh/id_rsa.pub"))
 ```
 
 

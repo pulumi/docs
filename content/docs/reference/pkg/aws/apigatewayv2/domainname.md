@@ -32,7 +32,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.apigatewayv2.DomainName("example",
+    domain_name="ws-api.example.com",
+    domain_name_configuration={
+        "certificateArn": aws_acm_certificate["example"]["arn"],
+        "endpointType": "REGIONAL",
+        "securityPolicy": "TLS_1_2",
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}

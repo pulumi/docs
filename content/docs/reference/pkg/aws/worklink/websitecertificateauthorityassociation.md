@@ -26,7 +26,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.worklink.Fleet("example")
+test = aws.worklink.WebsiteCertificateAuthorityAssociation("test",
+    certificate=(lambda path: open(path).read())("certificate.pem"),
+    fleet_arn=aws_worklink_fleet["test"]["arn"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

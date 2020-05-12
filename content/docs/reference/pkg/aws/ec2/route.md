@@ -18,8 +18,7 @@ defined in-line. At this time you cannot use a Route Table with in-line routes
 in conjunction with any Route resources. Doing so will cause
 a conflict of rule settings and will overwrite rules.
 
-{{% examples %}}
-{{% /examples %}}
+
 ## Example IPv6 Usage
 
 ```typescript
@@ -39,7 +38,59 @@ const route = new aws.ec2.Route("r", {
     routeTableId: "rtb-4fbb3ac4",
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
 
+vpc = aws.ec2.Vpc("vpc",
+    assign_generated_ipv6_cidr_block=True,
+    cidr_block="10.1.0.0/16")
+egress = aws.ec2.EgressOnlyInternetGateway("egress", vpc_id=vpc.id)
+route = aws.ec2.Route("route",
+    destination_ipv6_cidr_block="::/0",
+    egress_only_gateway_id=egress.id,
+    route_table_id="rtb-4fbb3ac4")
+```
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+route = aws.ec2.Route("route",
+    route_table_id="rtb-4fbb3ac4",
+    destination_cidr_block="10.0.1.0/22",
+    vpc_peering_connection_id="pcx-45ff3dc1")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const route = new aws.ec2.Route("route", {
+    routeTableId: "rtb-4fbb3ac4",
+    destinationCidrBlock: "10.0.1.0/22",
+    vpcPeeringConnectionId: "pcx-45ff3dc1",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Route Resource {#create}

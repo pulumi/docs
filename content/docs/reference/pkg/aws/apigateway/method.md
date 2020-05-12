@@ -47,6 +47,32 @@ const any = new aws.apigateway.Method("any", {
     restApi: thisRestApi.id,
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+config = pulumi.Config()
+cognito_user_pool_name = config.require_object("cognitoUserPoolName")
+this_user_pools = aws.cognito.get_user_pools(name=cognito_user_pool_name)
+this_rest_api = aws.apigateway.RestApi("thisRestApi")
+this_resource = aws.apigateway.Resource("thisResource",
+    parent_id=this_rest_api.root_resource_id,
+    path_part="{proxy+}",
+    rest_api=this_rest_api.id)
+this_authorizer = aws.apigateway.Authorizer("thisAuthorizer",
+    provider_arns=this_user_pools.arns,
+    rest_api=this_rest_api.id,
+    type="COGNITO_USER_POOLS")
+any = aws.apigateway.Method("any",
+    authorization="COGNITO_USER_POOLS",
+    authorizer_id=this_authorizer.id,
+    http_method="ANY",
+    request_parameters={
+        "method.request.path.proxy": True,
+    },
+    resource_id=this_resource.id,
+    rest_api=this_rest_api.id)
+```
 
 {{% examples %}}
 ## Example Usage
@@ -62,7 +88,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+my_demo_api = aws.apigateway.RestApi("myDemoAPI", description="This is my API for demonstration purposes")
+my_demo_resource = aws.apigateway.Resource("myDemoResource",
+    parent_id=my_demo_api.root_resource_id,
+    path_part="mydemoresource",
+    rest_api=my_demo_api.id)
+my_demo_method = aws.apigateway.Method("myDemoMethod",
+    authorization="NONE",
+    http_method="GET",
+    resource_id=my_demo_resource.id,
+    rest_api=my_demo_api.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

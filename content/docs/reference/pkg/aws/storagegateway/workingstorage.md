@@ -30,7 +30,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.storagegateway.WorkingStorage("example",
+    disk_id=data["aws.storagegateway.getLocalDisk"]["example"]["id"],
+    gateway_arn=aws_storagegateway_gateway["example"]["arn"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

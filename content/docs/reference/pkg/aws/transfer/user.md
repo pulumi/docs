@@ -61,6 +61,51 @@ const fooUser = new aws.transfer.User("foo", {
     userName: "tftestuser",
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+foo_server = aws.transfer.Server("fooServer",
+    identity_provider_type="SERVICE_MANAGED",
+    tags={
+        "NAME": "tf-acc-test-transfer-server",
+    })
+foo_role = aws.iam.Role("fooRole", assume_role_policy="""{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+		"Effect": "Allow",
+		"Principal": {
+			"Service": "transfer.amazonaws.com"
+		},
+		"Action": "sts:AssumeRole"
+		}
+	]
+}
+
+""")
+foo_role_policy = aws.iam.RolePolicy("fooRolePolicy",
+    policy="""{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "AllowFullAccesstoS3",
+			"Effect": "Allow",
+			"Action": [
+				"s3:*"
+			],
+			"Resource": "*"
+		}
+	]
+}
+
+""",
+    role=foo_role.id)
+foo_user = aws.transfer.User("fooUser",
+    role=foo_role.arn,
+    server_id=foo_server.id,
+    user_name="tftestuser")
+```
 
 
 

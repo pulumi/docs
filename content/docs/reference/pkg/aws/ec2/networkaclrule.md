@@ -18,9 +18,59 @@ defined in-line. At this time you cannot use a Network ACL with in-line rules
 in conjunction with any Network ACL Rule resources. Doing so will cause
 a conflict of rule settings and will overwrite rules.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+bar_network_acl = aws.ec2.NetworkAcl("barNetworkAcl", vpc_id=aws_vpc["foo"]["id"])
+bar_network_acl_rule = aws.ec2.NetworkAclRule("barNetworkAclRule",
+    network_acl_id=bar_network_acl.id,
+    rule_number=200,
+    egress=False,
+    protocol="tcp",
+    rule_action="allow",
+    cidr_block=aws_vpc["foo"]["cidr_block"],
+    from_port=22,
+    to_port=22)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const barNetworkAcl = new aws.ec2.NetworkAcl("barNetworkAcl", {vpcId: aws_vpc.foo.id});
+const barNetworkAclRule = new aws.ec2.NetworkAclRule("barNetworkAclRule", {
+    networkAclId: barNetworkAcl.id,
+    ruleNumber: 200,
+    egress: false,
+    protocol: "tcp",
+    ruleAction: "allow",
+    cidrBlock: aws_vpc.foo.cidr_block,
+    fromPort: 22,
+    toPort: 22,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NetworkAclRule Resource {#create}

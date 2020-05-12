@@ -232,7 +232,7 @@ The PeeringAttachment resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -284,7 +284,7 @@ The PeeringAttachment resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -336,7 +336,7 @@ The PeeringAttachment resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -388,7 +388,7 @@ The PeeringAttachment resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -610,7 +610,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -662,7 +662,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -714,7 +714,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -766,7 +766,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

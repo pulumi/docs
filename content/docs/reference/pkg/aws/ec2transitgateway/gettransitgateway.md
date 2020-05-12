@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ec2transitgateway.get_transit_gateway(filters=[{
+    "name": "options.amazon-side-asn",
+    "values": ["64512"],
+}])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -55,7 +63,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ec2transitgateway.get_transit_gateway(id="tgw-12345678")
+```
 {{% /example %}}
 
 {{% example typescript %}}

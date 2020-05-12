@@ -28,7 +28,75 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+main_identity_pool = aws.cognito.IdentityPool("mainIdentityPool",
+    allow_unauthenticated_identities=False,
+    identity_pool_name="identity pool",
+    supported_login_providers={
+        "graph.facebook.com": "7346241598935555",
+    })
+authenticated_role = aws.iam.Role("authenticatedRole", assume_role_policy=main_identity_pool.id.apply(lambda id: f"""{{
+  "Version": "2012-10-17",
+  "Statement": [
+    {{
+      "Effect": "Allow",
+      "Principal": {{
+        "Federated": "cognito-identity.amazonaws.com"
+      }},
+      "Action": "sts:AssumeRoleWithWebIdentity",
+      "Condition": {{
+        "StringEquals": {{
+          "cognito-identity.amazonaws.com:aud": "{id}"
+        }},
+        "ForAnyValue:StringLike": {{
+          "cognito-identity.amazonaws.com:amr": "authenticated"
+        }}
+      }}
+    }}
+  ]
+}}
+
+"""))
+authenticated_role_policy = aws.iam.RolePolicy("authenticatedRolePolicy",
+    policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "mobileanalytics:PutEvents",
+        "cognito-sync:*",
+        "cognito-identity:*"
+      ],
+      "Resource": [
+        "*"
+      ]
+    }
+  ]
+}
+
+""",
+    role=authenticated_role.id)
+main_identity_pool_role_attachment = aws.cognito.IdentityPoolRoleAttachment("mainIdentityPoolRoleAttachment",
+    identity_pool_id=main_identity_pool.id,
+    role_mappings=[{
+        "ambiguousRoleResolution": "AuthenticatedRole",
+        "identityProvider": "graph.facebook.com",
+        "mappingRule": [{
+            "claim": "isAdmin",
+            "matchType": "Equals",
+            "roleArn": authenticated_role.arn,
+            "value": "paid",
+        }],
+        "type": "Rules",
+    }],
+    roles={
+        "authenticated": authenticated_role.arn,
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -303,7 +371,7 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
             title="Required">
         <span>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentroles">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles<wbr>Args</a></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
 {{% /md %}}</dd>
@@ -337,7 +405,7 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
             title="Required">
         <span>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentroles">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles</a></span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
 {{% /md %}}</dd>
@@ -371,7 +439,7 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
             title="Required">
         <span>roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentroles">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles</a></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
 {{% /md %}}</dd>
@@ -405,7 +473,7 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
             title="Required">
         <span>roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentroles">Dict[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles]</a></span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
 {{% /md %}}</dd>
@@ -645,7 +713,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentroles">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles<wbr>Args</a></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
 {{% /md %}}</dd>
@@ -679,7 +747,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentroles">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles</a></span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
 {{% /md %}}</dd>
@@ -713,7 +781,7 @@ The following state arguments are supported:
             title="Optional">
         <span>roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentroles">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles</a></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
 {{% /md %}}</dd>
@@ -747,7 +815,7 @@ The following state arguments are supported:
             title="Optional">
         <span>roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentroles">Dict[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles]</a></span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
 {{% /md %}}</dd>
@@ -1139,116 +1207,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A brief string that the claim must match, for example, "paid" or "yes".
 {{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="identitypoolroleattachmentroles">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IdentityPoolRoleAttachmentRoles">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IdentityPoolRoleAttachmentRoles">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#IdentityPoolRoleAttachmentRolesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#IdentityPoolRoleAttachmentRolesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.IdentityPoolRoleAttachmentRolesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.IdentityPoolRoleAttachmentRoles.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Authenticated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Unauthenticated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Authenticated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Unauthenticated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>authenticated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>unauthenticated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>authenticated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>unauthenticated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

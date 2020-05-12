@@ -41,7 +41,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+lambda_layer = aws.lambda_.LayerVersion("lambdaLayer",
+    compatible_runtimes=["nodejs8.10"],
+    code=pulumi.FileArchive("lambda_layer_payload.zip"),
+    layer_name="lambda_layer_name")
+```
 {{% /example %}}
 
 {{% example typescript %}}

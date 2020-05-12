@@ -28,7 +28,32 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ssm.MaintenanceWindowTask("example",
+    max_concurrency=2,
+    max_errors=1,
+    priority=1,
+    service_role_arn=aws_iam_role["example"]["arn"],
+    targets=[{
+        "key": "InstanceIds",
+        "values": [aws_instance["example"]["id"]],
+    }],
+    task_arn="AWS-RestartEC2Instance",
+    task_invocation_parameters={
+        "automationParameters": {
+            "documentVersion": "$$LATEST",
+            "parameter": [{
+                "name": "InstanceId",
+                "values": [aws_instance["example"]["id"]],
+            }],
+        },
+    },
+    task_type="AUTOMATION",
+    window_id=aws_ssm_maintenance_window["example"]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -61,46 +86,6 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
 ```
 {{% /example %}}
 
-### Lambda Tasks
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.ssm.MaintenanceWindowTask("example", {
-    maxConcurrency: "2",
-    maxErrors: "1",
-    priority: 1,
-    serviceRoleArn: aws_iam_role_example.arn,
-    targets: [{
-        key: "InstanceIds",
-        values: [aws_instance_example.id],
-    }],
-    taskArn: aws_lambda_function_example.arn,
-    taskInvocationParameters: {
-        lambdaParameters: {
-            clientContext: Buffer.from("{\"key1\":\"value1\"}").toString("base64"),
-            payload: "{\"key1\":\"value1\"}",
-        },
-    },
-    taskType: "LAMBDA",
-    windowId: aws_ssm_maintenance_window_example.id,
-});
-```
-{{% /example %}}
-
 ### Run Command Tasks
 {{% example csharp %}}
 Coming soon!
@@ -111,7 +96,40 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ssm.MaintenanceWindowTask("example",
+    max_concurrency=2,
+    max_errors=1,
+    priority=1,
+    service_role_arn=aws_iam_role["example"]["arn"],
+    targets=[{
+        "key": "InstanceIds",
+        "values": [aws_instance["example"]["id"]],
+    }],
+    task_arn="AWS-RunShellScript",
+    task_invocation_parameters={
+        "runCommandParameters": {
+            "notificationConfig": {
+                "notificationArn": aws_sns_topic["example"]["arn"],
+                "notificationEvents": ["All"],
+                "notificationType": "Command",
+            },
+            "outputS3Bucket": aws_s3_bucket["example"]["bucket"],
+            "outputS3KeyPrefix": "output",
+            "parameter": [{
+                "name": "commands",
+                "values": ["date"],
+            }],
+            "serviceRoleArn": aws_iam_role["example"]["arn"],
+            "timeoutSeconds": 600,
+        },
+    },
+    task_type="RUN_COMMAND",
+    window_id=aws_ssm_maintenance_window["example"]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -162,7 +180,29 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ssm.MaintenanceWindowTask("example",
+    max_concurrency=2,
+    max_errors=1,
+    priority=1,
+    service_role_arn=aws_iam_role["example"]["arn"],
+    targets=[{
+        "key": "InstanceIds",
+        "values": [aws_instance["example"]["id"]],
+    }],
+    task_arn=aws_sfn_activity["example"]["id"],
+    task_invocation_parameters={
+        "stepFunctionsParameters": {
+            "input": "{\"key1\":\"value1\"}",
+            "name": "example",
+        },
+    },
+    task_type="STEP_FUNCTIONS",
+    window_id=aws_ssm_maintenance_window["example"]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

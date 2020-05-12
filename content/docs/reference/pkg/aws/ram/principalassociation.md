@@ -38,7 +38,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_resource_share = aws.ram.ResourceShare("exampleResourceShare", allow_external_principals=True)
+example_principal_association = aws.ram.PrincipalAssociation("examplePrincipalAssociation",
+    principal="111111111111",
+    resource_share_arn=example_resource_share.arn)
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -67,7 +75,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ram.PrincipalAssociation("example",
+    principal=aws_organizations_organization["example"]["arn"],
+    resource_share_arn=aws_ram_resource_share["example"]["arn"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

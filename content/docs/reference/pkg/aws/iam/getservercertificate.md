@@ -32,7 +32,20 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+my_domain = aws.iam.get_server_certificate(latest=True,
+    name_prefix="my-domain.org")
+elb = aws.elb.LoadBalancer("elb", listeners=[{
+    "instancePort": 8000,
+    "instanceProtocol": "https",
+    "lbPort": 443,
+    "lbProtocol": "https",
+    "sslCertificateId": my_domain.arn,
+}])
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -30,7 +30,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.iam.get_group(group_name="an_example_group_name")
+```
 {{% /example %}}
 
 {{% example typescript %}}

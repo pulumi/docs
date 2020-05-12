@@ -26,6 +26,12 @@ import * as aws from "@pulumi/aws";
 
 const awesomeDevices = new aws.devicefarm.Project("awesome_devices", {});
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+awesome_devices = aws.devicefarm.Project("awesomeDevices")
+```
 
 
 

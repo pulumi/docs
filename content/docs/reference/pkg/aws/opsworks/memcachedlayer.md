@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+cache = aws.opsworks.MemcachedLayer("cache", stack_id=aws_opsworks_stack["main"]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

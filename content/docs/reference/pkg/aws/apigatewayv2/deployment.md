@@ -13,7 +13,7 @@ meta_desc: "Explore the Deployment resource of the apigatewayv2 module, includin
 Manages an Amazon API Gateway Version 2 deployment.
 More information can be found in the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html).
 
-> **Note:** Creating a deployment for an API requires at least one `aws.apigatewayv2.Route` resource associated with that API.
+> **Note:** Creating a deployment for an API requires at least one `aws.apigatewayv2.Route` resource associated with that API. To avoid race conditions when all resources are being created together, you need to add implicit resource references via the `triggers` argument or explicit resource references using the [resource `dependsOn` meta-argument](https://www.pulumi.com/docs/intro/concepts/programming-model/#dependson).
 
 
 
@@ -31,7 +31,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.apigatewayv2.Deployment("example",
+    api_id=aws_apigatewayv2_route["example"]["api_id"],
+    description="Example deployment")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -58,7 +65,7 @@ const example = new aws.apigatewayv2.Deployment("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Deployment</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_id=None<span class="p">, </span>description=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Deployment</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_id=None<span class="p">, </span>description=None<span class="p">, </span>triggers=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -248,6 +255,15 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}The description for the deployment resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Triggers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of arbitrary keys and values that, when changed, will trigger a redeployment.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -271,6 +287,15 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description for the deployment resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Triggers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of arbitrary keys and values that, when changed, will trigger a redeployment.
 {{% /md %}}</dd>
 
 </dl>
@@ -298,6 +323,15 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}The description for the deployment resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>triggers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of arbitrary keys and values that, when changed, will trigger a redeployment.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -321,6 +355,15 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description for the deployment resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>triggers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of arbitrary keys and values that, when changed, will trigger a redeployment.
 {{% /md %}}</dd>
 
 </dl>
@@ -449,7 +492,7 @@ Get an existing Deployment resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_id=None<span class="p">, </span>auto_deployed=None<span class="p">, </span>description=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_id=None<span class="p">, </span>auto_deployed=None<span class="p">, </span>description=None<span class="p">, </span>triggers=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -590,6 +633,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The description for the deployment resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Triggers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of arbitrary keys and values that, when changed, will trigger a redeployment.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -622,6 +674,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description for the deployment resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Triggers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of arbitrary keys and values that, when changed, will trigger a redeployment.
 {{% /md %}}</dd>
 
 </dl>
@@ -658,6 +719,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The description for the deployment resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>triggers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of arbitrary keys and values that, when changed, will trigger a redeployment.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -690,6 +760,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description for the deployment resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>triggers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of arbitrary keys and values that, when changed, will trigger a redeployment.
 {{% /md %}}</dd>
 
 </dl>

@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.workspaces.get_bundle(bundle_id="wsb-b0s22j3d7")
+```
 {{% /example %}}
 
 {{% example typescript %}}

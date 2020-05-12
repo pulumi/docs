@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+production = aws.lambda.get_alias(function_name="my-lambda-func",
+    name="production")
+```
 {{% /example %}}
 
 {{% example typescript %}}

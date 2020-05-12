@@ -30,7 +30,62 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_role = aws.iam.Role("exampleRole", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "codedeploy.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+
+""")
+a_ws_code_deploy_role = aws.iam.RolePolicyAttachment("aWSCodeDeployRole",
+    policy_arn="arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole",
+    role=example_role.name)
+example_application = aws.codedeploy.Application("exampleApplication")
+example_topic = aws.sns.Topic("exampleTopic")
+example_deployment_group = aws.codedeploy.DeploymentGroup("exampleDeploymentGroup",
+    alarm_configuration={
+        "alarms": ["my-alarm-name"],
+        "enabled": True,
+    },
+    app_name=example_application.name,
+    auto_rollback_configuration={
+        "enabled": True,
+        "events": ["DEPLOYMENT_FAILURE"],
+    },
+    deployment_group_name="example-group",
+    ec2_tag_sets=[{
+        "ec2TagFilter": [
+            {
+                "key": "filterkey1",
+                "type": "KEY_AND_VALUE",
+                "value": "filtervalue",
+            },
+            {
+                "key": "filterkey2",
+                "type": "KEY_AND_VALUE",
+                "value": "filtervalue",
+            },
+        ],
+    }],
+    service_role_arn=example_role.arn,
+    trigger_configurations=[{
+        "triggerEvents": ["DeploymentFailure"],
+        "triggerName": "example-trigger",
+        "triggerTargetArn": example_topic.arn,
+    }])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -105,7 +160,53 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_application = aws.codedeploy.Application("exampleApplication", compute_platform="ECS")
+example_deployment_group = aws.codedeploy.DeploymentGroup("exampleDeploymentGroup",
+    app_name=example_application.name,
+    auto_rollback_configuration={
+        "enabled": True,
+        "events": ["DEPLOYMENT_FAILURE"],
+    },
+    blue_green_deployment_config={
+        "deploymentReadyOption": {
+            "actionOnTimeout": "CONTINUE_DEPLOYMENT",
+        },
+        "terminateBlueInstancesOnDeploymentSuccess": {
+            "action": "TERMINATE",
+            "terminationWaitTimeInMinutes": 5,
+        },
+    },
+    deployment_config_name="CodeDeployDefault.ECSAllAtOnce",
+    deployment_group_name="example",
+    deployment_style={
+        "deploymentOption": "WITH_TRAFFIC_CONTROL",
+        "deploymentType": "BLUE_GREEN",
+    },
+    ecs_service={
+        "clusterName": aws_ecs_cluster["example"]["name"],
+        "serviceName": aws_ecs_service["example"]["name"],
+    },
+    load_balancer_info={
+        "targetGroupPairInfo": {
+            "prodTrafficRoute": {
+                "listenerArns": [aws_lb_listener["example"]["arn"]],
+            },
+            "targetGroup": [
+                {
+                    "name": aws_lb_target_group["blue"]["name"],
+                },
+                {
+                    "name": aws_lb_target_group["green"]["name"],
+                },
+            ],
+        },
+    },
+    service_role_arn=aws_iam_role["example"]["arn"])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -171,7 +272,37 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_application = aws.codedeploy.Application("exampleApplication")
+example_deployment_group = aws.codedeploy.DeploymentGroup("exampleDeploymentGroup",
+    app_name=example_application.name,
+    blue_green_deployment_config={
+        "deploymentReadyOption": {
+            "actionOnTimeout": "STOP_DEPLOYMENT",
+            "waitTimeInMinutes": 60,
+        },
+        "greenFleetProvisioningOption": {
+            "action": "DISCOVER_EXISTING",
+        },
+        "terminateBlueInstancesOnDeploymentSuccess": {
+            "action": "KEEP_ALIVE",
+        },
+    },
+    deployment_group_name="example-group",
+    deployment_style={
+        "deploymentOption": "WITH_TRAFFIC_CONTROL",
+        "deploymentType": "BLUE_GREEN",
+    },
+    load_balancer_info={
+        "elbInfo": [{
+            "name": aws_elb["example"]["name"],
+        }],
+    },
+    service_role_arn=aws_iam_role["example"]["arn"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.codedeploy.Application("example", compute_platform="ECS")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -52,7 +57,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.codedeploy.Application("example", compute_platform="Lambda")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -76,7 +86,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.codedeploy.Application("example", compute_platform="Server")
+```
 {{% /example %}}
 
 {{% example typescript %}}

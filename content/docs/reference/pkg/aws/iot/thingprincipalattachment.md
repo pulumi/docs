@@ -28,7 +28,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.iot.Thing("example")
+cert = aws.iot.Certificate("cert",
+    active=True,
+    csr=(lambda path: open(path).read())("csr.pem"))
+att = aws.iot.ThingPrincipalAttachment("att",
+    principal=cert.arn,
+    thing=example.name)
+```
 {{% /example %}}
 
 {{% example typescript %}}

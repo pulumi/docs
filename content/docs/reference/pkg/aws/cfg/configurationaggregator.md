@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+account = aws.cfg.ConfigurationAggregator("account", account_aggregation_source={
+    "accountIds": ["123456789012"],
+    "regions": ["us-west-2"],
+})
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -55,7 +63,33 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+organization_role = aws.iam.Role("organizationRole", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "config.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+
+""")
+organization_configuration_aggregator = aws.cfg.ConfigurationAggregator("organizationConfigurationAggregator", organization_aggregation_source={
+    "allRegions": True,
+    "roleArn": organization_role.arn,
+})
+organization_role_policy_attachment = aws.iam.RolePolicyAttachment("organizationRolePolicyAttachment",
+    policy_arn="arn:aws:iam::aws:policy/service-role/AWSConfigRoleForOrganizations",
+    role=organization_role.name)
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -1019,7 +1053,7 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>account_<wbr>ids</span>
+        <span>account<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

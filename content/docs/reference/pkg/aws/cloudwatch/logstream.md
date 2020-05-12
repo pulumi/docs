@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+yada = aws.cloudwatch.LogGroup("yada")
+foo = aws.cloudwatch.LogStream("foo", log_group_name=yada.name)
+```
 {{% /example %}}
 
 {{% example typescript %}}

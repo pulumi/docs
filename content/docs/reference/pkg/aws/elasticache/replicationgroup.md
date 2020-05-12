@@ -38,7 +38,22 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.elasticache.ReplicationGroup("example",
+    automatic_failover_enabled=True,
+    availability_zones=[
+        "us-west-2a",
+        "us-west-2b",
+    ],
+    node_type="cache.m4.large",
+    number_cache_clusters=2,
+    parameter_group_name="default.redis3.2",
+    port=6379,
+    replication_group_description="test description")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -71,7 +86,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+baz = aws.elasticache.ReplicationGroup("baz",
+    automatic_failover_enabled=True,
+    cluster_mode={
+        "numNodeGroups": 2,
+        "replicasPerNodeGroup": 1,
+    },
+    node_type="cache.t2.small",
+    parameter_group_name="default.redis3.2.cluster.on",
+    port=6379,
+    replication_group_description="test description")
+```
 {{% /example %}}
 
 {{% example typescript %}}

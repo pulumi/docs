@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+test = aws.mediaconvert.Queue("test")
+```
 {{% /example %}}
 
 {{% example typescript %}}

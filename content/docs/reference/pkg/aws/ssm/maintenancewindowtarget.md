@@ -33,6 +33,23 @@ const target1 = new aws.ssm.MaintenanceWindowTarget("target1", {
     windowId: window.id,
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+window = aws.ssm.MaintenanceWindow("window",
+    cutoff=1,
+    duration=3,
+    schedule="cron(0 16 ? * TUE *)")
+target1 = aws.ssm.MaintenanceWindowTarget("target1",
+    description="This is a maintenance window target",
+    resource_type="INSTANCE",
+    targets=[{
+        "key": "tag:Name",
+        "values": ["acceptance_test"],
+    }],
+    window_id=window.id)
+```
 
 ## Resource Group Target Example Usage
 
@@ -57,6 +74,26 @@ const target1 = new aws.ssm.MaintenanceWindowTarget("target1", {
     }],
     windowId: window.id,
 });
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+window = aws.ssm.MaintenanceWindow("window",
+    cutoff=1,
+    duration=3,
+    schedule="cron(0 16 ? * TUE *)")
+target1 = aws.ssm.MaintenanceWindowTarget("target1",
+    description="This is a maintenance window target",
+    resource_type="RESOURCE_GROUP",
+    targets=[{
+        "key": "resource-groups:ResourceTypeFilters",
+        "values": [
+            "AWS::EC2::INSTANCE",
+            "AWS::EC2::VPC",
+        ],
+    }],
+    window_id=window.id)
 ```
 
 

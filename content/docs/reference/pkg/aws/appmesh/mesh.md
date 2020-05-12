@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+simple = aws.appmesh.Mesh("simple")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -50,7 +55,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+simple = aws.appmesh.Mesh("simple", spec={
+    "egressFilter": {
+        "type": "ALLOW_ALL",
+    },
+})
+```
 {{% /example %}}
 
 {{% example typescript %}}

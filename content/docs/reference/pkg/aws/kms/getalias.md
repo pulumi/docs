@@ -30,7 +30,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+s3 = aws.kms.get_alias(name="alias/aws/s3")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -30,7 +30,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.glue.Job("example",
+    command={
+        "scriptLocation": f"s3://{aws_s3_bucket['example']['bucket']}/example.py",
+    },
+    role_arn=aws_iam_role["example"]["arn"])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -57,7 +66,19 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.glue.Job("example",
+    command={
+        "scriptLocation": f"s3://{aws_s3_bucket['example']['bucket']}/example.scala",
+    },
+    default_arguments={
+        "--job-language": "scala",
+    },
+    role_arn=aws_iam_role["example"]["arn"])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -87,7 +108,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_log_group = aws.cloudwatch.LogGroup("exampleLogGroup", retention_in_days=14)
+example_job = aws.glue.Job("exampleJob", default_arguments={
+    "--continuous-log-logGroup": example_log_group.name,
+    "--enable-continuous-cloudwatch-log": "true",
+    "--enable-continuous-log-filter": "true",
+    "--enable-metrics": "",
+})
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -12,9 +12,53 @@ meta_desc: "Explore the Build resource of the gamelift module, including example
 
 Provides an Gamelift Build resource.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+test = aws.gamelift.Build("test",
+    operating_system="WINDOWS_2012",
+    storage_location={
+        "bucket": aws_s3_bucket["test"]["bucket"],
+        "key": aws_s3_bucket_object["test"]["key"],
+        "roleArn": aws_iam_role["test"]["arn"],
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const test = new aws.gamelift.Build("test", {
+    operatingSystem: "WINDOWS_2012",
+    storage_location: {
+        bucket: aws_s3_bucket.test.bucket,
+        key: aws_s3_bucket_object.test.key,
+        roleArn: aws_iam_role.test.arn,
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Build Resource {#create}

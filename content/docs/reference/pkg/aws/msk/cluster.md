@@ -12,9 +12,227 @@ meta_desc: "Explore the Cluster resource of the msk module, including examples, 
 
 Manages AWS Managed Streaming for Kafka cluster
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+vpc = aws.ec2.Vpc("vpc", cidr_block="192.168.0.0/22")
+azs = aws.get_availability_zones(state="available")
+subnet_az1 = aws.ec2.Subnet("subnetAz1",
+    availability_zone=azs.names[0],
+    cidr_block="192.168.0.0/24",
+    vpc_id=vpc.id)
+subnet_az2 = aws.ec2.Subnet("subnetAz2",
+    availability_zone=azs.names[1],
+    cidr_block="192.168.1.0/24",
+    vpc_id=vpc.id)
+subnet_az3 = aws.ec2.Subnet("subnetAz3",
+    availability_zone=azs.names[2],
+    cidr_block="192.168.2.0/24",
+    vpc_id=vpc.id)
+sg = aws.ec2.SecurityGroup("sg", vpc_id=vpc.id)
+kms = aws.kms.Key("kms", description="example")
+test = aws.cloudwatch.LogGroup("test")
+bucket = aws.s3.Bucket("bucket", acl="private")
+firehose_role = aws.iam.Role("firehoseRole", assume_role_policy="""{
+"Version": "2012-10-17",
+"Statement": [
+  {
+    "Action": "sts:AssumeRole",
+    "Principal": {
+      "Service": "firehose.amazonaws.com"
+    },
+    "Effect": "Allow",
+    "Sid": ""
+  }
+  ]
+}
+""")
+test_stream = aws.kinesis.FirehoseDeliveryStream("testStream",
+    destination="s3",
+    s3_configuration={
+        "roleArn": firehose_role.arn,
+        "bucketArn": bucket.arn,
+    },
+    tags={
+        "LogDeliveryEnabled": "placeholder",
+    })
+example = aws.msk.Cluster("example",
+    cluster_name="example",
+    kafka_version="2.1.0",
+    number_of_broker_nodes=3,
+    broker_node_group_info={
+        "instanceType": "kafka.m5.large",
+        "ebsVolumeSize": 1000,
+        "clientSubnets": [
+            subnet_az1.id,
+            subnet_az2.id,
+            subnet_az3.id,
+        ],
+        "securityGroups": [sg.id],
+    },
+    encryption_info={
+        "encryptionAtRestKmsKeyArn": kms.arn,
+    },
+    open_monitoring={
+        "prometheus": {
+            "jmx_exporter": {
+                "enabledInBroker": True,
+            },
+            "node_exporter": {
+                "enabledInBroker": True,
+            },
+        },
+    },
+    logging_info={
+        "broker_logs": {
+            "cloudwatch_logs": {
+                "enabled": True,
+                "logGroup": test.name,
+            },
+            "firehose": {
+                "enabled": True,
+                "deliveryStream": test_stream.name,
+            },
+            "s3": {
+                "enabled": True,
+                "bucket": bucket.id,
+                "prefix": "logs/msk-",
+            },
+        },
+    },
+    tags={
+        "foo": "bar",
+    })
+pulumi.export("zookeeperConnectString", example.zookeeper_connect_string)
+pulumi.export("bootstrapBrokers", example.bootstrap_brokers)
+pulumi.export("bootstrapBrokersTls", example.bootstrap_brokers_tls)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const vpc = new aws.ec2.Vpc("vpc", {cidrBlock: "192.168.0.0/22"});
+const azs = aws.getAvailabilityZones({
+    state: "available",
+});
+const subnetAz1 = new aws.ec2.Subnet("subnetAz1", {
+    availabilityZone: azs.then(azs => azs.names[0]),
+    cidrBlock: "192.168.0.0/24",
+    vpcId: vpc.id,
+});
+const subnetAz2 = new aws.ec2.Subnet("subnetAz2", {
+    availabilityZone: azs.then(azs => azs.names[1]),
+    cidrBlock: "192.168.1.0/24",
+    vpcId: vpc.id,
+});
+const subnetAz3 = new aws.ec2.Subnet("subnetAz3", {
+    availabilityZone: azs.then(azs => azs.names[2]),
+    cidrBlock: "192.168.2.0/24",
+    vpcId: vpc.id,
+});
+const sg = new aws.ec2.SecurityGroup("sg", {vpcId: vpc.id});
+const kms = new aws.kms.Key("kms", {description: "example"});
+const test = new aws.cloudwatch.LogGroup("test", {});
+const bucket = new aws.s3.Bucket("bucket", {acl: "private"});
+const firehoseRole = new aws.iam.Role("firehoseRole", {assumeRolePolicy: `{
+"Version": "2012-10-17",
+"Statement": [
+  {
+    "Action": "sts:AssumeRole",
+    "Principal": {
+      "Service": "firehose.amazonaws.com"
+    },
+    "Effect": "Allow",
+    "Sid": ""
+  }
+  ]
+}
+`});
+const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
+    destination: "s3",
+    s3_configuration: {
+        roleArn: firehoseRole.arn,
+        bucketArn: bucket.arn,
+    },
+    tags: {
+        LogDeliveryEnabled: "placeholder",
+    },
+});
+const example = new aws.msk.Cluster("example", {
+    clusterName: "example",
+    kafkaVersion: "2.1.0",
+    numberOfBrokerNodes: 3,
+    broker_node_group_info: {
+        instanceType: "kafka.m5.large",
+        ebsVolumeSize: 1000,
+        clientSubnets: [
+            subnetAz1.id,
+            subnetAz2.id,
+            subnetAz3.id,
+        ],
+        securityGroups: [sg.id],
+    },
+    encryption_info: {
+        encryptionAtRestKmsKeyArn: kms.arn,
+    },
+    open_monitoring: {
+        prometheus: {
+            jmx_exporter: {
+                enabledInBroker: true,
+            },
+            node_exporter: {
+                enabledInBroker: true,
+            },
+        },
+    },
+    logging_info: {
+        broker_logs: {
+            cloudwatch_logs: {
+                enabled: true,
+                logGroup: test.name,
+            },
+            firehose: {
+                enabled: true,
+                deliveryStream: testStream.name,
+            },
+            s3: {
+                enabled: true,
+                bucket: bucket.id,
+                prefix: "logs/msk-",
+            },
+        },
+    },
+    tags: {
+        foo: "bar",
+    },
+});
+export const zookeeperConnectString = example.zookeeperConnectString;
+export const bootstrapBrokers = example.bootstrapBrokers;
+export const bootstrapBrokersTls = example.bootstrapBrokersTls;
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}

@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.wafregional.RegexPatternSet("example", regex_pattern_strings=[
+    "one",
+    "two",
+])
+```
 {{% /example %}}
 
 {{% example typescript %}}

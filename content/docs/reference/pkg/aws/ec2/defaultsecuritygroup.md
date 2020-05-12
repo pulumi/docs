@@ -65,6 +65,26 @@ const defaultDefaultSecurityGroup = new aws.ec2.DefaultSecurityGroup("default", 
     vpcId: mainvpc.id,
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+mainvpc = aws.ec2.Vpc("mainvpc", cidr_block="10.1.0.0/16")
+default = aws.ec2.DefaultSecurityGroup("default",
+    egress=[{
+        "cidrBlocks": ["0.0.0.0/0"],
+        "fromPort": 0,
+        "protocol": "-1",
+        "toPort": 0,
+    }],
+    ingress=[{
+        "fromPort": 0,
+        "protocol": -1,
+        "self": True,
+        "toPort": 0,
+    }],
+    vpc_id=mainvpc.id)
+```
 
 ## Example config to deny all Egress traffic, allowing Ingress
 
@@ -87,6 +107,20 @@ const defaultDefaultSecurityGroup = new aws.ec2.DefaultSecurityGroup("default", 
     }],
     vpcId: mainvpc.id,
 });
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+mainvpc = aws.ec2.Vpc("mainvpc", cidr_block="10.1.0.0/16")
+default = aws.ec2.DefaultSecurityGroup("default",
+    ingress=[{
+        "fromPort": 0,
+        "protocol": -1,
+        "self": True,
+        "toPort": 0,
+    }],
+    vpc_id=mainvpc.id)
 ```
 
 ## Usage
