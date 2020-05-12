@@ -67,6 +67,26 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p><strong>NOTE:</strong> Only one operation is supported in a request. So if <code class="docutils literal notranslate"><span class="pre">data_node_spec</span></code> and <code class="docutils literal notranslate"><span class="pre">data_node_disk_size</span></code> are both changed, system will respond error.</p>
 <p><strong>NOTE:</strong> At present, <code class="docutils literal notranslate"><span class="pre">version</span></code> can not be modified once instance has been created.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">instance</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">elasticsearch</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span>
+    <span class="n">instance_charge_type</span><span class="o">=</span><span class="s2">&quot;PostPaid&quot;</span><span class="p">,</span>
+    <span class="n">data_node_amount</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+    <span class="n">data_node_spec</span><span class="o">=</span><span class="s2">&quot;elasticsearch.sn2ne.large&quot;</span><span class="p">,</span>
+    <span class="n">data_node_disk_size</span><span class="o">=</span><span class="s2">&quot;20&quot;</span><span class="p">,</span>
+    <span class="n">data_node_disk_type</span><span class="o">=</span><span class="s2">&quot;cloud_ssd&quot;</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="s2">&quot;some vswitch id&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;Your password&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;5.5.3_with_X-Pack&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;description&quot;</span><span class="p">,</span>
+    <span class="n">zone_count</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;key1&quot;</span><span class="p">:</span> <span class="s2">&quot;value1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;key2&quot;</span><span class="p">:</span> <span class="s2">&quot;value2&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -364,6 +384,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.73.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">zones_ids</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">elasticsearch</span><span class="o">.</span><span class="n">get_zones</span><span class="p">()</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>multi</strong> (<em>bool</em>) – Indicate whether the zones can be used in a multi AZ configuration. Default to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Multi AZ is usually used to launch Elasticsearch instances.</p>

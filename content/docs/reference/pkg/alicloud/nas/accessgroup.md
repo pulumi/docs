@@ -32,7 +32,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+foo = alicloud.nas.AccessGroup("foo",
+    description="test_AccessG",
+    type="Classic")
+```
 {{% /example %}}
 
 {{% example typescript %}}

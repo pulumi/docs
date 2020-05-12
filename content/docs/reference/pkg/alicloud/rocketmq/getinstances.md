@@ -30,7 +30,20 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "onsInstanceDatasourceName"
+default = alicloud.rocketmq.Instance("default", remark="default_ons_instance_remark")
+instances_ds = pulumi.Output.all(default.id, default.name).apply(lambda id, name: alicloud.rocketmq.get_instances(ids=[id],
+    name_regex=name,
+    output_file="instances.txt"))
+pulumi.export("firstInstanceId", instances_ds.instances[0]["instance_id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

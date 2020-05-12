@@ -14,42 +14,9 @@ This data source provides AccessRule available to the user.
 
 > NOTE: Available in 1.35.0+
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const foo = pulumi.output(alicloud.nas.getAccessRules({
-    accessGroupName: "tf-testAccAccessGroupsdatasource",
-    rwAccess: "RDWR",
-    sourceCidrIp: "168.1.1.0/16",
-    userAccess: "no_squash",
-}, { async: true }));
-
-export const alicloudNasAccessRulesId = foo.rules[0].id;
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Using GetAccessRules {#using}

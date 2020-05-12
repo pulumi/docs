@@ -34,7 +34,23 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default_acl = alicloud.rocketmq.Acl("defaultAcl", sag_count="0")
+default_acl_rule = alicloud.rocketmq.AclRule("defaultAclRule",
+    acl_id=default_acl.id,
+    description="tf-testSagAclRule",
+    dest_cidr="192.168.1.0/24",
+    dest_port_range="-1/-1",
+    direction="in",
+    ip_protocol="ALL",
+    policy="accept",
+    priority="1",
+    source_cidr="10.10.1.0/24",
+    source_port_range="-1/-1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

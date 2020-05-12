@@ -31,7 +31,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+gpdb = alicloud.gpdb.get_instances(availability_zone="cn-beijing-c",
+    name_regex="gp-.+\\d+",
+    output_file="instances.txt")
+pulumi.export("instanceId", gpdb.instances[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

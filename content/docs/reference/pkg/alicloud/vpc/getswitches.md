@@ -28,7 +28,22 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "vswitchDatasourceName"
+default_zones = alicloud.get_zones()
+vpc = alicloud.vpc.Network("vpc", cidr_block="172.16.0.0/16")
+vswitch = alicloud.vpc.Switch("vswitch",
+    availability_zone=default_zones.zones[0]["id"],
+    cidr_block="172.16.0.0/24",
+    vpc_id=vpc.id)
+default_switches = vswitch.name.apply(lambda name: alicloud.vpc.get_switches(name_regex=name))
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -28,7 +28,32 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+config = pulumi.Config()
+creation = config.get("creation")
+if creation is None:
+    creation = "KVStore"
+name = config.get("name")
+if name is None:
+    name = "kvstoreinstancevpc"
+default_zones = alicloud.get_zones(available_resource_creation=creation)
+default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
+default_switch = alicloud.vpc.Switch("defaultSwitch",
+    availability_zone=default_zones.zones[0]["id"],
+    cidr_block="172.16.0.0/24",
+    vpc_id=default_network.id)
+default_instance = alicloud.kvstore.Instance("defaultInstance",
+    engine_version="4.0",
+    instance_class="redis.master.small.default",
+    instance_name=name,
+    instance_type="Redis",
+    private_ip="172.16.0.10",
+    security_ips=["10.0.0.1"],
+    vswitch_id=default_switch.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

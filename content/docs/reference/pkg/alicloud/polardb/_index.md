@@ -39,6 +39,6 @@ Explore the resources and functions of the polardb module in the AliCloud packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.3.3</dd>
+	<dd>2.4.0</dd>
 </dl>
 

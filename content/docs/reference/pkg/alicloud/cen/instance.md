@@ -30,7 +30,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+cen = alicloud.cen.Instance("cen", description="an example for cen")
+```
 {{% /example %}}
 
 {{% example typescript %}}

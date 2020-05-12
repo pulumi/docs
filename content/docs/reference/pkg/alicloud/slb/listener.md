@@ -78,7 +78,61 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "testcreatehttplistener"
+ip_version = config.get("ipVersion")
+if ip_version is None:
+    ip_version = "ipv4"
+default_load_balancer = alicloud.slb.LoadBalancer("defaultLoadBalancer",
+    internet=True,
+    internet_charge_type="PayByTraffic")
+default_acl = alicloud.slb.Acl("defaultAcl",
+    entry_lists=[
+        {
+            "comment": "first",
+            "entry": "10.10.10.0/24",
+        },
+        {
+            "comment": "second",
+            "entry": "168.10.10.0/24",
+        },
+    ],
+    ip_version=ip_version)
+default_listener = alicloud.slb.Listener("defaultListener",
+    acl_id=default_acl.id,
+    acl_status="on",
+    acl_type="white",
+    backend_port=80,
+    bandwidth=10,
+    cookie="testslblistenercookie",
+    cookie_timeout=86400,
+    frontend_port=80,
+    health_check="on",
+    health_check_connect_port=20,
+    health_check_domain="ali.com",
+    health_check_http_code="http_2xx,http_3xx",
+    health_check_interval=5,
+    health_check_timeout=8,
+    health_check_uri="/cons",
+    healthy_threshold=8,
+    idle_timeout=30,
+    load_balancer_id=default_load_balancer.id,
+    protocol="http",
+    request_timeout=80,
+    sticky_session="on",
+    sticky_session_type="insert",
+    unhealthy_threshold=8,
+    x_forwarded_for={
+        "retriveSlbId": True,
+        "retriveSlbIp": True,
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+bwl = alicloud.cen.get_bandwidth_limits(instance_ids=["cen-id1"])
+pulumi.export("firstCenBandwidthLimitsLocalRegionId", bwl.limits[0]["localRegionId"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

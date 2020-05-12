@@ -28,7 +28,42 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+config = pulumi.Config()
+creation = config.get("creation")
+if creation is None:
+    creation = "KVStore"
+multi_az = config.get("multiAz")
+if multi_az is None:
+    multi_az = "false"
+name = config.get("name")
+if name is None:
+    name = "kvstorebackuppolicyvpc"
+default_zones = alicloud.get_zones(available_resource_creation=creation)
+default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
+default_switch = alicloud.vpc.Switch("defaultSwitch",
+    availability_zone=default_zones.zones[0]["id"],
+    cidr_block="172.16.0.0/24",
+    vpc_id=default_network.id)
+default_instance = alicloud.kvstore.Instance("defaultInstance",
+    engine_version="2.8",
+    instance_class="Memcache",
+    instance_name=name,
+    instance_type="memcache.master.small.default",
+    private_ip="172.16.0.10",
+    security_ips=["10.0.0.1"],
+    vswitch_id=default_switch.id)
+default_backup_policy = alicloud.kvstore.BackupPolicy("defaultBackupPolicy",
+    backup_periods=[
+        "Tuesday",
+        "Wednesday",
+    ],
+    backup_time="10:00Z-11:00Z",
+    instance_id=default_instance.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

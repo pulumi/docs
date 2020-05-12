@@ -20,6 +20,39 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.79.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;auto_provisioning_group&quot;</span>
+<span class="n">default_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_disk_category</span><span class="o">=</span><span class="s2">&quot;cloud_efficiency&quot;</span><span class="p">,</span>
+    <span class="n">available_resource_creation</span><span class="o">=</span><span class="s2">&quot;VSwitch&quot;</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">default_switch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;defaultSwitch&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_security_group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;defaultSecurityGroup&quot;</span><span class="p">,</span> <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_images</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_images</span><span class="p">(</span><span class="n">most_recent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;^ubuntu_18.*64&quot;</span><span class="p">,</span>
+    <span class="n">owners</span><span class="o">=</span><span class="s2">&quot;system&quot;</span><span class="p">)</span>
+<span class="n">template</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">LaunchTemplate</span><span class="p">(</span><span class="s2">&quot;template&quot;</span><span class="p">,</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="n">default_images</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;ecs.n1.tiny&quot;</span><span class="p">,</span>
+    <span class="n">security_group_id</span><span class="o">=</span><span class="n">default_security_group</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_auto_provisioning_group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">AutoProvisioningGroup</span><span class="p">(</span><span class="s2">&quot;defaultAutoProvisioningGroup&quot;</span><span class="p">,</span>
+    <span class="n">launch_template_configs</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;instanceType&quot;</span><span class="p">:</span> <span class="s2">&quot;ecs.n1.small&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;vswitchId&quot;</span><span class="p">:</span> <span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">launch_template_id</span><span class="o">=</span><span class="n">template</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">pay_as_you_go_target_capacity</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="n">spot_target_capacity</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+    <span class="n">total_target_capacity</span><span class="o">=</span><span class="s2">&quot;4&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The config mapping supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> - (Optional) The instance type of the Nth extended configurations of the launch template.</p></li>
@@ -375,27 +408,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_alicloud.ecs.Disk">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">Disk</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">category</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delete_auto_snapshot</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delete_with_instance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_auto_snapshot</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encrypted</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.Disk" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a ECS disk resource.</p>
-<blockquote>
-<div><p><strong>NOTE:</strong> One of <code class="docutils literal notranslate"><span class="pre">size</span></code> or <code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> is required when specifying an ECS disk. If all of them be specified, <code class="docutils literal notranslate"><span class="pre">size</span></code> must more than the size of snapshot which <code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> represents. Currently, <code class="docutils literal notranslate"><span class="pre">ecs.Disk</span></code> doesn’t resize disk.</p>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Zone to create the disk in.</p></li>
-<li><p><strong>category</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Category of the disk. Valid values are <code class="docutils literal notranslate"><span class="pre">cloud</span></code>, <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>, <code class="docutils literal notranslate"><span class="pre">cloud_ssd</span></code>, <code class="docutils literal notranslate"><span class="pre">cloud_essd</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>.</p></li>
-<li><p><strong>delete_auto_snapshot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether the automatic snapshot is deleted when the disk is released. Default value: false.</p></li>
-<li><p><strong>delete_with_instance</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether the disk is released together with the instance: Default value: false.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the disk. This description can have a string of 2 to 256 characters, It cannot begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Default value is null.</p></li>
-<li><p><strong>enable_auto_snapshot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether to apply a created automatic snapshot policy to the disk. Default value: false.</p></li>
-<li><p><strong>encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the disk will be encrypted, conflict with <code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code>.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the ECS disk. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”_”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Default value is null.</p></li>
-<li><p><strong>resource_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Id of resource group which the disk belongs.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Disk resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] availability_zone: The Zone to create the disk in.
+:param pulumi.Input[str] category: Category of the disk. Valid values are <code class="docutils literal notranslate"><span class="pre">cloud</span></code>, <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>, <code class="docutils literal notranslate"><span class="pre">cloud_ssd</span></code>, <code class="docutils literal notranslate"><span class="pre">cloud_essd</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>.
+:param pulumi.Input[bool] delete_auto_snapshot: Indicates whether the automatic snapshot is deleted when the disk is released. Default value: false.
+:param pulumi.Input[bool] delete_with_instance: Indicates whether the disk is released together with the instance: Default value: false.
+:param pulumi.Input[str] description: Description of the disk. This description can have a string of 2 to 256 characters, It cannot begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Default value is null.
+:param pulumi.Input[bool] enable_auto_snapshot: Indicates whether to apply a created automatic snapshot policy to the disk. Default value: false.
+:param pulumi.Input[bool] encrypted: If true, the disk will be encrypted, conflict with <code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code>.
+:param pulumi.Input[str] name: Name of the ECS disk. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”_”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Default value is null.
+:param pulumi.Input[str] resource_group_id: The Id of resource group which the disk belongs.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt; **NOTE:** Disk category `cloud` has been outdated and it only can be used none I/O Optimized ECS instances. Recommend `cloud_efficiency` and `cloud_ssd` disk.
 </pre></div>
 </div>
@@ -568,18 +592,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_alicloud.ecs.DiskAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">DiskAttachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">device_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.DiskAttachment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an Alicloud ECS Disk Attachment as a resource, to attach and detach disks from ECS Instances.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>device_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device name has been deprecated, and when attaching disk, it will be allocated automatically by system according to default order from /dev/xvdb to /dev/xvdz.</p></li>
-<li><p><strong>disk_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the Disk to be attached.</p></li>
-<li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the Instance to attach to.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a DiskAttachment resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] device_name: The device name has been deprecated, and when attaching disk, it will be allocated automatically by system according to default order from /dev/xvdb to /dev/xvdz.
+:param pulumi.Input[str] disk_id: ID of the Disk to be attached.
+:param pulumi.Input[str] instance_id: ID of the Instance to attach to.</p>
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ecs.DiskAttachment.device_name">
 <code class="sig-name descname">device_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.DiskAttachment.device_name" title="Permalink to this definition">¶</a></dt>
@@ -1446,6 +1464,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong>  If you want to combine snapshots of multiple disks into an image template, you can specify DiskDeviceMapping to create a custom image.</p>
 <p><strong>NOTE:</strong>  Available in 1.64.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">architecture</span><span class="o">=</span><span class="s2">&quot;x86_64&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;test-image&quot;</span><span class="p">,</span>
+    <span class="n">image_name</span><span class="o">=</span><span class="s2">&quot;test-image&quot;</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="s2">&quot;i-bp1g6zv0ce8oghu7k***&quot;</span><span class="p">,</span>
+    <span class="n">platform</span><span class="o">=</span><span class="s2">&quot;CentOS&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_id</span><span class="o">=</span><span class="s2">&quot;rg-bp67acfmxazb4ph***&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;FinanceDept&quot;</span><span class="p">:</span> <span class="s2">&quot;FinanceDeptJoshua&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1644,6 +1677,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong> If the copying is not completed, you cannot call DeleteImage to delete the image but you can call CancelCopyImage to cancel the copying.</p>
 <p><strong>NOTE:</strong> Available in 1.66.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">ImageCopy</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;test-image&quot;</span><span class="p">,</span>
+    <span class="n">image_name</span><span class="o">=</span><span class="s2">&quot;test-image&quot;</span><span class="p">,</span>
+    <span class="n">source_image_id</span><span class="o">=</span><span class="s2">&quot;m-bp1gxyhdswlsn18tu***&quot;</span><span class="p">,</span>
+    <span class="n">source_region_id</span><span class="o">=</span><span class="s2">&quot;cn-hangzhou&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;FinanceDept&quot;</span><span class="p">:</span> <span class="s2">&quot;FinanceDeptJoshua&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1807,6 +1853,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong> Before exporting the image, you must authorize the cloud server ECS official service account to write OSS permissions through RAM.</p>
 <p><strong>NOTE:</strong> Available in 1.68.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">ImageExport</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="s2">&quot;m-bp1gxy***&quot;</span><span class="p">,</span>
+    <span class="n">oss_bucket</span><span class="o">=</span><span class="s2">&quot;ecsimageexportconfig&quot;</span><span class="p">,</span>
+    <span class="n">oss_prefix</span><span class="o">=</span><span class="s2">&quot;ecsExport&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1902,6 +1957,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong> The region where the image is imported must be the same region as the OSS bucket where the image file is uploaded.</p>
 <p><strong>NOTE:</strong> Available in 1.69.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">this</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">ImageImport</span><span class="p">(</span><span class="s2">&quot;this&quot;</span><span class="p">,</span>
+    <span class="n">architecture</span><span class="o">=</span><span class="s2">&quot;x86_64&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;test import image&quot;</span><span class="p">,</span>
+    <span class="n">disk_device_mappings</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;diskImageSize&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;ossBucket&quot;</span><span class="p">:</span> <span class="s2">&quot;testimportimage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ossObject&quot;</span><span class="p">:</span> <span class="s2">&quot;root.img&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">image_name</span><span class="o">=</span><span class="s2">&quot;test-import-image&quot;</span><span class="p">,</span>
+    <span class="n">license_type</span><span class="o">=</span><span class="s2">&quot;Auto&quot;</span><span class="p">,</span>
+    <span class="n">os_type</span><span class="o">=</span><span class="s2">&quot;linux&quot;</span><span class="p">,</span>
+    <span class="n">platform</span><span class="o">=</span><span class="s2">&quot;Ubuntu&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2047,6 +2119,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong> After creating an ECS instance using a shared image, once the custom image owner releases the image sharing relationship or deletes the custom image, the instance cannot initialize the system disk.</p>
 <p><strong>NOTE:</strong> Available in 1.68.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">ImageSharePermission</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;1234567890&quot;</span><span class="p">,</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="s2">&quot;m-bp1gxyh***&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2853,19 +2933,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_alicloud.ecs.KeyPair">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">KeyPair</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.KeyPair" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a key pair resource.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>key_file</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of file to save your new key pair’s private key. Strongly suggest you to specified it when you creating key pair, otherwise, you wouldn’t get its private key ever.</p></li>
-<li><p><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key pair’s name. It is the only in one Alicloud account.</p></li>
-<li><p><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – You can import an existing public key and using Alicloud key pair to manage it.</p></li>
-<li><p><strong>resource_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Id of resource group which the key pair belongs.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a KeyPair resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] key_file: The name of file to save your new key pair’s private key. Strongly suggest you to specified it when you creating key pair, otherwise, you wouldn’t get its private key ever.
+:param pulumi.Input[str] key_name: The key pair’s name. It is the only in one Alicloud account.
+:param pulumi.Input[str] public_key: You can import an existing public key and using Alicloud key pair to manage it.
+:param pulumi.Input[str] resource_group_id: The Id of resource group which the key pair belongs.</p>
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ecs.KeyPair.key_file">
 <code class="sig-name descname">key_file</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.KeyPair.key_file" title="Permalink to this definition">¶</a></dt>
@@ -2955,6 +3029,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> After the key pair is attached with sone instances, there instances must be rebooted to make the key pair affect.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_disk_category</span><span class="o">=</span><span class="s2">&quot;cloud_ssd&quot;</span><span class="p">,</span>
+    <span class="n">available_resource_creation</span><span class="o">=</span><span class="s2">&quot;VSwitch&quot;</span><span class="p">)</span>
+<span class="nb">type</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_instance_types</span><span class="p">(</span><span class="n">availability_zone</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cpu_core_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">memory_size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">images</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_images</span><span class="p">(</span><span class="n">most_recent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;^ubuntu_18.*64&quot;</span><span class="p">,</span>
+    <span class="n">owners</span><span class="o">=</span><span class="s2">&quot;system&quot;</span><span class="p">)</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;keyPairAttachmentName&quot;</span>
+<span class="n">vpc</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;vpc&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.1.0.0/21&quot;</span><span class="p">)</span>
+<span class="n">vswitch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;vswitch&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.1.1.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;New security group&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">instance</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="nb">range</span> <span class="ow">in</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]:</span>
+    <span class="n">instance</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;instance-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">image_id</span><span class="o">=</span><span class="n">images</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="n">instance_charge_type</span><span class="o">=</span><span class="s2">&quot;PostPaid&quot;</span><span class="p">,</span>
+        <span class="n">instance_name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">instance_type</span><span class="o">=</span><span class="nb">type</span><span class="o">.</span><span class="n">instance_types</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="n">internet_charge_type</span><span class="o">=</span><span class="s2">&quot;PayByTraffic&quot;</span><span class="p">,</span>
+        <span class="n">internet_max_bandwidth_out</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+        <span class="n">password</span><span class="o">=</span><span class="s2">&quot;Test12345&quot;</span><span class="p">,</span>
+        <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span><span class="n">group</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+        <span class="n">system_disk_category</span><span class="o">=</span><span class="s2">&quot;cloud_ssd&quot;</span><span class="p">,</span>
+        <span class="n">vswitch_id</span><span class="o">=</span><span class="n">vswitch</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+<span class="n">pair</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">KeyPair</span><span class="p">(</span><span class="s2">&quot;pair&quot;</span><span class="p">,</span> <span class="n">key_name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+<span class="n">attachment</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">KeyPairAttachment</span><span class="p">(</span><span class="s2">&quot;attachment&quot;</span><span class="p">,</span>
+    <span class="n">instance_ids</span><span class="o">=</span><span class="p">[</span><span class="n">__item</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="n">instance</span><span class="p">],</span>
+    <span class="n">key_name</span><span class="o">=</span><span class="n">pair</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3046,6 +3162,61 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">LaunchTemplate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_release_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_owner_alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_charge_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internet_charge_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internet_max_bandwidth_in</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internet_max_bandwidth_out</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">io_optimized</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_pair_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ram_role_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_enhancement_strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_price_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">system_disk_category</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">system_disk_description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">system_disk_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">system_disk_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">userdata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vswitch_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.LaunchTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an ECS Launch Template resource.</p>
 <p>For information about Launch Template and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/73916.html">Launch Template</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">images</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_images</span><span class="p">(</span><span class="n">owners</span><span class="o">=</span><span class="s2">&quot;system&quot;</span><span class="p">)</span>
+<span class="n">instances</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_instances</span><span class="p">()</span>
+<span class="n">template</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">LaunchTemplate</span><span class="p">(</span><span class="s2">&quot;template&quot;</span><span class="p">,</span>
+    <span class="n">data_disks</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;test1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;disk1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;test2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;disk2&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;test1&quot;</span><span class="p">,</span>
+    <span class="n">host_name</span><span class="o">=</span><span class="s2">&quot;tf-test-host&quot;</span><span class="p">,</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="n">images</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">instance_charge_type</span><span class="o">=</span><span class="s2">&quot;PrePaid&quot;</span><span class="p">,</span>
+    <span class="n">instance_name</span><span class="o">=</span><span class="s2">&quot;tf-instance-name&quot;</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="n">instances</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;instance_type&quot;</span><span class="p">],</span>
+    <span class="n">internet_charge_type</span><span class="o">=</span><span class="s2">&quot;PayByBandwidth&quot;</span><span class="p">,</span>
+    <span class="n">internet_max_bandwidth_in</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">internet_max_bandwidth_out</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">io_optimized</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">,</span>
+    <span class="n">key_pair_name</span><span class="o">=</span><span class="s2">&quot;test-key-pair&quot;</span><span class="p">,</span>
+    <span class="n">network_interfaces</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;hello1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;eth0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;primaryIp&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.0.2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;securityGroupId&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxx&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;vswitchId&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxx&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">network_type</span><span class="o">=</span><span class="s2">&quot;vpc&quot;</span><span class="p">,</span>
+    <span class="n">ram_role_name</span><span class="o">=</span><span class="s2">&quot;xxxxx&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_id</span><span class="o">=</span><span class="s2">&quot;rg-zkdfjahg9zxncv0&quot;</span><span class="p">,</span>
+    <span class="n">security_enhancement_strategy</span><span class="o">=</span><span class="s2">&quot;Active&quot;</span><span class="p">,</span>
+    <span class="n">security_group_id</span><span class="o">=</span><span class="s2">&quot;sg-zxcvj0lasdf102350asdf9a&quot;</span><span class="p">,</span>
+    <span class="n">spot_price_limit</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">spot_strategy</span><span class="o">=</span><span class="s2">&quot;SpotWithPriceLimit&quot;</span><span class="p">,</span>
+    <span class="n">system_disk_category</span><span class="o">=</span><span class="s2">&quot;cloud_ssd&quot;</span><span class="p">,</span>
+    <span class="n">system_disk_description</span><span class="o">=</span><span class="s2">&quot;test disk&quot;</span><span class="p">,</span>
+    <span class="n">system_disk_name</span><span class="o">=</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span>
+    <span class="n">system_disk_size</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tag1&quot;</span><span class="p">:</span> <span class="s2">&quot;hello&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tag2&quot;</span><span class="p">:</span> <span class="s2">&quot;world&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">userdata</span><span class="o">=</span><span class="s2">&quot;xxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="s2">&quot;vpc-asdfnbg0as8dfk1nb2&quot;</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="s2">&quot;sw-ljkngaksdjfj0nnasdf&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;beijing-a&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3599,6 +3770,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.65.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">ReservedInstance</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;ecs.g6.large&quot;</span><span class="p">,</span>
+    <span class="n">instance_amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="n">period_unit</span><span class="o">=</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span>
+    <span class="n">offering_type</span><span class="o">=</span><span class="s2">&quot;All Upfront&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;ReservedInstance&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;cn-shanghai-g&quot;</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="s2">&quot;Zone&quot;</span><span class="p">,</span>
+    <span class="n">period</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4046,6 +4231,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">Snapshot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.Snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an ECS snapshot resource.</p>
 <p>For information about snapshot and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/25460.html">Snapshot</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">snapshot</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">Snapshot</span><span class="p">(</span><span class="s2">&quot;snapshot&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;this snapshot is created for testing&quot;</span><span class="p">,</span>
+    <span class="n">disk_id</span><span class="o">=</span><span class="n">alicloud_disk_attachment</span><span class="p">[</span><span class="s2">&quot;instance-attachment&quot;</span><span class="p">][</span><span class="s2">&quot;disk_id&quot;</span><span class="p">],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4150,6 +4346,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.42.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">sp</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">SnapshotPolicy</span><span class="p">(</span><span class="s2">&quot;sp&quot;</span><span class="p">,</span>
+    <span class="n">repeat_weekdays</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">retention_days</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">time_points</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;22&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;23&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4300,6 +4513,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ecs.get_disks">
 <code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">get_disks</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">category</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encrypted</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.get_disks" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the disks of the current Alibaba Cloud user.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">disks_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_disks</span><span class="p">(</span><span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;sample_disk&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstDiskId&quot;</span><span class="p">,</span> <span class="n">disks_ds</span><span class="o">.</span><span class="n">disks</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4334,6 +4554,13 @@ tagKey2 = &quot;tagValue2&quot;
 <dt id="pulumi_alicloud.ecs.get_eips">
 <code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">get_eips</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">in_use</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.get_eips" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of EIPs (Elastic IP address) owned by an Alibaba Cloud account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">eips_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_eips</span><span class="p">()</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstEipId&quot;</span><span class="p">,</span> <span class="n">eips_ds</span><span class="o">.</span><span class="n">eips</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4352,6 +4579,14 @@ tagKey2 = &quot;tagValue2&quot;
 <code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">get_images</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">most_recent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owners</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.get_images" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides available image resources. It contains user’s private images, system images provided by Alibaba Cloud, 
 other public images and the ones available on the image market.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">images_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_images</span><span class="p">(</span><span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;^centos_6&quot;</span><span class="p">,</span>
+    <span class="n">owners</span><span class="o">=</span><span class="s2">&quot;system&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstImageId&quot;</span><span class="p">,</span> <span class="n">images_ds</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4391,6 +4626,14 @@ other public images and the ones available on the image market.</p>
 <div><p><strong>NOTE:</strong> By default, only the upgraded instance types are returned. If you want to get outdated instance types, you must set <code class="docutils literal notranslate"><span class="pre">is_outdated</span></code> to true.</p>
 <p><strong>NOTE:</strong> If one instance type is sold out, it will not be exported.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">types_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_instance_types</span><span class="p">(</span><span class="n">cpu_core_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">memory_size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">instance</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span> <span class="n">instance_type</span><span class="o">=</span><span class="n">types_ds</span><span class="o">.</span><span class="n">instance_types</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4414,6 +4657,15 @@ other public images and the ones available on the image market.</p>
 <dt id="pulumi_alicloud.ecs.get_instances">
 <code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">get_instances</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ram_role_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vswitch_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.get_instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Instances data source list ECS instance resources according to their ID, name regex, image id, status and other fields.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">instances_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_instances</span><span class="p">(</span><span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;web_server&quot;</span><span class="p">,</span>
+    <span class="n">status</span><span class="o">=</span><span class="s2">&quot;Running&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstInstanceId&quot;</span><span class="p">,</span> <span class="n">instances_ds</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;instanceIds&quot;</span><span class="p">,</span> <span class="n">instances_ds</span><span class="o">.</span><span class="n">ids</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4452,6 +4704,14 @@ tagKey2 = &quot;tagValue2&quot;
 <dt id="pulumi_alicloud.ecs.get_key_pairs">
 <code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">get_key_pairs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">finger_print</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.get_key_pairs" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of key pairs in an Alibaba Cloud account according to the specified filters.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="c1"># Declare the data source</span>
+<span class="n">default_key_pair</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">KeyPair</span><span class="p">(</span><span class="s2">&quot;defaultKeyPair&quot;</span><span class="p">,</span> <span class="n">key_name</span><span class="o">=</span><span class="s2">&quot;keyPairDatasource&quot;</span><span class="p">)</span>
+<span class="n">default_key_pairs</span> <span class="o">=</span> <span class="n">default_key_pair</span><span class="o">.</span><span class="n">key_name</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">key_name</span><span class="p">:</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_key_pairs</span><span class="p">(</span><span class="n">name_regex</span><span class="o">=</span><span class="n">key_name</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4470,6 +4730,54 @@ tagKey2 = &quot;tagValue2&quot;
 <code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">get_network_interfaces</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vswitch_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.get_network_interfaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get a list of elastic network interfaces according to the specified filters in an Alibaba Cloud account.</p>
 <p>For information about elastic network interface and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/58496.html">Elastic Network Interface</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;networkInterfacesName&quot;</span>
+<span class="n">vpc</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;vpc&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;192.168.0.0/24&quot;</span><span class="p">)</span>
+<span class="n">default_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_resource_creation</span><span class="o">=</span><span class="s2">&quot;VSwitch&quot;</span><span class="p">)</span>
+<span class="n">vswitch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;vswitch&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;192.168.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span> <span class="n">vpc_id</span><span class="o">=</span><span class="n">vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">interface</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">NetworkInterface</span><span class="p">(</span><span class="s2">&quot;interface&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Basic test&quot;</span><span class="p">,</span>
+    <span class="n">private_ip</span><span class="o">=</span><span class="s2">&quot;192.168.0.2&quot;</span><span class="p">,</span>
+    <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span><span class="n">group</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;TF-VER&quot;</span><span class="p">:</span> <span class="s2">&quot;0.11.3&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="n">vswitch</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">instance</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="s2">&quot;centos_7_04_64_20G_alibase_201701015.vhd&quot;</span><span class="p">,</span>
+    <span class="n">instance_name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;ecs.e3.xlarge&quot;</span><span class="p">,</span>
+    <span class="n">internet_max_bandwidth_out</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span><span class="n">group</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">system_disk_category</span><span class="o">=</span><span class="s2">&quot;cloud_efficiency&quot;</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="n">vswitch</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">attachment</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">NetworkInterfaceAttachment</span><span class="p">(</span><span class="s2">&quot;attachment&quot;</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">network_interface_id</span><span class="o">=</span><span class="n">interface</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_network_interfaces</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">attachment</span><span class="o">.</span><span class="n">network_interface_id</span><span class="p">,</span> <span class="n">instance</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">vpc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">vswitch</span><span class="o">.</span><span class="n">id</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">network_interface_id</span><span class="p">,</span> <span class="n">instanceId</span><span class="p">,</span> <span class="n">groupId</span><span class="p">,</span> <span class="n">vpcId</span><span class="p">,</span> <span class="n">vswitchId</span><span class="p">:</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_network_interfaces</span><span class="p">(</span><span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="n">network_interface_id</span><span class="p">],</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">instance_id</span><span class="p">,</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;tf-testAccNetworkInterfacesBasic</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">private_ip</span><span class="o">=</span><span class="s2">&quot;192.168.0.2&quot;</span><span class="p">,</span>
+    <span class="n">security_group_id</span><span class="o">=</span><span class="n">group_id</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;TF-VER&quot;</span><span class="p">:</span> <span class="s2">&quot;0.11.3&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;Secondary&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">vpc_id</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="n">vswitch_id</span><span class="p">))</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;eni0Name&quot;</span><span class="p">,</span> <span class="n">default_network_interfaces</span><span class="o">.</span><span class="n">interfaces</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ids</span></code> - (Optional)  A list of ENI IDs.</p></li>
@@ -4505,6 +4813,20 @@ tagKey2 = &quot;tagValue2&quot;
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">ecs.getSecurityGroupRules</span></code> data source provides a collection of security permissions of a specific security group.
 Each collection item represents a single <code class="docutils literal notranslate"><span class="pre">ingress</span></code> or <code class="docutils literal notranslate"><span class="pre">egress</span></code> permission rule.
 The ID of the security group can be provided via a variable or the result from the other data source <code class="docutils literal notranslate"><span class="pre">ecs.getSecurityGroups</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">security_group_id</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">require_object</span><span class="p">(</span><span class="s2">&quot;securityGroupId&quot;</span><span class="p">)</span>
+<span class="n">groups_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_security_groups</span><span class="p">(</span><span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;api&quot;</span><span class="p">)</span>
+<span class="n">ingress_rules_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_security_group_rules</span><span class="p">(</span><span class="n">direction</span><span class="o">=</span><span class="s2">&quot;ingress&quot;</span><span class="p">,</span>
+    <span class="n">group_id</span><span class="o">=</span><span class="n">groups_ds</span><span class="o">.</span><span class="n">groups</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">ip_protocol</span><span class="o">=</span><span class="s2">&quot;TCP&quot;</span><span class="p">,</span>
+    <span class="n">nic_type</span><span class="o">=</span><span class="s2">&quot;internet&quot;</span><span class="p">)</span>
+<span class="c1"># Pass port_range to the backend service</span>
+<span class="n">backend</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;backend&quot;</span><span class="p">,</span> <span class="n">user_data</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;config_service.sh --portrange=</span><span class="si">{</span><span class="n">ingress_rules_ds</span><span class="o">.</span><span class="n">rules</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;port_range&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4522,6 +4844,17 @@ The ID of the security group can be provided via a variable or the result from t
 <dt id="pulumi_alicloud.ecs.get_security_groups">
 <code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">get_security_groups</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.get_security_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of Security Groups in an Alibaba Cloud account according to the specified filters.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">sec_groups_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_security_groups</span><span class="p">(</span><span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;^web-&quot;</span><span class="p">,</span>
+    <span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;web_access.json&quot;</span><span class="p">)</span>
+<span class="c1"># In conjunction with a VPC</span>
+<span class="n">primary_vpc_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;primaryVpcDs&quot;</span><span class="p">)</span>
+<span class="n">primary_sec_groups_ds</span> <span class="o">=</span> <span class="n">primary_vpc_ds</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="nb">id</span><span class="p">:</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_security_groups</span><span class="p">(</span><span class="n">vpc_id</span><span class="o">=</span><span class="nb">id</span><span class="p">))</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstGroupId&quot;</span><span class="p">,</span> <span class="n">primary_sec_groups_ds</span><span class="o">.</span><span class="n">groups</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4557,6 +4890,13 @@ tagKey2 = &quot;tagValue2&quot;
 <blockquote>
 <div><p><strong>NOTE:</strong>  Available in 1.40.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">snapshots</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_snapshots</span><span class="p">(</span><span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;s-123456890abcdef&quot;</span><span class="p">],</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;tf-testAcc-snapshot&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The following arguments are supported:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">instance_id</span></code> - (Optional) The specified instance ID.</p></li>

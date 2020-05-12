@@ -30,7 +30,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+sasl_acls_ds = alicloud.actiontrail.get_sasl_acls(acl_resource_name="testTopic",
+    acl_resource_type="Topic",
+    instance_id="xxx",
+    output_file="saslAcls.txt",
+    username="username")
+pulumi.export("firstSaslAclUsername", sasl_acls_ds.acls[0]["username"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

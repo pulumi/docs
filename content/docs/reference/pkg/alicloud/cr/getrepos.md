@@ -30,7 +30,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+my_repos = alicloud.cr.get_repos(name_regex="my-repos",
+    output_file="my-repo-json")
+pulumi.export("output", my_repos.repos)
+```
 {{% /example %}}
 
 {{% example typescript %}}

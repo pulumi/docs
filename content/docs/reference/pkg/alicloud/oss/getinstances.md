@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instances_ds = alicloud.oss.get_instances(name_regex="sample-instance",
+    output_file="instances.txt")
+pulumi.export("firstInstanceId", instances_ds.instances[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

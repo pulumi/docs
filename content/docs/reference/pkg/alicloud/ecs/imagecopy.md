@@ -36,7 +36,19 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default = alicloud.ecs.ImageCopy("default",
+    description="test-image",
+    image_name="test-image",
+    source_image_id="m-bp1gxyhdswlsn18tu***",
+    source_region_id="cn-hangzhou",
+    tags={
+        "FinanceDept": "FinanceDeptJoshua",
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}

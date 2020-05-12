@@ -1485,7 +1485,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-required"
             title="Required">
-        <span>expire<wbr>Time</span>
+        <span>expire_<wbr>time</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

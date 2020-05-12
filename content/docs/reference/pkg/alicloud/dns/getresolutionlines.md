@@ -30,7 +30,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+resolution_lines_ds = alicloud.dns.get_resolution_lines(line_codes=["cn_unicom_shanxi"],
+    output_file="support_lines.txt")
+pulumi.export("firstLineCode", resolution_lines_ds.lines[0]["lineCode"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

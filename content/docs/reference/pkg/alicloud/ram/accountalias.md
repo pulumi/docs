@@ -29,7 +29,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+# Create a alias for cloud account.
+alias = alicloud.ram.AccountAlias("alias", account_alias="hallo")
+```
 {{% /example %}}
 
 {{% example typescript %}}

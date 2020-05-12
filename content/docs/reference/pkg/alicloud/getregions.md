@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+current_region_ds = alicloud.get_regions(current=True)
+pulumi.export("currentRegionId", current_region_ds.regions[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

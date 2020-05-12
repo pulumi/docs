@@ -30,7 +30,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+sample_ds = alicloud.slb.get_master_slave_server_groups(load_balancer_id=alicloud_slb["sample_slb"]["id"])
+pulumi.export("firstSlbServerGroupId", sample_ds.groups[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

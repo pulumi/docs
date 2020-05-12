@@ -30,7 +30,34 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+import pulumi_pulumi as pulumi
+
+# Create a new instance-grant and use it to grant one child instance of account1 to a new CEN of account 2.
+account1 = pulumi.providers.Alicloud("account1",
+    access_key="access123",
+    secret_key="secret123")
+account2 = pulumi.providers.Alicloud("account2",
+    access_key="access456",
+    secret_key="secret456")
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "tf-testAccCenInstanceGrantBasic"
+cen = alicloud.cen.Instance("cen")
+vpc = alicloud.vpc.Network("vpc", cidr_block="192.168.0.0/16")
+foo_instance_grant = alicloud.cen.InstanceGrant("fooInstanceGrant",
+    cen_id=cen.id,
+    cen_owner_id="uid2",
+    child_instance_id=vpc.id)
+foo_instance_attachment = alicloud.cen.InstanceAttachment("fooInstanceAttachment",
+    child_instance_id=vpc.id,
+    child_instance_owner_id="uid1",
+    child_instance_region_id="cn-qingdao",
+    instance_id=cen.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

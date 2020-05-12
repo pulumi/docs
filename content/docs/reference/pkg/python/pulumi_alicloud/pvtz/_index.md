@@ -441,6 +441,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.pvtz.get_zone_records">
 <code class="sig-prename descclassname">pulumi_alicloud.pvtz.</code><code class="sig-name descname">get_zone_records</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keyword</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.get_zone_records" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides Private Zone Records resource information owned by an Alibaba Cloud account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">records_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">pvtz</span><span class="o">.</span><span class="n">get_zone_records</span><span class="p">(</span><span class="n">keyword</span><span class="o">=</span><span class="n">alicloud_pvtz_zone_record</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">],</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">alicloud_pvtz_zone</span><span class="p">[</span><span class="s2">&quot;basic&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstRecordId&quot;</span><span class="p">,</span> <span class="n">records_ds</span><span class="o">.</span><span class="n">records</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -456,6 +464,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.pvtz.get_zones">
 <code class="sig-prename descclassname">pulumi_alicloud.pvtz.</code><code class="sig-name descname">get_zones</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keyword</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.get_zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source lists a number of Private Zones resource information owned by an Alibaba Cloud account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">pvtz_zones_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">pvtz</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">keyword</span><span class="o">=</span><span class="n">alicloud_pvtz_zone</span><span class="p">[</span><span class="s2">&quot;basic&quot;</span><span class="p">][</span><span class="s2">&quot;zone_name&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstZoneId&quot;</span><span class="p">,</span> <span class="n">pvtz_zones_ds</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

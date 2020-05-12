@@ -28,7 +28,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+scalinggroups_ds = alicloud.ess.get_scaling_groups(ids=[
+        "scaling_group_id1",
+        "scaling_group_id2",
+    ],
+    name_regex="scaling_group_name")
+pulumi.export("firstScalingGroup", scalinggroups_ds.groups[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

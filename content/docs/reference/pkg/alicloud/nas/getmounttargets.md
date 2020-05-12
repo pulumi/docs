@@ -30,7 +30,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+mt = alicloud.nas.get_mount_targets(access_group_name="tf-testAccNasConfig",
+    file_system_id="1a2sc4d")
+pulumi.export("alicloudNasMountTargetsId", mt.targets[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

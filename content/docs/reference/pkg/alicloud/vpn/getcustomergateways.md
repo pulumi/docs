@@ -28,7 +28,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+foo = alicloud.vpn.get_customer_gateways(ids=[
+        "fake-id1",
+        "fake-id2",
+    ],
+    name_regex="testAcc*",
+    output_file="/tmp/cgws")
+```
 {{% /example %}}
 
 {{% example typescript %}}

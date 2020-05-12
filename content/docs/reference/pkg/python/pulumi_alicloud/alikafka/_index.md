@@ -22,6 +22,31 @@ anything, please consult the source <a class="reference external" href="https://
 <p><strong>NOTE:</strong>  Only the following regions support create alikafka consumer group.
 [<code class="docutils literal notranslate"><span class="pre">cn-hangzhou</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-beijing</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shenzhen</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shanghai</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-qingdao</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-hongkong</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-huhehaote</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-zhangjiakou</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-1</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-south-1</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-5</span></code>]</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">consumer_id</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;consumerId&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">consumer_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">consumer_id</span> <span class="o">=</span> <span class="s2">&quot;CID-alikafkaGroupDatasourceName&quot;</span>
+<span class="n">default_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_resource_creation</span><span class="o">=</span><span class="s2">&quot;VSwitch&quot;</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/12&quot;</span><span class="p">)</span>
+<span class="n">default_switch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;defaultSwitch&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_instance</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">alikafka</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;defaultInstance&quot;</span><span class="p">,</span>
+    <span class="n">deploy_type</span><span class="o">=</span><span class="s2">&quot;5&quot;</span><span class="p">,</span>
+    <span class="n">disk_size</span><span class="o">=</span><span class="s2">&quot;500&quot;</span><span class="p">,</span>
+    <span class="n">disk_type</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="n">io_max</span><span class="o">=</span><span class="s2">&quot;20&quot;</span><span class="p">,</span>
+    <span class="n">topic_quota</span><span class="o">=</span><span class="s2">&quot;50&quot;</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_consumer_group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">alikafka</span><span class="o">.</span><span class="n">ConsumerGroup</span><span class="p">(</span><span class="s2">&quot;defaultConsumerGroup&quot;</span><span class="p">,</span>
+    <span class="n">consumer_id</span><span class="o">=</span><span class="n">consumer_id</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">default_instance</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -120,6 +145,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong> Only the following regions support create alikafka post paid instance.
 [<code class="docutils literal notranslate"><span class="pre">cn-hangzhou</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-beijing</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shenzhen</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shanghai</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-qingdao</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-hongkong</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-huhehaote</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-zhangjiakou</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-1</span></code>]</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">instance_name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;instanceName&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">instance_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">instance_name</span> <span class="o">=</span> <span class="s2">&quot;alikafkaInstanceName&quot;</span>
+<span class="n">default_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_resource_creation</span><span class="o">=</span><span class="s2">&quot;VSwitch&quot;</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/12&quot;</span><span class="p">)</span>
+<span class="n">default_switch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;defaultSwitch&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_instance</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">alikafka</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;defaultInstance&quot;</span><span class="p">,</span>
+    <span class="n">deploy_type</span><span class="o">=</span><span class="s2">&quot;4&quot;</span><span class="p">,</span>
+    <span class="n">disk_size</span><span class="o">=</span><span class="s2">&quot;500&quot;</span><span class="p">,</span>
+    <span class="n">disk_type</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="n">io_max</span><span class="o">=</span><span class="s2">&quot;20&quot;</span><span class="p">,</span>
+    <span class="n">topic_quota</span><span class="o">=</span><span class="s2">&quot;50&quot;</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -293,6 +340,46 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong>  Only the following regions support create alikafka sasl user.
 [<code class="docutils literal notranslate"><span class="pre">cn-hangzhou</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-beijing</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shenzhen</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shanghai</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-qingdao</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-hongkong</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-huhehaote</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-zhangjiakou</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-1</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-south-1</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-5</span></code>]</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">username</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;username&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">username</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;testusername&quot;</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;password&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">password</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;testpassword&quot;</span>
+<span class="n">default_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_resource_creation</span><span class="o">=</span><span class="s2">&quot;VSwitch&quot;</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/12&quot;</span><span class="p">)</span>
+<span class="n">default_switch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;defaultSwitch&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_instance</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">alikafka</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;defaultInstance&quot;</span><span class="p">,</span>
+    <span class="n">deploy_type</span><span class="o">=</span><span class="s2">&quot;5&quot;</span><span class="p">,</span>
+    <span class="n">disk_size</span><span class="o">=</span><span class="s2">&quot;500&quot;</span><span class="p">,</span>
+    <span class="n">disk_type</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="n">io_max</span><span class="o">=</span><span class="s2">&quot;20&quot;</span><span class="p">,</span>
+    <span class="n">topic_quota</span><span class="o">=</span><span class="s2">&quot;50&quot;</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_topic</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">alikafka</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;defaultTopic&quot;</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">default_instance</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">remark</span><span class="o">=</span><span class="s2">&quot;topic-remark&quot;</span><span class="p">,</span>
+    <span class="n">topic</span><span class="o">=</span><span class="s2">&quot;test-topic&quot;</span><span class="p">)</span>
+<span class="n">default_sasl_user</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">alikafka</span><span class="o">.</span><span class="n">SaslUser</span><span class="p">(</span><span class="s2">&quot;defaultSaslUser&quot;</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">default_instance</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">)</span>
+<span class="n">default_sasl_acl</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">alikafka</span><span class="o">.</span><span class="n">SaslAcl</span><span class="p">(</span><span class="s2">&quot;defaultSaslAcl&quot;</span><span class="p">,</span>
+    <span class="n">acl_operation_type</span><span class="o">=</span><span class="s2">&quot;Write&quot;</span><span class="p">,</span>
+    <span class="n">acl_resource_name</span><span class="o">=</span><span class="n">default_topic</span><span class="o">.</span><span class="n">topic</span><span class="p">,</span>
+    <span class="n">acl_resource_pattern_type</span><span class="o">=</span><span class="s2">&quot;LITERAL&quot;</span><span class="p">,</span>
+    <span class="n">acl_resource_type</span><span class="o">=</span><span class="s2">&quot;Topic&quot;</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">default_instance</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">default_sasl_user</span><span class="o">.</span><span class="n">username</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -419,6 +506,35 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong>  Only the following regions support create alikafka sasl user.
 [<code class="docutils literal notranslate"><span class="pre">cn-hangzhou</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-beijing</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shenzhen</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shanghai</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-qingdao</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-hongkong</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-huhehaote</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-zhangjiakou</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-1</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-south-1</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-5</span></code>]</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">username</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;username&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">username</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;testusername&quot;</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;password&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">password</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;testpassword&quot;</span>
+<span class="n">default_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_resource_creation</span><span class="o">=</span><span class="s2">&quot;VSwitch&quot;</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/12&quot;</span><span class="p">)</span>
+<span class="n">default_switch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;defaultSwitch&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_instance</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">alikafka</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;defaultInstance&quot;</span><span class="p">,</span>
+    <span class="n">deploy_type</span><span class="o">=</span><span class="s2">&quot;5&quot;</span><span class="p">,</span>
+    <span class="n">disk_size</span><span class="o">=</span><span class="s2">&quot;500&quot;</span><span class="p">,</span>
+    <span class="n">disk_type</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="n">io_max</span><span class="o">=</span><span class="s2">&quot;20&quot;</span><span class="p">,</span>
+    <span class="n">topic_quota</span><span class="o">=</span><span class="s2">&quot;50&quot;</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_sasl_user</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">alikafka</span><span class="o">.</span><span class="n">SaslUser</span><span class="p">(</span><span class="s2">&quot;defaultSaslUser&quot;</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">default_instance</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -531,6 +647,35 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong>  Only the following regions support create alikafka topic.
 [<code class="docutils literal notranslate"><span class="pre">cn-hangzhou</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-beijing</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shenzhen</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shanghai</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-qingdao</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-hongkong</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-huhehaote</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-zhangjiakou</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-1</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-south-1</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-5</span></code>]</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_resource_creation</span><span class="o">=</span><span class="s2">&quot;VSwitch&quot;</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/12&quot;</span><span class="p">)</span>
+<span class="n">default_switch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;defaultSwitch&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_instance</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">alikafka</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;defaultInstance&quot;</span><span class="p">,</span>
+    <span class="n">deploy_type</span><span class="o">=</span><span class="s2">&quot;5&quot;</span><span class="p">,</span>
+    <span class="n">disk_size</span><span class="o">=</span><span class="s2">&quot;500&quot;</span><span class="p">,</span>
+    <span class="n">disk_type</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="n">io_max</span><span class="o">=</span><span class="s2">&quot;20&quot;</span><span class="p">,</span>
+    <span class="n">topic_quota</span><span class="o">=</span><span class="s2">&quot;50&quot;</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">topic</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;topic&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">topic</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">topic</span> <span class="o">=</span> <span class="s2">&quot;alikafkaTopicName&quot;</span>
+<span class="n">default_topic</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">alikafka</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;defaultTopic&quot;</span><span class="p">,</span>
+    <span class="n">compact_topic</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">default_instance</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">local_topic</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="p">,</span>
+    <span class="n">partition_num</span><span class="o">=</span><span class="s2">&quot;12&quot;</span><span class="p">,</span>
+    <span class="n">remark</span><span class="o">=</span><span class="s2">&quot;dafault_kafka_topic_remark&quot;</span><span class="p">,</span>
+    <span class="n">topic</span><span class="o">=</span><span class="n">topic</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

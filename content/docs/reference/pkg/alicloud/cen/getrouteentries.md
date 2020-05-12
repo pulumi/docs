@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+entry = alicloud.cen.get_route_entries(instance_id="cen-id1",
+    route_table_id="vtb-id1")
+pulumi.export("firstRouteEntriesRouteEntryCidrBlock", entry.entries[0]["cidr_block"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

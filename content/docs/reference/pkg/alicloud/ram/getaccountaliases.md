@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+alias_ds = alicloud.ram.get_account_aliases(output_file="alias.txt")
+pulumi.export("accountAlias", alias_ds.account_alias)
+```
 {{% /example %}}
 
 {{% example typescript %}}

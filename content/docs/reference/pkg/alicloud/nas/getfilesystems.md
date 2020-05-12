@@ -30,7 +30,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+fs = alicloud.nas.get_file_systems(description=alicloud_nas_file_system["foo"]["description"],
+    protocol_type="NFS")
+pulumi.export("alicloudNasFileSystemsId", fs.systems[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

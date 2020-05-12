@@ -30,7 +30,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+ag = alicloud.nas.get_access_groups(description="tf-testAccAccessGroupsdatasource",
+    name_regex="^foo",
+    type="Classic")
+pulumi.export("alicloudNasAccessGroupsId", ag.groups[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

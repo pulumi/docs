@@ -32,7 +32,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+types_ds = alicloud.ecs.get_instance_types(cpu_core_count=1,
+    memory_size=2)
+instance = alicloud.ecs.Instance("instance", instance_type=types_ds.instance_types[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

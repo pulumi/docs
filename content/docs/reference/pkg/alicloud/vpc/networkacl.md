@@ -30,7 +30,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/12")
+default_network_acl = alicloud.vpc.NetworkAcl("defaultNetworkAcl",
+    description="network_acl",
+    vpc_id=default_network.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -16,40 +16,14 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_alicloud.slb"></span><dl class="py class">
 <dt id="pulumi_alicloud.slb.Acl">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">Acl</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entry_lists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.Acl" title="Permalink to this definition">¶</a></dt>
-<dd><p>An access control list contains multiple IP addresses or CIDR blocks.
-The access control list can help you to define multiple instance listening dimension,
-and to meet the multiple usage for single access control list.</p>
-<p>Server Load Balancer allows you to configure access control for listeners.
-You can configure different whitelists or blacklists for different listeners.</p>
-<p>You can configure access control
-when you create a listener or change access control configuration after a listener is created.</p>
-<blockquote>
-<div><p><strong>NOTE:</strong> One access control list can be attached to many Listeners in different load balancer as whitelists or blacklists.</p>
-<p><strong>NOTE:</strong> The maximum number of access control lists per region  is 50.</p>
-<p><strong>NOTE:</strong> The maximum number of IP addresses added each time is 50.</p>
-<p><strong>NOTE:</strong> The maximum number of entries per access control list is 300.</p>
-<p><strong>NOTE:</strong> The maximum number of listeners that an access control list can be added to is 50.</p>
-</div></blockquote>
-<p>For information about slb and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/27539.htm">What is Server Load Balancer</a>.</p>
-<p>For information about acl and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/85978.htm">Configure an access control list</a>.</p>
-<p>The entry mapping supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">entry</span></code> - (Required) An IP addresses or CIDR blocks.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code> - (Optional) the comment of the entry.</p></li>
-</ul>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>entry_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of entry (IP addresses or CIDR blocks) to be added. At most 50 etnry can be supported in one resource. It contains two sub-fields as <code class="docutils literal notranslate"><span class="pre">Entry</span> <span class="pre">Block</span></code> follows.</p></li>
-<li><p><strong>ip_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP Version of access control list is the type of its entry (IP addresses or CIDR blocks). It values ipv4/ipv6. Our plugin provides a default ip_version: “ipv4”.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the access control list.</p></li>
-<li><p><strong>resource_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource group ID.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Acl resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] entry_lists: A list of entry (IP addresses or CIDR blocks) to be added. At most 50 etnry can be supported in one resource. It contains two sub-fields as <code class="docutils literal notranslate"><span class="pre">Entry</span> <span class="pre">Block</span></code> follows.
+:param pulumi.Input[str] ip_version: The IP Version of access control list is the type of its entry (IP addresses or CIDR blocks). It values ipv4/ipv6. Our plugin provides a default ip_version: “ipv4”.
+:param pulumi.Input[str] name: Name of the access control list.
+:param pulumi.Input[str] resource_group_id: Resource group ID.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
 <p>The <strong>entry_lists</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -328,6 +302,55 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.53.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;slbbackendservertest&quot;</span>
+<span class="n">default_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_disk_category</span><span class="o">=</span><span class="s2">&quot;cloud_efficiency&quot;</span><span class="p">,</span>
+    <span class="n">available_resource_creation</span><span class="o">=</span><span class="s2">&quot;VSwitch&quot;</span><span class="p">)</span>
+<span class="n">default_instance_types</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_instance_types</span><span class="p">(</span><span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cpu_core_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">memory_size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">default_images</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_images</span><span class="p">(</span><span class="n">most_recent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;^ubuntu_18.*64&quot;</span><span class="p">,</span>
+    <span class="n">owners</span><span class="o">=</span><span class="s2">&quot;system&quot;</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">default_switch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;defaultSwitch&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_security_group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;defaultSecurityGroup&quot;</span><span class="p">,</span> <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_instance</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="nb">range</span> <span class="ow">in</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]:</span>
+    <span class="n">default_instance</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;defaultInstance-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="n">image_id</span><span class="o">=</span><span class="n">default_images</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="n">instance_charge_type</span><span class="o">=</span><span class="s2">&quot;PostPaid&quot;</span><span class="p">,</span>
+        <span class="n">instance_name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">instance_type</span><span class="o">=</span><span class="n">default_instance_types</span><span class="o">.</span><span class="n">instance_types</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="n">internet_charge_type</span><span class="o">=</span><span class="s2">&quot;PayByTraffic&quot;</span><span class="p">,</span>
+        <span class="n">internet_max_bandwidth_out</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">,</span>
+        <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span><span class="n">__item</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="p">[</span><span class="n">default_security_group</span><span class="p">]],</span>
+        <span class="n">system_disk_category</span><span class="o">=</span><span class="s2">&quot;cloud_efficiency&quot;</span><span class="p">,</span>
+        <span class="n">vswitch_id</span><span class="o">=</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+<span class="n">default_load_balancer</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;defaultLoadBalancer&quot;</span><span class="p">,</span> <span class="n">vswitch_id</span><span class="o">=</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_backend_server</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">BackendServer</span><span class="p">(</span><span class="s2">&quot;defaultBackendServer&quot;</span><span class="p">,</span>
+    <span class="n">backend_servers</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;serverId&quot;</span><span class="p">:</span> <span class="n">default_instance</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;serverId&quot;</span><span class="p">:</span> <span class="n">default_instance</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">load_balancer_id</span><span class="o">=</span><span class="n">default_load_balancer</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The servers mapping supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">server_id</span></code> - (Required) A list backend server ID (ECS instance ID).</p></li>
@@ -443,6 +466,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A Load Balancer CA Certificate is used by the listener of the protocol https.</p>
 <p>For information about slb and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/27539.htm">What is Server Load Balancer</a>.</p>
 <p>For information about CA Certificate and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/85968.htm">Configure CA Certificate</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="c1"># create a CA certificate</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">CaCertificate</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="n">ca_certificate</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;-----BEGIN CERTIFICATE-----</span>
+<span class="s2">MIIDRjCCAq+gAwIBAgIJAJnI******90EAxEG/bJJyOm5LqoiA=</span>
+<span class="s2">-----END CERTIFICATE-----</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -546,6 +579,89 @@ Please refer to the <a class="reference external" href="https://www.alibabacloud
 <div><p><strong>NOTE:</strong> Available in 1.60.0+</p>
 <p><strong>NOTE:</strong> The instance with shared loadBalancerSpec doesn’t support domainExtension.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">instance</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span>
+    <span class="n">internet</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="n">internet_charge_type</span><span class="o">=</span><span class="s2">&quot;PayByTraffic&quot;</span><span class="p">)</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">ServerCertificate</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">private_key</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;-----BEGIN RSA PRIVATE KEY-----</span>
+<span class="s2">MIIEowIBAAKCAQEAyjCheapjf7qDI3R9w/Gj0XFDgNLPK2aWIRvM25BdY/IB2KAf</span>
+<span class="s2">xQ7zOxu3X1bMo2zMCzsSrwIVrxx0qRM/7e4AfkHcKwDIjCcBprQp164dhFol4GpT</span>
+<span class="s2">HtcuGv0+Ue6vpuE9cxQE3/pG5x1n5EhheFu2+lAaGh/vUrUPeQp6szX/9qfzn+/k</span>
+<span class="s2">tF8wsRV8PBiFc2ZNMRXupRyc2qtOn95r86w/uK6TuerU1L64E2P5+tYLBWT+39Ai</span>
+<span class="s2">diUIenjURThFEn8Srvw8v/iLEMaKwiWNkOfWQH96166gzddOI8PT5cJy5an2c90T</span>
+<span class="s2">DgzegVo8RPK70bU9KjH7gH79YIwXVmTdIVGAUQIDAQABAoIBAE1J4a/8biR5S3/W</span>
+<span class="s2">G+03BYQeY8tuyjqw8FqfoeOcf9agwAvqybouSNQjeCk9qOQfxq/UWQQFK/zQR9gJ</span>
+<span class="s2">v7pX7GBXFK5rkj3g+0SaQhRsPmRFgY0Tl8qGPt2aSKRRNVv5ZeADmwlzRn86QmiF</span>
+<span class="s2">Mp0rkfqFfDTYWEepZszCML0ouzuxsW/9tq7rvtSjsgATNt31B3vFa3D3JBi31jUh</span>
+<span class="s2">5nfR9A3bATze7mQw3byEDiVl5ASRDgYyur403P1fDnMy9DBHZ8NaPOsFF6OBpJal</span>
+<span class="s2">BJsG5z00hll5PFN2jfmBQKlvAeU7wfwqdaSnGHOfqf2DeTTaFjIQ4gUhRn/m6pLo</span>
+<span class="s2">6kXttLECgYEA9sng0Qz/TcPFfM4tQ1gyvB1cKnnGIwg1FP8sfUjbbEgjaHhA224S</span>
+<span class="s2">k3BxtX2Kq6fhTXuwusAFc6OVMAZ76FgrQ5K4Ci7+DTsrF28z4b8td+p+lO/DxgP9</span>
+<span class="s2">lTgN+ddsiTOV4fUef9Z3yY0Zr0CnBUMbQYRaV2UIbCdiB0G4V/bt9TsCgYEA0bya</span>
+<span class="s2">Oo9wGI0RJV0bYP7qwO74Ra1/i1viWbRlS7jU37Q+AZstrlKcQ5CTPzOjKFKMiUzl</span>
+<span class="s2">4miWacZ0/q2n+Mvd7NbXGXTLijahnyOYKaHJYyh4oBymfkgAifRstE0Ki9gdvArb</span>
+<span class="s2">/I+emC0GvLSyfGN8UUeDJs4NmqdEXGqjo2JOV+MCgYALFv1MR5o9Y1u/hQBRs2fs</span>
+<span class="s2">PiGDIx+9OUQxYloccyaxEfjNXAIGGkcpavchIbgWiJ++PJ2vdquIC8TLeK8evL+M</span>
+<span class="s2">9M3iX0Q5UfxYvD2HmnCvn9D6Xl/cyRcfGnq+TGjrLW9BzSMGuZt+aiHKV0xqFx7l</span>
+<span class="s2">bc4leTvMqGRmURS4lzcQOwKBgQCDzA/i4sYfN25h21tcHXSpnsG3D2rJyQi5NCo/</span>
+<span class="s2">ZjunA92/JqOTGuiFcLGHEszhhtY3ZXJET1LNz18vtzKJnpqrvOnYXlOVW/U+SqDQ</span>
+<span class="s2">8JDb1c/PVZGuY1KrXkR9HLiW3kz5IJ3S3PFdUVYdeTN8BQxXCyg4V12nJJtJs912</span>
+<span class="s2">y0zN3wKBgGDS6YttCN6aI4EOABYE8fI1EYQ7vhfiYsaWGWSR1l6bQey7KR6M1ACz</span>
+<span class="s2">ZzMASNyytVt12yXE4/Emv6/pYqigbDLfL1zQJSLJ3EHJYTh2RxjR+AaGDudYFG/T</span>
+<span class="s2">liQ9YXhV5Iu2x1pNwrtFnssDdaaGpfA7l3xC00BL7Z+SAJyI4QKA</span>
+<span class="s2">-----END RSA PRIVATE KEY-----</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">server_certificate</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;-----BEGIN CERTIFICATE-----</span>
+<span class="s2">MIIDdjCCAl4CCQCcm+erkcKN7DANBgkqhkiG9w0BAQsFADB9MQswCQYDVQQGEwJj</span>
+<span class="s2">bjELMAkGA1UECAwCYmoxEDAOBgNVBAcMB2JlaWppbmcxDzANBgNVBAoMBmFsaXl1</span>
+<span class="s2">bjELMAkGA1UECwwCc2MxFTATBgNVBAMMDHd3dy50ZXN0LmNvbTEaMBgGCSqGSIb3</span>
+<span class="s2">DQEJARYLMTIzQDEyMy5jb20wHhcNMTkwNDI2MDM0ODAxWhcNMjQwNDI1MDM0ODAx</span>
+<span class="s2">WjB9MQswCQYDVQQGEwJjbjELMAkGA1UECAwCYmoxEDAOBgNVBAcMB2JlaWppbmcx</span>
+<span class="s2">DzANBgNVBAoMBmFsaXl1bjELMAkGA1UECwwCc2MxFTATBgNVBAMMDHd3dy50ZXN0</span>
+<span class="s2">LmNvbTEaMBgGCSqGSIb3DQEJARYLMTIzQDEyMy5jb20wggEiMA0GCSqGSIb3DQEB</span>
+<span class="s2">AQUAA4IBDwAwggEKAoIBAQDKMKF5qmN/uoMjdH3D8aPRcUOA0s8rZpYhG8zbkF1j</span>
+<span class="s2">8gHYoB/FDvM7G7dfVsyjbMwLOxKvAhWvHHSpEz/t7gB+QdwrAMiMJwGmtCnXrh2E</span>
+<span class="s2">WiXgalMe1y4a/T5R7q+m4T1zFATf+kbnHWfkSGF4W7b6UBoaH+9StQ95CnqzNf/2</span>
+<span class="s2">p/Of7+S0XzCxFXw8GIVzZk0xFe6lHJzaq06f3mvzrD+4rpO56tTUvrgTY/n61gsF</span>
+<span class="s2">ZP7f0CJ2JQh6eNRFOEUSfxKu/Dy/+IsQxorCJY2Q59ZAf3rXrqDN104jw9PlwnLl</span>
+<span class="s2">qfZz3RMODN6BWjxE8rvRtT0qMfuAfv1gjBdWZN0hUYBRAgMBAAEwDQYJKoZIhvcN</span>
+<span class="s2">AQELBQADggEBAABzo82TxGp5poVkd5pLWj5ACgcBv8Cs6oH9D+4Jz9BmyuBUsQXh</span>
+<span class="s2">2aG0hQAe1mU61C9konsl/GTW8umJQ4M4lYEztXXwMf5PlBMGwebM0ZbSGg6jKtZg</span>
+<span class="s2">WCgJ3eP/FMmyXGL5Jji5+e09eObhUDVle4tdi0On97zBoz85W02rgWFAqZJwiEAP</span>
+<span class="s2">t+c7jX7uOSBq2/38iGStlrX5yB1at/gJXXiA5CL5OtlR3Okvb0/QH37efO1Nu39m</span>
+<span class="s2">lFi0ODPAVyXjVypAiLguDxPn6AtDTdk9Iw9B19OD4NrzNRWgSSX5vuxo/VcRcgWk</span>
+<span class="s2">3gEe9Ca0ZKN20q9XgthAiFFjl1S9ZgdA6Zc=</span>
+<span class="s2">-----END CERTIFICATE-----</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">https</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="s2">&quot;https&quot;</span><span class="p">,</span>
+    <span class="n">backend_port</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
+    <span class="n">bandwidth</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">cookie</span><span class="o">=</span><span class="s2">&quot;testslblistenercookie&quot;</span><span class="p">,</span>
+    <span class="n">cookie_timeout</span><span class="o">=</span><span class="mi">86400</span><span class="p">,</span>
+    <span class="n">frontend_port</span><span class="o">=</span><span class="mi">443</span><span class="p">,</span>
+    <span class="n">health_check</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="p">,</span>
+    <span class="n">health_check_connect_port</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">health_check_http_code</span><span class="o">=</span><span class="s2">&quot;http_2xx,http_3xx&quot;</span><span class="p">,</span>
+    <span class="n">health_check_interval</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">health_check_timeout</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+    <span class="n">health_check_uri</span><span class="o">=</span><span class="s2">&quot;/cons&quot;</span><span class="p">,</span>
+    <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+    <span class="n">load_balancer_id</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;https&quot;</span><span class="p">,</span>
+    <span class="n">ssl_certificate_id</span><span class="o">=</span><span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">sticky_session</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="p">,</span>
+    <span class="n">sticky_session_type</span><span class="o">=</span><span class="s2">&quot;insert&quot;</span><span class="p">,</span>
+    <span class="n">unhealthy_threshold</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">example1</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">DomainExtension</span><span class="p">(</span><span class="s2">&quot;example1&quot;</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;www.test.com&quot;</span><span class="p">,</span>
+    <span class="n">frontend_port</span><span class="o">=</span><span class="n">https</span><span class="o">.</span><span class="n">frontend_port</span><span class="p">,</span>
+    <span class="n">load_balancer_id</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">server_certificate_id</span><span class="o">=</span><span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1050,6 +1166,61 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/27594.htm">Configure a TCP Listener</a>.</p></li>
 <li><p><a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/27595.htm">Configure a UDP Listener</a>.</p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;testcreatehttplistener&quot;</span>
+<span class="n">ip_version</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;ipVersion&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">ip_version</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">ip_version</span> <span class="o">=</span> <span class="s2">&quot;ipv4&quot;</span>
+<span class="n">default_load_balancer</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;defaultLoadBalancer&quot;</span><span class="p">,</span>
+    <span class="n">internet</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">internet_charge_type</span><span class="o">=</span><span class="s2">&quot;PayByTraffic&quot;</span><span class="p">)</span>
+<span class="n">default_acl</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">Acl</span><span class="p">(</span><span class="s2">&quot;defaultAcl&quot;</span><span class="p">,</span>
+    <span class="n">entry_lists</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;first&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;entry&quot;</span><span class="p">:</span> <span class="s2">&quot;10.10.10.0/24&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;second&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;entry&quot;</span><span class="p">:</span> <span class="s2">&quot;168.10.10.0/24&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">ip_version</span><span class="o">=</span><span class="n">ip_version</span><span class="p">)</span>
+<span class="n">default_listener</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="s2">&quot;defaultListener&quot;</span><span class="p">,</span>
+    <span class="n">acl_id</span><span class="o">=</span><span class="n">default_acl</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">acl_status</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="p">,</span>
+    <span class="n">acl_type</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span>
+    <span class="n">backend_port</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
+    <span class="n">bandwidth</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">cookie</span><span class="o">=</span><span class="s2">&quot;testslblistenercookie&quot;</span><span class="p">,</span>
+    <span class="n">cookie_timeout</span><span class="o">=</span><span class="mi">86400</span><span class="p">,</span>
+    <span class="n">frontend_port</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
+    <span class="n">health_check</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="p">,</span>
+    <span class="n">health_check_connect_port</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">health_check_domain</span><span class="o">=</span><span class="s2">&quot;ali.com&quot;</span><span class="p">,</span>
+    <span class="n">health_check_http_code</span><span class="o">=</span><span class="s2">&quot;http_2xx,http_3xx&quot;</span><span class="p">,</span>
+    <span class="n">health_check_interval</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">health_check_timeout</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+    <span class="n">health_check_uri</span><span class="o">=</span><span class="s2">&quot;/cons&quot;</span><span class="p">,</span>
+    <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+    <span class="n">idle_timeout</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+    <span class="n">load_balancer_id</span><span class="o">=</span><span class="n">default_load_balancer</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;http&quot;</span><span class="p">,</span>
+    <span class="n">request_timeout</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
+    <span class="n">sticky_session</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="p">,</span>
+    <span class="n">sticky_session_type</span><span class="o">=</span><span class="s2">&quot;insert&quot;</span><span class="p">,</span>
+    <span class="n">unhealthy_threshold</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+    <span class="n">x_forwarded_for</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;retriveSlbId&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;retriveSlbIp&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <p>load balance support 4 protocal to listen on, they are <code class="docutils literal notranslate"><span class="pre">http</span></code>,<code class="docutils literal notranslate"><span class="pre">https</span></code>,<code class="docutils literal notranslate"><span class="pre">tcp</span></code>,<code class="docutils literal notranslate"><span class="pre">udp</span></code>, the every listener support which portocal following:</p>
 <p>The listener mapping supports the following:</p>
 <dl class="field-list simple">
@@ -1449,23 +1620,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_alicloud.slb.LoadBalancer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">LoadBalancer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address_ip_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delete_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_charge_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internet</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internet_charge_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">slave_zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">specification</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vswitch_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.LoadBalancer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an Application Load Balancer resource.</p>
-<blockquote>
-<div><p><strong>NOTE:</strong> At present, to avoid some unnecessary regulation confusion, SLB can not support alicloud international account to create “paybybandwidth” instance.</p>
-<p><strong>NOTE:</strong> The supported specifications vary by region. Currently not all regions support guaranteed-performance instances.
-For more details about guaranteed-performance instance, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/27657.htm">Guaranteed-performance instances</a>.</p>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the IP address of the private network for the SLB instance, which must be in the destination CIDR block of the correspond ing switch.</p></li>
-<li><p><strong>address_ip_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP version of the SLB instance to be created, which can be set to ipv4 or ipv6 . Default to “ipv4”. Now, only internet instance support ipv6 address.</p></li>
-<li><p><strong>address_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network type of the SLB instance. Valid values: [“internet”, “intranet”]. If load balancer launched in VPC, this value must be “intranet”.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a LoadBalancer resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] address: Specify the IP address of the private network for the SLB instance, which must be in the destination CIDR block of the correspond ing switch.
+:param pulumi.Input[str] address_ip_version: The IP version of the SLB instance to be created, which can be set to ipv4 or ipv6 . Default to “ipv4”. Now, only internet instance support ipv6 address.
+:param pulumi.Input[str] address_type: The network type of the SLB instance. Valid values: [“internet”, “intranet”]. If load balancer launched in VPC, this value must be “intranet”.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">internet</span><span class="p">:</span> <span class="n">After</span> <span class="n">an</span> <span class="n">Internet</span> <span class="n">SLB</span> <span class="n">instance</span> <span class="ow">is</span> <span class="n">created</span><span class="p">,</span> <span class="n">the</span> <span class="n">system</span> <span class="n">allocates</span> <span class="n">a</span> <span class="n">public</span> <span class="n">IP</span> <span class="n">address</span> <span class="n">so</span> <span class="n">that</span> <span class="n">the</span> <span class="n">instance</span> <span class="n">can</span> <span class="n">forward</span> <span class="n">requests</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">Internet</span><span class="o">.</span>
 <span class="o">-</span> <span class="n">intranet</span><span class="p">:</span> <span class="n">After</span> <span class="n">an</span> <span class="n">intranet</span> <span class="n">SLB</span> <span class="n">instance</span> <span class="ow">is</span> <span class="n">created</span><span class="p">,</span> <span class="n">the</span> <span class="n">system</span> <span class="n">allocates</span> <span class="n">an</span> <span class="n">intranet</span> <span class="n">IP</span> <span class="n">address</span> <span class="n">so</span> <span class="n">that</span> <span class="n">the</span> <span class="n">instance</span> <span class="n">can</span> <span class="n">only</span> <span class="n">forward</span> <span class="n">intranet</span> <span class="n">requests</span><span class="o">.</span>
 </pre></div>
@@ -1690,6 +1850,89 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong> One VPC load balancer, its master slave server group can only add the same VPC ECS instances.</p>
 <p><strong>NOTE:</strong> Available in 1.54.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_disk_category</span><span class="o">=</span><span class="s2">&quot;cloud_efficiency&quot;</span><span class="p">,</span>
+    <span class="n">available_resource_creation</span><span class="o">=</span><span class="s2">&quot;VSwitch&quot;</span><span class="p">)</span>
+<span class="n">default_instance_types</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_instance_types</span><span class="p">(</span><span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">eni_amount</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_images</span><span class="p">(</span><span class="n">most_recent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;^ubuntu_18.*64&quot;</span><span class="p">,</span>
+    <span class="n">owners</span><span class="o">=</span><span class="s2">&quot;system&quot;</span><span class="p">)</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;tf-testAccSlbMasterSlaveServerGroupVpc&quot;</span>
+<span class="n">number</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;number&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">number</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span>
+<span class="n">main_network</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;mainNetwork&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">main_switch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;mainSwitch&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">main_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">group_security_group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;groupSecurityGroup&quot;</span><span class="p">,</span> <span class="n">vpc_id</span><span class="o">=</span><span class="n">main_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">instance_instance</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="nb">range</span> <span class="ow">in</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]:</span>
+    <span class="n">instance_instance</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;instanceInstance-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="n">image_id</span><span class="o">=</span><span class="n">image</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="n">instance_charge_type</span><span class="o">=</span><span class="s2">&quot;PostPaid&quot;</span><span class="p">,</span>
+        <span class="n">instance_name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">instance_type</span><span class="o">=</span><span class="n">default_instance_types</span><span class="o">.</span><span class="n">instance_types</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="n">internet_charge_type</span><span class="o">=</span><span class="s2">&quot;PayByTraffic&quot;</span><span class="p">,</span>
+        <span class="n">internet_max_bandwidth_out</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">,</span>
+        <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span><span class="n">group_security_group</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+        <span class="n">system_disk_category</span><span class="o">=</span><span class="s2">&quot;cloud_efficiency&quot;</span><span class="p">,</span>
+        <span class="n">vswitch_id</span><span class="o">=</span><span class="n">main_switch</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+<span class="n">instance_load_balancer</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;instanceLoadBalancer&quot;</span><span class="p">,</span>
+    <span class="n">specification</span><span class="o">=</span><span class="s2">&quot;slb.s2.small&quot;</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="n">main_switch</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_network_interface</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="nb">range</span> <span class="ow">in</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">number</span><span class="p">)]:</span>
+    <span class="n">default_network_interface</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">NetworkInterface</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;defaultNetworkInterface-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span><span class="n">group_security_group</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+        <span class="n">vswitch_id</span><span class="o">=</span><span class="n">main_switch</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+<span class="n">default_network_interface_attachment</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="nb">range</span> <span class="ow">in</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">number</span><span class="p">)]:</span>
+    <span class="n">default_network_interface_attachment</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">NetworkInterfaceAttachment</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;defaultNetworkInterfaceAttachment-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">instance_id</span><span class="o">=</span><span class="n">instance_instance</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="n">network_interface_id</span><span class="o">=</span><span class="p">[</span><span class="n">__item</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="n">default_network_interface</span><span class="p">][</span><span class="nb">range</span><span class="p">[</span><span class="s2">&quot;index&quot;</span><span class="p">]]))</span>
+<span class="n">group_master_slave_server_group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">MasterSlaveServerGroup</span><span class="p">(</span><span class="s2">&quot;groupMasterSlaveServerGroup&quot;</span><span class="p">,</span>
+    <span class="n">load_balancer_id</span><span class="o">=</span><span class="n">instance_load_balancer</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">servers</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="s2">&quot;serverId&quot;</span><span class="p">:</span> <span class="n">instance_instance</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;serverType&quot;</span><span class="p">:</span> <span class="s2">&quot;Master&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="s2">&quot;serverId&quot;</span><span class="p">:</span> <span class="n">instance_instance</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;serverType&quot;</span><span class="p">:</span> <span class="s2">&quot;Slave&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+<span class="n">tcp</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+    <span class="n">bandwidth</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">,</span>
+    <span class="n">established_timeout</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span>
+    <span class="n">frontend_port</span><span class="o">=</span><span class="s2">&quot;22&quot;</span><span class="p">,</span>
+    <span class="n">health_check_connect_port</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">health_check_http_code</span><span class="o">=</span><span class="s2">&quot;http_2xx&quot;</span><span class="p">,</span>
+    <span class="n">health_check_interval</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">health_check_timeout</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+    <span class="n">health_check_type</span><span class="o">=</span><span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+    <span class="n">health_check_uri</span><span class="o">=</span><span class="s2">&quot;/console&quot;</span><span class="p">,</span>
+    <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+    <span class="n">load_balancer_id</span><span class="o">=</span><span class="n">instance_load_balancer</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">master_slave_server_group_id</span><span class="o">=</span><span class="n">group_master_slave_server_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">persistence_timeout</span><span class="o">=</span><span class="mi">3600</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+    <span class="n">unhealthy_threshold</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The servers mapping supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">server_ids</span></code> - (Required) A list backend server ID (ECS instance ID).</p></li>
@@ -1828,6 +2071,76 @@ You can add forwarding rules to a listener to forward requests based on the doma
 <p><strong>NOTE:</strong> Rule only be created in the <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code> listener.</p>
 <p><strong>NOTE:</strong> Only rule’s virtual server group can be modified.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;slbrulebasicconfig&quot;</span>
+<span class="n">default_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_disk_category</span><span class="o">=</span><span class="s2">&quot;cloud_efficiency&quot;</span><span class="p">,</span>
+    <span class="n">available_resource_creation</span><span class="o">=</span><span class="s2">&quot;VSwitch&quot;</span><span class="p">)</span>
+<span class="n">default_instance_types</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_instance_types</span><span class="p">(</span><span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cpu_core_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">memory_size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">default_images</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_images</span><span class="p">(</span><span class="n">most_recent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;^ubuntu_18.*64&quot;</span><span class="p">,</span>
+    <span class="n">owners</span><span class="o">=</span><span class="s2">&quot;system&quot;</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">default_switch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;defaultSwitch&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_security_group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;defaultSecurityGroup&quot;</span><span class="p">,</span> <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_instance</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;defaultInstance&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="n">default_images</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">instance_charge_type</span><span class="o">=</span><span class="s2">&quot;PostPaid&quot;</span><span class="p">,</span>
+    <span class="n">instance_name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="n">default_instance_types</span><span class="o">.</span><span class="n">instance_types</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">internet_charge_type</span><span class="o">=</span><span class="s2">&quot;PayByTraffic&quot;</span><span class="p">,</span>
+    <span class="n">internet_max_bandwidth_out</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">,</span>
+    <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span><span class="n">__item</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="p">[</span><span class="n">default_security_group</span><span class="p">]],</span>
+    <span class="n">system_disk_category</span><span class="o">=</span><span class="s2">&quot;cloud_efficiency&quot;</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_load_balancer</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;defaultLoadBalancer&quot;</span><span class="p">,</span> <span class="n">vswitch_id</span><span class="o">=</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_listener</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="s2">&quot;defaultListener&quot;</span><span class="p">,</span>
+    <span class="n">backend_port</span><span class="o">=</span><span class="mi">22</span><span class="p">,</span>
+    <span class="n">bandwidth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">frontend_port</span><span class="o">=</span><span class="mi">22</span><span class="p">,</span>
+    <span class="n">health_check_connect_port</span><span class="o">=</span><span class="s2">&quot;20&quot;</span><span class="p">,</span>
+    <span class="n">load_balancer_id</span><span class="o">=</span><span class="n">default_load_balancer</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;http&quot;</span><span class="p">)</span>
+<span class="n">default_server_group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">ServerGroup</span><span class="p">(</span><span class="s2">&quot;defaultServerGroup&quot;</span><span class="p">,</span>
+    <span class="n">load_balancer_id</span><span class="o">=</span><span class="n">default_load_balancer</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">servers</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="s2">&quot;serverIds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">__item</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="p">[</span><span class="n">default_instance</span><span class="p">]],</span>
+        <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">default_rule</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">Rule</span><span class="p">(</span><span class="s2">&quot;defaultRule&quot;</span><span class="p">,</span>
+    <span class="n">cookie</span><span class="o">=</span><span class="s2">&quot;23ffsa&quot;</span><span class="p">,</span>
+    <span class="n">cookie_timeout</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;*.aliyun.com&quot;</span><span class="p">,</span>
+    <span class="n">frontend_port</span><span class="o">=</span><span class="n">default_listener</span><span class="o">.</span><span class="n">frontend_port</span><span class="p">,</span>
+    <span class="n">health_check</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="p">,</span>
+    <span class="n">health_check_connect_port</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
+    <span class="n">health_check_domain</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">health_check_http_code</span><span class="o">=</span><span class="s2">&quot;http_2xx&quot;</span><span class="p">,</span>
+    <span class="n">health_check_interval</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">health_check_timeout</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+    <span class="n">health_check_uri</span><span class="o">=</span><span class="s2">&quot;/test&quot;</span><span class="p">,</span>
+    <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">listener_sync</span><span class="o">=</span><span class="s2">&quot;off&quot;</span><span class="p">,</span>
+    <span class="n">load_balancer_id</span><span class="o">=</span><span class="n">default_load_balancer</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">scheduler</span><span class="o">=</span><span class="s2">&quot;rr&quot;</span><span class="p">,</span>
+    <span class="n">server_group_id</span><span class="o">=</span><span class="n">default_server_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">sticky_session</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="p">,</span>
+    <span class="n">sticky_session_type</span><span class="o">=</span><span class="s2">&quot;server&quot;</span><span class="p">,</span>
+    <span class="n">unhealthy_threshold</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;/image&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1895,7 +2208,7 @@ and characters ‘-‘ ‘/’ ‘?’ ‘%’ ‘#’ and ‘&amp;’ are allow
 and wildcard characters. The following two domain name formats are supported:</p>
 <ul class="simple">
 <li><p>Standard domain name: www.test.com</p></li>
-<li><p>Wildcard domain name: <em>.test.com. wildcard (</em>) must be the first character in the format of (<a href="#id5"><span class="problematic" id="id6">*</span></a>.)</p></li>
+<li><p>Wildcard domain name: <em>.test.com. wildcard (</em>) must be the first character in the format of (<a href="#id4"><span class="problematic" id="id5">*</span></a>.)</p></li>
 </ul>
 </dd></dl>
 
@@ -2102,6 +2415,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A Load Balancer Server Certificate is an ssl Certificate used by the listener of the protocol https.</p>
 <p>For information about slb and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/27539.htm">What is Server Load Balancer</a>.</p>
 <p>For information about Server Certificate and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/85968.htm">Configure Server Certificate</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="c1"># create a server certificate</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">ServerCertificate</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">private_key</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;-----BEGIN RSA PRIVATE KEY-----</span>
+<span class="s2">MIICXAIBAAKBgQDO0knDrlNdiys******ErVpjsckAaOW/JDG5PCSwkaMxk=</span>
+<span class="s2">-----END RSA PRIVATE KEY-----</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">server_certificate</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;-----BEGIN CERTIFICATE-----</span>
+<span class="s2">MIIDRjCCAq+gAwIBAgI+OuMs******XTtI90EAxEG/bJJyOm5LqoiA=</span>
+<span class="s2">-----END CERTIFICATE-----</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2240,6 +2568,60 @@ and to meet the personalized requirements of domain name and URL forwarding.</p>
 <p><strong>NOTE:</strong> One Classic and Intranet load balancer, its virtual server group can only add Classic ECS instances.</p>
 <p><strong>NOTE:</strong> One VPC load balancer, its virtual server group can only add the same VPC ECS instances.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;slbservergroupvpc&quot;</span>
+<span class="n">default_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_disk_category</span><span class="o">=</span><span class="s2">&quot;cloud_efficiency&quot;</span><span class="p">,</span>
+    <span class="n">available_resource_creation</span><span class="o">=</span><span class="s2">&quot;VSwitch&quot;</span><span class="p">)</span>
+<span class="n">default_instance_types</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_instance_types</span><span class="p">(</span><span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cpu_core_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">memory_size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">default_images</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_images</span><span class="p">(</span><span class="n">most_recent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;^ubuntu_18.*64&quot;</span><span class="p">,</span>
+    <span class="n">owners</span><span class="o">=</span><span class="s2">&quot;system&quot;</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">default_switch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;defaultSwitch&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_security_group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;defaultSecurityGroup&quot;</span><span class="p">,</span> <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">instance</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="nb">range</span> <span class="ow">in</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]:</span>
+    <span class="n">instance</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;instance-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="n">image_id</span><span class="o">=</span><span class="n">default_images</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="n">instance_charge_type</span><span class="o">=</span><span class="s2">&quot;PostPaid&quot;</span><span class="p">,</span>
+        <span class="n">instance_name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">instance_type</span><span class="o">=</span><span class="n">default_instance_types</span><span class="o">.</span><span class="n">instance_types</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="n">internet_charge_type</span><span class="o">=</span><span class="s2">&quot;PayByTraffic&quot;</span><span class="p">,</span>
+        <span class="n">internet_max_bandwidth_out</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">,</span>
+        <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span><span class="n">__item</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="p">[</span><span class="n">default_security_group</span><span class="p">]],</span>
+        <span class="n">system_disk_category</span><span class="o">=</span><span class="s2">&quot;cloud_efficiency&quot;</span><span class="p">,</span>
+        <span class="n">vswitch_id</span><span class="o">=</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+<span class="n">default_load_balancer</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;defaultLoadBalancer&quot;</span><span class="p">,</span> <span class="n">vswitch_id</span><span class="o">=</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_server_group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">ServerGroup</span><span class="p">(</span><span class="s2">&quot;defaultServerGroup&quot;</span><span class="p">,</span>
+    <span class="n">load_balancer_id</span><span class="o">=</span><span class="n">default_load_balancer</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">servers</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="s2">&quot;serverIds&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="n">instance</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                <span class="n">instance</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+            <span class="s2">&quot;serverIds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">__item</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="n">instance</span><span class="p">],</span>
+            <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <p>The servers mapping supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">server_ids</span></code> - (Required) A list backend server ID (ECS instance ID).</p></li>
@@ -2365,6 +2747,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.slb.get_acls">
 <code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">get_acls</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.get_acls" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the acls in the region.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">sample_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">get_acls</span><span class="p">()</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstSlbAclId&quot;</span><span class="p">,</span> <span class="n">sample_ds</span><span class="o">.</span><span class="n">acls</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <p>The entry mapping supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">entry</span></code>   - An IP addresses or CIDR blocks.</p></li>
@@ -2393,6 +2782,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.slb.get_attachments">
 <code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">get_attachments</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">instance_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.get_attachments" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the server load balancer attachments of the current Alibaba Cloud user.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">sample_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">get_attachments</span><span class="p">(</span><span class="n">load_balancer_id</span><span class="o">=</span><span class="n">alicloud_slb</span><span class="p">[</span><span class="s2">&quot;sample_slb&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstSlbAttachmentInstanceId&quot;</span><span class="p">,</span> <span class="n">sample_ds</span><span class="o">.</span><span class="n">slb_attachments</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;instance_id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2424,6 +2820,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.slb.get_ca_certificates">
 <code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">get_ca_certificates</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.get_ca_certificates" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the CA certificate list.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">sample_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">get_ca_certificates</span><span class="p">()</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstSlbCaCertificateId&quot;</span><span class="p">,</span> <span class="n">sample_ds</span><span class="o">.</span><span class="n">certificates</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2443,6 +2846,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.60.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">get_domain_extensions</span><span class="p">(</span><span class="n">frontend_port</span><span class="o">=</span><span class="s2">&quot;fake-port&quot;</span><span class="p">,</span>
+    <span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;fake-de-id&quot;</span><span class="p">],</span>
+    <span class="n">load_balancer_id</span><span class="o">=</span><span class="s2">&quot;fake-lb-id&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2458,6 +2869,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.slb.get_listeners">
 <code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">get_listeners</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">description_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.get_listeners" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the listeners related to a server load balancer of the current Alibaba Cloud user.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">sample_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">get_listeners</span><span class="p">(</span><span class="n">load_balancer_id</span><span class="o">=</span><span class="n">alicloud_slb</span><span class="p">[</span><span class="s2">&quot;sample_slb&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstSlbListenerProtocol&quot;</span><span class="p">,</span> <span class="n">sample_ds</span><span class="o">.</span><span class="n">slb_listeners</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;protocol&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2474,6 +2892,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.slb.get_load_balancers">
 <code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">get_load_balancers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">slave_availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vswitch_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.get_load_balancers" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the server load balancers of the current Alibaba Cloud user.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">slbs_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">get_load_balancers</span><span class="p">(</span><span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;sample_slb&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstSlbId&quot;</span><span class="p">,</span> <span class="n">slbs_ds</span><span class="o">.</span><span class="n">slbs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2515,6 +2940,13 @@ tagKey2 = &quot;tagValue2&quot;
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.54.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">sample_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">get_master_slave_server_groups</span><span class="p">(</span><span class="n">load_balancer_id</span><span class="o">=</span><span class="n">alicloud_slb</span><span class="p">[</span><span class="s2">&quot;sample_slb&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstSlbServerGroupId&quot;</span><span class="p">,</span> <span class="n">sample_ds</span><span class="o">.</span><span class="n">groups</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2530,6 +2962,14 @@ tagKey2 = &quot;tagValue2&quot;
 <dt id="pulumi_alicloud.slb.get_rules">
 <code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">get_rules</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">frontend_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.get_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the rules associated with a server load balancer listener.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">sample_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">get_rules</span><span class="p">(</span><span class="n">frontend_port</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
+    <span class="n">load_balancer_id</span><span class="o">=</span><span class="n">alicloud_slb</span><span class="p">[</span><span class="s2">&quot;sample_slb&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstSlbRuleId&quot;</span><span class="p">,</span> <span class="n">sample_ds</span><span class="o">.</span><span class="n">slb_rules</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2546,6 +2986,13 @@ tagKey2 = &quot;tagValue2&quot;
 <dt id="pulumi_alicloud.slb.get_server_certificates">
 <code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">get_server_certificates</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.get_server_certificates" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the server certificate list.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">sample_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">get_server_certificates</span><span class="p">()</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstSlbServerCertificateId&quot;</span><span class="p">,</span> <span class="n">sample_ds</span><span class="o">.</span><span class="n">certificates</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2562,6 +3009,13 @@ tagKey2 = &quot;tagValue2&quot;
 <dt id="pulumi_alicloud.slb.get_server_groups">
 <code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">get_server_groups</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.get_server_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the VServer groups related to a server load balancer.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">sample_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">get_server_groups</span><span class="p">(</span><span class="n">load_balancer_id</span><span class="o">=</span><span class="n">alicloud_slb</span><span class="p">[</span><span class="s2">&quot;sample_slb&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstSlbServerGroupId&quot;</span><span class="p">,</span> <span class="n">sample_ds</span><span class="o">.</span><span class="n">slb_server_groups</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2580,6 +3034,12 @@ tagKey2 = &quot;tagValue2&quot;
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.73.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">zones_ids</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">get_zones</span><span class="p">()</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

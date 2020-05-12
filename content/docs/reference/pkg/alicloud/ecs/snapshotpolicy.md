@@ -32,7 +32,23 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+sp = alicloud.ecs.SnapshotPolicy("sp",
+    repeat_weekdays=[
+        "1",
+        "2",
+        "3",
+    ],
+    retention_days=-1,
+    time_points=[
+        "1",
+        "22",
+        "23",
+    ])
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -15,9 +15,50 @@ Filters support regular expression for the database name, searches by clusterId.
 
 > **NOTE:** Available in v1.70.0+.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+polardb_clusters_ds = alicloud.polardb.get_clusters(description_regex="pc-\\w+",
+    status="Running")
+default = alicloud.polardb.get_databases(db_cluster_id=polardb_clusters_ds.clusters[0]["id"])
+pulumi.export("ends", default.databases[0]["db_name"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const polardbClustersDs = alicloud.polardb.getClusters({
+    descriptionRegex: "pc-\\w+",
+    status: "Running",
+});
+const default = polardbClustersDs.then(polardbClustersDs => alicloud.polardb.getDatabases({
+    dbClusterId: polardbClustersDs.clusters[0].id,
+}));
+export const ends = default.then(_default => _default.databases[0].dbName);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetDatabases {#using}

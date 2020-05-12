@@ -28,7 +28,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+policies_ds = alicloud.ram.get_policies(group_name="group1",
+    output_file="policies.txt",
+    type="System",
+    user_name="user1")
+pulumi.export("firstPolicyName", policies_ds.policies[0]["name"])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -942,7 +951,7 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>create<wbr>Date</span>
+        <span>create_<wbr>date</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -996,7 +1005,7 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>update<wbr>Date</span>
+        <span>update_<wbr>date</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

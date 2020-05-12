@@ -30,7 +30,51 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "networkInterfaceAttachment"
+number = config.get("number")
+if number is None:
+    number = "2"
+vpc = alicloud.vpc.Network("vpc", cidr_block="192.168.0.0/24")
+default_zones = alicloud.get_zones(available_resource_creation="VSwitch")
+vswitch = alicloud.vpc.Switch("vswitch",
+    availability_zone=default_zones.zones[0]["id"],
+    cidr_block="192.168.0.0/24",
+    vpc_id=vpc.id)
+group = alicloud.ecs.SecurityGroup("group", vpc_id=vpc.id)
+instance_type = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0]["id"],
+    eni_amount=2)
+default_images = alicloud.ecs.get_images(most_recent=True,
+    name_regex="^ubuntu_18.*64",
+    owners="system")
+instance = []
+for range in [{"value": i} for i in range(0, number)]:
+    instance.append(alicloud.ecs.Instance(f"instance-{range['value']}",
+        availability_zone=default_zones.zones[0]["id"],
+        image_id=default_images.images[0]["id"],
+        instance_name=name,
+        instance_type=instance_type.instance_types[0]["id"],
+        internet_max_bandwidth_out=10,
+        security_groups=[group.id],
+        system_disk_category="cloud_efficiency",
+        vswitch_id=vswitch.id))
+interface = []
+for range in [{"value": i} for i in range(0, number)]:
+    interface.append(alicloud.vpc.NetworkInterface(f"interface-{range['value']}",
+        security_groups=[group.id],
+        vswitch_id=vswitch.id))
+attachment = []
+for range in [{"value": i} for i in range(0, number)]:
+    attachment.append(alicloud.vpc.NetworkInterfaceAttachment(f"attachment-{range['value']}",
+        instance_id=[__item.id for __item in instance][range["index"]],
+        network_interface_id=[__item.id for __item in interface][range["index"]]))
+```
 {{% /example %}}
 
 {{% example typescript %}}

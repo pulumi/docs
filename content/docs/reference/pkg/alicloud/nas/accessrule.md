@@ -32,7 +32,20 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+foo_access_group = alicloud.nas.AccessGroup("fooAccessGroup",
+    description="tf-testAccNasConfig",
+    type="Vpc")
+foo_access_rule = alicloud.nas.AccessRule("fooAccessRule",
+    access_group_name=foo_access_group.id,
+    priority=2,
+    rw_access_type="RDWR",
+    source_cidr_ip="168.1.1.0/16",
+    user_access_type="no_squash")
+```
 {{% /example %}}
 
 {{% example typescript %}}

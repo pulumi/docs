@@ -36,7 +36,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default = alicloud.ecs.ImageExport("default",
+    image_id="m-bp1gxy***",
+    oss_bucket="ecsimageexportconfig",
+    oss_prefix="ecsExport")
+```
 {{% /example %}}
 
 {{% example typescript %}}

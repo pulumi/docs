@@ -14,9 +14,46 @@ This data source provides availability zones for KVStore that can be accessed by
 
 > **NOTE:** Available in v1.73.0+.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+zones_ids = alicloud.kvstore.get_zones()
+# Create an KVStore instance with the first matched zone
+kvstore = alicloud.kvstore.Instance("kvstore", availability_zone=zones_ids.zones[0]["id"])
+# Other properties...
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const zonesIds = alicloud.kvstore.getZones({});
+// Create an KVStore instance with the first matched zone
+const kvstore = new alicloud.kvstore.Instance("kvstore", {availabilityZone: zonesIds.then(zonesIds => zonesIds.zones[0].id)});
+// Other properties...
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetZones {#using}

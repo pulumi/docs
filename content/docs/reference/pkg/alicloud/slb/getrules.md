@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+sample_ds = alicloud.slb.get_rules(frontend_port=80,
+    load_balancer_id=alicloud_slb["sample_slb"]["id"])
+pulumi.export("firstSlbRuleId", sample_ds.slb_rules[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -56,6 +56,14 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p><strong>NOTE:</strong> Available in 1.60.0+</p>
 <p><strong>NOTE:</strong> Only the following regions support create Cloud Connect Network. [<code class="docutils literal notranslate"><span class="pre">cn-shanghai</span></code>, <code class="docutils literal notranslate"><span class="pre">cn-shanghai-finance-1</span></code>, <code class="docutils literal notranslate"><span class="pre">cn-hongkong</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-1</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-2</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-3</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-5</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-northeast-1</span></code>, <code class="docutils literal notranslate"><span class="pre">eu-central-1</span></code>]</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default_acls</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">sag</span><span class="o">.</span><span class="n">get_acls</span><span class="p">(</span><span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="n">alicloud_sag_acls</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;^tf-testAcc.*&quot;</span><span class="p">)</span>
+<span class="n">default_acl</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">rocketmq</span><span class="o">.</span><span class="n">Acl</span><span class="p">(</span><span class="s2">&quot;defaultAcl&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

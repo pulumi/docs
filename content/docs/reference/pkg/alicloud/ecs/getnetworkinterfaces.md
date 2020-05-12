@@ -46,7 +46,54 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "networkInterfacesName"
+vpc = alicloud.vpc.Network("vpc", cidr_block="192.168.0.0/24")
+default_zones = alicloud.get_zones(available_resource_creation="VSwitch")
+vswitch = alicloud.vpc.Switch("vswitch",
+    availability_zone=default_zones.zones[0]["id"],
+    cidr_block="192.168.0.0/24",
+    vpc_id=vpc.id)
+group = alicloud.ecs.SecurityGroup("group", vpc_id=vpc.id)
+interface = alicloud.vpc.NetworkInterface("interface",
+    description="Basic test",
+    private_ip="192.168.0.2",
+    security_groups=[group.id],
+    tags={
+        "TF-VER": "0.11.3",
+    },
+    vswitch_id=vswitch.id)
+instance = alicloud.ecs.Instance("instance",
+    availability_zone=default_zones.zones[0]["id"],
+    image_id="centos_7_04_64_20G_alibase_201701015.vhd",
+    instance_name=name,
+    instance_type="ecs.e3.xlarge",
+    internet_max_bandwidth_out=10,
+    security_groups=[group.id],
+    system_disk_category="cloud_efficiency",
+    vswitch_id=vswitch.id)
+attachment = alicloud.vpc.NetworkInterfaceAttachment("attachment",
+    instance_id=instance.id,
+    network_interface_id=interface.id)
+default_network_interfaces = pulumi.Output.all(attachment.network_interface_id, instance.id, group.id, vpc.id, vswitch.id).apply(lambda network_interface_id, instanceId, groupId, vpcId, vswitchId: alicloud.ecs.get_network_interfaces(ids=[network_interface_id],
+    instance_id=instance_id,
+    name_regex="tf-testAccNetworkInterfacesBasic%d",
+    private_ip="192.168.0.2",
+    security_group_id=group_id,
+    tags={
+        "TF-VER": "0.11.3",
+    },
+    type="Secondary",
+    vpc_id=vpc_id,
+    vswitch_id=vswitch_id))
+pulumi.export("eni0Name", default_network_interfaces.interfaces[0]["name"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

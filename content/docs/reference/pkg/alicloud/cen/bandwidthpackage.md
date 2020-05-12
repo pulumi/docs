@@ -30,7 +30,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+foo = alicloud.cen.BandwidthPackage("foo",
+    bandwidth=5,
+    geographic_region_ids=[
+        "China",
+        "Asia-Pacific",
+    ])
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -14,9 +14,46 @@ This data source provides availability zones for mongoDB that can be accessed by
 
 > **NOTE:** Available in v1.73.0+.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+zones_ids = alicloud.mongodb.get_zones()
+# Create an mongoDB instance with the first matched zone
+mongodb = alicloud.mongodb.Instance("mongodb", zone_id=zones_ids.zones[0]["id"])
+# Other properties...
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const zonesIds = alicloud.mongodb.getZones({});
+// Create an mongoDB instance with the first matched zone
+const mongodb = new alicloud.mongodb.Instance("mongodb", {zoneId: zonesIds.then(zonesIds => zonesIds.zones[0].id)});
+// Other properties...
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetZones {#using}

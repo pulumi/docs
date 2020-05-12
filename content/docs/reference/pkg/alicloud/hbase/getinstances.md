@@ -31,7 +31,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+hbase = alicloud.hbase.get_instances(availability_zone="cn-shenzhen-b",
+    name_regex="tf_testAccHBase")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -1323,7 +1329,7 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>expire<wbr>Time</span>
+        <span>expire_<wbr>time</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

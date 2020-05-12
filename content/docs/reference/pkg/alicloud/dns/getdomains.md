@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+domains_ds = alicloud.dns.get_domains(domain_name_regex="^hegu",
+    output_file="domains.txt")
+pulumi.export("firstDomainId", domains_ds.domains[0]["domain_id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

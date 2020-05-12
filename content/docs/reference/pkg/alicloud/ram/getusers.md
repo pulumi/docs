@@ -28,7 +28,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+users_ds = alicloud.ram.get_users(group_name="group1",
+    name_regex="^user",
+    output_file="users.txt",
+    policy_name="AliyunACSDefaultAccess",
+    policy_type="Custom")
+pulumi.export("firstUserId", users_ds.users[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -799,7 +809,7 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>create<wbr>Date</span>
+        <span>create_<wbr>date</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

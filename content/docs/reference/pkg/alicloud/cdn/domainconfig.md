@@ -32,7 +32,30 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+# Create a new Domain config.
+domain = alicloud.cdn.DomainNew("domain",
+    cdn_type="web",
+    domain_name="tf-testacc%d.xiaozhu.com",
+    scope="overseas",
+    sources={
+        "content": "1.1.1.1",
+        "port": 80,
+        "priority": "20",
+        "type": "ipaddr",
+        "weight": "15",
+    })
+config = alicloud.cdn.DomainConfig("config",
+    domain_name=domain.domain_name,
+    function_args=[{
+        "argName": "ip_list",
+        "argValue": "110.110.110.110",
+    }],
+    function_name="ip_allow_list_set")
+```
 {{% /example %}}
 
 {{% example typescript %}}

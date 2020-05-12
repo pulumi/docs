@@ -34,7 +34,19 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default = alicloud.rocketmq.DnatEntry("default",
+    external_ip="1.0.0.2",
+    external_port="1",
+    internal_ip="10.0.0.2",
+    internal_port="20",
+    ip_protocol="tcp",
+    sag_id="sag-3rb1t3iagy3w0zgwy9",
+    type="Intranet")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -30,7 +30,33 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "dbInstanceconfig"
+creation = config.get("creation")
+if creation is None:
+    creation = "Rds"
+default_zones = alicloud.get_zones(available_resource_creation=creation)
+default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
+default_switch = alicloud.vpc.Switch("defaultSwitch",
+    availability_zone=default_zones.zones[0]["id"],
+    cidr_block="172.16.0.0/24",
+    vpc_id=default_network.id)
+default_instance = alicloud.rds.Instance("defaultInstance",
+    engine="MySQL",
+    engine_version="5.6",
+    instance_charge_type="Postpaid",
+    instance_name=name,
+    instance_storage="30",
+    instance_type="rds.mysql.s2.large",
+    monitoring_period="60",
+    vswitch_id=default_switch.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -76,7 +102,31 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
+default_switch = alicloud.vpc.Switch("defaultSwitch",
+    availability_zone=data["alicloud..getZones"]["default"]["zones"][0]["id"],
+    cidr_block="172.16.0.0/24",
+    vpc_id=default_network.id)
+default_instance = alicloud.rds.Instance("defaultInstance",
+    db_instance_class="rds.mysql.t1.small",
+    db_instance_storage="10",
+    engine="MySQL",
+    engine_version="5.6",
+    parameters=[
+        {
+            "name": "innodb_large_prefix",
+            "value": "ON",
+        },
+        {
+            "name": "connect_timeout",
+            "value": "50",
+        },
+    ])
+```
 {{% /example %}}
 
 {{% example typescript %}}

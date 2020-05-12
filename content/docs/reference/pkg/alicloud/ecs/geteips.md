@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+eips_ds = alicloud.ecs.get_eips()
+pulumi.export("firstEipId", eips_ds.eips[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

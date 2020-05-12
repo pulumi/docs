@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+pvtz_zones_ds = alicloud.pvtz.get_zones(keyword=alicloud_pvtz_zone["basic"]["zone_name"])
+pulumi.export("firstZoneId", pvtz_zones_ds.zones[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

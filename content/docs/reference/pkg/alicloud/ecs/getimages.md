@@ -29,7 +29,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+images_ds = alicloud.ecs.get_images(name_regex="^centos_6",
+    owners="system")
+pulumi.export("firstImageId", images_ds.images[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

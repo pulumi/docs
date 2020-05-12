@@ -33,6 +33,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="dns/">dns</a></li>
 <li class="toctree-l1"><a class="reference internal" href="drds/">drds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ecs/">ecs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="edas/">edas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="elasticsearch/">elasticsearch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="emr/">emr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ess/">ess</a></li>
@@ -53,11 +54,13 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="pvtz/">pvtz</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ram/">ram</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rds/">rds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resourcemanager/">resourcemanager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rocketmq/">rocketmq</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sag/">sag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="slb/">slb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vpc/">vpc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vpn/">vpn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="waf/">waf</a></li>
 <li class="toctree-l1"><a class="reference internal" href="yundun/">yundun</a></li>
 </ul>
 </div>

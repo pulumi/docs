@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+groups_ds = alicloud.dns.get_groups(name_regex="^y[A-Za-z]+",
+    output_file="groups.txt")
+pulumi.export("firstGroupName", groups_ds.groups[0]["group_name"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

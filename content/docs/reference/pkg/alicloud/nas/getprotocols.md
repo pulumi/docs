@@ -30,7 +30,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default = alicloud.nas.get_protocols(output_file="protocols.txt",
+    type="Performance",
+    zone_id="cn-beijing-e")
+pulumi.export("nasProtocolsProtocol", default.protocols[0])
+```
 {{% /example %}}
 
 {{% example typescript %}}

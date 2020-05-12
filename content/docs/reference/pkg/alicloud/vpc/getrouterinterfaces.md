@@ -29,7 +29,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+router_interfaces_ds = alicloud.vpc.get_router_interfaces(name_regex="^testenv",
+    status="Active")
+pulumi.export("firstRouterInterfaceId", router_interfaces_ds.interfaces[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

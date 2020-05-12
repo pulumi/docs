@@ -431,6 +431,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.mns.get_queues">
 <code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">get_queues</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.get_queues" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of MNS queues in an Alibaba Cloud account according to the specified parameters.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">queues</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">mns</span><span class="o">.</span><span class="n">get_queues</span><span class="p">(</span><span class="n">name_prefix</span><span class="o">=</span><span class="s2">&quot;tf-&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstQueueId&quot;</span><span class="p">,</span> <span class="n">queues</span><span class="o">.</span><span class="n">queues</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name_prefix</strong> (<em>str</em>) – A string to filter resulting queues by their name prefixs.</p>
@@ -442,6 +449,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.mns.get_topic_subscriptions">
 <code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">get_topic_subscriptions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.get_topic_subscriptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of MNS topic subscriptions in an Alibaba Cloud account according to the specified parameters.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">subscriptions</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">mns</span><span class="o">.</span><span class="n">get_topic_subscriptions</span><span class="p">(</span><span class="n">name_prefix</span><span class="o">=</span><span class="s2">&quot;tf-&quot;</span><span class="p">,</span>
+    <span class="n">topic_name</span><span class="o">=</span><span class="s2">&quot;topic_name&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstTopicSubscriptionId&quot;</span><span class="p">,</span> <span class="n">subscriptions</span><span class="o">.</span><span class="n">subscriptions</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -456,6 +471,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.mns.get_topics">
 <code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">get_topics</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.get_topics" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of MNS topics in an Alibaba Cloud account according to the specified parameters.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">topics</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">mns</span><span class="o">.</span><span class="n">get_topics</span><span class="p">(</span><span class="n">name_prefix</span><span class="o">=</span><span class="s2">&quot;tf-&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstTopicId&quot;</span><span class="p">,</span> <span class="n">topics</span><span class="o">.</span><span class="n">topics</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name_prefix</strong> (<em>str</em>) – A string to filter resulting topics by their name prefixs.</p>

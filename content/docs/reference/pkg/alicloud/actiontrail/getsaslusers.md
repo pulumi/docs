@@ -30,7 +30,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+sasl_users_ds = alicloud.actiontrail.get_sasl_users(instance_id="xxx",
+    name_regex="username",
+    output_file="saslUsers.txt")
+pulumi.export("firstSaslUsername", sasl_users_ds.users[0]["username"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

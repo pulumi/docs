@@ -30,7 +30,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instance_bastion_host_instances = alicloud.yundun.get_bastion_host_instances(name_regex="^bastionhost")
+pulumi.export("instance", [__item["id"] for __item in alicloud_yundun_bastionhost_instances["instance"]])
+```
 {{% /example %}}
 
 {{% example typescript %}}

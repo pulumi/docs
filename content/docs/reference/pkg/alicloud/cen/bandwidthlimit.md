@@ -32,7 +32,45 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+import pulumi_pulumi as pulumi
+
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "tf-testAccCenBandwidthLimitConfig"
+fra = pulumi.providers.Alicloud("fra", region="eu-central-1")
+sh = pulumi.providers.Alicloud("sh", region="cn-shanghai")
+vpc1 = alicloud.vpc.Network("vpc1", cidr_block="192.168.0.0/16")
+vpc2 = alicloud.vpc.Network("vpc2", cidr_block="172.16.0.0/12")
+cen = alicloud.cen.Instance("cen", description="tf-testAccCenBandwidthLimitConfigDescription")
+bwp = alicloud.cen.BandwidthPackage("bwp",
+    bandwidth=5,
+    geographic_region_ids=[
+        "Europe",
+        "China",
+    ])
+bwp_attach = alicloud.cen.BandwidthPackageAttachment("bwpAttach",
+    bandwidth_package_id=bwp.id,
+    instance_id=cen.id)
+vpc_attach1 = alicloud.cen.InstanceAttachment("vpcAttach1",
+    child_instance_id=vpc1.id,
+    child_instance_region_id="eu-central-1",
+    instance_id=cen.id)
+vpc_attach2 = alicloud.cen.InstanceAttachment("vpcAttach2",
+    child_instance_id=vpc2.id,
+    child_instance_region_id="cn-shanghai",
+    instance_id=cen.id)
+foo = alicloud.cen.BandwidthLimit("foo",
+    bandwidth_limit=4,
+    instance_id=cen.id,
+    region_ids=[
+        "eu-central-1",
+        "cn-shanghai",
+    ])
+```
 {{% /example %}}
 
 {{% example typescript %}}

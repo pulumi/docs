@@ -30,7 +30,32 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+config = pulumi.Config()
+creation = config.get("creation")
+if creation is None:
+    creation = "Rds"
+name = config.get("name")
+if name is None:
+    name = "dbbackuppolicybasic"
+default_zones = alicloud.get_zones(available_resource_creation=creation)
+default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
+default_switch = alicloud.vpc.Switch("defaultSwitch",
+    availability_zone=default_zones.zones[0]["id"],
+    cidr_block="172.16.0.0/24",
+    vpc_id=default_network.id)
+instance = alicloud.rds.Instance("instance",
+    engine="MySQL",
+    engine_version="5.6",
+    instance_name=name,
+    instance_storage="10",
+    instance_type="rds.mysql.s1.small",
+    vswitch_id=default_switch.id)
+policy = alicloud.rds.BackupPolicy("policy", instance_id=instance.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

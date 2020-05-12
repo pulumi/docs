@@ -20,6 +20,38 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.71.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">creation</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;creation&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">creation</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">creation</span> <span class="o">=</span> <span class="s2">&quot;ADB&quot;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;adbaccountmysql&quot;</span>
+<span class="n">default_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_resource_creation</span><span class="o">=</span><span class="n">creation</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">default_switch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;defaultSwitch&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">adb</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;cluster&quot;</span><span class="p">,</span>
+    <span class="n">db_cluster_category</span><span class="o">=</span><span class="s2">&quot;Cluster&quot;</span><span class="p">,</span>
+    <span class="n">db_cluster_version</span><span class="o">=</span><span class="s2">&quot;3.0&quot;</span><span class="p">,</span>
+    <span class="n">db_node_class</span><span class="o">=</span><span class="s2">&quot;C8&quot;</span><span class="p">,</span>
+    <span class="n">db_node_count</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">db_node_storage</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">pay_type</span><span class="o">=</span><span class="s2">&quot;PostPaid&quot;</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">account</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">adb</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;account&quot;</span><span class="p">,</span>
+    <span class="n">account_description</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">account_name</span><span class="o">=</span><span class="s2">&quot;tftestnormal&quot;</span><span class="p">,</span>
+    <span class="n">account_password</span><span class="o">=</span><span class="s2">&quot;Test12345&quot;</span><span class="p">,</span>
+    <span class="n">db_cluster_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -243,6 +275,33 @@ databases.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.71.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;adbClusterconfig&quot;</span>
+<span class="n">creation</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;creation&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">creation</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">creation</span> <span class="o">=</span> <span class="s2">&quot;ADB&quot;</span>
+<span class="n">default_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_resource_creation</span><span class="o">=</span><span class="n">creation</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">default_switch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;defaultSwitch&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_cluster</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">adb</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;defaultCluster&quot;</span><span class="p">,</span>
+    <span class="n">db_cluster_category</span><span class="o">=</span><span class="s2">&quot;Cluster&quot;</span><span class="p">,</span>
+    <span class="n">db_cluster_version</span><span class="o">=</span><span class="s2">&quot;3.0&quot;</span><span class="p">,</span>
+    <span class="n">db_node_class</span><span class="o">=</span><span class="s2">&quot;C8&quot;</span><span class="p">,</span>
+    <span class="n">db_node_count</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">db_node_storage</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">pay_type</span><span class="o">=</span><span class="s2">&quot;PostPaid&quot;</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -460,6 +519,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p><strong>NOTE:</strong> Available in v1.81.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">creation</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;creation&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">creation</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">creation</span> <span class="o">=</span> <span class="s2">&quot;ADB&quot;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;adbaccountmysql&quot;</span>
+<span class="n">default_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_resource_creation</span><span class="o">=</span><span class="n">creation</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">default_switch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;defaultSwitch&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">adb</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;cluster&quot;</span><span class="p">,</span>
+    <span class="n">db_cluster_category</span><span class="o">=</span><span class="s2">&quot;Cluster&quot;</span><span class="p">,</span>
+    <span class="n">db_cluster_version</span><span class="o">=</span><span class="s2">&quot;3.0&quot;</span><span class="p">,</span>
+    <span class="n">db_node_class</span><span class="o">=</span><span class="s2">&quot;C8&quot;</span><span class="p">,</span>
+    <span class="n">db_node_count</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">db_node_storage</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">pay_type</span><span class="o">=</span><span class="s2">&quot;PostPaid&quot;</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">connection</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">adb</span><span class="o">.</span><span class="n">Connection</span><span class="p">(</span><span class="s2">&quot;connection&quot;</span><span class="p">,</span>
+    <span class="n">connection_prefix</span><span class="o">=</span><span class="s2">&quot;testabc&quot;</span><span class="p">,</span>
+    <span class="n">db_cluster_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -621,6 +710,14 @@ Filters support regular expression for the cluster description, searches by tags
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.71.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">adb_clusters_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">adb</span><span class="o">.</span><span class="n">get_clusters</span><span class="p">(</span><span class="n">description_regex</span><span class="o">=</span><span class="s2">&quot;am-\w+&quot;</span><span class="p">,</span>
+    <span class="n">status</span><span class="o">=</span><span class="s2">&quot;Running&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstAdbClusterId&quot;</span><span class="p">,</span> <span class="n">adb_clusters_ds</span><span class="o">.</span><span class="n">clusters</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -643,6 +740,12 @@ Filters support regular expression for the cluster description, searches by tags
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.73.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">zones_ids</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">adb</span><span class="o">.</span><span class="n">get_zones</span><span class="p">()</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>multi</strong> (<em>bool</em>) – Indicate whether the zones can be used in a multi AZ configuration. Default to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Multi AZ is usually used to launch ADB instances.</p>

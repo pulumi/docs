@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+data_apigatway = alicloud.apigateway.get_groups(output_file="outgroups")
+pulumi.export("firstGroupId", data_apigatway.groups[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

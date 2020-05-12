@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+bwp = alicloud.cen.get_bandwidth_packages(instance_id="cen-id1",
+    name_regex="^foo")
+pulumi.export("firstCenBandwidthPackageId", bwp.packages[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

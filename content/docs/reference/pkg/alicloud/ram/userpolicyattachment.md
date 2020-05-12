@@ -28,7 +28,43 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+# Create a RAM User Policy attachment.
+user = alicloud.ram.User("user",
+    comments="yoyoyo",
+    display_name="user_display_name",
+    email="hello.uuu@aaa.com",
+    force=True,
+    mobile="86-18688888888")
+policy = alicloud.ram.Policy("policy",
+    description="this is a policy test",
+    document="""  {
+    "Statement": [
+      {
+        "Action": [
+          "oss:ListObjects",
+          "oss:GetObject"
+        ],
+        "Effect": "Allow",
+        "Resource": [
+          "acs:oss:*:*:mybucket",
+          "acs:oss:*:*:mybucket/*"
+        ]
+      }
+    ],
+      "Version": "1"
+  }
+  
+""",
+    force=True)
+attach = alicloud.ram.UserPolicyAttachment("attach",
+    policy_name=policy.name,
+    policy_type=policy.type,
+    user_name=user.name)
+```
 {{% /example %}}
 
 {{% example typescript %}}

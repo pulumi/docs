@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+current = alicloud.get_account()
+pulumi.export("currentAccountId", current.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

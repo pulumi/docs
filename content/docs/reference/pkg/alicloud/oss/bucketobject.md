@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+object_source = alicloud.oss.BucketObject("object-source",
+    bucket="your_bucket_name",
+    key="new_object_key",
+    source="path/to/file")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -54,7 +62,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+example = alicloud.oss.Bucket("example",
+    acl="public-read",
+    bucket="your_bucket_name")
+object_content = alicloud.oss.BucketObject("object-content",
+    bucket=example.bucket,
+    content="the content that you want to upload.",
+    key="new_object_key")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -16,34 +16,25 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_alicloud.cms"></span><dl class="py class">
 <dt id="pulumi_alicloud.cms.Alarm">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cms.</code><code class="sig-name descname">Alarm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">contact_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dimensions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">effective_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">operator</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">silence_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">statistics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">triggered_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">webhook</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cms.Alarm" title="Permalink to this definition">¶</a></dt>
-<dd><p>This resource provides a alarm rule resource and it can be used to monitor several cloud services according different metrics.
-Details for <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/28608.htm">alarm rule</a>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>contact_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List contact groups of the alarm rule, which must have been created on the console.</p></li>
-<li><p><strong>dimensions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of the resources associated with the alarm rule, such as “instanceId”, “device” and “port”. Each key’s value is a string and it uses comma to split multiple items. For more information, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/28619.htm">Metrics Reference</a>.</p></li>
-<li><p><strong>effective_interval</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The interval of effecting alarm rule. It foramt as “hh:mm-hh:mm”, like “0:00-4:00”. Default to “00:00-23:59”.</p></li>
-<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable alarm rule. Default to true.</p></li>
-<li><p><strong>end_time</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – It has been deprecated from provider version 1.50.0 and ‘effective_interval’ instead.</p></li>
-<li><p><strong>metric</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Name of the monitoring metrics corresponding to a project, such as “CPUUtilization” and “networkin_rate”. For more information, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/28619.htm">Metrics Reference</a>.</p>
-</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The alarm rule name.</p></li>
-<li><p><strong>operator</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alarm comparison operator. Valid values: [“&lt;=”, “&lt;”, “&gt;”, “&gt;=”, “==”, “!=”]. Default to “==”.</p></li>
-<li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Index query cycle, which must be consistent with that defined for metrics. Default to 300, in seconds.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Monitor project name, such as “acs_ecs_dashboard” and “acs_rds_dashboard”. For more information, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/28619.htm">Metrics Reference</a>.</p>
-</p></li>
-<li><p><strong>silence_time</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Notification silence period in the alarm state, in seconds. Valid value range: [300, 86400]. Default to 86400</p></li>
-<li><p><strong>start_time</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – It has been deprecated from provider version 1.50.0 and ‘effective_interval’ instead.</p></li>
-<li><p><strong>statistics</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Statistical method. It must be consistent with that defined for metrics. Valid values: [“Average”, “Minimum”, “Maximum”]. Default to “Average”.</p></li>
-<li><p><strong>threshold</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alarm threshold value, which must be a numeric value currently.</p></li>
-<li><p><strong>triggered_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of consecutive times it has been detected that the values exceed the threshold. Default to 3.</p></li>
-<li><p><strong>webhook</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Alarm resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] contact_groups: List contact groups of the alarm rule, which must have been created on the console.
+:param pulumi.Input[dict] dimensions: Map of the resources associated with the alarm rule, such as “instanceId”, “device” and “port”. Each key’s value is a string and it uses comma to split multiple items. For more information, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/28619.htm">Metrics Reference</a>.
+:param pulumi.Input[str] effective_interval: The interval of effecting alarm rule. It foramt as “hh:mm-hh:mm”, like “0:00-4:00”. Default to “00:00-23:59”.
+:param pulumi.Input[bool] enabled: Whether to enable alarm rule. Default to true.
+:param pulumi.Input[float] end_time: It has been deprecated from provider version 1.50.0 and ‘effective_interval’ instead.
+:param pulumi.Input[str] metric: Name of the monitoring metrics corresponding to a project, such as “CPUUtilization” and “networkin_rate”. For more information, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/28619.htm">Metrics Reference</a>.
+:param pulumi.Input[str] name: The alarm rule name.
+:param pulumi.Input[str] operator: Alarm comparison operator. Valid values: [“&lt;=”, “&lt;”, “&gt;”, “&gt;=”, “==”, “!=”]. Default to “==”.
+:param pulumi.Input[float] period: Index query cycle, which must be consistent with that defined for metrics. Default to 300, in seconds.
+:param pulumi.Input[str] project: Monitor project name, such as “acs_ecs_dashboard” and “acs_rds_dashboard”. For more information, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/28619.htm">Metrics Reference</a>.
+:param pulumi.Input[float] silence_time: Notification silence period in the alarm state, in seconds. Valid value range: [300, 86400]. Default to 86400
+:param pulumi.Input[float] start_time: It has been deprecated from provider version 1.50.0 and ‘effective_interval’ instead.
+:param pulumi.Input[str] statistics: Statistical method. It must be consistent with that defined for metrics. Valid values: [“Average”, “Minimum”, “Maximum”]. Default to “Average”.
+:param pulumi.Input[str] threshold: Alarm threshold value, which must be a numeric value currently.
+:param pulumi.Input[float] triggered_count: Number of consecutive times it has been detected that the values exceed the threshold. Default to 3.
+:param pulumi.Input[str] webhook: The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.</p>
 <dl class="py attribute">
 <dt id="pulumi_alicloud.cms.Alarm.contact_groups">
 <code class="sig-name descname">contact_groups</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cms.Alarm.contact_groups" title="Permalink to this definition">¶</a></dt>

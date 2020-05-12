@@ -30,7 +30,61 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+images = alicloud.ecs.get_images(owners="system")
+instances = alicloud.ecs.get_instances()
+template = alicloud.ecs.LaunchTemplate("template",
+    data_disks=[
+        {
+            "description": "test1",
+            "name": "disk1",
+        },
+        {
+            "description": "test2",
+            "name": "disk2",
+        },
+    ],
+    description="test1",
+    host_name="tf-test-host",
+    image_id=images.images[0]["id"],
+    instance_charge_type="PrePaid",
+    instance_name="tf-instance-name",
+    instance_type=instances.instances[0]["instance_type"],
+    internet_charge_type="PayByBandwidth",
+    internet_max_bandwidth_in=5,
+    internet_max_bandwidth_out=0,
+    io_optimized="none",
+    key_pair_name="test-key-pair",
+    network_interfaces={
+        "description": "hello1",
+        "name": "eth0",
+        "primaryIp": "10.0.0.2",
+        "securityGroupId": "xxxx",
+        "vswitchId": "xxxxxxx",
+    },
+    network_type="vpc",
+    ram_role_name="xxxxx",
+    resource_group_id="rg-zkdfjahg9zxncv0",
+    security_enhancement_strategy="Active",
+    security_group_id="sg-zxcvj0lasdf102350asdf9a",
+    spot_price_limit=5,
+    spot_strategy="SpotWithPriceLimit",
+    system_disk_category="cloud_ssd",
+    system_disk_description="test disk",
+    system_disk_name="hello",
+    system_disk_size=40,
+    tags={
+        "tag1": "hello",
+        "tag2": "world",
+    },
+    userdata="xxxxxxxxxxxxxx",
+    vpc_id="vpc-asdfnbg0as8dfk1nb2",
+    vswitch_id="sw-ljkngaksdjfj0nnasdf",
+    zone_id="beijing-a")
+```
 {{% /example %}}
 
 {{% example typescript %}}

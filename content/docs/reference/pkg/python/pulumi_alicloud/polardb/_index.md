@@ -20,6 +20,36 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.67.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">creation</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;creation&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">creation</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">creation</span> <span class="o">=</span> <span class="s2">&quot;PolarDB&quot;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;polardbaccountmysql&quot;</span>
+<span class="n">default_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_resource_creation</span><span class="o">=</span><span class="n">creation</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">default_switch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;defaultSwitch&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">polardb</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;cluster&quot;</span><span class="p">,</span>
+    <span class="n">db_node_class</span><span class="o">=</span><span class="s2">&quot;polar.mysql.x4.large&quot;</span><span class="p">,</span>
+    <span class="n">db_type</span><span class="o">=</span><span class="s2">&quot;MySQL&quot;</span><span class="p">,</span>
+    <span class="n">db_version</span><span class="o">=</span><span class="s2">&quot;8.0&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">pay_type</span><span class="o">=</span><span class="s2">&quot;PostPaid&quot;</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">account</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;account&quot;</span><span class="p">,</span>
+    <span class="n">account_description</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">account_name</span><span class="o">=</span><span class="s2">&quot;tftestnormal&quot;</span><span class="p">,</span>
+    <span class="n">account_password</span><span class="o">=</span><span class="s2">&quot;Test12345&quot;</span><span class="p">,</span>
+    <span class="n">db_cluster_id</span><span class="o">=</span><span class="n">alicloud_db_instance</span><span class="p">[</span><span class="s2">&quot;cluster&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -372,6 +402,31 @@ databases.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.66.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;polardbClusterconfig&quot;</span>
+<span class="n">creation</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;creation&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">creation</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">creation</span> <span class="o">=</span> <span class="s2">&quot;PolarDB&quot;</span>
+<span class="n">default_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_resource_creation</span><span class="o">=</span><span class="n">creation</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">default_switch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;defaultSwitch&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_cluster</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">polardb</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;defaultCluster&quot;</span><span class="p">,</span>
+    <span class="n">db_node_class</span><span class="o">=</span><span class="s2">&quot;rds.mysql.s2.large&quot;</span><span class="p">,</span>
+    <span class="n">db_type</span><span class="o">=</span><span class="s2">&quot;MySQL&quot;</span><span class="p">,</span>
+    <span class="n">db_version</span><span class="o">=</span><span class="s2">&quot;5.6&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">pay_type</span><span class="o">=</span><span class="s2">&quot;PostPaid&quot;</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -608,6 +663,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.66.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">polardb</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;cluster&quot;</span><span class="p">,</span>
+    <span class="n">db_node_class</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;clusterclass&quot;</span><span class="p">],</span>
+    <span class="n">db_type</span><span class="o">=</span><span class="s2">&quot;MySQL&quot;</span><span class="p">,</span>
+    <span class="n">db_version</span><span class="o">=</span><span class="s2">&quot;8.0&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;testDB&quot;</span><span class="p">,</span>
+    <span class="n">pay_type</span><span class="o">=</span><span class="s2">&quot;PostPaid&quot;</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="s2">&quot;polar.mysql.x4.large&quot;</span><span class="p">)</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">polardb</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">db_cluster_id</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">db_name</span><span class="o">=</span><span class="s2">&quot;tftestdatabase&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -834,6 +904,37 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">creation</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;creation&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">creation</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">creation</span> <span class="o">=</span> <span class="s2">&quot;PolarDB&quot;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;polardbconnectionbasic&quot;</span>
+<span class="n">default_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_resource_creation</span><span class="o">=</span><span class="n">creation</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">default_switch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;defaultSwitch&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">default_cluster</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">polardb</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;defaultCluster&quot;</span><span class="p">,</span>
+    <span class="n">db_type</span><span class="o">=</span><span class="s2">&quot;MySQL&quot;</span><span class="p">,</span>
+    <span class="n">db_version</span><span class="o">=</span><span class="s2">&quot;8.0&quot;</span><span class="p">,</span>
+    <span class="n">pay_type</span><span class="o">=</span><span class="s2">&quot;PostPaid&quot;</span><span class="p">,</span>
+    <span class="n">db_node_class</span><span class="o">=</span><span class="s2">&quot;polar.mysql.x4.large&quot;</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+<span class="n">default_endpoints</span> <span class="o">=</span> <span class="n">default_cluster</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="nb">id</span><span class="p">:</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">polardb</span><span class="o">.</span><span class="n">get_endpoints</span><span class="p">(</span><span class="n">db_cluster_id</span><span class="o">=</span><span class="nb">id</span><span class="p">))</span>
+<span class="n">endpoint</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">polardb</span><span class="o">.</span><span class="n">EndpointAddress</span><span class="p">(</span><span class="s2">&quot;endpoint&quot;</span><span class="p">,</span>
+    <span class="n">db_cluster_id</span><span class="o">=</span><span class="n">default_cluster</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">db_endpoint_id</span><span class="o">=</span><span class="n">default_endpoints</span><span class="o">.</span><span class="n">endpoints</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;db_endpoint_id&quot;</span><span class="p">],</span>
+    <span class="n">connection_prefix</span><span class="o">=</span><span class="s2">&quot;testpolardbconn&quot;</span><span class="p">,</span>
+    <span class="n">net_type</span><span class="o">=</span><span class="s2">&quot;Public&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1125,6 +1226,15 @@ Filters support regular expression for the account name, searches by clusterId.<
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.70.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">polardb_clusters_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">polardb</span><span class="o">.</span><span class="n">get_clusters</span><span class="p">(</span><span class="n">description_regex</span><span class="o">=</span><span class="s2">&quot;pc-\w+&quot;</span><span class="p">,</span>
+    <span class="n">status</span><span class="o">=</span><span class="s2">&quot;Running&quot;</span><span class="p">)</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">polardb</span><span class="o">.</span><span class="n">get_accounts</span><span class="p">(</span><span class="n">db_cluster_id</span><span class="o">=</span><span class="n">polardb_clusters_ds</span><span class="o">.</span><span class="n">clusters</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;ends&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">.</span><span class="n">accounts</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;account_name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1143,6 +1253,14 @@ Filters support regular expression for the cluster description, searches by tags
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.66.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">polardb_clusters_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">polardb</span><span class="o">.</span><span class="n">get_clusters</span><span class="p">(</span><span class="n">description_regex</span><span class="o">=</span><span class="s2">&quot;pc-\w+&quot;</span><span class="p">,</span>
+    <span class="n">status</span><span class="o">=</span><span class="s2">&quot;Running&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstPolardbClusterId&quot;</span><span class="p">,</span> <span class="n">polardb_clusters_ds</span><span class="o">.</span><span class="n">clusters</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1168,6 +1286,15 @@ Filters support regular expression for the database name, searches by clusterId.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.70.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">polardb_clusters_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">polardb</span><span class="o">.</span><span class="n">get_clusters</span><span class="p">(</span><span class="n">description_regex</span><span class="o">=</span><span class="s2">&quot;pc-\w+&quot;</span><span class="p">,</span>
+    <span class="n">status</span><span class="o">=</span><span class="s2">&quot;Running&quot;</span><span class="p">)</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">polardb</span><span class="o">.</span><span class="n">get_databases</span><span class="p">(</span><span class="n">db_cluster_id</span><span class="o">=</span><span class="n">polardb_clusters_ds</span><span class="o">.</span><span class="n">clusters</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;ends&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">.</span><span class="n">databases</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;db_name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1186,6 +1313,15 @@ Filters support regular expression for the cluster name, searches by clusterId, 
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.68.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">polardb_clusters_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">polardb</span><span class="o">.</span><span class="n">get_clusters</span><span class="p">(</span><span class="n">description_regex</span><span class="o">=</span><span class="s2">&quot;pc-\w+&quot;</span><span class="p">,</span>
+    <span class="n">status</span><span class="o">=</span><span class="s2">&quot;Running&quot;</span><span class="p">)</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">polardb</span><span class="o">.</span><span class="n">get_endpoints</span><span class="p">(</span><span class="n">db_cluster_id</span><span class="o">=</span><span class="n">polardb_clusters_ds</span><span class="o">.</span><span class="n">clusters</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;ends&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">.</span><span class="n">endpoints</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;db_endpoint_id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1203,6 +1339,17 @@ Filters support regular expression for the cluster name, searches by clusterId, 
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.81.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">resources_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_resource_creation</span><span class="o">=</span><span class="s2">&quot;PolarDB&quot;</span><span class="p">)</span>
+<span class="n">resources_node_classes</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">polardb</span><span class="o">.</span><span class="n">get_node_classes</span><span class="p">(</span><span class="n">db_type</span><span class="o">=</span><span class="s2">&quot;MySQL&quot;</span><span class="p">,</span>
+    <span class="n">db_version</span><span class="o">=</span><span class="s2">&quot;5.6&quot;</span><span class="p">,</span>
+    <span class="n">pay_type</span><span class="o">=</span><span class="s2">&quot;Postpaid&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">resources_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstPolardbNodeClass&quot;</span><span class="p">,</span> <span class="n">resources_node_classes</span><span class="o">.</span><span class="n">classes</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1224,6 +1371,12 @@ Filters support regular expression for the cluster name, searches by clusterId, 
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.74.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">zones_ids</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">polardb</span><span class="o">.</span><span class="n">get_zones</span><span class="p">()</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>multi</strong> (<em>bool</em>) – Indicate whether the zones can be used in a multi AZ configuration. Default to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Multi AZ is usually used to launch PolarDB instances.</p>

@@ -14,9 +14,46 @@ This data source provides availability zones for RDS that can be accessed by an 
 
 > **NOTE:** Available in v1.73.0+.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+zones_ids = alicloud.rds.get_zones()
+# Create an RDS instance with the first matched zone
+db = alicloud.rds.Instance("db", zone_id=zones_ids.zones[0])
+# Other properties...
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const zonesIds = alicloud.rds.getZones({});
+// Create an RDS instance with the first matched zone
+const db = new alicloud.rds.Instance("db", {zoneId: zonesIds.then(zonesIds => zonesIds.zones[0])});
+// Other properties...
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetZones {#using}

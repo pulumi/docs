@@ -45,6 +45,14 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE:</strong> The bucket namespace is shared by all users of the OSS system. Please set bucket name as unique as possible.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">bucket_acl</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">oss</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket-acl&quot;</span><span class="p">,</span>
+    <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="s2">&quot;bucket-170309-acl&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -399,6 +407,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.oss.BucketObject">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">BucketObject</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">acl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_control</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_disposition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_encoding</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_md5</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expires</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_side_encryption</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.BucketObject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to put a object(content or file) to a oss bucket.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">object_source</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">oss</span><span class="o">.</span><span class="n">BucketObject</span><span class="p">(</span><span class="s2">&quot;object-source&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="s2">&quot;your_bucket_name&quot;</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;new_object_key&quot;</span><span class="p">,</span>
+    <span class="n">source</span><span class="o">=</span><span class="s2">&quot;path/to/file&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">oss</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;public-read&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="s2">&quot;your_bucket_name&quot;</span><span class="p">)</span>
+<span class="n">object_content</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">oss</span><span class="o">.</span><span class="n">BucketObject</span><span class="p">(</span><span class="s2">&quot;object-content&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">bucket</span><span class="p">,</span>
+    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;the content that you want to upload.&quot;</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;new_object_key&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -747,6 +776,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.oss.get_bucket_objects">
 <code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">get_bucket_objects</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bucket_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.get_bucket_objects" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the objects of an OSS bucket.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">bucket_objects_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">oss</span><span class="o">.</span><span class="n">get_bucket_objects</span><span class="p">(</span><span class="n">bucket_name</span><span class="o">=</span><span class="s2">&quot;sample_bucket&quot;</span><span class="p">,</span>
+    <span class="n">key_regex</span><span class="o">=</span><span class="s2">&quot;sample/sample_object.txt&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstObjectKey&quot;</span><span class="p">,</span> <span class="n">bucket_objects_ds</span><span class="o">.</span><span class="n">objects</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;key&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -762,6 +799,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.oss.get_buckets">
 <code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">get_buckets</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.get_buckets" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the OSS buckets of the current Alibaba Cloud user.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">oss_buckets_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">oss</span><span class="o">.</span><span class="n">get_buckets</span><span class="p">(</span><span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;sample_oss_bucket&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstOssBucketName&quot;</span><span class="p">,</span> <span class="n">oss_buckets_ds</span><span class="o">.</span><span class="n">buckets</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by bucket name.</p>
@@ -773,6 +817,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.oss.get_instance_attachments">
 <code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">get_instance_attachments</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">instance_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.get_instance_attachments" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the ots instance attachments of the current Alibaba Cloud user.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">attachments_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">oss</span><span class="o">.</span><span class="n">get_instance_attachments</span><span class="p">(</span><span class="n">instance_name</span><span class="o">=</span><span class="s2">&quot;sample-instance&quot;</span><span class="p">,</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;testvpc&quot;</span><span class="p">,</span>
+    <span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;attachments.txt&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstOtsAttachmentId&quot;</span><span class="p">,</span> <span class="n">attachments_ds</span><span class="o">.</span><span class="n">attachments</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -787,6 +840,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.oss.get_instances">
 <code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">get_instances</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.get_instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the ots instances of the current Alibaba Cloud user.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">instances_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">oss</span><span class="o">.</span><span class="n">get_instances</span><span class="p">(</span><span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;sample-instance&quot;</span><span class="p">,</span>
+    <span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;instances.txt&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstInstanceId&quot;</span><span class="p">,</span> <span class="n">instances_ds</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -815,6 +876,15 @@ tagKey2 = &quot;tagValue2&quot;
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.40.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">tables_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">oss</span><span class="o">.</span><span class="n">get_tables</span><span class="p">(</span><span class="n">instance_name</span><span class="o">=</span><span class="s2">&quot;sample-instance&quot;</span><span class="p">,</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;sample-table&quot;</span><span class="p">,</span>
+    <span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;tables.txt&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstTableId&quot;</span><span class="p">,</span> <span class="n">tables_ds</span><span class="o">.</span><span class="n">tables</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

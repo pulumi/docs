@@ -30,7 +30,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+resources = alicloud.rds.get_instance_classes(engine="MySQL",
+    engine_version="5.6",
+    instance_charge_type="PostPaid",
+    output_file="./classes.txt")
+pulumi.export("firstDbInstanceClass", resources.instance_classes[0]["instance_class"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

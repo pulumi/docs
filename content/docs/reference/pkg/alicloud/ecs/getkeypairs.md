@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+# Declare the data source
+default_key_pair = alicloud.ecs.KeyPair("defaultKeyPair", key_name="keyPairDatasource")
+default_key_pairs = default_key_pair.key_name.apply(lambda key_name: alicloud.ecs.get_key_pairs(name_regex=key_name))
+```
 {{% /example %}}
 
 {{% example typescript %}}

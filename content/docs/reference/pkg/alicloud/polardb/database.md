@@ -30,7 +30,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+cluster = alicloud.polardb.Cluster("cluster",
+    db_node_class=var["clusterclass"],
+    db_type="MySQL",
+    db_version="8.0",
+    description="testDB",
+    pay_type="PostPaid",
+    vswitch_id="polar.mysql.x4.large")
+default = alicloud.polardb.Database("default",
+    db_cluster_id=cluster.id,
+    db_name="tftestdatabase")
+```
 {{% /example %}}
 
 {{% example typescript %}}

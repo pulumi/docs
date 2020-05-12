@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+# Add a new Domain group.
+group = alicloud.dns.Group("group")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -30,7 +30,41 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "tf-testAccEssNotification-%d"
+default_regions = alicloud.get_regions(current=True)
+default_account = alicloud.get_account()
+default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
+    available_resource_creation="VSwitch")
+default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
+default_switch = alicloud.vpc.Switch("defaultSwitch",
+    availability_zone=default_zones.zones[0]["id"],
+    cidr_block="172.16.0.0/24",
+    vpc_id=default_network.id)
+default_scaling_group = alicloud.ess.ScalingGroup("defaultScalingGroup",
+    max_size=1,
+    min_size=1,
+    removal_policies=[
+        "OldestInstance",
+        "NewestInstance",
+    ],
+    scaling_group_name=name,
+    vswitch_ids=[default_switch.id])
+default_queue = alicloud.mns.Queue("defaultQueue")
+default_notification = alicloud.ess.Notification("defaultNotification",
+    notification_arn=default_queue.name.apply(lambda name: f"acs:ess:{default_regions.regions[0]['id']}:{default_account.id}:queue/{name}"),
+    notification_types=[
+        "AUTOSCALING:SCALE_OUT_SUCCESS",
+        "AUTOSCALING:SCALE_OUT_ERROR",
+    ],
+    scaling_group_id=default_scaling_group.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

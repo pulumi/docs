@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+slbs_ds = alicloud.slb.get_load_balancers(name_regex="sample_slb")
+pulumi.export("firstSlbId", slbs_ds.slbs[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

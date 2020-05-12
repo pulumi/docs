@@ -22,6 +22,12 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p><strong>NOTE:</strong> Available in 1.60.0+</p>
 <p><strong>NOTE:</strong> Only the following regions support create Cloud Connect Network. [<code class="docutils literal notranslate"><span class="pre">cn-shanghai</span></code>, <code class="docutils literal notranslate"><span class="pre">cn-shanghai-finance-1</span></code>, <code class="docutils literal notranslate"><span class="pre">cn-hongkong</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-1</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-2</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-3</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-5</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-northeast-1</span></code>, <code class="docutils literal notranslate"><span class="pre">eu-central-1</span></code>]</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">rocketmq</span><span class="o">.</span><span class="n">Acl</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -101,6 +107,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> Available in 1.60.0+</p>
 <p><strong>NOTE:</strong> Only the following regions support create Cloud Connect Network. [<code class="docutils literal notranslate"><span class="pre">cn-shanghai</span></code>, <code class="docutils literal notranslate"><span class="pre">cn-shanghai-finance-1</span></code>, <code class="docutils literal notranslate"><span class="pre">cn-hongkong</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-1</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-2</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-3</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-5</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-northeast-1</span></code>, <code class="docutils literal notranslate"><span class="pre">eu-central-1</span></code>]</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default_acl</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">rocketmq</span><span class="o">.</span><span class="n">Acl</span><span class="p">(</span><span class="s2">&quot;defaultAcl&quot;</span><span class="p">,</span> <span class="n">sag_count</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">)</span>
+<span class="n">default_acl_rule</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">rocketmq</span><span class="o">.</span><span class="n">AclRule</span><span class="p">(</span><span class="s2">&quot;defaultAclRule&quot;</span><span class="p">,</span>
+    <span class="n">acl_id</span><span class="o">=</span><span class="n">default_acl</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;tf-testSagAclRule&quot;</span><span class="p">,</span>
+    <span class="n">dest_cidr</span><span class="o">=</span><span class="s2">&quot;192.168.1.0/24&quot;</span><span class="p">,</span>
+    <span class="n">dest_port_range</span><span class="o">=</span><span class="s2">&quot;-1/-1&quot;</span><span class="p">,</span>
+    <span class="n">direction</span><span class="o">=</span><span class="s2">&quot;in&quot;</span><span class="p">,</span>
+    <span class="n">ip_protocol</span><span class="o">=</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;accept&quot;</span><span class="p">,</span>
+    <span class="n">priority</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="n">source_cidr</span><span class="o">=</span><span class="s2">&quot;10.10.1.0/24&quot;</span><span class="p">,</span>
+    <span class="n">source_port_range</span><span class="o">=</span><span class="s2">&quot;-1/-1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -267,6 +290,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> Available in 1.65.0+</p>
 <p><strong>NOTE:</strong> Only the following regions support. [<code class="docutils literal notranslate"><span class="pre">cn-shanghai</span></code>, <code class="docutils literal notranslate"><span class="pre">cn-shanghai-finance-1</span></code>, <code class="docutils literal notranslate"><span class="pre">cn-hongkong</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-1</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-2</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-3</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-5</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-northeast-1</span></code>, <code class="docutils literal notranslate"><span class="pre">eu-central-1</span></code>]</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">rocketmq</span><span class="o">.</span><span class="n">ClientUser</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">bandwidth</span><span class="o">=</span><span class="s2">&quot;20&quot;</span><span class="p">,</span>
+    <span class="n">client_ip</span><span class="o">=</span><span class="s2">&quot;192.1.10.0&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;xxxxxxx&quot;</span><span class="p">,</span>
+    <span class="n">sag_id</span><span class="o">=</span><span class="s2">&quot;sag-xxxxx&quot;</span><span class="p">,</span>
+    <span class="n">user_mail</span><span class="o">=</span><span class="s2">&quot;tftest-xxxxx@test.com&quot;</span><span class="p">,</span>
+    <span class="n">user_name</span><span class="o">=</span><span class="s2">&quot;th-username-xxxxx&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -386,6 +421,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> Available in 1.63.0+</p>
 <p><strong>NOTE:</strong> Only the following regions suppor. [<code class="docutils literal notranslate"><span class="pre">cn-shanghai</span></code>, <code class="docutils literal notranslate"><span class="pre">cn-shanghai-finance-1</span></code>, <code class="docutils literal notranslate"><span class="pre">cn-hongkong</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-1</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-2</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-3</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-5</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-northeast-1</span></code>, <code class="docutils literal notranslate"><span class="pre">eu-central-1</span></code>]</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">rocketmq</span><span class="o">.</span><span class="n">DnatEntry</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">external_ip</span><span class="o">=</span><span class="s2">&quot;1.0.0.2&quot;</span><span class="p">,</span>
+    <span class="n">external_port</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="n">internal_ip</span><span class="o">=</span><span class="s2">&quot;10.0.0.2&quot;</span><span class="p">,</span>
+    <span class="n">internal_port</span><span class="o">=</span><span class="s2">&quot;20&quot;</span><span class="p">,</span>
+    <span class="n">ip_protocol</span><span class="o">=</span><span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+    <span class="n">sag_id</span><span class="o">=</span><span class="s2">&quot;sag-3rb1t3iagy3w0zgwy9&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;Intranet&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -590,6 +638,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.53.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;onsInstanceName&quot;</span>
+<span class="n">group_id</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;groupId&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">group_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">group_id</span> <span class="o">=</span> <span class="s2">&quot;GID-onsGroupDatasourceName&quot;</span>
+<span class="n">default_instance</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">rocketmq</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;defaultInstance&quot;</span><span class="p">,</span> <span class="n">remark</span><span class="o">=</span><span class="s2">&quot;default_ons_instance_remark&quot;</span><span class="p">)</span>
+<span class="n">default_group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">rocketmq</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;defaultGroup&quot;</span><span class="p">,</span>
+    <span class="n">group_id</span><span class="o">=</span><span class="n">group_id</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">default_instance</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">remark</span><span class="o">=</span><span class="s2">&quot;dafault_ons_group_remark&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -693,6 +758,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> The number of instances in the same region cannot exceed 8. At present, the resource does not support region “mq-internet-access” and “ap-southeast-5”.</p>
 <p><strong>NOTE:</strong> Available in 1.51.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">rocketmq</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">remark</span><span class="o">=</span><span class="s2">&quot;tf-example-ons-instance-remark&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -801,6 +872,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> Available in 1.60.0+</p>
 <p><strong>NOTE:</strong> Only the following regions support. [<code class="docutils literal notranslate"><span class="pre">cn-shanghai</span></code>, <code class="docutils literal notranslate"><span class="pre">cn-shanghai-finance-1</span></code>, <code class="docutils literal notranslate"><span class="pre">cn-hongkong</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-1</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-2</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-3</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-5</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-northeast-1</span></code>, <code class="docutils literal notranslate"><span class="pre">eu-central-1</span></code>]</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">rocketmq</span><span class="o">.</span><span class="n">Qos</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -881,6 +958,22 @@ You need to create a QoS car to set priorities, rate limits, and quintuple rules
 <div><p><strong>NOTE:</strong> Available in 1.60.0+</p>
 <p><strong>NOTE:</strong> Only the following regions support. [<code class="docutils literal notranslate"><span class="pre">cn-shanghai</span></code>, <code class="docutils literal notranslate"><span class="pre">cn-shanghai-finance-1</span></code>, <code class="docutils literal notranslate"><span class="pre">cn-hongkong</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-1</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-2</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-3</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-5</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-northeast-1</span></code>, <code class="docutils literal notranslate"><span class="pre">eu-central-1</span></code>]</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default_qos</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">rocketmq</span><span class="o">.</span><span class="n">Qos</span><span class="p">(</span><span class="s2">&quot;defaultQos&quot;</span><span class="p">)</span>
+<span class="n">default_qos_car</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">rocketmq</span><span class="o">.</span><span class="n">QosCar</span><span class="p">(</span><span class="s2">&quot;defaultQosCar&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;tf-testSagQosCarDescription&quot;</span><span class="p">,</span>
+    <span class="n">limit_type</span><span class="o">=</span><span class="s2">&quot;Absolute&quot;</span><span class="p">,</span>
+    <span class="n">max_bandwidth_abs</span><span class="o">=</span><span class="s2">&quot;20&quot;</span><span class="p">,</span>
+    <span class="n">max_bandwidth_percent</span><span class="o">=</span><span class="s2">&quot;20&quot;</span><span class="p">,</span>
+    <span class="n">min_bandwidth_abs</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">,</span>
+    <span class="n">min_bandwidth_percent</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">,</span>
+    <span class="n">percent_source_type</span><span class="o">=</span><span class="s2">&quot;InternetUpBandwidth&quot;</span><span class="p">,</span>
+    <span class="n">priority</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="n">qos_id</span><span class="o">=</span><span class="n">default_qos</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1033,6 +1126,23 @@ You need to create a QoS policy to set priorities, rate limits, and quintuple ru
 <div><p><strong>NOTE:</strong> Available in 1.60.0+</p>
 <p><strong>NOTE:</strong> Only the following regions support. [<code class="docutils literal notranslate"><span class="pre">cn-shanghai</span></code>, <code class="docutils literal notranslate"><span class="pre">cn-shanghai-finance-1</span></code>, <code class="docutils literal notranslate"><span class="pre">cn-hongkong</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-1</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-2</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-3</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-5</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-northeast-1</span></code>, <code class="docutils literal notranslate"><span class="pre">eu-central-1</span></code>]</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default_qos</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">rocketmq</span><span class="o">.</span><span class="n">Qos</span><span class="p">(</span><span class="s2">&quot;defaultQos&quot;</span><span class="p">)</span>
+<span class="n">default_qos_policy</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">rocketmq</span><span class="o">.</span><span class="n">QosPolicy</span><span class="p">(</span><span class="s2">&quot;defaultQosPolicy&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;tf-testSagQosPolicyDescription&quot;</span><span class="p">,</span>
+    <span class="n">dest_cidr</span><span class="o">=</span><span class="s2">&quot;10.10.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">dest_port_range</span><span class="o">=</span><span class="s2">&quot;-1/-1&quot;</span><span class="p">,</span>
+    <span class="n">end_time</span><span class="o">=</span><span class="s2">&quot;2019-10-26T16:41:33+0800&quot;</span><span class="p">,</span>
+    <span class="n">ip_protocol</span><span class="o">=</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span>
+    <span class="n">priority</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="n">qos_id</span><span class="o">=</span><span class="n">default_qos</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">source_cidr</span><span class="o">=</span><span class="s2">&quot;192.168.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">source_port_range</span><span class="o">=</span><span class="s2">&quot;-1/-1&quot;</span><span class="p">,</span>
+    <span class="n">start_time</span><span class="o">=</span><span class="s2">&quot;2019-10-25T16:41:33+0800&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1192,6 +1302,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> Available in 1.61.0+</p>
 <p><strong>NOTE:</strong> Only the following regions support. [<code class="docutils literal notranslate"><span class="pre">cn-shanghai</span></code>, <code class="docutils literal notranslate"><span class="pre">cn-shanghai-finance-1</span></code>, <code class="docutils literal notranslate"><span class="pre">cn-hongkong</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-1</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-2</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-3</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-5</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-northeast-1</span></code>, <code class="docutils literal notranslate"><span class="pre">eu-central-1</span></code>]</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">rocketmq</span><span class="o">.</span><span class="n">SnatEntry</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;192.168.7.0/24&quot;</span><span class="p">,</span>
+    <span class="n">sag_id</span><span class="o">=</span><span class="s2">&quot;sag-3rb1t3iagy3w0zgwy9&quot;</span><span class="p">,</span>
+    <span class="n">snat_ip</span><span class="o">=</span><span class="s2">&quot;192.0.0.2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1286,6 +1405,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.53.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;onsInstanceName&quot;</span>
+<span class="n">topic</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;topic&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">topic</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">topic</span> <span class="o">=</span> <span class="s2">&quot;onsTopicName&quot;</span>
+<span class="n">default_instance</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">rocketmq</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;defaultInstance&quot;</span><span class="p">,</span> <span class="n">remark</span><span class="o">=</span><span class="s2">&quot;default_ons_instance_remark&quot;</span><span class="p">)</span>
+<span class="n">default_topic</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">rocketmq</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;defaultTopic&quot;</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">default_instance</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">message_type</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">remark</span><span class="o">=</span><span class="s2">&quot;dafault_ons_topic_remark&quot;</span><span class="p">,</span>
+    <span class="n">topic</span><span class="o">=</span><span class="n">topic</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1414,6 +1551,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.52.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;onsInstanceDatasourceName&quot;</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">rocketmq</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">remark</span><span class="o">=</span><span class="s2">&quot;default_ons_instance_remark&quot;</span><span class="p">)</span>
+<span class="n">instances_ds</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">default</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">default</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="nb">id</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">rocketmq</span><span class="o">.</span><span class="n">get_instances</span><span class="p">(</span><span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="nb">id</span><span class="p">],</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;instances.txt&quot;</span><span class="p">))</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstInstanceId&quot;</span><span class="p">,</span> <span class="n">instances_ds</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;instance_id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1431,6 +1582,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.53.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;onsInstanceName&quot;</span>
+<span class="n">topic</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;topic&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">topic</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">topic</span> <span class="o">=</span> <span class="s2">&quot;onsTopicDatasourceName&quot;</span>
+<span class="n">default_instance</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">rocketmq</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;defaultInstance&quot;</span><span class="p">,</span> <span class="n">remark</span><span class="o">=</span><span class="s2">&quot;default_ons_instance_remark&quot;</span><span class="p">)</span>
+<span class="n">default_topic</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">rocketmq</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;defaultTopic&quot;</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">default_instance</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">message_type</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">remark</span><span class="o">=</span><span class="s2">&quot;dafault_ons_topic_remark&quot;</span><span class="p">,</span>
+    <span class="n">topic</span><span class="o">=</span><span class="n">topic</span><span class="p">)</span>
+<span class="n">topics_ds</span> <span class="o">=</span> <span class="n">default_topic</span><span class="o">.</span><span class="n">instance_id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">instance_id</span><span class="p">:</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">rocketmq</span><span class="o">.</span><span class="n">get_topics</span><span class="p">(</span><span class="n">instance_id</span><span class="o">=</span><span class="n">instance_id</span><span class="p">,</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="n">topic</span><span class="p">,</span>
+    <span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;topics.txt&quot;</span><span class="p">))</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstTopicName&quot;</span><span class="p">,</span> <span class="n">topics_ds</span><span class="o">.</span><span class="n">topics</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;topic&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

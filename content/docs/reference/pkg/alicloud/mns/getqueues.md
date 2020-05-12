@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+queues = alicloud.mns.get_queues(name_prefix="tf-")
+pulumi.export("firstQueueId", queues.queues[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

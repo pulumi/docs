@@ -35,7 +35,23 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default_qos = alicloud.rocketmq.Qos("defaultQos")
+default_qos_policy = alicloud.rocketmq.QosPolicy("defaultQosPolicy",
+    description="tf-testSagQosPolicyDescription",
+    dest_cidr="10.10.0.0/24",
+    dest_port_range="-1/-1",
+    end_time="2019-10-26T16:41:33+0800",
+    ip_protocol="ALL",
+    priority="1",
+    qos_id=default_qos.id,
+    source_cidr="192.168.0.0/24",
+    source_port_range="-1/-1",
+    start_time="2019-10-25T16:41:33+0800")
+```
 {{% /example %}}
 
 {{% example typescript %}}

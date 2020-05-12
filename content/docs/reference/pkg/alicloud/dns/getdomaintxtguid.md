@@ -30,7 +30,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+this = alicloud.dns.get_domain_txt_guid(domain_name="test111.abc",
+    type="ADD_SUB_DOMAIN")
+pulumi.export("rr", this.rr)
+pulumi.export("value", this.value)
+```
 {{% /example %}}
 
 {{% example typescript %}}

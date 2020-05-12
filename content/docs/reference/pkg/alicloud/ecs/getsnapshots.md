@@ -71,7 +71,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+snapshots = alicloud.ecs.get_snapshots(ids=["s-123456890abcdef"],
+    name_regex="tf-testAcc-snapshot")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -882,6 +882,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.vpn.get_connections">
 <code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">get_connections</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">customer_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpn_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.get_connections" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPN connections data source lists lots of VPN connections resource information owned by an Alicloud account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpn</span><span class="o">.</span><span class="n">get_connections</span><span class="p">(</span><span class="n">customer_gateway_id</span><span class="o">=</span><span class="s2">&quot;fake-cgw-id&quot;</span><span class="p">,</span>
+    <span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;fake-conn-id&quot;</span><span class="p">],</span>
+    <span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;/tmp/vpnconn&quot;</span><span class="p">,</span>
+    <span class="n">vpn_gateway_id</span><span class="o">=</span><span class="s2">&quot;fake-vpn-id&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -899,6 +908,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.vpn.get_customer_gateways">
 <code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">get_customer_gateways</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.get_customer_gateways" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPN customers gateways data source lists a number of VPN customer gateways resource information owned by an Alicloud account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpn</span><span class="o">.</span><span class="n">get_customer_gateways</span><span class="p">(</span><span class="n">ids</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;fake-id1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;fake-id2&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;testAcc*&quot;</span><span class="p">,</span>
+    <span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;/tmp/cgws&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -914,6 +934,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.vpn.get_gateways">
 <code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">get_gateways</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">business_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.get_gateways" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPNs data source lists a number of VPNs resource information owned by an Alicloud account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">vpn_gateways</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpn</span><span class="o">.</span><span class="n">get_gateways</span><span class="p">(</span><span class="n">business_status</span><span class="o">=</span><span class="s2">&quot;Normal&quot;</span><span class="p">,</span>
+    <span class="n">ids</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;fake-vpn-id1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;fake-vpn-id2&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;testAcc*&quot;</span><span class="p">,</span>
+    <span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;/tmp/vpns&quot;</span><span class="p">,</span>
+    <span class="n">status</span><span class="o">=</span><span class="s2">&quot;active&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="s2">&quot;fake-vpc-id&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

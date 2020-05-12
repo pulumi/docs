@@ -52,7 +52,89 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
+    available_resource_creation="VSwitch")
+default_instance_types = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0]["id"],
+    eni_amount=2)
+image = alicloud.ecs.get_images(most_recent=True,
+    name_regex="^ubuntu_18.*64",
+    owners="system")
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "tf-testAccSlbMasterSlaveServerGroupVpc"
+number = config.get("number")
+if number is None:
+    number = "1"
+main_network = alicloud.vpc.Network("mainNetwork", cidr_block="172.16.0.0/16")
+main_switch = alicloud.vpc.Switch("mainSwitch",
+    availability_zone=default_zones.zones[0]["id"],
+    cidr_block="172.16.0.0/16",
+    vpc_id=main_network.id)
+group_security_group = alicloud.ecs.SecurityGroup("groupSecurityGroup", vpc_id=main_network.id)
+instance_instance = []
+for range in [{"value": i} for i in range(0, 2)]:
+    instance_instance.append(alicloud.ecs.Instance(f"instanceInstance-{range['value']}",
+        availability_zone=default_zones.zones[0]["id"],
+        image_id=image.images[0]["id"],
+        instance_charge_type="PostPaid",
+        instance_name=name,
+        instance_type=default_instance_types.instance_types[0]["id"],
+        internet_charge_type="PayByTraffic",
+        internet_max_bandwidth_out="10",
+        security_groups=[group_security_group.id],
+        system_disk_category="cloud_efficiency",
+        vswitch_id=main_switch.id))
+instance_load_balancer = alicloud.slb.LoadBalancer("instanceLoadBalancer",
+    specification="slb.s2.small",
+    vswitch_id=main_switch.id)
+default_network_interface = []
+for range in [{"value": i} for i in range(0, number)]:
+    default_network_interface.append(alicloud.vpc.NetworkInterface(f"defaultNetworkInterface-{range['value']}",
+        security_groups=[group_security_group.id],
+        vswitch_id=main_switch.id))
+default_network_interface_attachment = []
+for range in [{"value": i} for i in range(0, number)]:
+    default_network_interface_attachment.append(alicloud.vpc.NetworkInterfaceAttachment(f"defaultNetworkInterfaceAttachment-{range['value']}",
+        instance_id=instance_instance[0].id,
+        network_interface_id=[__item.id for __item in default_network_interface][range["index"]]))
+group_master_slave_server_group = alicloud.slb.MasterSlaveServerGroup("groupMasterSlaveServerGroup",
+    load_balancer_id=instance_load_balancer.id,
+    servers=[
+        {
+            "port": 100,
+            "serverId": instance_instance[0].id,
+            "serverType": "Master",
+            "weight": 100,
+        },
+        {
+            "port": 100,
+            "serverId": instance_instance[1].id,
+            "serverType": "Slave",
+            "weight": 100,
+        },
+    ])
+tcp = alicloud.slb.Listener("tcp",
+    bandwidth="10",
+    established_timeout=600,
+    frontend_port="22",
+    health_check_connect_port=20,
+    health_check_http_code="http_2xx",
+    health_check_interval=5,
+    health_check_timeout=8,
+    health_check_type="tcp",
+    health_check_uri="/console",
+    healthy_threshold=8,
+    load_balancer_id=instance_load_balancer.id,
+    master_slave_server_group_id=group_master_slave_server_group.id,
+    persistence_timeout=3600,
+    protocol="tcp",
+    unhealthy_threshold=8)
+```
 {{% /example %}}
 
 {{% example typescript %}}

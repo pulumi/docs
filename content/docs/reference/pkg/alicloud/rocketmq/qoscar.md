@@ -35,7 +35,22 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default_qos = alicloud.rocketmq.Qos("defaultQos")
+default_qos_car = alicloud.rocketmq.QosCar("defaultQosCar",
+    description="tf-testSagQosCarDescription",
+    limit_type="Absolute",
+    max_bandwidth_abs="20",
+    max_bandwidth_percent="20",
+    min_bandwidth_abs="10",
+    min_bandwidth_percent="10",
+    percent_source_type="InternetUpBandwidth",
+    priority="1",
+    qos_id=default_qos.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

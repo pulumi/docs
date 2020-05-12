@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instances_ds = alicloud.ecs.get_instances(name_regex="web_server",
+    status="Running")
+pulumi.export("firstInstanceId", instances_ds.instances[0]["id"])
+pulumi.export("instanceIds", instances_ds.ids)
+```
 {{% /example %}}
 
 {{% example typescript %}}

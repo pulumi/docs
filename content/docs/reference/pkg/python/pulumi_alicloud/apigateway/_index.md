@@ -841,6 +841,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.apigateway.get_apis">
 <code class="sig-prename descclassname">pulumi_alicloud.apigateway.</code><code class="sig-name descname">get_apis</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">api_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.apigateway.get_apis" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the apis of the current Alibaba Cloud user.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">data_apigatway_apis</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">get_apis</span><span class="p">(</span><span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;output_ApiGatawayApis&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstApiId&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;apigateway.getApis&quot;</span><span class="p">][</span><span class="s2">&quot;data_apigatway&quot;</span><span class="p">][</span><span class="s2">&quot;apis&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -857,6 +864,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.apigateway.get_apps">
 <code class="sig-prename descclassname">pulumi_alicloud.apigateway.</code><code class="sig-name descname">get_apps</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.apigateway.get_apps" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the apps of the current Alibaba Cloud user.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">data_apigatway</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">get_apps</span><span class="p">(</span><span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;outapps&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstAppId&quot;</span><span class="p">,</span> <span class="n">data_apigatway</span><span class="o">.</span><span class="n">apps</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -872,6 +886,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.apigateway.get_groups">
 <code class="sig-prename descclassname">pulumi_alicloud.apigateway.</code><code class="sig-name descname">get_groups</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.apigateway.get_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the api groups of the current Alibaba Cloud user.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">data_apigatway</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">get_groups</span><span class="p">(</span><span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;outgroups&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstGroupId&quot;</span><span class="p">,</span> <span class="n">data_apigatway</span><span class="o">.</span><span class="n">groups</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

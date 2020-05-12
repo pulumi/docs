@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+attachments_ds = alicloud.oss.get_instance_attachments(instance_name="sample-instance",
+    name_regex="testvpc",
+    output_file="attachments.txt")
+pulumi.export("firstOtsAttachmentId", attachments_ds.attachments[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

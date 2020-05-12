@@ -36,7 +36,24 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+foo_file_system = alicloud.nas.FileSystem("fooFileSystem",
+    description="tf-testAccNasConfigFs",
+    protocol_type="NFS",
+    storage_type="Performance")
+foo_access_group = alicloud.nas.AccessGroup("fooAccessGroup",
+    description="tf-testAccNasConfig",
+    type="Classic")
+bar = alicloud.nas.AccessGroup("bar",
+    description="tf-testAccNasConfig-2",
+    type="Classic")
+foo_mount_target = alicloud.nas.MountTarget("fooMountTarget",
+    access_group_name=foo_access_group.id,
+    file_system_id=foo_file_system.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

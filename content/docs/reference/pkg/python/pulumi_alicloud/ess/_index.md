@@ -200,6 +200,74 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> ECS instances can be attached or remove only when the scaling group is active and it has no scaling activity in progress.</p>
 <p><strong>NOTE:</strong> There are two types ECS instances in a scaling group: “AutoCreated” and “Attached”. The total number of them can not larger than the scaling group “MaxSize”.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;essattachmentconfig&quot;</span>
+<span class="n">default_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_disk_category</span><span class="o">=</span><span class="s2">&quot;cloud_efficiency&quot;</span><span class="p">,</span>
+    <span class="n">available_resource_creation</span><span class="o">=</span><span class="s2">&quot;VSwitch&quot;</span><span class="p">)</span>
+<span class="n">default_instance_types</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_instance_types</span><span class="p">(</span><span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cpu_core_count</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">memory_size</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">default_images</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_images</span><span class="p">(</span><span class="n">most_recent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;^ubuntu_18.*64&quot;</span><span class="p">,</span>
+    <span class="n">owners</span><span class="o">=</span><span class="s2">&quot;system&quot;</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">default_switch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;defaultSwitch&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_security_group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;defaultSecurityGroup&quot;</span><span class="p">,</span> <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_security_group_rule</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">SecurityGroupRule</span><span class="p">(</span><span class="s2">&quot;defaultSecurityGroupRule&quot;</span><span class="p">,</span>
+    <span class="n">cidr_ip</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">ip_protocol</span><span class="o">=</span><span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+    <span class="n">nic_type</span><span class="o">=</span><span class="s2">&quot;intranet&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;accept&quot;</span><span class="p">,</span>
+    <span class="n">port_range</span><span class="o">=</span><span class="s2">&quot;22/22&quot;</span><span class="p">,</span>
+    <span class="n">priority</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">security_group_id</span><span class="o">=</span><span class="n">default_security_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;ingress&quot;</span><span class="p">)</span>
+<span class="n">default_scaling_group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ess</span><span class="o">.</span><span class="n">ScalingGroup</span><span class="p">(</span><span class="s2">&quot;defaultScalingGroup&quot;</span><span class="p">,</span>
+    <span class="n">max_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">min_size</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">removal_policies</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;OldestInstance&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;NewestInstance&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">scaling_group_name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">vswitch_ids</span><span class="o">=</span><span class="p">[</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
+<span class="n">default_scaling_configuration</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ess</span><span class="o">.</span><span class="n">ScalingConfiguration</span><span class="p">(</span><span class="s2">&quot;defaultScalingConfiguration&quot;</span><span class="p">,</span>
+    <span class="n">active</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">enable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">force_delete</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="n">default_images</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="n">default_instance_types</span><span class="o">.</span><span class="n">instance_types</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">scaling_group_id</span><span class="o">=</span><span class="n">default_scaling_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">security_group_id</span><span class="o">=</span><span class="n">default_security_group</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_instance</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="nb">range</span> <span class="ow">in</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]:</span>
+    <span class="n">default_instance</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;defaultInstance-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">image_id</span><span class="o">=</span><span class="n">default_images</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="n">instance_charge_type</span><span class="o">=</span><span class="s2">&quot;PostPaid&quot;</span><span class="p">,</span>
+        <span class="n">instance_name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">instance_type</span><span class="o">=</span><span class="n">default_instance_types</span><span class="o">.</span><span class="n">instance_types</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="n">internet_charge_type</span><span class="o">=</span><span class="s2">&quot;PayByTraffic&quot;</span><span class="p">,</span>
+        <span class="n">internet_max_bandwidth_out</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">,</span>
+        <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span><span class="n">default_security_group</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+        <span class="n">system_disk_category</span><span class="o">=</span><span class="s2">&quot;cloud_efficiency&quot;</span><span class="p">,</span>
+        <span class="n">vswitch_id</span><span class="o">=</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+<span class="n">default_attachment</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ess</span><span class="o">.</span><span class="n">Attachment</span><span class="p">(</span><span class="s2">&quot;defaultAttachment&quot;</span><span class="p">,</span>
+    <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">instance_ids</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">default_instance</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="n">default_instance</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">scaling_group_id</span><span class="o">=</span><span class="n">default_scaling_group</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -696,6 +764,41 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.55.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;tf-testAccEssNotification-</span><span class="si">%d</span><span class="s2">&quot;</span>
+<span class="n">default_regions</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_regions</span><span class="p">(</span><span class="n">current</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">default_account</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_account</span><span class="p">()</span>
+<span class="n">default_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_disk_category</span><span class="o">=</span><span class="s2">&quot;cloud_efficiency&quot;</span><span class="p">,</span>
+    <span class="n">available_resource_creation</span><span class="o">=</span><span class="s2">&quot;VSwitch&quot;</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">default_switch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;defaultSwitch&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_scaling_group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ess</span><span class="o">.</span><span class="n">ScalingGroup</span><span class="p">(</span><span class="s2">&quot;defaultScalingGroup&quot;</span><span class="p">,</span>
+    <span class="n">max_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">min_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">removal_policies</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;OldestInstance&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;NewestInstance&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">scaling_group_name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">vswitch_ids</span><span class="o">=</span><span class="p">[</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
+<span class="n">default_queue</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">mns</span><span class="o">.</span><span class="n">Queue</span><span class="p">(</span><span class="s2">&quot;defaultQueue&quot;</span><span class="p">)</span>
+<span class="n">default_notification</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ess</span><span class="o">.</span><span class="n">Notification</span><span class="p">(</span><span class="s2">&quot;defaultNotification&quot;</span><span class="p">,</span>
+    <span class="n">notification_arn</span><span class="o">=</span><span class="n">default_queue</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">name</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;acs:ess:</span><span class="si">{</span><span class="n">default_regions</span><span class="o">.</span><span class="n">regions</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">default_account</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">:queue/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+    <span class="n">notification_types</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;AUTOSCALING:SCALE_OUT_SUCCESS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;AUTOSCALING:SCALE_OUT_ERROR&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">scaling_group_id</span><span class="o">=</span><span class="n">default_scaling_group</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1411,6 +1514,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong> Modifing <code class="docutils literal notranslate"><span class="pre">weight</span></code> attribute means detach vserver group first and then, attach with new weight parameter.</p>
 <p><strong>NOTE:</strong> Resource <code class="docutils literal notranslate"><span class="pre">ess.ScalingGroupVServerGroups</span></code> is available in 1.53.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;testAccEssVserverGroupsAttachment&quot;</span>
+<span class="n">default_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_disk_category</span><span class="o">=</span><span class="s2">&quot;cloud_efficiency&quot;</span><span class="p">,</span>
+    <span class="n">available_resource_creation</span><span class="o">=</span><span class="s2">&quot;VSwitch&quot;</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">default_switch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;defaultSwitch&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_load_balancer</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;defaultLoadBalancer&quot;</span><span class="p">,</span> <span class="n">vswitch_id</span><span class="o">=</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_server_group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">ServerGroup</span><span class="p">(</span><span class="s2">&quot;defaultServerGroup&quot;</span><span class="p">,</span> <span class="n">load_balancer_id</span><span class="o">=</span><span class="n">default_load_balancer</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_listener</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="nb">range</span> <span class="ow">in</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]:</span>
+    <span class="n">default_listener</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alicloud</span><span class="o">.</span><span class="n">slb</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;defaultListener-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">backend_port</span><span class="o">=</span><span class="s2">&quot;22&quot;</span><span class="p">,</span>
+        <span class="n">bandwidth</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">,</span>
+        <span class="n">frontend_port</span><span class="o">=</span><span class="s2">&quot;22&quot;</span><span class="p">,</span>
+        <span class="n">health_check_type</span><span class="o">=</span><span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+        <span class="n">load_balancer_id</span><span class="o">=</span><span class="p">[</span><span class="n">__item</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="p">[</span><span class="n">default_load_balancer</span><span class="p">]][</span><span class="nb">range</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]],</span>
+        <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;tcp&quot;</span><span class="p">))</span>
+<span class="n">default_scaling_group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ess</span><span class="o">.</span><span class="n">ScalingGroup</span><span class="p">(</span><span class="s2">&quot;defaultScalingGroup&quot;</span><span class="p">,</span>
+    <span class="n">max_size</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+    <span class="n">min_size</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+    <span class="n">scaling_group_name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">vswitch_ids</span><span class="o">=</span><span class="p">[</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
+<span class="n">default_scaling_group_v_server_groups</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ess</span><span class="o">.</span><span class="n">ScalingGroupVServerGroups</span><span class="p">(</span><span class="s2">&quot;defaultScalingGroupVServerGroups&quot;</span><span class="p">,</span>
+    <span class="n">scaling_group_id</span><span class="o">=</span><span class="n">default_scaling_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">vserver_groups</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;loadbalancerId&quot;</span><span class="p">:</span> <span class="n">default_load_balancer</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;vserverAttributes&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;100&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vserverGroupId&quot;</span><span class="p">:</span> <span class="n">default_server_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="s2">&quot;60&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <p>the vserver_group supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">loadbalancer_id</span></code> - (Required) Loadbalancer server ID of VServer Group.</p></li>
@@ -1438,7 +1583,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">vserverAttributes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vserverGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vserver_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
 </li>
@@ -1464,7 +1609,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">vserverAttributes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vserverGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vserver_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 </ul>
 </li>
@@ -1494,7 +1639,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">vserverAttributes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vserverGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vserver_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
 </li>
@@ -2056,6 +2201,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.72.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ess</span><span class="o">.</span><span class="n">get_lifecycle_hooks</span><span class="p">(</span><span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;lifecyclehook_name&quot;</span><span class="p">,</span>
+    <span class="n">scaling_group_id</span><span class="o">=</span><span class="s2">&quot;scaling_group_id&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstLifecycleHook&quot;</span><span class="p">,</span> <span class="n">ds</span><span class="o">.</span><span class="n">hooks</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2074,6 +2227,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.72.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ess</span><span class="o">.</span><span class="n">get_notifications</span><span class="p">(</span><span class="n">scaling_group_id</span><span class="o">=</span><span class="s2">&quot;scaling_group_id&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstNotification&quot;</span><span class="p">,</span> <span class="n">ds</span><span class="o">.</span><span class="n">notifications</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2088,6 +2248,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ess.get_scaling_configurations">
 <code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">get_scaling_configurations</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scaling_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.get_scaling_configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides available scaling configuration resources.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">scalingconfigurations_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ess</span><span class="o">.</span><span class="n">get_scaling_configurations</span><span class="p">(</span><span class="n">ids</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;scaling_configuration_id1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;scaling_configuration_id2&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;scaling_configuration_name&quot;</span><span class="p">,</span>
+    <span class="n">scaling_group_id</span><span class="o">=</span><span class="s2">&quot;scaling_group_id&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstScalingRule&quot;</span><span class="p">,</span> <span class="n">scalingconfigurations_ds</span><span class="o">.</span><span class="n">configurations</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2103,6 +2275,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ess.get_scaling_groups">
 <code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">get_scaling_groups</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.get_scaling_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides available scaling group resources.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">scalinggroups_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ess</span><span class="o">.</span><span class="n">get_scaling_groups</span><span class="p">(</span><span class="n">ids</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;scaling_group_id1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;scaling_group_id2&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;scaling_group_name&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstScalingGroup&quot;</span><span class="p">,</span> <span class="n">scalinggroups_ds</span><span class="o">.</span><span class="n">groups</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2117,6 +2300,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ess.get_scaling_rules">
 <code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">get_scaling_rules</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scaling_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.get_scaling_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides available scaling rule resources.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">scalingrules_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ess</span><span class="o">.</span><span class="n">get_scaling_rules</span><span class="p">(</span><span class="n">ids</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;scaling_rule_id1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;scaling_rule_id2&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;scaling_rule_name&quot;</span><span class="p">,</span>
+    <span class="n">scaling_group_id</span><span class="o">=</span><span class="s2">&quot;scaling_group_id&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstScalingRule&quot;</span><span class="p">,</span> <span class="n">scalingrules_ds</span><span class="o">.</span><span class="n">rules</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2136,6 +2331,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.72.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ess</span><span class="o">.</span><span class="n">get_scheduled_tasks</span><span class="p">(</span><span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;scheduled_task_name&quot;</span><span class="p">,</span>
+    <span class="n">scheduled_task_id</span><span class="o">=</span><span class="s2">&quot;scheduled_task_id&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstScheduledTask&quot;</span><span class="p">,</span> <span class="n">ds</span><span class="o">.</span><span class="n">tasks</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
