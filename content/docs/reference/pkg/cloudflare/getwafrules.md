@@ -12,9 +12,56 @@ meta_desc: "Explore the GetWafRules function of the Cloudflare package, includin
 
 Use this data source to look up [WAF Rules](https://api.cloudflare.com/#waf-rule-groups-properties).
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+test = cloudflare.get_waf_rules(zone_id="ae36f999674d196762efcc5abb06b345",
+    package_id="a25a9a7e9c00afc1fb2e0245519d725b",
+    filter={
+        "description": ".*example.*",
+        "mode": "on",
+        "groupId": "de677e5818985db1285d0e80225f06e5",
+    })
+pulumi.export("wafRules", test.rules)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+const test = cloudflare.getWafRules({
+    zoneId: "ae36f999674d196762efcc5abb06b345",
+    packageId: "a25a9a7e9c00afc1fb2e0245519d725b",
+    filter: {
+        description: ".*example.*",
+        mode: "on",
+        groupId: "de677e5818985db1285d0e80225f06e5",
+    },
+});
+export const wafRules = test.then(test => test.rules);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetWafRules {#using}

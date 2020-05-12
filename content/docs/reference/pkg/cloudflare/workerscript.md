@@ -12,9 +12,58 @@ meta_desc: "Explore the WorkerScript resource of the Cloudflare package, includi
 
 Provides a Cloudflare worker script resource. In order for a script to be active, you'll also need to setup a `cloudflare..WorkerRoute`.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+my_namespace = cloudflare.WorkersKvNamespace("myNamespace", title="example")
+# Sets the script with the name "script_1"
+my_script = cloudflare.WorkerScript("myScript",
+    name="script_1",
+    content=(lambda path: open(path).read())("script.js"),
+    kv_namespace_binding=[{
+        "name": "my_binding",
+        "namespaceId": my_namespace.id,
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+import * from "fs";
+
+const myNamespace = new cloudflare.WorkersKvNamespace("myNamespace", {title: "example"});
+// Sets the script with the name "script_1"
+const myScript = new cloudflare.WorkerScript("myScript", {
+    name: "script_1",
+    content: fs.readFileSync("script.js"),
+    kv_namespace_binding: [{
+        name: "my_binding",
+        namespaceId: myNamespace.id,
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a WorkerScript Resource {#create}

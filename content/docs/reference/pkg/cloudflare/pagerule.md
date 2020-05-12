@@ -12,9 +12,67 @@ meta_desc: "Explore the PageRule resource of the Cloudflare package, including e
 
 Provides a Cloudflare page rule resource.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+# Add a page rule to the domain
+foobar = cloudflare.PageRule("foobar",
+    zone_id=var["cloudflare_zone_id"],
+    target=f"sub.{var['cloudflare_zone']}/page",
+    priority=1,
+    actions={
+        "ssl": "flexible",
+        "emailObfuscation": "on",
+        "minify": [{
+            "html": "off",
+            "css": "on",
+            "js": "on",
+        }],
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+// Add a page rule to the domain
+const foobar = new cloudflare.PageRule("foobar", {
+    zoneId: var.cloudflare_zone_id,
+    target: `sub.${var.cloudflare_zone}/page`,
+    priority: 1,
+    actions: {
+        ssl: "flexible",
+        emailObfuscation: "on",
+        minify: [{
+            html: "off",
+            css: "on",
+            js: "on",
+        }],
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PageRule Resource {#create}

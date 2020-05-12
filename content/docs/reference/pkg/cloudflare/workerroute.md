@@ -12,9 +12,53 @@ meta_desc: "Explore the WorkerRoute resource of the Cloudflare package, includin
 
 Provides a Cloudflare worker route resource. A route will also require a `cloudflare..WorkerScript`.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+my_script = cloudflare.WorkerScript("myScript")
+# see "cloudflare..WorkerScript" documentation ...
+# Runs the specified worker script for all URLs that match `example.com/*`
+my_route = cloudflare.WorkerRoute("myRoute",
+    zone_id="d41d8cd98f00b204e9800998ecf8427e",
+    pattern="example.com/*",
+    script_name=my_script.name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+const myScript = new cloudflare.WorkerScript("myScript", {});
+// see "cloudflare..WorkerScript" documentation ...
+// Runs the specified worker script for all URLs that match `example.com/*`
+const myRoute = new cloudflare.WorkerRoute("myRoute", {
+    zoneId: "d41d8cd98f00b204e9800998ecf8427e",
+    pattern: "example.com/*",
+    scriptName: myScript.name,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a WorkerRoute Resource {#create}

@@ -12,9 +12,59 @@ meta_desc: "Explore the SpectrumApplication resource of the Cloudflare package, 
 
 Provides a Cloudflare Spectrum Application. You can extend the power of Cloudflare's DDoS, TLS, and IP Firewall to your other TCP-based services.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+# Define a spectrum application proxies ssh traffic
+ssh_proxy = cloudflare.SpectrumApplication("sshProxy",
+    zone_id=var["cloudflare_zone_id"],
+    protocol="tcp/22",
+    traffic_type="direct",
+    dns={
+        "type": "CNAME",
+        "name": "ssh.example.com",
+    },
+    origin_directs=["tcp://109.151.40.129:22"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+// Define a spectrum application proxies ssh traffic
+const sshProxy = new cloudflare.SpectrumApplication("sshProxy", {
+    zoneId: var.cloudflare_zone_id,
+    protocol: "tcp/22",
+    trafficType: "direct",
+    dns: {
+        type: "CNAME",
+        name: "ssh.example.com",
+    },
+    originDirects: ["tcp://109.151.40.129:22"],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SpectrumApplication Resource {#create}

@@ -29,7 +29,42 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+# one time pin
+pin_login = cloudflare.AccessIdentityProvider("pinLogin",
+    account_id="1d5fdc9e88c8a8c4518b068cd94331fe",
+    name="PIN login",
+    type="onetimepin")
+# oauth
+github_oauth = cloudflare.AccessIdentityProvider("githubOauth",
+    account_id="1d5fdc9e88c8a8c4518b068cd94331fe",
+    configs=[{
+        "clientId": "example",
+        "clientSecret": "secret_key",
+    }],
+    name="GitHub OAuth",
+    type="github")
+# saml
+jumpcloud_saml = cloudflare.AccessIdentityProvider("jumpcloudSaml",
+    account_id="1d5fdc9e88c8a8c4518b068cd94331fe",
+    configs=[{
+        "attributes": [
+            "email",
+            "username",
+        ],
+        "idpPublicCert": """MIIDpDCCAoygAwIBAgIGAV2ka+55MA0GCSqGSIb3DQEBCwUAMIGSMQswCQ...GF/Q2/MHadws97cZg
+uTnQyuOqPuHbnN83d/2l1NSYKCbHt24o
+""",
+        "issuerUrl": "jumpcloud",
+        "signRequest": False,
+        "ssoTargetUrl": "https://sso.myexample.jumpcloud.com/saml2/cloudflareaccess",
+    }],
+    name="JumpCloud SAML",
+    type="saml")
+```
 {{% /example %}}
 
 {{% example typescript %}}

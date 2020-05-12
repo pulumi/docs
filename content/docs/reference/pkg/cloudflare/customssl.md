@@ -28,7 +28,25 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+config = pulumi.Config()
+cloudflare_zone_id = config.get("cloudflareZoneId")
+if cloudflare_zone_id is None:
+    cloudflare_zone_id = "1d5fdc9e88c8a8c4518b068cd94331fe"
+# Add a custom ssl certificate to the domain
+foossl = cloudflare.CustomSsl("foossl",
+    custom_ssl_options={
+        "bundle_method": "ubiquitous",
+        "certificate": "-----INSERT CERTIFICATE-----",
+        "geo_restrictions": "us",
+        "private_key": "-----INSERT PRIVATE KEY-----",
+        "type": "legacy_custom",
+    },
+    zone_id=cloudflare_zone_id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

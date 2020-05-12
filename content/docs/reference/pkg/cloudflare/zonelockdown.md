@@ -28,7 +28,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+# Restrict access to these endpoints to requests from a known IP address.
+endpoint_lockdown = cloudflare.ZoneLockdown("endpointLockdown",
+    configurations=[{
+        "target": "ip",
+        "value": "198.51.100.4",
+    }],
+    description="Restrict access to these endpoints to requests from a known IP address",
+    paused="false",
+    urls=["api.mysite.com/some/endpoint*"],
+    zone_id="d41d8cd98f00b204e9800998ecf8427e")
+```
 {{% /example %}}
 
 {{% example typescript %}}

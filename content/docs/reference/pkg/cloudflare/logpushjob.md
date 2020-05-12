@@ -28,7 +28,19 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+example_job = cloudflare.LogpushJob("exampleJob",
+    dataset="http_requests",
+    destination_conf="s3://my-bucket-path?region=us-west-2",
+    enabled=True,
+    logpull_options="fields=RayID,ClientIP,EdgeStartTimestamp&timestamps=rfc3339",
+    name="My-logpush-job",
+    ownership_challenge="00000000000000000",
+    zone_id="d41d8cd98f00b204e9800998ecf8427e")
+```
 {{% /example %}}
 
 {{% example typescript %}}

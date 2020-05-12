@@ -12,9 +12,49 @@ meta_desc: "Explore the WorkersKv resource of the Cloudflare package, including 
 
 Provides a Workers KV Pair.  *NOTE:*  This resource uses the Cloudflare account APIs.  This requires setting the `CLOUDFLARE_ACCOUNT_ID` environment variable or `account_id` provider argument.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+example_ns = cloudflare.WorkersKvNamespace("exampleNs", title="test-namespace")
+example = cloudflare.WorkersKv("example",
+    namespace_id=example_ns.id,
+    key="test-key",
+    value="test value")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+const exampleNs = new cloudflare.WorkersKvNamespace("exampleNs", {title: "test-namespace"});
+const example = new cloudflare.WorkersKv("example", {
+    namespaceId: exampleNs.id,
+    key: "test-key",
+    value: "test value",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a WorkersKv Resource {#create}

@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+_100000 = cloudflare.WafRule("100000",
+    mode="simulate",
+    rule_id="100000",
+    zone_id="ae36f999674d196762efcc5abb06b345")
+```
 {{% /example %}}
 
 {{% example typescript %}}

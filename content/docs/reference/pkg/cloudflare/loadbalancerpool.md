@@ -29,7 +29,28 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+foo = cloudflare.LoadBalancerPool("foo",
+    description="example load balancer pool",
+    enabled=False,
+    minimum_origins=1,
+    name="example-pool",
+    notification_email="someone@example.com",
+    origins=[
+        {
+            "address": "192.0.2.1",
+            "enabled": False,
+            "name": "example-1",
+        },
+        {
+            "address": "192.0.2.2",
+            "name": "example-2",
+        },
+    ])
+```
 {{% /example %}}
 
 {{% example typescript %}}

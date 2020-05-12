@@ -14,8 +14,7 @@ Provides a Cloudflare Access Group resource. Access Groups are used
 in conjunction with Access Policies to restrict access to a
 particular resource based on group membership.
 
-{{% examples %}}
-{{% /examples %}}
+
 ## Conditions
 
 `require`, `exclude` and `include` arguments share the available
@@ -95,6 +94,74 @@ conditions which can be applied. The conditions are:
   }
   ```
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+# Allowing access to `test@example.com` email address only
+test_group_access_group = cloudflare.AccessGroup("testGroupAccessGroup",
+    account_id="975ecf5a45e3bcb680dba0722a420ad9",
+    name="staging group",
+    include=[{
+        "emails": ["test@example.com"],
+    }])
+# Allowing `test@example.com` to access but only when coming from a
+# specific IP.
+test_group_index_access_group_access_group = cloudflare.AccessGroup("testGroupIndex/accessGroupAccessGroup",
+    account_id="975ecf5a45e3bcb680dba0722a420ad9",
+    name="staging group",
+    include=[{
+        "emails": ["test@example.com"],
+    }],
+    requires={
+        "ips": [var["office_ip"]],
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+// Allowing access to `test@example.com` email address only
+const testGroupAccessGroup = new cloudflare.AccessGroup("testGroupAccessGroup", {
+    accountId: "975ecf5a45e3bcb680dba0722a420ad9",
+    name: "staging group",
+    include: [{
+        emails: ["test@example.com"],
+    }],
+});
+// Allowing `test@example.com` to access but only when coming from a
+// specific IP.
+const testGroupIndex/accessGroupAccessGroup = new cloudflare.AccessGroup("testGroupIndex/accessGroupAccessGroup", {
+    accountId: "975ecf5a45e3bcb680dba0722a420ad9",
+    name: "staging group",
+    include: [{
+        emails: ["test@example.com"],
+    }],
+    requires: {
+        ips: [var.office_ip],
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AccessGroup Resource {#create}
