@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_packet as packet
+
+# Create a new Project
+tf_organization1 = packet.Organization("tfOrganization1",
+    description="quux",
+    name="foobar")
+```
 {{% /example %}}
 
 {{% example typescript %}}

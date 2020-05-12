@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_packet as packet
+
+example = packet.get_spot_market_price(facility="ewr1",
+    plan="c1.small.x86")
+```
 {{% /example %}}
 
 {{% example typescript %}}

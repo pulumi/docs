@@ -162,6 +162,18 @@ modify, and delete devices.</p>
 </dl>
 <p><a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_packet</span> <span class="k">as</span> <span class="nn">packet</span>
+
+<span class="n">web1</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">Device</span><span class="p">(</span><span class="s2">&quot;web1&quot;</span><span class="p">,</span>
+    <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;tf.coreos2&quot;</span><span class="p">,</span>
+    <span class="n">plan</span><span class="o">=</span><span class="s2">&quot;t1.small.x86&quot;</span><span class="p">,</span>
+    <span class="n">facilities</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ewr1&quot;</span><span class="p">],</span>
+    <span class="n">operating_system</span><span class="o">=</span><span class="s2">&quot;coreos_stable&quot;</span><span class="p">,</span>
+    <span class="n">billing_cycle</span><span class="o">=</span><span class="s2">&quot;hourly&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1105,6 +1117,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_packet.Organization">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">Organization</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logo</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">twitter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">website</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Organization" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage organization resource in Packet.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_packet</span> <span class="k">as</span> <span class="nn">packet</span>
+
+<span class="c1"># Create a new Project</span>
+<span class="n">tf_organization1</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">Organization</span><span class="p">(</span><span class="s2">&quot;tfOrganization1&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;quux&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;foobar&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1218,6 +1239,54 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><a class="reference external" href="https://www.packet.com/resources/guides/layer-2-configurations/">https://www.packet.com/resources/guides/layer-2-configurations/</a></p></li>
 <li><p><a class="reference external" href="https://www.packet.com/developers/docs/network/advanced/layer-2/">https://www.packet.com/developers/docs/network/advanced/layer-2/</a></p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_packet</span> <span class="k">as</span> <span class="nn">packet</span>
+
+<span class="c1"># Hybrid network type</span>
+<span class="n">test_vlan</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">Vlan</span><span class="p">(</span><span class="s2">&quot;testVlan&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;VLAN in New Jersey&quot;</span><span class="p">,</span>
+    <span class="n">facility</span><span class="o">=</span><span class="s2">&quot;ewr1&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">])</span>
+<span class="n">test_device</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">Device</span><span class="p">(</span><span class="s2">&quot;testDevice&quot;</span><span class="p">,</span>
+    <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">plan</span><span class="o">=</span><span class="s2">&quot;m1.xlarge.x86&quot;</span><span class="p">,</span>
+    <span class="n">facilities</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ewr1&quot;</span><span class="p">],</span>
+    <span class="n">operating_system</span><span class="o">=</span><span class="s2">&quot;ubuntu_16_04&quot;</span><span class="p">,</span>
+    <span class="n">billing_cycle</span><span class="o">=</span><span class="s2">&quot;hourly&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
+    <span class="n">network_type</span><span class="o">=</span><span class="s2">&quot;hybrid&quot;</span><span class="p">)</span>
+<span class="n">test_port_vlan_attachment</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">PortVlanAttachment</span><span class="p">(</span><span class="s2">&quot;testPortVlanAttachment&quot;</span><span class="p">,</span>
+    <span class="n">device_id</span><span class="o">=</span><span class="n">test_device</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">port_name</span><span class="o">=</span><span class="s2">&quot;eth1&quot;</span><span class="p">,</span>
+    <span class="n">vlan_vnid</span><span class="o">=</span><span class="n">test_vlan</span><span class="o">.</span><span class="n">vxlan</span><span class="p">)</span>
+<span class="c1"># Layer 2 network</span>
+<span class="n">test_index_device_device</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">Device</span><span class="p">(</span><span class="s2">&quot;testIndex/deviceDevice&quot;</span><span class="p">,</span>
+    <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">plan</span><span class="o">=</span><span class="s2">&quot;m1.xlarge.x86&quot;</span><span class="p">,</span>
+    <span class="n">facilities</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ewr1&quot;</span><span class="p">],</span>
+    <span class="n">operating_system</span><span class="o">=</span><span class="s2">&quot;ubuntu_16_04&quot;</span><span class="p">,</span>
+    <span class="n">billing_cycle</span><span class="o">=</span><span class="s2">&quot;hourly&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
+    <span class="n">network_type</span><span class="o">=</span><span class="s2">&quot;layer2-individual&quot;</span><span class="p">)</span>
+<span class="n">test1_vlan</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">Vlan</span><span class="p">(</span><span class="s2">&quot;test1Vlan&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;VLAN in New Jersey&quot;</span><span class="p">,</span>
+    <span class="n">facility</span><span class="o">=</span><span class="s2">&quot;ewr1&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">])</span>
+<span class="n">test2_vlan</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">Vlan</span><span class="p">(</span><span class="s2">&quot;test2Vlan&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;VLAN in New Jersey&quot;</span><span class="p">,</span>
+    <span class="n">facility</span><span class="o">=</span><span class="s2">&quot;ewr1&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">])</span>
+<span class="n">test1_port_vlan_attachment</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">PortVlanAttachment</span><span class="p">(</span><span class="s2">&quot;test1PortVlanAttachment&quot;</span><span class="p">,</span>
+    <span class="n">device_id</span><span class="o">=</span><span class="n">test_device</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">vlan_vnid</span><span class="o">=</span><span class="n">test1_vlan</span><span class="o">.</span><span class="n">vxlan</span><span class="p">,</span>
+    <span class="n">port_name</span><span class="o">=</span><span class="s2">&quot;eth1&quot;</span><span class="p">)</span>
+<span class="n">test2_port_vlan_attachment</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">PortVlanAttachment</span><span class="p">(</span><span class="s2">&quot;test2PortVlanAttachment&quot;</span><span class="p">,</span>
+    <span class="n">device_id</span><span class="o">=</span><span class="n">test_device</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">vlan_vnid</span><span class="o">=</span><span class="n">test2_vlan</span><span class="o">.</span><span class="n">vxlan</span><span class="p">,</span>
+    <span class="n">port_name</span><span class="o">=</span><span class="s2">&quot;eth1&quot;</span><span class="p">,</span>
+    <span class="n">native</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> - UUID of device port used in the assignment</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vlan_id</span></code> - UUID of VLAN API resource</p></li>
@@ -1328,22 +1397,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_packet.Project">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_transfer</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bgp_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organization_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">payment_method_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Project" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Packet project resource to allow you manage devices
-in your projects.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>backend_transfer</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable or disable <a class="reference external" href="https://www.packet.com/developers/docs/network/basic/backend-transfer/">Backend Transfer</a>, default is false</p></li>
-<li><p><strong>bgp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Optional BGP settings. Refer to <a class="reference external" href="https://www.packet.com/developers/docs/network/advanced/local-and-global-bgp/">Packet guide for BGP</a>.</p>
-</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the project</p></li>
-<li><p><strong>organization_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of organization under which you want to create the project. If you leave it out, the project will be create under your the default organization of your account.</p></li>
-<li><p><strong>payment_method_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of payment method for this project. The payment method and the project need to belong to the same organization (passed with <code class="docutils literal notranslate"><span class="pre">organization_id</span></code>, or default).</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Project resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] backend_transfer: Enable or disable <a class="reference external" href="https://www.packet.com/developers/docs/network/basic/backend-transfer/">Backend Transfer</a>, default is false
+:param pulumi.Input[dict] bgp_config: Optional BGP settings. Refer to <a class="reference external" href="https://www.packet.com/developers/docs/network/advanced/local-and-global-bgp/">Packet guide for BGP</a>.
+:param pulumi.Input[str] name: The name of the project
+:param pulumi.Input[str] organization_id: The UUID of organization under which you want to create the project. If you leave it out, the project will be create under your the default organization of your account.
+:param pulumi.Input[str] payment_method_id: The UUID of payment method for this project. The payment method and the project need to belong to the same organization (passed with <code class="docutils literal notranslate"><span class="pre">organization_id</span></code>, or default).</p>
 <p>The <strong>bgp_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">asn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Autonomous System Numer for local BGP deployment</p></li>
@@ -1477,6 +1538,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">ProjectSshKey</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.ProjectSshKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Packet project SSH key resource to manage project-specific SSH keys.
 Project SSH keys will only be populated onto servers that belong to that project, in contrast to User SSH Keys.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_packet</span> <span class="k">as</span> <span class="nn">packet</span>
+
+<span class="n">project_id</span> <span class="o">=</span> <span class="s2">&quot;&lt;UUID_of_your_project&gt;&quot;</span>
+<span class="n">test_project_ssh_key</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">ProjectSshKey</span><span class="p">(</span><span class="s2">&quot;testProjectSshKey&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">public_key</span><span class="o">=</span><span class="s2">&quot;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDM/unxJeFqxsTJcu6mhqsMHSaVlpu+Jj/P+44zrm6X/MAoHSX3X9oLgujEjjZ74yLfdfe0bJrbL2YgJzNaEkIQQ1VPMHB5EhTKUBGnzlPP0hHTnxsjAm9qDHgUPgvgFDQSAMzdJRJ0Cexo16Ph9VxCoLh3dxiE7s2gaM2FdVg7P8aSxKypsxAhYV3D0AwqzoOyT6WWhBoQ0xZ85XevOTnJCpImSemEGs6nVGEsWcEc1d1YvdxFjAK4SdsKUMkj4Dsy/leKsdi/DEAf356vbMT1UHsXXvy5TlHu/Pa6qF53v32Enz+nhKy7/8W2Yt2yWx8HnQcT2rug9lvCXagJO6oauqRTO77C4QZn13ZLMZgLT66S/tNh2EX0gi6vmIs5dth8uF+K6nxIyKJXbcA4ASg7F1OJrHKFZdTc5v1cPeq6PcbqGgc+8SrPYQmzvQqLoMBuxyos2hUkYOmw3aeWJj9nFa8Wu5WaN89mUeOqSkU4S5cgUzWUOmKey56B/j/s1sVys9rMhZapVs0wL4L9GBBM48N5jAQZnnpo85A8KsZq5ME22bTLqnxsDXqDYZvS7PSI6Dxi7eleOFE/NYYDkrgDLHTQri8ucDMVeVWHgoMY2bPXdn7KKy5jW5jKsf8EPARXg77A4gRYmgKrcwIKqJEUPqyxJBe0CPoGTqgXPRsUiQ== tomk@hp2&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">project_id</span><span class="p">)</span>
+<span class="n">test_device</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">Device</span><span class="p">(</span><span class="s2">&quot;testDevice&quot;</span><span class="p">,</span>
+    <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">plan</span><span class="o">=</span><span class="s2">&quot;baremetal_0&quot;</span><span class="p">,</span>
+    <span class="n">facilities</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ewr1&quot;</span><span class="p">],</span>
+    <span class="n">operating_system</span><span class="o">=</span><span class="s2">&quot;ubuntu_16_04&quot;</span><span class="p">,</span>
+    <span class="n">billing_cycle</span><span class="o">=</span><span class="s2">&quot;hourly&quot;</span><span class="p">,</span>
+    <span class="n">project_ssh_key_ids</span><span class="o">=</span><span class="p">[</span><span class="n">test_project_ssh_key</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">project_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1812,6 +1891,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">SpotMarketRequest</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">devices_max</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">devices_min</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">facilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_bid_price</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.SpotMarketRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Packet Spot Market Request resource to allow you to
 manage spot market requests on your account. For more detail on Spot Market, see <a class="reference external" href="https://www.packet.com/developers/docs/getting-started/deployment-options/spot-market/">this article in Packing documentaion</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_packet</span> <span class="k">as</span> <span class="nn">packet</span>
+
+<span class="c1"># Create a spot market request</span>
+<span class="n">req</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">SpotMarketRequest</span><span class="p">(</span><span class="s2">&quot;req&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">],</span>
+    <span class="n">max_bid_price</span><span class="o">=</span><span class="mf">0.03</span><span class="p">,</span>
+    <span class="n">facilities</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ewr1&quot;</span><span class="p">],</span>
+    <span class="n">devices_min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">devices_max</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">instance_parameters</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;hostname&quot;</span><span class="p">:</span> <span class="s2">&quot;testspot&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;billingCycle&quot;</span><span class="p">:</span> <span class="s2">&quot;hourly&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;operatingSystem&quot;</span><span class="p">:</span> <span class="s2">&quot;coreos_stable&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;plan&quot;</span><span class="p">:</span> <span class="s2">&quot;t1.small.x86&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1977,19 +2074,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_packet.SshKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">SshKey</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.SshKey" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to manage User SSH keys on your Packet user account. If you create a new device in a project, all the keys of the project’s collaborators will be injected to the device.</p>
-<p>The link between User SSH key and device is implicit. If you want to make sure that a key will be copied to a device, you must ensure that the device resource <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> the key resource.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SSH key for identification</p></li>
-<li><p><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public key. If this is a file, it
-can be read using the file interpolation function</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a SshKey resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] name: The name of the SSH key for identification
+:param pulumi.Input[str] public_key: The public key. If this is a file, it</p>
+<blockquote>
+<div><p>can be read using the file interpolation function</p>
+</div></blockquote>
 <dl class="py attribute">
 <dt id="pulumi_packet.SshKey.created">
 <code class="sig-name descname">created</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.SshKey.created" title="Permalink to this definition">¶</a></dt>
@@ -2097,6 +2189,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><a class="reference external" href="https://www.packet.com/resources/guides/layer-2-configurations/">https://www.packet.com/resources/guides/layer-2-configurations/</a></p></li>
 <li><p><a class="reference external" href="https://www.packet.com/developers/docs/network/advanced/layer-2/">https://www.packet.com/developers/docs/network/advanced/layer-2/</a></p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_packet</span> <span class="k">as</span> <span class="nn">packet</span>
+
+<span class="c1"># Create a new VLAN in datacenter &quot;ewr1&quot;</span>
+<span class="n">vlan1</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">Vlan</span><span class="p">(</span><span class="s2">&quot;vlan1&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;VLAN in New Jersey&quot;</span><span class="p">,</span>
+    <span class="n">facility</span><span class="o">=</span><span class="s2">&quot;ewr1&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2474,6 +2576,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this datasource to get CIDR expressions for allocated IP blocks of all the types in a project, optionally filtered by facility.</p>
 <p>There are four types of IP blocks in Packet: global IPv4, public IPv4, private IPv4 and IPv6. Both global and public IPv4 are routable from the Internet. Public IPv4 block is allocated in a facility, and addresses from it can only be assigned to devices in that facility. Addresses from Global IPv4 block can be assigned to a device in any facility.</p>
 <p>The datasource has 4 list attributes: <code class="docutils literal notranslate"><span class="pre">global_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code> and <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>, each listing CIDR notation (<code class="docutils literal notranslate"><span class="pre">&lt;network&gt;/&lt;mask&gt;</span></code>) of respective blocks from the project.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_packet</span> <span class="k">as</span> <span class="nn">packet</span>
+
+<span class="n">project_id</span> <span class="o">=</span> <span class="s2">&quot;&lt;UUID_of_your_project&gt;&quot;</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">get_ip_block_ranges</span><span class="p">(</span><span class="n">project_id</span><span class="o">=</span><span class="n">project_id</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;out&quot;</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2488,6 +2598,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_packet.get_operating_system">
 <code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">get_operating_system</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">distro</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provisionable_on</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.get_operating_system" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get Packet Operating System image.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_packet</span> <span class="k">as</span> <span class="nn">packet</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">get_operating_system</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Container Linux&quot;</span><span class="p">,</span>
+    <span class="n">distro</span><span class="o">=</span><span class="s2">&quot;coreos&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;alpha&quot;</span><span class="p">,</span>
+    <span class="n">provisionable_on</span><span class="o">=</span><span class="s2">&quot;c1.small.x86&quot;</span><span class="p">)</span>
+<span class="n">server</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">Device</span><span class="p">(</span><span class="s2">&quot;server&quot;</span><span class="p">,</span>
+    <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;tf.coreos2&quot;</span><span class="p">,</span>
+    <span class="n">plan</span><span class="o">=</span><span class="s2">&quot;c1.small.x86&quot;</span><span class="p">,</span>
+    <span class="n">facilities</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ewr1&quot;</span><span class="p">],</span>
+    <span class="n">operating_system</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">billing_cycle</span><span class="o">=</span><span class="s2">&quot;hourly&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">local</span><span class="p">[</span><span class="s2">&quot;project_id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2536,7 +2662,7 @@ You can then use the cidrsubnet TF builtin function to derive subnets.</p>
 <dl class="py function">
 <dt id="pulumi_packet.get_project">
 <code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">get_project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.get_project" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this datasource to retrieve attributes of the Project API resource.</p>
+<dd><p>Use this data source to access information about an existing resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2551,6 +2677,13 @@ You can then use the cidrsubnet TF builtin function to derive subnets.</p>
 <dt id="pulumi_packet.get_spot_market_price">
 <code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">get_spot_market_price</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">facility</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.get_spot_market_price" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get Packet Spot Market Price.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_packet</span> <span class="k">as</span> <span class="nn">packet</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">get_spot_market_price</span><span class="p">(</span><span class="n">facility</span><span class="o">=</span><span class="s2">&quot;ewr1&quot;</span><span class="p">,</span>
+    <span class="n">plan</span><span class="o">=</span><span class="s2">&quot;c1.small.x86&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2575,7 +2708,7 @@ You can then use the cidrsubnet TF builtin function to derive subnets.</p>
 <dl class="py function">
 <dt id="pulumi_packet.get_volume">
 <code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">get_volume</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.get_volume" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Packet Block Storage Volume datasource to allow you to read existing volumes.</p>
+<dd><p>Use this data source to access information about an existing resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

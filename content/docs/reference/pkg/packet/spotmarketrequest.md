@@ -13,9 +13,65 @@ meta_desc: "Explore the SpotMarketRequest resource of the Packet package, includ
 Provides a Packet Spot Market Request resource to allow you to
 manage spot market requests on your account. For more detail on Spot Market, see [this article in Packing documentaion](https://www.packet.com/developers/docs/getting-started/deployment-options/spot-market/).
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_packet as packet
+
+# Create a spot market request
+req = packet.SpotMarketRequest("req",
+    project_id=local["project_id"],
+    max_bid_price=0.03,
+    facilities=["ewr1"],
+    devices_min=1,
+    devices_max=1,
+    instance_parameters={
+        "hostname": "testspot",
+        "billingCycle": "hourly",
+        "operatingSystem": "coreos_stable",
+        "plan": "t1.small.x86",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as packet from "@pulumi/packet";
+
+// Create a spot market request
+const req = new packet.SpotMarketRequest("req", {
+    projectId: local.project_id,
+    maxBidPrice: 0.03,
+    facilities: ["ewr1"],
+    devicesMin: 1,
+    devicesMax: 1,
+    instance_parameters: {
+        hostname: "testspot",
+        billingCycle: "hourly",
+        operatingSystem: "coreos_stable",
+        plan: "t1.small.x86",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SpotMarketRequest Resource {#create}
