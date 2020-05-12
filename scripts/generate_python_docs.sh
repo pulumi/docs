@@ -67,7 +67,10 @@ else
     # Install the Python package and run the pydocgen tool for just the provider that
     # was requested.
     echo "Building Python docs for ${REPO_OVERRIDE}..."
-    PACKAGE="pulumi_${REPO_OVERRIDE}"
+    PACKAGE="pulumi"
+    if [ "${REPO_OVERRIDE}" != "pulumi" ]; then
+        PACKAGE="pulumi_${REPO_OVERRIDE}"
+    fi
     pipenv run pip install "${PACKAGE}"
     pipenv run python -m pydocgen "../../content/docs/reference/pkg" "${PACKAGE}"
 fi
