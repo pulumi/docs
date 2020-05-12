@@ -28,7 +28,20 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mailgun as mailgun
+
+# Create a new Mailgun route
+default = mailgun.Route("default",
+    actions=[
+        "forward('http://example.com/api/v1/foos/')",
+        "stop()",
+    ],
+    description="inbound",
+    expression="match_recipient('.*@foo.example.com')",
+    priority="0")
+```
 {{% /example %}}
 
 {{% example typescript %}}

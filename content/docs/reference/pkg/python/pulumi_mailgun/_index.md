@@ -19,6 +19,15 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides a Mailgun App resource. This can be used to
 create and manage applications on Mailgun.</p>
 <p>After DNS records are set, domain verification should be triggered manually using <a class="reference external" href="https://documentation.mailgun.com/en/latest/api-domains.html#domains">PUT /domains/&lt;domain&amp;gt;/verify</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mailgun</span> <span class="k">as</span> <span class="nn">mailgun</span>
+
+<span class="c1"># Create a new Mailgun domain</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">mailgun</span><span class="o">.</span><span class="n">Domain</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us&quot;</span><span class="p">,</span>
+    <span class="n">spam_action</span><span class="o">=</span><span class="s2">&quot;disabled&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -233,6 +242,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_mailgun.Route">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mailgun.</code><code class="sig-name descname">Route</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expression</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mailgun.Route" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Mailgun Route resource. This can be used to create and manage routes on Mailgun.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mailgun</span> <span class="k">as</span> <span class="nn">mailgun</span>
+
+<span class="c1"># Create a new Mailgun route</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">mailgun</span><span class="o">.</span><span class="n">Route</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;forward(&#39;http://example.com/api/v1/foos/&#39;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;stop()&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;inbound&quot;</span><span class="p">,</span>
+    <span class="n">expression</span><span class="o">=</span><span class="s2">&quot;match_recipient(&#39;.*@foo.example.com&#39;)&quot;</span><span class="p">,</span>
+    <span class="n">priority</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
