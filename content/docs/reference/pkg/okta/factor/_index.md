@@ -26,3 +26,21 @@ Explore the resources and functions of the factor module in the Okta package.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Factor.html" title="Pulumi.Okta.Factor">Pulumi.Okta.Factor</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/factor?tab=doc#" title="okta/factor">okta/factor</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/okta/factor/#" title="@pulumi/okta/factor">@pulumi/okta/factor</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_okta/factor" title="pulumi_okta/factor">pulumi_okta/factor</a></dd>
+
+</dl>
+
