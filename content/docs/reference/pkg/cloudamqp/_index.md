@@ -49,3 +49,21 @@ A Pulumi package for creating and managing CloudAMQP resources.
 	<dd>2.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudamqp/Pulumi.Cloudamqp.html" title="Pulumi.Cloudamqp">Pulumi.Cloudamqp</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/v2/go/cloudamqp/?tab=doc#" title="cloudamqp">cloudamqp</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/cloudamqp/#" title="@pulumi/cloudamqp">@pulumi/cloudamqp</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_cloudamqp" title="pulumi_cloudamqp">pulumi_cloudamqp</a></dd>
+
+</dl>
+
