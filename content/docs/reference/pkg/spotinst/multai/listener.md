@@ -28,7 +28,28 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_spotinst as spotinst
+
+my_listener = spotinst.multai.Listener("myListener",
+    balancer_id="b-12345",
+    name="foo",
+    port=1337,
+    protocol="http",
+    tags=[{
+        "key": "env",
+        "value": "prod",
+    }],
+    tls_config={
+        "certificateIds": ["ce-12345"],
+        "cipherSuites": [""],
+        "maxVersion": "TLS12",
+        "minVersion": "TLS10",
+        "preferServerCipherSuites": True,
+        "sessionTicketsDisabled": False,
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}

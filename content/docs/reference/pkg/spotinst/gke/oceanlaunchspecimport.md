@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_spotinst as spotinst
+
+example = spotinst.gke.OceanLaunchSpecImport("example",
+    node_pool_name="default-pool",
+    ocean_id="o-123456")
+```
 {{% /example %}}
 
 {{% example typescript %}}

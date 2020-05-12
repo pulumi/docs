@@ -17,6 +17,232 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_spotinst.gcp.Elastigroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.gcp.</code><code class="sig-name descname">Elastigroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_healing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zones</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">draining_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fallback_to_ondemand</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gpu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_grace_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_types_customs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_types_ondemand</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_types_preemptibles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_docker_swarm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_gke</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_forwarding</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadatas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ondemand_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">preemptible_percentage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scaling_down_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scaling_up_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduled_tasks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shutdown_script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">startup_script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">unhealthy_duration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Spotinst elastigroup GCP resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_spotinst</span> <span class="k">as</span> <span class="nn">spotinst</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">spotinst</span><span class="o">.</span><span class="n">gcp</span><span class="o">.</span><span class="n">Elastigroup</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;asia-east1-c&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">backend_services_config</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;portName&quot;</span><span class="p">:</span> <span class="s2">&quot;port-name&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="mi">8000</span><span class="p">,</span>
+                <span class="mi">6000</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;serviceName&quot;</span><span class="p">:</span> <span class="s2">&quot;spotinst-elb-backend-service&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;spotinst gcp group&quot;</span><span class="p">,</span>
+    <span class="n">desired_capacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">disks</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;autoDelete&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;boot&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;deviceName&quot;</span><span class="p">:</span> <span class="s2">&quot;device&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;initializeParams&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;diskSizeGb&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+            <span class="s2">&quot;diskType&quot;</span><span class="p">:</span> <span class="s2">&quot;pd-standard&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sourceImage&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;interface&quot;</span><span class="p">:</span> <span class="s2">&quot;SCSI&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;READ_WRITE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PERSISTENT&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">draining_timeout</span><span class="o">=</span><span class="mi">180</span><span class="p">,</span>
+    <span class="n">fallback_to_ondemand</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">instance_types_customs</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;memoryGiB&quot;</span><span class="p">:</span> <span class="mf">7.5</span><span class="p">,</span>
+        <span class="s2">&quot;vCPU&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">instance_types_ondemand</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">],</span>
+    <span class="n">instance_types_preemptibles</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;n1-standard-2&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;test_key&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;test_value&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">max_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">min_size</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">network_interfaces</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;spot-network&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">preemptible_percentage</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+    <span class="n">scaling</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;up&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;adjustment&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;adjustment&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+            <span class="s2">&quot;cooldown&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+            <span class="s2">&quot;dimensions&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;storage_type&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;pd-ssd&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+            <span class="s2">&quot;evaluationPeriods&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;metricName&quot;</span><span class="p">:</span> <span class="s2">&quot;instance/disk/read_ops_count&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;namespace&quot;</span><span class="p">:</span> <span class="s2">&quot;compute&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;gte&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;period&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+            <span class="s2">&quot;policyName&quot;</span><span class="p">:</span> <span class="s2">&quot;scale_up_1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;stackdriver&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;statistic&quot;</span><span class="p">:</span> <span class="s2">&quot;average&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
+            <span class="s2">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;percent&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">}],</span>
+    <span class="n">service_account</span><span class="o">=</span><span class="s2">&quot;example@myProject.iam.gservicecct.com&quot;</span><span class="p">,</span>
+    <span class="n">startup_script</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">subnets</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;asia-east1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subnetNames&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;http&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;https&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">gpu</span></code> - (Optional) Defines the GPU configuration.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> - (Required) The type of GPU instance. Valid values: <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-v100</span></code>, <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-p100</span></code>, <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-k80</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> - (Required) The number of GPUs. Must be 0, 2, 4, 6, 8.</p></li>
+</ul>
+</li>
+</ul>
+<p>Usage:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p><span class="raw-html-m2r"><a id="health-check"></a></span></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_services</span></code> - (Optional) Describes the backend service configurations.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_name</span></code> - (Required) The name of the backend service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">location_type</span></code> - (Optional) Sets which location the backend services will be active. Valid values: <code class="docutils literal notranslate"><span class="pre">regional</span></code>, <code class="docutils literal notranslate"><span class="pre">global</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code> - (Optional) Use when <code class="docutils literal notranslate"><span class="pre">location_type</span></code> is “regional”. Set the traffic for the backend service to either between the instances in the vpc or to traffic from the internet. Valid values: <code class="docutils literal notranslate"><span class="pre">INTERNAL</span></code>, <code class="docutils literal notranslate"><span class="pre">EXTERNAL</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">named_port</span></code> - (Optional) Describes a named port and a list of ports.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">port_name</span></code> - (Required) The name of the port.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ports</span></code> - (Required) A list of ports.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Usage:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p><span class="raw-html-m2r"><a id="disks"></a></span></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">disks</span></code> - (Optional) Array of disks associated with this instance. Persistent disks must be created before you can assign them.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">auto_delete</span></code> - (Optional) Specifies whether the disk will be auto-deleted when the instance is deleted.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">boot</span></code> - (Optional) Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> - (Optional) Specifies a unique device name of your choice.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interface</span></code> - (Optional, Default: <code class="docutils literal notranslate"><span class="pre">SCSI</span></code>) Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> - (Optional, Default: <code class="docutils literal notranslate"><span class="pre">READ_WRITE</span></code>) The mode in which to attach this disk, either READ_WRITE or READ_ONLY.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> - (Optional) Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> - (Optional, Default: <code class="docutils literal notranslate"><span class="pre">PERSISTENT</span></code>) Specifies the type of disk, either SCRATCH or PERSISTENT.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">initialize_params</span></code> - (Optional) Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> - (Optional) Specifies disk size in gigabytes. Must be in increments of 2.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_type</span></code> - (Optional, Default” <code class="docutils literal notranslate"><span class="pre">pd-standard</span></code>) Specifies the disk type to use to create the instance. Valid values: pd-ssd, local-ssd.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_image</span></code> - (Optional) A source image used to create the disk. You can provide a private (custom) image, and Compute Engine will use the corresponding image from your project.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Usage:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p><span class="raw-html-m2r"><a id="network-interface"></a></span></p>
+<p>Each of the <code class="docutils literal notranslate"><span class="pre">network_interface</span></code> attributes controls a portion of the GCP
+Instance’s “Network Interfaces”. It’s a good idea to familiarize yourself with <a class="reference external" href="https://cloud.google.com/vpc/docs/multiple-interfaces-concepts">GCP’s Network
+Interfaces docs</a>
+to understand the implications of using these attributes.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">network_interface</span></code> - (Required, minimum 1) Array of objects representing the network configuration for the elastigroup.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> - (Required) Network resource for this group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">access_configs</span></code> - (Optional) Array of configurations.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - (Optional) Name of this access configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> - (Optional) Array of configurations for this interface. Currently, only ONE_TO_ONE_NAT is supported.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p><span class="raw-html-m2r"><a id="scaling-policy"></a></span></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">scaling_up_policy</span></code> - (Optional) Contains scaling policies for scaling the Elastigroup up.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaling_down_policy</span></code> - (Optional) Contains scaling policies for scaling the Elastigroup down.</p></li>
+</ul>
+<p>Each <code class="docutils literal notranslate"><span class="pre">scaling_*_policy</span></code> supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">policy_name</span></code> - (Optional) Name of scaling policy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metric_name</span></code> - (Optional) Metric to monitor. Valid values: “Percentage CPU”, “Network In”, “Network Out”, “Disk Read Bytes”, “Disk Write Bytes”, “Disk Write Operations/Sec”, “Disk Read Operations/Sec”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statistic</span></code> - (Optional) Statistic by which to evaluate the selected metric. Valid values: “AVERAGE”, “SAMPLE_COUNT”, “SUM”, “MINIMUM”, “MAXIMUM”, “PERCENTILE”, “COUNT”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> - (Optional) The value at which the scaling action is triggered.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">period</span></code> - (Optional) Amount of time (seconds) for which the threshold must be met in order to trigger the scaling action.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">evaluation_periods</span></code> - (Optional) Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cooldown</span></code> - (Optional) Time (seconds) to wait after a scaling action before resuming monitoring.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> - (Optional) The operator used to evaluate the threshold against the current metric value. Valid values: “gt” (greater than), “get” (greater-than or equal), “lt” (less than), “lte” (less than or equal).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> - (Optional) Scaling action to take when the policy is triggered.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> - (Optional) Type of scaling action to take when the scaling policy is triggered. Valid values: “adjustment”, “setMinTarget”, “updateCapacity”, “percentageAdjustment”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adjustment</span></code> - (Optional) Value to which the action type will be adjusted. Required if using “numeric” or “percentageAdjustment” action types.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dimensions</span></code> - (Optional) A list of dimensions describing qualities of the metric.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - (Required) The dimension name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> - (Required) The dimension value.</p></li>
+</ul>
+</li>
+</ul>
+<p>Usage:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p><span class="raw-html-m2r"><a id="third-party-integrations"></a></span></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_docker_swarm</span></code> - (Optional) Describes the <a class="reference external" href="https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/">Docker Swarm</a> integration.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">master_host</span></code> - (Required) IP or FQDN of one of your swarm managers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">master_port</span></code> - (Required) Network port used by your swarm.</p></li>
+</ul>
+</li>
+</ul>
+<p>Usage:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p><span class="raw-html-m2r"><a id="scheduled-task"></a></span></p>
+<p>Each <code class="docutils literal notranslate"><span class="pre">scheduled_task</span></code> supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">task_type</span></code> - (Required) The task type to run. Valid values: <code class="docutils literal notranslate"><span class="pre">&quot;setCapacity&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cron_expression</span></code> - (Optional) A valid cron expression. The cron is running in UTC time zone and is in <a class="reference external" href="https://en.wikipedia.org/wiki/Cron">Unix cron format</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">is_enabled</span></code> - (Optional, Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>) Setting the task to being enabled or disabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_capacity</span></code> - (Optional) The desired number of instances the group should have.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_capacity</span></code> - (Optional) The minimum number of instances the group should have.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_capacity</span></code> - (Optional) The maximum number of instances the group should have.</p></li>
+</ul>
+<p>Usage:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

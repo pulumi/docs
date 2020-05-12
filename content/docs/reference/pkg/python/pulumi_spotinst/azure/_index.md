@@ -17,6 +17,236 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_spotinst.azure.Elastigroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.azure.</code><code class="sig-name descname">Elastigroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">images</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_kubernetes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_multai_runtime</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">low_priority_sizes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">managed_service_identities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">od_sizes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">product</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scaling_down_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scaling_up_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduled_tasks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shutdown_script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Spotinst elastigroup Azure resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_spotinst</span> <span class="k">as</span> <span class="nn">spotinst</span>
+
+<span class="n">test_azure_group</span> <span class="o">=</span> <span class="n">spotinst</span><span class="o">.</span><span class="n">azure</span><span class="o">.</span><span class="n">Elastigroup</span><span class="p">(</span><span class="s2">&quot;testAzureGroup&quot;</span><span class="p">,</span>
+    <span class="n">desired_capacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">health_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;autoHealing&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;gracePeriod&quot;</span><span class="p">:</span> <span class="mi">120</span><span class="p">,</span>
+        <span class="s2">&quot;healthCheckType&quot;</span><span class="p">:</span> <span class="s2">&quot;INSTANCE_STATE&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">images</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;marketplace&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;offer&quot;</span><span class="p">:</span> <span class="s2">&quot;UbuntuServer&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="s2">&quot;Canonical&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sku&quot;</span><span class="p">:</span> <span class="s2">&quot;16.04-LTS&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">}],</span>
+    <span class="n">load_balancers</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;autoWeight&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;balancerId&quot;</span><span class="p">:</span> <span class="s2">&quot;lb-1ee2e3q&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;targetSetId&quot;</span><span class="p">:</span> <span class="s2">&quot;ts-3eq&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MULTAI_TARGET_SET&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">login</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;sshPublicKey&quot;</span><span class="p">:</span> <span class="s2">&quot;33a2s1f3g5a1df5g1ad3f2g1adfg56dfg==&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;userName&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">low_priority_sizes</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;standard_a1_v1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;standard_a1_v2&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">managed_service_identities</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;example-identity&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;resourceGroupName&quot;</span><span class="p">:</span> <span class="s2">&quot;spotinst-azure&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">max_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">min_size</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;assignPublicIp&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;resourceGroupName&quot;</span><span class="p">:</span> <span class="s2">&quot;subnetResourceGroup&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subnetName&quot;</span><span class="p">:</span> <span class="s2">&quot;my-subnet-name&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;virtualNetworkName&quot;</span><span class="p">:</span> <span class="s2">&quot;vname&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">od_sizes</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;standard_a1_v1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;standard_a1_v2&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">product</span><span class="o">=</span><span class="s2">&quot;Linux&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;eastus&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;spotinst-azure&quot;</span><span class="p">,</span>
+    <span class="n">scaling_down_policies</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;actionType&quot;</span><span class="p">:</span> <span class="s2">&quot;adjustment&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;MIN(5,10)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cooldown&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+        <span class="s2">&quot;dimensions&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name-1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;value-1&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;evaluationPeriods&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;metricName&quot;</span><span class="p">:</span> <span class="s2">&quot;CPUUtilization&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;namespace&quot;</span><span class="p">:</span> <span class="s2">&quot;Microsoft.Compute&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;gt&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;period&quot;</span><span class="p">:</span> <span class="s2">&quot;60&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;policyName&quot;</span><span class="p">:</span> <span class="s2">&quot;policy-name&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;statistic&quot;</span><span class="p">:</span> <span class="s2">&quot;average&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;percent&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">scaling_up_policies</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;actionType&quot;</span><span class="p">:</span> <span class="s2">&quot;setMinTarget&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cooldown&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+        <span class="s2">&quot;dimensions&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;resourceName&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;resource-name&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;resourceGroupName&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;resource-group-name&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;evaluationPeriods&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;metricName&quot;</span><span class="p">:</span> <span class="s2">&quot;CPUUtilization&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;minTargetCapacity&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;namespace&quot;</span><span class="p">:</span> <span class="s2">&quot;Microsoft.Compute&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;gt&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;period&quot;</span><span class="p">:</span> <span class="s2">&quot;60&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;policyName&quot;</span><span class="p">:</span> <span class="s2">&quot;policy-name&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;statistic&quot;</span><span class="p">:</span> <span class="s2">&quot;average&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;percent&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">scheduled_tasks</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;adjustment&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;adjustmentPercentage&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="s2">&quot;batchSizePercentage&quot;</span><span class="p">:</span> <span class="mi">33</span><span class="p">,</span>
+        <span class="s2">&quot;cronExpression&quot;</span><span class="p">:</span> <span class="s2">&quot;* * * * *&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;gracePeriod&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+        <span class="s2">&quot;isEnabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;scaleMaxCapacity&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="s2">&quot;scaleMinCapacity&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;scaleTargetCapacity&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="s2">&quot;taskType&quot;</span><span class="p">:</span> <span class="s2">&quot;scale&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">shutdown_script</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">strategy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;drainingTimeout&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+        <span class="s2">&quot;odCount&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">user_data</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">load_balancers</span></code> - (Required) Describes a set of one or more classic load balancer target groups and/or Multai load balancer target sets.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> - (Required) The resource type. Valid values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">balancer_id</span></code> - (Required) The balancer ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_set_id</span></code> - (Required) The scale set ID associated with the load balancer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auto_weight</span></code> - (Optional, Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>)</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p><span class="raw-html-m2r"><a id="image"></a></span></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> - (Required) Image of a VM. An image is a template for creating new VMs. Choose from Azure image catalogue (marketplace) or use a custom image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> - (Optional) Image publisher. Required if resource_group_name is not specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> - (Optional) Name of the image to use. Required if publisher is specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> - (Optional) Image’s Stock Keeping Unit, which is the specific version of the image. Required if publisher is specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_group_name</span></code> - (Optional) Name of Resource Group for custom image. Required if publisher not specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image_name</span></code> - (Optional) Name of the custom image. Required if resource_group_name is specified.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p><span class="raw-html-m2r"><a id="health-check"></a></span></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">health_check</span></code> - (Optional) Describes the health check configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">health_check_type</span></code> - (Optional) Health check used to validate VM health. Valid values: “INSTANCE_STATE”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grace_period</span></code> - (Optional) Period of time (seconds) to wait for VM to reach healthiness before monitoring for unhealthiness.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auto_healing</span></code> - (Optional) Enable auto-healing of unhealthy VMs.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p><span class="raw-html-m2r"><a id="network"></a></span></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> - (Required) Defines the Virtual Network and Subnet for your Elastigroup.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_name</span></code> - (Required) Name of Vnet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_name</span></code> - (Required) ID of subnet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_group_name</span></code> - (Required) Vnet Resource Group Name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">assign_public_up</span></code> - (Optional, Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>) Assign a public IP to each VM in the Elastigroup.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">additional_ip_configs</span></code> - (Optional) Array of additional IP configuration objects.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - (Required) The IP configuration name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_ip_version</span></code> - (Optional) Available from Azure Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Valid values: <code class="docutils literal notranslate"><span class="pre">IPv4</span></code>, <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p><span class="raw-html-m2r"><a id="login"></a></span></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p><span class="raw-html-m2r"><a id="login"></a></span></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">login</span></code> - (Required) Describes the login configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_name</span></code> - (Required) Set admin access for accessing your VMs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssh_public_key</span></code> - (Optional) SSH for admin access to Linux VMs. Required for Linux product types.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> - (Optional) Password for admin access to Windows VMs. Required for Windows product types.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p><span class="raw-html-m2r"><a id="scaling-policy"></a></span></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">scheduled_task</span></code> - (Optional) Describes the configuration of one or more scheduled tasks.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">is_enabled</span></code> - (Optional, Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>) Describes whether the task is enabled. When true the task should run when false it should not run.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cron_expression</span></code> - (Required) A valid cron expression (<code class="docutils literal notranslate"><span class="pre">*</span> <span class="pre">*</span> <span class="pre">*</span> <span class="pre">*</span> <span class="pre">*</span></code>). The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">task_type</span></code> - (Required) The task type to run. Valid Values: <code class="docutils literal notranslate"><span class="pre">backup_ami</span></code>, <code class="docutils literal notranslate"><span class="pre">scale</span></code>, <code class="docutils literal notranslate"><span class="pre">scaleUp</span></code>, <code class="docutils literal notranslate"><span class="pre">roll</span></code>, <code class="docutils literal notranslate"><span class="pre">statefulUpdateCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">statefulRecycle</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scale_min_capacity</span></code> - (Optional) The min capacity of the group. Should be used when choosing ‘task_type’ of ‘scale’.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scale_max_capacity</span></code> - (Optional) The max capacity of the group. Required when ‘task_type’ is ‘scale’.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scale_target_capacity</span></code> - (Optional) The target capacity of the group. Should be used when choosing ‘task_type’ of ‘scale’.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adjustment</span></code> - (Optional) The number of instances to add/remove to/from the target capacity when scale is needed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adjustment_percentage</span></code> - (Optional) The percent of instances to add/remove to/from the target capacity when scale is needed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">batch_size_percentage</span></code> - (Optional) The percentage size of each batch in the scheduled deployment roll. Required when the ‘task_type’ is ‘roll’.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grace_period</span></code> - (Optional) The time to allow instances to become healthy.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p><span class="raw-html-m2r"><a id="update-policy"></a></span></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">update_policy</span></code> - (Optional)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">should_roll</span></code> - (Required) Sets the enablement of the roll option.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">roll_config</span></code> - (Required) While used, you can control whether the group should perform a deployment after an update to the configuration.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">batch_size_percentage</span></code> - (Required) Sets the percentage of the instances to deploy in each batch.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">health_check_type</span></code> - (Optional) Sets the health check type to use. Valid values: <code class="docutils literal notranslate"><span class="pre">&quot;INSTANCE_STATE&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;NONE&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grace_period</span></code> - (Optional) Sets the grace period for new instances to become healthy.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p><span class="raw-html-m2r"><a id="third-party-integrations"></a></span></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_kubernetes</span></code> - (Optional) Describes the <a class="reference external" href="https://kubernetes.io/">Kubernetes</a> integration.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cluster_identifier</span></code> - (Required) The cluster ID.</p></li>
+</ul>
+</li>
+</ul>
+<p>Usage:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_multai_runtime</span></code> - (Optional) Describes the <a class="reference external" href="https://spotinst.com/">Multai Runtime</a> integration.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deployment_id</span></code> - (Optional) The deployment id you want to get</p></li>
+</ul>
+</li>
+</ul>
+<p>Usage:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

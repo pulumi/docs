@@ -28,7 +28,33 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_spotinst as spotinst
+
+example = spotinst.gke.OceanLaunchSpec("example",
+    autoscale_headrooms=[{
+        "cpuPerUnit": 1000,
+        "gpuPerUnit": 0,
+        "memoryPerUnit": 2048,
+        "numOfUnits": 5,
+    }],
+    labels=[{
+        "key": "labelKey",
+        "value": "labelVal",
+    }],
+    metadatas=[{
+        "key": "gci-update-strategy",
+        "value": "update_disabled",
+    }],
+    ocean_id="o-123456",
+    source_image="image",
+    taints=[{
+        "effect": "taintEffect",
+        "key": "taintKey",
+        "value": "taintVal",
+    }])
+```
 {{% /example %}}
 
 {{% example typescript %}}

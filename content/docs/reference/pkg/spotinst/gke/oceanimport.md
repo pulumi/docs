@@ -33,6 +33,36 @@ Provides a Spotinst Ocean GKE import resource.
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
+
+<a id="autoscaler"></a>
+## Autoscaler
+
+* `autoscaler` - (Optional) The Ocean Kubernetes Autoscaler object.
+* `is_enabled` - (Optional, Default: `true`) Enable the Ocean Kubernetes Autoscaler.
+* `is_auto_config` - (Optional, Default: `true`) Automatically configure and optimize headroom resources.
+* `auto_headroom_percentage` - Optionally set the auto headroom percentage, set a number between 0-200 to control the headroom % from the cluster. Relevant when isAutoConfig=true.
+* `cooldown` - (Optional, Default: `null`) Cooldown period between scaling actions.
+* `headroom` - (Optional) Spare resource capacity management enabling fast assignment of Pods without waiting for new resources to launch.
+* `cpu_per_unit` - (Optional) Optionally configure the number of CPUs to allocate the headroom. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
+* `memory_per_unit` - (Optional) Optionally configure the amount of memory (MiB) to allocate the headroom.
+* `gpu_per_unit` - (Optional) How much GPU allocate for headroom unit.
+* `num_of_units` - (Optional) The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.
+* `down` - (Optional) Auto Scaling scale down operations.
+* `evaluation_periods` - (Optional, Default: `null`) The number of evaluation periods that should accumulate before a scale down action takes place.
+* `max_scale_down_percentage` - (Optional) Would represent the maximum % to scale-down. Number between 1-100.
+* `resource_limits` - (Optional) Optionally set upper and lower bounds on the resource usage of the cluster.
+* `max_vcpu` - (Optional) The maximum cpu in vCpu units that can be allocated to the cluster.
+* `max_memory_gib` - (Optional) The maximum memory in GiB units that can be allocated to the cluster.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
+```
 
 {{% examples %}}
 ## Example Usage
@@ -48,7 +78,33 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_spotinst as spotinst
+
+example = spotinst.gke.OceanImport("example",
+    backend_services=[{
+        "locationType": "regional",
+        "namedPorts": [{
+            "name": "http",
+            "ports": [
+                80,
+                8080,
+            ],
+        }],
+        "scheme": "INTERNAL",
+        "serviceName": "example-backend-service",
+    }],
+    cluster_name="example-cluster-name",
+    desired_capacity=0,
+    location="us-central1-a",
+    max_size=2,
+    min_size=0,
+    whitelists=[
+        "n1-standard-1",
+        "n1-standard-2",
+    ])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -94,7 +150,7 @@ const example = new spotinst.gke.OceanImport("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OceanImport</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend_services=None<span class="p">, </span>cluster_name=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>location=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>whitelists=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OceanImport</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autoscaler=None<span class="p">, </span>backend_services=None<span class="p">, </span>cluster_name=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>location=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>whitelists=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -286,6 +342,14 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span>Autoscaler</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportautoscaler">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Autoscaler<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Backend<wbr>Services</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportbackendservice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Backend<wbr>Service<wbr>Args&gt;</a></span>
@@ -360,6 +424,14 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}The zone the master cluster is located in. 
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Autoscaler</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportautoscaler">Ocean<wbr>Import<wbr>Autoscaler</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -440,6 +512,14 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span>autoscaler</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportautoscaler">Ocean<wbr>Import<wbr>Autoscaler</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>backend<wbr>Services</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportbackendservice">Ocean<wbr>Import<wbr>Backend<wbr>Service[]</a></span>
@@ -514,6 +594,14 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}The zone the master cluster is located in. 
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>autoscaler</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportautoscaler">Dict[Ocean<wbr>Import<wbr>Autoscaler]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -689,7 +777,7 @@ Get an existing OceanImport resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>backend_services=None<span class="p">, </span>cluster_controller_id=None<span class="p">, </span>cluster_name=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>location=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>whitelists=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>autoscaler=None<span class="p">, </span>backend_services=None<span class="p">, </span>cluster_controller_id=None<span class="p">, </span>cluster_name=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>location=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>whitelists=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -805,6 +893,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Autoscaler</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportautoscaler">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Autoscaler<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Backend<wbr>Services</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportbackendservice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Backend<wbr>Service<wbr>Args&gt;</a></span>
@@ -887,6 +983,14 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Autoscaler</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportautoscaler">Ocean<wbr>Import<wbr>Autoscaler</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -975,6 +1079,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>autoscaler</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportautoscaler">Ocean<wbr>Import<wbr>Autoscaler</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>backend<wbr>Services</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportbackendservice">Ocean<wbr>Import<wbr>Backend<wbr>Service[]</a></span>
@@ -1057,6 +1169,14 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>autoscaler</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportautoscaler">Dict[Ocean<wbr>Import<wbr>Autoscaler]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1149,6 +1269,670 @@ The following state arguments are supported:
 
 
 ## Supporting Types
+
+
+<h4 id="oceanimportautoscaler">Ocean<wbr>Import<wbr>Autoscaler</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanImportAutoscaler">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanImportAutoscaler">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportAutoscalerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportAutoscalerOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.OceanImportAutoscalerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.OceanImportAutoscaler.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Auto<wbr>Headroom<wbr>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Down</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportautoscalerdown">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Autoscaler<wbr>Down<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Headroom</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportautoscalerheadroom">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Autoscaler<wbr>Headroom<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Is<wbr>Auto<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Resource<wbr>Limits</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportautoscalerresourcelimits">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Autoscaler<wbr>Resource<wbr>Limits<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Auto<wbr>Headroom<wbr>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Down</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportautoscalerdown">Ocean<wbr>Import<wbr>Autoscaler<wbr>Down</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Headroom</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportautoscalerheadroom">Ocean<wbr>Import<wbr>Autoscaler<wbr>Headroom</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Is<wbr>Auto<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Resource<wbr>Limits</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportautoscalerresourcelimits">Ocean<wbr>Import<wbr>Autoscaler<wbr>Resource<wbr>Limits</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>auto<wbr>Headroom<wbr>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>down</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportautoscalerdown">Ocean<wbr>Import<wbr>Autoscaler<wbr>Down</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>headroom</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportautoscalerheadroom">Ocean<wbr>Import<wbr>Autoscaler<wbr>Headroom</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is<wbr>Auto<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>resource<wbr>Limits</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportautoscalerresourcelimits">Ocean<wbr>Import<wbr>Autoscaler<wbr>Resource<wbr>Limits</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>auto<wbr>Headroom<wbr>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>down</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportautoscalerdown">Dict[Ocean<wbr>Import<wbr>Autoscaler<wbr>Down]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>headroom</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportautoscalerheadroom">Dict[Ocean<wbr>Import<wbr>Autoscaler<wbr>Headroom]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is<wbr>Auto<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>resource<wbr>Limits</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportautoscalerresourcelimits">Dict[Ocean<wbr>Import<wbr>Autoscaler<wbr>Resource<wbr>Limits]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="oceanimportautoscalerdown">Ocean<wbr>Import<wbr>Autoscaler<wbr>Down</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanImportAutoscalerDown">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanImportAutoscalerDown">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportAutoscalerDownArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportAutoscalerDownOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.OceanImportAutoscalerDownArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.OceanImportAutoscalerDown.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Evaluation<wbr>Periods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Scale<wbr>Down<wbr>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Evaluation<wbr>Periods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Scale<wbr>Down<wbr>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>evaluation<wbr>Periods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Scale<wbr>Down<wbr>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>evaluation<wbr>Periods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Scale<wbr>Down<wbr>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="oceanimportautoscalerheadroom">Ocean<wbr>Import<wbr>Autoscaler<wbr>Headroom</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanImportAutoscalerHeadroom">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanImportAutoscalerHeadroom">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportAutoscalerHeadroomArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportAutoscalerHeadroomOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.OceanImportAutoscalerHeadroomArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.OceanImportAutoscalerHeadroom.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cpu<wbr>Per<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Gpu<wbr>Per<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Memory<wbr>Per<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Num<wbr>Of<wbr>Units</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cpu<wbr>Per<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Gpu<wbr>Per<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Memory<wbr>Per<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Num<wbr>Of<wbr>Units</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cpu<wbr>Per<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>gpu<wbr>Per<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>memory<wbr>Per<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>num<wbr>Of<wbr>Units</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cpu<wbr>Per<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>gpu<wbr>Per<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>memory<wbr>Per<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>num<wbr>Of<wbr>Units</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="oceanimportautoscalerresourcelimits">Ocean<wbr>Import<wbr>Autoscaler<wbr>Resource<wbr>Limits</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanImportAutoscalerResourceLimits">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanImportAutoscalerResourceLimits">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportAutoscalerResourceLimitsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportAutoscalerResourceLimitsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.OceanImportAutoscalerResourceLimitsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.OceanImportAutoscalerResourceLimits.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Memory<wbr>Gib</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Vcpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Memory<wbr>Gib</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Vcpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Memory<wbr>Gib</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Vcpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Memory<wbr>Gib</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Vcpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="oceanimportbackendservice">Ocean<wbr>Import<wbr>Backend<wbr>Service</h4>

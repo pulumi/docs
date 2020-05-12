@@ -17,6 +17,87 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_spotinst.gke.Elastigroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.gke.</code><code class="sig-name descname">Elastigroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_zone_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">draining_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fallback_to_ondemand</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gpu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_types_customs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_types_ondemand</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_types_preemptibles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_docker_swarm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_gke</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_forwarding</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadatas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_image</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ondemand_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">preemptible_percentage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scaling_down_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scaling_up_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shutdown_script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">startup_script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.gke.Elastigroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Spotinst Elastigroup GKE resource. Please see <a class="reference external" href="https://api.spotinst.com/elastigroup-for-google-cloud/tutorials/import-a-gke-cluster-as-an-elastigroup/">Importing a GKE cluster</a> for detailed information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_spotinst</span> <span class="k">as</span> <span class="nn">spotinst</span>
+
+<span class="n">example_gke_elastigroup</span> <span class="o">=</span> <span class="n">spotinst</span><span class="o">.</span><span class="n">gke</span><span class="o">.</span><span class="n">Elastigroup</span><span class="p">(</span><span class="s2">&quot;example-gke-elastigroup&quot;</span><span class="p">,</span>
+    <span class="n">backend_services</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;locationType&quot;</span><span class="p">:</span> <span class="s2">&quot;global&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;namedPorts&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="mi">80</span><span class="p">,</span>
+                <span class="mi">8080</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;serviceName&quot;</span><span class="p">:</span> <span class="s2">&quot;backend-service&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">cluster_zone_name</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="n">desired_capacity</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">instance_types_ondemand</span><span class="o">=</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">instance_types_preemptibles</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;n1-standard-2&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">integration_gke</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;autoscaleCooldown&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+        <span class="s2">&quot;autoscaleDown&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;evaluationPeriods&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;autoscaleHeadroom&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;cpuPerUnit&quot;</span><span class="p">:</span> <span class="mi">1024</span><span class="p">,</span>
+            <span class="s2">&quot;memoryPerUnit&quot;</span><span class="p">:</span> <span class="mi">512</span><span class="p">,</span>
+            <span class="s2">&quot;numOfUnits&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;autoscaleIsAutoConfig&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;autoscaleIsEnabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;autoscaleLabels&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;label_key&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;label_value&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;clusterId&quot;</span><span class="p">:</span> <span class="s2">&quot;example-cluster-id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">max_size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">min_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">node_image</span><span class="o">=</span><span class="s2">&quot;COS&quot;</span><span class="p">,</span>
+    <span class="n">preemptible_percentage</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_gke</span></code> - (Required) Describes the GKE integration.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> - (Optional) The location of your GKE cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> - (Optional) The GKE cluster ID you wish to import.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscale_is_enabled</span></code> -  (Optional, Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>) Specifies whether the auto scaling feature is enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscale_is_autoconfig</span></code> - (Optional, Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>) Enabling the automatic auto-scaler functionality. For more information please see: .</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscale_cooldown</span></code> - (Optional, Default: <code class="docutils literal notranslate"><span class="pre">300</span></code>) The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscale_headroom</span></code> - (Optional) Headroom for the cluster.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cpu_per_unit</span></code> - (Optional, Default: <code class="docutils literal notranslate"><span class="pre">0</span></code>) Cpu units for compute.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memory_per_unit</span></code> - (Optional, Default: <code class="docutils literal notranslate"><span class="pre">0</span></code>) RAM units for compute.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num_of_units</span></code> - (Optional, Default: <code class="docutils literal notranslate"><span class="pre">0</span></code>) Amount of units for compute.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscale_down</span></code> - (Optional) Enabling scale down.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">evaluation_periods</span></code> - (Optional, Default: <code class="docutils literal notranslate"><span class="pre">5</span></code>) Amount of cooldown evaluation periods for scale down.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscale_labels</span></code> - (Optional) Labels to assign to the resource.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> - (Optional) The label name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> - (Optional) The label value.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Usage:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p><span class="raw-html-m2r"><a id="diff-suppressed-parameters"></a></span></p>
 <p>The following parameters are created remotely and imported. The diffs have been suppressed in order to maintain plan legibility. You may update the values of these
 imported parameters by defining them in your template with your desired new value (including null values).</p>
 <ul class="simple">
@@ -431,8 +512,100 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_spotinst.gke.OceanImport">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.gke.</code><code class="sig-name descname">OceanImport</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduled_tasks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">whitelists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.gke.OceanImport" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.gke.</code><code class="sig-name descname">OceanImport</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autoscaler</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduled_tasks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">whitelists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.gke.OceanImport" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Spotinst Ocean GKE import resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_spotinst</span> <span class="k">as</span> <span class="nn">spotinst</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">spotinst</span><span class="o">.</span><span class="n">gke</span><span class="o">.</span><span class="n">OceanImport</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">backend_services</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;locationType&quot;</span><span class="p">:</span> <span class="s2">&quot;regional&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;namedPorts&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="mi">80</span><span class="p">,</span>
+                <span class="mi">8080</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;scheme&quot;</span><span class="p">:</span> <span class="s2">&quot;INTERNAL&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;serviceName&quot;</span><span class="p">:</span> <span class="s2">&quot;example-backend-service&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">cluster_name</span><span class="o">=</span><span class="s2">&quot;example-cluster-name&quot;</span><span class="p">,</span>
+    <span class="n">desired_capacity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="n">max_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">min_size</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">whitelists</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;n1-standard-2&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheduled_task</span></code> - (Optional) Set scheduling object.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">shutdown_hours</span></code> - (Optional) Set shutdown hours for cluster object.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">is_enabled</span></code> - (Optional)  Flag to enable / disable the shutdown hours.
+.. code-block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Example</span><span class="p">:</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time_windows</span></code> - (Required) Set time windows for shutdown hours. specify a list of ‘timeWindows’ with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
+.. code-block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Example</span><span class="p">:</span> <span class="n">Fri</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">30</span><span class="o">-</span><span class="n">Wed</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">30</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tasks</span></code> - (Optional) The scheduling tasks for the cluster.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">is_enabled</span></code> - (Required)  Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cron_expression</span></code> - (Required) A valid cron expression. For example : ” * * * * * “.The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
+.. code-block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Example</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">1</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span>
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">task_type</span></code> - (Required) Valid values: “clusterRoll”. Required for cluster.scheduling.tasks object.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">batch_size_percentage</span></code> - (Optional)  Value in % to set size of batch in roll. Valid values are 0-100
+.. code-block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Example</span><span class="p">:</span> <span class="mf">20.</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
+<p><span class="raw-html-m2r"><a id="autoscaler"></a></span></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscaler</span></code> - (Optional) The Ocean Kubernetes Autoscaler object.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">is_enabled</span></code> - (Optional, Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>) Enable the Ocean Kubernetes Autoscaler.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">is_auto_config</span></code> - (Optional, Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>) Automatically configure and optimize headroom resources.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auto_headroom_percentage</span></code> - Optionally set the auto headroom percentage, set a number between 0-200 to control the headroom % from the cluster. Relevant when isAutoConfig=true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cooldown</span></code> - (Optional, Default: <code class="docutils literal notranslate"><span class="pre">null</span></code>) Cooldown period between scaling actions.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headroom</span></code> - (Optional) Spare resource capacity management enabling fast assignment of Pods without waiting for new resources to launch.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cpu_per_unit</span></code> - (Optional) Optionally configure the number of CPUs to allocate the headroom. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memory_per_unit</span></code> - (Optional) Optionally configure the amount of memory (MiB) to allocate the headroom.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gpu_per_unit</span></code> - (Optional) How much GPU allocate for headroom unit.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num_of_units</span></code> - (Optional) The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">down</span></code> - (Optional) Auto Scaling scale down operations.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">evaluation_periods</span></code> - (Optional, Default: <code class="docutils literal notranslate"><span class="pre">null</span></code>) The number of evaluation periods that should accumulate before a scale down action takes place.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_scale_down_percentage</span></code> - (Optional) Would represent the maximum % to scale-down. Number between 1-100.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_limits</span></code> - (Optional) Optionally set upper and lower bounds on the resource usage of the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_vcpu</span></code> - (Optional) The maximum cpu in vCpu units that can be allocated to the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_memory_gib</span></code> - (Optional) The maximum memory in GiB units that can be allocated to the cluster.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -447,6 +620,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>autoscaler</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoHeadroomPercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cooldown</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">down</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">evaluationPeriods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxScaleDownPercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headroom</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cpuPerUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gpuPerUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memoryPerUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numOfUnits</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isAutoConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceLimits</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxMemoryGib</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxVcpu</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
 <p>The <strong>backend_services</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">locationType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Sets which location the backend services will be active. Valid values: <code class="docutils literal notranslate"><span class="pre">regional</span></code>, <code class="docutils literal notranslate"><span class="pre">global</span></code>.</p></li>
@@ -525,7 +725,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py method">
 <dt id="pulumi_spotinst.gke.OceanImport.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_controller_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduled_tasks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">whitelists</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.gke.OceanImport.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autoscaler</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_controller_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduled_tasks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">whitelists</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.gke.OceanImport.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing OceanImport resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -543,6 +743,33 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>autoscaler</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoHeadroomPercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cooldown</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">down</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">evaluationPeriods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxScaleDownPercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headroom</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cpuPerUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gpuPerUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memoryPerUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numOfUnits</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isAutoConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceLimits</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxMemoryGib</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxVcpu</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
 <p>The <strong>backend_services</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">locationType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Sets which location the backend services will be active. Valid values: <code class="docutils literal notranslate"><span class="pre">regional</span></code>, <code class="docutils literal notranslate"><span class="pre">global</span></code>.</p></li>
@@ -616,6 +843,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_spotinst.gke.OceanLaunchSpec">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.gke.</code><code class="sig-name descname">OceanLaunchSpec</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autoscale_headrooms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadatas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ocean_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_image</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">taints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.gke.OceanLaunchSpec" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a custom Spotinst Ocean GKE Launch Spec resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_spotinst</span> <span class="k">as</span> <span class="nn">spotinst</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">spotinst</span><span class="o">.</span><span class="n">gke</span><span class="o">.</span><span class="n">OceanLaunchSpec</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">autoscale_headrooms</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;cpuPerUnit&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
+        <span class="s2">&quot;gpuPerUnit&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;memoryPerUnit&quot;</span><span class="p">:</span> <span class="mi">2048</span><span class="p">,</span>
+        <span class="s2">&quot;numOfUnits&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;labelKey&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;labelVal&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">metadatas</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;gci-update-strategy&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;update_disabled&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">ocean_id</span><span class="o">=</span><span class="s2">&quot;o-123456&quot;</span><span class="p">,</span>
+    <span class="n">source_image</span><span class="o">=</span><span class="s2">&quot;image&quot;</span><span class="p">,</span>
+    <span class="n">taints</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;effect&quot;</span><span class="p">:</span> <span class="s2">&quot;taintEffect&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;taintKey&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;taintVal&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -795,6 +1049,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_spotinst.gke.OceanLaunchSpecImport">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.gke.</code><code class="sig-name descname">OceanLaunchSpecImport</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_pool_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ocean_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.gke.OceanLaunchSpecImport" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a custom Spotinst Ocean GKE Launch Spec Import resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_spotinst</span> <span class="k">as</span> <span class="nn">spotinst</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">spotinst</span><span class="o">.</span><span class="n">gke</span><span class="o">.</span><span class="n">OceanLaunchSpecImport</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">node_pool_name</span><span class="o">=</span><span class="s2">&quot;default-pool&quot;</span><span class="p">,</span>
+    <span class="n">ocean_id</span><span class="o">=</span><span class="s2">&quot;o-123456&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

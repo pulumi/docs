@@ -24,6 +24,9 @@ Usage:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 
 <a id="health-check"></a>
 ## Backend Services
@@ -40,6 +43,9 @@ Usage:
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 
 <a id="disks"></a>
@@ -63,6 +69,9 @@ Usage:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 
 <a id="network-interface"></a>
 ## Network Interfaces
@@ -80,6 +89,9 @@ to understand the implications of using these attributes.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 
 <a id="scaling-policy"></a>
@@ -110,6 +122,9 @@ Usage:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 
 <a id="third-party-integrations"></a>
 ## Third-Party Integrations
@@ -122,6 +137,9 @@ Usage:
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 
 <a id="scheduled-task"></a>
@@ -141,6 +159,9 @@ Usage:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 
 {{% examples %}}
 ## Example Usage
@@ -156,7 +177,95 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_spotinst as spotinst
+
+example = spotinst.gcp.Elastigroup("example",
+    availability_zones=[
+        "asia-east1-c",
+        "us-central1-a",
+    ],
+    backend_services_config=[{
+        "ports": [{
+            "portName": "port-name",
+            "ports": [
+                8000,
+                6000,
+            ],
+        }],
+        "serviceName": "spotinst-elb-backend-service",
+    }],
+    description="spotinst gcp group",
+    desired_capacity=1,
+    disks=[{
+        "autoDelete": True,
+        "boot": True,
+        "deviceName": "device",
+        "initializeParams": [{
+            "diskSizeGb": 10,
+            "diskType": "pd-standard",
+            "sourceImage": "",
+        }],
+        "interface": "SCSI",
+        "mode": "READ_WRITE",
+        "type": "PERSISTENT",
+    }],
+    draining_timeout=180,
+    fallback_to_ondemand=True,
+    instance_types_customs=[{
+        "memoryGiB": 7.5,
+        "vCPU": 2,
+    }],
+    instance_types_ondemand=["n1-standard-1"],
+    instance_types_preemptibles=[
+        "n1-standard-1",
+        "n1-standard-2",
+    ],
+    labels=[{
+        "key": "test_key",
+        "value": "test_value",
+    }],
+    max_size=1,
+    min_size=0,
+    network_interfaces=[{
+        "network": "spot-network",
+    }],
+    preemptible_percentage=50,
+    scaling=[{
+        "up": [{
+            "action": [{
+                "adjustment": 1,
+                "type": "adjustment",
+            }],
+            "cooldown": 300,
+            "dimensions": [{
+                "name": "storage_type",
+                "value": "pd-ssd",
+            }],
+            "evaluationPeriods": 1,
+            "metricName": "instance/disk/read_ops_count",
+            "namespace": "compute",
+            "operator": "gte",
+            "period": 300,
+            "policyName": "scale_up_1",
+            "source": "stackdriver",
+            "statistic": "average",
+            "threshold": 10000,
+            "unit": "percent",
+        }],
+    }],
+    service_account="example@myProject.iam.gservicecct.com",
+    startup_script="",
+    subnets=[{
+        "region": "asia-east1",
+        "subnetNames": "",
+    }],
+    tags=[
+        "http",
+        "https",
+    ])
+```
 {{% /example %}}
 
 {{% example typescript %}}

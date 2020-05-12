@@ -28,7 +28,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_spotinst as spotinst
+
+my_target = spotinst.multai.Target("myTarget",
+    balancer_id="b-12345",
+    host="host",
+    port=1338,
+    tags=[{
+        "key": "env",
+        "value": "prod",
+    }],
+    target_set_id="l-98765",
+    weight=1)
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -28,7 +28,20 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_spotinst as spotinst
+
+my_routing_rule = spotinst.multai.RoutingRule("myRoutingRule",
+    balancer_id="b-12345",
+    listener_id="l-98765",
+    route="Path(`/bar`)",
+    strategy="LEASTCONN",
+    tags=[{
+        "key": "env",
+        "value": "prod",
+    }])
+```
 {{% /example %}}
 
 {{% example typescript %}}

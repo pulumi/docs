@@ -24,6 +24,9 @@ Provides a Spotinst elastigroup Azure resource.
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 
 <a id="image"></a>
 ## Image
@@ -38,6 +41,9 @@ import * as pulumi from "@pulumi/pulumi";
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 
 <a id="health-check"></a>
 ## Health Check
@@ -49,6 +55,9 @@ import * as pulumi from "@pulumi/pulumi";
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 
 <a id="network"></a>
@@ -66,12 +75,18 @@ import * as pulumi from "@pulumi/pulumi";
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 
 <a id="login"></a>
 ## Login
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 
 <a id="login"></a>
@@ -84,6 +99,9 @@ import * as pulumi from "@pulumi/pulumi";
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 
 <a id="scaling-policy"></a>
@@ -104,6 +122,9 @@ import * as pulumi from "@pulumi/pulumi";
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 
 <a id="update-policy"></a>
 ## Update Policy
@@ -119,6 +140,9 @@ import * as pulumi from "@pulumi/pulumi";
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 
 <a id="third-party-integrations"></a>
 ## Third-Party Integrations
@@ -131,6 +155,9 @@ Usage:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 
 * `integration_multai_runtime` - (Optional) Describes the [Multai Runtime](https://spotinst.com/) integration.
     * `deployment_id` - (Optional) The deployment id you want to get
@@ -139,6 +166,9 @@ Usage:
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 
 {{% examples %}}
@@ -155,7 +185,118 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_spotinst as spotinst
+
+test_azure_group = spotinst.azure.Elastigroup("testAzureGroup",
+    desired_capacity=1,
+    health_check={
+        "autoHealing": True,
+        "gracePeriod": 120,
+        "healthCheckType": "INSTANCE_STATE",
+    },
+    images=[{
+        "marketplace": [{
+            "offer": "UbuntuServer",
+            "publisher": "Canonical",
+            "sku": "16.04-LTS",
+        }],
+    }],
+    load_balancers=[{
+        "autoWeight": True,
+        "balancerId": "lb-1ee2e3q",
+        "targetSetId": "ts-3eq",
+        "type": "MULTAI_TARGET_SET",
+    }],
+    login={
+        "sshPublicKey": "33a2s1f3g5a1df5g1ad3f2g1adfg56dfg==",
+        "userName": "admin",
+    },
+    low_priority_sizes=[
+        "standard_a1_v1",
+        "standard_a1_v2",
+    ],
+    managed_service_identities=[{
+        "name": "example-identity",
+        "resourceGroupName": "spotinst-azure",
+    }],
+    max_size=1,
+    min_size=0,
+    network={
+        "assignPublicIp": True,
+        "resourceGroupName": "subnetResourceGroup",
+        "subnetName": "my-subnet-name",
+        "virtualNetworkName": "vname",
+    },
+    od_sizes=[
+        "standard_a1_v1",
+        "standard_a1_v2",
+    ],
+    product="Linux",
+    region="eastus",
+    resource_group_name="spotinst-azure",
+    scaling_down_policies=[{
+        "actionType": "adjustment",
+        "adjustment": "MIN(5,10)",
+        "cooldown": 60,
+        "dimensions": [{
+            "name": "name-1",
+            "value": "value-1",
+        }],
+        "evaluationPeriods": "10",
+        "metricName": "CPUUtilization",
+        "namespace": "Microsoft.Compute",
+        "operator": "gt",
+        "period": "60",
+        "policyName": "policy-name",
+        "statistic": "average",
+        "threshold": 10,
+        "unit": "percent",
+    }],
+    scaling_up_policies=[{
+        "actionType": "setMinTarget",
+        "cooldown": 60,
+        "dimensions": [
+            {
+                "name": "resourceName",
+                "value": "resource-name",
+            },
+            {
+                "name": "resourceGroupName",
+                "value": "resource-group-name",
+            },
+        ],
+        "evaluationPeriods": "10",
+        "metricName": "CPUUtilization",
+        "minTargetCapacity": 1,
+        "namespace": "Microsoft.Compute",
+        "operator": "gt",
+        "period": "60",
+        "policyName": "policy-name",
+        "statistic": "average",
+        "threshold": 10,
+        "unit": "percent",
+    }],
+    scheduled_tasks=[{
+        "adjustment": 2,
+        "adjustmentPercentage": 50,
+        "batchSizePercentage": 33,
+        "cronExpression": "* * * * *",
+        "gracePeriod": 300,
+        "isEnabled": True,
+        "scaleMaxCapacity": 8,
+        "scaleMinCapacity": 5,
+        "scaleTargetCapacity": 6,
+        "taskType": "scale",
+    }],
+    shutdown_script="",
+    strategy={
+        "drainingTimeout": 300,
+        "odCount": 1,
+    },
+    user_data="")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -38,6 +38,9 @@ Usage:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 
 {{% examples %}}
 ## Example Usage
@@ -53,7 +56,40 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_spotinst as spotinst
+
+elastigoup_aws_beanstalk = spotinst.aws.Beanstalk("elastigoup-aws-beanstalk",
+    beanstalk_environment_id="e-example",
+    beanstalk_environment_name="example-env",
+    deployment_preferences={
+        "automaticRoll": True,
+        "batchSizePercentage": 100,
+        "gracePeriod": 90,
+        "strategy": [{
+            "action": "REPLACE_SERVER",
+            "shouldDrainInstances": True,
+        }],
+    },
+    desired_capacity=0,
+    instance_types_spots=[
+        "t2.micro",
+        "t2.medium",
+        "t2.large",
+    ],
+    managed_actions={
+        "platformUpdate": {
+            "performAt": "timeWindow",
+            "timeWindow": "Mon:23:50-Tue:00:20",
+            "updateLevel": "minorAndPatch",
+        },
+    },
+    max_size=1,
+    min_size=0,
+    product="Linux/UNIX",
+    region="us-west-2")
+```
 {{% /example %}}
 
 {{% example typescript %}}

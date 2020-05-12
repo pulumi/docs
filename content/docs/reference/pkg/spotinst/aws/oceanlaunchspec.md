@@ -28,7 +28,38 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_spotinst as spotinst
+
+example = spotinst.aws.OceanLaunchSpec("example",
+    autoscale_headrooms=[{
+        "cpuPerUnit": 1000,
+        "gpuPerUnit": 0,
+        "memoryPerUnit": 2048,
+        "numOfUnits": 5,
+    }],
+    iam_instance_profile="iam-profile",
+    image_id="ami-123456",
+    labels=[{
+        "key": "fakeKey",
+        "value": "fakeValue",
+    }],
+    ocean_id="o-123456",
+    root_volume_size=30,
+    security_groups=["sg-987654321"],
+    subnet_ids=["subnet-1234"],
+    tags=[{
+        "key": "Env",
+        "value": "production",
+    }],
+    taints=[{
+        "effect": "NoExecute",
+        "key": "taint key updated",
+        "value": "taint value updated",
+    }],
+    user_data="echo hello world")
+```
 {{% /example %}}
 
 {{% example typescript %}}

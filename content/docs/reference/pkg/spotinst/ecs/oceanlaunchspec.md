@@ -28,7 +28,30 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_spotinst as spotinst
+
+example = spotinst.ecs.OceanLaunchSpec("example",
+    attributes=[{
+        "key": "fakeKey",
+        "value": "fakeValue",
+    }],
+    autoscale_headrooms=[{
+        "cpuPerUnit": 1000,
+        "memoryPerUnit": 2048,
+        "numOfUnits": 5,
+    }],
+    iam_instance_profile="iam-profile",
+    image_id="ami-123456",
+    ocean_id="o-123456",
+    security_group_ids=["awseb-12345"],
+    tags=[{
+        "key": "Env",
+        "value": "production",
+    }],
+    user_data="echo hello world")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -50,6 +73,10 @@ const example = new spotinst.ecs.OceanLaunchSpec("example", {
     imageId: "ami-123456",
     oceanId: "o-123456",
     securityGroupIds: ["awseb-12345"],
+    tags: [{
+        key: "Env",
+        value: "production",
+    }],
     userData: "echo hello world",
 });
 ```
@@ -67,7 +94,7 @@ const example = new spotinst.ecs.OceanLaunchSpec("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OceanLaunchSpec</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attributes=None<span class="p">, </span>autoscale_headrooms=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>user_data=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OceanLaunchSpec</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attributes=None<span class="p">, </span>autoscale_headrooms=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -304,6 +331,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Tag<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -379,6 +415,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}One or more security group ids.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">[]Ocean<wbr>Launch<wbr>Spec<wbr>Tag</a></span>
+    </dt>
+    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -462,6 +507,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">Ocean<wbr>Launch<wbr>Spec<wbr>Tag[]</a></span>
+    </dt>
+    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>user<wbr>Data</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -537,6 +591,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}One or more security group ids.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">List[Ocean<wbr>Launch<wbr>Spec<wbr>Tag]</a></span>
+    </dt>
+    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -638,7 +701,7 @@ Get an existing OceanLaunchSpec resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>attributes=None<span class="p">, </span>autoscale_headrooms=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>user_data=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>attributes=None<span class="p">, </span>autoscale_headrooms=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -817,6 +880,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Tag<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -892,6 +964,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}One or more security group ids.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">[]Ocean<wbr>Launch<wbr>Spec<wbr>Tag</a></span>
+    </dt>
+    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -975,6 +1056,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">Ocean<wbr>Launch<wbr>Spec<wbr>Tag[]</a></span>
+    </dt>
+    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>user<wbr>Data</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1050,6 +1140,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}One or more security group ids.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">List[Ocean<wbr>Launch<wbr>Spec<wbr>Tag]</a></span>
+    </dt>
+    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1339,6 +1438,124 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Optionally configure the amount of memory (MiB) to allocate for each headroom unit.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="oceanlaunchspectag">Ocean<wbr>Launch<wbr>Spec<wbr>Tag</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecTag">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanLaunchSpecTag">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/ecs?tab=doc#OceanLaunchSpecTagArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/ecs?tab=doc#OceanLaunchSpecTagOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Ecs.Inputs.OceanLaunchSpecTagArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Ecs.Outputs.OceanLaunchSpecTag.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The label key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The label key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The label key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The label key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The label value.
 {{% /md %}}</dd>
 
 </dl>

@@ -28,7 +28,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_spotinst as spotinst
+
+my_balancer = spotinst.multai.Balancer("myBalancer",
+    connection_timeouts={
+        "draining": 10,
+        "idle": 10,
+    },
+    scheme="internal",
+    tags=[{
+        "key": "env",
+        "value": "prod",
+    }])
+```
 {{% /example %}}
 
 {{% example typescript %}}
