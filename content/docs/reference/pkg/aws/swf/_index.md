@@ -26,3 +26,21 @@ Explore the resources and functions of the swf module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Swf.html" title="Pulumi.Aws.Swf">Pulumi.Aws.Swf</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/swf?tab=doc#" title="aws/swf">aws/swf</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/swf/#" title="@pulumi/aws/swf">@pulumi/aws/swf</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/swf" title="pulumi_aws/swf">pulumi_aws/swf</a></dd>
+
+</dl>
+

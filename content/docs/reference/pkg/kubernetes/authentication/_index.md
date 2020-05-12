@@ -25,3 +25,18 @@ meta_desc: ""
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/authentication?tab=doc#" title="kubernetes/authentication">kubernetes/authentication</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/authentication/#" title="@pulumi/kubernetes/authentication">@pulumi/kubernetes/authentication</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/authentication" title="pulumi_kubernetes/authentication">pulumi_kubernetes/authentication</a></dd>
+
+</dl>
+

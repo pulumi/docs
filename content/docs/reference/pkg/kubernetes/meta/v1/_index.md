@@ -24,3 +24,21 @@ Explore the resources and functions of the meta/v1 module in the Kubernetes pack
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Meta.V1.html" title="Pulumi.Kubernetes.Meta.V1">Pulumi.Kubernetes.Meta.V1</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1?tab=doc#" title="kubernetes/meta/v1">kubernetes/meta/v1</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/meta/v1/#" title="@pulumi/kubernetes/meta/v1">@pulumi/kubernetes/meta/v1</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/meta/v1" title="pulumi_kubernetes/meta/v1">pulumi_kubernetes/meta/v1</a></dd>
+
+</dl>
+

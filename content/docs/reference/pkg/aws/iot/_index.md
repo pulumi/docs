@@ -38,3 +38,21 @@ Explore the resources and functions of the iot module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.html" title="Pulumi.Aws.Iot">Pulumi.Aws.Iot</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#" title="aws/iot">aws/iot</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/iot/#" title="@pulumi/aws/iot">@pulumi/aws/iot</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/iot" title="pulumi_aws/iot">pulumi_aws/iot</a></dd>
+
+</dl>
+

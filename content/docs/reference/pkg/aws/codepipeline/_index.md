@@ -27,3 +27,21 @@ Explore the resources and functions of the codepipeline module in the AWS packag
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.html" title="Pulumi.Aws.CodePipeline">Pulumi.Aws.CodePipeline</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#" title="aws/codepipeline">aws/codepipeline</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/codepipeline/#" title="@pulumi/aws/codepipeline">@pulumi/aws/codepipeline</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/codepipeline" title="pulumi_aws/codepipeline">pulumi_aws/codepipeline</a></dd>
+
+</dl>
+

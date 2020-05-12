@@ -34,3 +34,21 @@ Explore the resources and functions of the ram module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ram.html" title="Pulumi.Aws.Ram">Pulumi.Aws.Ram</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ram?tab=doc#" title="aws/ram">aws/ram</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/ram/#" title="@pulumi/aws/ram">@pulumi/aws/ram</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/ram" title="pulumi_aws/ram">pulumi_aws/ram</a></dd>
+
+</dl>
+

@@ -36,3 +36,21 @@ Explore the resources and functions of the elasticache module in the AWS package
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElastiCache.html" title="Pulumi.Aws.ElastiCache">Pulumi.Aws.ElastiCache</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticache?tab=doc#" title="aws/elasticache">aws/elasticache</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticache/#" title="@pulumi/aws/elasticache">@pulumi/aws/elasticache</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/elasticache" title="pulumi_aws/elasticache">pulumi_aws/elasticache</a></dd>
+
+</dl>
+

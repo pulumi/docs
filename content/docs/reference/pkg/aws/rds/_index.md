@@ -48,3 +48,21 @@ Explore the resources and functions of the rds module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.html" title="Pulumi.Aws.Rds">Pulumi.Aws.Rds</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#" title="aws/rds">aws/rds</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#" title="@pulumi/aws/rds">@pulumi/aws/rds</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/rds" title="pulumi_aws/rds">pulumi_aws/rds</a></dd>
+
+</dl>
+

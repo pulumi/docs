@@ -33,3 +33,21 @@ Explore the resources and functions of the dynamodb module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.html" title="Pulumi.Aws.DynamoDB">Pulumi.Aws.DynamoDB</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#" title="aws/dynamodb">aws/dynamodb</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/dynamodb/#" title="@pulumi/aws/dynamodb">@pulumi/aws/dynamodb</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/dynamodb" title="pulumi_aws/dynamodb">pulumi_aws/dynamodb</a></dd>
+
+</dl>
+

@@ -26,3 +26,18 @@ meta_desc: ""
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/storage?tab=doc#" title="kubernetes/storage">kubernetes/storage</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/storage/#" title="@pulumi/kubernetes/storage">@pulumi/kubernetes/storage</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/storage" title="pulumi_kubernetes/storage">pulumi_kubernetes/storage</a></dd>
+
+</dl>
+

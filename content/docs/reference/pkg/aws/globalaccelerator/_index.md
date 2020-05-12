@@ -28,3 +28,21 @@ Explore the resources and functions of the globalaccelerator module in the AWS p
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GlobalAccelerator.html" title="Pulumi.Aws.GlobalAccelerator">Pulumi.Aws.GlobalAccelerator</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/globalaccelerator?tab=doc#" title="aws/globalaccelerator">aws/globalaccelerator</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/globalaccelerator/#" title="@pulumi/aws/globalaccelerator">@pulumi/aws/globalaccelerator</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/globalaccelerator" title="pulumi_aws/globalaccelerator">pulumi_aws/globalaccelerator</a></dd>
+
+</dl>
+

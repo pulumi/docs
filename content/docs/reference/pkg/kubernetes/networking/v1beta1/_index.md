@@ -27,3 +27,21 @@ Explore the resources and functions of the networking/v1beta1 module in the Kube
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Networking.V1Beta1.html" title="Pulumi.Kubernetes.Networking.V1Beta1">Pulumi.Kubernetes.Networking.V1Beta1</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/networking/v1beta1?tab=doc#" title="kubernetes/networking/v1beta1">kubernetes/networking/v1beta1</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/networking/v1beta1/#" title="@pulumi/kubernetes/networking/v1beta1">@pulumi/kubernetes/networking/v1beta1</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/networking.k8s.io/v1beta1" title="pulumi_kubernetes/networking.k8s.io/v1beta1">pulumi_kubernetes/networking.k8s.io/v1beta1</a></dd>
+
+</dl>
+

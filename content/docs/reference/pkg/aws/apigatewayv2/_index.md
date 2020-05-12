@@ -37,3 +37,21 @@ Explore the resources and functions of the apigatewayv2 module in the AWS packag
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGatewayV2.html" title="Pulumi.Aws.ApiGatewayV2">Pulumi.Aws.ApiGatewayV2</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2?tab=doc#" title="aws/apigatewayv2">aws/apigatewayv2</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigatewayv2/#" title="@pulumi/aws/apigatewayv2">@pulumi/aws/apigatewayv2</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/apigatewayv2" title="pulumi_aws/apigatewayv2">pulumi_aws/apigatewayv2</a></dd>
+
+</dl>
+

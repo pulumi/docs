@@ -33,3 +33,21 @@ Explore the resources and functions of the directoryservice module in the AWS pa
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectoryService.html" title="Pulumi.Aws.DirectoryService">Pulumi.Aws.DirectoryService</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice?tab=doc#" title="aws/directoryservice">aws/directoryservice</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/directoryservice/#" title="@pulumi/aws/directoryservice">@pulumi/aws/directoryservice</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/directoryservice" title="pulumi_aws/directoryservice">pulumi_aws/directoryservice</a></dd>
+
+</dl>
+

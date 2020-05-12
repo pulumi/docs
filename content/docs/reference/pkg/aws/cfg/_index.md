@@ -33,3 +33,21 @@ Explore the resources and functions of the cfg module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.html" title="Pulumi.Aws.Cfg">Pulumi.Aws.Cfg</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#" title="aws/cfg">aws/cfg</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/cfg/#" title="@pulumi/aws/cfg">@pulumi/aws/cfg</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/cfg" title="pulumi_aws/cfg">pulumi_aws/cfg</a></dd>
+
+</dl>
+

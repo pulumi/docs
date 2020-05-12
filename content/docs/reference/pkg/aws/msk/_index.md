@@ -33,3 +33,21 @@ Explore the resources and functions of the msk module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.html" title="Pulumi.Aws.Msk">Pulumi.Aws.Msk</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#" title="aws/msk">aws/msk</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/msk/#" title="@pulumi/aws/msk">@pulumi/aws/msk</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/msk" title="pulumi_aws/msk">pulumi_aws/msk</a></dd>
+
+</dl>
+

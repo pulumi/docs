@@ -25,3 +25,18 @@ meta_desc: ""
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/coordination?tab=doc#" title="kubernetes/coordination">kubernetes/coordination</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/coordination/#" title="@pulumi/kubernetes/coordination">@pulumi/kubernetes/coordination</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/coordination" title="pulumi_kubernetes/coordination">pulumi_kubernetes/coordination</a></dd>
+
+</dl>
+

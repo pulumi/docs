@@ -40,3 +40,21 @@ Explore the resources and functions of the elb module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elb.html" title="Pulumi.Aws.Elb">Pulumi.Aws.Elb</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elb?tab=doc#" title="aws/elb">aws/elb</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/elb/#" title="@pulumi/aws/elb">@pulumi/aws/elb</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/elb" title="pulumi_aws/elb">pulumi_aws/elb</a></dd>
+
+</dl>
+

@@ -27,3 +27,21 @@ Explore the resources and functions of the elastictranscoder module in the AWS p
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.html" title="Pulumi.Aws.ElasticTranscoder">Pulumi.Aws.ElasticTranscoder</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elastictranscoder?tab=doc#" title="aws/elastictranscoder">aws/elastictranscoder</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/elastictranscoder/#" title="@pulumi/aws/elastictranscoder">@pulumi/aws/elastictranscoder</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/elastictranscoder" title="pulumi_aws/elastictranscoder">pulumi_aws/elastictranscoder</a></dd>
+
+</dl>
+

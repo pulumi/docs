@@ -27,3 +27,21 @@ Explore the resources and functions of the authorization/v1 module in the Kubern
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Authorization.V1.html" title="Pulumi.Kubernetes.Authorization.V1">Pulumi.Kubernetes.Authorization.V1</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/authorization/v1?tab=doc#" title="kubernetes/authorization/v1">kubernetes/authorization/v1</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/authorization/v1/#" title="@pulumi/kubernetes/authorization/v1">@pulumi/kubernetes/authorization/v1</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/authorization.k8s.io/v1" title="pulumi_kubernetes/authorization.k8s.io/v1">pulumi_kubernetes/authorization.k8s.io/v1</a></dd>
+
+</dl>
+

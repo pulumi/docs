@@ -26,3 +26,18 @@ meta_desc: ""
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/batch?tab=doc#" title="kubernetes/batch">kubernetes/batch</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/batch/#" title="@pulumi/kubernetes/batch">@pulumi/kubernetes/batch</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/batch" title="pulumi_kubernetes/batch">pulumi_kubernetes/batch</a></dd>
+
+</dl>
+
