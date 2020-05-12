@@ -12,9 +12,49 @@ meta_desc: "Explore the TransitGatewayPeeringAttachmentAccepter resource of the 
 
 Manages the accepter's side of an EC2 Transit Gateway Peering Attachment.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ec2.TransitGatewayPeeringAttachmentAccepter("example",
+    tags={
+        "Name": "Example cross-account attachment",
+    },
+    transit_gateway_attachment_id=aws_ec2_transit_gateway_peering_attachment["example"]["id"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.ec2.TransitGatewayPeeringAttachmentAccepter("example", {
+    tags: {
+        Name: "Example cross-account attachment",
+    },
+    transitGatewayAttachmentId: aws_ec2_transit_gateway_peering_attachment_example.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TransitGatewayPeeringAttachmentAccepter Resource {#create}

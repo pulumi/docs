@@ -12,9 +12,44 @@ meta_desc: "Explore the GetSelection function of the backup module, including ex
 
 Use this data source to get information on an existing backup selection.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.backup.get_selection(plan_id=data["aws.backup.Plan"]["example"]["id"],
+    selection_id="selection-id-example")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = aws_backup_plan_example.id.apply(id => aws.backup.getSelection({
+    planId: id,
+    selectionId: "selection-id-example",
+}, { async: true }));
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetSelection {#using}

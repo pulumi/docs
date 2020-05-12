@@ -12,9 +12,77 @@ meta_desc: "Explore the GetPeeringAttachment function of the ec2transitgateway m
 
 Get information on an EC2 Transit Gateway Peering Attachment.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### By Filter
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ec2transitgateway.get_peering_attachment(filters=[{
+    "name": "transit-gateway-attachment-id",
+    "values": ["tgw-attach-12345678"],
+}])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = pulumi.output(aws.ec2transitgateway.getPeeringAttachment({
+    filters: [{
+        name: "transit-gateway-attachment-id",
+        values: ["tgw-attach-12345678"],
+    }],
+}, { async: true }));
+```
+{{% /example %}}
+
+### By Identifier
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+attachment = aws.ec2transitgateway.get_peering_attachment(id="tgw-attach-12345678")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const attachment = pulumi.output(aws.ec2transitgateway.getPeeringAttachment({
+    id: "tgw-attach-12345678",
+}, { async: true }));
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetPeeringAttachment {#using}

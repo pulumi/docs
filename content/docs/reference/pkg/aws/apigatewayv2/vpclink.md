@@ -15,9 +15,51 @@ Manages an Amazon API Gateway Version 2 VPC Link.
 > **Note:** Amazon API Gateway Version 2 VPC Links enable private integrations that connect HTTP APIs to private resources in a VPC.
 To enable private integration for REST APIs, use the Amazon API Gateway Version 1 VPC Link [resource](https://www.terraform.io/docs/providers/aws/r/api_gateway_vpc_link.html).
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.apigatewayv2.VpcLink("example",
+    security_group_ids=[data["aws.ec2.SecurityGroup"]["example"]["id"]],
+    subnet_ids=data["aws.ec2.getSubnetIds"]["example"]["ids"],
+    tags={
+        "Usage": "example",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.apigatewayv2.VpcLink("example", {
+    securityGroupIds: [data.aws_security_group.example.id],
+    subnetIds: data.aws_subnet_ids.example.ids,
+    tags: {
+        Usage: "example",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VpcLink Resource {#create}

@@ -136,10 +136,10 @@ foo_spot_fleet_request = aws.ec2.SpotFleetRequest("fooSpotFleetRequest",
     target_capacity=2,
     valid_until="2019-11-04T20:44:20Z",
     launch_template_config=[{
-        "launch_template_specification": [{
+        "launch_template_specification": {
             "id": foo_launch_template.id,
             "version": foo_launch_template.latest_version,
-        }],
+        },
     }])
 ```
 {{% /example %}}
@@ -161,10 +161,10 @@ const fooSpotFleetRequest = new aws.ec2.SpotFleetRequest("fooSpotFleetRequest", 
     targetCapacity: 2,
     validUntil: "2019-11-04T20:44:20Z",
     launch_template_config: [{
-        launch_template_specification: [{
+        launch_template_specification: {
             id: fooLaunchTemplate.id,
             version: fooLaunchTemplate.latestVersion,
-        }],
+        },
     }],
 });
 ```
@@ -260,10 +260,10 @@ foo_spot_fleet_request = aws.ec2.SpotFleetRequest("fooSpotFleetRequest",
     target_capacity=2,
     valid_until="2019-11-04T20:44:20Z",
     launch_template_config=[{
-        "launch_template_specification": [{
+        "launch_template_specification": {
             "id": foo_launch_template.id,
             "version": foo_launch_template.latest_version,
-        }],
+        },
         "overrides": [
             {
                 "subnetId": data["aws_subnets"]["example"]["ids"],
@@ -299,10 +299,10 @@ const fooSpotFleetRequest = new aws.ec2.SpotFleetRequest("fooSpotFleetRequest", 
     targetCapacity: 2,
     validUntil: "2019-11-04T20:44:20Z",
     launch_template_config: [{
-        launch_template_specification: [{
+        launch_template_specification: {
             id: fooLaunchTemplate.id,
             version: fooLaunchTemplate.latestVersion,
-        }],
+        },
         overrides: [
             {
                 subnetId: data.aws_subnets.example.ids[0],

@@ -14,9 +14,47 @@ Manages the GuardDuty Organization Configuration in the current AWS Region. The 
 
 > **NOTE:** This is an advanced resource. The provider will automatically assume management of the GuardDuty Organization Configuration without import and perform no actions on removal from the resource configuration.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_detector = aws.guardduty.Detector("exampleDetector", enable=True)
+example_organization_configuration = aws.guardduty.OrganizationConfiguration("exampleOrganizationConfiguration",
+    auto_enable=True,
+    detector_id=example_detector.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleDetector = new aws.guardduty.Detector("exampleDetector", {enable: true});
+const exampleOrganizationConfiguration = new aws.guardduty.OrganizationConfiguration("exampleOrganizationConfiguration", {
+    autoEnable: true,
+    detectorId: exampleDetector.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a OrganizationConfiguration Resource {#create}

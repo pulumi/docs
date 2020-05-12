@@ -12,9 +12,49 @@ meta_desc: "Explore the GetLocalGateways function of the ec2 module, including e
 
 Provides information for multiple EC2 Local Gateways, such as their identifiers.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+foo_local_gateways = aws.ec2.get_local_gateways(tags={
+    "service": "production",
+})
+pulumi.export("foo", foo_local_gateways.ids)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const fooLocalGateways = pulumi.output(aws.ec2.getLocalGateways({
+    tags: {
+        service: "production",
+    },
+}, { async: true }));
+
+export const foo = fooLocalGateways.ids;
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetLocalGateways {#using}
