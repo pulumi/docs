@@ -68,8 +68,7 @@ and operations we know the stack needs.
 We also want to restrict who can assume the `WebsiteStackUpdaterRole`, so that only specific users/accounts can access it.
 e.g., the IAM User `cicd-bot` but not IAM User `dwight-over-in-sales`.
 
-And just to show a more real-world example, we'll do this using _multiple_ AWS accounts. Where the `website/production` stack's
-resources are housed in a "production" AWS account, and the `cicd-bot` IAM User is defined in a
+And just to show a more real-world example, we'll do this using _multiple_ AWS accounts, where the `website/production` stack's resources are housed in a "production" AWS account, and the `cicd-bot` IAM User is defined in a
 [bastion AWS account](https://blog.coinbase.com/you-need-more-than-one-aws-account-aws-bastions-and-assume-role-23946c6dfde3).
 
 
@@ -125,7 +124,7 @@ We'll cover how to configure the AWS bastion account side to use this role later
 The next thing to call out is the use of the `Condition` element of the policy document. To assume the role,
 we require two checks to be performed.
 
-- That the principal assuming the role (e.g. IAM User) have the tag `"access-to-production"` with value `"true"`. This way,
+- That the principal assuming the role (e.g., IAM User) has the tag `"access-to-production"` with value `"true."` This way,
   we will reject any IAM User in the bastion account who isn't tagged with `"access-to-production"` from assuming this role.
 - We also verify that the "external ID" (an optional parameter passed when assuming an IAM Role) matches a well-known Pulumi
   stack name. This way, we can double-check that the entity using the IAM Role is doing so to use a specific stack.
@@ -148,7 +147,7 @@ It can take some time to winnow down the specific set of permissions necessary s
 the Pulumi program. For example, if the stack governs the networking configuration, then you can simply not deny
 to the `s3:*` actions.
 
-Unfortunately, Pulumi doesn't currently support generating a reasonable IAM Policy document for your stack. But for a
+Unfortunately, Pulumi doesn't currently support generating a reasonable IAM Policy document for your stack. For a
 good introduction to some of the "worst-case scenarios" that could arise from a misconfigured IAM Policy,
 see [this blog post from BishopFox](https://know.bishopfox.com/research/privilege-escalation-in-aws).
 
@@ -250,19 +249,16 @@ export AWS_SECRET_ACCESS_KEY=$(echo "${CREDS_JSON}" | jq ".Credentials.SecretAcc
 export AWS_SESSION_TOKEN=$(echo "${CREDS_JSON}"     | jq ".Credentials.SessionToken" --raw-output)
 
 # If everything worked correctly, then running the get-caller-identity command will refer to
-# the IAM Role and not the IAM User we started as.
+# the IAM Role and not our IAM User.
 echo "Assumed AWS identity:"
 aws sts get-caller-identity
 ```
 
 ## Storing Sensitive Data using Pulumi {#secrets-in-pulumi}
 
-As a developer, the most critical security threat is access to your cloud account. Since that's
-ultimately where your or your customer's data is stored. But beyond that, there are places where
-sensitive data gets stored by Pulumi too.
+As a developer, the most critical security threat is access to your cloud account since that’s ultimately where your or your customer’s data is stored. But beyond that, there are places where  Pulumi stores sensitive data.
 
-Pulumi goes to great lengths to safeguard your data. Here we review where Pulumi interacts
-with your sensitive data, and what you can do to safeguard it better.
+Pulumi goes to great lengths to safeguard your data. Here we review where Pulumi interacts with your sensitive data and what you can do to safeguard it better.
 
 ### Secrets in Configuration
 
@@ -277,7 +273,7 @@ along with the source code for a stack, so that builds and stack updates are rep
 However, what if those configuration settings contain secrets? Like you need to store an API key
 to use a 3rd party API.
 
-Pulumi supports the ability of [encrypting sensitive configuration data](https://www.pulumi.com/docs/intro/concepts/config/#secrets).
+Pulumi supports [encrypting sensitive configuration data](https://www.pulumi.com/docs/intro/concepts/config/#secrets).
 You just need to add the `--secret` flag.
 
 ```bash
@@ -312,7 +308,7 @@ If that's the case, then you can use a configurable secrets provider, and swap o
 scheme for your own. (And we won't take it personally, promise.)
 
 When you create a new stack using [pulumi stack init]({{< ref "/docs/reference/cli/pulumi_stack_init" >}}), you can optionally
-specify a `--secrets-provider` flag. That will determine the where and how of how secrets get managed on your stack.
+specify a `--secrets-provider` flag. That will determine where and how secrets get managed on your stack.
 
 For example, to use your own KMS key for encrypting data, you can pass the secrets provider 
 `"awskms://alias/ExampleAlias?region=us-east-1"`. The Pulumi command-line will work and behave the same. Except that
@@ -327,7 +323,7 @@ For more information on custom secret providers, see
 
 ## Wrapping Up
 
-Securely managing any sensitive data is challenging to get right. Especially if there are many moving parts, such as when
+Securely managing any sensitive data is challenging to get right, especially if there are many moving parts, such as when
 coordinating access between your AWS account, CI/CD provider, and your Pulumi stack.
 
 In this blog series, we walked through the best practices in creating, securing, and managing access to an AWS account using
