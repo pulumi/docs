@@ -27,6 +27,16 @@ const testMapper = new keycloak.AttributeImporterIdentityProviderMapper("test_ma
     userAttribute: "lastName",
 });
 ```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+test_mapper = keycloak.AttributeImporterIdentityProviderMapper("testMapper",
+    attribute_name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname",
+    identity_provider_alias="idp_alias",
+    realm="my-realm",
+    user_attribute="lastName")
+```
 
 ### Argument Reference
 

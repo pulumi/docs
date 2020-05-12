@@ -15,6 +15,25 @@ meta_desc: "Explore the GetRealm function of the Keycloak package, including exa
 This data source can be used to fetch properties of a Keycloak realm for
 usage with other resources.
 
+### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = keycloak.getRealm({
+    realm: "my-realm",
+});
+const group = new keycloak.Role("group", {realmId: data.keycloak_realm.id});
+```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+realm = keycloak.get_realm(realm="my-realm")
+group = keycloak.Role("group", realm_id=data["keycloak..Realm"]["id"])
+```
+
 ### Argument Reference
 
 The following arguments are supported:

@@ -43,6 +43,24 @@ const userRealmRoleMapper = new keycloak.openid.UserRealmRoleProtocolMapper("use
     realmId: realm.id,
 });
 ```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+realm = keycloak.Realm("realm",
+    enabled=True,
+    realm="my-realm")
+openid_client = keycloak.openid.Client("openidClient",
+    access_type="CONFIDENTIAL",
+    client_id="test-client",
+    enabled=True,
+    realm_id=realm.id,
+    valid_redirect_uris=["http://localhost:8080/openid-callback"])
+user_realm_role_mapper = keycloak.openid.UserRealmRoleProtocolMapper("userRealmRoleMapper",
+    claim_name="foo",
+    client_id=openid_client.id,
+    realm_id=realm.id)
+```
 
 ### Example Usage (Client Scope)
 
@@ -62,6 +80,19 @@ const userRealmRoleMapper = new keycloak.openid.UserRealmRoleProtocolMapper("use
     clientScopeId: clientScope.id,
     realmId: realm.id,
 });
+```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+realm = keycloak.Realm("realm",
+    enabled=True,
+    realm="my-realm")
+client_scope = keycloak.openid.ClientScope("clientScope", realm_id=realm.id)
+user_realm_role_mapper = keycloak.openid.UserRealmRoleProtocolMapper("userRealmRoleMapper",
+    claim_name="foo",
+    client_scope_id=client_scope.id,
+    realm_id=realm.id)
 ```
 
 ### Argument Reference

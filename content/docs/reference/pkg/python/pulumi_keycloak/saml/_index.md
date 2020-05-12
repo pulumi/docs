@@ -19,6 +19,22 @@ notitle: true
 <p>Clients are entities that can use Keycloak for user authentication. Typically,
 clients are applications that redirect users to Keycloak for authentication
 in order to take advantage of Keycloak’s user sessions for SSO.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">)</span>
+<span class="n">saml_client</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">saml</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s2">&quot;samlClient&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;test-saml-client&quot;</span><span class="p">,</span>
+    <span class="n">include_authn_statement</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">sign_assertions</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">sign_documents</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">signing_certificate</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;saml-cert.pem&quot;</span><span class="p">),</span>
+    <span class="n">signing_private_key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;saml-key.pem&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">realm_id</span></code> - (Required) The realm this client is attached to.</p></li>
@@ -126,6 +142,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.saml.</code><code class="sig-name descname">IdentityProvider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_read_token_role_on_create</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authenticate_by_default</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backchannel_supported</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">first_broker_login_flow_alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_authn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hide_on_login_page</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">link_only</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_id_policy_format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">post_binding_authn_request</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">post_binding_logout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">post_binding_response</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">post_broker_login_flow_alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">signature_algorithm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">signing_certificate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">single_logout_service_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">single_sign_on_service_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">store_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">trust_email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">validate_signature</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">want_assertions_encrypted</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">want_assertions_signed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">xml_sign_key_info_key_name_transformer</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows to create and manage SAML Identity Providers within Keycloak.</p>
 <p>SAML (Security Assertion Markup Language) identity providers allows to authenticate through a third-party system, using SAML standard.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm_identity_provider</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">saml</span><span class="o">.</span><span class="n">IdentityProvider</span><span class="p">(</span><span class="s2">&quot;realmIdentityProvider&quot;</span><span class="p">,</span>
+    <span class="n">alias</span><span class="o">=</span><span class="s2">&quot;my-idp&quot;</span><span class="p">,</span>
+    <span class="n">backchannel_supported</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">force_authn</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">post_binding_authn_request</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">post_binding_logout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">post_binding_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">,</span>
+    <span class="n">single_logout_service_url</span><span class="o">=</span><span class="s2">&quot;https://domain.com/adfs/ls/?wa=wsignout1.0&quot;</span><span class="p">,</span>
+    <span class="n">single_sign_on_service_url</span><span class="o">=</span><span class="s2">&quot;https://domain.com/adfs/ls/&quot;</span><span class="p">,</span>
+    <span class="n">store_token</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">trust_email</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">realm</span></code> - (Required) The name of the realm. This is unique across Keycloak.</p></li>
@@ -458,6 +491,23 @@ SAML clients within Keycloak.</p>
 for a user within Keycloak to an attribute in a SAML assertion. Protocol mappers
 can be defined for a single client, or they can be defined for a client scope which
 can be shared between multiple different clients.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">)</span>
+<span class="n">saml_client</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">saml</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s2">&quot;samlClient&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;test-saml-client&quot;</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">keycloak_realm</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">saml_user_attribute_mapper</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">saml</span><span class="o">.</span><span class="n">UserAttributeProtocolMapper</span><span class="p">(</span><span class="s2">&quot;samlUserAttributeMapper&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">saml_client</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">keycloak_realm</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">saml_attribute_name</span><span class="o">=</span><span class="s2">&quot;displayName&quot;</span><span class="p">,</span>
+    <span class="n">saml_attribute_name_format</span><span class="o">=</span><span class="s2">&quot;Unspecified&quot;</span><span class="p">,</span>
+    <span class="n">user_attribute</span><span class="o">=</span><span class="s2">&quot;displayName&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">realm_id</span></code> - (Required) The realm this protocol mapper exists within.</p></li>
@@ -540,6 +590,23 @@ SAML clients within Keycloak.</p>
 user model to an attribute in a SAML assertion. Protocol mappers
 can be defined for a single client, or they can be defined for a client scope which
 can be shared between multiple different clients.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">)</span>
+<span class="n">saml_client</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">saml</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s2">&quot;samlClient&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;test-saml-client&quot;</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">keycloak_realm</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">saml_user_property_mapper</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">saml</span><span class="o">.</span><span class="n">UserPropertyProtocolMapper</span><span class="p">(</span><span class="s2">&quot;samlUserPropertyMapper&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">saml_client</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">keycloak_realm</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">saml_attribute_name</span><span class="o">=</span><span class="s2">&quot;email&quot;</span><span class="p">,</span>
+    <span class="n">saml_attribute_name_format</span><span class="o">=</span><span class="s2">&quot;Unspecified&quot;</span><span class="p">,</span>
+    <span class="n">user_property</span><span class="o">=</span><span class="s2">&quot;email&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">realm_id</span></code> - (Required) The realm this protocol mapper exists within.</p></li>

@@ -49,6 +49,32 @@ const userWithInitialPassword = new keycloak.User("user_with_initial_password", 
     username: "alice",
 });
 ```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+realm = keycloak.Realm("realm",
+    enabled=True,
+    realm="my-realm")
+user = keycloak.User("user",
+    email="bob@domain.com",
+    enabled=True,
+    first_name="Bob",
+    last_name="Bobson",
+    realm_id=realm.id,
+    username="bob")
+user_with_initial_password = keycloak.User("userWithInitialPassword",
+    email="alice@domain.com",
+    enabled=True,
+    first_name="Alice",
+    initial_password={
+        "temporary": True,
+        "value": "some password",
+    },
+    last_name="Aliceberg",
+    realm_id=realm.id,
+    username="alice")
+```
 
 ### Argument Reference
 

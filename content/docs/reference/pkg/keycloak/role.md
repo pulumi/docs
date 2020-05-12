@@ -32,6 +32,17 @@ const realmRole = new keycloak.Role("realm_role", {
     realmId: realm.id,
 });
 ```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+realm = keycloak.Realm("realm",
+    enabled=True,
+    realm="my-realm")
+realm_role = keycloak.Role("realmRole",
+    description="My Realm Role",
+    realm_id=realm.id)
+```
 
 ### Example Usage (Client role)
 
@@ -54,6 +65,23 @@ const clientRole = new keycloak.Role("client_role", {
     description: "My Client Role",
     realmId: realm.id,
 });
+```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+realm = keycloak.Realm("realm",
+    enabled=True,
+    realm="my-realm")
+client = keycloak.openid.Client("client",
+    access_type="BEARER-ONLY",
+    client_id="client",
+    enabled=True,
+    realm_id=realm.id)
+client_role = keycloak.Role("clientRole",
+    client_id=keycloak_client["client"]["id"],
+    description="My Client Role",
+    realm_id=realm.id)
 ```
 
 ### Example Usage (Composite role)
@@ -99,6 +127,36 @@ const adminRole = new keycloak.Role("admin_role", {
     ],
     realmId: realm.id,
 });
+```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+realm = keycloak.Realm("realm",
+    enabled=True,
+    realm="my-realm")
+create_role = keycloak.Role("createRole", realm_id=realm.id)
+read_role = keycloak.Role("readRole", realm_id=realm.id)
+update_role = keycloak.Role("updateRole", realm_id=realm.id)
+delete_role = keycloak.Role("deleteRole", realm_id=realm.id)
+client = keycloak.openid.Client("client",
+    access_type="BEARER-ONLY",
+    client_id="client",
+    enabled=True,
+    realm_id=realm.id)
+client_role = keycloak.Role("clientRole",
+    client_id=keycloak_client["client"]["id"],
+    description="My Client Role",
+    realm_id=realm.id)
+admin_role = keycloak.Role("adminRole",
+    composite_roles=[
+        "{keycloak_role.create_role.id}",
+        "{keycloak_role.read_role.id}",
+        "{keycloak_role.update_role.id}",
+        "{keycloak_role.delete_role.id}",
+        "{keycloak_role.client_role.id}",
+    ],
+    realm_id=realm.id)
 ```
 
 ### Argument Reference

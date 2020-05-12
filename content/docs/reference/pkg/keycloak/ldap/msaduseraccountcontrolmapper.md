@@ -50,6 +50,31 @@ const msadUserAccountControlMapper = new keycloak.ldap.MsadUserAccountControlMap
     realmId: realm.id,
 });
 ```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+realm = keycloak.Realm("realm",
+    enabled=True,
+    realm="test")
+ldap_user_federation = keycloak.ldap.UserFederation("ldapUserFederation",
+    bind_credential="admin",
+    bind_dn="cn=admin,dc=example,dc=org",
+    connection_url="ldap://my-ad-server",
+    rdn_ldap_attribute="cn",
+    realm_id=realm.id,
+    user_object_classes=[
+        "person",
+        "organizationalPerson",
+        "user",
+    ],
+    username_ldap_attribute="cn",
+    users_dn="dc=example,dc=org",
+    uuid_ldap_attribute="objectGUID")
+msad_user_account_control_mapper = keycloak.ldap.MsadUserAccountControlMapper("msadUserAccountControlMapper",
+    ldap_user_federation_id=ldap_user_federation.id,
+    realm_id=realm.id)
+```
 
 ### Argument Reference
 

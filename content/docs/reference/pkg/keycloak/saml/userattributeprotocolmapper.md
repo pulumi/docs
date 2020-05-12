@@ -42,6 +42,23 @@ const samlUserAttributeMapper = new keycloak.saml.UserAttributeProtocolMapper("s
     userAttribute: "displayName",
 });
 ```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+realm = keycloak.Realm("realm",
+    enabled=True,
+    realm="my-realm")
+saml_client = keycloak.saml.Client("samlClient",
+    client_id="test-saml-client",
+    realm_id=keycloak_realm["test"]["id"])
+saml_user_attribute_mapper = keycloak.saml.UserAttributeProtocolMapper("samlUserAttributeMapper",
+    client_id=saml_client.id,
+    realm_id=keycloak_realm["test"]["id"],
+    saml_attribute_name="displayName",
+    saml_attribute_name_format="Unspecified",
+    user_attribute="displayName")
+```
 
 ### Argument Reference
 

@@ -14,6 +14,62 @@ meta_desc: "Explore the HardcodedRoleMapper resource of the ldap module, includi
 
 This mapper will grant a specified Keycloak role to each Keycloak user linked with LDAP.
 
+### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = new keycloak.Realm("realm", {
+    realm: "test",
+    enabled: true,
+});
+const ldapUserFederation = new keycloak.ldap.UserFederation("ldapUserFederation", {
+    realmId: realm.id,
+    usernameLdapAttribute: "cn",
+    rdnLdapAttribute: "cn",
+    uuidLdapAttribute: "entryDN",
+    userObjectClasses: [
+        "simpleSecurityObject",
+        "organizationalRole",
+    ],
+    connectionUrl: "ldap://openldap",
+    usersDn: "dc=example,dc=org",
+    bindDn: "cn=admin,dc=example,dc=org",
+    bindCredential: "admin",
+});
+const assignAdminRoleToAllUsers = new keycloak.ldap.HardcodedRoleMapper("assignAdminRoleToAllUsers", {
+    realmId: realm.id,
+    ldapUserFederationId: ldapUserFederation.id,
+    role: "admin",
+});
+```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+realm = keycloak.Realm("realm",
+    realm="test",
+    enabled=True)
+ldap_user_federation = keycloak.ldap.UserFederation("ldapUserFederation",
+    realm_id=realm.id,
+    username_ldap_attribute="cn",
+    rdn_ldap_attribute="cn",
+    uuid_ldap_attribute="entryDN",
+    user_object_classes=[
+        "simpleSecurityObject",
+        "organizationalRole",
+    ],
+    connection_url="ldap://openldap",
+    users_dn="dc=example,dc=org",
+    bind_dn="cn=admin,dc=example,dc=org",
+    bind_credential="admin")
+assign_admin_role_to_all_users = keycloak.ldap.HardcodedRoleMapper("assignAdminRoleToAllUsers",
+    realm_id=realm.id,
+    ldap_user_federation_id=ldap_user_federation.id,
+    role="admin")
+```
+
 ### Argument Reference
 
 The following arguments are supported:

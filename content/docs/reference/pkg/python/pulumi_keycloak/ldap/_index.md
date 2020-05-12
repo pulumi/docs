@@ -14,6 +14,31 @@ notitle: true
 via LDAP.</p>
 <p>The LDAP full name mapper can map a user’s full name from an LDAP attribute
 to the first and last name attributes of a Keycloak user.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
+<span class="n">ldap_user_federation</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">ldap</span><span class="o">.</span><span class="n">UserFederation</span><span class="p">(</span><span class="s2">&quot;ldapUserFederation&quot;</span><span class="p">,</span>
+    <span class="n">bind_credential</span><span class="o">=</span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+    <span class="n">bind_dn</span><span class="o">=</span><span class="s2">&quot;cn=admin,dc=example,dc=org&quot;</span><span class="p">,</span>
+    <span class="n">connection_url</span><span class="o">=</span><span class="s2">&quot;ldap://openldap&quot;</span><span class="p">,</span>
+    <span class="n">rdn_ldap_attribute</span><span class="o">=</span><span class="s2">&quot;cn&quot;</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">user_object_classes</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;simpleSecurityObject&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;organizationalRole&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">username_ldap_attribute</span><span class="o">=</span><span class="s2">&quot;cn&quot;</span><span class="p">,</span>
+    <span class="n">users_dn</span><span class="o">=</span><span class="s2">&quot;dc=example,dc=org&quot;</span><span class="p">,</span>
+    <span class="n">uuid_ldap_attribute</span><span class="o">=</span><span class="s2">&quot;entryDN&quot;</span><span class="p">)</span>
+<span class="n">ldap_full_name_mapper</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">ldap</span><span class="o">.</span><span class="n">FullNameMapper</span><span class="p">(</span><span class="s2">&quot;ldapFullNameMapper&quot;</span><span class="p">,</span>
+    <span class="n">ldap_full_name_attribute</span><span class="o">=</span><span class="s2">&quot;cn&quot;</span><span class="p">,</span>
+    <span class="n">ldap_user_federation_id</span><span class="o">=</span><span class="n">ldap_user_federation</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">realm_id</span></code> - (Required) The realm that this LDAP mapper will exist in.</p></li>
@@ -117,6 +142,37 @@ via LDAP.</p>
 <p>The LDAP group mapper can be used to map an LDAP user’s groups from some DN
 to Keycloak groups. This group mapper will also create the groups within Keycloak
 if they do not already exist.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
+<span class="n">ldap_user_federation</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">ldap</span><span class="o">.</span><span class="n">UserFederation</span><span class="p">(</span><span class="s2">&quot;ldapUserFederation&quot;</span><span class="p">,</span>
+    <span class="n">bind_credential</span><span class="o">=</span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+    <span class="n">bind_dn</span><span class="o">=</span><span class="s2">&quot;cn=admin,dc=example,dc=org&quot;</span><span class="p">,</span>
+    <span class="n">connection_url</span><span class="o">=</span><span class="s2">&quot;ldap://openldap&quot;</span><span class="p">,</span>
+    <span class="n">rdn_ldap_attribute</span><span class="o">=</span><span class="s2">&quot;cn&quot;</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">user_object_classes</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;simpleSecurityObject&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;organizationalRole&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">username_ldap_attribute</span><span class="o">=</span><span class="s2">&quot;cn&quot;</span><span class="p">,</span>
+    <span class="n">users_dn</span><span class="o">=</span><span class="s2">&quot;dc=example,dc=org&quot;</span><span class="p">,</span>
+    <span class="n">uuid_ldap_attribute</span><span class="o">=</span><span class="s2">&quot;entryDN&quot;</span><span class="p">)</span>
+<span class="n">ldap_group_mapper</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">ldap</span><span class="o">.</span><span class="n">GroupMapper</span><span class="p">(</span><span class="s2">&quot;ldapGroupMapper&quot;</span><span class="p">,</span>
+    <span class="n">group_name_ldap_attribute</span><span class="o">=</span><span class="s2">&quot;cn&quot;</span><span class="p">,</span>
+    <span class="n">group_object_classes</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;groupOfNames&quot;</span><span class="p">],</span>
+    <span class="n">ldap_groups_dn</span><span class="o">=</span><span class="s2">&quot;dc=example,dc=org&quot;</span><span class="p">,</span>
+    <span class="n">ldap_user_federation_id</span><span class="o">=</span><span class="n">ldap_user_federation</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">memberof_ldap_attribute</span><span class="o">=</span><span class="s2">&quot;memberOf&quot;</span><span class="p">,</span>
+    <span class="n">membership_attribute_type</span><span class="o">=</span><span class="s2">&quot;DN&quot;</span><span class="p">,</span>
+    <span class="n">membership_ldap_attribute</span><span class="o">=</span><span class="s2">&quot;member&quot;</span><span class="p">,</span>
+    <span class="n">membership_user_ldap_attribute</span><span class="o">=</span><span class="s2">&quot;cn&quot;</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">realm_id</span></code> - (Required) The realm that this LDAP mapper will exist in.</p></li>
@@ -319,6 +375,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_keycloak.ldap.HardcodedRoleMapper">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.ldap.</code><code class="sig-name descname">HardcodedRoleMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_user_federation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedRoleMapper" title="Permalink to this definition">¶</a></dt>
 <dd><p>This mapper will grant a specified Keycloak role to each Keycloak user linked with LDAP.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ldap_user_federation</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">ldap</span><span class="o">.</span><span class="n">UserFederation</span><span class="p">(</span><span class="s2">&quot;ldapUserFederation&quot;</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">username_ldap_attribute</span><span class="o">=</span><span class="s2">&quot;cn&quot;</span><span class="p">,</span>
+    <span class="n">rdn_ldap_attribute</span><span class="o">=</span><span class="s2">&quot;cn&quot;</span><span class="p">,</span>
+    <span class="n">uuid_ldap_attribute</span><span class="o">=</span><span class="s2">&quot;entryDN&quot;</span><span class="p">,</span>
+    <span class="n">user_object_classes</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;simpleSecurityObject&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;organizationalRole&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">connection_url</span><span class="o">=</span><span class="s2">&quot;ldap://openldap&quot;</span><span class="p">,</span>
+    <span class="n">users_dn</span><span class="o">=</span><span class="s2">&quot;dc=example,dc=org&quot;</span><span class="p">,</span>
+    <span class="n">bind_dn</span><span class="o">=</span><span class="s2">&quot;cn=admin,dc=example,dc=org&quot;</span><span class="p">,</span>
+    <span class="n">bind_credential</span><span class="o">=</span><span class="s2">&quot;admin&quot;</span><span class="p">)</span>
+<span class="n">assign_admin_role_to_all_users</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">ldap</span><span class="o">.</span><span class="n">HardcodedRoleMapper</span><span class="p">(</span><span class="s2">&quot;assignAdminRoleToAllUsers&quot;</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">ldap_user_federation_id</span><span class="o">=</span><span class="n">ldap_user_federation</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;admin&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">realm_id</span></code> - (Required) The realm that this LDAP mapper will exist in.</p></li>
@@ -513,6 +594,31 @@ users federated via LDAP.</p>
 to LDAP user federation providers that are pulling from AD, and it can propagate
 AD user state to Keycloak in order to enforce settings like expired passwords
 or disabled accounts.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
+<span class="n">ldap_user_federation</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">ldap</span><span class="o">.</span><span class="n">UserFederation</span><span class="p">(</span><span class="s2">&quot;ldapUserFederation&quot;</span><span class="p">,</span>
+    <span class="n">bind_credential</span><span class="o">=</span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+    <span class="n">bind_dn</span><span class="o">=</span><span class="s2">&quot;cn=admin,dc=example,dc=org&quot;</span><span class="p">,</span>
+    <span class="n">connection_url</span><span class="o">=</span><span class="s2">&quot;ldap://my-ad-server&quot;</span><span class="p">,</span>
+    <span class="n">rdn_ldap_attribute</span><span class="o">=</span><span class="s2">&quot;cn&quot;</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">user_object_classes</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;person&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;organizationalPerson&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;user&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">username_ldap_attribute</span><span class="o">=</span><span class="s2">&quot;cn&quot;</span><span class="p">,</span>
+    <span class="n">users_dn</span><span class="o">=</span><span class="s2">&quot;dc=example,dc=org&quot;</span><span class="p">,</span>
+    <span class="n">uuid_ldap_attribute</span><span class="o">=</span><span class="s2">&quot;objectGUID&quot;</span><span class="p">)</span>
+<span class="n">msad_user_account_control_mapper</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">ldap</span><span class="o">.</span><span class="n">MsadUserAccountControlMapper</span><span class="p">(</span><span class="s2">&quot;msadUserAccountControlMapper&quot;</span><span class="p">,</span>
+    <span class="n">ldap_user_federation_id</span><span class="o">=</span><span class="n">ldap_user_federation</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">realm_id</span></code> - (Required) The realm that this LDAP mapper will exist in.</p></li>
@@ -697,6 +803,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 federated via LDAP.</p>
 <p>The LDAP user attribute mapper can be used to map a single LDAP attribute
 to an attribute on the Keycloak user model.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
+<span class="n">ldap_user_federation</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">ldap</span><span class="o">.</span><span class="n">UserFederation</span><span class="p">(</span><span class="s2">&quot;ldapUserFederation&quot;</span><span class="p">,</span>
+    <span class="n">bind_credential</span><span class="o">=</span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+    <span class="n">bind_dn</span><span class="o">=</span><span class="s2">&quot;cn=admin,dc=example,dc=org&quot;</span><span class="p">,</span>
+    <span class="n">connection_url</span><span class="o">=</span><span class="s2">&quot;ldap://openldap&quot;</span><span class="p">,</span>
+    <span class="n">rdn_ldap_attribute</span><span class="o">=</span><span class="s2">&quot;cn&quot;</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">user_object_classes</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;simpleSecurityObject&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;organizationalRole&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">username_ldap_attribute</span><span class="o">=</span><span class="s2">&quot;cn&quot;</span><span class="p">,</span>
+    <span class="n">users_dn</span><span class="o">=</span><span class="s2">&quot;dc=example,dc=org&quot;</span><span class="p">,</span>
+    <span class="n">uuid_ldap_attribute</span><span class="o">=</span><span class="s2">&quot;entryDN&quot;</span><span class="p">)</span>
+<span class="n">ldap_user_attribute_mapper</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">ldap</span><span class="o">.</span><span class="n">UserAttributeMapper</span><span class="p">(</span><span class="s2">&quot;ldapUserAttributeMapper&quot;</span><span class="p">,</span>
+    <span class="n">ldap_attribute</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">ldap_user_federation_id</span><span class="o">=</span><span class="n">ldap_user_federation</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">user_model_attribute</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">realm_id</span></code> - (Required) The realm that this LDAP mapper will exist in.</p></li>
@@ -842,6 +974,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 from a directory system such as LDAP or Active Directory. Federated users
 will exist within the realm and will be able to log in to clients. Federated
 users can have their attributes defined using mappers.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
+
+<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
+<span class="n">ldap_user_federation</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">ldap</span><span class="o">.</span><span class="n">UserFederation</span><span class="p">(</span><span class="s2">&quot;ldapUserFederation&quot;</span><span class="p">,</span>
+    <span class="n">bind_credential</span><span class="o">=</span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+    <span class="n">bind_dn</span><span class="o">=</span><span class="s2">&quot;cn=admin,dc=example,dc=org&quot;</span><span class="p">,</span>
+    <span class="n">connection_timeout</span><span class="o">=</span><span class="s2">&quot;5s&quot;</span><span class="p">,</span>
+    <span class="n">connection_url</span><span class="o">=</span><span class="s2">&quot;ldap://openldap&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">rdn_ldap_attribute</span><span class="o">=</span><span class="s2">&quot;cn&quot;</span><span class="p">,</span>
+    <span class="n">read_timeout</span><span class="o">=</span><span class="s2">&quot;10s&quot;</span><span class="p">,</span>
+    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">user_object_classes</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;simpleSecurityObject&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;organizationalRole&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">username_ldap_attribute</span><span class="o">=</span><span class="s2">&quot;cn&quot;</span><span class="p">,</span>
+    <span class="n">users_dn</span><span class="o">=</span><span class="s2">&quot;dc=example,dc=org&quot;</span><span class="p">,</span>
+    <span class="n">uuid_ldap_attribute</span><span class="o">=</span><span class="s2">&quot;entryDN&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">realm_id</span></code> - (Required) The realm that this provider will provide user federation for.</p></li>

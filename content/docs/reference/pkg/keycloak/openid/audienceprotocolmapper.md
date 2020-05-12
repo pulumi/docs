@@ -42,6 +42,24 @@ const audienceMapper = new keycloak.openid.AudienceProtocolMapper("audience_mapp
     realmId: realm.id,
 });
 ```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+realm = keycloak.Realm("realm",
+    enabled=True,
+    realm="my-realm")
+openid_client = keycloak.openid.Client("openidClient",
+    access_type="CONFIDENTIAL",
+    client_id="test-client",
+    enabled=True,
+    realm_id=realm.id,
+    valid_redirect_uris=["http://localhost:8080/openid-callback"])
+audience_mapper = keycloak.openid.AudienceProtocolMapper("audienceMapper",
+    client_id=openid_client.id,
+    included_custom_audience="foo",
+    realm_id=realm.id)
+```
 
 ### Example Usage (Client Scope)
 
@@ -61,6 +79,19 @@ const audienceMapper = new keycloak.openid.AudienceProtocolMapper("audience_mapp
     includedCustomAudience: "foo",
     realmId: realm.id,
 });
+```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+realm = keycloak.Realm("realm",
+    enabled=True,
+    realm="my-realm")
+client_scope = keycloak.openid.ClientScope("clientScope", realm_id=realm.id)
+audience_mapper = keycloak.openid.AudienceProtocolMapper("audienceMapper",
+    client_scope_id=client_scope.id,
+    included_custom_audience="foo",
+    realm_id=realm.id)
 ```
 
 ### Argument Reference

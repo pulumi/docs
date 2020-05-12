@@ -36,6 +36,23 @@ const realmIdentityProvider = new keycloak.saml.IdentityProvider("realm_identity
     trustEmail: true,
 });
 ```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+realm_identity_provider = keycloak.saml.IdentityProvider("realmIdentityProvider",
+    alias="my-idp",
+    backchannel_supported=True,
+    force_authn=True,
+    post_binding_authn_request=True,
+    post_binding_logout=True,
+    post_binding_response=True,
+    realm="my-realm",
+    single_logout_service_url="https://domain.com/adfs/ls/?wa=wsignout1.0",
+    single_sign_on_service_url="https://domain.com/adfs/ls/",
+    store_token=False,
+    trust_email=True)
+```
 
 ### Argument Reference
 

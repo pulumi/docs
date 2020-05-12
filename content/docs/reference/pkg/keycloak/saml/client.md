@@ -39,6 +39,22 @@ const samlClient = new keycloak.saml.Client("saml_client", {
     signingPrivateKey: fs.readFileSync("saml-key.pem", "utf-8"),
 });
 ```
+```python
+import pulumi
+import pulumi_keycloak as keycloak
+
+realm = keycloak.Realm("realm",
+    enabled=True,
+    realm="my-realm")
+saml_client = keycloak.saml.Client("samlClient",
+    client_id="test-saml-client",
+    include_authn_statement=True,
+    realm_id=realm.id,
+    sign_assertions=True,
+    sign_documents=False,
+    signing_certificate=(lambda path: open(path).read())("saml-cert.pem"),
+    signing_private_key=(lambda path: open(path).read())("saml-key.pem"))
+```
 
 ### Argument Reference
 
