@@ -2,7 +2,7 @@
 title: "Infrastructure Testing Just Got Better with Pulumi"
 date: 2020-05-13
 meta_desc: "Pulumi accelerates infrastructure testing 6000x with mocking and unit tests."
-meta_image: meta.png
+meta_image: dustin-ferris.png
 authors:
     - dustin-farris
 tags:
@@ -10,9 +10,7 @@ tags:
     - unit testing
 ---
 
-_Guest Article_
-
-Dustin Farris is an experienced cloud engineering consultant.  He’s currently building a new data lake for a large public university using Pulumi. The project handles sensitive student and research data and as a result, his team must meet stringent QA and security requirements.  Dustin shows how resource mocking in Pulumi makes testing and verification faster than ever before.
+_Guest Article:_ Dustin Farris is an experienced cloud engineering consultant.  He’s currently building a new data lake for a large public university using Pulumi. The project handles sensitive student and research data and as a result, his team must meet stringent QA and security requirements.  Dustin shows how resource mocking in Pulumi makes testing and verification faster than ever before.
 
 <!--more-->
 
@@ -120,4 +118,4 @@ After working with Pulumi to build-out our data lake and implementing robust, en
 
 ## Conclusion
 
-Testing is just one of the superpowers that Pulumi 2.0 delivers. For more information, see our [Testing User Guide]({{< relref "/docs/guides/testing" > }}) and [worked examples](https://github.com/pulumi/examples#testing) on GitHub in the language of your choice.
+Testing is just one of the superpowers that Pulumi 2.0 delivers. For more information, see our [Testing User Guide]({{< relref "/docs/guides/testing" >}}) and [worked examples](https://github.com/pulumi/examples#testing) on GitHub in the language of your choice.
