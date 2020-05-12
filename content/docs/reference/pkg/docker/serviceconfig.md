@@ -25,6 +25,13 @@ const fooConfig = new docker.ServiceConfig("foo_config", {
     data: "ewogICJzZXJIfQo=",
 });
 ```
+```python
+import pulumi
+import pulumi_docker as docker
+
+# Creates a config
+foo_config = docker.ServiceConfig("fooConfig", data="ewogICJzZXJIfQo=")
+```
 
 
 

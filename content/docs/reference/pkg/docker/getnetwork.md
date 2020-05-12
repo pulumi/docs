@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_docker as docker
+
+main = docker.get_network(name="main")
+```
 {{% /example %}}
 
 {{% example typescript %}}

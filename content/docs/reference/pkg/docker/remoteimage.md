@@ -32,7 +32,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_docker as docker
+
+# Find the latest Ubuntu precise image.
+ubuntu = docker.RemoteImage("ubuntu", name="ubuntu:precise")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -57,7 +63,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_docker as docker
+
+ubuntu_registry_image = docker.get_registry_image(name="ubuntu:precise")
+ubuntu_remote_image = docker.RemoteImage("ubuntuRemoteImage",
+    name=ubuntu_registry_image.name,
+    pull_triggers=[ubuntu_registry_image.sha256_digest])
+```
 {{% /example %}}
 
 {{% example typescript %}}
