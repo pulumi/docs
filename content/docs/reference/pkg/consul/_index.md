@@ -66,3 +66,21 @@ A Pulumi package for creating and managing consul resources.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.html" title="Pulumi.Consul">Pulumi.Consul</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#" title="consul">consul</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/consul/#" title="@pulumi/consul">@pulumi/consul</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_consul" title="pulumi_consul">pulumi_consul</a></dd>
+
+</dl>
+
