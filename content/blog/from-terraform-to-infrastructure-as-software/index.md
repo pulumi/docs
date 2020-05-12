@@ -236,7 +236,7 @@ The first step is to create a Pulumi project.
 
 ```
 $ pulumi new aws-typescript
-    -n webservers -d "Pulumi Web Servers" -g --dir pulumi
+    -n webservers -d "Pulumi Web Servers" -g -f
 ```
 
 Run this from wherever your Terraform program resides. This will
@@ -244,10 +244,10 @@ initialize and scaffold a minimal Pulumi TypeScript program targeting
 AWS in the pulumi subdirectory.
 
 We'll then [install `tf2pulumi`](https://github.com/pulumi/tf2pulumi#building-and-installation),
-and run it, to generate the Pulumi TypeScript program:
+and run it, to generate the Pulumi TypeScript program in `index.ts`:
 
 ```
-$ tf2pulumi >pulumi/index.ts
+$ tf2pulumi
 ```
 
 The full program created by this command can be
