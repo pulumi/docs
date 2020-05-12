@@ -47,7 +47,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_linode as linode
+
+default = linode.get_instance_type(id="g6-standard-2")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -51,7 +51,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_linode as linode
+
+foo = linode.get_volume(id="1234567")
+```
 {{% /example %}}
 
 {{% example typescript %}}

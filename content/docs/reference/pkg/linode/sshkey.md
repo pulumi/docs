@@ -13,52 +13,14 @@ meta_desc: "Explore the SshKey resource of the Linode package, including example
 Provides a Linode SSH Key resource.  This can be used to create, modify, and delete Linodes SSH Keys.  Managed SSH Keys allow instances to be created with a list of Linode usernames, whose SSH keys will be automatically applied to the root account's `~/.ssh/authorized_keys` file.
 For more information, see the [Linode APIv4 docs](https://developers.linode.com/api/v4#operation/getSSHKeys).
 
-
+{{% examples %}}
+{{% /examples %}}
 ## Attributes
 
 This resource exports the following attributes:
 
 * `created` - The date this SSH Key was created.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as fs from "fs";
-import * as linode from "@pulumi/linode";
-
-const fooSshKey = new linode.SshKey("foo", {
-    label: "foo",
-    sshKey: fs.readFileSync("~/.ssh/id_rsa.pub", "utf-8").replace(/(\n|\r\n)*$/, ""),
-});
-const fooInstance = new linode.Instance("foo", {
-    authorizedKeys: [fooSshKey.sshKey],
-    image: "linode/ubuntu18.04",
-    label: "foo",
-    region: "us-east",
-    rootPass: "...",
-    type: "g6-nanode-1",
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a SshKey Resource {#create}

@@ -32,7 +32,20 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_linode as linode
+
+foobar_domain = linode.Domain("foobarDomain",
+    domain="foobar.example",
+    soa_email="example@foobar.example",
+    type="master")
+foobar_domain_record = linode.DomainRecord("foobarDomainRecord",
+    domain_id=foobar_domain.id,
+    name="www",
+    record_type="CNAME",
+    target="foobar.example")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -59,7 +59,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_linode as linode
+
+foo = linode.get_domain(id="1234567")
+bar = linode.get_domain(domain="bar.example.com")
+```
 {{% /example %}}
 
 {{% example typescript %}}

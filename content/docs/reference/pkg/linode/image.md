@@ -51,7 +51,23 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_linode as linode
+
+foo = linode.Instance("foo",
+    region="us-central",
+    type="g6-nanode-1")
+bar = linode.Image("bar",
+    description="Image taken from foo",
+    disk_id=foo.disks[0]["id"],
+    label="foo-sda-image",
+    linode_id=foo.id)
+bar_based = linode.Instance("barBased",
+    image=bar.id,
+    region="eu-west",
+    type=foo.type)
+```
 {{% /example %}}
 
 {{% example typescript %}}

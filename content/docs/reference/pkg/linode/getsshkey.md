@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_linode as linode
+
+foo = linode.get_ssh_key(label="foo")
+```
 {{% /example %}}
 
 {{% example typescript %}}

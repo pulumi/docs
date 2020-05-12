@@ -39,7 +39,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_linode as linode
+
+primary = linode.get_object_storage_cluster(id="us-east-1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -12,9 +12,49 @@ meta_desc: "Explore the ObjectStorageBucket resource of the Linode package, incl
 
 Provides a Linode Object Storage Bucket resource. This can be used to create, modify, and delete Linodes Object Storage Buckets.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_linode as linode
+
+primary = linode.get_object_storage_cluster(id="us-east-1")
+foobar = linode.ObjectStorageBucket("foobar",
+    cluster=primary.id,
+    label="%s")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const primary = linode.getObjectStorageCluster({
+    id: "us-east-1",
+});
+const foobar = new linode.ObjectStorageBucket("foobar", {
+    cluster: primary.then(primary => primary.id),
+    label: `%s`,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ObjectStorageBucket Resource {#create}

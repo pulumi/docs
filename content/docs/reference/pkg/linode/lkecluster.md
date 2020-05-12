@@ -28,7 +28,20 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_linode as linode
+
+my_cluster = linode.LkeCluster("my-cluster",
+    k8s_version="1.17",
+    label="my-cluster",
+    pools=[{
+        "count": 3,
+        "type": "g6-standard-2",
+    }],
+    region="us-central",
+    tags=["prod"])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -39,7 +52,7 @@ import * as linode from "@pulumi/linode";
 const my_cluster = new linode.LkeCluster("my-cluster", {
     k8sVersion: "1.17",
     label: "my-cluster",
-    pool: [{
+    pools: [{
         count: 3,
         type: "g6-standard-2",
     }],

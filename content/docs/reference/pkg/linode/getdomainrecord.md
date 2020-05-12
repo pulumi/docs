@@ -55,7 +55,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_linode as linode
+
+my_record = linode.get_domain_record(domain_id="3150401",
+    id="14950401")
+my_www_record = linode.get_domain_record(domain_id="3150401",
+    name="www")
+```
 {{% /example %}}
 
 {{% example typescript %}}

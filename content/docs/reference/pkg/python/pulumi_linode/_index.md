@@ -247,6 +247,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">DomainRecord</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">record_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl_sec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">weight</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.DomainRecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Linode Domain Record resource.  This can be used to create, modify, and delete Linodes Domain Records.
 For more information, see <a class="reference external" href="https://www.linode.com/docs/platform/manager/dns-manager/">DNS Manager</a> and the <a class="reference external" href="https://developers.linode.com/api/v4#operation/createDomainRecord">Linode APIv4 docs</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">foobar_domain</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">Domain</span><span class="p">(</span><span class="s2">&quot;foobarDomain&quot;</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;foobar.example&quot;</span><span class="p">,</span>
+    <span class="n">soa_email</span><span class="o">=</span><span class="s2">&quot;example@foobar.example&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;master&quot;</span><span class="p">)</span>
+<span class="n">foobar_domain_record</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">DomainRecord</span><span class="p">(</span><span class="s2">&quot;foobarDomainRecord&quot;</span><span class="p">,</span>
+    <span class="n">domain_id</span><span class="o">=</span><span class="n">foobar_domain</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;www&quot;</span><span class="p">,</span>
+    <span class="n">record_type</span><span class="o">=</span><span class="s2">&quot;CNAME&quot;</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="s2">&quot;foobar.example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>This resource exports no additional attributes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -511,6 +525,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">Image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">linode_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Linode Image resource.  This can be used to create, modify, and delete Linodes Images.  Linode Images are snapshots of a Linode Instance Disk which can then be used to provision more Linode Instances.  Images can be used across regions.</p>
 <p>For more information, see <a class="reference external" href="https://www.linode.com/docs/platform/disk-images/linode-images/">Linode’s documentation on Images</a> and the <a class="reference external" href="https://developers.linode.com/api/v4#operation/createImage">Linode APIv4 docs</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;g6-nanode-1&quot;</span><span class="p">)</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Image taken from foo&quot;</span><span class="p">,</span>
+    <span class="n">disk_id</span><span class="o">=</span><span class="n">foo</span><span class="o">.</span><span class="n">disks</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;foo-sda-image&quot;</span><span class="p">,</span>
+    <span class="n">linode_id</span><span class="o">=</span><span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">bar_based</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;barBased&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="n">bar</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;eu-west&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="n">foo</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>This resource exports the following attributes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> - The unique ID of this Image.  The ID of private images begin with <code class="docutils literal notranslate"><span class="pre">private/</span></code> followed by the numeric identifier of the private image, for example <code class="docutils literal notranslate"><span class="pre">private/12345</span></code>.</p></li>
@@ -1240,6 +1271,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_linode.LkeCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">LkeCluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">k8s_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.LkeCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an LKE cluster.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">my_cluster</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">LkeCluster</span><span class="p">(</span><span class="s2">&quot;my-cluster&quot;</span><span class="p">,</span>
+    <span class="n">k8s_version</span><span class="o">=</span><span class="s2">&quot;1.17&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;my-cluster&quot;</span><span class="p">,</span>
+    <span class="n">pools</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;g6-standard-2&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;prod&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1849,6 +1894,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_linode.ObjectStorageBucket">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">ObjectStorageBucket</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.ObjectStorageBucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Linode Object Storage Bucket resource. This can be used to create, modify, and delete Linodes Object Storage Buckets.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">primary</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">get_object_storage_cluster</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">)</span>
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">ObjectStorageBucket</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">cluster</span><span class="o">=</span><span class="n">primary</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1931,6 +1985,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_linode.ObjectStorageKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">ObjectStorageKey</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.ObjectStorageKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Linode Object Storage Key resource. This can be used to create, modify, and delete Linodes Object Storage Keys.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">ObjectStorageKey</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;image-access&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>This resource exports the following attributes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">access_key</span></code> - This keypair’s access key. This is not secret.</p></li>
@@ -2547,6 +2607,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">Volume</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">linode_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Linode Volume resource.  This can be used to create, modify, and delete Linodes Block Storage Volumes.  Block Storage Volumes are removable storage disks that persist outside the life-cycle of Linode Instances. These volumes can be attached to and detached from Linode instances throughout a region.</p>
 <p>For more information, see <a class="reference external" href="https://www.linode.com/docs/platform/block-storage/how-to-use-block-storage-with-your-linode/">How to Use Block Storage with Your Linode</a> and the <a class="reference external" href="https://developers.linode.com/api/v4#operation/createVolume">Linode APIv4 docs</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">foobaz</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;foobaz&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-west&quot;</span><span class="p">,</span>
+    <span class="n">root_pass</span><span class="o">=</span><span class="s2">&quot;3X4mp13&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;foobaz&quot;</span><span class="p">],</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;g6-nanode-1&quot;</span><span class="p">)</span>
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">Volume</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;foo-volume&quot;</span><span class="p">,</span>
+    <span class="n">linode_id</span><span class="o">=</span><span class="n">foobaz</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="n">foobaz</span><span class="o">.</span><span class="n">region</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>This resource exports the following attributes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> - The label of the Linode Volume.</p></li>
@@ -2675,6 +2749,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">get_account</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Linode account.</p>
 <p>This data source should not be used in conjuction with the <code class="docutils literal notranslate"><span class="pre">LINODE_DEBUG</span></code> option.  See the <a class="reference external" href="https://www.terraform.io/docs/providers/linode/index.html#debugging">debugging notes</a> for more details.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">account</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">get_account</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>The Linode Account resource exports the following attributes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> - The email address for this Account, for account management communications, and may be used for other communications as configured.</p></li>
@@ -2696,6 +2776,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_linode.get_domain">
 <code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">get_domain</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Linode domain.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">get_domain</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;1234567&quot;</span><span class="p">)</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">get_domain</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="s2">&quot;bar.example.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The Linode Domain resource exports the following attributes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> - The unique ID of this Domain.</p></li>
@@ -2727,6 +2814,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_linode.get_domain_record">
 <code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">get_domain_record</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domain_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_domain_record" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Linode Domain Record.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">my_record</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">get_domain_record</span><span class="p">(</span><span class="n">domain_id</span><span class="o">=</span><span class="s2">&quot;3150401&quot;</span><span class="p">,</span>
+    <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;14950401&quot;</span><span class="p">)</span>
+<span class="n">my_www_record</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">get_domain_record</span><span class="p">(</span><span class="n">domain_id</span><span class="o">=</span><span class="s2">&quot;3150401&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;www&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The Linode Volume resource exports the following attributes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> - The unique ID of the Domain Record.</p></li>
@@ -2748,6 +2844,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_linode.get_image">
 <code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">get_image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Linode image</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">k8_master</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;linode/debian8&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The Linode Image resource exports the following attributes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> - A short description of the Image.</p></li>
@@ -2771,6 +2873,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_linode.get_instance_type">
 <code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">get_instance_type</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_instance_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Linode instance type</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">get_instance_type</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;g6-standard-2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The Linode Instance Type resource exports the following attributes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> - The ID representing the Linode Type</p></li>
@@ -2793,6 +2901,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_linode.get_networking_ip">
 <code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">get_networking_ip</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_networking_ip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Linode Networking IP Address</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">ns1_linode_com</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">get_networking_ip</span><span class="p">(</span><span class="n">address</span><span class="o">=</span><span class="s2">&quot;162.159.27.72&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The Linode Network IP Address resource exports the following attributes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> - The IP address.</p></li>
@@ -2816,6 +2930,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_linode.get_object_storage_cluster">
 <code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">get_object_storage_cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">static_site_domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_object_storage_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Linode Object Storage Cluster</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">primary</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">get_object_storage_cluster</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The Linode Object Storage Cluster resource exports the following attributes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> - The base URL for this cluster.</p></li>
@@ -2834,6 +2954,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_linode.get_profile">
 <code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">get_profile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Linode profile.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">profile</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">get_profile</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>The Linode Profile resource exports the following attributes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> - The profile email address. This address will be used for communication with Linode as necessary.</p></li>
@@ -2859,18 +2985,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_linode.get_region">
 <code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">get_region</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">country</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_region" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">.getRegion</span></code> provides details about a specific Linode region.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">region</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">get_region</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;us-east&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py function">
 <dt id="pulumi_linode.get_ssh_key">
 <code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">get_ssh_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">label</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_ssh_key" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">.SshKey</span></code> provides access to a specifically labeled SSH Key in the Profile of the User identified by the access token.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">get_ssh_key</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py function">
 <dt id="pulumi_linode.get_stack_script">
 <code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">get_stack_script</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_defined_fields</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_stack_script" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides details about a specific Linode StackScript.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+</pre></div>
+</div>
 <p>This resource exports the following attributes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> - The StackScript’s label is for display purposes only.</p></li>
@@ -2916,6 +3057,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_linode.get_user">
 <code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">get_user</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_user" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Linode user</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The Linode User resource exports the following attributes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ssh_keys</span></code> - A list of SSH Key labels added by this User. These are the keys that will be deployed if this User is included in the authorized_users field of a create Linode, rebuild Linode, or create Disk request.</p></li>
@@ -2933,6 +3080,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_linode.get_volume">
 <code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">get_volume</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Linode Volume.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">get_volume</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;1234567&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The Linode Volume resource exports the following attributes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> - The unique ID of this Volume.</p></li>
