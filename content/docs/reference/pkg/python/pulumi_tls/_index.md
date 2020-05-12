@@ -868,6 +868,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_tls.</code><code class="sig-name descname">get_public_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">private_key_pem</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.get_public_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the public key from a PEM-encoded private key for use in other
 resources.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_tls</span> <span class="k">as</span> <span class="nn">tls</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">tls</span><span class="o">.</span><span class="n">get_public_key</span><span class="p">(</span><span class="n">private_key_pem</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;~/.ssh/id_rsa&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>private_key_pem</strong> (<em>str</em>) – The private key to use. Currently-supported key types are “RSA” or “ECDSA”.</p>

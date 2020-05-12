@@ -29,7 +29,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_tls as tls
+
+example = tls.get_public_key(private_key_pem=(lambda path: open(path).read())("~/.ssh/id_rsa"))
+```
 {{% /example %}}
 
 {{% example typescript %}}
