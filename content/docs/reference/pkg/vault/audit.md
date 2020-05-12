@@ -23,6 +23,16 @@ const test = new vault.Audit("test", {
     type: "file",
 });
 ```
+```python
+import pulumi
+import pulumi_vault as vault
+
+test = vault.Audit("test",
+    options={
+        "file_path": "C:/temp/audit.txt",
+    },
+    type="file")
+```
 
 ## Example Usage (socket audit device)
 
@@ -39,6 +49,19 @@ const test = new vault.Audit("test", {
     path: "app_socket",
     type: "socket",
 });
+```
+```python
+import pulumi
+import pulumi_vault as vault
+
+test = vault.Audit("test",
+    options={
+        "address": "127.0.0.1:8000",
+        "description": "application x socket",
+        "socket_type": "tcp",
+    },
+    path="app_socket",
+    type="socket")
 ```
 
 

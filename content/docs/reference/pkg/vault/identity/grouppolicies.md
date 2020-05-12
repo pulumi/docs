@@ -12,9 +12,128 @@ meta_desc: "Explore the GroupPolicies resource of the identity module, including
 
 Manages policies for an Identity Group for Vault. The [Identity secrets engine](https://www.vaultproject.io/docs/secrets/identity/index.html) is the identity management solution for Vault.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Exclusive Policies
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_vault as vault
+
+internal = vault.identity.Group("internal",
+    type="internal",
+    external_policies=True,
+    metadata={
+        "version": "2",
+    })
+policies = vault.identity.GroupPolicies("policies",
+    policies=[
+        "default",
+        "test",
+    ],
+    exclusive=True,
+    group_id=internal.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+
+const internal = new vault.identity.Group("internal", {
+    type: "internal",
+    externalPolicies: true,
+    metadata: {
+        version: "2",
+    },
+});
+const policies = new vault.identity.GroupPolicies("policies", {
+    policies: [
+        "default",
+        "test",
+    ],
+    exclusive: true,
+    groupId: internal.id,
+});
+```
+{{% /example %}}
+
+### Non-exclusive Policies
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_vault as vault
+
+internal = vault.identity.Group("internal",
+    type="internal",
+    external_policies=True,
+    metadata={
+        "version": "2",
+    })
+default = vault.identity.GroupPolicies("default",
+    policies=[
+        "default",
+        "test",
+    ],
+    exclusive=False,
+    group_id=internal.id)
+others = vault.identity.GroupPolicies("others",
+    policies=["others"],
+    exclusive=False,
+    group_id=internal.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+
+const internal = new vault.identity.Group("internal", {
+    type: "internal",
+    externalPolicies: true,
+    metadata: {
+        version: "2",
+    },
+});
+const default = new vault.identity.GroupPolicies("default", {
+    policies: [
+        "default",
+        "test",
+    ],
+    exclusive: false,
+    groupId: internal.id,
+});
+const others = new vault.identity.GroupPolicies("others", {
+    policies: ["others"],
+    exclusive: false,
+    groupId: internal.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GroupPolicies Resource {#create}

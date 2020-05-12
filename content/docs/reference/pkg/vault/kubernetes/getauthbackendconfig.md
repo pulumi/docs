@@ -14,39 +14,9 @@ Reads the Role of an Kubernetes from a Vault server. See the [Vault
 documentation](https://www.vaultproject.io/api/auth/kubernetes/index.html#read-config) for more
 information.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as vault from "@pulumi/vault";
-
-const config = pulumi.output(vault.kubernetes.getAuthBackendConfig({
-    backend: "my-kubernetes-backend",
-}, { async: true }));
-
-export const tokenReviewerJwt = config.tokenReviewerJwt;
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Using GetAuthBackendConfig {#using}

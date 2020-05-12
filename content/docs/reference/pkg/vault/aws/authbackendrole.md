@@ -16,9 +16,79 @@ backend. See the [Vault
 documentation](https://www.vaultproject.io/docs/auth/aws.html) for more
 information.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_vault as vault
+
+aws = vault.AuthBackend("aws", type="aws")
+example = vault.aws.AuthBackendRole("example",
+    backend=aws.path,
+    role="test-role",
+    auth_type="iam",
+    bound_ami_ids=["ami-8c1be5f6"],
+    bound_account_ids=["123456789012"],
+    bound_vpc_ids=["vpc-b61106d4"],
+    bound_subnet_ids=["vpc-133128f1"],
+    bound_iam_role_arns=["arn:aws:iam::123456789012:role/MyRole"],
+    bound_iam_instance_profile_arns=["arn:aws:iam::123456789012:instance-profile/MyProfile"],
+    inferred_entity_type="ec2_instance",
+    inferred_aws_region="us-east-1",
+    token_ttl=60,
+    token_max_ttl=120,
+    token_policies=[
+        "default",
+        "dev",
+        "prod",
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+
+const aws = new vault.AuthBackend("aws", {type: "aws"});
+const example = new vault.aws.AuthBackendRole("example", {
+    backend: aws.path,
+    role: "test-role",
+    authType: "iam",
+    boundAmiIds: ["ami-8c1be5f6"],
+    boundAccountIds: ["123456789012"],
+    boundVpcIds: ["vpc-b61106d4"],
+    boundSubnetIds: ["vpc-133128f1"],
+    boundIamRoleArns: ["arn:aws:iam::123456789012:role/MyRole"],
+    boundIamInstanceProfileArns: ["arn:aws:iam::123456789012:instance-profile/MyProfile"],
+    inferredEntityType: "ec2_instance",
+    inferredAwsRegion: "us-east-1",
+    tokenTtl: 60,
+    tokenMaxTtl: 120,
+    tokenPolicies: [
+        "default",
+        "dev",
+        "prod",
+    ],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AuthBackendRole Resource {#create}

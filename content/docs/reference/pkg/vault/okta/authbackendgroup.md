@@ -29,7 +29,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+example = vault.okta.AuthBackend("example",
+    organization="dummy",
+    path="group_okta")
+foo = vault.okta.AuthBackendGroup("foo",
+    group_name="foo",
+    path=example.path,
+    policies=[
+        "one",
+        "two",
+    ])
+```
 {{% /example %}}
 
 {{% example typescript %}}

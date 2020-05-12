@@ -19,6 +19,23 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Manages Token auth backend role in a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/token.html">Vault
 documentation</a> for more
 information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">tokenauth</span><span class="o">.</span><span class="n">AuthBackendRole</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">allowed_policies</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">disallowed_policies</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">],</span>
+    <span class="n">explicit_max_ttl</span><span class="o">=</span><span class="s2">&quot;115200&quot;</span><span class="p">,</span>
+    <span class="n">orphan</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">path_suffix</span><span class="o">=</span><span class="s2">&quot;path-suffix&quot;</span><span class="p">,</span>
+    <span class="n">period</span><span class="o">=</span><span class="s2">&quot;86400&quot;</span><span class="p">,</span>
+    <span class="n">renewable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">role_name</span><span class="o">=</span><span class="s2">&quot;my-role&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -19,6 +19,27 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Logs into Vault using the AppRole auth backend. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/approle.html">Vault
 documentation</a> for more
 information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">approle</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">AuthBackend</span><span class="p">(</span><span class="s2">&quot;approle&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;approle&quot;</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">app_role</span><span class="o">.</span><span class="n">AuthBackendRole</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">approle</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+    <span class="n">policies</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;prod&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">role_name</span><span class="o">=</span><span class="s2">&quot;test-role&quot;</span><span class="p">)</span>
+<span class="nb">id</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">app_role</span><span class="o">.</span><span class="n">AuthBackendRoleSecretID</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">approle</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+    <span class="n">role_name</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">role_name</span><span class="p">)</span>
+<span class="n">login</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">app_role</span><span class="o">.</span><span class="n">AuthBackendLogin</span><span class="p">(</span><span class="s2">&quot;login&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">approle</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+    <span class="n">role_id</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">role_id</span><span class="p">,</span>
+    <span class="n">secret_id</span><span class="o">=</span><span class="nb">id</span><span class="o">.</span><span class="n">secret_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -31,9 +52,6 @@ unless <code class="docutils literal notranslate"><span class="pre">bind_secret_
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/approle_auth_backend_login.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/approle_auth_backend_login.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="py attribute">
 <dt id="pulumi_vault.app_role.AuthBackendLogin.accessor">
 <code class="sig-name descname">accessor</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.app_role.AuthBackendLogin.accessor" title="Permalink to this definition">¶</a></dt>
@@ -120,9 +138,6 @@ unless <code class="docutils literal notranslate"><span class="pre">bind_secret_
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/approle_auth_backend_login.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/approle_auth_backend_login.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="py method">
@@ -169,6 +184,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages an AppRole auth backend role in a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/approle.html">Vault
 documentation</a> for more
 information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">approle</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">AuthBackend</span><span class="p">(</span><span class="s2">&quot;approle&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;approle&quot;</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">app_role</span><span class="o">.</span><span class="n">AuthBackendRole</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">approle</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+    <span class="n">role_name</span><span class="o">=</span><span class="s2">&quot;test-role&quot;</span><span class="p">,</span>
+    <span class="n">token_policies</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;prod&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -226,9 +255,6 @@ requests a different type at generation time.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/approle_auth_backend_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/approle_auth_backend_role.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="py attribute">
 <dt id="pulumi_vault.app_role.AuthBackendRole.backend">
 <code class="sig-name descname">backend</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.app_role.AuthBackendRole.backend" title="Permalink to this definition">¶</a></dt>
@@ -438,9 +464,6 @@ requests a different type at generation time.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/approle_auth_backend_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/approle_auth_backend_role.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="py method">
@@ -487,11 +510,34 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages an AppRole auth backend SecretID in a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/approle.html">Vault
 documentation</a> for more
 information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">approle</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">AuthBackend</span><span class="p">(</span><span class="s2">&quot;approle&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;approle&quot;</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">app_role</span><span class="o">.</span><span class="n">AuthBackendRole</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">approle</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+    <span class="n">policies</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;prod&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">role_name</span><span class="o">=</span><span class="s2">&quot;test-role&quot;</span><span class="p">)</span>
+<span class="nb">id</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">app_role</span><span class="o">.</span><span class="n">AuthBackendRoleSecretID</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">approle</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+    <span class="n">metadata</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;hello&quot;: &quot;world&quot;</span>
+<span class="s2">}</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">role_name</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">role_name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique name of the auth backend to configure.</p></li>
 <li><p><strong>cidr_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – If set, specifies blocks of IP addresses which can
 perform the login operation using this SecretID.</p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A JSON-encoded string containing metadata in
@@ -506,13 +552,16 @@ token is allowed.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/approle_auth_backend_role_secret_id.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/approle_auth_backend_role_secret_id.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="py attribute">
 <dt id="pulumi_vault.app_role.AuthBackendRoleSecretID.accessor">
 <code class="sig-name descname">accessor</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.app_role.AuthBackendRoleSecretID.accessor" title="Permalink to this definition">¶</a></dt>
 <dd><p>The unique ID for this SecretID that can be safely logged.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_vault.app_role.AuthBackendRoleSecretID.backend">
+<code class="sig-name descname">backend</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.app_role.AuthBackendRoleSecretID.backend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique name of the auth backend to configure.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -576,6 +625,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>accessor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique ID for this SecretID that can be safely logged.</p></li>
+<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique name of the auth backend to configure.</p></li>
 <li><p><strong>cidr_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – If set, specifies blocks of IP addresses which can
 perform the login operation using this SecretID.</p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A JSON-encoded string containing metadata in
@@ -594,9 +644,6 @@ token is allowed.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/approle_auth_backend_role_secret_id.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/approle_auth_backend_role_secret_id.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="py method">
@@ -639,23 +686,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_vault.app_role.AwaitableGetAuthBackendRoleIdResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.app_role.</code><code class="sig-name descname">AwaitableGetAuthBackendRoleIdResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.app_role.AwaitableGetAuthBackendRoleIdResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.app_role.</code><code class="sig-name descname">AwaitableGetAuthBackendRoleIdResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.app_role.AwaitableGetAuthBackendRoleIdResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
 <dt id="pulumi_vault.app_role.GetAuthBackendRoleIdResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.app_role.</code><code class="sig-name descname">GetAuthBackendRoleIdResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.app_role.GetAuthBackendRoleIdResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.app_role.</code><code class="sig-name descname">GetAuthBackendRoleIdResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.app_role.GetAuthBackendRoleIdResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAuthBackendRoleId.</p>
+<dl class="py attribute">
+<dt id="pulumi_vault.app_role.GetAuthBackendRoleIdResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.app_role.GetAuthBackendRoleIdResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="py attribute">
 <dt id="pulumi_vault.app_role.GetAuthBackendRoleIdResult.role_id">
 <code class="sig-name descname">role_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.app_role.GetAuthBackendRoleIdResult.role_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The RoleID of the role.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_vault.app_role.GetAuthBackendRoleIdResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.app_role.GetAuthBackendRoleIdResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -664,6 +711,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vault.app_role.get_auth_backend_role_id">
 <code class="sig-prename descclassname">pulumi_vault.app_role.</code><code class="sig-name descname">get_auth_backend_role_id</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.app_role.get_auth_backend_role_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads the Role ID of an AppRole from a Vault server.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">role</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">appRole</span><span class="o">.</span><span class="n">get_auth_backend_role_id</span><span class="p">(</span><span class="n">backend</span><span class="o">=</span><span class="s2">&quot;my-approle-backend&quot;</span><span class="p">,</span>
+    <span class="n">role_name</span><span class="o">=</span><span class="s2">&quot;my-role&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;role-id&quot;</span><span class="p">,</span> <span class="n">role</span><span class="o">.</span><span class="n">role_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -673,9 +728,6 @@ retrieve a RoleID for resides in. Defaults to “approle”.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/d/approle_auth_backend_role_id.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/d/approle_auth_backend_role_id.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

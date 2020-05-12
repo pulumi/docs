@@ -14,9 +14,65 @@ Manages an Kubernetes auth backend role in a Vault server. See the [Vault
 documentation](https://www.vaultproject.io/docs/auth/kubernetes.html) for more
 information.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_vault as vault
+
+kubernetes = vault.AuthBackend("kubernetes", type="kubernetes")
+example = vault.kubernetes.AuthBackendRole("example",
+    backend=kubernetes.path,
+    role_name="example-role",
+    bound_service_account_names=["example"],
+    bound_service_account_namespaces=["example"],
+    token_ttl=3600,
+    token_policies=[
+        "default",
+        "dev",
+        "prod",
+    ],
+    audience="vault")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+
+const kubernetes = new vault.AuthBackend("kubernetes", {type: "kubernetes"});
+const example = new vault.kubernetes.AuthBackendRole("example", {
+    backend: kubernetes.path,
+    roleName: "example-role",
+    boundServiceAccountNames: ["example"],
+    boundServiceAccountNamespaces: ["example"],
+    tokenTtl: 3600,
+    tokenPolicies: [
+        "default",
+        "dev",
+        "prod",
+    ],
+    audience: "vault",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AuthBackendRole Resource {#create}

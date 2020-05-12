@@ -29,7 +29,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+example = vault.Mount("example", type="ssh")
+foo = vault.ssh.SecretBackendCa("foo", backend=example.path)
+```
 {{% /example %}}
 
 {{% example typescript %}}

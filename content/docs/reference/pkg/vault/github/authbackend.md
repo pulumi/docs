@@ -30,7 +30,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+example = vault.github.AuthBackend("example", organization="myorg")
+```
 {{% /example %}}
 
 {{% example typescript %}}

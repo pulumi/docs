@@ -12,9 +12,53 @@ meta_desc: "Explore the SecretBackendRootSignIntermediate resource of the pkiSec
 
 Creates an PKI certificate.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_vault as vault
+
+root = vault.pki_secret.SecretBackendRootSignIntermediate("root",
+    backend=vault_pki_secret_backend["root"]["path"],
+    csr=vault_pki_secret_backend_intermediate_cert_request["intermediate"]["csr"],
+    common_name="Intermediate CA",
+    exclude_cn_from_sans=True,
+    ou="My OU",
+    organization="My organization")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+
+const root = new vault.pkiSecret.SecretBackendRootSignIntermediate("root", {
+    backend: vault_pki_secret_backend.root.path,
+    csr: vault_pki_secret_backend_intermediate_cert_request.intermediate.csr,
+    commonName: "Intermediate CA",
+    excludeCnFromSans: true,
+    ou: "My OU",
+    organization: "My organization",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SecretBackendRootSignIntermediate Resource {#create}

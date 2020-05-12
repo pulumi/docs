@@ -28,7 +28,36 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+aws = vault.AuthBackend("aws",
+    path="%s",
+    type="aws")
+role = vault.aws.AuthBackendRole("role",
+    auth_type="ec2",
+    backend=aws.path,
+    bound_account_id="123456789012",
+    policies=[
+        "dev",
+        "prod",
+        "qa",
+        "test",
+    ],
+    role="%s",
+    role_tag="VaultRoleTag")
+test = vault.aws.AuthBackendRoleTag("test",
+    backend=aws.path,
+    instance_id="i-1234567",
+    max_ttl="1h",
+    policies=[
+        "prod",
+        "dev",
+        "test",
+    ],
+    role=role.role)
+```
 {{% /example %}}
 
 {{% example typescript %}}

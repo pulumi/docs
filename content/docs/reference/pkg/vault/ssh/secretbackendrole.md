@@ -29,7 +29,22 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+example = vault.Mount("example", type="ssh")
+foo = vault.ssh.SecretBackendRole("foo",
+    allow_user_certificates=True,
+    backend=example.path,
+    key_type="ca")
+bar = vault.ssh.SecretBackendRole("bar",
+    allowed_users="default,baz",
+    backend=example.path,
+    cidr_list="0.0.0.0/0",
+    default_user="default",
+    key_type="otp")
+```
 {{% /example %}}
 
 {{% example typescript %}}

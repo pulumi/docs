@@ -30,7 +30,27 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+approle = vault.AuthBackend("approle", type="approle")
+example = vault.app_role.AuthBackendRole("example",
+    backend=approle.path,
+    policies=[
+        "default",
+        "dev",
+        "prod",
+    ],
+    role_name="test-role")
+id = vault.app_role.AuthBackendRoleSecretID("id",
+    backend=approle.path,
+    role_name=example.role_name)
+login = vault.app_role.AuthBackendLogin("login",
+    backend=approle.path,
+    role_id=example.role_id,
+    secret_id=id.secret_id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

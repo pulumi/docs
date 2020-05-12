@@ -33,7 +33,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+server = vault.identity.Oidc("server", issuer="https://www.acme.com")
+```
 {{% /example %}}
 
 {{% example typescript %}}

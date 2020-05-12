@@ -12,9 +12,106 @@ meta_desc: "Explore the EntityPolicies resource of the identity module, includin
 
 Manages policies for an Identity Entity for Vault. The [Identity secrets engine](https://www.vaultproject.io/docs/secrets/identity/index.html) is the identity management solution for Vault.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Exclusive Policies
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_vault as vault
+
+entity = vault.identity.Entity("entity", external_policies=True)
+policies = vault.identity.EntityPolicies("policies",
+    policies=[
+        "default",
+        "test",
+    ],
+    exclusive=True,
+    entity_id=entity.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+
+const entity = new vault.identity.Entity("entity", {externalPolicies: true});
+const policies = new vault.identity.EntityPolicies("policies", {
+    policies: [
+        "default",
+        "test",
+    ],
+    exclusive: true,
+    entityId: entity.id,
+});
+```
+{{% /example %}}
+
+### Non-exclusive Policies
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_vault as vault
+
+entity = vault.identity.Entity("entity", external_policies=True)
+default = vault.identity.EntityPolicies("default",
+    policies=[
+        "default",
+        "test",
+    ],
+    exclusive=False,
+    entity_id=entity.id)
+others = vault.identity.EntityPolicies("others",
+    policies=["others"],
+    exclusive=False,
+    entity_id=entity.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+
+const entity = new vault.identity.Entity("entity", {externalPolicies: true});
+const default = new vault.identity.EntityPolicies("default", {
+    policies: [
+        "default",
+        "test",
+    ],
+    exclusive: false,
+    entityId: entity.id,
+});
+const others = new vault.identity.EntityPolicies("others", {
+    policies: ["others"],
+    exclusive: false,
+    entityId: entity.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EntityPolicies Resource {#create}

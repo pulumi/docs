@@ -30,7 +30,19 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+userpass = vault.AuthBackend("userpass",
+    path="userpass",
+    type="userpass")
+my_duo = vault.MfaDuo("myDuo",
+    api_hostname="api-2b5c39f5.duosecurity.com",
+    integration_key="BIACEUEAXI20BNWTEYXT",
+    mount_accessor=userpass.accessor,
+    secret_key="8C7THtrIigh2rPZQMbguugt8IUftWhMRCOBzbuyz")
+```
 {{% /example %}}
 
 {{% example typescript %}}

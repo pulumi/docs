@@ -158,6 +158,24 @@ instances or principals that can perform the login operation against the
 backend. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/azure.html">Vault
 documentation</a> for more
 information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">azure</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">AuthBackend</span><span class="p">(</span><span class="s2">&quot;azure&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;azure&quot;</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">azure</span><span class="o">.</span><span class="n">AuthBackendRole</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">azure</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+    <span class="n">bound_resource_groups</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;123456789012&quot;</span><span class="p">],</span>
+    <span class="n">bound_subscription_ids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;11111111-2222-3333-4444-555555555555&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;test-role&quot;</span><span class="p">,</span>
+    <span class="n">token_max_ttl</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span>
+    <span class="n">token_policies</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;prod&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">token_ttl</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
