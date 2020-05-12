@@ -12,9 +12,51 @@ meta_desc: "Explore the GetMonitor function of the synthetics module, including 
 
 Use this data source to get information about a specific synthetics monitor in New Relic that already exists. This can be used to set up a Synthetics alert condition.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+bar = newrelic.synthetics.get_monitor(name="bar")
+baz = newrelic.synthetics.AlertCondition("baz",
+    policy_id=newrelic_alert_policy["foo"]["id"],
+    monitor_id=bar.id,
+    runbook_url="https://www.example.com")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const bar = newrelic.synthetics.getMonitor({
+    name: "bar",
+});
+const baz = new newrelic.synthetics.AlertCondition("baz", {
+    policyId: newrelic_alert_policy.foo.id,
+    monitorId: bar.then(bar => bar.id),
+    runbookUrl: "https://www.example.com",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetMonitor {#using}

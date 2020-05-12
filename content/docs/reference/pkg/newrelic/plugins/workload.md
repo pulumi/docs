@@ -32,7 +32,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo = newrelic.plugins.Workload("foo",
+    account_id=12345678,
+    entity_guids=["MjUyMDUyOHxBUE18QVBQTElDQVRJT058MjE1MDM3Nzk1"],
+    entity_search_queries=[{
+        "query": "name like 'Example application'",
+    }],
+    scope_account_ids=[12345678])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -40,13 +51,12 @@ Coming soon!
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
 
-const foo = new newrelic.Workload("foo", {
+const foo = new newrelic.plugins.Workload("foo", {
     accountId: 12345678,
     entityGuids: ["MjUyMDUyOHxBUE18QVBQTElDQVRJT058MjE1MDM3Nzk1"],
     entitySearchQueries: [{
         query: "name like 'Example application'",
     }],
-    name: "Example workload",
     scopeAccountIds: [12345678],
 });
 ```

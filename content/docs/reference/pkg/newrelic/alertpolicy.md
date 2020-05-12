@@ -13,6 +13,100 @@ meta_desc: "Explore the AlertPolicy resource of the New Relic package, including
 Use this resource to create and manage New Relic alert policies.
 
 
+## Additional Examples
+
+##### Provision multiple notification channels and add those channels to a policy
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+// Provision a Slack notification channel.
+const slackChannel = new newrelic.AlertChannel("slackChannel", {
+    type: "slack",
+    config: {
+        url: "https://hooks.slack.com/services/<*****>/<*****>",
+        channel: "example-alerts-channel",
+    },
+});
+// Provision an email notification channel.
+const emailChannel = new newrelic.AlertChannel("emailChannel", {
+    type: "email",
+    config: {
+        recipients: "example@testing.com",
+        includeJsonAttachment: "1",
+    },
+});
+// Provision the alert policy.
+const policyWithChannels = new newrelic.AlertPolicy("policyWithChannels", {
+    incidentPreference: "PER_CONDITION",
+    channelIds: [
+        slackChannel.id,
+        emailChannel.id,
+    ],
+});
+```
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+# Provision a Slack notification channel.
+slack_channel = newrelic.AlertChannel("slackChannel",
+    type="slack",
+    config={
+        "url": "https://hooks.slack.com/services/<*****>/<*****>",
+        "channel": "example-alerts-channel",
+    })
+# Provision an email notification channel.
+email_channel = newrelic.AlertChannel("emailChannel",
+    type="email",
+    config={
+        "recipients": "example@testing.com",
+        "includeJsonAttachment": "1",
+    })
+# Provision the alert policy.
+policy_with_channels = newrelic.AlertPolicy("policyWithChannels",
+    incident_preference="PER_CONDITION",
+    channel_ids=[
+        slack_channel.id,
+        email_channel.id,
+    ])
+```
+<br>
+
+##### Reference existing notification channels and add those channel to a policy
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const slackChannel = newrelic.getAlertChannel({
+    name: "slack-channel-notification",
+});
+const emailChannel = newrelic.getAlertChannel({
+    name: "test@example.com",
+});
+// Provision the alert policy.
+const policyWithChannels = new newrelic.AlertPolicy("policyWithChannels", {
+    incidentPreference: "PER_CONDITION",
+    channelIds: [
+        slackChannel.then(slackChannel => slackChannel.id),
+        emailChannel.then(emailChannel => emailChannel.id),
+    ],
+});
+```
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+slack_channel = newrelic.get_alert_channel(name="slack-channel-notification")
+email_channel = newrelic.get_alert_channel(name="test@example.com")
+# Provision the alert policy.
+policy_with_channels = newrelic.AlertPolicy("policyWithChannels",
+    incident_preference="PER_CONDITION",
+    channel_ids=[
+        slack_channel.id,
+        email_channel.id,
+    ])
+```
 
 {{% examples %}}
 ## Example Usage

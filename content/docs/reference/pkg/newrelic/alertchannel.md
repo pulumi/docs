@@ -13,6 +13,190 @@ meta_desc: "Explore the AlertChannel resource of the New Relic package, includin
 Use this resource to create and manage New Relic alert policies.
 
 
+## Additional Examples
+
+##### Slack
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const foo = new newrelic.AlertChannel("foo", {
+    config: {
+        channel: "example-alerts-channel",
+        url: "https://<YourOrganization>.slack.com",
+    },
+    type: "slack",
+});
+```
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo = newrelic.AlertChannel("foo",
+    config={
+        "channel": "example-alerts-channel",
+        "url": "https://<YourOrganization>.slack.com",
+    },
+    type="slack")
+```
+
+##### OpsGenie
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const foo = new newrelic.AlertChannel("foo", {
+    config: {
+        apiKey: "abc123",
+        recipients: "user1@domain.com, user2@domain.com",
+        tags: "tag1, tag2",
+        teams: "team1, team2",
+    },
+    type: "opsgenie",
+});
+```
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo = newrelic.AlertChannel("foo",
+    config={
+        "apiKey": "abc123",
+        "recipients": "user1@domain.com, user2@domain.com",
+        "tags": "tag1, tag2",
+        "teams": "team1, team2",
+    },
+    type="opsgenie")
+```
+
+##### PagerDuty
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const foo = new newrelic.AlertChannel("foo", {
+    config: {
+        serviceKey: "abc123",
+    },
+    type: "pagerduty",
+});
+```
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo = newrelic.AlertChannel("foo",
+    config={
+        "serviceKey": "abc123",
+    },
+    type="pagerduty")
+```
+
+##### VictorOps
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const foo = new newrelic.AlertChannel("foo", {
+    config: {
+        key: "abc123",
+        routeKey: "/example",
+    },
+    type: "victorops",
+});
+```
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo = newrelic.AlertChannel("foo",
+    config={
+        "key": "abc123",
+        "routeKey": "/example",
+    },
+    type="victorops")
+```
+
+##### Webhook
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const foo = new newrelic.AlertChannel("foo", {
+    type: "webhook",
+    config: {
+        baseUrl: "http://www.test.com",
+        payloadType: "application/json",
+        payload: {
+            condition_name: `$CONDITION_NAME`,
+            policy_name: `$POLICY_NAME`,
+        },
+        headers: {
+            header1: value1,
+            header2: value2,
+        },
+    },
+});
+```
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo = newrelic.AlertChannel("foo",
+    type="webhook",
+    config={
+        "baseUrl": "http://www.test.com",
+        "payloadType": "application/json",
+        "payload": {
+            "condition_name": "$CONDITION_NAME",
+            "policy_name": "$POLICY_NAME",
+        },
+        "headers": {
+            "header1": value1,
+            "header2": value2,
+        },
+    })
+```
+
+##### Webhook with complex payload
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const foo = new newrelic.AlertChannel("foo", {
+    config: {
+        baseUrl: "http://www.test.com",
+        payloadString: `{
+  "my_custom_values": {
+    "condition_name": "$CONDITION_NAME",
+    "policy_name": "$POLICY_NAME"
+  }
+}
+`,
+        payloadType: "application/json",
+    },
+    type: "webhook",
+});
+```
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo = newrelic.AlertChannel("foo",
+    config={
+        "baseUrl": "http://www.test.com",
+        "payloadString": """{
+  "my_custom_values": {
+    "condition_name": "$$CONDITION_NAME",
+    "policy_name": "$$POLICY_NAME"
+  }
+}
+
+""",
+        "payloadType": "application/json",
+    },
+    type="webhook")
+```
 
 {{% examples %}}
 ## Example Usage
@@ -28,7 +212,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo = newrelic.AlertChannel("foo",
+    config={
+        "includeJsonAttachment": "1",
+        "recipients": "foo@example.com",
+    },
+    type="email")
+```
 {{% /example %}}
 
 {{% example typescript %}}

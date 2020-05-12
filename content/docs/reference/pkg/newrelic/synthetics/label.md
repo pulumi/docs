@@ -12,9 +12,47 @@ meta_desc: "Explore the Label resource of the synthetics module, including examp
 
 Use this resource to create, update, and delete a Synthetics label in New Relic.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo = newrelic.synthetics.Label("foo",
+    monitor_id=newrelic_synthetics_monitor["foo"]["id"],
+    type="MyCategory",
+    value="MyValue")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const foo = new newrelic.synthetics.Label("foo", {
+    monitorId: newrelic_synthetics_monitor.foo.id,
+    type: "MyCategory",
+    value: "MyValue",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Label Resource {#create}
