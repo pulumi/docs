@@ -15,9 +15,55 @@ meta_desc: "Explore the GetNetworkContainers function of the mongodbatlas packag
 > **NOTE:** Groups and projects are synonymous terms. You may find **group_id** in the official documentation.
 
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Basic Example.
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+test_network_container = mongodbatlas.NetworkContainer("testNetworkContainer",
+    project_id="<YOUR-PROJECT-ID>",
+    atlas_cidr_block="10.8.0.0/21",
+    provider_name="AWS",
+    region_name="US_EAST_1")
+test_network_containers = pulumi.Output.all(test_network_container.project_id, test_network_container.provider_name).apply(lambda project_id, provider_name: mongodbatlas.get_network_containers(project_id=project_id,
+    provider_name=provider_name))
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mongodbatlas from "@pulumi/mongodbatlas";
+
+const testNetworkContainer = new mongodbatlas.NetworkContainer("testNetworkContainer", {
+    projectId: "<YOUR-PROJECT-ID>",
+    atlasCidrBlock: "10.8.0.0/21",
+    providerName: "AWS",
+    regionName: "US_EAST_1",
+});
+const testNetworkContainers = pulumi.all([testNetworkContainer.projectId, testNetworkContainer.providerName]).apply(([projectId, providerName]) => mongodbatlas.getNetworkContainers({
+    projectId: projectId,
+    providerName: providerName,
+}));
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetNetworkContainers {#using}

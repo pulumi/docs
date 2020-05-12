@@ -31,7 +31,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+my_private_ip_mode = mongodbatlas.PrivateIpMode("myPrivateIpMode",
+    enabled=False,
+    project_id="<YOUR PROJECT ID>")
+```
 {{% /example %}}
 
 {{% example typescript %}}

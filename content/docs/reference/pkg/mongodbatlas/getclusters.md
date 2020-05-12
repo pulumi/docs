@@ -18,9 +18,69 @@ meta_desc: "Explore the GetClusters function of the mongodbatlas package, includ
 <br> &#8226; Changes to cluster configurations can affect costs. Before making changes, please see [Billing](https://docs.atlas.mongodb.com/billing/).
 <br> &#8226; If your Atlas project contains a custom role that uses actions introduced in a specific MongoDB version, you cannot create a cluster with a MongoDB version less than that version unless you delete the custom role.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+test_cluster = mongodbatlas.Cluster("testCluster",
+    project_id="<YOUR-PROJECT-ID>",
+    disk_size_gb=100,
+    num_shards=1,
+    replication_factor=3,
+    provider_backup_enabled=True,
+    auto_scaling_disk_gb_enabled=True,
+    provider_name="AWS",
+    provider_disk_iops=300,
+    provider_volume_type="STANDARD",
+    provider_encrypt_ebs_volume=True,
+    provider_instance_size_name="M40",
+    provider_region_name="US_EAST_1")
+test_clusters = test_cluster.project_id.apply(lambda project_id: mongodbatlas.get_clusters(project_id=project_id))
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mongodbatlas from "@pulumi/mongodbatlas";
+
+const testCluster = new mongodbatlas.Cluster("testCluster", {
+    projectId: "<YOUR-PROJECT-ID>",
+    diskSizeGb: 100,
+    numShards: 1,
+    replicationFactor: 3,
+    providerBackupEnabled: true,
+    autoScalingDiskGbEnabled: true,
+    providerName: "AWS",
+    providerDiskIops: 300,
+    providerVolumeType: "STANDARD",
+    providerEncryptEbsVolume: true,
+    providerInstanceSizeName: "M40",
+    providerRegionName: "US_EAST_1",
+});
+const testClusters = testCluster.projectId.apply(projectId => mongodbatlas.getClusters({
+    projectId: projectId,
+}));
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetClusters {#using}

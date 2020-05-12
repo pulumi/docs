@@ -76,6 +76,59 @@ const testRole = new mongodbatlas.CustomDbRole("test_role", {
     roleName: "myCustomRole",
 });
 ```
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+inherited_role_one = mongodbatlas.CustomDbRole("inheritedRoleOne",
+    actions=[{
+        "action": "INSERT",
+        "resources": [{
+            "collectionName": "",
+            "databaseName": "anyDatabase",
+        }],
+    }],
+    project_id="<PROJECT-ID>",
+    role_name="insertRole")
+inherited_role_two = mongodbatlas.CustomDbRole("inheritedRoleTwo",
+    actions=[{
+        "action": "SERVER_STATUS",
+        "resources": [{
+            "cluster": True,
+        }],
+    }],
+    project_id=inherited_role_one.project_id,
+    role_name="statusServerRole")
+test_role = mongodbatlas.CustomDbRole("testRole",
+    actions=[
+        {
+            "action": "UPDATE",
+            "resources": [{
+                "collectionName": "",
+                "databaseName": "anyDatabase",
+            }],
+        },
+        {
+            "action": "REMOVE",
+            "resources": [{
+                "collectionName": "",
+                "databaseName": "anyDatabase",
+            }],
+        },
+    ],
+    inherited_roles=[
+        {
+            "databaseName": "admin",
+            "roleName": inherited_role_one.role_name,
+        },
+        {
+            "databaseName": "admin",
+            "roleName": inherited_role_two.role_name,
+        },
+    ],
+    project_id=inherited_role_one.project_id,
+    role_name="myCustomRole")
+```
 
 {{% examples %}}
 ## Example Usage
@@ -91,7 +144,37 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+test_role = mongodbatlas.CustomDbRole("testRole",
+    actions=[
+        {
+            "action": "UPDATE",
+            "resources": [{
+                "collectionName": "",
+                "databaseName": "anyDatabase",
+            }],
+        },
+        {
+            "action": "INSERT",
+            "resources": [{
+                "collectionName": "",
+                "databaseName": "anyDatabase",
+            }],
+        },
+        {
+            "action": "REMOVE",
+            "resources": [{
+                "collectionName": "",
+                "databaseName": "anyDatabase",
+            }],
+        },
+    ],
+    project_id="<PROJECT-ID>",
+    role_name="myCustomRole")
+```
 {{% /example %}}
 
 {{% example typescript %}}

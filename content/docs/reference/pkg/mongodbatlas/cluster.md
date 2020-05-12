@@ -36,7 +36,25 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+cluster_test = mongodbatlas.Cluster("cluster-test",
+    auto_scaling_disk_gb_enabled=True,
+    disk_size_gb=100,
+    mongo_db_major_version="4.0",
+    num_shards=1,
+    project_id="<YOUR-PROJECT-ID>",
+    provider_backup_enabled=True,
+    provider_disk_iops=300,
+    provider_encrypt_ebs_volume=True,
+    provider_instance_size_name="M40",
+    provider_name="AWS",
+    provider_region_name="US_EAST_1",
+    provider_volume_type="STANDARD",
+    replication_factor=3)
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -73,7 +91,22 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+test = mongodbatlas.Cluster("test",
+    auto_scaling_disk_gb_enabled=True,
+    mongo_db_major_version="4.0",
+    num_shards=1,
+    project_id="<YOUR-PROJECT-ID>",
+    provider_backup_enabled=True,
+    provider_disk_type_name="P6",
+    provider_instance_size_name="M30",
+    provider_name="AZURE",
+    provider_region_name="US_EAST_2",
+    replication_factor=3)
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -107,7 +140,22 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+test = mongodbatlas.Cluster("test",
+    auto_scaling_disk_gb_enabled=True,
+    disk_size_gb=40,
+    mongo_db_major_version="4.0",
+    num_shards=1,
+    project_id="<YOUR-PROJECT-ID>",
+    provider_backup_enabled=True,
+    provider_instance_size_name="M30",
+    provider_name="GCP",
+    provider_region_name="US_EAST_4",
+    replication_factor=3)
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -141,7 +189,44 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+cluster_test = mongodbatlas.Cluster("cluster-test",
+    cluster_type="REPLICASET",
+    disk_size_gb=100,
+    num_shards=1,
+    project_id="<YOUR-PROJECT-ID>",
+    provider_backup_enabled=True,
+    provider_disk_iops=300,
+    provider_instance_size_name="M10",
+    provider_name="AWS",
+    provider_volume_type="STANDARD",
+    replication_specs=[{
+        "numShards": 1,
+        "regionsConfig": [
+            {
+                "electableNodes": 3,
+                "priority": 7,
+                "readOnlyNodes": 0,
+                "regionName": "US_EAST_1",
+            },
+            {
+                "electableNodes": 2,
+                "priority": 6,
+                "readOnlyNodes": 0,
+                "regionName": "US_EAST_2",
+            },
+            {
+                "electableNodes": 2,
+                "priority": 5,
+                "readOnlyNodes": 2,
+                "regionName": "US_WEST_1",
+            },
+        ],
+    }])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -197,7 +282,43 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+cluster_test = mongodbatlas.Cluster("cluster-test",
+    cluster_type="GEOSHARDED",
+    disk_size_gb=80,
+    num_shards=1,
+    project_id="<YOUR-PROJECT-ID>",
+    provider_backup_enabled=True,
+    provider_disk_iops=240,
+    provider_instance_size_name="M30",
+    provider_name="AWS",
+    provider_volume_type="STANDARD",
+    replication_specs=[
+        {
+            "numShards": 2,
+            "regionsConfig": [{
+                "electableNodes": 3,
+                "priority": 7,
+                "readOnlyNodes": 0,
+                "regionName": "US_EAST_1",
+            }],
+            "zoneName": "Zone 1",
+        },
+        {
+            "numShards": 2,
+            "regionsConfig": [{
+                "electableNodes": 3,
+                "priority": 7,
+                "readOnlyNodes": 0,
+                "regionName": "EU_CENTRAL_1",
+            }],
+            "zoneName": "Zone 2",
+        },
+    ])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -252,7 +373,20 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+cluster_test = mongodbatlas.Cluster("cluster-test",
+    auto_scaling_disk_gb_enabled="false",
+    backing_provider_name="AWS",
+    disk_size_gb="2",
+    mongo_db_major_version="4.2",
+    project_id="<YOUR-PROJECT-ID>",
+    provider_instance_size_name="M2",
+    provider_name="TENANT",
+    provider_region_name="US_EAST_1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

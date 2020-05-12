@@ -30,7 +30,27 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+test_database_user = mongodbatlas.DatabaseUser("testDatabaseUser",
+    database_name="admin",
+    password="test-acc-password",
+    project_id="<PROJECT-ID>",
+    roles=[
+        {
+            "databaseName": "admin",
+            "roleName": "readWrite",
+        },
+        {
+            "databaseName": "admin",
+            "roleName": "atlasAdmin",
+        },
+    ],
+    username="test-acc-username")
+test_custom_db_roles = mongodbatlas.get_custom_db_roles(project_id=mongodbatlas_custom_db_role["test"]["project_id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -14,9 +14,136 @@ meta_desc: "Explore the CloudProviderSnapshotBackupPolicy resource of the mongod
 
 > **NOTE:** Groups and projects are synonymous terms. You may find `groupId` in the official documentation.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+my_cluster = mongodbatlas.Cluster("myCluster",
+    project_id="<PROJECT-ID>",
+    disk_size_gb=5,
+    provider_name="AWS",
+    provider_region_name="EU_CENTRAL_1",
+    provider_instance_size_name="M10",
+    provider_backup_enabled=True,
+    provider_disk_iops=100,
+    provider_encrypt_ebs_volume=False)
+test = mongodbatlas.CloudProviderSnapshotBackupPolicy("test",
+    project_id=my_cluster.project_id,
+    cluster_name=my_cluster.name,
+    reference_hour_of_day=3,
+    reference_minute_of_hour=45,
+    restore_window_days=4,
+    policies=[{
+        "id": my_cluster.snapshot_backup_policies[0]["policies"][0]["id"],
+        "policy_item": [
+            {
+                "id": my_cluster.snapshot_backup_policies[0]["policies"][0]["policyItems"][0]["id"],
+                "frequencyInterval": 1,
+                "frequencyType": "hourly",
+                "retentionUnit": "days",
+                "retentionValue": 1,
+            },
+            {
+                "id": my_cluster.snapshot_backup_policies[0]["policies"][0]["policyItems"][1]["id"],
+                "frequencyInterval": 1,
+                "frequencyType": "daily",
+                "retentionUnit": "days",
+                "retentionValue": 2,
+            },
+            {
+                "id": my_cluster.snapshot_backup_policies[0]["policies"][0]["policyItems"][2]["id"],
+                "frequencyInterval": 4,
+                "frequencyType": "weekly",
+                "retentionUnit": "weeks",
+                "retentionValue": 3,
+            },
+            {
+                "id": my_cluster.snapshot_backup_policies[0]["policies"][0]["policyItems"][3]["id"],
+                "frequencyInterval": 5,
+                "frequencyType": "monthly",
+                "retentionUnit": "months",
+                "retentionValue": 4,
+            },
+        ],
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mongodbatlas from "@pulumi/mongodbatlas";
+
+const myCluster = new mongodbatlas.Cluster("myCluster", {
+    projectId: "<PROJECT-ID>",
+    diskSizeGb: 5,
+    providerName: "AWS",
+    providerRegionName: "EU_CENTRAL_1",
+    providerInstanceSizeName: "M10",
+    providerBackupEnabled: true,
+    providerDiskIops: 100,
+    providerEncryptEbsVolume: false,
+});
+const test = new mongodbatlas.CloudProviderSnapshotBackupPolicy("test", {
+    projectId: myCluster.projectId,
+    clusterName: myCluster.name,
+    referenceHourOfDay: 3,
+    referenceMinuteOfHour: 45,
+    restoreWindowDays: 4,
+    policies: [{
+        id: myCluster.snapshotBackupPolicies.apply(snapshotBackupPolicies => snapshotBackupPolicies[0].policies?[0]?.id),
+        policy_item: [
+            {
+                id: myCluster.snapshotBackupPolicies.apply(snapshotBackupPolicies => snapshotBackupPolicies[0].policies?[0]?.policyItems?[0]?.id),
+                frequencyInterval: 1,
+                frequencyType: "hourly",
+                retentionUnit: "days",
+                retentionValue: 1,
+            },
+            {
+                id: myCluster.snapshotBackupPolicies.apply(snapshotBackupPolicies => snapshotBackupPolicies[0].policies?[0]?.policyItems?[1]?.id),
+                frequencyInterval: 1,
+                frequencyType: "daily",
+                retentionUnit: "days",
+                retentionValue: 2,
+            },
+            {
+                id: myCluster.snapshotBackupPolicies.apply(snapshotBackupPolicies => snapshotBackupPolicies[0].policies?[0]?.policyItems?[2]?.id),
+                frequencyInterval: 4,
+                frequencyType: "weekly",
+                retentionUnit: "weeks",
+                retentionValue: 3,
+            },
+            {
+                id: myCluster.snapshotBackupPolicies.apply(snapshotBackupPolicies => snapshotBackupPolicies[0].policies?[0]?.policyItems?[3]?.id),
+                frequencyInterval: 5,
+                frequencyType: "monthly",
+                retentionUnit: "months",
+                retentionValue: 4,
+            },
+        ],
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CloudProviderSnapshotBackupPolicy Resource {#create}

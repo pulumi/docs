@@ -15,9 +15,59 @@ meta_desc: "Explore the GetNetworkPeerings function of the mongodbatlas package,
 > **NOTE:** Groups and projects are synonymous terms. You may find **group_id** in the official documentation.
 
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Basic Example (AWS).
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+test_network_peering = mongodbatlas.NetworkPeering("testNetworkPeering",
+    accepter_region_name="us-east-1",
+    project_id="<YOUR-PROJEC-ID>",
+    container_id="507f1f77bcf86cd799439011",
+    provider_name="AWS",
+    route_table_cidr_block="192.168.0.0/24",
+    vpc_id="vpc-abc123abc123",
+    aws_account_id="abc123abc123")
+test_network_peerings = test_network_peering.project_id.apply(lambda project_id: mongodbatlas.get_network_peerings(project_id=project_id))
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mongodbatlas from "@pulumi/mongodbatlas";
+
+const testNetworkPeering = new mongodbatlas.NetworkPeering("testNetworkPeering", {
+    accepterRegionName: "us-east-1",
+    projectId: "<YOUR-PROJEC-ID>",
+    containerId: "507f1f77bcf86cd799439011",
+    providerName: "AWS",
+    routeTableCidrBlock: "192.168.0.0/24",
+    vpcId: "vpc-abc123abc123",
+    awsAccountId: "abc123abc123",
+});
+const testNetworkPeerings = testNetworkPeering.projectId.apply(projectId => mongodbatlas.getNetworkPeerings({
+    projectId: projectId,
+}));
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetNetworkPeerings {#using}

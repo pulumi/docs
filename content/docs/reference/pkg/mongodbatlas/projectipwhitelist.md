@@ -34,7 +34,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+test = mongodbatlas.ProjectIpWhitelist("test",
+    cidr_block="1.2.3.4/32",
+    comment="cidr block for tf acc testing",
+    project_id="<PROJECT-ID>")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -60,7 +68,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+test = mongodbatlas.ProjectIpWhitelist("test",
+    comment="ip address for tf acc testing",
+    ip_address="2.3.4.5",
+    project_id="<PROJECT-ID>")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -72,6 +88,68 @@ const test = new mongodbatlas.ProjectIpWhitelist("test", {
     comment: "ip address for tf acc testing",
     ipAddress: "2.3.4.5",
     projectId: "<PROJECT-ID>",
+});
+```
+{{% /example %}}
+
+### Using an AWS Security Group
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_mongodbatlas as mongodbatlas
+
+test_network_container = mongodbatlas.NetworkContainer("testNetworkContainer",
+    project_id="<PROJECT-ID>",
+    atlas_cidr_block="192.168.208.0/21",
+    provider_name="AWS",
+    region_name="US_EAST_1")
+test_network_peering = mongodbatlas.NetworkPeering("testNetworkPeering",
+    project_id="<PROJECT-ID>",
+    container_id=test_network_container.container_id,
+    accepter_region_name="us-east-1",
+    provider_name="AWS",
+    route_table_cidr_block="172.31.0.0/16",
+    vpc_id="vpc-0d93d6f69f1578bd8",
+    aws_account_id="232589400519")
+test_project_ip_whitelist = mongodbatlas.ProjectIpWhitelist("testProjectIpWhitelist",
+    project_id="<PROJECT-ID>",
+    aws_security_group="sg-0026348ec11780bd1",
+    comment="TestAcc for awsSecurityGroup")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mongodbatlas from "@pulumi/mongodbatlas";
+
+const testNetworkContainer = new mongodbatlas.NetworkContainer("testNetworkContainer", {
+    projectId: "<PROJECT-ID>",
+    atlasCidrBlock: "192.168.208.0/21",
+    providerName: "AWS",
+    regionName: "US_EAST_1",
+});
+const testNetworkPeering = new mongodbatlas.NetworkPeering("testNetworkPeering", {
+    projectId: "<PROJECT-ID>",
+    containerId: testNetworkContainer.containerId,
+    accepterRegionName: "us-east-1",
+    providerName: "AWS",
+    routeTableCidrBlock: "172.31.0.0/16",
+    vpcId: "vpc-0d93d6f69f1578bd8",
+    awsAccountId: "232589400519",
+});
+const testProjectIpWhitelist = new mongodbatlas.ProjectIpWhitelist("testProjectIpWhitelist", {
+    projectId: "<PROJECT-ID>",
+    awsSecurityGroup: "sg-0026348ec11780bd1",
+    comment: "TestAcc for awsSecurityGroup",
 });
 ```
 {{% /example %}}

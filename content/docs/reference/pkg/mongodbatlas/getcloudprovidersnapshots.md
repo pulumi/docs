@@ -14,44 +14,9 @@ meta_desc: "Explore the GetCloudProviderSnapshots function of the mongodbatlas p
 
 > **NOTE:** Groups and projects are synonymous terms. You may find `groupId` in the official documentation.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as mongodbatlas from "@pulumi/mongodbatlas";
-
-const testMongodbatlasCloudProviderSnapshots = new mongodbatlas.CloudProviderSnapshots("test", {
-    clusterName: "MyClusterTest",
-    description: "SomeDescription",
-    groupId: "5d0f1f73cf09a29120e173cf",
-    retentionInDays: 1,
-});
-const testCloudProviderSnapshots = pulumi.all([testMongodbatlasCloudProviderSnapshots.clusterName, testMongodbatlasCloudProviderSnapshots.groupId]).apply(([clusterName, groupId]) => mongodbatlas.getCloudProviderSnapshots({
-    clusterName: clusterName,
-    groupId: groupId,
-}, { async: true }));
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Using GetCloudProviderSnapshots {#using}
