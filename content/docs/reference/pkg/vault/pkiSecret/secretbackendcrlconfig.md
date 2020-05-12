@@ -28,7 +28,20 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+pki = vault.Mount("pki",
+    default_lease_ttl_seconds=3600,
+    max_lease_ttl_seconds=86400,
+    path="%s",
+    type="pki")
+crl_config = vault.pki_secret.SecretBackendCrlConfig("crlConfig",
+    backend=pki.path,
+    disable=False,
+    expiry="72h")
+```
 {{% /example %}}
 
 {{% example typescript %}}

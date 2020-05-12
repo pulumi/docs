@@ -30,7 +30,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+kubernetes = vault.AuthBackend("kubernetes", type="kubernetes")
+example = vault.kubernetes.AuthBackendConfig("example",
+    backend=kubernetes.path,
+    issuer="api",
+    kubernetes_ca_cert="""-----BEGIN CERTIFICATE-----
+example
+-----END CERTIFICATE-----
+""",
+    kubernetes_host="http://example.com:443",
+    token_reviewer_jwt="ZXhhbXBsZQo=")
+```
 {{% /example %}}
 
 {{% example typescript %}}

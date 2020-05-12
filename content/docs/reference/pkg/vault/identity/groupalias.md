@@ -30,7 +30,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+group = vault.identity.Group("group",
+    policies=["test"],
+    type="external")
+github = vault.AuthBackend("github",
+    path="github",
+    type="github")
+group_alias = vault.identity.GroupAlias("group-alias",
+    canonical_id=group.id,
+    mount_accessor=github.accessor,
+    name="Github_Team_Slug")
+```
 {{% /example %}}
 
 {{% example typescript %}}

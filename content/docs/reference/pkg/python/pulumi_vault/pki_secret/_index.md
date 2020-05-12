@@ -18,6 +18,15 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.pki_secret.</code><code class="sig-name descname">SecretBackend</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_lease_ttl_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_lease_ttl_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackend" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an PKI Secret Backend for Vault. PKI secret backends can then issue certificates, once a role has been added to
 the backend.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">pki</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">pki_secret</span><span class="o">.</span><span class="n">SecretBackend</span><span class="p">(</span><span class="s2">&quot;pki&quot;</span><span class="p">,</span>
+    <span class="n">default_lease_ttl_seconds</span><span class="o">=</span><span class="mi">3600</span><span class="p">,</span>
+    <span class="n">max_lease_ttl_seconds</span><span class="o">=</span><span class="mi">86400</span><span class="p">,</span>
+    <span class="n">path</span><span class="o">=</span><span class="s2">&quot;pki&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -30,9 +39,6 @@ the backend.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="py attribute">
 <dt id="pulumi_vault.pki_secret.SecretBackend.default_lease_ttl_seconds">
 <code class="sig-name descname">default_lease_ttl_seconds</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackend.default_lease_ttl_seconds" title="Permalink to this definition">¶</a></dt>
@@ -75,9 +81,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="py method">
@@ -121,30 +124,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_vault.pki_secret.SecretBackendCert">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.pki_secret.</code><code class="sig-name descname">SecretBackendCert</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alt_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_renew</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">common_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">exclude_cn_from_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_seconds_remaining</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">other_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_key_format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendCert" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SecretBackendCert resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>alt_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of alternative names</p></li>
-<li><p><strong>auto_renew</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, certs will be renewed if the expiration is within <code class="docutils literal notranslate"><span class="pre">min_seconds_remaining</span></code>. Default <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
-<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PKI secret backend the resource belongs to.</p></li>
-<li><p><strong>common_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CN of certificate to create</p></li>
-<li><p><strong>exclude_cn_from_sans</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Flag to exclude CN from SANs</p></li>
-<li><p><strong>format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The format of data</p></li>
-<li><p><strong>ip_sans</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of alternative IPs</p></li>
-<li><p><strong>min_seconds_remaining</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Generate a new certificate when the expiration is within this number of seconds, default is 604800 (7 days)</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the role to create the certificate against</p></li>
-<li><p><strong>other_sans</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of other SANs</p></li>
-<li><p><strong>private_key_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The private key format</p></li>
-<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time to live</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_cert.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_cert.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a SecretBackendCert resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] alt_names: List of alternative names
+:param pulumi.Input[bool] auto_renew: If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, certs will be renewed if the expiration is within <code class="docutils literal notranslate"><span class="pre">min_seconds_remaining</span></code>. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>
+:param pulumi.Input[str] backend: The PKI secret backend the resource belongs to.
+:param pulumi.Input[str] common_name: CN of certificate to create
+:param pulumi.Input[bool] exclude_cn_from_sans: Flag to exclude CN from SANs
+:param pulumi.Input[str] format: The format of data
+:param pulumi.Input[list] ip_sans: List of alternative IPs
+:param pulumi.Input[float] min_seconds_remaining: Generate a new certificate when the expiration is within this number of seconds, default is 604800 (7 days)
+:param pulumi.Input[str] name: Name of the role to create the certificate against
+:param pulumi.Input[list] other_sans: List of other SANs
+:param pulumi.Input[str] private_key_format: The private key format
+:param pulumi.Input[str] ttl: Time to live</p>
 <dl class="py attribute">
 <dt id="pulumi_vault.pki_secret.SecretBackendCert.alt_names">
 <code class="sig-name descname">alt_names</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendCert.alt_names" title="Permalink to this definition">¶</a></dt>
@@ -292,9 +286,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_cert.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_cert.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="py method">
@@ -338,20 +329,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_vault.pki_secret.SecretBackendConfigCa">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.pki_secret.</code><code class="sig-name descname">SecretBackendConfigCa</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pem_bundle</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendConfigCa" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SecretBackendConfigCa resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PKI secret backend the resource belongs to.</p></li>
-<li><p><strong>pem_bundle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key and certificate PEM bundle</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_config_ca.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_config_ca.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a SecretBackendConfigCa resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] backend: The PKI secret backend the resource belongs to.
+:param pulumi.Input[str] pem_bundle: The key and certificate PEM bundle</p>
 <dl class="py attribute">
 <dt id="pulumi_vault.pki_secret.SecretBackendConfigCa.backend">
 <code class="sig-name descname">backend</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendConfigCa.backend" title="Permalink to this definition">¶</a></dt>
@@ -380,9 +362,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_config_ca.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_config_ca.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="py method">
@@ -427,6 +406,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vault.pki_secret.SecretBackendConfigUrls">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.pki_secret.</code><code class="sig-name descname">SecretBackendConfigUrls</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">crl_distribution_points</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">issuing_certificates</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ocsp_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendConfigUrls" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows setting the issuing certificate endpoints, CRL distribution points, and OCSP server endpoints that will be encoded into issued certificates.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">pki</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">pki_secret</span><span class="o">.</span><span class="n">SecretBackend</span><span class="p">(</span><span class="s2">&quot;pki&quot;</span><span class="p">,</span>
+    <span class="n">default_lease_ttl_seconds</span><span class="o">=</span><span class="mi">3600</span><span class="p">,</span>
+    <span class="n">max_lease_ttl_seconds</span><span class="o">=</span><span class="mi">86400</span><span class="p">,</span>
+    <span class="n">path</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">config_urls</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">pki_secret</span><span class="o">.</span><span class="n">SecretBackendConfigUrls</span><span class="p">(</span><span class="s2">&quot;configUrls&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">pki</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+    <span class="n">issuing_certificates</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;http://127.0.0.1:8200/v1/pki/ca&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -439,9 +430,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_config_urls.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_config_urls.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="py attribute">
 <dt id="pulumi_vault.pki_secret.SecretBackendConfigUrls.backend">
 <code class="sig-name descname">backend</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendConfigUrls.backend" title="Permalink to this definition">¶</a></dt>
@@ -484,9 +472,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_config_urls.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_config_urls.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="py method">
@@ -531,6 +516,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vault.pki_secret.SecretBackendCrlConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.pki_secret.</code><code class="sig-name descname">SecretBackendCrlConfig</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expiry</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendCrlConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows setting the duration for which the generated CRL should be marked valid. If the CRL is disabled, it will return a signed but zero-length CRL for any request. If enabled, it will re-build the CRL.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">pki</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">Mount</span><span class="p">(</span><span class="s2">&quot;pki&quot;</span><span class="p">,</span>
+    <span class="n">default_lease_ttl_seconds</span><span class="o">=</span><span class="mi">3600</span><span class="p">,</span>
+    <span class="n">max_lease_ttl_seconds</span><span class="o">=</span><span class="mi">86400</span><span class="p">,</span>
+    <span class="n">path</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;pki&quot;</span><span class="p">)</span>
+<span class="n">crl_config</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">pki_secret</span><span class="o">.</span><span class="n">SecretBackendCrlConfig</span><span class="p">(</span><span class="s2">&quot;crlConfig&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">pki</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+    <span class="n">disable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">expiry</span><span class="o">=</span><span class="s2">&quot;72h&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -542,9 +541,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_crl_config.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_crl_config.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="py attribute">
 <dt id="pulumi_vault.pki_secret.SecretBackendCrlConfig.backend">
 <code class="sig-name descname">backend</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendCrlConfig.backend" title="Permalink to this definition">¶</a></dt>
@@ -580,9 +576,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_crl_config.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_crl_config.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="py method">
@@ -626,37 +619,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_vault.pki_secret.SecretBackendIntermediateCertRequest">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.pki_secret.</code><code class="sig-name descname">SecretBackendIntermediateCertRequest</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alt_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">common_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">exclude_cn_from_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_bits</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">locality</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">other_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ou</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">postal_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_key_format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">province</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">street_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uri_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendIntermediateCertRequest" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SecretBackendIntermediateCertRequest resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>alt_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of alternative names</p></li>
-<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PKI secret backend the resource belongs to.</p></li>
-<li><p><strong>common_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CN of intermediate to create</p></li>
-<li><p><strong>country</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The country</p></li>
-<li><p><strong>exclude_cn_from_sans</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Flag to exclude CN from SANs</p></li>
-<li><p><strong>format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The format of data</p></li>
-<li><p><strong>ip_sans</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of alternative IPs</p></li>
-<li><p><strong>key_bits</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of bits to use</p></li>
-<li><p><strong>key_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The desired key type</p></li>
-<li><p><strong>locality</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The locality</p></li>
-<li><p><strong>organization</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The organization</p></li>
-<li><p><strong>other_sans</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of other SANs</p></li>
-<li><p><strong>ou</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The organization unit</p></li>
-<li><p><strong>postal_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The postal code</p></li>
-<li><p><strong>private_key_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The private key format</p></li>
-<li><p><strong>province</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The province</p></li>
-<li><p><strong>street_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The street address</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of intermediate to create. Must be either “exported” or “internal”</p></li>
-<li><p><strong>uri_sans</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of alternative URIs</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_intermediate_cert_request.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_intermediate_cert_request.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a SecretBackendIntermediateCertRequest resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] alt_names: List of alternative names
+:param pulumi.Input[str] backend: The PKI secret backend the resource belongs to.
+:param pulumi.Input[str] common_name: CN of intermediate to create
+:param pulumi.Input[str] country: The country
+:param pulumi.Input[bool] exclude_cn_from_sans: Flag to exclude CN from SANs
+:param pulumi.Input[str] format: The format of data
+:param pulumi.Input[list] ip_sans: List of alternative IPs
+:param pulumi.Input[float] key_bits: The number of bits to use
+:param pulumi.Input[str] key_type: The desired key type
+:param pulumi.Input[str] locality: The locality
+:param pulumi.Input[str] organization: The organization
+:param pulumi.Input[list] other_sans: List of other SANs
+:param pulumi.Input[str] ou: The organization unit
+:param pulumi.Input[str] postal_code: The postal code
+:param pulumi.Input[str] private_key_format: The private key format
+:param pulumi.Input[str] province: The province
+:param pulumi.Input[str] street_address: The street address
+:param pulumi.Input[str] type: Type of intermediate to create. Must be either “exported” or “internal”
+:param pulumi.Input[list] uri_sans: List of alternative URIs</p>
 <dl class="py attribute">
 <dt id="pulumi_vault.pki_secret.SecretBackendIntermediateCertRequest.alt_names">
 <code class="sig-name descname">alt_names</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendIntermediateCertRequest.alt_names" title="Permalink to this definition">¶</a></dt>
@@ -825,9 +809,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_intermediate_cert_request.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_intermediate_cert_request.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="py method">
@@ -871,20 +852,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_vault.pki_secret.SecretBackendIntermediateSetSigned">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.pki_secret.</code><code class="sig-name descname">SecretBackendIntermediateSetSigned</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendIntermediateSetSigned" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SecretBackendIntermediateSetSigned resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PKI secret backend the resource belongs to.</p></li>
-<li><p><strong>certificate</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The certificate</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_intermediate_set_signed.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_intermediate_set_signed.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a SecretBackendIntermediateSetSigned resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] backend: The PKI secret backend the resource belongs to.
+:param pulumi.Input[str] certificate: The certificate</p>
 <dl class="py attribute">
 <dt id="pulumi_vault.pki_secret.SecretBackendIntermediateSetSigned.backend">
 <code class="sig-name descname">backend</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendIntermediateSetSigned.backend" title="Permalink to this definition">¶</a></dt>
@@ -913,9 +885,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_intermediate_set_signed.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_intermediate_set_signed.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="py method">
@@ -958,8 +927,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_vault.pki_secret.SecretBackendRole">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.pki_secret.</code><code class="sig-name descname">SecretBackendRole</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_any_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_bare_domains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_glob_domains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_ip_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_localhost</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_subdomains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_domains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_other_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_uri_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">basic_constraints_valid_for_non_ca</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_flag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">code_signing_flag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">countries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email_protection_flag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enforce_hostnames</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ext_key_usages</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">generate_lease</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_bits</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_usages</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">localities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">no_store</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">not_before_duration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organizations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organization_unit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_identifiers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">postal_codes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provinces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">require_cn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_flag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">street_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_csr_common_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_csr_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendRole" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.pki_secret.</code><code class="sig-name descname">SecretBackendRole</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_any_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_bare_domains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_glob_domains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_ip_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_localhost</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_subdomains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_domains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_other_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_uri_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">basic_constraints_valid_for_non_ca</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_flag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">code_signing_flag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">countries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email_protection_flag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enforce_hostnames</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ext_key_usages</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">generate_lease</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_bits</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_usages</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">localities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">no_store</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">not_before_duration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organization_unit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organizations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_identifiers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">postal_codes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provinces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">require_cn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_flag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">street_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_csr_common_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_csr_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendRole" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a role on an PKI Secret Backend for Vault.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">pki</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">pki_secret</span><span class="o">.</span><span class="n">SecretBackend</span><span class="p">(</span><span class="s2">&quot;pki&quot;</span><span class="p">,</span>
+    <span class="n">default_lease_ttl_seconds</span><span class="o">=</span><span class="mi">3600</span><span class="p">,</span>
+    <span class="n">max_lease_ttl_seconds</span><span class="o">=</span><span class="mi">86400</span><span class="p">,</span>
+    <span class="n">path</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">role</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">pki_secret</span><span class="o">.</span><span class="n">SecretBackendRole</span><span class="p">(</span><span class="s2">&quot;role&quot;</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="n">pki</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -991,8 +970,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to identify this role within the backend. Must be unique within the backend.</p></li>
 <li><p><strong>no_store</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Flag to not store certificates in the storage backend</p></li>
 <li><p><strong>not_before_duration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the duration by which to backdate the NotBefore property.</p></li>
-<li><p><strong>organizations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The organization of generated certificates</p></li>
 <li><p><strong>organization_unit</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The organization unit of generated certificates</p></li>
+<li><p><strong>organizations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The organization of generated certificates</p></li>
 <li><p><strong>policy_identifiers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specify the list of allowed policies IODs</p></li>
 <li><p><strong>postal_codes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The postal code of generated certificates</p></li>
 <li><p><strong>provinces</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The province of generated certificates</p></li>
@@ -1005,9 +984,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_role.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="py attribute">
 <dt id="pulumi_vault.pki_secret.SecretBackendRole.allow_any_name">
 <code class="sig-name descname">allow_any_name</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendRole.allow_any_name" title="Permalink to this definition">¶</a></dt>
@@ -1165,15 +1141,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="pulumi_vault.pki_secret.SecretBackendRole.organizations">
-<code class="sig-name descname">organizations</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendRole.organizations" title="Permalink to this definition">¶</a></dt>
-<dd><p>The organization of generated certificates</p>
-</dd></dl>
-
-<dl class="py attribute">
 <dt id="pulumi_vault.pki_secret.SecretBackendRole.organization_unit">
 <code class="sig-name descname">organization_unit</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendRole.organization_unit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The organization unit of generated certificates</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_vault.pki_secret.SecretBackendRole.organizations">
+<code class="sig-name descname">organizations</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendRole.organizations" title="Permalink to this definition">¶</a></dt>
+<dd><p>The organization of generated certificates</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1232,7 +1208,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py method">
 <dt id="pulumi_vault.pki_secret.SecretBackendRole.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_any_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_bare_domains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_glob_domains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_ip_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_localhost</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_subdomains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_domains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_other_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_uri_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">basic_constraints_valid_for_non_ca</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_flag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">code_signing_flag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">countries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email_protection_flag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enforce_hostnames</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ext_key_usages</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">generate_lease</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_bits</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_usages</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">localities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">no_store</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">not_before_duration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organizations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organization_unit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_identifiers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">postal_codes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provinces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">require_cn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_flag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">street_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_csr_common_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_csr_sans</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendRole.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_any_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_bare_domains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_glob_domains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_ip_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_localhost</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_subdomains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_domains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_other_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_uri_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">basic_constraints_valid_for_non_ca</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_flag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">code_signing_flag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">countries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email_protection_flag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enforce_hostnames</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ext_key_usages</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">generate_lease</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_bits</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_usages</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">localities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">no_store</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">not_before_duration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organization_unit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organizations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_identifiers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">postal_codes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provinces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">require_cn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_flag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">street_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_csr_common_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_csr_sans</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendRole.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SecretBackendRole resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1267,8 +1243,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to identify this role within the backend. Must be unique within the backend.</p></li>
 <li><p><strong>no_store</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Flag to not store certificates in the storage backend</p></li>
 <li><p><strong>not_before_duration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the duration by which to backdate the NotBefore property.</p></li>
-<li><p><strong>organizations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The organization of generated certificates</p></li>
 <li><p><strong>organization_unit</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The organization unit of generated certificates</p></li>
+<li><p><strong>organizations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The organization of generated certificates</p></li>
 <li><p><strong>policy_identifiers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specify the list of allowed policies IODs</p></li>
 <li><p><strong>postal_codes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The postal code of generated certificates</p></li>
 <li><p><strong>provinces</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The province of generated certificates</p></li>
@@ -1281,9 +1257,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_role.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="py method">
@@ -1327,40 +1300,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_vault.pki_secret.SecretBackendRootCert">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.pki_secret.</code><code class="sig-name descname">SecretBackendRootCert</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alt_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">common_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">exclude_cn_from_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_bits</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">locality</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_path_length</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">other_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ou</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permitted_dns_domains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">postal_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_key_format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">province</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">street_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uri_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendRootCert" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SecretBackendRootCert resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>alt_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of alternative names</p></li>
-<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PKI secret backend the resource belongs to.</p></li>
-<li><p><strong>common_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CN of intermediate to create</p></li>
-<li><p><strong>country</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The country</p></li>
-<li><p><strong>exclude_cn_from_sans</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Flag to exclude CN from SANs</p></li>
-<li><p><strong>format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The format of data</p></li>
-<li><p><strong>ip_sans</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of alternative IPs</p></li>
-<li><p><strong>key_bits</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of bits to use</p></li>
-<li><p><strong>key_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The desired key type</p></li>
-<li><p><strong>locality</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The locality</p></li>
-<li><p><strong>max_path_length</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum path length to encode in the generated certificate</p></li>
-<li><p><strong>organization</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The organization</p></li>
-<li><p><strong>other_sans</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of other SANs</p></li>
-<li><p><strong>ou</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The organization unit</p></li>
-<li><p><strong>permitted_dns_domains</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of domains for which certificates are allowed to be issued</p></li>
-<li><p><strong>postal_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The postal code</p></li>
-<li><p><strong>private_key_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The private key format</p></li>
-<li><p><strong>province</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The province</p></li>
-<li><p><strong>street_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The street address</p></li>
-<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time to live</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of intermediate to create. Must be either “exported” or “internal”</p></li>
-<li><p><strong>uri_sans</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of alternative URIs</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_root_cert.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_root_cert.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a SecretBackendRootCert resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] alt_names: List of alternative names
+:param pulumi.Input[str] backend: The PKI secret backend the resource belongs to.
+:param pulumi.Input[str] common_name: CN of intermediate to create
+:param pulumi.Input[str] country: The country
+:param pulumi.Input[bool] exclude_cn_from_sans: Flag to exclude CN from SANs
+:param pulumi.Input[str] format: The format of data
+:param pulumi.Input[list] ip_sans: List of alternative IPs
+:param pulumi.Input[float] key_bits: The number of bits to use
+:param pulumi.Input[str] key_type: The desired key type
+:param pulumi.Input[str] locality: The locality
+:param pulumi.Input[float] max_path_length: The maximum path length to encode in the generated certificate
+:param pulumi.Input[str] organization: The organization
+:param pulumi.Input[list] other_sans: List of other SANs
+:param pulumi.Input[str] ou: The organization unit
+:param pulumi.Input[list] permitted_dns_domains: List of domains for which certificates are allowed to be issued
+:param pulumi.Input[str] postal_code: The postal code
+:param pulumi.Input[str] private_key_format: The private key format
+:param pulumi.Input[str] province: The province
+:param pulumi.Input[str] street_address: The street address
+:param pulumi.Input[str] ttl: Time to live
+:param pulumi.Input[str] type: Type of intermediate to create. Must be either “exported” or “internal”
+:param pulumi.Input[list] uri_sans: List of alternative URIs</p>
 <dl class="py attribute">
 <dt id="pulumi_vault.pki_secret.SecretBackendRootCert.alt_names">
 <code class="sig-name descname">alt_names</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendRootCert.alt_names" title="Permalink to this definition">¶</a></dt>
@@ -1550,9 +1514,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_root_cert.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_root_cert.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="py method">
@@ -1597,6 +1558,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vault.pki_secret.SecretBackendRootSignIntermediate">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.pki_secret.</code><code class="sig-name descname">SecretBackendRootSignIntermediate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alt_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">common_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">csr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">exclude_cn_from_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">locality</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_path_length</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">other_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ou</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permitted_dns_domains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">postal_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">province</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">street_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uri_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_csr_values</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendRootSignIntermediate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an PKI certificate.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">root</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">pki_secret</span><span class="o">.</span><span class="n">SecretBackendRootSignIntermediate</span><span class="p">(</span><span class="s2">&quot;root&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">vault_pki_secret_backend</span><span class="p">[</span><span class="s2">&quot;root&quot;</span><span class="p">][</span><span class="s2">&quot;path&quot;</span><span class="p">],</span>
+    <span class="n">csr</span><span class="o">=</span><span class="n">vault_pki_secret_backend_intermediate_cert_request</span><span class="p">[</span><span class="s2">&quot;intermediate&quot;</span><span class="p">][</span><span class="s2">&quot;csr&quot;</span><span class="p">],</span>
+    <span class="n">common_name</span><span class="o">=</span><span class="s2">&quot;Intermediate CA&quot;</span><span class="p">,</span>
+    <span class="n">exclude_cn_from_sans</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">ou</span><span class="o">=</span><span class="s2">&quot;My OU&quot;</span><span class="p">,</span>
+    <span class="n">organization</span><span class="o">=</span><span class="s2">&quot;My organization&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1625,9 +1598,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_root_sign_intermediate.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_root_sign_intermediate.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="py attribute">
 <dt id="pulumi_vault.pki_secret.SecretBackendRootSignIntermediate.alt_names">
 <code class="sig-name descname">alt_names</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendRootSignIntermediate.alt_names" title="Permalink to this definition">¶</a></dt>
@@ -1810,9 +1780,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_root_sign_intermediate.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_root_sign_intermediate.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="py method">
@@ -1856,31 +1823,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_vault.pki_secret.SecretBackendSign">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.pki_secret.</code><code class="sig-name descname">SecretBackendSign</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alt_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_renew</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">common_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">csr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">exclude_cn_from_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_seconds_remaining</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">other_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uri_sans</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendSign" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SecretBackendSign resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>alt_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of alternative names</p></li>
-<li><p><strong>auto_renew</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, certs will be renewed if the expiration is within <code class="docutils literal notranslate"><span class="pre">min_seconds_remaining</span></code>. Default <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
-<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PKI secret backend the resource belongs to.</p></li>
-<li><p><strong>common_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CN of certificate to create</p></li>
-<li><p><strong>csr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CSR</p></li>
-<li><p><strong>exclude_cn_from_sans</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Flag to exclude CN from SANs</p></li>
-<li><p><strong>format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The format of data</p></li>
-<li><p><strong>ip_sans</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of alternative IPs</p></li>
-<li><p><strong>min_seconds_remaining</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Generate a new certificate when the expiration is within this number of seconds, default is 604800 (7 days)</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the role to create the certificate against</p></li>
-<li><p><strong>other_sans</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of other SANs</p></li>
-<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time to live</p></li>
-<li><p><strong>uri_sans</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of alterative URIs</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_sign.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_sign.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a SecretBackendSign resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] alt_names: List of alternative names
+:param pulumi.Input[bool] auto_renew: If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, certs will be renewed if the expiration is within <code class="docutils literal notranslate"><span class="pre">min_seconds_remaining</span></code>. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>
+:param pulumi.Input[str] backend: The PKI secret backend the resource belongs to.
+:param pulumi.Input[str] common_name: CN of certificate to create
+:param pulumi.Input[str] csr: The CSR
+:param pulumi.Input[bool] exclude_cn_from_sans: Flag to exclude CN from SANs
+:param pulumi.Input[str] format: The format of data
+:param pulumi.Input[list] ip_sans: List of alternative IPs
+:param pulumi.Input[float] min_seconds_remaining: Generate a new certificate when the expiration is within this number of seconds, default is 604800 (7 days)
+:param pulumi.Input[str] name: Name of the role to create the certificate against
+:param pulumi.Input[list] other_sans: List of other SANs
+:param pulumi.Input[str] ttl: Time to live
+:param pulumi.Input[list] uri_sans: List of alterative URIs</p>
 <dl class="py attribute">
 <dt id="pulumi_vault.pki_secret.SecretBackendSign.alt_names">
 <code class="sig-name descname">alt_names</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendSign.alt_names" title="Permalink to this definition">¶</a></dt>
@@ -2021,9 +1979,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_sign.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_sign.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="py method">

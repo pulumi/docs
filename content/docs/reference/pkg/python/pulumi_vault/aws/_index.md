@@ -286,6 +286,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Configures the periodic tidying operation of the whitelisted identity entries.</p>
 <p>For more information, see the
 <a class="reference external" href="https://www.vaultproject.io/api/auth/aws/index.html#configure-identity-whitelist-tidy-operation">Vault docs</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">example_auth_backend</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">AuthBackend</span><span class="p">(</span><span class="s2">&quot;exampleAuthBackend&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;aws&quot;</span><span class="p">)</span>
+<span class="n">example_auth_backend_identity_whitelist</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">aws</span><span class="o">.</span><span class="n">AuthBackendIdentityWhitelist</span><span class="p">(</span><span class="s2">&quot;exampleAuthBackendIdentityWhitelist&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">example_auth_backend</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+    <span class="n">safety_buffer</span><span class="o">=</span><span class="mi">3600</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -388,6 +397,37 @@ a format of their choosing before sending those properties to the Pulumi engine.
 accomplished using a signed identity request from IAM or using ec2
 instance metadata. For more information, see the <a class="reference external" href="https://www.vaultproject.io/docs/auth/aws.html">Vault
 documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">aws</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">AuthBackend</span><span class="p">(</span><span class="s2">&quot;aws&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;aws&quot;</span><span class="p">)</span>
+<span class="n">example_auth_backend_client</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">aws</span><span class="o">.</span><span class="n">AuthBackendClient</span><span class="p">(</span><span class="s2">&quot;exampleAuthBackendClient&quot;</span><span class="p">,</span>
+    <span class="n">access_key</span><span class="o">=</span><span class="s2">&quot;123456789012&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">aws</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+    <span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;AWSSECRETKEYGOESHERE&quot;</span><span class="p">)</span>
+<span class="n">example_auth_backend_role</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">aws</span><span class="o">.</span><span class="n">AuthBackendRole</span><span class="p">(</span><span class="s2">&quot;exampleAuthBackendRole&quot;</span><span class="p">,</span>
+    <span class="n">auth_type</span><span class="o">=</span><span class="s2">&quot;ec2&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">aws</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+    <span class="n">bound_account_id</span><span class="o">=</span><span class="s2">&quot;123456789012&quot;</span><span class="p">,</span>
+    <span class="n">bound_ami_id</span><span class="o">=</span><span class="s2">&quot;ami-8c1be5f6&quot;</span><span class="p">,</span>
+    <span class="n">bound_iam_instance_profile_arn</span><span class="o">=</span><span class="s2">&quot;arn:aws:iam::123456789012:instance-profile/MyProfile&quot;</span><span class="p">,</span>
+    <span class="n">bound_subnet_id</span><span class="o">=</span><span class="s2">&quot;vpc-133128f1&quot;</span><span class="p">,</span>
+    <span class="n">bound_vpc_id</span><span class="o">=</span><span class="s2">&quot;vpc-b61106d4&quot;</span><span class="p">,</span>
+    <span class="n">max_ttl</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;test-role&quot;</span><span class="p">,</span>
+    <span class="n">token_policies</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;prod&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+<span class="n">example_auth_backend_login</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">aws</span><span class="o">.</span><span class="n">AuthBackendLogin</span><span class="p">(</span><span class="s2">&quot;exampleAuthBackendLogin&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">vault_auth_backend</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;path&quot;</span><span class="p">],</span>
+    <span class="n">identity</span><span class="o">=</span><span class="s2">&quot;BASE64ENCODEDIDENTITYDOCUMENT&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">example_auth_backend_role</span><span class="o">.</span><span class="n">role</span><span class="p">,</span>
+    <span class="n">signature</span><span class="o">=</span><span class="s2">&quot;BASE64ENCODEDSHA256IDENTITYDOCUMENTSIGNATURE&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -640,6 +680,31 @@ instances or principals that can perform the login operation against the
 backend. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/aws.html">Vault
 documentation</a> for more
 information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">aws</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">AuthBackend</span><span class="p">(</span><span class="s2">&quot;aws&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;aws&quot;</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">aws</span><span class="o">.</span><span class="n">AuthBackendRole</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">aws</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;test-role&quot;</span><span class="p">,</span>
+    <span class="n">auth_type</span><span class="o">=</span><span class="s2">&quot;iam&quot;</span><span class="p">,</span>
+    <span class="n">bound_ami_ids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ami-8c1be5f6&quot;</span><span class="p">],</span>
+    <span class="n">bound_account_ids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;123456789012&quot;</span><span class="p">],</span>
+    <span class="n">bound_vpc_ids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;vpc-b61106d4&quot;</span><span class="p">],</span>
+    <span class="n">bound_subnet_ids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;vpc-133128f1&quot;</span><span class="p">],</span>
+    <span class="n">bound_iam_role_arns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;arn:aws:iam::123456789012:role/MyRole&quot;</span><span class="p">],</span>
+    <span class="n">bound_iam_instance_profile_arns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;arn:aws:iam::123456789012:instance-profile/MyProfile&quot;</span><span class="p">],</span>
+    <span class="n">inferred_entity_type</span><span class="o">=</span><span class="s2">&quot;ec2_instance&quot;</span><span class="p">,</span>
+    <span class="n">inferred_aws_region</span><span class="o">=</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">,</span>
+    <span class="n">token_ttl</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+    <span class="n">token_max_ttl</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span>
+    <span class="n">token_policies</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;prod&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1179,6 +1244,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vault.aws.AuthBackendRoleTag">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.aws.</code><code class="sig-name descname">AuthBackendRoleTag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_instance_migration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disallow_reauthentication</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.aws.AuthBackendRoleTag" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads role tag information from an AWS auth backend in Vault.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">aws</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">AuthBackend</span><span class="p">(</span><span class="s2">&quot;aws&quot;</span><span class="p">,</span>
+    <span class="n">path</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;aws&quot;</span><span class="p">)</span>
+<span class="n">role</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">aws</span><span class="o">.</span><span class="n">AuthBackendRole</span><span class="p">(</span><span class="s2">&quot;role&quot;</span><span class="p">,</span>
+    <span class="n">auth_type</span><span class="o">=</span><span class="s2">&quot;ec2&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">aws</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+    <span class="n">bound_account_id</span><span class="o">=</span><span class="s2">&quot;123456789012&quot;</span><span class="p">,</span>
+    <span class="n">policies</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;prod&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;qa&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">role_tag</span><span class="o">=</span><span class="s2">&quot;VaultRoleTag&quot;</span><span class="p">)</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">aws</span><span class="o">.</span><span class="n">AuthBackendRoleTag</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">aws</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="s2">&quot;i-1234567&quot;</span><span class="p">,</span>
+    <span class="n">max_ttl</span><span class="o">=</span><span class="s2">&quot;1h&quot;</span><span class="p">,</span>
+    <span class="n">policies</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;prod&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">role</span><span class="o">.</span><span class="n">role</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1321,6 +1416,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vault.aws.AuthBackendRoletagBlacklist">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.aws.</code><code class="sig-name descname">AuthBackendRoletagBlacklist</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_periodic_tidy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">safety_buffer</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.aws.AuthBackendRoletagBlacklist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configures the periodic tidying operation of the blacklisted role tag entries.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">example_auth_backend</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">AuthBackend</span><span class="p">(</span><span class="s2">&quot;exampleAuthBackend&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;aws&quot;</span><span class="p">)</span>
+<span class="n">example_auth_backend_roletag_blacklist</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">aws</span><span class="o">.</span><span class="n">AuthBackendRoletagBlacklist</span><span class="p">(</span><span class="s2">&quot;exampleAuthBackendRoletagBlacklist&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">example_auth_backend</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+    <span class="n">safety_buffer</span><span class="o">=</span><span class="mi">360</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

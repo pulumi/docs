@@ -26,7 +26,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+example = vault.Policy("example", policy="""path "secret/my_app" {
+  capabilities = ["write"]
+}
+
+""")
+```
 {{% /example %}}
 
 {{% example typescript %}}

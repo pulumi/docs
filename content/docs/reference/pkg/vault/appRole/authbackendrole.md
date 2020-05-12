@@ -14,9 +14,57 @@ Manages an AppRole auth backend role in a Vault server. See the [Vault
 documentation](https://www.vaultproject.io/docs/auth/approle.html) for more
 information.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_vault as vault
+
+approle = vault.AuthBackend("approle", type="approle")
+example = vault.app_role.AuthBackendRole("example",
+    backend=approle.path,
+    role_name="test-role",
+    token_policies=[
+        "default",
+        "dev",
+        "prod",
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+
+const approle = new vault.AuthBackend("approle", {type: "approle"});
+const example = new vault.appRole.AuthBackendRole("example", {
+    backend: approle.path,
+    roleName: "test-role",
+    tokenPolicies: [
+        "default",
+        "dev",
+        "prod",
+    ],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AuthBackendRole Resource {#create}

@@ -30,7 +30,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+ns1 = vault.Namespace("ns1", path="ns1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

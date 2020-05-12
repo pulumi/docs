@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+example_auth_backend = vault.AuthBackend("exampleAuthBackend", type="aws")
+example_auth_backend_roletag_blacklist = vault.aws.AuthBackendRoletagBlacklist("exampleAuthBackendRoletagBlacklist",
+    backend=example_auth_backend.path,
+    safety_buffer=360)
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+role = vault.appRole.get_auth_backend_role_id(backend="my-approle-backend",
+    role_name="my-role")
+pulumi.export("role-id", role.role_id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

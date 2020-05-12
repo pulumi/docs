@@ -30,7 +30,26 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+db = vault.Mount("db",
+    path="postgres",
+    type="database")
+postgres = vault.database.SecretBackendConnection("postgres",
+    allowed_roles=["*"],
+    backend=db.path,
+    postgresql={
+        "connectionUrl": "postgres://username:password@host:port/database",
+    })
+static_role = vault.database.SecretBackendStaticRole("staticRole",
+    backend=db.path,
+    db_name=postgres.name,
+    rotation_period="3600",
+    rotation_statements=["ALTER USER \"{{name}}\" WITH PASSWORD '{{password}}';"],
+    username="example")
+```
 {{% /example %}}
 
 {{% example typescript %}}

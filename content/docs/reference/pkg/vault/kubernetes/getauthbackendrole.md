@@ -30,7 +30,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+role = vault.kubernetes.get_auth_backend_role(backend="my-kubernetes-backend",
+    role_name="my-role")
+pulumi.export("policies", role.policies)
+```
 {{% /example %}}
 
 {{% example typescript %}}

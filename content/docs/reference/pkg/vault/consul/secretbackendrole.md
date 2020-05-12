@@ -12,9 +12,56 @@ meta_desc: "Explore the SecretBackendRole resource of the consul module, includi
 
 Manages a Consul secrets role for a Consul secrets engine in Vault. Consul secret backends can then issue Consul tokens.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_vault as vault
+
+test = vault.consul.SecretBackend("test",
+    path="consul",
+    description="Manages the Consul backend",
+    address="127.0.0.1:8500",
+    token="4240861b-ce3d-8530-115a-521ff070dd29")
+example = vault.consul.SecretBackendRole("example",
+    backend=test.path,
+    policies=["example-policy"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+
+const test = new vault.consul.SecretBackend("test", {
+    path: "consul",
+    description: "Manages the Consul backend",
+    address: "127.0.0.1:8500",
+    token: "4240861b-ce3d-8530-115a-521ff070dd29",
+});
+const example = new vault.consul.SecretBackendRole("example", {
+    backend: test.path,
+    policies: ["example-policy"],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SecretBackendRole Resource {#create}

@@ -16,29 +16,22 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_vault.jwt"></span><dl class="py class">
 <dt id="pulumi_vault.jwt.AuthBackend">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.jwt.</code><code class="sig-name descname">AuthBackend</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bound_issuer</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">jwks_ca_pem</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">jwks_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">jwt_supported_algs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">jwt_validation_pubkeys</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oidc_client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oidc_client_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oidc_discovery_ca_pem</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oidc_discovery_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tune</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.jwt.AuthBackend" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource for managing an
-<a class="reference external" href="https://www.vaultproject.io/docs/auth/jwt.html">JWT auth backend within Vault</a>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>bound_issuer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value against which to match the iss claim in a JWT</p></li>
-<li><p><strong>default_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default role to use if none is provided during login</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the auth backend</p></li>
-<li><p><strong>jwks_ca_pem</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CA certificate or chain of certificates, in PEM format, to use to validate connections to the JWKS URL. If not set, system certificates are used.</p></li>
-<li><p><strong>jwks_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – JWKS URL to use to authenticate signatures. Cannot be used with “oidc_discovery_url” or “jwt_validation_pubkeys”.</p></li>
-<li><p><strong>jwt_supported_algs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of supported signing algorithms. Vault 1.1.0 defaults to [RS256] but future or past versions of Vault may differ</p></li>
-<li><p><strong>jwt_validation_pubkeys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with <code class="docutils literal notranslate"><span class="pre">oidc_discovery_url</span></code></p></li>
-<li><p><strong>oidc_client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Client ID used for OIDC backends</p></li>
-<li><p><strong>oidc_client_secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Client Secret used for OIDC backends</p></li>
-<li><p><strong>oidc_discovery_ca_pem</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CA certificate or chain of certificates, in PEM format, to use to validate connections to the OIDC Discovery URL. If not set, system certificates are used</p></li>
-<li><p><strong>oidc_discovery_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The OIDC Discovery URL, without any .well-known component (base path). Cannot be used in combination with <code class="docutils literal notranslate"><span class="pre">jwt_validation_pubkeys</span></code></p></li>
-<li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Path to mount the JWT/OIDC auth backend</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of auth backend. Should be one of <code class="docutils literal notranslate"><span class="pre">jwt</span></code> or <code class="docutils literal notranslate"><span class="pre">oidc</span></code>. Default - <code class="docutils literal notranslate"><span class="pre">jwt</span></code></p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a AuthBackend resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] bound_issuer: The value against which to match the iss claim in a JWT
+:param pulumi.Input[str] default_role: The default role to use if none is provided during login
+:param pulumi.Input[str] description: The description of the auth backend
+:param pulumi.Input[str] jwks_ca_pem: The CA certificate or chain of certificates, in PEM format, to use to validate connections to the JWKS URL. If not set, system certificates are used.
+:param pulumi.Input[str] jwks_url: JWKS URL to use to authenticate signatures. Cannot be used with “oidc_discovery_url” or “jwt_validation_pubkeys”.
+:param pulumi.Input[list] jwt_supported_algs: A list of supported signing algorithms. Vault 1.1.0 defaults to [RS256] but future or past versions of Vault may differ
+:param pulumi.Input[list] jwt_validation_pubkeys: A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with <code class="docutils literal notranslate"><span class="pre">oidc_discovery_url</span></code>
+:param pulumi.Input[str] oidc_client_id: Client ID used for OIDC backends
+:param pulumi.Input[str] oidc_client_secret: Client Secret used for OIDC backends
+:param pulumi.Input[str] oidc_discovery_ca_pem: The CA certificate or chain of certificates, in PEM format, to use to validate connections to the OIDC Discovery URL. If not set, system certificates are used
+:param pulumi.Input[str] oidc_discovery_url: The OIDC Discovery URL, without any .well-known component (base path). Cannot be used in combination with <code class="docutils literal notranslate"><span class="pre">jwt_validation_pubkeys</span></code>
+:param pulumi.Input[str] path: Path to mount the JWT/OIDC auth backend
+:param pulumi.Input[str] type: Type of auth backend. Should be one of <code class="docutils literal notranslate"><span class="pre">jwt</span></code> or <code class="docutils literal notranslate"><span class="pre">oidc</span></code>. Default - <code class="docutils literal notranslate"><span class="pre">jwt</span></code></p>
 <p>The <strong>tune</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allowedResponseHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of headers to whitelist and allowing
@@ -239,6 +232,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages an JWT/OIDC auth backend role in a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/jwt.html">Vault
 documentation</a> for more
 information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">jwt</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">jwt</span><span class="o">.</span><span class="n">AuthBackend</span><span class="p">(</span><span class="s2">&quot;jwt&quot;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;jwt&quot;</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">jwt</span><span class="o">.</span><span class="n">AuthBackendRole</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">jwt</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+    <span class="n">role_name</span><span class="o">=</span><span class="s2">&quot;test-role&quot;</span><span class="p">,</span>
+    <span class="n">token_policies</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;prod&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">bound_audiences</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;https://myco.test&quot;</span><span class="p">],</span>
+    <span class="n">user_claim</span><span class="o">=</span><span class="s2">&quot;https://vault/user&quot;</span><span class="p">,</span>
+    <span class="n">role_type</span><span class="o">=</span><span class="s2">&quot;jwt&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

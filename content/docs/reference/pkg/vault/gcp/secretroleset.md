@@ -30,7 +30,25 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+project = "my-awesome-project"
+gcp = vault.gcp.SecretBackend("gcp",
+    credentials=(lambda path: open(path).read())("credentials.json"),
+    path="gcp")
+roleset = vault.gcp.SecretRoleset("roleset",
+    backend=gcp.path,
+    bindings=[{
+        "resource": f"//cloudresourcemanager.googleapis.com/projects/{project}",
+        "roles": ["roles/viewer"],
+    }],
+    project=project,
+    roleset="project_viewer",
+    secret_type="access_token",
+    token_scopes=["https://www.googleapis.com/auth/cloud-platform"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

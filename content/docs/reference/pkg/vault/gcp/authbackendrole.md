@@ -12,9 +12,56 @@ meta_desc: "Explore the AuthBackendRole resource of the gcp module, including ex
 
 Provides a resource to create a role in an [GCP auth backend within Vault](https://www.vaultproject.io/docs/auth/gcp.html).
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_vault as vault
+
+gcp_auth_backend = vault.AuthBackend("gcpAuthBackend",
+    path="gcp",
+    type="gcp")
+gcp_auth_backend_role = vault.gcp.AuthBackendRole("gcpAuthBackendRole",
+    backend=gcp_auth_backend.path,
+    project_id="foo-bar-baz",
+    bound_service_accounts=["database-server@foo-bar-baz.iam.gserviceaccount.com"],
+    token_policies=["database-server"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+
+const gcpAuthBackend = new vault.AuthBackend("gcpAuthBackend", {
+    path: "gcp",
+    type: "gcp",
+});
+const gcpAuthBackendRole = new vault.gcp.AuthBackendRole("gcpAuthBackendRole", {
+    backend: gcpAuthBackend.path,
+    projectId: "foo-bar-baz",
+    boundServiceAccounts: ["database-server@foo-bar-baz.iam.gserviceaccount.com"],
+    tokenPolicies: ["database-server"],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AuthBackendRole Resource {#create}

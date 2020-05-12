@@ -28,7 +28,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+transit = vault.Mount("transit",
+    default_lease_ttl_seconds=3600,
+    description="Example description",
+    max_lease_ttl_seconds=86400,
+    path="transit",
+    type="transit")
+key = vault.transit.SecretBackendKey("key", backend=transit.path)
+```
 {{% /example %}}
 
 {{% example typescript %}}

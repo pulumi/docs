@@ -12,9 +12,67 @@ meta_desc: "Explore the CertAuthBackendRole resource of the Vault package, inclu
 
 Provides a resource to create a role in an [Cert auth backend within Vault](https://www.vaultproject.io/docs/auth/cert.html).
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_vault as vault
+
+cert_auth_backend = vault.AuthBackend("certAuthBackend",
+    path="cert",
+    type="cert")
+cert_cert_auth_backend_role = vault.CertAuthBackendRole("certCertAuthBackendRole",
+    certificate=(lambda path: open(path).read())("/path/to/certs/ca-cert.pem"),
+    backend=cert_auth_backend.path,
+    allowed_names=[
+        "foo.example.org",
+        "baz.example.org",
+    ],
+    token_ttl=300,
+    token_max_ttl=600,
+    token_policies=["foo"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+import * from "fs";
+
+const certAuthBackend = new vault.AuthBackend("certAuthBackend", {
+    path: "cert",
+    type: "cert",
+});
+const certCertAuthBackendRole = new vault.CertAuthBackendRole("certCertAuthBackendRole", {
+    certificate: fs.readFileSync("/path/to/certs/ca-cert.pem"),
+    backend: certAuthBackend.path,
+    allowedNames: [
+        "foo.example.org",
+        "baz.example.org",
+    ],
+    tokenTtl: 300,
+    tokenMaxTtl: 600,
+    tokenPolicies: ["foo"],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CertAuthBackendRole Resource {#create}

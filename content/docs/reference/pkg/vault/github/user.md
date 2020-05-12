@@ -14,9 +14,55 @@ Manages policy mappings for Github Users authenticated via Github. See the [Vaul
 documentation](https://www.vaultproject.io/docs/auth/github.html) for more
 information.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_vault as vault
+
+example = vault.github.AuthBackend("example", organization="myorg")
+tf_user = vault.github.User("tfUser",
+    backend=example.id,
+    user="john.doe",
+    token_policies=[
+        "developer",
+        "read-only",
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+
+const example = new vault.github.AuthBackend("example", {organization: "myorg"});
+const tfUser = new vault.github.User("tfUser", {
+    backend: example.id,
+    user: "john.doe",
+    tokenPolicies: [
+        "developer",
+        "read-only",
+    ],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a User Resource {#create}

@@ -211,6 +211,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vault.identity.EntityPolicies">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">EntityPolicies</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entity_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">exclusive</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.EntityPolicies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages policies for an Identity Entity for Vault. The <a class="reference external" href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity secrets engine</a> is the identity management solution for Vault.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">entity</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">Entity</span><span class="p">(</span><span class="s2">&quot;entity&quot;</span><span class="p">,</span> <span class="n">external_policies</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">policies</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">EntityPolicies</span><span class="p">(</span><span class="s2">&quot;policies&quot;</span><span class="p">,</span>
+    <span class="n">policies</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">exclusive</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">entity_id</span><span class="o">=</span><span class="n">entity</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">entity</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">Entity</span><span class="p">(</span><span class="s2">&quot;entity&quot;</span><span class="p">,</span> <span class="n">external_policies</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">EntityPolicies</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">policies</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">exclusive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">entity_id</span><span class="o">=</span><span class="n">entity</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">others</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">EntityPolicies</span><span class="p">(</span><span class="s2">&quot;others&quot;</span><span class="p">,</span>
+    <span class="n">policies</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;others&quot;</span><span class="p">],</span>
+    <span class="n">exclusive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">entity_id</span><span class="o">=</span><span class="n">entity</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -515,6 +545,31 @@ Vault, serialized in JSON format.</p>
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">external_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">member_entity_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">member_group_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Identity Group for Vault. The <a class="reference external" href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity secrets engine</a> is the identity management solution for Vault.</p>
 <p>A group can contain multiple entities as its members. A group can also have subgroups. Policies set on the group is granted to all members of the group. During request time, when the token’s entity ID is being evaluated for the policies that it has access to; along with the policies on the entity itself, policies that are inherited due to group memberships are also granted.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">internal</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;internal&quot;</span><span class="p">,</span>
+    <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">policies</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;internal&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">group</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span>
+    <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">policies</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">],</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;external&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -638,6 +693,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">GroupAlias</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">canonical_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mount_accessor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.GroupAlias" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Identity Group Alias for Vault. The <a class="reference external" href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity secrets engine</a> is the identity management solution for Vault.</p>
 <p>Group aliases allows entity membership in external groups to be managed semi-automatically. External group serves as a mapping to a group that is outside of the identity store. External groups can have one (and only one) alias. This alias should map to a notion of group that is outside of the identity store. For example, groups in LDAP, and teams in GitHub. A username in LDAP, belonging to a group in LDAP, can get its entity ID added as a member of a group in Vault automatically during logins and token renewals. This works only if the group in Vault is an external group and has an alias that maps to the group in LDAP. If the user is removed from the group in LDAP, that change gets reflected in Vault only upon the subsequent login or renewal operation.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">group</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span>
+    <span class="n">policies</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">],</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;external&quot;</span><span class="p">)</span>
+<span class="n">github</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">AuthBackend</span><span class="p">(</span><span class="s2">&quot;github&quot;</span><span class="p">,</span>
+    <span class="n">path</span><span class="o">=</span><span class="s2">&quot;github&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;github&quot;</span><span class="p">)</span>
+<span class="n">group_alias</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">GroupAlias</span><span class="p">(</span><span class="s2">&quot;group-alias&quot;</span><span class="p">,</span>
+    <span class="n">canonical_id</span><span class="o">=</span><span class="n">group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">mount_accessor</span><span class="o">=</span><span class="n">github</span><span class="o">.</span><span class="n">accessor</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Github_Team_Slug&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -728,6 +798,46 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vault.identity.GroupPolicies">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">GroupPolicies</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">exclusive</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.GroupPolicies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages policies for an Identity Group for Vault. The <a class="reference external" href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity secrets engine</a> is the identity management solution for Vault.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">internal</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;internal&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;internal&quot;</span><span class="p">,</span>
+    <span class="n">external_policies</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">policies</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">GroupPolicies</span><span class="p">(</span><span class="s2">&quot;policies&quot;</span><span class="p">,</span>
+    <span class="n">policies</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">exclusive</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">group_id</span><span class="o">=</span><span class="n">internal</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">internal</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;internal&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;internal&quot;</span><span class="p">,</span>
+    <span class="n">external_policies</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">GroupPolicies</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">policies</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">exclusive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">group_id</span><span class="o">=</span><span class="n">internal</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">others</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">GroupPolicies</span><span class="p">(</span><span class="s2">&quot;others&quot;</span><span class="p">,</span>
+    <span class="n">policies</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;others&quot;</span><span class="p">],</span>
+    <span class="n">exclusive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">group_id</span><span class="o">=</span><span class="n">internal</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -830,6 +940,12 @@ the clients who are recognized by Vault.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Each Vault server may only have one Identity Tokens Backend configuration. Multiple configurations of the resource against the same Vault server will cause a perpetual difference.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">server</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">Oidc</span><span class="p">(</span><span class="s2">&quot;server&quot;</span><span class="p">,</span> <span class="n">issuer</span><span class="o">=</span><span class="s2">&quot;https://www.acme.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

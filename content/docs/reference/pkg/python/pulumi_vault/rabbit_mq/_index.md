@@ -16,15 +16,17 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_vault.rabbit_mq"></span><dl class="py class">
 <dt id="pulumi_vault.rabbit_mq.SecretBackend">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.rabbit_mq.</code><code class="sig-name descname">SecretBackend</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_lease_ttl_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_lease_ttl_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verify_connection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.rabbit_mq.SecretBackend" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SecretBackend resource with the given unique name, props, and options.</p>
+<dd><p>Create a SecretBackend resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] connection_uri: Specifies the RabbitMQ connection URI.
+:param pulumi.Input[float] default_lease_ttl_seconds: The default TTL for credentials</p>
+<blockquote>
+<div><p>issued by this backend.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>connection_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the RabbitMQ connection URI.</p></li>
-<li><p><strong>default_lease_ttl_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The default TTL for credentials
-issued by this backend.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-friendly description for this backend.</p></li>
 <li><p><strong>max_lease_ttl_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum TTL that can be requested
 for credentials issued by this backend.</p></li>
@@ -37,9 +39,6 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">true</s
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/rabbitmq_secret_backend.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/rabbitmq_secret_backend.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="py attribute">
 <dt id="pulumi_vault.rabbit_mq.SecretBackend.connection_uri">
 <code class="sig-name descname">connection_uri</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.rabbit_mq.SecretBackend.connection_uri" title="Permalink to this definition">¶</a></dt>
@@ -118,9 +117,6 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">true</s
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/rabbitmq_secret_backend.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/rabbitmq_secret_backend.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="py method">
@@ -164,17 +160,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_vault.rabbit_mq.SecretBackendRole">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.rabbit_mq.</code><code class="sig-name descname">SecretBackendRole</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vhosts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.rabbit_mq.SecretBackendRole" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SecretBackendRole resource with the given unique name, props, and options.</p>
+<dd><p>Create a SecretBackendRole resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] backend: The path the RabbitMQ secret backend is mounted at,</p>
+<blockquote>
+<div><p>with no leading or trailing <code class="docutils literal notranslate"><span class="pre">/</span></code>s.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path the RabbitMQ secret backend is mounted at,
-with no leading or trailing <code class="docutils literal notranslate"><span class="pre">/</span></code>s.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to identify this role within the backend.
 Must be unique within the backend.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a comma-separated RabbitMQ management tags.</p></li>
+<li><p><strong>vhosts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies a map of virtual hosts to permissions.</p></li>
 </ul>
 </dd>
 </dl>
@@ -185,9 +184,6 @@ Must be unique within the backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">write</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/rabbitmq_secret_backend_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/rabbitmq_secret_backend_role.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="py attribute">
 <dt id="pulumi_vault.rabbit_mq.SecretBackendRole.backend">
 <code class="sig-name descname">backend</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.rabbit_mq.SecretBackendRole.backend" title="Permalink to this definition">¶</a></dt>
@@ -208,6 +204,18 @@ Must be unique within the backend.</p>
 <dd><p>Specifies a comma-separated RabbitMQ management tags.</p>
 </dd></dl>
 
+<dl class="py attribute">
+<dt id="pulumi_vault.rabbit_mq.SecretBackendRole.vhosts">
+<code class="sig-name descname">vhosts</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.rabbit_mq.SecretBackendRole.vhosts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies a map of virtual hosts to permissions.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">configure</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pulumi_vault.rabbit_mq.SecretBackendRole.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vhosts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.rabbit_mq.SecretBackendRole.get" title="Permalink to this definition">¶</a></dt>
@@ -224,6 +232,7 @@ with no leading or trailing <code class="docutils literal notranslate"><span cla
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to identify this role within the backend.
 Must be unique within the backend.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a comma-separated RabbitMQ management tags.</p></li>
+<li><p><strong>vhosts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies a map of virtual hosts to permissions.</p></li>
 </ul>
 </dd>
 </dl>
@@ -234,9 +243,6 @@ Must be unique within the backend.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">write</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/rabbitmq_secret_backend_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/rabbitmq_secret_backend_role.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="py method">

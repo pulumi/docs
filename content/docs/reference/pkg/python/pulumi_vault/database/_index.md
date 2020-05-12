@@ -802,6 +802,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Creates a Database Secret Backend static role in Vault. Database secret backend
 static roles can be used to manage 1-to-1 mapping of a Vault Role to a user in a
 database for the database.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">db</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">Mount</span><span class="p">(</span><span class="s2">&quot;db&quot;</span><span class="p">,</span>
+    <span class="n">path</span><span class="o">=</span><span class="s2">&quot;postgres&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;database&quot;</span><span class="p">)</span>
+<span class="n">postgres</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">database</span><span class="o">.</span><span class="n">SecretBackendConnection</span><span class="p">(</span><span class="s2">&quot;postgres&quot;</span><span class="p">,</span>
+    <span class="n">allowed_roles</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+    <span class="n">postgresql</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;connectionUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;postgres://username:password@host:port/database&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">static_role</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">database</span><span class="o">.</span><span class="n">SecretBackendStaticRole</span><span class="p">(</span><span class="s2">&quot;staticRole&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+    <span class="n">db_name</span><span class="o">=</span><span class="n">postgres</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">rotation_period</span><span class="o">=</span><span class="s2">&quot;3600&quot;</span><span class="p">,</span>
+    <span class="n">rotation_statements</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ALTER USER &quot;</span><span class="p">&#x7B;&#x7B;</span><span class="n">name</span><span class="p">&#x7D;&#x7D;</span><span class="s2">&quot; WITH PASSWORD &#39;{{password}}&#39;;&quot;</span><span class="p">],</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

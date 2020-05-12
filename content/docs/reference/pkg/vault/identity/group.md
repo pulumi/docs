@@ -30,7 +30,20 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+internal = vault.identity.Group("internal",
+    metadata={
+        "version": "2",
+    },
+    policies=[
+        "dev",
+        "test",
+    ],
+    type="internal")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -61,7 +74,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+group = vault.identity.Group("group",
+    metadata={
+        "version": "1",
+    },
+    policies=["test"],
+    type="external")
+```
 {{% /example %}}
 
 {{% example typescript %}}

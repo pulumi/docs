@@ -16,18 +16,19 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_vault.okta"></span><dl class="py class">
 <dt id="pulumi_vault.okta.AuthBackend">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.okta.</code><code class="sig-name descname">AuthBackend</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">base_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bypass_okta_mfa</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">users</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.okta.AuthBackend" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource for managing an
-<a class="reference external" href="https://www.vaultproject.io/docs/auth/okta.html">Okta auth backend within Vault</a>.</p>
+<dd><p>Create a AuthBackend resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] base_url: The Okta url. Examples: oktapreview.com, okta.com
+:param pulumi.Input[bool] bypass_okta_mfa: When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account, such as whether the password is expired.
+:param pulumi.Input[str] description: The description of the auth backend
+:param pulumi.Input[list] groups: Associate Okta groups with policies within Vault.</p>
+<blockquote>
+<div><p>See below for more details.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>base_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Okta url. Examples: oktapreview.com, okta.com</p></li>
-<li><p><strong>bypass_okta_mfa</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account, such as whether the password is expired.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the auth backend</p></li>
-<li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Associate Okta groups with policies within Vault.
-See below for more details.</p></li>
 <li><p><strong>max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Maximum duration after which authentication will be expired
 <a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">See the documentation for info on valid duration formats</a>.</p></li>
 <li><p><strong>organization</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Okta organization. This will be the first part of the url <code class="docutils literal notranslate"><span class="pre">https://XXX.okta.com</span></code></p></li>
@@ -222,6 +223,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.okta.</code><code class="sig-name descname">AuthBackendGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.okta.AuthBackendGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create a group in an
 <a class="reference external" href="https://www.vaultproject.io/docs/auth/okta.html">Okta auth backend within Vault</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">okta</span><span class="o">.</span><span class="n">AuthBackend</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">organization</span><span class="o">=</span><span class="s2">&quot;dummy&quot;</span><span class="p">,</span>
+    <span class="n">path</span><span class="o">=</span><span class="s2">&quot;group_okta&quot;</span><span class="p">)</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">okta</span><span class="o">.</span><span class="n">AuthBackendGroup</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">group_name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">path</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+    <span class="n">policies</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;one&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;two&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -313,6 +329,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.okta.</code><code class="sig-name descname">AuthBackendUser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.okta.AuthBackendUser" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create a user in an
 <a class="reference external" href="https://www.vaultproject.io/docs/auth/okta.html">Okta auth backend within Vault</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">okta</span><span class="o">.</span><span class="n">AuthBackend</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">organization</span><span class="o">=</span><span class="s2">&quot;dummy&quot;</span><span class="p">,</span>
+    <span class="n">path</span><span class="o">=</span><span class="s2">&quot;user_okta&quot;</span><span class="p">)</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">okta</span><span class="o">.</span><span class="n">AuthBackendUser</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">groups</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;one&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;two&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">path</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

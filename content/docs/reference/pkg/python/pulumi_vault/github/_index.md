@@ -19,6 +19,12 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Manages a Github Auth mount in a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/github.html">Vault
 documentation</a> for more
 information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">AuthBackend</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">organization</span><span class="o">=</span><span class="s2">&quot;myorg&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -319,16 +325,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_vault.github.Team">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.github.</code><code class="sig-name descname">Team</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_bound_cidrs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_explicit_max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_no_default_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_num_uses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.github.Team" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages policy mappings for Github Teams authenticated via Github. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/github.html">Vault
-documentation</a> for more
-information.</p>
+<dd><p>Create a Team resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] backend: Path where the github auth backend is mounted. Defaults to <code class="docutils literal notranslate"><span class="pre">github</span></code></p>
+<blockquote>
+<div><p>if not specified.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Path where the github auth backend is mounted. Defaults to <code class="docutils literal notranslate"><span class="pre">github</span></code>
-if not specified.</p></li>
 <li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of strings specifying the policies to be set on tokens
 issued using this role.</p></li>
 <li><p><strong>team</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – GitHub team name in “slugified” format.</p></li>
@@ -492,6 +498,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages policy mappings for Github Users authenticated via Github. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/github.html">Vault
 documentation</a> for more
 information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">AuthBackend</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">organization</span><span class="o">=</span><span class="s2">&quot;myorg&quot;</span><span class="p">)</span>
+<span class="n">tf_user</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;tfUser&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="s2">&quot;john.doe&quot;</span><span class="p">,</span>
+    <span class="n">token_policies</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;developer&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;read-only&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

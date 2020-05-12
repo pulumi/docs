@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+gcp = vault.gcp.AuthBackend("gcp", credentials=(lambda path: open(path).read())("vault-gcp-credentials.json"))
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -30,7 +30,23 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+example = vault.tokenauth.AuthBackendRole("example",
+    allowed_policies=[
+        "dev",
+        "test",
+    ],
+    disallowed_policies=["default"],
+    explicit_max_ttl="115200",
+    orphan=True,
+    path_suffix="path-suffix",
+    period="86400",
+    renewable=True,
+    role_name="my-role")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -26,7 +26,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+example = vault.get_auth_backend(path="userpass")
+```
 {{% /example %}}
 
 {{% example typescript %}}

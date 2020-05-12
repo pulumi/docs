@@ -12,45 +12,9 @@ meta_desc: "Explore the SecretCacheConfig resource of the transit module, includ
 
 Configure the cache for the Transit Secret Backend in Vault.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as vault from "@pulumi/vault";
-
-const transit = new vault.Mount("transit", {
-    defaultLeaseTtlSeconds: 3600,
-    description: "Example description",
-    maxLeaseTtlSeconds: 86400,
-    path: "transit",
-    type: "transit",
-});
-const cfg = new vault.TransitSecretBackendCacheConfig("cfg", {
-    backend: transit.path,
-    size: 500,
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a SecretCacheConfig Resource {#create}

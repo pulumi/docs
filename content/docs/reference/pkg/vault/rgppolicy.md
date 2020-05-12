@@ -30,7 +30,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+allow_all = vault.RgpPolicy("allow-all",
+    enforcement_level="soft-mandatory",
+    policy="""main = rule {
+  true
+}
+
+""")
+```
 {{% /example %}}
 
 {{% example typescript %}}

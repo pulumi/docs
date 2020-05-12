@@ -19,6 +19,21 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Manages an Kubernetes auth backend config in a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/kubernetes.html">Vault
 documentation</a> for more
 information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">kubernetes</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">AuthBackend</span><span class="p">(</span><span class="s2">&quot;kubernetes&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;kubernetes&quot;</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">kubernetes</span><span class="o">.</span><span class="n">AuthBackendConfig</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">kubernetes</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+    <span class="n">issuer</span><span class="o">=</span><span class="s2">&quot;api&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_ca_cert</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;-----BEGIN CERTIFICATE-----</span>
+<span class="s2">example</span>
+<span class="s2">-----END CERTIFICATE-----</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_host</span><span class="o">=</span><span class="s2">&quot;http://example.com:443&quot;</span><span class="p">,</span>
+    <span class="n">token_reviewer_jwt</span><span class="o">=</span><span class="s2">&quot;ZXhhbXBsZQo=&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -135,6 +150,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages an Kubernetes auth backend role in a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/kubernetes.html">Vault
 documentation</a> for more
 information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">kubernetes</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">AuthBackend</span><span class="p">(</span><span class="s2">&quot;kubernetes&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;kubernetes&quot;</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">kubernetes</span><span class="o">.</span><span class="n">AuthBackendRole</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="n">kubernetes</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+    <span class="n">role_name</span><span class="o">=</span><span class="s2">&quot;example-role&quot;</span><span class="p">,</span>
+    <span class="n">bound_service_account_names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">],</span>
+    <span class="n">bound_service_account_namespaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">],</span>
+    <span class="n">token_ttl</span><span class="o">=</span><span class="mi">3600</span><span class="p">,</span>
+    <span class="n">token_policies</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;prod&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">audience</span><span class="o">=</span><span class="s2">&quot;vault&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -601,6 +634,14 @@ retrieve Role attributes for resides in. Defaults to “kubernetes”.</p></li>
 <dd><p>Reads the Role of an Kubernetes from a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/api/auth/kubernetes/index.html#read-role">Vault
 documentation</a> for more
 information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
+
+<span class="n">role</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">kubernetes</span><span class="o">.</span><span class="n">get_auth_backend_role</span><span class="p">(</span><span class="n">backend</span><span class="o">=</span><span class="s2">&quot;my-kubernetes-backend&quot;</span><span class="p">,</span>
+    <span class="n">role_name</span><span class="o">=</span><span class="s2">&quot;my-role&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;policies&quot;</span><span class="p">,</span> <span class="n">role</span><span class="o">.</span><span class="n">policies</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

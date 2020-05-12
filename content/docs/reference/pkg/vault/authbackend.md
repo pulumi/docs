@@ -26,7 +26,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+example = vault.AuthBackend("example",
+    tune={
+        "listingVisibility": "unauth",
+        "maxLeaseTtl": "90000s",
+    },
+    type="github")
+```
 {{% /example %}}
 
 {{% example typescript %}}

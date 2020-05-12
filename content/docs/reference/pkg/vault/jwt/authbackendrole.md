@@ -14,9 +14,63 @@ Manages an JWT/OIDC auth backend role in a Vault server. See the [Vault
 documentation](https://www.vaultproject.io/docs/auth/jwt.html) for more
 information.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_vault as vault
+
+jwt = vault.jwt.AuthBackend("jwt", path="jwt")
+example = vault.jwt.AuthBackendRole("example",
+    backend=jwt.path,
+    role_name="test-role",
+    token_policies=[
+        "default",
+        "dev",
+        "prod",
+    ],
+    bound_audiences=["https://myco.test"],
+    user_claim="https://vault/user",
+    role_type="jwt")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+
+const jwt = new vault.jwt.AuthBackend("jwt", {path: "jwt"});
+const example = new vault.jwt.AuthBackendRole("example", {
+    backend: jwt.path,
+    roleName: "test-role",
+    tokenPolicies: [
+        "default",
+        "dev",
+        "prod",
+    ],
+    boundAudiences: ["https://myco.test"],
+    userClaim: "https://vault/user",
+    roleType: "jwt",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AuthBackendRole Resource {#create}

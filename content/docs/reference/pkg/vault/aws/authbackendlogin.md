@@ -31,7 +31,37 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vault as vault
+
+aws = vault.AuthBackend("aws", type="aws")
+example_auth_backend_client = vault.aws.AuthBackendClient("exampleAuthBackendClient",
+    access_key="123456789012",
+    backend=aws.path,
+    secret_key="AWSSECRETKEYGOESHERE")
+example_auth_backend_role = vault.aws.AuthBackendRole("exampleAuthBackendRole",
+    auth_type="ec2",
+    backend=aws.path,
+    bound_account_id="123456789012",
+    bound_ami_id="ami-8c1be5f6",
+    bound_iam_instance_profile_arn="arn:aws:iam::123456789012:instance-profile/MyProfile",
+    bound_subnet_id="vpc-133128f1",
+    bound_vpc_id="vpc-b61106d4",
+    max_ttl=120,
+    role="test-role",
+    token_policies=[
+        "default",
+        "dev",
+        "prod",
+    ],
+    ttl=60)
+example_auth_backend_login = vault.aws.AuthBackendLogin("exampleAuthBackendLogin",
+    backend=vault_auth_backend["example"]["path"],
+    identity="BASE64ENCODEDIDENTITYDOCUMENT",
+    role=example_auth_backend_role.role,
+    signature="BASE64ENCODEDSHA256IDENTITYDOCUMENTSIGNATURE")
+```
 {{% /example %}}
 
 {{% example typescript %}}
