@@ -48,3 +48,21 @@ A Pulumi package for creating and managing azuread cloud resources.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread.html" title="Pulumi.Azuread">Pulumi.Azuread</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#" title="azuread">azuread</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#" title="@pulumi/azuread">@pulumi/azuread</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azuread" title="pulumi_azuread">pulumi_azuread</a></dd>
+
+</dl>
+
