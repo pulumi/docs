@@ -28,7 +28,26 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rabbitmq as rabbitmq
+
+test_v_host = rabbitmq.VHost("testVHost")
+guest = rabbitmq.Permissions("guest",
+    permissions={
+        "configure": ".*",
+        "read": ".*",
+        "write": ".*",
+    },
+    user="guest",
+    vhost=test_v_host.name)
+test_queue = rabbitmq.Queue("testQueue",
+    settings={
+        "autoDelete": True,
+        "durable": False,
+    },
+    vhost=guest.vhost)
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -66,7 +85,35 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rabbitmq as rabbitmq
+
+config = pulumi.Config()
+arguments = config.get("arguments")
+if arguments is None:
+    arguments = """{
+  "x-message-ttl": 5000
+}
+
+"""
+test_v_host = rabbitmq.VHost("testVHost")
+guest = rabbitmq.Permissions("guest",
+    permissions={
+        "configure": ".*",
+        "read": ".*",
+        "write": ".*",
+    },
+    user="guest",
+    vhost=test_v_host.name)
+test_queue = rabbitmq.Queue("testQueue",
+    settings={
+        "argumentsJson": arguments,
+        "autoDelete": True,
+        "durable": False,
+    },
+    vhost=guest.vhost)
+```
 {{% /example %}}
 
 {{% example typescript %}}

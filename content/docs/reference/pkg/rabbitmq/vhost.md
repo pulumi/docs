@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rabbitmq as rabbitmq
+
+my_vhost = rabbitmq.VHost("myVhost")
+```
 {{% /example %}}
 
 {{% example typescript %}}

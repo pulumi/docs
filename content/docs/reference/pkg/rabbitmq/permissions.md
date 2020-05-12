@@ -29,7 +29,23 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_rabbitmq as rabbitmq
+
+test_v_host = rabbitmq.VHost("testVHost")
+test_user = rabbitmq.User("testUser",
+    password="foobar",
+    tags=["administrator"])
+test_permissions = rabbitmq.Permissions("testPermissions",
+    permissions={
+        "configure": ".*",
+        "read": ".*",
+        "write": ".*",
+    },
+    user=test_user.name,
+    vhost=test_v_host.name)
+```
 {{% /example %}}
 
 {{% example typescript %}}
