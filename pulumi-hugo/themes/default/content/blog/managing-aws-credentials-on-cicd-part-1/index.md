@@ -50,7 +50,6 @@ to deploy AWS resources using Pulumi:
 - [Assuming IAM Roles for performing updates]({{< relref "/blog/managing-aws-credentials-on-cicd-part-3#assuming-iam-roles" >}})
 - [Securing sensitive data using Pulumi]({{< relref "/blog/managing-aws-credentials-on-cicd-part-3#secrets-in-pulumi" >}})
 
-
 ## Create a dedicated IAM User for your CI/CD {#create-new-iam-user}
 
 The first step for securely automating CI/CD is to create a dedicated IAM User for use in your CI/CD
