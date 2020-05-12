@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+certs = alicloud.cas.get_certificates(name_regex="^cas",
+    output_file=f"{path['module']}/cas_certificates.json")
+pulumi.export("cert", certs.certificates[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

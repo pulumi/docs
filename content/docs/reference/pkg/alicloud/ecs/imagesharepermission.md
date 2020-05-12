@@ -36,7 +36,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default = alicloud.ecs.ImageSharePermission("default",
+    account_id="1234567890",
+    image_id="m-bp1gxyh***")
+```
 {{% /example %}}
 
 {{% example typescript %}}

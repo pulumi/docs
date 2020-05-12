@@ -30,7 +30,23 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "natGatewaysDatasource"
+default = alicloud.get_zones(available_resource_creation="VSwitch")
+foo_network = alicloud.vpc.Network("fooNetwork", cidr_block="172.16.0.0/12")
+foo_nat_gateway = alicloud.vpc.NatGateway("fooNatGateway",
+    specification="Small",
+    vpc_id=foo_network.id)
+foo_nat_gateways = pulumi.Output.all(foo_nat_gateway.id, foo_nat_gateway.name, foo_network.id).apply(lambda fooNatGatewayId, name, fooNetworkId: alicloud.vpc.get_nat_gateways(ids=[foo_nat_gateway_id],
+    name_regex=name,
+    vpc_id=foo_network_id))
+```
 {{% /example %}}
 
 {{% example typescript %}}

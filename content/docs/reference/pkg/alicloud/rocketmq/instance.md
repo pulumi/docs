@@ -34,7 +34,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+example = alicloud.rocketmq.Instance("example", remark="tf-example-ons-instance-remark")
+```
 {{% /example %}}
 
 {{% example typescript %}}

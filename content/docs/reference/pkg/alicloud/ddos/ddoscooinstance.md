@@ -34,7 +34,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+new_instance = alicloud.ddos.DdosCooInstance("newInstance",
+    bandwidth="30",
+    base_bandwidth="30",
+    domain_count="50",
+    period="1",
+    port_count="50",
+    service_bandwidth="100")
+```
 {{% /example %}}
 
 {{% example typescript %}}

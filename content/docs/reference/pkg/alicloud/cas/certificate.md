@@ -34,7 +34,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+# Add a new Certificate.
+cert = alicloud.cas.Certificate("cert",
+    cert=(lambda path: open(path).read())(f"{path['module']}/test.crt"),
+    key=(lambda path: open(path).read())(f"{path['module']}/test.key"))
+```
 {{% /example %}}
 
 {{% example typescript %}}

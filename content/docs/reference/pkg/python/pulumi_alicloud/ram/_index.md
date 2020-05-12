@@ -20,6 +20,21 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE:</strong>  You should set the <code class="docutils literal notranslate"><span class="pre">secret_file</span></code> if you want to get the access key.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="c1"># Create a new RAM access key for user.</span>
+<span class="n">user</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
+    <span class="n">comments</span><span class="o">=</span><span class="s2">&quot;yoyoyo&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;user_display_name&quot;</span><span class="p">,</span>
+    <span class="n">email</span><span class="o">=</span><span class="s2">&quot;hello.uuu@aaa.com&quot;</span><span class="p">,</span>
+    <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">mobile</span><span class="o">=</span><span class="s2">&quot;86-18688888888&quot;</span><span class="p">)</span>
+<span class="n">ak</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">AccessKey</span><span class="p">(</span><span class="s2">&quot;ak&quot;</span><span class="p">,</span>
+    <span class="n">secret_file</span><span class="o">=</span><span class="s2">&quot;/xxx/xxx/xxx.txt&quot;</span><span class="p">,</span>
+    <span class="n">user_name</span><span class="o">=</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -127,6 +142,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ram.AccountAlias">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">AccountAlias</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.AccountAlias" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a RAM cloud account alias.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="c1"># Create a alias for cloud account.</span>
+<span class="n">alias</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">AccountAlias</span><span class="p">(</span><span class="s2">&quot;alias&quot;</span><span class="p">,</span> <span class="n">account_alias</span><span class="o">=</span><span class="s2">&quot;hallo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -651,6 +673,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ram.GroupMembership">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">GroupMembership</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.GroupMembership" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a RAM Group membership resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="c1"># Create a RAM Group membership.</span>
+<span class="n">group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span>
+    <span class="n">comments</span><span class="o">=</span><span class="s2">&quot;this is a group comments.&quot;</span><span class="p">,</span>
+    <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">user</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
+    <span class="n">comments</span><span class="o">=</span><span class="s2">&quot;yoyoyo&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;user_display_name&quot;</span><span class="p">,</span>
+    <span class="n">email</span><span class="o">=</span><span class="s2">&quot;hello.uuu@aaa.com&quot;</span><span class="p">,</span>
+    <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">mobile</span><span class="o">=</span><span class="s2">&quot;86-18688888888&quot;</span><span class="p">)</span>
+<span class="n">user1</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;user1&quot;</span><span class="p">,</span>
+    <span class="n">comments</span><span class="o">=</span><span class="s2">&quot;yoyoyo&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;user_display_name1&quot;</span><span class="p">,</span>
+    <span class="n">email</span><span class="o">=</span><span class="s2">&quot;hello.uuu@aaa.com&quot;</span><span class="p">,</span>
+    <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">mobile</span><span class="o">=</span><span class="s2">&quot;86-18688888889&quot;</span><span class="p">)</span>
+<span class="n">membership</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">GroupMembership</span><span class="p">(</span><span class="s2">&quot;membership&quot;</span><span class="p">,</span>
+    <span class="n">group_name</span><span class="o">=</span><span class="n">group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">user_names</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">user1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -735,6 +784,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ram.GroupPolicyAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">GroupPolicyAttachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.GroupPolicyAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a RAM Group Policy attachment resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="c1"># Create a RAM Group Policy attachment.</span>
+<span class="n">group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span>
+    <span class="n">comments</span><span class="o">=</span><span class="s2">&quot;this is a group comments.&quot;</span><span class="p">,</span>
+    <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">policy</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;this is a policy test&quot;</span><span class="p">,</span>
+    <span class="n">document</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;    {</span>
+<span class="s2">      &quot;Statement&quot;: [</span>
+<span class="s2">        {</span>
+<span class="s2">          &quot;Action&quot;: [</span>
+<span class="s2">            &quot;oss:ListObjects&quot;,</span>
+<span class="s2">            &quot;oss:GetObject&quot;</span>
+<span class="s2">          ],</span>
+<span class="s2">          &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">          &quot;Resource&quot;: [</span>
+<span class="s2">            &quot;acs:oss:*:*:mybucket&quot;,</span>
+<span class="s2">            &quot;acs:oss:*:*:mybucket/*&quot;</span>
+<span class="s2">          ]</span>
+<span class="s2">        }</span>
+<span class="s2">      ],</span>
+<span class="s2">        &quot;Version&quot;: &quot;1&quot;</span>
+<span class="s2">    }</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">attach</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">GroupPolicyAttachment</span><span class="p">(</span><span class="s2">&quot;attach&quot;</span><span class="p">,</span>
+    <span class="n">group_name</span><span class="o">=</span><span class="n">group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">policy_name</span><span class="o">=</span><span class="n">policy</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">policy_type</span><span class="o">=</span><span class="n">policy</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -825,6 +908,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ram.LoginProfile">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">LoginProfile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mfa_bind_required</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password_reset_required</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.LoginProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a RAM User Login Profile resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="c1"># Create a RAM login profile.</span>
+<span class="n">user</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
+    <span class="n">comments</span><span class="o">=</span><span class="s2">&quot;yoyoyo&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;user_display_name&quot;</span><span class="p">,</span>
+    <span class="n">email</span><span class="o">=</span><span class="s2">&quot;hello.uuu@aaa.com&quot;</span><span class="p">,</span>
+    <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">mobile</span><span class="o">=</span><span class="s2">&quot;86-18688888888&quot;</span><span class="p">)</span>
+<span class="n">profile</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">LoginProfile</span><span class="p">(</span><span class="s2">&quot;profile&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;Yourpassword1234&quot;</span><span class="p">,</span>
+    <span class="n">user_name</span><span class="o">=</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1194,6 +1292,69 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ram.RoleAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">RoleAttachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.RoleAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a RAM role attachment resource to bind role for several ECS instances.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_disk_category</span><span class="o">=</span><span class="s2">&quot;cloud_efficiency&quot;</span><span class="p">,</span>
+    <span class="n">available_resource_creation</span><span class="o">=</span><span class="s2">&quot;VSwitch&quot;</span><span class="p">)</span>
+<span class="n">default_instance_types</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_instance_types</span><span class="p">(</span><span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cpu_core_count</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">memory_size</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">default_images</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_images</span><span class="p">(</span><span class="n">most_recent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;^ubuntu_18.*64&quot;</span><span class="p">,</span>
+    <span class="n">owners</span><span class="o">=</span><span class="s2">&quot;system&quot;</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">default_switch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;defaultSwitch&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_security_group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;defaultSecurityGroup&quot;</span><span class="p">,</span> <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_security_group_rule</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">SecurityGroupRule</span><span class="p">(</span><span class="s2">&quot;defaultSecurityGroupRule&quot;</span><span class="p">,</span>
+    <span class="n">cidr_ip</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">ip_protocol</span><span class="o">=</span><span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+    <span class="n">nic_type</span><span class="o">=</span><span class="s2">&quot;intranet&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;accept&quot;</span><span class="p">,</span>
+    <span class="n">port_range</span><span class="o">=</span><span class="s2">&quot;22/22&quot;</span><span class="p">,</span>
+    <span class="n">priority</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">security_group_id</span><span class="o">=</span><span class="n">default_security_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;ingress&quot;</span><span class="p">)</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;ecsInstanceVPCExample&quot;</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="n">default_images</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">instance_name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="n">default_instance_types</span><span class="o">.</span><span class="n">instance_types</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">internet_charge_type</span><span class="o">=</span><span class="s2">&quot;PayByTraffic&quot;</span><span class="p">,</span>
+    <span class="n">internet_max_bandwidth_out</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span><span class="n">default_security_group</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">system_disk_category</span><span class="o">=</span><span class="s2">&quot;cloud_efficiency&quot;</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">role</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;role&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;this is a test&quot;</span><span class="p">,</span>
+    <span class="n">document</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;  {</span>
+<span class="s2">    &quot;Statement&quot;: [</span>
+<span class="s2">      {</span>
+<span class="s2">        &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">        &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">        &quot;Principal&quot;: {</span>
+<span class="s2">          &quot;Service&quot;: [</span>
+<span class="s2">            &quot;ecs.aliyuncs.com&quot;</span>
+<span class="s2">          ]</span>
+<span class="s2">        }</span>
+<span class="s2">      }</span>
+<span class="s2">    ],</span>
+<span class="s2">    &quot;Version&quot;: &quot;1&quot;</span>
+<span class="s2">  }</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">attach</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">RoleAttachment</span><span class="p">(</span><span class="s2">&quot;attach&quot;</span><span class="p">,</span>
+    <span class="n">instance_ids</span><span class="o">=</span><span class="p">[[</span><span class="n">__item</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="p">[</span><span class="n">foo</span><span class="p">]]],</span>
+    <span class="n">role_name</span><span class="o">=</span><span class="n">role</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1278,6 +1439,57 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ram.RolePolicyAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">RolePolicyAttachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.RolePolicyAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a RAM Role attachment resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="c1"># Create a RAM Role Policy attachment.</span>
+<span class="n">role</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;role&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;this is a role test.&quot;</span><span class="p">,</span>
+    <span class="n">document</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;    {</span>
+<span class="s2">      &quot;Statement&quot;: [</span>
+<span class="s2">        {</span>
+<span class="s2">          &quot;Action&quot;: &quot;sts:AssumeRole&quot;,</span>
+<span class="s2">          &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">          &quot;Principal&quot;: {</span>
+<span class="s2">            &quot;Service&quot;: [</span>
+<span class="s2">              &quot;apigateway.aliyuncs.com&quot;, </span>
+<span class="s2">              &quot;ecs.aliyuncs.com&quot;</span>
+<span class="s2">            ]</span>
+<span class="s2">          }</span>
+<span class="s2">        }</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;Version&quot;: &quot;1&quot;</span>
+<span class="s2">    }</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">policy</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;this is a policy test&quot;</span><span class="p">,</span>
+    <span class="n">document</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;  {</span>
+<span class="s2">    &quot;Statement&quot;: [</span>
+<span class="s2">      {</span>
+<span class="s2">        &quot;Action&quot;: [</span>
+<span class="s2">          &quot;oss:ListObjects&quot;,</span>
+<span class="s2">          &quot;oss:GetObject&quot;</span>
+<span class="s2">        ],</span>
+<span class="s2">        &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">        &quot;Resource&quot;: [</span>
+<span class="s2">          &quot;acs:oss:*:*:mybucket&quot;,</span>
+<span class="s2">          &quot;acs:oss:*:*:mybucket/*&quot;</span>
+<span class="s2">        ]</span>
+<span class="s2">      }</span>
+<span class="s2">    ],</span>
+<span class="s2">      &quot;Version&quot;: &quot;1&quot;</span>
+<span class="s2">  }</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">attach</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">RolePolicyAttachment</span><span class="p">(</span><span class="s2">&quot;attach&quot;</span><span class="p">,</span>
+    <span class="n">policy_name</span><span class="o">=</span><span class="n">policy</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">policy_type</span><span class="o">=</span><span class="n">policy</span><span class="o">.</span><span class="n">type</span><span class="p">,</span>
+    <span class="n">role_name</span><span class="o">=</span><span class="n">role</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1479,6 +1691,43 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ram.UserPolicyAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">UserPolicyAttachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.UserPolicyAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a RAM User Policy attachment resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="c1"># Create a RAM User Policy attachment.</span>
+<span class="n">user</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
+    <span class="n">comments</span><span class="o">=</span><span class="s2">&quot;yoyoyo&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;user_display_name&quot;</span><span class="p">,</span>
+    <span class="n">email</span><span class="o">=</span><span class="s2">&quot;hello.uuu@aaa.com&quot;</span><span class="p">,</span>
+    <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">mobile</span><span class="o">=</span><span class="s2">&quot;86-18688888888&quot;</span><span class="p">)</span>
+<span class="n">policy</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;this is a policy test&quot;</span><span class="p">,</span>
+    <span class="n">document</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;  {</span>
+<span class="s2">    &quot;Statement&quot;: [</span>
+<span class="s2">      {</span>
+<span class="s2">        &quot;Action&quot;: [</span>
+<span class="s2">          &quot;oss:ListObjects&quot;,</span>
+<span class="s2">          &quot;oss:GetObject&quot;</span>
+<span class="s2">        ],</span>
+<span class="s2">        &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">        &quot;Resource&quot;: [</span>
+<span class="s2">          &quot;acs:oss:*:*:mybucket&quot;,</span>
+<span class="s2">          &quot;acs:oss:*:*:mybucket/*&quot;</span>
+<span class="s2">        ]</span>
+<span class="s2">      }</span>
+<span class="s2">    ],</span>
+<span class="s2">      &quot;Version&quot;: &quot;1&quot;</span>
+<span class="s2">  }</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">attach</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">UserPolicyAttachment</span><span class="p">(</span><span class="s2">&quot;attach&quot;</span><span class="p">,</span>
+    <span class="n">policy_name</span><span class="o">=</span><span class="n">policy</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">policy_type</span><span class="o">=</span><span class="n">policy</span><span class="o">.</span><span class="n">type</span><span class="p">,</span>
+    <span class="n">user_name</span><span class="o">=</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1577,12 +1826,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ram.get_account_aliases">
 <code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">get_account_aliases</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.get_account_aliases" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides an alias for the Alibaba Cloud account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">alias_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">get_account_aliases</span><span class="p">(</span><span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;alias.txt&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;accountAlias&quot;</span><span class="p">,</span> <span class="n">alias_ds</span><span class="o">.</span><span class="n">account_alias</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py function">
 <dt id="pulumi_alicloud.ram.get_groups">
 <code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">get_groups</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.get_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of RAM Groups in an Alibaba Cloud account according to the specified filters.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">groups_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">get_groups</span><span class="p">(</span><span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;^group[0-9]*&quot;</span><span class="p">,</span>
+    <span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;groups.txt&quot;</span><span class="p">,</span>
+    <span class="n">user_name</span><span class="o">=</span><span class="s2">&quot;user1&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstGroupName&quot;</span><span class="p">,</span> <span class="n">groups_ds</span><span class="o">.</span><span class="n">groups</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1599,6 +1864,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ram.get_policies">
 <code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">get_policies</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.get_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of RAM policies in an Alibaba Cloud account according to the specified filters.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">policies_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">get_policies</span><span class="p">(</span><span class="n">group_name</span><span class="o">=</span><span class="s2">&quot;group1&quot;</span><span class="p">,</span>
+    <span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;policies.txt&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;System&quot;</span><span class="p">,</span>
+    <span class="n">user_name</span><span class="o">=</span><span class="s2">&quot;user1&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstPolicyName&quot;</span><span class="p">,</span> <span class="n">policies_ds</span><span class="o">.</span><span class="n">policies</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1616,6 +1891,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ram.get_roles">
 <code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">get_roles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.get_roles" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of RAM Roles in an Alibaba Cloud account according to the specified filters.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">roles_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">get_roles</span><span class="p">(</span><span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;.*test.*&quot;</span><span class="p">,</span>
+    <span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;roles.txt&quot;</span><span class="p">,</span>
+    <span class="n">policy_name</span><span class="o">=</span><span class="s2">&quot;AliyunACSDefaultAccess&quot;</span><span class="p">,</span>
+    <span class="n">policy_type</span><span class="o">=</span><span class="s2">&quot;Custom&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstRoleId&quot;</span><span class="p">,</span> <span class="n">roles_ds</span><span class="o">.</span><span class="n">roles</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1635,6 +1920,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ram.get_users">
 <code class="sig-prename descclassname">pulumi_alicloud.ram.</code><code class="sig-name descname">get_users</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ram.get_users" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of RAM users in an Alibaba Cloud account according to the specified filters.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">users_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ram</span><span class="o">.</span><span class="n">get_users</span><span class="p">(</span><span class="n">group_name</span><span class="o">=</span><span class="s2">&quot;group1&quot;</span><span class="p">,</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;^user&quot;</span><span class="p">,</span>
+    <span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;users.txt&quot;</span><span class="p">,</span>
+    <span class="n">policy_name</span><span class="o">=</span><span class="s2">&quot;AliyunACSDefaultAccess&quot;</span><span class="p">,</span>
+    <span class="n">policy_type</span><span class="o">=</span><span class="s2">&quot;Custom&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstUserId&quot;</span><span class="p">,</span> <span class="n">users_ds</span><span class="o">.</span><span class="n">users</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

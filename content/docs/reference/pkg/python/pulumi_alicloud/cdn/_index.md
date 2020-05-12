@@ -329,6 +329,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.34.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="c1"># Create a new Domain config.</span>
+<span class="n">domain</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cdn</span><span class="o">.</span><span class="n">DomainNew</span><span class="p">(</span><span class="s2">&quot;domain&quot;</span><span class="p">,</span>
+    <span class="n">cdn_type</span><span class="o">=</span><span class="s2">&quot;web&quot;</span><span class="p">,</span>
+    <span class="n">domain_name</span><span class="o">=</span><span class="s2">&quot;tf-testacc</span><span class="si">%d</span><span class="s2">.xiaozhu.com&quot;</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="s2">&quot;overseas&quot;</span><span class="p">,</span>
+    <span class="n">sources</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;1.1.1.1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="s2">&quot;20&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ipaddr&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cdn</span><span class="o">.</span><span class="n">DomainConfig</span><span class="p">(</span><span class="s2">&quot;config&quot;</span><span class="p">,</span>
+    <span class="n">domain_name</span><span class="o">=</span><span class="n">domain</span><span class="o">.</span><span class="n">domain_name</span><span class="p">,</span>
+    <span class="n">function_args</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;argName&quot;</span><span class="p">:</span> <span class="s2">&quot;ip_list&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;argValue&quot;</span><span class="p">:</span> <span class="s2">&quot;110.110.110.110&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">function_name</span><span class="o">=</span><span class="s2">&quot;ip_allow_list_set&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -432,26 +456,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_alicloud.cdn.DomainNew">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cdn.</code><code class="sig-name descname">DomainNew</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cdn_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sources</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cdn.DomainNew" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a CDN Accelerated Domain resource. This resource is based on CDN’s new version OpenAPI.</p>
-<p>For information about Cdn Domain New and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/91176.html">Add a domain</a>.</p>
-<blockquote>
-<div><p><strong>NOTE:</strong> Available in v1.34.0+.</p>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>cdn_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cdn type of the accelerated domain. Valid values are <code class="docutils literal notranslate"><span class="pre">web</span></code>, <code class="docutils literal notranslate"><span class="pre">download</span></code>, <code class="docutils literal notranslate"><span class="pre">video</span></code>.</p></li>
-<li><p><strong>certificate_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Certificate config of the accelerated domain. It’s a list and consist of at most 1 item.</p></li>
-<li><p><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or “-“, and must not begin or end with “-“, and “-” must not in the 3th and 4th character positions at the same time. Suffix <code class="docutils literal notranslate"><span class="pre">.sh</span></code> and <code class="docutils literal notranslate"><span class="pre">.tel</span></code> are not supported.</p></li>
-<li><p><strong>resource_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource group ID.</p></li>
-<li><p><strong>scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Scope of the accelerated domain. Valid values are <code class="docutils literal notranslate"><span class="pre">domestic</span></code>, <code class="docutils literal notranslate"><span class="pre">overseas</span></code>, <code class="docutils literal notranslate"><span class="pre">global</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">domestic</span></code>. This parameter’s setting is valid Only for the international users and domestic L3 and above users .</p></li>
-<li><p><strong>sources</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The source address list of the accelerated domain. Defaults to null. See Block Sources.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a DomainNew resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cdn_type: Cdn type of the accelerated domain. Valid values are <code class="docutils literal notranslate"><span class="pre">web</span></code>, <code class="docutils literal notranslate"><span class="pre">download</span></code>, <code class="docutils literal notranslate"><span class="pre">video</span></code>.
+:param pulumi.Input[dict] certificate_config: Certificate config of the accelerated domain. It’s a list and consist of at most 1 item.
+:param pulumi.Input[str] domain_name: Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or “-“, and must not begin or end with “-“, and “-” must not in the 3th and 4th character positions at the same time. Suffix <code class="docutils literal notranslate"><span class="pre">.sh</span></code> and <code class="docutils literal notranslate"><span class="pre">.tel</span></code> are not supported.
+:param pulumi.Input[str] resource_group_id: Resource group ID.
+:param pulumi.Input[str] scope: Scope of the accelerated domain. Valid values are <code class="docutils literal notranslate"><span class="pre">domestic</span></code>, <code class="docutils literal notranslate"><span class="pre">overseas</span></code>, <code class="docutils literal notranslate"><span class="pre">global</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">domestic</span></code>. This parameter’s setting is valid Only for the international users and domestic L3 and above users .
+:param pulumi.Input[dict] sources: The source address list of the accelerated domain. Defaults to null. See Block Sources.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
 <p>The <strong>certificate_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">certName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SSL certificate name.</p></li>

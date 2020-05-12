@@ -32,7 +32,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default_acls = alicloud.sag.get_acls(ids=[alicloud_sag_acls["default"]["id"]],
+    name_regex="^tf-testAcc.*")
+default_acl = alicloud.rocketmq.Acl("defaultAcl")
+```
 {{% /example %}}
 
 {{% example typescript %}}

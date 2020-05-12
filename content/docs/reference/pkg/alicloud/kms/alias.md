@@ -14,9 +14,47 @@ Create an alias for the master key (CMK).
 
 > **NOTE:** Available in v1.77.0+.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+this_key = alicloud.kms.Key("thisKey")
+this_alias = alicloud.kms.Alias("thisAlias",
+    alias_name="alias/test_kms_alias",
+    key_id=this_key.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const thisKey = new alicloud.kms.Key("thisKey", {});
+const thisAlias = new alicloud.kms.Alias("thisAlias", {
+    aliasName: "alias/test_kms_alias",
+    keyId: thisKey.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Alias Resource {#create}

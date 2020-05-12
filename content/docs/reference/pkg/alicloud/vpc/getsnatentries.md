@@ -30,7 +30,33 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "snat-entry-example-name"
+default = alicloud.get_zones(available_resource_creation="VSwitch")
+foo_network = alicloud.vpc.Network("fooNetwork", cidr_block="172.16.0.0/12")
+foo_switch = alicloud.vpc.Switch("fooSwitch",
+    availability_zone=default.zones[0]["id"],
+    cidr_block="172.16.0.0/21",
+    vpc_id=foo_network.id)
+foo_nat_gateway = alicloud.vpc.NatGateway("fooNatGateway",
+    specification="Small",
+    vpc_id=foo_network.id)
+foo_eip = alicloud.ecs.Eip("fooEip")
+foo_eip_association = alicloud.ecs.EipAssociation("fooEipAssociation",
+    allocation_id=foo_eip.id,
+    instance_id=foo_nat_gateway.id)
+foo_snat_entry = alicloud.vpc.SnatEntry("fooSnatEntry",
+    snat_ip=foo_eip.ip_address,
+    snat_table_id=foo_nat_gateway.snat_table_ids,
+    source_vswitch_id=foo_switch.id)
+foo_snat_entries = foo_snat_entry.snat_table_id.apply(lambda snat_table_id: alicloud.vpc.get_snat_entries(snat_table_id=snat_table_id))
+```
 {{% /example %}}
 
 {{% example typescript %}}

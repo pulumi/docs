@@ -39,7 +39,39 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "auto_provisioning_group"
+default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
+    available_resource_creation="VSwitch")
+default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
+default_switch = alicloud.vpc.Switch("defaultSwitch",
+    availability_zone=default_zones.zones[0]["id"],
+    cidr_block="172.16.0.0/24",
+    vpc_id=default_network.id)
+default_security_group = alicloud.ecs.SecurityGroup("defaultSecurityGroup", vpc_id=default_network.id)
+default_images = alicloud.ecs.get_images(most_recent=True,
+    name_regex="^ubuntu_18.*64",
+    owners="system")
+template = alicloud.ecs.LaunchTemplate("template",
+    image_id=default_images.images[0]["id"],
+    instance_type="ecs.n1.tiny",
+    security_group_id=default_security_group.id)
+default_auto_provisioning_group = alicloud.ecs.AutoProvisioningGroup("defaultAutoProvisioningGroup",
+    launch_template_configs=[{
+        "instanceType": "ecs.n1.small",
+        "vswitchId": default_switch.id,
+    }],
+    launch_template_id=template.id,
+    pay_as_you_go_target_capacity="1",
+    spot_target_capacity="2",
+    total_target_capacity="4")
+```
 {{% /example %}}
 
 {{% example typescript %}}

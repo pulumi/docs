@@ -28,7 +28,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+scalingrules_ds = alicloud.ess.get_scaling_rules(ids=[
+        "scaling_rule_id1",
+        "scaling_rule_id2",
+    ],
+    name_regex="scaling_rule_name",
+    scaling_group_id="scaling_group_id")
+pulumi.export("firstScalingRule", scalingrules_ds.rules[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

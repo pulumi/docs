@@ -28,7 +28,57 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+# Create a RAM Role Policy attachment.
+role = alicloud.ram.Role("role",
+    description="this is a role test.",
+    document="""    {
+      "Statement": [
+        {
+          "Action": "sts:AssumeRole",
+          "Effect": "Allow",
+          "Principal": {
+            "Service": [
+              "apigateway.aliyuncs.com", 
+              "ecs.aliyuncs.com"
+            ]
+          }
+        }
+      ],
+      "Version": "1"
+    }
+    
+""",
+    force=True)
+policy = alicloud.ram.Policy("policy",
+    description="this is a policy test",
+    document="""  {
+    "Statement": [
+      {
+        "Action": [
+          "oss:ListObjects",
+          "oss:GetObject"
+        ],
+        "Effect": "Allow",
+        "Resource": [
+          "acs:oss:*:*:mybucket",
+          "acs:oss:*:*:mybucket/*"
+        ]
+      }
+    ],
+      "Version": "1"
+  }
+  
+""",
+    force=True)
+attach = alicloud.ram.RolePolicyAttachment("attach",
+    policy_name=policy.name,
+    policy_type=policy.type,
+    role_name=role.name)
+```
 {{% /example %}}
 
 {{% example typescript %}}

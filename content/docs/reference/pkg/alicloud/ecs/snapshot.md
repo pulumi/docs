@@ -30,7 +30,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+snapshot = alicloud.ecs.Snapshot("snapshot",
+    description="this snapshot is created for testing",
+    disk_id=alicloud_disk_attachment["instance-attachment"]["disk_id"],
+    tags={
+        "version": "1.2",
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}

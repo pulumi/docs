@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+bucket_objects_ds = alicloud.oss.get_bucket_objects(bucket_name="sample_bucket",
+    key_regex="sample/sample_object.txt")
+pulumi.export("firstObjectKey", bucket_objects_ds.objects[0]["key"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

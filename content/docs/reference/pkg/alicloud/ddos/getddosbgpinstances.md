@@ -30,7 +30,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instance_ddos_bgp_instances = alicloud.ddos.get_ddos_bgp_instances(name_regex="^ddosbgp")
+pulumi.export("instance", [__item["id"] for __item in alicloud_ddosbgp_instances["instance"]])
+```
 {{% /example %}}
 
 {{% example typescript %}}

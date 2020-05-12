@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+groups_ds = alicloud.ram.get_groups(name_regex="^group[0-9]*",
+    output_file="groups.txt",
+    user_name="user1")
+pulumi.export("firstGroupName", groups_ds.groups[0]["name"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

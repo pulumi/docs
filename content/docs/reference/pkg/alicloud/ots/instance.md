@@ -29,7 +29,19 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+# Create an OTS instance
+foo = alicloud.ots.Instance("foo",
+    accessed_by="Vpc",
+    description="for table",
+    tags={
+        "Created": "TF",
+        "For": "Building table",
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}

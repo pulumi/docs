@@ -28,7 +28,20 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+vpn_gateways = alicloud.vpn.get_gateways(business_status="Normal",
+    ids=[
+        "fake-vpn-id1",
+        "fake-vpn-id2",
+    ],
+    name_regex="testAcc*",
+    output_file="/tmp/vpns",
+    status="active",
+    vpc_id="fake-vpc-id")
+```
 {{% /example %}}
 
 {{% example typescript %}}

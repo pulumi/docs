@@ -30,7 +30,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+# Create a new Domain record
+record = alicloud.dns.Record("record",
+    host_record="@",
+    type="A",
+    value="192.168.99.99")
+```
 {{% /example %}}
 
 {{% example typescript %}}

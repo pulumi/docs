@@ -30,7 +30,36 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "forward-entry-config-example-name"
+default_zones = alicloud.get_zones(available_resource_creation="VSwitch")
+default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/12")
+default_switch = alicloud.vpc.Switch("defaultSwitch",
+    availability_zone=default_zones.zones[0]["id"],
+    cidr_block="172.16.0.0/21",
+    vpc_id=default_network.id)
+default_nat_gateway = alicloud.vpc.NatGateway("defaultNatGateway",
+    specification="Small",
+    vpc_id=default_network.id)
+default_eip = alicloud.ecs.Eip("defaultEip")
+default_eip_association = alicloud.ecs.EipAssociation("defaultEipAssociation",
+    allocation_id=default_eip.id,
+    instance_id=default_nat_gateway.id)
+default_forward_entry = alicloud.vpc.ForwardEntry("defaultForwardEntry",
+    external_ip=default_eip.ip_address,
+    external_port="80",
+    forward_table_id=default_nat_gateway.forward_table_ids,
+    internal_ip="172.16.0.3",
+    internal_port="8080",
+    ip_protocol="tcp")
+default_forward_entries = default_forward_entry.forward_table_id.apply(lambda forward_table_id: alicloud.vpc.get_forward_entries(forward_table_id=forward_table_id))
+```
 {{% /example %}}
 
 {{% example typescript %}}

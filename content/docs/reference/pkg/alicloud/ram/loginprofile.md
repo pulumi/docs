@@ -29,7 +29,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+# Create a RAM login profile.
+user = alicloud.ram.User("user",
+    comments="yoyoyo",
+    display_name="user_display_name",
+    email="hello.uuu@aaa.com",
+    force=True,
+    mobile="86-18688888888")
+profile = alicloud.ram.LoginProfile("profile",
+    password="Yourpassword1234",
+    user_name=user.name)
+```
 {{% /example %}}
 
 {{% example typescript %}}

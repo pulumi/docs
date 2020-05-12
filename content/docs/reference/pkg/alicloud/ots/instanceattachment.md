@@ -28,7 +28,29 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+# Create an OTS instance
+foo_instance = alicloud.ots.Instance("fooInstance",
+    accessed_by="Vpc",
+    description="for table",
+    tags={
+        "Created": "TF",
+        "For": "Building table",
+    })
+foo_zones = alicloud.get_zones(available_resource_creation="VSwitch")
+foo_network = alicloud.vpc.Network("fooNetwork", cidr_block="172.16.0.0/16")
+foo_switch = alicloud.vpc.Switch("fooSwitch",
+    availability_zone=foo_zones.zones[0]["id"],
+    cidr_block="172.16.1.0/24",
+    vpc_id=foo_network.id)
+foo_instance_attachment = alicloud.ots.InstanceAttachment("fooInstanceAttachment",
+    instance_name=foo_instance.name,
+    vpc_name="attachment1",
+    vswitch_id=foo_switch.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

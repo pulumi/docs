@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+cen_instances_ds = alicloud.cen.get_instances(ids=["cen-id1"],
+    name_regex="^foo")
+pulumi.export("firstCenInstanceId", cen_instances_ds.instances[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

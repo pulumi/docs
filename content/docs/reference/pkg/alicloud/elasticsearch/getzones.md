@@ -30,7 +30,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+zones_ids = alicloud.elasticsearch.get_zones()
+```
 {{% /example %}}
 
 {{% example typescript %}}

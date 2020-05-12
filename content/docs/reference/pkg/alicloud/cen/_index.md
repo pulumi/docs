@@ -19,6 +19,7 @@ Explore the resources and functions of the cen module in the AliCloud package.
     <li><a href="instanceattachment" title="InstanceAttachment"><span class="symbol resource"></span>InstanceAttachment</a></li>
     <li><a href="instancegrant" title="InstanceGrant"><span class="symbol resource"></span>InstanceGrant</a></li>
     <li><a href="routeentry" title="RouteEntry"><span class="symbol resource"></span>RouteEntry</a></li>
+    <li><a href="routemap" title="RouteMap"><span class="symbol resource"></span>RouteMap</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -40,6 +41,6 @@ Explore the resources and functions of the cen module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.3.3</dd>
+	<dd>2.4.0</dd>
 </dl>
 

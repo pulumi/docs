@@ -31,7 +31,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default = alicloud.emr.get_disk_types(cluster_type="HADOOP",
+    destination_resource="DataDisk",
+    instance_charge_type="PostPaid",
+    instance_type="ecs.g5.xlarge",
+    zone_id="cn-huhehaote-a")
+pulumi.export("dataDiskType", default.types[0]["value"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

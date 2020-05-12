@@ -33,7 +33,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+# create a server certificate
+foo = alicloud.slb.ServerCertificate("foo",
+    private_key="""-----BEGIN RSA PRIVATE KEY-----
+MIICXAIBAAKBgQDO0knDrlNdiys******ErVpjsckAaOW/JDG5PCSwkaMxk=
+-----END RSA PRIVATE KEY-----
+""",
+    server_certificate="""-----BEGIN CERTIFICATE-----
+MIIDRjCCAq+gAwIBAgI+OuMs******XTtI90EAxEG/bJJyOm5LqoiA=
+-----END CERTIFICATE-----
+""")
+```
 {{% /example %}}
 
 {{% example typescript %}}

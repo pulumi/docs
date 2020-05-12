@@ -47,7 +47,60 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "slbservergroupvpc"
+default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
+    available_resource_creation="VSwitch")
+default_instance_types = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0]["id"],
+    cpu_core_count=1,
+    memory_size=2)
+default_images = alicloud.ecs.get_images(most_recent=True,
+    name_regex="^ubuntu_18.*64",
+    owners="system")
+default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
+default_switch = alicloud.vpc.Switch("defaultSwitch",
+    availability_zone=default_zones.zones[0]["id"],
+    cidr_block="172.16.0.0/16",
+    vpc_id=default_network.id)
+default_security_group = alicloud.ecs.SecurityGroup("defaultSecurityGroup", vpc_id=default_network.id)
+instance = []
+for range in [{"value": i} for i in range(0, 2)]:
+    instance.append(alicloud.ecs.Instance(f"instance-{range['value']}",
+        availability_zone=default_zones.zones[0]["id"],
+        image_id=default_images.images[0]["id"],
+        instance_charge_type="PostPaid",
+        instance_name=name,
+        instance_type=default_instance_types.instance_types[0]["id"],
+        internet_charge_type="PayByTraffic",
+        internet_max_bandwidth_out="10",
+        security_groups=[__item.id for __item in [default_security_group]],
+        system_disk_category="cloud_efficiency",
+        vswitch_id=default_switch.id))
+default_load_balancer = alicloud.slb.LoadBalancer("defaultLoadBalancer", vswitch_id=default_switch.id)
+default_server_group = alicloud.slb.ServerGroup("defaultServerGroup",
+    load_balancer_id=default_load_balancer.id,
+    servers=[
+        {
+            "port": 100,
+            "serverIds": [
+                instance[0].id,
+                instance[1].id,
+            ],
+            "weight": 10,
+        },
+        {
+            "port": 80,
+            "serverIds": [__item.id for __item in instance],
+            "weight": 100,
+        },
+    ])
+```
 {{% /example %}}
 
 {{% example typescript %}}

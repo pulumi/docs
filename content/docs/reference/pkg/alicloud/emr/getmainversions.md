@@ -31,7 +31,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default = alicloud.emr.get_main_versions(cluster_types=[
+        "HADOOP",
+        "ZOOKEEPER",
+    ],
+    emr_version="EMR-3.22.0")
+pulumi.export("firstMainVersion", default.main_versions[0]["emrVersion"])
+pulumi.export("thisClusterTypes", default.main_versions[0]["clusterTypes"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

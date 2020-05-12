@@ -32,7 +32,20 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+example = alicloud.log.Audit("example",
+    aliuid="12345678",
+    display_name="tf-audit-test",
+    variable_map={
+        "actiontrail_enabled": "true",
+        "actiontrail_ttl": "180",
+        "oss_access_enabled": "true",
+        "oss_access_ttl": "180",
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -261,7 +274,7 @@ The Audit resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}.Multi-account configuration, please fill in multiple aliuid.
+    <dd>{{% md %}}Multi-account configuration, please fill in multiple aliuid.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -304,7 +317,7 @@ The Audit resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}.Multi-account configuration, please fill in multiple aliuid.
+    <dd>{{% md %}}Multi-account configuration, please fill in multiple aliuid.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -347,7 +360,7 @@ The Audit resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}.Multi-account configuration, please fill in multiple aliuid.
+    <dd>{{% md %}}Multi-account configuration, please fill in multiple aliuid.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -390,7 +403,7 @@ The Audit resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}.Multi-account configuration, please fill in multiple aliuid.
+    <dd>{{% md %}}Multi-account configuration, please fill in multiple aliuid.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -630,7 +643,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}.Multi-account configuration, please fill in multiple aliuid.
+    <dd>{{% md %}}Multi-account configuration, please fill in multiple aliuid.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -673,7 +686,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}.Multi-account configuration, please fill in multiple aliuid.
+    <dd>{{% md %}}Multi-account configuration, please fill in multiple aliuid.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -716,7 +729,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}.Multi-account configuration, please fill in multiple aliuid.
+    <dd>{{% md %}}Multi-account configuration, please fill in multiple aliuid.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -759,7 +772,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}.Multi-account configuration, please fill in multiple aliuid.
+    <dd>{{% md %}}Multi-account configuration, please fill in multiple aliuid.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

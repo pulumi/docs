@@ -34,7 +34,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default = alicloud.cloudconnect.Network("default",
+    cidr_block="192.168.0.0/24",
+    description="tf-testAccCloudConnectNetworkDescription",
+    is_default=True)
+```
 {{% /example %}}
 
 {{% example typescript %}}

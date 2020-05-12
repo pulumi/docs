@@ -34,7 +34,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instance = alicloud.ddos.DdosBgpInstance("instance",
+    bandwidth="201",
+    base_bandwidth="20",
+    ip_count="100",
+    ip_type="IPv4")
+```
 {{% /example %}}
 
 {{% example typescript %}}

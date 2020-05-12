@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+foo = alicloud.vpc.get_ssl_vpn_client_certs(ids=["fake-cert-id"],
+    name_regex="^foo",
+    output_file="/tmp/clientcert",
+    ssl_vpn_server_id="fake-server-id")
+```
 {{% /example %}}
 
 {{% example typescript %}}

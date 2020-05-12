@@ -30,7 +30,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+# Create a new action trail.
+foo = alicloud.actiontrail.Trail("foo",
+    event_rw="Write-test",
+    oss_bucket_name=alicloud_oss_bucket["bucket"]["id"],
+    oss_key_prefix="at-product-account-audit-B",
+    role_name=alicloud_ram_role_policy_attachment["attach"]["role_name"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

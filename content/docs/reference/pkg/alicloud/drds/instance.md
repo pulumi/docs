@@ -36,7 +36,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default = alicloud.drds.Instance("default",
+    description="drds instance",
+    instance_charge_type="PostPaid",
+    instance_series="drds.sn1.4c8g",
+    specification="drds.sn1.4c8g.8C16G",
+    vswitch_id="vsw-bp1jlu3swk8rq2yoi40ey",
+    zone_id="cn-hangzhou-e")
+```
 {{% /example %}}
 
 {{% example typescript %}}

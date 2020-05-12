@@ -36,7 +36,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+foo_common_bandwith_package = alicloud.vpc.CommonBandwithPackage("fooCommonBandwithPackage",
+    bandwidth="2",
+    description="tf-testAcc-CommonBandwidthPackage")
+foo_common_bandwidth_packages = foo_common_bandwith_package.id.apply(lambda id: alicloud.vpc.get_common_bandwidth_packages(ids=[id],
+    name_regex="^tf-testAcc.*"))
+```
 {{% /example %}}
 
 {{% example typescript %}}

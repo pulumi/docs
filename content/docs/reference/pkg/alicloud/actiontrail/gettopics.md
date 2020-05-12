@@ -30,7 +30,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+topics_ds = alicloud.actiontrail.get_topics(instance_id="xxx",
+    name_regex="alikafkaTopicName",
+    output_file="topics.txt")
+pulumi.export("firstTopicName", topics_ds.topics[0]["topic"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

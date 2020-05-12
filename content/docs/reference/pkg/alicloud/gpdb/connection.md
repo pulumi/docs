@@ -33,7 +33,34 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+config = pulumi.Config()
+creation = config.get("creation")
+if creation is None:
+    creation = "Gpdb"
+name = config.get("name")
+if name is None:
+    name = "gpdbConnectionBasic"
+default_zones = alicloud.get_zones(available_resource_creation=creation)
+default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
+default_switch = alicloud.vpc.Switch("defaultSwitch",
+    availability_zone=default_zones.zones[0]["id"],
+    cidr_block="172.16.0.0/24",
+    vpc_id=default_network.id)
+default_instance = alicloud.gpdb.Instance("defaultInstance",
+    description=name,
+    engine="gpdb",
+    engine_version="4.3",
+    instance_class="gpdb.group.segsdx2",
+    instance_group_count="2",
+    vswitch_id=default_switch.id)
+default_connection = alicloud.gpdb.Connection("defaultConnection",
+    connection_prefix="testAbc",
+    instance_id=default_instance.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

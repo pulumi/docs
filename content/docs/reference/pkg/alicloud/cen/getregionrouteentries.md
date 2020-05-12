@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+entry = alicloud.cen.get_region_route_entries(instance_id="cen-id1",
+    region_id="cn-beijing")
+pulumi.export("firstRegionRouteEntriesRouteEntryCidrBlock", entry.entries[0]["cidr_block"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

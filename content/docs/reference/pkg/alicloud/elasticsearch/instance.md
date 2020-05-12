@@ -16,9 +16,69 @@ Provides a Elasticsearch instance resource. It contains data nodes, dedicated ma
 
 > **NOTE:** At present, `version` can not be modified once instance has been created.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instance = alicloud.elasticsearch.Instance("instance",
+    instance_charge_type="PostPaid",
+    data_node_amount="2",
+    data_node_spec="elasticsearch.sn2ne.large",
+    data_node_disk_size="20",
+    data_node_disk_type="cloud_ssd",
+    vswitch_id="some vswitch id",
+    password="Your password",
+    version="5.5.3_with_X-Pack",
+    description="description",
+    zone_count="2",
+    tags={
+        "key1": "value1",
+        "key2": "value2",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instance = new alicloud.elasticsearch.Instance("instance", {
+    instanceChargeType: "PostPaid",
+    dataNodeAmount: "2",
+    dataNodeSpec: "elasticsearch.sn2ne.large",
+    dataNodeDiskSize: "20",
+    dataNodeDiskType: "cloud_ssd",
+    vswitchId: "some vswitch id",
+    password: "Your password",
+    version: "5.5.3_with_X-Pack",
+    description: "description",
+    zoneCount: "2",
+    tags: {
+        key1: "value1",
+        key2: "value2",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Instance Resource {#create}

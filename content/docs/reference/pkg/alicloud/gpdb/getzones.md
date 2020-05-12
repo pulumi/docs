@@ -14,9 +14,46 @@ This data source provides availability zones for Gpdb that can be accessed by an
 
 > **NOTE:** Available in v1.73.0+.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+zones_ids = alicloud.gpdb.get_zones()
+# Create an Gpdb instance with the first matched zone
+hbase = alicloud.hbase.Instance("hbase", availability_zone=zones_ids.zones[0]["id"])
+# Other properties...
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const zonesIds = alicloud.gpdb.getZones({});
+// Create an Gpdb instance with the first matched zone
+const hbase = new alicloud.hbase.Instance("hbase", {availabilityZone: zonesIds.then(zonesIds => zonesIds.zones[0].id)});
+// Other properties...
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetZones {#using}

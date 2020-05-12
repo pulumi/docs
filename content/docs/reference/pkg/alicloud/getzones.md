@@ -31,7 +31,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+zones_ds = alicloud.get_zones(available_disk_category="cloud_ssd",
+    available_instance_type="ecs.n4.large")
+# Create an ECS instance with the first matched zone
+instance = alicloud.ecs.Instance("instance", availability_zone=zones_ds.zones[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -14,53 +14,9 @@ This data source provides a list of ONS Groups in an Alibaba Cloud account accor
 
 > **NOTE:** Available in 1.53.0+
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const config = new pulumi.Config();
-const name = config.get("name") || "onsInstanceName";
-const groupId = config.get("groupId") || "GID-onsGroupDatasourceName";
-
-const defaultInstance = new alicloud.rocketmq.Instance("default", {
-    remark: "default_ons_instance_remark",
-});
-const defaultGroup = new alicloud.rocketmq.Group("default", {
-    groupId: groupId,
-    instanceId: defaultInstance.id,
-    remark: "dafault_ons_group_remark",
-});
-const groupsDs = defaultGroup.instanceId.apply(instanceId => alicloud.rocketmq.getGroups({
-    groupIdRegex: groupId,
-    instanceId: instanceId,
-    outputFile: "groups.txt",
-}, { async: true }));
-
-export const firstGroupName = groupsDs.groups[0].groupId;
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Using GetGroups {#using}

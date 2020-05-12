@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+disks_ds = alicloud.ecs.get_disks(name_regex="sample_disk")
+pulumi.export("firstDiskId", disks_ds.disks[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

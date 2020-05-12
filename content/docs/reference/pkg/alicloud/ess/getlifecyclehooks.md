@@ -30,7 +30,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+ds = alicloud.ess.get_lifecycle_hooks(name_regex="lifecyclehook_name",
+    scaling_group_id="scaling_group_id")
+pulumi.export("firstLifecycleHook", ds.hooks[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

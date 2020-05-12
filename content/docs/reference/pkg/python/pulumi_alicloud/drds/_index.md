@@ -59,6 +59,18 @@ transparent read/write splitting, and distributed transactions, providing O&amp;
 <div><p><strong>NOTE:</strong> At present, DRDS instance only can be supported in the regions: cn-shenzhen, cn-beijing, cn-hangzhou, cn-hongkong, cn-qingdao.</p>
 <p><strong>NOTE:</strong> Currently, this resource only support <code class="docutils literal notranslate"><span class="pre">Domestic</span> <span class="pre">Site</span> <span class="pre">Account</span></code>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">drds</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;drds instance&quot;</span><span class="p">,</span>
+    <span class="n">instance_charge_type</span><span class="o">=</span><span class="s2">&quot;PostPaid&quot;</span><span class="p">,</span>
+    <span class="n">instance_series</span><span class="o">=</span><span class="s2">&quot;drds.sn1.4c8g&quot;</span><span class="p">,</span>
+    <span class="n">specification</span><span class="o">=</span><span class="s2">&quot;drds.sn1.4c8g.8C16G&quot;</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="s2">&quot;vsw-bp1jlu3swk8rq2yoi40ey&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;cn-hangzhou-e&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

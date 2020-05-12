@@ -34,7 +34,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default = alicloud.rocketmq.SnatEntry("default",
+    cidr_block="192.168.7.0/24",
+    sag_id="sag-3rb1t3iagy3w0zgwy9",
+    snat_ip="192.0.0.2")
+```
 {{% /example %}}
 
 {{% example typescript %}}

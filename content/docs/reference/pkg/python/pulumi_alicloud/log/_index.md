@@ -16,31 +16,21 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_alicloud.log"></span><dl class="py class">
 <dt id="pulumi_alicloud.log.Alert">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.log.</code><code class="sig-name descname">Alert</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alert_description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alert_displayname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alert_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dashboard</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mute_until</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_lists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">query_lists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedule_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedule_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">throttling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.log.Alert" title="Permalink to this definition">¶</a></dt>
-<dd><p>Log alert is a unit of log service, which is used to monitor and alert the user’s logstore status information. 
-Log Service enables you to configure alerts based on the charts in a dashboard to monitor the service status in real time.</p>
-<blockquote>
-<div><p><strong>NOTE:</strong> Available in 1.78.0</p>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>alert_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alert description.</p></li>
-<li><p><strong>alert_displayname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alert displayname.</p></li>
-<li><p><strong>alert_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of logstore for configuring alarm service.</p></li>
-<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Conditional expression, such as: count&gt; 100.</p></li>
-<li><p><strong>mute_until</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Timestamp, notifications before closing again.</p></li>
-<li><p><strong>notification_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Alarm information notification list.</p></li>
-<li><p><strong>notify_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Notification threshold, which is not notified until the number of triggers is reached. The default is 1.</p></li>
-<li><p><strong>project_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project name.</p></li>
-<li><p><strong>query_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Multiple conditions for configured alarm query.</p></li>
-<li><p><strong>schedule_interval</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Execution interval. 60 seconds minimum, such as 60s, 1h.</p></li>
-<li><p><strong>schedule_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Default FixedRate. No need to configure this parameter.</p></li>
-<li><p><strong>throttling</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Alert resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] alert_description: Alert description.
+:param pulumi.Input[str] alert_displayname: Alert displayname.
+:param pulumi.Input[str] alert_name: Name of logstore for configuring alarm service.
+:param pulumi.Input[str] condition: Conditional expression, such as: count&gt; 100.
+:param pulumi.Input[float] mute_until: Timestamp, notifications before closing again.
+:param pulumi.Input[list] notification_lists: Alarm information notification list.
+:param pulumi.Input[float] notify_threshold: Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
+:param pulumi.Input[str] project_name: The project name.
+:param pulumi.Input[list] query_lists: Multiple conditions for configured alarm query.
+:param pulumi.Input[str] schedule_interval: Execution interval. 60 seconds minimum, such as 60s, 1h.
+:param pulumi.Input[str] schedule_type: Default FixedRate. No need to configure this parameter.
+:param pulumi.Input[str] throttling: Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.</p>
 <p>The <strong>notification_lists</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Notice content of alarm.</p></li>
@@ -236,6 +226,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.81.0</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">Audit</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">aliuid</span><span class="o">=</span><span class="s2">&quot;12345678&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;tf-audit-test&quot;</span><span class="p">,</span>
+    <span class="n">variable_map</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;actiontrail_enabled&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;actiontrail_ttl&quot;</span><span class="p">:</span> <span class="s2">&quot;180&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;oss_access_enabled&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;oss_access_ttl&quot;</span><span class="p">:</span> <span class="s2">&quot;180&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -243,7 +247,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>aliuid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Aliuid value of your account.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of SLS log audit.</p></li>
-<li><p><strong>multi_accounts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – .Multi-account configuration, please fill in multiple aliuid.</p></li>
+<li><p><strong>multi_accounts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Multi-account configuration, please fill in multiple aliuid.</p></li>
 <li><p><strong>variable_map</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Log audit detailed configuration.</p></li>
 </ul>
 </dd>
@@ -263,7 +267,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.log.Audit.multi_accounts">
 <code class="sig-name descname">multi_accounts</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.Audit.multi_accounts" title="Permalink to this definition">¶</a></dt>
-<dd><p>.Multi-account configuration, please fill in multiple aliuid.</p>
+<dd><p>Multi-account configuration, please fill in multiple aliuid.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -285,7 +289,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>aliuid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Aliuid value of your account.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of SLS log audit.</p></li>
-<li><p><strong>multi_accounts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – .Multi-account configuration, please fill in multiple aliuid.</p></li>
+<li><p><strong>multi_accounts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Multi-account configuration, please fill in multiple aliuid.</p></li>
 <li><p><strong>variable_map</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Log audit detailed configuration.</p></li>
 </ul>
 </dd>
@@ -333,24 +337,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_alicloud.log.LogTailAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.log.</code><code class="sig-name descname">LogTailAttachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logtail_config_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">machine_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.log.LogTailAttachment" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Logtail access service is a log collection agent provided by Log Service.
-You can use Logtail to collect logs from servers such as Alibaba Cloud Elastic
-Compute Service (ECS) instances in real time in the Log Service console. <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/29058.htm">Refer to details</a></p>
-<p>This resource amis to attach one logtail configure to a machine group.</p>
-<blockquote>
-<div><p><strong>NOTE:</strong> One logtail configure can be attached to multiple machine groups and one machine group can attach several logtail configures.</p>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>logtail_config_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Logtail configuration name, which is unique in the same project.</p></li>
-<li><p><strong>machine_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The machine group name, which is unique in the same project.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project name to the log store belongs.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a LogTailAttachment resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] logtail_config_name: The Logtail configuration name, which is unique in the same project.
+:param pulumi.Input[str] machine_group_name: The machine group name, which is unique in the same project.
+:param pulumi.Input[str] project: The project name to the log store belongs.</p>
 <dl class="py attribute">
 <dt id="pulumi_alicloud.log.LogTailAttachment.logtail_config_name">
 <code class="sig-name descname">logtail_config_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.LogTailAttachment.logtail_config_name" title="Permalink to this definition">¶</a></dt>

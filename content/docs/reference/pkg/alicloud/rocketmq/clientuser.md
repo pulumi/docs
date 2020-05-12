@@ -34,7 +34,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default = alicloud.rocketmq.ClientUser("default",
+    bandwidth="20",
+    client_ip="192.1.10.0",
+    password="xxxxxxx",
+    sag_id="sag-xxxxx",
+    user_mail="tftest-xxxxx@test.com",
+    user_name="th-username-xxxxx")
+```
 {{% /example %}}
 
 {{% example typescript %}}

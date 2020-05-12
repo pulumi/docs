@@ -30,7 +30,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+current = alicloud.get_caller_identity()
+pulumi.export("currentUserArn", current.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

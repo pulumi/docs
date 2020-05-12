@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+data_apigatway = alicloud.apigateway.get_apps(output_file="outapps")
+pulumi.export("firstAppId", data_apigatway.apps[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

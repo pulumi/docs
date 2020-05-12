@@ -33,7 +33,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+# create a CA certificate
+foo = alicloud.slb.CaCertificate("foo", ca_certificate="""-----BEGIN CERTIFICATE-----
+MIIDRjCCAq+gAwIBAgIJAJnI******90EAxEG/bJJyOm5LqoiA=
+-----END CERTIFICATE-----
+""")
+```
 {{% /example %}}
 
 {{% example typescript %}}

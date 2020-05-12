@@ -30,7 +30,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+k8s_clusters = alicloud.cs.get_kubernetes_clusters(name_regex="my-first-k8s",
+    output_file="my-first-k8s-json")
+pulumi.export("output", k8s_clusters.clusters)
+```
 {{% /example %}}
 
 {{% example typescript %}}

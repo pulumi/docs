@@ -25,6 +25,19 @@ Each application can contain one or more services.</p>
 <div><p><strong>NOTE:</strong> Application orchestration template must be a valid Docker Compose YAML template.</p>
 <p><strong>NOTE:</strong> At present, this resource only support swarm cluster.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cs</span><span class="o">.</span><span class="n">Application</span><span class="p">(</span><span class="s2">&quot;app&quot;</span><span class="p">,</span>
+    <span class="n">cluster_name</span><span class="o">=</span><span class="s2">&quot;my-first-swarm&quot;</span><span class="p">,</span>
+    <span class="n">environment</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;EXTERNAL_URL&quot;</span><span class="p">:</span> <span class="s2">&quot;123.123.123.123:8080&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">latest_image</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">template</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;wordpress.yml&quot;</span><span class="p">),</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;1.2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -853,6 +866,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong> Add Policy to RAM role of the node to deploy cluster-autoscaler if you need.</p>
 <p><strong>NOTE:</strong> Available in 1.65.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cs</span><span class="o">.</span><span class="n">KubernetesAutoscaler</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">cluster_id</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;cluster_id&quot;</span><span class="p">],</span>
+    <span class="n">cool_down_duration</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;cool_down_duration&quot;</span><span class="p">],</span>
+    <span class="n">defer_scale_in_duration</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;defer_scale_in_duration&quot;</span><span class="p">],</span>
+    <span class="n">nodepools</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;scaling_group_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;labels&quot;</span><span class="p">:</span> <span class="s2">&quot;a=b&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;taints&quot;</span><span class="p">:</span> <span class="s2">&quot;c=d:NoSchedule&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">utilization</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;utilization&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1492,6 +1520,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_alicloud.cs.ServerlessKubernetes.security_group_id">
+<code class="sig-name descname">security_group_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ServerlessKubernetes.security_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of security group where the current cluster worker node is located.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_alicloud.cs.ServerlessKubernetes.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ServerlessKubernetes.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Default nil, A map of tags assigned to the kubernetes cluster .</p>
@@ -1511,7 +1545,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py method">
 <dt id="pulumi_alicloud.cs.ServerlessKubernetes.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_ca_cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deletion_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_public_access_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_update</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kube_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">new_nat_gateway</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vswitch_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.ServerlessKubernetes.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_ca_cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deletion_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_public_access_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_update</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kube_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">new_nat_gateway</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vswitch_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.ServerlessKubernetes.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ServerlessKubernetes resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1540,6 +1574,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The kubernetes cluster’s name. It is the only in one Alicloud account.</p></li>
 <li><p><strong>new_nat_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to create a new nat gateway while creating kubernetes cluster. Default to true.</p></li>
 <li><p><strong>private_zone</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable Privatezone if you need to use the service discovery feature within the serverless cluster. Default to false.</p></li>
+<li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of security group where the current cluster worker node is located.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Default nil, A map of tags assigned to the kubernetes cluster .</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The vpc where new kubernetes cluster will be located. Specify one vpc’s id, if it is not specified, a new VPC  will be built.</p></li>
 <li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The vswitch where new kubernetes cluster will be located. Specify one vswitch’s id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> specified.</p></li>
@@ -1596,6 +1631,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Swarm cluster only supports VPC network and you can specify a VPC network by filed <code class="docutils literal notranslate"><span class="pre">vswitch_id</span></code>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">my_cluster</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cs</span><span class="o">.</span><span class="n">Swarm</span><span class="p">(</span><span class="s2">&quot;myCluster&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.18.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">disk_category</span><span class="o">=</span><span class="s2">&quot;cloud_efficiency&quot;</span><span class="p">,</span>
+    <span class="n">disk_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;image_id&quot;</span><span class="p">],</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;ecs.n4.small&quot;</span><span class="p">,</span>
+    <span class="n">node_number</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;Yourpassword1234&quot;</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;vswitch_id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1849,6 +1898,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.34.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">k8s_clusters</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cs</span><span class="o">.</span><span class="n">get_kubernetes_clusters</span><span class="p">(</span><span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;my-first-k8s&quot;</span><span class="p">,</span>
+    <span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;my-first-k8s-json&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">,</span> <span class="n">k8s_clusters</span><span class="o">.</span><span class="n">clusters</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1866,6 +1923,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.35.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">k8s_clusters</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cs</span><span class="o">.</span><span class="n">get_managed_kubernetes_clusters</span><span class="p">(</span><span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;my-first-k8s&quot;</span><span class="p">,</span>
+    <span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;my-first-k8s-json&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">,</span> <span class="n">k8s_clusters</span><span class="o">.</span><span class="n">clusters</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1883,6 +1948,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.58.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">k8s_clusters</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cs</span><span class="o">.</span><span class="n">get_serverless_kubernetes_clusters</span><span class="p">(</span><span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;my-first-k8s&quot;</span><span class="p">,</span>
+    <span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;my-first-k8s-json&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">,</span> <span class="n">k8s_clusters</span><span class="o">.</span><span class="n">clusters</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

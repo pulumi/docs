@@ -32,7 +32,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+my_namespace = alicloud.cr.Namespace("my-namespace",
+    auto_create=False,
+    default_visibility="PUBLIC")
+```
 {{% /example %}}
 
 {{% example typescript %}}

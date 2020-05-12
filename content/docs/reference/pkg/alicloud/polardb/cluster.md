@@ -32,7 +32,31 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "polardbClusterconfig"
+creation = config.get("creation")
+if creation is None:
+    creation = "PolarDB"
+default_zones = alicloud.get_zones(available_resource_creation=creation)
+default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
+default_switch = alicloud.vpc.Switch("defaultSwitch",
+    availability_zone=default_zones.zones[0]["id"],
+    cidr_block="172.16.0.0/24",
+    vpc_id=default_network.id)
+default_cluster = alicloud.polardb.Cluster("defaultCluster",
+    db_node_class="rds.mysql.s2.large",
+    db_type="MySQL",
+    db_version="5.6",
+    description=name,
+    pay_type="PostPaid",
+    vswitch_id=default_switch.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

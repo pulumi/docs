@@ -30,7 +30,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+ds = alicloud.ess.get_scheduled_tasks(name_regex="scheduled_task_name",
+    scheduled_task_id="scheduled_task_id")
+pulumi.export("firstScheduledTask", ds.tasks[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -32,6 +32,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="dns/" title="dns"><span class="symbol module"></span>dns</a></li>
     <li><a href="drds/" title="drds"><span class="symbol module"></span>drds</a></li>
     <li><a href="ecs/" title="ecs"><span class="symbol module"></span>ecs</a></li>
+    <li><a href="edas/" title="edas"><span class="symbol module"></span>edas</a></li>
     <li><a href="elasticsearch/" title="elasticsearch"><span class="symbol module"></span>elasticsearch</a></li>
     <li><a href="emr/" title="emr"><span class="symbol module"></span>emr</a></li>
     <li><a href="ess/" title="ess"><span class="symbol module"></span>ess</a></li>
@@ -52,11 +53,13 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="pvtz/" title="pvtz"><span class="symbol module"></span>pvtz</a></li>
     <li><a href="ram/" title="ram"><span class="symbol module"></span>ram</a></li>
     <li><a href="rds/" title="rds"><span class="symbol module"></span>rds</a></li>
+    <li><a href="resourcemanager/" title="resourcemanager"><span class="symbol module"></span>resourcemanager</a></li>
     <li><a href="rocketmq/" title="rocketmq"><span class="symbol module"></span>rocketmq</a></li>
     <li><a href="sag/" title="sag"><span class="symbol module"></span>sag</a></li>
     <li><a href="slb/" title="slb"><span class="symbol module"></span>slb</a></li>
     <li><a href="vpc/" title="vpc"><span class="symbol module"></span>vpc</a></li>
     <li><a href="vpn/" title="vpn"><span class="symbol module"></span>vpn</a></li>
+    <li><a href="waf/" title="waf"><span class="symbol module"></span>waf</a></li>
     <li><a href="yundun/" title="yundun"><span class="symbol module"></span>yundun</a></li>
 </ul>
 
@@ -83,6 +86,6 @@ A Pulumi package for creating and managing AliCloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.3.3</dd>
+	<dd>2.4.0</dd>
 </dl>
 

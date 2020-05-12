@@ -36,7 +36,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default = alicloud.cs.KubernetesAutoscaler("default",
+    cluster_id=var["cluster_id"],
+    cool_down_duration=var["cool_down_duration"],
+    defer_scale_in_duration=var["defer_scale_in_duration"],
+    nodepools=[{
+        "id": "scaling_group_id",
+        "labels": "a=b",
+        "taints": "c=d:NoSchedule",
+    }],
+    utilization=var["utilization"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

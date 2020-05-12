@@ -30,7 +30,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default = alicloud.get_file_crc64_checksum(filename="exampleFileName")
+pulumi.export("fileCrc64Checksum", data["alicloud..getFileCrc64Checksum"]["defualt"]["checksum"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

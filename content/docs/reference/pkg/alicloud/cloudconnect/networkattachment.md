@@ -34,7 +34,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+ccn = alicloud.cloudconnect.Network("ccn", is_default="true")
+default = alicloud.cloudconnect.NetworkAttachment("default",
+    ccn_id=ccn.id,
+    sag_id="sag-xxxxx")
+```
 {{% /example %}}
 
 {{% example typescript %}}

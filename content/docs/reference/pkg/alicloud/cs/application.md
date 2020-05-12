@@ -35,7 +35,19 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+app = alicloud.cs.Application("app",
+    cluster_name="my-first-swarm",
+    environment={
+        "EXTERNAL_URL": "123.123.123.123:8080",
+    },
+    latest_image=True,
+    template=(lambda path: open(path).read())("wordpress.yml"),
+    version="1.2")
+```
 {{% /example %}}
 
 {{% example typescript %}}

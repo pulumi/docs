@@ -31,6 +31,16 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p><strong>NOTE:</strong> The endpoint of bssopenapi used only support “business.aliyuncs.com” at present.</p>
 <p><strong>NOTE:</strong> Available in 1.57.0+ .</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">instance</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ddos</span><span class="o">.</span><span class="n">DdosBgpInstance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span>
+    <span class="n">bandwidth</span><span class="o">=</span><span class="s2">&quot;201&quot;</span><span class="p">,</span>
+    <span class="n">base_bandwidth</span><span class="o">=</span><span class="s2">&quot;20&quot;</span><span class="p">,</span>
+    <span class="n">ip_count</span><span class="o">=</span><span class="s2">&quot;100&quot;</span><span class="p">,</span>
+    <span class="n">ip_type</span><span class="o">=</span><span class="s2">&quot;IPv4&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -158,6 +168,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong> The endpoint of bssopenapi used only support “business.aliyuncs.com” at present.</p>
 <p><strong>NOTE:</strong> Available in 1.37.0+ .</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">new_instance</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ddos</span><span class="o">.</span><span class="n">DdosCooInstance</span><span class="p">(</span><span class="s2">&quot;newInstance&quot;</span><span class="p">,</span>
+    <span class="n">bandwidth</span><span class="o">=</span><span class="s2">&quot;30&quot;</span><span class="p">,</span>
+    <span class="n">base_bandwidth</span><span class="o">=</span><span class="s2">&quot;30&quot;</span><span class="p">,</span>
+    <span class="n">domain_count</span><span class="o">=</span><span class="s2">&quot;50&quot;</span><span class="p">,</span>
+    <span class="n">period</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="n">port_count</span><span class="o">=</span><span class="s2">&quot;50&quot;</span><span class="p">,</span>
+    <span class="n">service_bandwidth</span><span class="o">=</span><span class="s2">&quot;100&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -343,6 +365,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.57.0+ .</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">instance_ddos_bgp_instances</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ddos</span><span class="o">.</span><span class="n">get_ddos_bgp_instances</span><span class="p">(</span><span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;^ddosbgp&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">__item</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="n">alicloud_ddosbgp_instances</span><span class="p">[</span><span class="s2">&quot;instance&quot;</span><span class="p">]])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -357,6 +386,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ddos.get_ddos_coo_instances">
 <code class="sig-prename descclassname">pulumi_alicloud.ddos.</code><code class="sig-name descname">get_ddos_coo_instances</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ddos.get_ddos_coo_instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of BGP-Line Anti-DDoS Pro instances in an Alibaba Cloud account according to the specified filters.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">instance_ddos_coo_instances</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ddos</span><span class="o">.</span><span class="n">get_ddos_coo_instances</span><span class="p">(</span><span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;^ddoscoo&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">__item</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="n">alicloud_ddoscoo_instances</span><span class="p">[</span><span class="s2">&quot;instance&quot;</span><span class="p">]])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

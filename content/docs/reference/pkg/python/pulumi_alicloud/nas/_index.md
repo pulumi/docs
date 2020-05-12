@@ -21,6 +21,14 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.33.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">nas</span><span class="o">.</span><span class="n">AccessGroup</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;test_AccessG&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;Classic&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -115,6 +123,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.34.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">foo_access_group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">nas</span><span class="o">.</span><span class="n">AccessGroup</span><span class="p">(</span><span class="s2">&quot;fooAccessGroup&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;tf-testAccNasConfig&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;Vpc&quot;</span><span class="p">)</span>
+<span class="n">foo_access_rule</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">nas</span><span class="o">.</span><span class="n">AccessRule</span><span class="p">(</span><span class="s2">&quot;fooAccessRule&quot;</span><span class="p">,</span>
+    <span class="n">access_group_name</span><span class="o">=</span><span class="n">foo_access_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">priority</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">rw_access_type</span><span class="o">=</span><span class="s2">&quot;RDWR&quot;</span><span class="p">,</span>
+    <span class="n">source_cidr_ip</span><span class="o">=</span><span class="s2">&quot;168.1.1.0/16&quot;</span><span class="p">,</span>
+    <span class="n">user_access_type</span><span class="o">=</span><span class="s2">&quot;no_squash&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -258,6 +280,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.33.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">nas</span><span class="o">.</span><span class="n">FileSystem</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;tf-testAccNasConfig&quot;</span><span class="p">,</span>
+    <span class="n">protocol_type</span><span class="o">=</span><span class="s2">&quot;NFS&quot;</span><span class="p">,</span>
+    <span class="n">storage_type</span><span class="o">=</span><span class="s2">&quot;Performance&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -550,6 +581,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 and it only can be achieved by creating a classic mount target mannually.
 See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/60431.htm">Add a mount point</a> and <a class="reference external" href="https://www.alibabacloud.com/help/faq-detail/42176.htm">Why do I need RAM permissions to create a mount point in a classic network</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">foo_file_system</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">nas</span><span class="o">.</span><span class="n">FileSystem</span><span class="p">(</span><span class="s2">&quot;fooFileSystem&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;tf-testAccNasConfigFs&quot;</span><span class="p">,</span>
+    <span class="n">protocol_type</span><span class="o">=</span><span class="s2">&quot;NFS&quot;</span><span class="p">,</span>
+    <span class="n">storage_type</span><span class="o">=</span><span class="s2">&quot;Performance&quot;</span><span class="p">)</span>
+<span class="n">foo_access_group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">nas</span><span class="o">.</span><span class="n">AccessGroup</span><span class="p">(</span><span class="s2">&quot;fooAccessGroup&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;tf-testAccNasConfig&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;Classic&quot;</span><span class="p">)</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">nas</span><span class="o">.</span><span class="n">AccessGroup</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;tf-testAccNasConfig-2&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;Classic&quot;</span><span class="p">)</span>
+<span class="n">foo_mount_target</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">nas</span><span class="o">.</span><span class="n">MountTarget</span><span class="p">(</span><span class="s2">&quot;fooMountTarget&quot;</span><span class="p">,</span>
+    <span class="n">access_group_name</span><span class="o">=</span><span class="n">foo_access_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">file_system_id</span><span class="o">=</span><span class="n">foo_file_system</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -651,6 +700,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p>NOTE: Available in 1.35.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">ag</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">nas</span><span class="o">.</span><span class="n">get_access_groups</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;tf-testAccAccessGroupsdatasource&quot;</span><span class="p">,</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;^foo&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;Classic&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;alicloudNasAccessGroupsId&quot;</span><span class="p">,</span> <span class="n">ag</span><span class="o">.</span><span class="n">groups</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -689,6 +747,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p>NOTE: Available in 1.35.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">fs</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">nas</span><span class="o">.</span><span class="n">get_file_systems</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="n">alicloud_nas_file_system</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;description&quot;</span><span class="p">],</span>
+    <span class="n">protocol_type</span><span class="o">=</span><span class="s2">&quot;NFS&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;alicloudNasFileSystemsId&quot;</span><span class="p">,</span> <span class="n">fs</span><span class="o">.</span><span class="n">systems</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -708,6 +774,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p>NOTE: Available in 1.35.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">mt</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">nas</span><span class="o">.</span><span class="n">get_mount_targets</span><span class="p">(</span><span class="n">access_group_name</span><span class="o">=</span><span class="s2">&quot;tf-testAccNasConfig&quot;</span><span class="p">,</span>
+    <span class="n">file_system_id</span><span class="o">=</span><span class="s2">&quot;1a2sc4d&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;alicloudNasMountTargetsId&quot;</span><span class="p">,</span> <span class="n">mt</span><span class="o">.</span><span class="n">targets</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -730,6 +804,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.42.0</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">nas</span><span class="o">.</span><span class="n">get_protocols</span><span class="p">(</span><span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;protocols.txt&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;Performance&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;cn-beijing-e&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;nasProtocolsProtocol&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">.</span><span class="n">protocols</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

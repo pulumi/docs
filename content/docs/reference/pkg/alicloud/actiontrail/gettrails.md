@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+trails = alicloud.actiontrail.get_trails(name_regex="tf-testacc-actiontrail")
+pulumi.export("firstTrailName", trails.actiontrails[0]["name"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

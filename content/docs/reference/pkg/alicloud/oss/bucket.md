@@ -31,7 +31,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+bucket_acl = alicloud.oss.Bucket("bucket-acl",
+    acl="private",
+    bucket="bucket-170309-acl")
+```
 {{% /example %}}
 
 {{% example typescript %}}

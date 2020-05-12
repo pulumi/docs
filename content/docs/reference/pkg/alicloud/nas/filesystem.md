@@ -34,7 +34,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+foo = alicloud.nas.FileSystem("foo",
+    description="tf-testAccNasConfig",
+    protocol_type="NFS",
+    storage_type="Performance")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+sample_ds = alicloud.slb.get_listeners(load_balancer_id=alicloud_slb["sample_slb"]["id"])
+pulumi.export("firstSlbListenerProtocol", sample_ds.slb_listeners[0]["protocol"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -28,7 +28,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+roles_ds = alicloud.ram.get_roles(name_regex=".*test.*",
+    output_file="roles.txt",
+    policy_name="AliyunACSDefaultAccess",
+    policy_type="Custom")
+pulumi.export("firstRoleId", roles_ds.roles[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -874,7 +883,7 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>assume<wbr>Role<wbr>Policy<wbr>Document</span>
+        <span>assume_<wbr>role_<wbr>policy_<wbr>document</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -883,7 +892,7 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>create<wbr>Date</span>
+        <span>create_<wbr>date</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -928,7 +937,7 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>update<wbr>Date</span>
+        <span>update_<wbr>date</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

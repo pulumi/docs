@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+kms_keys_ds = alicloud.kms.get_keys(description_regex="Hello KMS",
+    output_file="kms_keys.json")
+pulumi.export("firstKeyId", kms_keys_ds.keys[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

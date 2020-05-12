@@ -29,7 +29,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+mongo = alicloud.mongodb.get_instances(availability_zone="eu-central-1a",
+    instance_class="dds.mongo.mid",
+    instance_type="replicate",
+    name_regex="dds-.+\\d+")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -30,7 +30,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+tables_ds = alicloud.oss.get_tables(instance_name="sample-instance",
+    name_regex="sample-table",
+    output_file="tables.txt")
+pulumi.export("firstTableId", tables_ds.tables[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

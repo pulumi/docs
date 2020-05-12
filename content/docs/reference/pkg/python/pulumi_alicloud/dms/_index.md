@@ -21,6 +21,27 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p><strong>NOTE:</strong> API users must first register in DMS.
 <strong>NOTE:</strong> Available in 1.81.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">dms</span><span class="o">.</span><span class="n">EnterpriseInstance</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">database_password</span><span class="o">=</span><span class="s2">&quot;Yourpassword123&quot;</span><span class="p">,</span>
+    <span class="n">database_user</span><span class="o">=</span><span class="s2">&quot;your_user_name&quot;</span><span class="p">,</span>
+    <span class="n">dba_uid</span><span class="o">=</span><span class="s2">&quot;1182725234xxxxxxx&quot;</span><span class="p">,</span>
+    <span class="n">ecs_region</span><span class="o">=</span><span class="s2">&quot;cn-shanghai&quot;</span><span class="p">,</span>
+    <span class="n">env_type</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">export_timeout</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span>
+    <span class="n">host</span><span class="o">=</span><span class="s2">&quot;rm-uf648hgsxxxxxx.mysql.rds.aliyuncs.com&quot;</span><span class="p">,</span>
+    <span class="n">instance_alias</span><span class="o">=</span><span class="s2">&quot;your_alias_name&quot;</span><span class="p">,</span>
+    <span class="n">instance_source</span><span class="o">=</span><span class="s2">&quot;RDS&quot;</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;MySQL&quot;</span><span class="p">,</span>
+    <span class="n">network_type</span><span class="o">=</span><span class="s2">&quot;VPC&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">3306</span><span class="p">,</span>
+    <span class="n">query_timeout</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+    <span class="n">safe_rule</span><span class="o">=</span><span class="s2">&quot;自由操作&quot;</span><span class="p">,</span>
+    <span class="n">tid</span><span class="o">=</span><span class="s2">&quot;12345&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

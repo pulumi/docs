@@ -43,7 +43,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+sample_ds = alicloud.slb.get_acls()
+pulumi.export("firstSlbAclId", sample_ds.acls[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

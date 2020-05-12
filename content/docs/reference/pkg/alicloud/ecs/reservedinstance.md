@@ -14,9 +14,57 @@ Provides an Reserved Instance resource.
 
 > **NOTE:** Available in 1.65.0+
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default = alicloud.ecs.ReservedInstance("default",
+    instance_type="ecs.g6.large",
+    instance_amount="1",
+    period_unit="Year",
+    offering_type="All Upfront",
+    description="ReservedInstance",
+    zone_id="cn-shanghai-g",
+    scope="Zone",
+    period="1")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const default = new alicloud.ecs.ReservedInstance("default", {
+    instanceType: "ecs.g6.large",
+    instanceAmount: "1",
+    periodUnit: "Year",
+    offeringType: "All Upfront",
+    description: "ReservedInstance",
+    zoneId: "cn-shanghai-g",
+    scope: "Zone",
+    period: "1",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ReservedInstance Resource {#create}

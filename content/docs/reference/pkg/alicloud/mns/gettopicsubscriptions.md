@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+subscriptions = alicloud.mns.get_topic_subscriptions(name_prefix="tf-",
+    topic_name="topic_name")
+pulumi.export("firstTopicSubscriptionId", subscriptions.subscriptions[0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

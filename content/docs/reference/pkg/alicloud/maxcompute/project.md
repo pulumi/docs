@@ -30,7 +30,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+example = alicloud.maxcompute.Project("example",
+    order_type="PayAsYouGo",
+    specification_type="OdpsStandard")
+```
 {{% /example %}}
 
 {{% example typescript %}}

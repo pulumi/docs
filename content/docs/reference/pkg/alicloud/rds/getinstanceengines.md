@@ -30,7 +30,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+resources = alicloud.rds.get_instance_engines(engine="MySQL",
+    engine_version="5.6",
+    instance_charge_type="PostPaid",
+    output_file="./engines.txt")
+pulumi.export("firstDbCategory", resources.instance_engines[0]["category"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

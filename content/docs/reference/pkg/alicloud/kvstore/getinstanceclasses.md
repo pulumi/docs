@@ -30,7 +30,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+resources_zones = alicloud.get_zones(available_resource_creation="KVStore")
+resources_instance_classes = alicloud.kvstore.get_instance_classes(engine="Redis",
+    engine_version="5.0",
+    instance_charge_type="PrePaid",
+    output_file="./classes.txt",
+    zone_id=resources_zones.zones[0]["id"])
+pulumi.export("firstKvstoreInstanceClass", resources_instance_classes.instance_classes)
+```
 {{% /example %}}
 
 {{% example typescript %}}

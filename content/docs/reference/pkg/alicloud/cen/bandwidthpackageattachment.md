@@ -28,7 +28,22 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+# Create a new bandwidth package attachment and use it to attach a bandwidth package to a new CEN
+cen = alicloud.cen.Instance("cen", description="tf-testAccCenBandwidthPackageAttachmentDescription")
+bwp = alicloud.cen.BandwidthPackage("bwp",
+    bandwidth=20,
+    geographic_region_ids=[
+        "China",
+        "Asia-Pacific",
+    ])
+foo = alicloud.cen.BandwidthPackageAttachment("foo",
+    bandwidth_package_id=bwp.id,
+    instance_id=cen.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

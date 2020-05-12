@@ -39,7 +39,76 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "slbrulebasicconfig"
+default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
+    available_resource_creation="VSwitch")
+default_instance_types = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0]["id"],
+    cpu_core_count=1,
+    memory_size=2)
+default_images = alicloud.ecs.get_images(most_recent=True,
+    name_regex="^ubuntu_18.*64",
+    owners="system")
+default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
+default_switch = alicloud.vpc.Switch("defaultSwitch",
+    availability_zone=default_zones.zones[0]["id"],
+    cidr_block="172.16.0.0/16",
+    vpc_id=default_network.id)
+default_security_group = alicloud.ecs.SecurityGroup("defaultSecurityGroup", vpc_id=default_network.id)
+default_instance = alicloud.ecs.Instance("defaultInstance",
+    availability_zone=default_zones.zones[0]["id"],
+    image_id=default_images.images[0]["id"],
+    instance_charge_type="PostPaid",
+    instance_name=name,
+    instance_type=default_instance_types.instance_types[0]["id"],
+    internet_charge_type="PayByTraffic",
+    internet_max_bandwidth_out="10",
+    security_groups=[__item.id for __item in [default_security_group]],
+    system_disk_category="cloud_efficiency",
+    vswitch_id=default_switch.id)
+default_load_balancer = alicloud.slb.LoadBalancer("defaultLoadBalancer", vswitch_id=default_switch.id)
+default_listener = alicloud.slb.Listener("defaultListener",
+    backend_port=22,
+    bandwidth=5,
+    frontend_port=22,
+    health_check_connect_port="20",
+    load_balancer_id=default_load_balancer.id,
+    protocol="http")
+default_server_group = alicloud.slb.ServerGroup("defaultServerGroup",
+    load_balancer_id=default_load_balancer.id,
+    servers=[{
+        "port": 80,
+        "serverIds": [__item.id for __item in [default_instance]],
+        "weight": 100,
+    }])
+default_rule = alicloud.slb.Rule("defaultRule",
+    cookie="23ffsa",
+    cookie_timeout=100,
+    domain="*.aliyun.com",
+    frontend_port=default_listener.frontend_port,
+    health_check="on",
+    health_check_connect_port=80,
+    health_check_domain="test",
+    health_check_http_code="http_2xx",
+    health_check_interval=10,
+    health_check_timeout=30,
+    health_check_uri="/test",
+    healthy_threshold=3,
+    listener_sync="off",
+    load_balancer_id=default_load_balancer.id,
+    scheduler="rr",
+    server_group_id=default_server_group.id,
+    sticky_session="on",
+    sticky_session_type="server",
+    unhealthy_threshold=5,
+    url="/image")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -34,7 +34,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default = alicloud.rocketmq.Qos("default")
+```
 {{% /example %}}
 
 {{% example typescript %}}

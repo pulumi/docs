@@ -31,7 +31,27 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default = alicloud.dms.EnterpriseInstance("default",
+    database_password="Yourpassword123",
+    database_user="your_user_name",
+    dba_uid="1182725234xxxxxxx",
+    ecs_region="cn-shanghai",
+    env_type="test",
+    export_timeout=600,
+    host="rm-uf648hgsxxxxxx.mysql.rds.aliyuncs.com",
+    instance_alias="your_alias_name",
+    instance_source="RDS",
+    instance_type="MySQL",
+    network_type="VPC",
+    port=3306,
+    query_timeout=60,
+    safe_rule="自由操作",
+    tid="12345")
+```
 {{% /example %}}
 
 {{% example typescript %}}

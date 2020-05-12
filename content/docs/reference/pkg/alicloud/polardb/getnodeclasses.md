@@ -30,7 +30,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+resources_zones = alicloud.get_zones(available_resource_creation="PolarDB")
+resources_node_classes = alicloud.polardb.get_node_classes(db_type="MySQL",
+    db_version="5.6",
+    pay_type="Postpaid",
+    zone_id=resources_zones.zones[0]["id"])
+pulumi.export("firstPolardbNodeClass", resources_node_classes.classes)
+```
 {{% /example %}}
 
 {{% example typescript %}}

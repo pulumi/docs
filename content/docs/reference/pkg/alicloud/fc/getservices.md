@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+fc_services_ds = alicloud.fc.get_services(name_regex="sample_fc_service")
+pulumi.export("firstFcServiceName", fc_services_ds.services[0]["name"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

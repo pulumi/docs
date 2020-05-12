@@ -96,6 +96,21 @@ You can see detail product introduction <a class="reference external" href="http
 the official website mark  more regions. or you can call <a class="reference external" href="https://help.aliyun.com/document_detail/144489.html">DescribeRegions</a></p>
 <p><strong>NOTE:</strong>  Create HBase instance or change instance type and storage would cost 15 minutes. Please make full preparation</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">hbase</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">cold_storage_size</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">core_disk_size</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
+    <span class="n">core_disk_type</span><span class="o">=</span><span class="s2">&quot;cloud_efficiency&quot;</span><span class="p">,</span>
+    <span class="n">core_instance_quantity</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">core_instance_type</span><span class="o">=</span><span class="s2">&quot;hbase.sn1.large&quot;</span><span class="p">,</span>
+    <span class="n">engine_version</span><span class="o">=</span><span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="n">master_instance_type</span><span class="o">=</span><span class="s2">&quot;hbase.sn1.large&quot;</span><span class="p">,</span>
+    <span class="n">pay_type</span><span class="o">=</span><span class="s2">&quot;PostPaid&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;cn-shenzhen-b&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -334,6 +349,13 @@ Filters support regular expression for the instance name, ids or availability_zo
 <blockquote>
 <div><p><strong>NOTE:</strong>  Available in 1.67.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">hbase</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">hbase</span><span class="o">.</span><span class="n">get_instances</span><span class="p">(</span><span class="n">availability_zone</span><span class="o">=</span><span class="s2">&quot;cn-shenzhen-b&quot;</span><span class="p">,</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;tf_testAccHBase&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -353,6 +375,15 @@ Filters support regular expression for the instance name, ids or availability_zo
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.73.0+.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">zones_ids</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">hbase</span><span class="o">.</span><span class="n">get_zones</span><span class="p">()</span>
+<span class="c1"># Create an HBase instance with the first matched zone</span>
+<span class="n">hbase</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">hbase</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;hbase&quot;</span><span class="p">,</span> <span class="n">zone_id</span><span class="o">=</span><span class="n">zones_ids</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="c1"># Other properties...</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>multi</strong> (<em>bool</em>) – Indicate whether the zones can be used in a multi AZ configuration. Default to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Multi AZ is usually used to launch HBase instances.</p>

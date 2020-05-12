@@ -18,6 +18,19 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ots.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">accessed_by</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ots.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource will help you to manager a <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/27280.htm">Table Store</a> Instance.
 It is foundation of creating data table.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="c1"># Create an OTS instance</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ots</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">accessed_by</span><span class="o">=</span><span class="s2">&quot;Vpc&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;for table&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Created&quot;</span><span class="p">:</span> <span class="s2">&quot;TF&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;For&quot;</span><span class="p">:</span> <span class="s2">&quot;Building table&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -124,6 +137,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ots.InstanceAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ots.</code><code class="sig-name descname">InstanceAttachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vswitch_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ots.InstanceAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource will help you to bind a VPC to an OTS instance.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="c1"># Create an OTS instance</span>
+<span class="n">foo_instance</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ots</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;fooInstance&quot;</span><span class="p">,</span>
+    <span class="n">accessed_by</span><span class="o">=</span><span class="s2">&quot;Vpc&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;for table&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Created&quot;</span><span class="p">:</span> <span class="s2">&quot;TF&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;For&quot;</span><span class="p">:</span> <span class="s2">&quot;Building table&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">foo_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_resource_creation</span><span class="o">=</span><span class="s2">&quot;VSwitch&quot;</span><span class="p">)</span>
+<span class="n">foo_network</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;fooNetwork&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">foo_switch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;fooSwitch&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">foo_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.1.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">foo_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">foo_instance_attachment</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ots</span><span class="o">.</span><span class="n">InstanceAttachment</span><span class="p">(</span><span class="s2">&quot;fooInstanceAttachment&quot;</span><span class="p">,</span>
+    <span class="n">instance_name</span><span class="o">=</span><span class="n">foo_instance</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">vpc_name</span><span class="o">=</span><span class="s2">&quot;attachment1&quot;</span><span class="p">,</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="n">foo_switch</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -220,25 +256,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_alicloud.ots.Table">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ots.</code><code class="sig-name descname">Table</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deviation_cell_version_in_sec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">primary_keys</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">table_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">time_to_live</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ots.Table" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an OTS table resource.</p>
-<blockquote>
-<div><p><strong>NOTE:</strong> From Provider version 1.10.0, the provider field ‘ots_instance_name’ has been deprecated and
-you should use resource alicloud_ots_table’s new field ‘instance_name’ and ‘table_name’ to re-import this resource.</p>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>deviation_cell_version_in_sec</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.</p></li>
-<li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the OTS instance in which table will located.</p></li>
-<li><p><strong>max_version</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of versions stored in this table. The valid value is 1-2147483647.</p></li>
-<li><p><strong>primary_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The property of <code class="docutils literal notranslate"><span class="pre">TableMeta</span></code> which indicates the structure information of a table. It describes the attribute value of primary key. The number of <code class="docutils literal notranslate"><span class="pre">primary_key</span></code> should not be less than one and not be more than four.</p></li>
-<li><p><strong>table_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The table name of the OTS instance. If changed, a new table would be created.</p></li>
-<li><p><strong>time_to_live</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Table resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] deviation_cell_version_in_sec: The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
+:param pulumi.Input[str] instance_name: The name of the OTS instance in which table will located.
+:param pulumi.Input[float] max_version: The maximum number of versions stored in this table. The valid value is 1-2147483647.
+:param pulumi.Input[list] primary_keys: The property of <code class="docutils literal notranslate"><span class="pre">TableMeta</span></code> which indicates the structure information of a table. It describes the attribute value of primary key. The number of <code class="docutils literal notranslate"><span class="pre">primary_key</span></code> should not be less than one and not be more than four.
+:param pulumi.Input[str] table_name: The table name of the OTS instance. If changed, a new table would be created.
+:param pulumi.Input[float] time_to_live: The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.</p>
 <p>The <strong>primary_keys</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name for primary key.</p></li>

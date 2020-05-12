@@ -30,7 +30,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+kms_aliases = alicloud.kms.get_aliases(ids=["d89e8a53-b708-41aa-8c67-6873axxx"],
+    name_regex="alias/tf-testKmsAlias_123")
+pulumi.export("firstKeyId", data["alicloud.kms.getKeys"]["kms_keys_ds"]["keys"][0]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

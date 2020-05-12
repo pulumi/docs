@@ -97,6 +97,14 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p><strong>NOTE:</strong> Available in v1.34.0+.</p>
 <p><strong>NOTE:</strong> You need to set your registry password in Container Registry console before use this resource.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">my_namespace</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cr</span><span class="o">.</span><span class="n">Namespace</span><span class="p">(</span><span class="s2">&quot;my-namespace&quot;</span><span class="p">,</span>
+    <span class="n">auto_create</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">default_visibility</span><span class="o">=</span><span class="s2">&quot;PUBLIC&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -191,6 +199,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> Available in v1.35.0+.</p>
 <p><strong>NOTE:</strong> You need to set your registry password in Container Registry console before use this resource.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">my_namespace</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cr</span><span class="o">.</span><span class="n">Namespace</span><span class="p">(</span><span class="s2">&quot;my-namespace&quot;</span><span class="p">,</span>
+    <span class="n">auto_create</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">default_visibility</span><span class="o">=</span><span class="s2">&quot;PUBLIC&quot;</span><span class="p">)</span>
+<span class="n">my_repo</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cr</span><span class="o">.</span><span class="n">Repo</span><span class="p">(</span><span class="s2">&quot;my-repo&quot;</span><span class="p">,</span>
+    <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;this is a public repo&quot;</span><span class="p">,</span>
+    <span class="n">namespace</span><span class="o">=</span><span class="n">my_namespace</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">repo_type</span><span class="o">=</span><span class="s2">&quot;PUBLIC&quot;</span><span class="p">,</span>
+    <span class="n">summary</span><span class="o">=</span><span class="s2">&quot;this is summary of my new repo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -318,6 +339,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.35.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">my_namespaces</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cr</span><span class="o">.</span><span class="n">get_namespaces</span><span class="p">(</span><span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;my-namespace&quot;</span><span class="p">,</span>
+    <span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;my-namespace-json&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">,</span> <span class="n">my_namespaces</span><span class="o">.</span><span class="n">namespaces</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by namespace name.</p>
@@ -332,6 +361,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.35.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">my_repos</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cr</span><span class="o">.</span><span class="n">get_repos</span><span class="p">(</span><span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;my-repos&quot;</span><span class="p">,</span>
+    <span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;my-repo-json&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">,</span> <span class="n">my_repos</span><span class="o">.</span><span class="n">repos</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

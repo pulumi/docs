@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+key = alicloud.kms.Key("key",
+    deletion_window_in_days="7",
+    description="Hello KMS",
+    is_enabled=True)
+```
 {{% /example %}}
 
 {{% example typescript %}}
