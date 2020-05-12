@@ -68,3 +68,21 @@ A Pulumi package for creating and managing vault cloud resources.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.html" title="Pulumi.Vault">Pulumi.Vault</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/?tab=doc#" title="vault">vault</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/#" title="@pulumi/vault">@pulumi/vault</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_vault" title="pulumi_vault">pulumi_vault</a></dd>
+
+</dl>
+

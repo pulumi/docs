@@ -26,3 +26,21 @@ Explore the resources and functions of the alicloud module in the Vault package.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.AliCloud.html" title="Pulumi.Vault.AliCloud">Pulumi.Vault.AliCloud</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/alicloud?tab=doc#" title="vault/alicloud">vault/alicloud</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/alicloud/#" title="@pulumi/vault/alicloud">@pulumi/vault/alicloud</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_vault/alicloud" title="pulumi_vault/alicloud">pulumi_vault/alicloud</a></dd>
+
+</dl>
+

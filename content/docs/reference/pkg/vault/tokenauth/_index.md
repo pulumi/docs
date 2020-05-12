@@ -26,3 +26,21 @@ Explore the resources and functions of the tokenauth module in the Vault package
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.TokenAuth.html" title="Pulumi.Vault.TokenAuth">Pulumi.Vault.TokenAuth</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/tokenauth?tab=doc#" title="vault/tokenauth">vault/tokenauth</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/tokenauth/#" title="@pulumi/vault/tokenauth">@pulumi/vault/tokenauth</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_vault/tokenauth" title="pulumi_vault/tokenauth">pulumi_vault/tokenauth</a></dd>
+
+</dl>
+

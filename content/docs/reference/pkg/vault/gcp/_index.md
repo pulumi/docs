@@ -29,3 +29,21 @@ Explore the resources and functions of the gcp module in the Vault package.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Gcp.html" title="Pulumi.Vault.Gcp">Pulumi.Vault.Gcp</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/gcp?tab=doc#" title="vault/gcp">vault/gcp</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/gcp/#" title="@pulumi/vault/gcp">@pulumi/vault/gcp</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_vault/gcp" title="pulumi_vault/gcp">pulumi_vault/gcp</a></dd>
+
+</dl>
+

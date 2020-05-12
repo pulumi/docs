@@ -27,3 +27,21 @@ Explore the resources and functions of the consul module in the Vault package.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Consul.html" title="Pulumi.Vault.Consul">Pulumi.Vault.Consul</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/consul?tab=doc#" title="vault/consul">vault/consul</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/consul/#" title="@pulumi/vault/consul">@pulumi/vault/consul</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_vault/consul" title="pulumi_vault/consul">pulumi_vault/consul</a></dd>
+
+</dl>
+

@@ -40,3 +40,21 @@ Explore the resources and functions of the aws module in the Vault package.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.html" title="Pulumi.Vault.Aws">Pulumi.Vault.Aws</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/aws?tab=doc#" title="vault/aws">vault/aws</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#" title="@pulumi/vault/aws">@pulumi/vault/aws</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_vault/aws" title="pulumi_vault/aws">pulumi_vault/aws</a></dd>
+
+</dl>
+

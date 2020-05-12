@@ -32,3 +32,21 @@ Explore the resources and functions of the generic module in the Vault package.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Generic.html" title="Pulumi.Vault.Generic">Pulumi.Vault.Generic</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/generic?tab=doc#" title="vault/generic">vault/generic</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/generic/#" title="@pulumi/vault/generic">@pulumi/vault/generic</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_vault/generic" title="pulumi_vault/generic">pulumi_vault/generic</a></dd>
+
+</dl>
+

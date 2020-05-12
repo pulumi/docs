@@ -28,3 +28,21 @@ Explore the resources and functions of the database module in the Vault package.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.html" title="Pulumi.Vault.Database">Pulumi.Vault.Database</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#" title="vault/database">vault/database</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/database/#" title="@pulumi/vault/database">@pulumi/vault/database</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_vault/database" title="pulumi_vault/database">pulumi_vault/database</a></dd>
+
+</dl>
+

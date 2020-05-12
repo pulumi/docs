@@ -33,3 +33,21 @@ Explore the resources and functions of the appRole module in the Vault package.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.AppRole.html" title="Pulumi.Vault.AppRole">Pulumi.Vault.AppRole</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/appRole?tab=doc#" title="vault/appRole">vault/appRole</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/appRole/#" title="@pulumi/vault/appRole">@pulumi/vault/appRole</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_vault/approle" title="pulumi_vault/approle">pulumi_vault/approle</a></dd>
+
+</dl>
+

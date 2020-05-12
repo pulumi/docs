@@ -27,3 +27,21 @@ Explore the resources and functions of the ssh module in the Vault package.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Ssh.html" title="Pulumi.Vault.Ssh">Pulumi.Vault.Ssh</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/ssh?tab=doc#" title="vault/ssh">vault/ssh</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/ssh/#" title="@pulumi/vault/ssh">@pulumi/vault/ssh</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_vault/ssh" title="pulumi_vault/ssh">pulumi_vault/ssh</a></dd>
+
+</dl>
+

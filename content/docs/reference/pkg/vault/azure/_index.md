@@ -34,3 +34,21 @@ Explore the resources and functions of the azure module in the Vault package.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Azure.html" title="Pulumi.Vault.Azure">Pulumi.Vault.Azure</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/azure?tab=doc#" title="vault/azure">vault/azure</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/azure/#" title="@pulumi/vault/azure">@pulumi/vault/azure</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_vault/azure" title="pulumi_vault/azure">pulumi_vault/azure</a></dd>
+
+</dl>
+

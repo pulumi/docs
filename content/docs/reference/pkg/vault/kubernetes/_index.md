@@ -33,3 +33,21 @@ Explore the resources and functions of the kubernetes module in the Vault packag
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Kubernetes.html" title="Pulumi.Vault.Kubernetes">Pulumi.Vault.Kubernetes</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/kubernetes?tab=doc#" title="vault/kubernetes">vault/kubernetes</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/kubernetes/#" title="@pulumi/vault/kubernetes">@pulumi/vault/kubernetes</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_vault/kubernetes" title="pulumi_vault/kubernetes">pulumi_vault/kubernetes</a></dd>
+
+</dl>
+

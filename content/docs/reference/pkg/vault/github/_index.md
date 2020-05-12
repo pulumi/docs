@@ -28,3 +28,21 @@ Explore the resources and functions of the github module in the Vault package.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.GitHub.html" title="Pulumi.Vault.GitHub">Pulumi.Vault.GitHub</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/github?tab=doc#" title="vault/github">vault/github</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/github/#" title="@pulumi/vault/github">@pulumi/vault/github</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_vault/github" title="pulumi_vault/github">pulumi_vault/github</a></dd>
+
+</dl>
+

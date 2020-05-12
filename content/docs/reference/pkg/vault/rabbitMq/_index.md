@@ -27,3 +27,21 @@ Explore the resources and functions of the rabbitMq module in the Vault package.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.RabbitMQ.html" title="Pulumi.Vault.RabbitMQ">Pulumi.Vault.RabbitMQ</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/rabbitMq?tab=doc#" title="vault/rabbitMq">vault/rabbitMq</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/rabbitMq/#" title="@pulumi/vault/rabbitMq">@pulumi/vault/rabbitMq</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_vault/rabbitmq" title="pulumi_vault/rabbitmq">pulumi_vault/rabbitmq</a></dd>
+
+</dl>
+

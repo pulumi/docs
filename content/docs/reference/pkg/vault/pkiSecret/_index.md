@@ -36,3 +36,21 @@ Explore the resources and functions of the pkiSecret module in the Vault package
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.PkiSecret.html" title="Pulumi.Vault.PkiSecret">Pulumi.Vault.PkiSecret</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/pkiSecret?tab=doc#" title="vault/pkiSecret">vault/pkiSecret</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/pkiSecret/#" title="@pulumi/vault/pkiSecret">@pulumi/vault/pkiSecret</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_vault/pkisecret" title="pulumi_vault/pkisecret">pulumi_vault/pkisecret</a></dd>
+
+</dl>
+
