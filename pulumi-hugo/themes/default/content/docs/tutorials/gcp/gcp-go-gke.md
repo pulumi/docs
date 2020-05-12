@@ -1,5 +1,5 @@
 ---
-title: "Google Kubernetes Engine (GKE) Cluster | C#"
+title: "Google Kubernetes Engine (GKE) Cluster | Go"
 h1: "Google Kubernetes Engine (GKE) Cluster"
 linktitle: "Google Kubernetes Engine (GKE) Cluster"
 no_edit_this_page: true
@@ -9,17 +9,18 @@ no_edit_this_page: true
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/mktutorial. -->
 
 <p class="mb-4 flex">
-    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/gcp-cs-gke" target="_blank">
+    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/gcp-go-gke" target="_blank">
         <span><i class="fab fa-github pr-2"></i> View Code</span>
     </a>
 
-    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/gcp-cs-gke" target="_blank">
+    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/gcp-go-gke" target="_blank">
         <img src="https://get.pulumi.com/new/button.svg" alt="Deploy">
     </a>
 </p>
 
 
-This example deploys an Google Cloud Platform (GCP) [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine/) cluster using CSharp.
+This example deploys a Google Cloud Platform (GCP) [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine/) cluster and
+an application to it
 
 ## Deploying the App
 
@@ -28,7 +29,7 @@ To deploy your infrastructure, follow the below steps.
 ### Prerequisites
 
 1. [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
-1. [Install .NET Core 3.0+](https://dotnet.microsoft.com/download)
+2. [Install Go 1.13 or later](https://golang.org/doc/install)
 1. [Install Google Cloud SDK (`gcloud`)](https://cloud.google.com/sdk/docs/downloads-interactive)
 1. Configure GCP Auth
 
@@ -86,7 +87,7 @@ After cloning this repo, from this working directory, run these commands:
 	Previewing update (dev):
 
         Type                      Name            Plan
-    +   pulumi:pulumi:Stack       gcp-cs-gke-dev  create
+    +   pulumi:pulumi:Stack       gcp-go-gke-dev  create
     +   └─ gcp:container:Cluster  helloworld      create
 
 	Resources:
@@ -95,7 +96,7 @@ After cloning this repo, from this working directory, run these commands:
 	Updating (dev):
 
         Type                      Name            Plan
-    +   pulumi:pulumi:Stack       gcp-cs-gke-dev  created
+    +   pulumi:pulumi:Stack       gcp-go-gke-dev  created
     +   └─ gcp:container:Cluster  helloworld      created
 
     Outputs:
@@ -118,7 +119,7 @@ After cloning this repo, from this working directory, run these commands:
     stack output in the CLI, as Pulumi facilitates exporting these objects for us.
 
     ```bash
-    $ pulumi stack output KubeConfig > kubeconfig
+    $ pulumi stack output kubeconfig > kubeconfig
     $ export KUBECONFIG=$PWD/kubeconfig
 
     $ kubectl version

@@ -1,5 +1,5 @@
 ---
-title: "Azure Kubernetes Service (AKS) Cluster | C#"
+title: "Azure Kubernetes Service (AKS) Cluster | Go"
 h1: "Azure Kubernetes Service (AKS) Cluster"
 linktitle: "Azure Kubernetes Service (AKS) Cluster"
 no_edit_this_page: true
@@ -9,17 +9,18 @@ no_edit_this_page: true
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/mktutorial. -->
 
 <p class="mb-4 flex">
-    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/azure-cs-aks" target="_blank">
+    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/azure-go-aks" target="_blank">
         <span><i class="fab fa-github pr-2"></i> View Code</span>
     </a>
 
-    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-cs-aks" target="_blank">
+    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-go-aks" target="_blank">
         <img src="https://get.pulumi.com/new/button.svg" alt="Deploy">
     </a>
 </p>
 
 
-Stands up an [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/) (AKS) cluster.
+Stands up an [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/) (AKS) cluster and
+deploys an application to it.
 
 ## Deploying the App
 
@@ -28,25 +29,29 @@ To deploy your infrastructure, follow the below steps.
 ### Prerequisites
 
 1. [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
-2. [Install .NET Core 3.0+](https://dotnet.microsoft.com/download)
+1. [Configure Azure](https://www.pulumi.com/docs/intro/cloud-providers/azure/setup/)
 
 ### Steps
 
 1. Create a new stack:
 
-    ```sh
-    $ pulumi stack init
-    Enter a stack name: dev
+    ```bash
+    $ pulumi stack init dev
     ```
 
-1. Set the required configuration variable for this program:
+1.  Login to Azure CLI (you will be prompted to do this during deployment if you forget this step):
 
     ```bash
-    $ pulumi config set azure:location westus
     $ az login
     ```
+   
+1. Set the azure location in which to run the test:
+    
+    ```bash
+    $ pulumi config set azure:location westus
+    ```
 
-4. Stand up the AKS cluster:
+1. Stand up the AKS cluster:
 
     > **Note**: Due to an [issue](https://github.com/terraform-providers/terraform-provider-azuread/issues/156) in Azure Terraform Provider, the
     > creation of an Azure Service Principal, which is needed to create the Kubernetes cluster, is delayed and may not
@@ -59,10 +64,10 @@ To deploy your infrastructure, follow the below steps.
     $ pulumi up
     ```
 
-5. After 10-15 minutes, your cluster will be ready, and the kubeconfig YAML you'll use to connect to the cluster will be available as an output. You can save this kubeconfig to a file like so:
+1. After 10-15 minutes, your cluster will be ready, and the kubeconfig YAML you'll use to connect to the cluster will be available as an output. You can save this kubeconfig to a file like so:
 
     ```bash
-    $ pulumi stack output KubeConfig > kubeconfig.yaml
+    $ pulumi stack output kubeconfig > kubeconfig.yaml
     ```
 
     Once you have this file in hand, you can interact with your new cluster as usual via `kubectl`:
@@ -70,9 +75,16 @@ To deploy your infrastructure, follow the below steps.
     ```bash
     $ KUBECONFIG=./kubeconfig.yaml kubectl get nodes
     ```
-6. From there, feel free to experiment. Simply making edits and running `pulumi up` will incrementally update your stack.
 
-7. Once you've finished experimenting, tear down your stack's resources by destroying and removing it:
+1. You can check that the application is loadbalanced across all of the pods:
+
+    ```bash
+    $ for i in {0..10}; do curl $(pulumi stack output url); done
+    ```
+
+1. From there, feel free to experiment. Simply making edits and running `pulumi up` will incrementally update your stack.
+
+1. Once you've finished experimenting, tear down your stack's resources by destroying and removing it:
 
     ```bash
     $ pulumi destroy --yes

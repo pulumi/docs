@@ -71,7 +71,7 @@ The following tutorials highlight the Google Cloud platform using complete end-t
 
 ## Other Examples and Tutorials
 
-{{< chooser language "javascript,typescript,python" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 {{< tutorials-index-gcp >}}
 
 If you'd like to see a new tutorial, please [request one](
