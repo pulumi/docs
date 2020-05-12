@@ -28,7 +28,40 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_datadog as datadog
+
+# Create a new Datadog service level objective
+foo = datadog.ServiceLevelObjective("foo",
+    description="My custom metric SLO",
+    name="Example Metric SLO",
+    query={
+        "denominator": "sum:my.custom.count.metric{*}.as_count()",
+        "numerator": "sum:my.custom.count.metric{type:good_events}.as_count()",
+    },
+    tags=[
+        "foo:bar",
+        "baz",
+    ],
+    thresholds=[
+        {
+            "target": 99.9,
+            "targetDisplay": "99.900",
+            "timeframe": "7d",
+            "warning": 99.99,
+            "warningDisplay": "99.990",
+        },
+        {
+            "target": 99.9,
+            "targetDisplay": "99.900",
+            "timeframe": "30d",
+            "warning": 99.99,
+            "warningDisplay": "99.990",
+        },
+    ],
+    type="metric")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -79,7 +112,37 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_datadog as datadog
+
+# Create a new Datadog service level objective
+bar = datadog.ServiceLevelObjective("bar",
+    description="My custom monitor SLO",
+    monitor_ids=[
+        1,
+        2,
+        3,
+    ],
+    name="Example Monitor SLO",
+    tags=[
+        "foo:bar",
+        "baz",
+    ],
+    thresholds=[
+        {
+            "target": 99.9,
+            "timeframe": "7d",
+            "warning": 99.99,
+        },
+        {
+            "target": 99.9,
+            "timeframe": "30d",
+            "warning": 99.99,
+        },
+    ],
+    type="monitor")
+```
 {{% /example %}}
 
 {{% example typescript %}}

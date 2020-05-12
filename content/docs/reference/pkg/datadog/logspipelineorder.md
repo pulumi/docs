@@ -13,9 +13,51 @@ meta_desc: "Explore the LogsPipelineOrder resource of the Datadog package, inclu
 Provides a Datadog [Logs Pipeline API](https://docs.datadoghq.com/api/?lang=python#logs-pipelines) resource, which is used to manage Datadog log pipelines order.
 
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_datadog as datadog
+
+sample_pipeline_order = datadog.LogsPipelineOrder("samplePipelineOrder",
+    name="sample_pipeline_order",
+    pipelines=[
+        datadog_logs_custom_pipeline["sample_pipeline"]["id"],
+        datadog_logs_integration_pipeline["python"]["id"],
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as datadog from "@pulumi/datadog";
+
+const samplePipelineOrder = new datadog.LogsPipelineOrder("samplePipelineOrder", {
+    name: "sample_pipeline_order",
+    pipelines: [
+        datadog_logs_custom_pipeline.sample_pipeline.id,
+        datadog_logs_integration_pipeline.python.id,
+    ],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LogsPipelineOrder Resource {#create}

@@ -28,7 +28,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_datadog as datadog
+
+# Create a new Datadog user
+foo = datadog.User("foo",
+    email="new@example.com",
+    handle="new@example.com",
+    name="New User")
+```
 {{% /example %}}
 
 {{% example typescript %}}

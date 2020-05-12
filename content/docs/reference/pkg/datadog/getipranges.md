@@ -27,7 +27,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_datadog as datadog
+
+test = datadog.get_ip_ranges()
+```
 {{% /example %}}
 
 {{% example typescript %}}

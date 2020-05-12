@@ -30,7 +30,24 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_datadog as datadog
+
+# Create a new Datadog - Amazon Web Services integration
+sandbox = datadog.aws.Integration("sandbox",
+    account_id="1234567890",
+    account_specific_namespace_rules={
+        "auto_scaling": False,
+        "opsworks": False,
+    },
+    filter_tags=["key:value"],
+    host_tags=[
+        "key:value",
+        "key2:value2",
+    ],
+    role_name="DatadogAWSIntegrationRole")
+```
 {{% /example %}}
 
 {{% example typescript %}}

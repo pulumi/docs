@@ -28,7 +28,25 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_datadog as datadog
+
+pd = datadog.pagerduty.Integration("pd",
+    api_token="38457822378273432587234242874",
+    individual_services=True,
+    schedules=[
+        "https://ddog.pagerduty.com/schedules/X123VF",
+        "https://ddog.pagerduty.com/schedules/X321XX",
+    ],
+    subdomain="ddog")
+testing_foo = datadog.pagerduty.ServiceObject("testingFoo",
+    service_key="9876543210123456789",
+    service_name="testing_foo")
+testing_bar = datadog.pagerduty.ServiceObject("testingBar",
+    service_key="54321098765432109876",
+    service_name="testing_bar")
+```
 {{% /example %}}
 
 {{% example typescript %}}
