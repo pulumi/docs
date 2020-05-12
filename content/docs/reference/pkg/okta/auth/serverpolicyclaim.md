@@ -30,7 +30,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.auth.ServerPolicyClaim("example",
+    auth_server_id="<auth server id>",
+    grant_type_whitelists=["implicit"],
+    group_whitelists=["<group ids>"],
+    policy_id="<auth server policy id>",
+    priority=1,
+    status="ACTIVE")
+```
 {{% /example %}}
 
 {{% example typescript %}}

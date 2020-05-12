@@ -30,7 +30,24 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.inline.Hook("example",
+    auth={
+        "key": "Authorization",
+        "type": "HEADER",
+        "value": "secret",
+    },
+    channel={
+        "method": "POST",
+        "uri": "https://example.com/test",
+        "version": "1.0.0",
+    },
+    type="com.okta.oauth2.tokens.transform",
+    version="1.0.1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

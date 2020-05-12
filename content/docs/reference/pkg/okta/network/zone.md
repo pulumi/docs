@@ -30,7 +30,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.network.Zone("example",
+    gateways=[
+        "1.2.3.4/24",
+        "2.3.4.5-2.3.4.15",
+    ],
+    proxies=[
+        "2.2.3.4/24",
+        "3.3.4.5-3.3.4.15",
+    ],
+    type="IP")
+```
 {{% /example %}}
 
 {{% example typescript %}}

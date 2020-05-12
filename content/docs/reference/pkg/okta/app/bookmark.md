@@ -30,7 +30,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.app.Bookmark("example",
+    label="Example",
+    url="https://example.com")
+```
 {{% /example %}}
 
 {{% example typescript %}}

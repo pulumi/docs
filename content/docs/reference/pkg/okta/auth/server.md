@@ -30,7 +30,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.auth.Server("example",
+    audiences=["api://example"],
+    description="My Example Auth Server",
+    issuer_mode="CUSTOM_URL",
+    status="ACTIVE")
+```
 {{% /example %}}
 
 {{% example typescript %}}

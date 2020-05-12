@@ -30,7 +30,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.auth.ServerClaim("example",
+    auth_server_id="<auth server id>",
+    claim_type="IDENTITY",
+    scopes=[okta_auth_server_scope["example"]["name"]],
+    value="String.substringAfter(user.email, \"@\") == \"example.com\"")
+```
 {{% /example %}}
 
 {{% example typescript %}}

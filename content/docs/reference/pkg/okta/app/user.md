@@ -19,6 +19,9 @@ __When using this resource, make sure to add the following `lifefycle` argument 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 
 
 
@@ -36,7 +39,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.app.User("example",
+    app_id="<app_id>",
+    user_id="<user id>",
+    username="example")
+```
 {{% /example %}}
 
 {{% example typescript %}}

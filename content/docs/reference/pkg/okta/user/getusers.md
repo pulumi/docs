@@ -28,7 +28,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.user.get_users(searches=[{
+    "comparison": "sw",
+    "name": "profile.company",
+    "value": "Articulate",
+}])
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -30,7 +30,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.app.OAuth("example",
+    grant_types=["authorization_code"],
+    label="example",
+    redirect_uris=["https://example.com/"],
+    response_types=["code"],
+    type="web")
+```
 {{% /example %}}
 
 {{% example typescript %}}

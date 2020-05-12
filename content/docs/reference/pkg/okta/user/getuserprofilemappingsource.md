@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.user.get_user_profile_mapping_source()
+```
 {{% /example %}}
 
 {{% example typescript %}}

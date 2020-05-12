@@ -30,7 +30,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.group.Rule("example",
+    expression_type="urn:okta:expression:1.0",
+    expression_value="String.startsWith(user.firstName,\"andy\")",
+    group_assignments=["<group id>"],
+    status="ACTIVE")
+```
 {{% /example %}}
 
 {{% example typescript %}}

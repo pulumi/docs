@@ -14,9 +14,40 @@ Allows you to manage the activation of Okta MFA methods.
 
 This resource allows you to manage Okta MFA methods.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.factor.Factor("example")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = new okta.factor.Factor("example", {});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Factor Resource {#create}

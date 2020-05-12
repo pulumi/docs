@@ -30,7 +30,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.app.SecurePasswordStore("example",
+    credentials_scheme="ADMIN_SETS_CREDENTIALS",
+    label="example",
+    password_field="pass",
+    url="http://test.com",
+    username_field="user")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -30,7 +30,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.app.BasicAuth("example",
+    auth_url="https://example.com/auth.html",
+    label="Example",
+    url="https://example.com/login.html")
+```
 {{% /example %}}
 
 {{% example typescript %}}

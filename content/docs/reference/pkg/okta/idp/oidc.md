@@ -30,7 +30,27 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.idp.Oidc("example",
+    acs_binding="HTTP-POST",
+    acs_type="INSTANCE",
+    authorization_binding="HTTP-REDIRECT",
+    authorization_url="https://idp.example.com/authorize",
+    client_id="efg456",
+    client_secret="efg456",
+    issuer_url="https://id.example.com",
+    jwks_binding="HTTP-REDIRECT",
+    jwks_url="https://idp.example.com/keys",
+    scopes=["openid"],
+    token_binding="HTTP-POST",
+    token_url="https://idp.example.com/token",
+    user_info_binding="HTTP-REDIRECT",
+    user_info_url="https://idp.example.com/userinfo",
+    username_template="idpuser.email")
+```
 {{% /example %}}
 
 {{% example typescript %}}

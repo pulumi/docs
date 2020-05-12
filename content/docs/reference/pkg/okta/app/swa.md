@@ -30,7 +30,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.app.Swa("example",
+    button_field="btn-login",
+    label="example",
+    password_field="txtbox-password",
+    url="https://example.com/login.html",
+    username_field="txtbox-username")
+```
 {{% /example %}}
 
 {{% example typescript %}}

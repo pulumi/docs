@@ -30,7 +30,30 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.app.Saml("example",
+    attribute_statements=[{
+        "filterType": "REGEX",
+        "filterValue": ".*",
+        "name": "groups",
+        "type": "GROUP",
+    }],
+    audience="http://example.com/audience",
+    authn_context_class_ref="urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport",
+    destination="http://example.com",
+    digest_algorithm="SHA256",
+    honor_force_authn=False,
+    label="example",
+    recipient="http://example.com",
+    response_signed=True,
+    signature_algorithm="RSA_SHA256",
+    sso_url="http://example.com",
+    subject_name_id_format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress",
+    subject_name_id_template=user["userName"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

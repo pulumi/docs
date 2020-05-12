@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.app.get_metadata_saml(app_id="<app id>",
+    key_id="<cert key id>")
+```
 {{% /example %}}
 
 {{% example typescript %}}

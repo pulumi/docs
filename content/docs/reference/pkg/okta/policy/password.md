@@ -30,7 +30,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.policy.Password("example",
+    description="Example",
+    groups_includeds=[data["okta.group.Group"]["everyone"]["id"]],
+    password_history_count=4,
+    status="ACTIVE")
+```
 {{% /example %}}
 
 {{% example typescript %}}
