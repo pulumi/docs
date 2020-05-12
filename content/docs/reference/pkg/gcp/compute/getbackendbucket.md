@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_backend_bucket = gcp.compute.get_backend_bucket(name="my-backend")
+```
 {{% /example %}}
 
 {{% example typescript %}}

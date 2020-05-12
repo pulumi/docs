@@ -33,6 +33,16 @@ const domainMapping = new gcp.appengine.DomainMapping("domain_mapping", {
     },
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+domain_mapping = gcp.appengine.DomainMapping("domainMapping",
+    domain_name="verified-domain.com",
+    ssl_settings={
+        "sslManagementType": "AUTOMATIC",
+    })
+```
 
 
 

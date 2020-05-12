@@ -25,6 +25,31 @@ To get more information about BackendBucket, see:
 * How-to Guides
     * [Using a Cloud Storage bucket as a load balancer backend](https://cloud.google.com/compute/docs/load-balancing/http/backend-bucket)
 
+## Example Usage - Backend Bucket Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const imageBucket = new gcp.storage.Bucket("imageBucket", {location: "EU"});
+const imageBackend = new gcp.compute.BackendBucket("imageBackend", {
+    description: "Contains beautiful images",
+    bucketName: imageBucket.name,
+    enableCdn: true,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+image_bucket = gcp.storage.Bucket("imageBucket", location="EU")
+image_backend = gcp.compute.BackendBucket("imageBackend",
+    description="Contains beautiful images",
+    bucket_name=image_bucket.name,
+    enable_cdn=True)
+```
+
 
 
 ## Create a BackendBucket Resource {#create}

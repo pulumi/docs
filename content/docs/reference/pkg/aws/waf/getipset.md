@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.waf.get_ipset(name="tfWAFIPSet")
+```
 {{% /example %}}
 
 {{% example typescript %}}

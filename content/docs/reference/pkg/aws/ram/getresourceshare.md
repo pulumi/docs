@@ -28,6 +28,17 @@ const tagFilter = pulumi.output(aws.ram.getResourceShare({
     resourceOwner: "SELF",
 }, { async: true }));
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+tag_filter = aws.ram.get_resource_share(filters=[{
+        "name": "NameOfTag",
+        "values": ["exampleNameTagValue"],
+    }],
+    name="MyResourceName",
+    resource_owner="SELF")
+```
 
 {{% examples %}}
 ## Example Usage
@@ -43,7 +54,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ram.get_resource_share(name="example",
+    resource_owner="SELF")
+```
 {{% /example %}}
 
 {{% example typescript %}}

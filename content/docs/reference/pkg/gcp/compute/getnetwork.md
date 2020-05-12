@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_network = gcp.compute.get_network(name="default-us-east1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

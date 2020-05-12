@@ -30,7 +30,23 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+front_end_load_balancer = aws.lb.LoadBalancer("frontEndLoadBalancer")
+front_end_target_group = aws.lb.TargetGroup("frontEndTargetGroup")
+front_end_listener = aws.lb.Listener("frontEndListener",
+    certificate_arn="arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4",
+    default_actions=[{
+        "targetGroupArn": front_end_target_group.arn,
+        "type": "forward",
+    }],
+    load_balancer_arn=front_end_load_balancer.arn,
+    port="443",
+    protocol="HTTPS",
+    ssl_policy="ELBSecurityPolicy-2016-08")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -64,7 +80,24 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+front_end_load_balancer = aws.lb.LoadBalancer("frontEndLoadBalancer")
+front_end_listener = aws.lb.Listener("frontEndListener",
+    default_actions=[{
+        "redirect": {
+            "port": "443",
+            "protocol": "HTTPS",
+            "statusCode": "HTTP_301",
+        },
+        "type": "redirect",
+    }],
+    load_balancer_arn=front_end_load_balancer.arn,
+    port="80",
+    protocol="HTTP")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -99,7 +132,24 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+front_end_load_balancer = aws.lb.LoadBalancer("frontEndLoadBalancer")
+front_end_listener = aws.lb.Listener("frontEndListener",
+    default_actions=[{
+        "fixedResponse": {
+            "contentType": "text/plain",
+            "messageBody": "Fixed response content",
+            "statusCode": "200",
+        },
+        "type": "fixed-response",
+    }],
+    load_balancer_arn=front_end_load_balancer.arn,
+    port="80",
+    protocol="HTTP")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -134,7 +184,34 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+front_end_load_balancer = aws.lb.LoadBalancer("frontEndLoadBalancer")
+front_end_target_group = aws.lb.TargetGroup("frontEndTargetGroup")
+pool = aws.cognito.UserPool("pool")
+client = aws.cognito.UserPoolClient("client")
+domain = aws.cognito.UserPoolDomain("domain")
+front_end_listener = aws.lb.Listener("frontEndListener",
+    default_actions=[
+        {
+            "authenticateCognito": {
+                "userPoolArn": pool.arn,
+                "userPoolClientId": client.id,
+                "userPoolDomain": domain.domain,
+            },
+            "type": "authenticate-cognito",
+        },
+        {
+            "targetGroupArn": front_end_target_group.arn,
+            "type": "forward",
+        },
+    ],
+    load_balancer_arn=front_end_load_balancer.arn,
+    port="80",
+    protocol="HTTP")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -179,7 +256,34 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+front_end_load_balancer = aws.lb.LoadBalancer("frontEndLoadBalancer")
+front_end_target_group = aws.lb.TargetGroup("frontEndTargetGroup")
+front_end_listener = aws.lb.Listener("frontEndListener",
+    default_actions=[
+        {
+            "authenticateOidc": {
+                "authorizationEndpoint": "https://example.com/authorization_endpoint",
+                "clientId": "client_id",
+                "clientSecret": "client_secret",
+                "issuer": "https://example.com",
+                "tokenEndpoint": "https://example.com/token_endpoint",
+                "userInfoEndpoint": "https://example.com/user_info_endpoint",
+            },
+            "type": "authenticate-oidc",
+        },
+        {
+            "targetGroupArn": front_end_target_group.arn,
+            "type": "forward",
+        },
+    ],
+    load_balancer_arn=front_end_load_balancer.arn,
+    port="80",
+    protocol="HTTP")
+```
 {{% /example %}}
 
 {{% example typescript %}}

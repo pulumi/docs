@@ -33,7 +33,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+import pulumi_random as random
+
+test_random_uuid = random.RandomUuid("testRandomUuid")
+test_resource_group = azure.core.ResourceGroup("testResourceGroup", location="Central US")
+```
 {{% /example %}}
 
 {{% example typescript %}}

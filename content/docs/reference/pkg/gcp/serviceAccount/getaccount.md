@@ -29,7 +29,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+object_viewer = gcp.serviceAccount.get_account(account_id="object-viewer")
+```
 {{% /example %}}
 
 {{% example typescript %}}

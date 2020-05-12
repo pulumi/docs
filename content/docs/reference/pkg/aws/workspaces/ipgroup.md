@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+contractors = aws.workspaces.IpGroup("contractors", description="Contractors IP access control group")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -18,9 +18,61 @@ the datasource. A region can have a different set of supported versions than
 its component zones, and not all zones in a region are guaranteed to
 support the same version.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+central1b = gcp.container.get_engine_versions(location="us-central1-b",
+    version_prefix="1.12.")
+foo = gcp.container.Cluster("foo",
+    location="us-central1-b",
+    node_version=central1b.latest_node_version,
+    initial_node_count=1,
+    master_auth={
+        "username": "mr.yoda",
+        "password": "adoy.rm",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const central1b = gcp.container.getEngineVersions({
+    location: "us-central1-b",
+    versionPrefix: "1.12.",
+});
+const foo = new gcp.container.Cluster("foo", {
+    location: "us-central1-b",
+    nodeVersion: central1b.then(central1b => central1b.latestNodeVersion),
+    initialNodeCount: 1,
+    master_auth: {
+        username: "mr.yoda",
+        password: "adoy.rm",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetEngineVersions {#using}

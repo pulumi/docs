@@ -13,6 +13,692 @@ meta_desc: "Explore the RegionUrlMap resource of the compute module, including e
 UrlMaps are used to route requests to a backend service based on rules
 that you define for the host and path of an incoming URL.
 
+## Example Usage - Region Url Map Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default = new gcp.compute.RegionHealthCheck("default", {
+    region: "us-central1",
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+    http_health_check: {
+        port: 80,
+        requestPath: "/",
+    },
+});
+const login = new gcp.compute.RegionBackendService("login", {
+    region: "us-central1",
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [default.selfLink],
+});
+const home = new gcp.compute.RegionBackendService("home", {
+    region: "us-central1",
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [default.selfLink],
+});
+const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
+    region: "us-central1",
+    description: "a description",
+    defaultService: home.selfLink,
+    host_rule: [{
+        hosts: ["mysite.com"],
+        pathMatcher: "allpaths",
+    }],
+    path_matcher: [{
+        name: "allpaths",
+        defaultService: home.selfLink,
+        path_rule: [
+            {
+                paths: ["/home"],
+                service: home.selfLink,
+            },
+            {
+                paths: ["/login"],
+                service: login.selfLink,
+            },
+        ],
+    }],
+    test: [{
+        service: home.selfLink,
+        host: "hi.com",
+        path: "/home",
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.RegionHealthCheck("default",
+    region="us-central1",
+    check_interval_sec=1,
+    timeout_sec=1,
+    http_health_check={
+        "port": 80,
+        "requestPath": "/",
+    })
+login = gcp.compute.RegionBackendService("login",
+    region="us-central1",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default.self_link])
+home = gcp.compute.RegionBackendService("home",
+    region="us-central1",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default.self_link])
+regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
+    region="us-central1",
+    description="a description",
+    default_service=home.self_link,
+    host_rule=[{
+        "hosts": ["mysite.com"],
+        "pathMatcher": "allpaths",
+    }],
+    path_matcher=[{
+        "name": "allpaths",
+        "defaultService": home.self_link,
+        "path_rule": [
+            {
+                "paths": ["/home"],
+                "service": home.self_link,
+            },
+            {
+                "paths": ["/login"],
+                "service": login.self_link,
+            },
+        ],
+    }],
+    test=[{
+        "service": home.self_link,
+        "host": "hi.com",
+        "path": "/home",
+    }])
+```
+## Example Usage - Region Url Map L7 Ilb Path
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default = new gcp.compute.RegionHealthCheck("default", {http_health_check: {
+    port: 80,
+}});
+const home = new gcp.compute.RegionBackendService("home", {
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [default.selfLink],
+    loadBalancingScheme: "INTERNAL_MANAGED",
+});
+const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
+    description: "a description",
+    defaultService: home.selfLink,
+    host_rule: [{
+        hosts: ["mysite.com"],
+        pathMatcher: "allpaths",
+    }],
+    path_matcher: [{
+        name: "allpaths",
+        defaultService: home.selfLink,
+        path_rule: [{
+            paths: ["/home"],
+            route_action: {
+                cors_policy: {
+                    allowCredentials: true,
+                    allowHeaders: ["Allowed content"],
+                    allowMethods: ["GET"],
+                    allowOrigins: ["Allowed origin"],
+                    exposeHeaders: ["Exposed header"],
+                    maxAge: 30,
+                    disabled: false,
+                },
+                fault_injection_policy: {
+                    abort: {
+                        httpStatus: 234,
+                        percentage: 5.6,
+                    },
+                    delay: {
+                        fixed_delay: {
+                            seconds: 0,
+                            nanos: 50000,
+                        },
+                        percentage: 7.8,
+                    },
+                },
+                request_mirror_policy: {
+                    backendService: home.selfLink,
+                },
+                retry_policy: {
+                    numRetries: 4,
+                    per_try_timeout: {
+                        seconds: 30,
+                    },
+                    retryConditions: [
+                        "5xx",
+                        "deadline-exceeded",
+                    ],
+                },
+                timeout: {
+                    seconds: 20,
+                    nanos: 750000000,
+                },
+                url_rewrite: {
+                    hostRewrite: "A replacement header",
+                    pathPrefixRewrite: "A replacement path",
+                },
+                weighted_backend_services: [{
+                    backendService: home.selfLink,
+                    weight: 400,
+                    header_action: {
+                        requestHeadersToRemoves: ["RemoveMe"],
+                        request_headers_to_add: [{
+                            headerName: "AddMe",
+                            headerValue: "MyValue",
+                            replace: true,
+                        }],
+                        responseHeadersToRemoves: ["RemoveMe"],
+                        response_headers_to_add: [{
+                            headerName: "AddMe",
+                            headerValue: "MyValue",
+                            replace: false,
+                        }],
+                    },
+                }],
+            },
+        }],
+    }],
+    test: [{
+        service: home.selfLink,
+        host: "hi.com",
+        path: "/home",
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.RegionHealthCheck("default", http_health_check={
+    "port": 80,
+})
+home = gcp.compute.RegionBackendService("home",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default.self_link],
+    load_balancing_scheme="INTERNAL_MANAGED")
+regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
+    description="a description",
+    default_service=home.self_link,
+    host_rule=[{
+        "hosts": ["mysite.com"],
+        "pathMatcher": "allpaths",
+    }],
+    path_matcher=[{
+        "name": "allpaths",
+        "defaultService": home.self_link,
+        "path_rule": [{
+            "paths": ["/home"],
+            "route_action": {
+                "cors_policy": {
+                    "allowCredentials": True,
+                    "allowHeaders": ["Allowed content"],
+                    "allowMethods": ["GET"],
+                    "allowOrigins": ["Allowed origin"],
+                    "exposeHeaders": ["Exposed header"],
+                    "maxAge": 30,
+                    "disabled": False,
+                },
+                "fault_injection_policy": {
+                    "abort": {
+                        "httpStatus": 234,
+                        "percentage": 5.6,
+                    },
+                    "delay": {
+                        "fixed_delay": {
+                            "seconds": 0,
+                            "nanos": 50000,
+                        },
+                        "percentage": 7.8,
+                    },
+                },
+                "request_mirror_policy": {
+                    "backendService": home.self_link,
+                },
+                "retry_policy": {
+                    "numRetries": 4,
+                    "per_try_timeout": {
+                        "seconds": 30,
+                    },
+                    "retryConditions": [
+                        "5xx",
+                        "deadline-exceeded",
+                    ],
+                },
+                "timeout": {
+                    "seconds": 20,
+                    "nanos": 750000000,
+                },
+                "url_rewrite": {
+                    "hostRewrite": "A replacement header",
+                    "pathPrefixRewrite": "A replacement path",
+                },
+                "weighted_backend_services": [{
+                    "backendService": home.self_link,
+                    "weight": 400,
+                    "header_action": {
+                        "requestHeadersToRemoves": ["RemoveMe"],
+                        "request_headers_to_add": [{
+                            "headerName": "AddMe",
+                            "headerValue": "MyValue",
+                            "replace": True,
+                        }],
+                        "responseHeadersToRemoves": ["RemoveMe"],
+                        "response_headers_to_add": [{
+                            "headerName": "AddMe",
+                            "headerValue": "MyValue",
+                            "replace": False,
+                        }],
+                    },
+                }],
+            },
+        }],
+    }],
+    test=[{
+        "service": home.self_link,
+        "host": "hi.com",
+        "path": "/home",
+    }])
+```
+## Example Usage - Region Url Map L7 Ilb Path Partial
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default = new gcp.compute.RegionHealthCheck("default", {http_health_check: {
+    port: 80,
+}});
+const home = new gcp.compute.RegionBackendService("home", {
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [default.selfLink],
+    loadBalancingScheme: "INTERNAL_MANAGED",
+});
+const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
+    description: "a description",
+    defaultService: home.selfLink,
+    host_rule: [{
+        hosts: ["mysite.com"],
+        pathMatcher: "allpaths",
+    }],
+    path_matcher: [{
+        name: "allpaths",
+        defaultService: home.selfLink,
+        path_rule: [{
+            paths: ["/home"],
+            route_action: {
+                retry_policy: {
+                    numRetries: 4,
+                    per_try_timeout: {
+                        seconds: 30,
+                    },
+                    retryConditions: [
+                        "5xx",
+                        "deadline-exceeded",
+                    ],
+                },
+                timeout: {
+                    seconds: 20,
+                    nanos: 750000000,
+                },
+                url_rewrite: {
+                    hostRewrite: "A replacement header",
+                    pathPrefixRewrite: "A replacement path",
+                },
+                weighted_backend_services: [{
+                    backendService: home.selfLink,
+                    weight: 400,
+                    header_action: {
+                        response_headers_to_add: [{
+                            headerName: "AddMe",
+                            headerValue: "MyValue",
+                            replace: false,
+                        }],
+                    },
+                }],
+            },
+        }],
+    }],
+    test: [{
+        service: home.selfLink,
+        host: "hi.com",
+        path: "/home",
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.RegionHealthCheck("default", http_health_check={
+    "port": 80,
+})
+home = gcp.compute.RegionBackendService("home",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default.self_link],
+    load_balancing_scheme="INTERNAL_MANAGED")
+regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
+    description="a description",
+    default_service=home.self_link,
+    host_rule=[{
+        "hosts": ["mysite.com"],
+        "pathMatcher": "allpaths",
+    }],
+    path_matcher=[{
+        "name": "allpaths",
+        "defaultService": home.self_link,
+        "path_rule": [{
+            "paths": ["/home"],
+            "route_action": {
+                "retry_policy": {
+                    "numRetries": 4,
+                    "per_try_timeout": {
+                        "seconds": 30,
+                    },
+                    "retryConditions": [
+                        "5xx",
+                        "deadline-exceeded",
+                    ],
+                },
+                "timeout": {
+                    "seconds": 20,
+                    "nanos": 750000000,
+                },
+                "url_rewrite": {
+                    "hostRewrite": "A replacement header",
+                    "pathPrefixRewrite": "A replacement path",
+                },
+                "weighted_backend_services": [{
+                    "backendService": home.self_link,
+                    "weight": 400,
+                    "header_action": {
+                        "response_headers_to_add": [{
+                            "headerName": "AddMe",
+                            "headerValue": "MyValue",
+                            "replace": False,
+                        }],
+                    },
+                }],
+            },
+        }],
+    }],
+    test=[{
+        "service": home.self_link,
+        "host": "hi.com",
+        "path": "/home",
+    }])
+```
+## Example Usage - Region Url Map L7 Ilb Route
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default = new gcp.compute.RegionHealthCheck("default", {http_health_check: {
+    port: 80,
+}});
+const home = new gcp.compute.RegionBackendService("home", {
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [default.selfLink],
+    loadBalancingScheme: "INTERNAL_MANAGED",
+});
+const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
+    description: "a description",
+    defaultService: home.selfLink,
+    host_rule: [{
+        hosts: ["mysite.com"],
+        pathMatcher: "allpaths",
+    }],
+    path_matcher: [{
+        name: "allpaths",
+        defaultService: home.selfLink,
+        route_rules: [{
+            priority: 1,
+            header_action: {
+                requestHeadersToRemoves: ["RemoveMe2"],
+                request_headers_to_add: [{
+                    headerName: "AddSomethingElse",
+                    headerValue: "MyOtherValue",
+                    replace: true,
+                }],
+                responseHeadersToRemoves: ["RemoveMe3"],
+                response_headers_to_add: [{
+                    headerName: "AddMe",
+                    headerValue: "MyValue",
+                    replace: false,
+                }],
+            },
+            match_rules: [{
+                fullPathMatch: "a full path",
+                header_matches: [{
+                    headerName: "someheader",
+                    exactMatch: "match this exactly",
+                    invertMatch: true,
+                }],
+                ignoreCase: true,
+                metadata_filters: [{
+                    filterMatchCriteria: "MATCH_ANY",
+                    filter_labels: [{
+                        name: "PLANET",
+                        value: "MARS",
+                    }],
+                }],
+                query_parameter_matches: [{
+                    name: "a query parameter",
+                    presentMatch: true,
+                }],
+            }],
+            url_redirect: {
+                hostRedirect: "A host",
+                httpsRedirect: false,
+                pathRedirect: "some/path",
+                redirectResponseCode: "TEMPORARY_REDIRECT",
+                stripQuery: true,
+            },
+        }],
+    }],
+    test: [{
+        service: home.selfLink,
+        host: "hi.com",
+        path: "/home",
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.RegionHealthCheck("default", http_health_check={
+    "port": 80,
+})
+home = gcp.compute.RegionBackendService("home",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default.self_link],
+    load_balancing_scheme="INTERNAL_MANAGED")
+regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
+    description="a description",
+    default_service=home.self_link,
+    host_rule=[{
+        "hosts": ["mysite.com"],
+        "pathMatcher": "allpaths",
+    }],
+    path_matcher=[{
+        "name": "allpaths",
+        "defaultService": home.self_link,
+        "route_rules": [{
+            "priority": 1,
+            "header_action": {
+                "requestHeadersToRemoves": ["RemoveMe2"],
+                "request_headers_to_add": [{
+                    "headerName": "AddSomethingElse",
+                    "headerValue": "MyOtherValue",
+                    "replace": True,
+                }],
+                "responseHeadersToRemoves": ["RemoveMe3"],
+                "response_headers_to_add": [{
+                    "headerName": "AddMe",
+                    "headerValue": "MyValue",
+                    "replace": False,
+                }],
+            },
+            "match_rules": [{
+                "fullPathMatch": "a full path",
+                "header_matches": [{
+                    "headerName": "someheader",
+                    "exactMatch": "match this exactly",
+                    "invertMatch": True,
+                }],
+                "ignoreCase": True,
+                "metadata_filters": [{
+                    "filterMatchCriteria": "MATCH_ANY",
+                    "filter_labels": [{
+                        "name": "PLANET",
+                        "value": "MARS",
+                    }],
+                }],
+                "query_parameter_matches": [{
+                    "name": "a query parameter",
+                    "presentMatch": True,
+                }],
+            }],
+            "url_redirect": {
+                "hostRedirect": "A host",
+                "httpsRedirect": False,
+                "pathRedirect": "some/path",
+                "redirectResponseCode": "TEMPORARY_REDIRECT",
+                "stripQuery": True,
+            },
+        }],
+    }],
+    test=[{
+        "service": home.self_link,
+        "host": "hi.com",
+        "path": "/home",
+    }])
+```
+## Example Usage - Region Url Map L7 Ilb Route Partial
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default = new gcp.compute.RegionHealthCheck("default", {http_health_check: {
+    port: 80,
+}});
+const home = new gcp.compute.RegionBackendService("home", {
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [default.selfLink],
+    loadBalancingScheme: "INTERNAL_MANAGED",
+});
+const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
+    description: "a description",
+    defaultService: home.selfLink,
+    host_rule: [{
+        hosts: ["mysite.com"],
+        pathMatcher: "allpaths",
+    }],
+    path_matcher: [{
+        name: "allpaths",
+        defaultService: home.selfLink,
+        route_rules: [{
+            priority: 1,
+            service: home.selfLink,
+            header_action: {
+                requestHeadersToRemoves: ["RemoveMe2"],
+            },
+            match_rules: [{
+                fullPathMatch: "a full path",
+                header_matches: [{
+                    headerName: "someheader",
+                    exactMatch: "match this exactly",
+                    invertMatch: true,
+                }],
+                query_parameter_matches: [{
+                    name: "a query parameter",
+                    presentMatch: true,
+                }],
+            }],
+        }],
+    }],
+    test: [{
+        service: home.selfLink,
+        host: "hi.com",
+        path: "/home",
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.RegionHealthCheck("default", http_health_check={
+    "port": 80,
+})
+home = gcp.compute.RegionBackendService("home",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default.self_link],
+    load_balancing_scheme="INTERNAL_MANAGED")
+regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
+    description="a description",
+    default_service=home.self_link,
+    host_rule=[{
+        "hosts": ["mysite.com"],
+        "pathMatcher": "allpaths",
+    }],
+    path_matcher=[{
+        "name": "allpaths",
+        "defaultService": home.self_link,
+        "route_rules": [{
+            "priority": 1,
+            "service": home.self_link,
+            "header_action": {
+                "requestHeadersToRemoves": ["RemoveMe2"],
+            },
+            "match_rules": [{
+                "fullPathMatch": "a full path",
+                "header_matches": [{
+                    "headerName": "someheader",
+                    "exactMatch": "match this exactly",
+                    "invertMatch": True,
+                }],
+                "query_parameter_matches": [{
+                    "name": "a query parameter",
+                    "presentMatch": True,
+                }],
+            }],
+        }],
+    }],
+    test=[{
+        "service": home.self_link,
+        "host": "hi.com",
+        "path": "/home",
+    }])
+```
+
 
 
 ## Create a RegionUrlMap Resource {#create}
@@ -20,19 +706,19 @@ that you define for the host and path of an incoming URL.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionUrlMap">RegionUrlMap</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionUrlMapArgs">RegionUrlMapArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionUrlMap">RegionUrlMap</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionUrlMapArgs">RegionUrlMapArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RegionUrlMap</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>default_service=None<span class="p">, </span>description=None<span class="p">, </span>host_rules=None<span class="p">, </span>name=None<span class="p">, </span>path_matchers=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>tests=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RegionUrlMap</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>default_service=None<span class="p">, </span>default_url_redirect=None<span class="p">, </span>description=None<span class="p">, </span>host_rules=None<span class="p">, </span>name=None<span class="p">, </span>path_matchers=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>tests=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRegionUrlMap<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapArgs">RegionUrlMapArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMap">RegionUrlMap</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRegionUrlMap<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapArgs">RegionUrlMapArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMap">RegionUrlMap</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionUrlMap.html">RegionUrlMap</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionUrlMapArgs.html">RegionUrlMapArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionUrlMap.html">RegionUrlMap</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionUrlMapArgs.html">RegionUrlMapArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -50,7 +736,7 @@ that you define for the host and path of an incoming URL.
     </dd>
   
     <dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionUrlMapArgs">RegionUrlMapArgs</a></span>
@@ -119,7 +805,7 @@ that you define for the host and path of an incoming URL.
     </dd>
   
     <dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapArgs">RegionUrlMapArgs</a></span>
@@ -158,7 +844,7 @@ that you define for the host and path of an incoming URL.
     </dd>
   
     <dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionUrlMapArgs.html">RegionUrlMapArgs</a></span>
@@ -196,8 +882,8 @@ The RegionUrlMap resource accepts the following [input]({{< relref "/docs/intro/
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span>Default<wbr>Service</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -205,6 +891,17 @@ The RegionUrlMap resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}A reference to a RegionBackendService resource. This will be used if
 none of the pathRules defined by this PathMatcher is matched by
 the URL's path portion.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Url<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionurlmapdefaulturlredirect">Region<wbr>Url<wbr>Map<wbr>Default<wbr>Url<wbr>Redirect<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -282,8 +979,8 @@ succeed only if all of the test cases pass.  Structure is documented below.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span>Default<wbr>Service</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -291,6 +988,17 @@ succeed only if all of the test cases pass.  Structure is documented below.
     <dd>{{% md %}}A reference to a RegionBackendService resource. This will be used if
 none of the pathRules defined by this PathMatcher is matched by
 the URL's path portion.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Url<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionurlmapdefaulturlredirect">Region<wbr>Url<wbr>Map<wbr>Default<wbr>Url<wbr>Redirect</a></span>
+    </dt>
+    <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -368,8 +1076,8 @@ succeed only if all of the test cases pass.  Structure is documented below.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span>default<wbr>Service</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -377,6 +1085,17 @@ succeed only if all of the test cases pass.  Structure is documented below.
     <dd>{{% md %}}A reference to a RegionBackendService resource. This will be used if
 none of the pathRules defined by this PathMatcher is matched by
 the URL's path portion.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default<wbr>Url<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionurlmapdefaulturlredirect">Region<wbr>Url<wbr>Map<wbr>Default<wbr>Url<wbr>Redirect</a></span>
+    </dt>
+    <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -454,8 +1173,8 @@ succeed only if all of the test cases pass.  Structure is documented below.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span>default_<wbr>service</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -463,6 +1182,17 @@ succeed only if all of the test cases pass.  Structure is documented below.
     <dd>{{% md %}}A reference to a RegionBackendService resource. This will be used if
 none of the pathRules defined by this PathMatcher is matched by
 the URL's path portion.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default_<wbr>url_<wbr>redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionurlmapdefaulturlredirect">Dict[Region<wbr>Url<wbr>Map<wbr>Default<wbr>Url<wbr>Redirect]</a></span>
+    </dt>
+    <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -767,7 +1497,7 @@ Get an existing RegionUrlMap resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>creation_timestamp=None<span class="p">, </span>default_service=None<span class="p">, </span>description=None<span class="p">, </span>fingerprint=None<span class="p">, </span>host_rules=None<span class="p">, </span>map_id=None<span class="p">, </span>name=None<span class="p">, </span>path_matchers=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>self_link=None<span class="p">, </span>tests=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>creation_timestamp=None<span class="p">, </span>default_service=None<span class="p">, </span>default_url_redirect=None<span class="p">, </span>description=None<span class="p">, </span>fingerprint=None<span class="p">, </span>host_rules=None<span class="p">, </span>map_id=None<span class="p">, </span>name=None<span class="p">, </span>path_matchers=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>self_link=None<span class="p">, </span>tests=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -903,6 +1633,17 @@ the URL's path portion.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Default<wbr>Url<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionurlmapdefaulturlredirect">Region<wbr>Url<wbr>Map<wbr>Default<wbr>Url<wbr>Redirect<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -1021,6 +1762,17 @@ succeed only if all of the test cases pass.  Structure is documented below.
     <dd>{{% md %}}A reference to a RegionBackendService resource. This will be used if
 none of the pathRules defined by this PathMatcher is matched by
 the URL's path portion.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Url<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionurlmapdefaulturlredirect">Region<wbr>Url<wbr>Map<wbr>Default<wbr>Url<wbr>Redirect</a></span>
+    </dt>
+    <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1147,6 +1899,17 @@ the URL's path portion.
 
     <dt class="property-optional"
             title="Optional">
+        <span>default<wbr>Url<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionurlmapdefaulturlredirect">Region<wbr>Url<wbr>Map<wbr>Default<wbr>Url<wbr>Redirect</a></span>
+    </dt>
+    <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1269,6 +2032,17 @@ the URL's path portion.
 
     <dt class="property-optional"
             title="Optional">
+        <span>default_<wbr>url_<wbr>redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionurlmapdefaulturlredirect">Dict[Region<wbr>Url<wbr>Map<wbr>Default<wbr>Url<wbr>Redirect]</a></span>
+    </dt>
+    <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1375,6 +2149,356 @@ succeed only if all of the test cases pass.  Structure is documented below.
 
 
 ## Supporting Types
+
+
+<h4 id="regionurlmapdefaulturlredirect">Region<wbr>Url<wbr>Map<wbr>Default<wbr>Url<wbr>Redirect</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionUrlMapDefaultUrlRedirect">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionUrlMapDefaultUrlRedirect">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapDefaultUrlRedirectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapDefaultUrlRedirectOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionUrlMapDefaultUrlRedirectArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionUrlMapDefaultUrlRedirect.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Strip<wbr>Query</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Host<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Https<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Path<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Prefix<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Redirect<wbr>Response<wbr>Code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
+- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+- FOUND, which corresponds to 302.
+- SEE_OTHER which corresponds to 303.
+- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.
+- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Strip<wbr>Query</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Host<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Https<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Path<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Prefix<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Redirect<wbr>Response<wbr>Code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
+- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+- FOUND, which corresponds to 302.
+- SEE_OTHER which corresponds to 303.
+- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.
+- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>strip<wbr>Query</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>host<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>https<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>path<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>prefix<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>redirect<wbr>Response<wbr>Code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
+- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+- FOUND, which corresponds to 302.
+- SEE_OTHER which corresponds to 303.
+- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.
+- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>strip<wbr>Query</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>host<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>https<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>path<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>prefix<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>redirect<wbr>Response<wbr>Code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
+- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+- FOUND, which corresponds to 302.
+- SEE_OTHER which corresponds to 303.
+- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.
+- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="regionurlmaphostrule">Region<wbr>Url<wbr>Map<wbr>Host<wbr>Rule</h4>
@@ -1588,6 +2712,17 @@ request, in the absence of which the request match fails.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Default<wbr>Url<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherdefaulturlredirect">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Default<wbr>Url<wbr>Redirect<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -1649,6 +2784,17 @@ the URL's path portion.
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Url<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherdefaulturlredirect">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Default<wbr>Url<wbr>Redirect</a></span>
+    </dt>
+    <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1718,6 +2864,17 @@ request, in the absence of which the request match fails.
 
     <dt class="property-optional"
             title="Optional">
+        <span>default<wbr>Url<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherdefaulturlredirect">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Default<wbr>Url<wbr>Redirect</a></span>
+    </dt>
+    <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1783,6 +2940,17 @@ request, in the absence of which the request match fails.
 
     <dt class="property-optional"
             title="Optional">
+        <span>default_<wbr>url_<wbr>redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherdefaulturlredirect">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Default<wbr>Url<wbr>Redirect]</a></span>
+    </dt>
+    <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1816,6 +2984,356 @@ routeRules matters: the first rule that matches will cause its specified routing
 action to take effect. Within a given pathMatcher, only one of pathRules or
 routeRules must be set. routeRules are not supported in UrlMaps intended for
 External load balancers.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="regionurlmappathmatcherdefaulturlredirect">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Default<wbr>Url<wbr>Redirect</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionUrlMapPathMatcherDefaultUrlRedirect">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionUrlMapPathMatcherDefaultUrlRedirect">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherDefaultUrlRedirectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherDefaultUrlRedirectOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionUrlMapPathMatcherDefaultUrlRedirectArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionUrlMapPathMatcherDefaultUrlRedirect.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Strip<wbr>Query</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Host<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Https<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Path<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Prefix<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Redirect<wbr>Response<wbr>Code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
+- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+- FOUND, which corresponds to 302.
+- SEE_OTHER which corresponds to 303.
+- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.
+- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Strip<wbr>Query</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Host<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Https<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Path<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Prefix<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Redirect<wbr>Response<wbr>Code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
+- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+- FOUND, which corresponds to 302.
+- SEE_OTHER which corresponds to 303.
+- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.
+- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>strip<wbr>Query</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>host<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>https<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>path<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>prefix<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>redirect<wbr>Response<wbr>Code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
+- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+- FOUND, which corresponds to 302.
+- SEE_OTHER which corresponds to 303.
+- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.
+- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>strip<wbr>Query</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>host<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>https<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>path<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>prefix<wbr>Redirect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>redirect<wbr>Response<wbr>Code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
+- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+- FOUND, which corresponds to 302.
+- SEE_OTHER which corresponds to 303.
+- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.
+- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.
 {{% /md %}}</dd>
 
 </dl>
@@ -1884,9 +3402,9 @@ or urlRedirect must be set.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherpathruleurlredirect">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified by
-urlRedirect. If urlRedirect is specified, service or routeAction must not be
-set.  Structure is documented below.
+    <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified
+by urlRedirect. If urlRedirect is specified, service or routeAction must not
+be set.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1937,9 +3455,9 @@ or urlRedirect must be set.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherpathruleurlredirect">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
     </dt>
-    <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified by
-urlRedirect. If urlRedirect is specified, service or routeAction must not be
-set.  Structure is documented below.
+    <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified
+by urlRedirect. If urlRedirect is specified, service or routeAction must not
+be set.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1990,9 +3508,9 @@ or urlRedirect must be set.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherpathruleurlredirect">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
     </dt>
-    <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified by
-urlRedirect. If urlRedirect is specified, service or routeAction must not be
-set.  Structure is documented below.
+    <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified
+by urlRedirect. If urlRedirect is specified, service or routeAction must not
+be set.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2043,9 +3561,9 @@ or urlRedirect must be set.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherpathruleurlredirect">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect]</a></span>
     </dt>
-    <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified by
-urlRedirect. If urlRedirect is specified, service or routeAction must not be
-set.  Structure is documented below.
+    <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified
+by urlRedirect. If urlRedirect is specified, service or routeAction must not
+be set.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -4765,9 +6283,10 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed
-prior to redirecting the request. If set to false, the query portion of the
-original URL is retained.
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4786,10 +6305,10 @@ supplied in the request. The value must be between 1 and 255 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set
-to false, the URL scheme of the redirected request will remain the same as that
-of the request. This must only be set for UrlMaps used in TargetHttpProxys.
-Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4799,8 +6318,10 @@ Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
-supplied in the request. Only one of pathRedirect or prefixRedirect must be
-specified. The value must be between 1 and 1024 characters.
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4811,6 +6332,9 @@ specified. The value must be between 1 and 1024 characters.
     </dt>
     <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
 retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4842,9 +6366,10 @@ the request method will be retained.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed
-prior to redirecting the request. If set to false, the query portion of the
-original URL is retained.
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4863,10 +6388,10 @@ supplied in the request. The value must be between 1 and 255 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set
-to false, the URL scheme of the redirected request will remain the same as that
-of the request. This must only be set for UrlMaps used in TargetHttpProxys.
-Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4876,8 +6401,10 @@ Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
-supplied in the request. Only one of pathRedirect or prefixRedirect must be
-specified. The value must be between 1 and 1024 characters.
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4888,6 +6415,9 @@ specified. The value must be between 1 and 1024 characters.
     </dt>
     <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
 retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4919,9 +6449,10 @@ the request method will be retained.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed
-prior to redirecting the request. If set to false, the query portion of the
-original URL is retained.
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4940,10 +6471,10 @@ supplied in the request. The value must be between 1 and 255 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set
-to false, the URL scheme of the redirected request will remain the same as that
-of the request. This must only be set for UrlMaps used in TargetHttpProxys.
-Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4953,8 +6484,10 @@ Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
-supplied in the request. Only one of pathRedirect or prefixRedirect must be
-specified. The value must be between 1 and 1024 characters.
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4965,6 +6498,9 @@ specified. The value must be between 1 and 1024 characters.
     </dt>
     <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
 retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4996,9 +6532,10 @@ the request method will be retained.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed
-prior to redirecting the request. If set to false, the query portion of the
-original URL is retained.
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5017,10 +6554,10 @@ supplied in the request. The value must be between 1 and 255 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set
-to false, the URL scheme of the redirected request will remain the same as that
-of the request. This must only be set for UrlMaps used in TargetHttpProxys.
-Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5030,8 +6567,10 @@ Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
-supplied in the request. Only one of pathRedirect or prefixRedirect must be
-specified. The value must be between 1 and 1024 characters.
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5042,6 +6581,9 @@ specified. The value must be between 1 and 1024 characters.
     </dt>
     <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
 retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5155,9 +6697,9 @@ or urlRedirect must be set.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherrouteruleurlredirect">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified by
-urlRedirect. If urlRedirect is specified, service or routeAction must not be
-set.  Structure is documented below.
+    <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified
+by urlRedirect. If urlRedirect is specified, service or routeAction must not
+be set.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -5237,9 +6779,9 @@ or urlRedirect must be set.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherrouteruleurlredirect">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
     </dt>
-    <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified by
-urlRedirect. If urlRedirect is specified, service or routeAction must not be
-set.  Structure is documented below.
+    <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified
+by urlRedirect. If urlRedirect is specified, service or routeAction must not
+be set.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -5319,9 +6861,9 @@ or urlRedirect must be set.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherrouteruleurlredirect">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
     </dt>
-    <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified by
-urlRedirect. If urlRedirect is specified, service or routeAction must not be
-set.  Structure is documented below.
+    <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified
+by urlRedirect. If urlRedirect is specified, service or routeAction must not
+be set.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -5401,9 +6943,9 @@ or urlRedirect must be set.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherrouteruleurlredirect">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect]</a></span>
     </dt>
-    <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified by
-urlRedirect. If urlRedirect is specified, service or routeAction must not be
-set.  Structure is documented below.
+    <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified
+by urlRedirect. If urlRedirect is specified, service or routeAction must not
+be set.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -10063,10 +11605,10 @@ supplied in the request. The value must be between 1 and 255 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set
-to false, the URL scheme of the redirected request will remain the same as that
-of the request. This must only be set for UrlMaps used in TargetHttpProxys.
-Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10076,8 +11618,10 @@ Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
-supplied in the request. Only one of pathRedirect or prefixRedirect must be
-specified. The value must be between 1 and 1024 characters.
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10088,6 +11632,9 @@ specified. The value must be between 1 and 1024 characters.
     </dt>
     <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
 retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10112,9 +11659,10 @@ the request method will be retained.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed
-prior to redirecting the request. If set to false, the query portion of the
-original URL is retained.
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.
 {{% /md %}}</dd>
 
 </dl>
@@ -10140,10 +11688,10 @@ supplied in the request. The value must be between 1 and 255 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set
-to false, the URL scheme of the redirected request will remain the same as that
-of the request. This must only be set for UrlMaps used in TargetHttpProxys.
-Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10153,8 +11701,10 @@ Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
-supplied in the request. Only one of pathRedirect or prefixRedirect must be
-specified. The value must be between 1 and 1024 characters.
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10165,6 +11715,9 @@ specified. The value must be between 1 and 1024 characters.
     </dt>
     <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
 retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10189,9 +11742,10 @@ the request method will be retained.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed
-prior to redirecting the request. If set to false, the query portion of the
-original URL is retained.
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.
 {{% /md %}}</dd>
 
 </dl>
@@ -10217,10 +11771,10 @@ supplied in the request. The value must be between 1 and 255 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set
-to false, the URL scheme of the redirected request will remain the same as that
-of the request. This must only be set for UrlMaps used in TargetHttpProxys.
-Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10230,8 +11784,10 @@ Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
-supplied in the request. Only one of pathRedirect or prefixRedirect must be
-specified. The value must be between 1 and 1024 characters.
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10242,6 +11798,9 @@ specified. The value must be between 1 and 1024 characters.
     </dt>
     <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
 retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10266,9 +11825,10 @@ the request method will be retained.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed
-prior to redirecting the request. If set to false, the query portion of the
-original URL is retained.
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.
 {{% /md %}}</dd>
 
 </dl>
@@ -10294,10 +11854,10 @@ supplied in the request. The value must be between 1 and 255 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set
-to false, the URL scheme of the redirected request will remain the same as that
-of the request. This must only be set for UrlMaps used in TargetHttpProxys.
-Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
+false, the URL scheme of the redirected request will remain the same as that of the
+request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
+true for TargetHttpsProxy is not permitted. The default is set to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10307,8 +11867,10 @@ Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
-supplied in the request. Only one of pathRedirect or prefixRedirect must be
-specified. The value must be between 1 and 1024 characters.
+supplied in the request. pathRedirect cannot be supplied together with
+prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
+original request will be used for the redirect. The value must be between 1 and 1024
+characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10319,6 +11881,9 @@ specified. The value must be between 1 and 1024 characters.
     </dt>
     <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
 retaining the remaining portion of the URL before redirecting the request.
+prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
+neither. If neither is supplied, the path of the original request will be used for
+the redirect. The value must be between 1 and 1024 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10343,9 +11908,10 @@ the request method will be retained.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed
-prior to redirecting the request. If set to false, the query portion of the
-original URL is retained.
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
+to redirecting the request. If set to false, the query portion of the original URL is
+retained.
+This field is required to ensure an empty block is not set. The normal default value is false.
 {{% /md %}}</dd>
 
 </dl>

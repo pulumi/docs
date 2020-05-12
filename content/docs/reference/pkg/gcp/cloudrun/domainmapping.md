@@ -19,6 +19,62 @@ To get more information about DomainMapping, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/run/docs/mapping-custom-domains)
 
+## Example Usage - Cloud Run Domain Mapping Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultService = new gcp.cloudrun.Service("defaultService", {
+    location: "us-central1",
+    metadata: {
+        namespace: "my-project-name",
+    },
+    template: {
+        spec: {
+            containers: [{
+                image: "gcr.io/cloudrun/hello",
+            }],
+        },
+    },
+});
+const defaultDomainMapping = new gcp.cloudrun.DomainMapping("defaultDomainMapping", {
+    location: "us-central1",
+    metadata: {
+        namespace: "my-project-name",
+    },
+    spec: {
+        routeName: defaultService.name,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_service = gcp.cloudrun.Service("defaultService",
+    location="us-central1",
+    metadata={
+        "namespace": "my-project-name",
+    },
+    template={
+        "spec": {
+            "containers": [{
+                "image": "gcr.io/cloudrun/hello",
+            }],
+        },
+    })
+default_domain_mapping = gcp.cloudrun.DomainMapping("defaultDomainMapping",
+    location="us-central1",
+    metadata={
+        "namespace": "my-project-name",
+    },
+    spec={
+        "routeName": default_service.name,
+    })
+```
+
 
 
 ## Create a DomainMapping Resource {#create}

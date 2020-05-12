@@ -20,6 +20,92 @@ To get more information about TargetHttpProxy, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/http/target-proxies)
 
+## Example Usage - Target Http Proxy Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultHttpHealthCheck = new gcp.compute.HttpHealthCheck("defaultHttpHealthCheck", {
+    requestPath: "/",
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+});
+const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {
+    portName: "http",
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [defaultHttpHealthCheck.selfLink],
+});
+const defaultURLMap = new gcp.compute.URLMap("defaultURLMap", {
+    defaultService: defaultBackendService.selfLink,
+    host_rule: [{
+        hosts: ["mysite.com"],
+        pathMatcher: "allpaths",
+    }],
+    path_matcher: [{
+        name: "allpaths",
+        defaultService: defaultBackendService.selfLink,
+        path_rule: [{
+            paths: ["/*"],
+            service: defaultBackendService.selfLink,
+        }],
+    }],
+});
+const defaultTargetHttpProxy = new gcp.compute.TargetHttpProxy("defaultTargetHttpProxy", {urlMap: defaultURLMap.selfLink});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_http_health_check = gcp.compute.HttpHealthCheck("defaultHttpHealthCheck",
+    request_path="/",
+    check_interval_sec=1,
+    timeout_sec=1)
+default_backend_service = gcp.compute.BackendService("defaultBackendService",
+    port_name="http",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default_http_health_check.self_link])
+default_url_map = gcp.compute.URLMap("defaultURLMap",
+    default_service=default_backend_service.self_link,
+    host_rule=[{
+        "hosts": ["mysite.com"],
+        "pathMatcher": "allpaths",
+    }],
+    path_matcher=[{
+        "name": "allpaths",
+        "defaultService": default_backend_service.self_link,
+        "path_rule": [{
+            "paths": ["/*"],
+            "service": default_backend_service.self_link,
+        }],
+    }])
+default_target_http_proxy = gcp.compute.TargetHttpProxy("defaultTargetHttpProxy", url_map=default_url_map.self_link)
+```
+## Example Usage - Target Http Proxy Https Redirect
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultURLMap = new gcp.compute.URLMap("defaultURLMap", {default_url_redirect: [{
+    httpsRedirect: true,
+}]});
+const defaultTargetHttpProxy = new gcp.compute.TargetHttpProxy("defaultTargetHttpProxy", {urlMap: defaultURLMap.selfLink});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_url_map = gcp.compute.URLMap("defaultURLMap", default_url_redirect=[{
+    "httpsRedirect": True,
+}])
+default_target_http_proxy = gcp.compute.TargetHttpProxy("defaultTargetHttpProxy", url_map=default_url_map.self_link)
+```
+
 
 
 ## Create a TargetHttpProxy Resource {#create}

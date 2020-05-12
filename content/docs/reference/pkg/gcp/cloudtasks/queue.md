@@ -25,6 +25,12 @@ const defaultQueue = new gcp.cloudtasks.Queue("default", {
     location: "us-central1",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.cloudtasks.Queue("default", location="us-central1")
+```
 
 
 

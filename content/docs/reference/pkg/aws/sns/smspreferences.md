@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+update_sms_prefs = aws.sns.SmsPreferences("updateSmsPrefs")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -24,6 +24,12 @@ const example = pulumi.output(azuread.getGroup({
     name: "A-AD-Group",
 }, { async: true }));
 ```
+```python
+import pulumi
+import pulumi_azuread as azuread
+
+example = azuread.get_group(name="A-AD-Group")
+```
 
 
 

@@ -12,9 +12,84 @@ meta_desc: "Explore the AccessKey resource of the iam module, including examples
 
 Provides an IAM access key. This is a set of credentials that allow API requests to be made as an IAM user.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+lb_user = aws.iam.User("lbUser", path="/system/")
+lb_access_key = aws.iam.AccessKey("lbAccessKey",
+    pgp_key="keybase:some_person_that_exists",
+    user=lb_user.name)
+lb_ro = aws.iam.UserPolicy("lbRo",
+    policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "ec2:Describe*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+
+""",
+    user=lb_user.name)
+pulumi.export("secret", lb_access_key.encrypted_secret)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const lbUser = new aws.iam.User("lb", {
+    path: "/system/",
+});
+const lbAccessKey = new aws.iam.AccessKey("lb", {
+    pgpKey: "keybase:some_person_that_exists",
+    user: lbUser.name,
+});
+const lbRo = new aws.iam.UserPolicy("lb_ro", {
+    policy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "ec2:Describe*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+`,
+    user: lbUser.name,
+});
+
+export const secret = lbAccessKey.encryptedSecret;
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AccessKey Resource {#create}

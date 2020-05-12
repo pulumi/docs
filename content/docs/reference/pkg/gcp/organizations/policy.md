@@ -31,7 +31,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+serial_port_policy = gcp.organizations.Policy("serialPortPolicy",
+    boolean_policy={
+        "enforced": True,
+    },
+    constraint="compute.disableSerialPortAccess",
+    org_id="123456789")
+```
 {{% /example %}}
 
 {{% example typescript %}}

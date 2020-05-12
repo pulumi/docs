@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.inspector.ResourceGroup("example", tags={
+    "Env": "bar",
+    "Name": "foo",
+})
+```
 {{% /example %}}
 
 {{% example typescript %}}

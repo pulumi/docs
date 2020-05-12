@@ -30,7 +30,46 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+rule = aws.cfg.Rule("rule", source={
+    "owner": "AWS",
+    "sourceIdentifier": "S3_BUCKET_VERSIONING_ENABLED",
+})
+role = aws.iam.Role("role", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "config.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+
+""")
+foo = aws.cfg.Recorder("foo", role_arn=role.arn)
+role_policy = aws.iam.RolePolicy("rolePolicy",
+    policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+  	{
+  		"Action": "config:Put*",
+  		"Effect": "Allow",
+  		"Resource": "*"
+
+  	}
+  ]
+}
+
+""",
+    role=role.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -91,7 +130,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_recorder = aws.cfg.Recorder("exampleRecorder")
+example_function = aws.lambda_.Function("exampleFunction")
+example_permission = aws.lambda_.Permission("examplePermission",
+    action="lambda:InvokeFunction",
+    function=example_function.arn,
+    principal="config.amazonaws.com")
+example_rule = aws.cfg.Rule("exampleRule", source={
+    "owner": "CUSTOM_LAMBDA",
+    "sourceIdentifier": example_function.arn,
+})
+```
 {{% /example %}}
 
 {{% example typescript %}}

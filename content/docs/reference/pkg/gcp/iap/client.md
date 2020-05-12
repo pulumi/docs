@@ -14,6 +14,11 @@ Contains the data that describes an Identity Aware Proxy owned client.
 
 
 
+> **Warning:** All arguments including `secret` will be stored in the raw
+state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
+
+
+
 ## Create a Client Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

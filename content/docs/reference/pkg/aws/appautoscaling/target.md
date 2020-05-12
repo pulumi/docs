@@ -30,7 +30,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+dynamodb_table_read_target = aws.appautoscaling.Target("dynamodbTableReadTarget",
+    max_capacity=100,
+    min_capacity=5,
+    resource_id=f"table/{aws_dynamodb_table['example']['name']}",
+    scalable_dimension="dynamodb:table:ReadCapacityUnits",
+    service_namespace="dynamodb")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -58,7 +68,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+dynamodb_index_read_target = aws.appautoscaling.Target("dynamodbIndexReadTarget",
+    max_capacity=100,
+    min_capacity=5,
+    resource_id=f"table/{aws_dynamodb_table['example']['name']}/index/{var['index_name']}",
+    scalable_dimension="dynamodb:index:ReadCapacityUnits",
+    service_namespace="dynamodb")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -86,7 +106,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+ecs_target = aws.appautoscaling.Target("ecsTarget",
+    max_capacity=4,
+    min_capacity=1,
+    resource_id=f"service/{aws_ecs_cluster['example']['name']}/{aws_ecs_service['example']['name']}",
+    scalable_dimension="ecs:service:DesiredCount",
+    service_namespace="ecs")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -114,7 +144,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+replicas = aws.appautoscaling.Target("replicas",
+    max_capacity=15,
+    min_capacity=1,
+    resource_id=f"cluster:{aws_rds_cluster['example']['id']}",
+    scalable_dimension="rds:cluster:ReadReplicaCount",
+    service_namespace="rds")
+```
 {{% /example %}}
 
 {{% example typescript %}}

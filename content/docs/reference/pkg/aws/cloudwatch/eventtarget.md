@@ -88,6 +88,69 @@ const stopInstancesEventTarget = new aws.cloudwatch.EventTarget("stop_instances"
     }],
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+ssm_lifecycle_trust = aws.iam.get_policy_document(statements=[{
+    "actions": ["sts:AssumeRole"],
+    "principals": [{
+        "identifiers": ["events.amazonaws.com"],
+        "type": "Service",
+    }],
+}])
+stop_instance = aws.ssm.Document("stopInstance",
+    content="""  {
+    "schemaVersion": "1.2",
+    "description": "Stop an instance",
+    "parameters": {
+
+    },
+    "runtimeConfig": {
+      "aws:runShellScript": {
+        "properties": [
+          {
+            "id": "0.aws:runShellScript",
+            "runCommand": ["halt"]
+          }
+        ]
+      }
+    }
+  }
+
+""",
+    document_type="Command")
+ssm_lifecycle_policy_document = stop_instance.arn.apply(lambda arn: aws.iam.get_policy_document(statements=[
+    {
+        "actions": ["ssm:SendCommand"],
+        "condition": [{
+            "test": "StringEquals",
+            "values": ["*"],
+            "variable": "ec2:ResourceTag/Terminate",
+        }],
+        "effect": "Allow",
+        "resources": ["arn:aws:ec2:eu-west-1:1234567890:instance/*"],
+    },
+    {
+        "actions": ["ssm:SendCommand"],
+        "effect": "Allow",
+        "resources": [arn],
+    },
+]))
+ssm_lifecycle_role = aws.iam.Role("ssmLifecycleRole", assume_role_policy=ssm_lifecycle_trust.json)
+ssm_lifecycle_policy = aws.iam.Policy("ssmLifecyclePolicy", policy=ssm_lifecycle_policy_document.json)
+stop_instances_event_rule = aws.cloudwatch.EventRule("stopInstancesEventRule",
+    description="Stop instances nightly",
+    schedule_expression="cron(0 0 * * ? *)")
+stop_instances_event_target = aws.cloudwatch.EventTarget("stopInstancesEventTarget",
+    arn=stop_instance.arn,
+    role_arn=ssm_lifecycle_role.arn,
+    rule=stop_instances_event_rule.name,
+    run_command_targets=[{
+        "key": "tag:Terminate",
+        "values": ["midnight"],
+    }])
+```
 
 ## Example RunCommand Usage
 
@@ -110,66 +173,22 @@ const stopInstancesEventTarget = new aws.cloudwatch.EventTarget("stop_instances"
     }],
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
 
-## Example ECS Run Task with Role and Task Override Usage
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const ecsEvents = new aws.iam.Role("ecs_events", {
-    assumeRolePolicy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "",
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "events.amazonaws.com"
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-`,
-});
-const ecsEventsRunTaskWithAnyRole = new aws.iam.RolePolicy("ecs_events_run_task_with_any_role", {
-    policy: aws_ecs_task_definition_task_name.arn.apply(arn => `{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": "iam:PassRole",
-            "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": "ecs:RunTask",
-            "Resource": "${arn.replace(/:\d+$/, ":*")}"
-        }
-    ]
-}
-`),
-    role: ecsEvents.id,
-});
-const ecsScheduledTask = new aws.cloudwatch.EventTarget("ecs_scheduled_task", {
-    arn: aws_ecs_cluster_cluster_name.arn,
-    ecsTarget: {
-        taskCount: 1,
-        taskDefinitionArn: aws_ecs_task_definition_task_name.arn,
-    },
-    input: `{
-  "containerOverrides": [
-    {
-      "name": "name-of-container-to-override",
-      "command": ["bin/console", "scheduled-task"]
-    }
-  ]
-}
-`,
-    roleArn: ecsEvents.arn,
-    rule: aws_cloudwatch_event_rule_every_hour.name,
-});
+stop_instances_event_rule = aws.cloudwatch.EventRule("stopInstancesEventRule",
+    description="Stop instances nightly",
+    schedule_expression="cron(0 0 * * ? *)")
+stop_instances_event_target = aws.cloudwatch.EventTarget("stopInstancesEventTarget",
+    arn=f"arn:aws:ssm:{var['aws_region']}::document/AWS-RunShellScript",
+    input="{\"commands\":[\"halt\"]}",
+    role_arn=aws_iam_role["ssm_lifecycle"]["arn"],
+    rule=stop_instances_event_rule.name,
+    run_command_targets=[{
+        "key": "tag:Terminate",
+        "values": ["midnight"],
+    }])
 ```
 
 {{% examples %}}
@@ -186,7 +205,40 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+console = aws.cloudwatch.EventRule("console",
+    description="Capture all EC2 scaling events",
+    event_pattern="""{
+  "source": [
+    "aws.autoscaling"
+  ],
+  "detail-type": [
+    "EC2 Instance Launch Successful",
+    "EC2 Instance Terminate Successful",
+    "EC2 Instance Launch Unsuccessful",
+    "EC2 Instance Terminate Unsuccessful"
+  ]
+}
+
+""")
+test_stream = aws.kinesis.Stream("testStream", shard_count=1)
+yada = aws.cloudwatch.EventTarget("yada",
+    arn=test_stream.arn,
+    rule=console.name,
+    run_command_targets=[
+        {
+            "key": "tag:Name",
+            "values": ["FooBar"],
+        },
+        {
+            "key": "InstanceIds",
+            "values": ["i-162058cd308bffec2"],
+        },
+    ])
+```
 {{% /example %}}
 
 {{% example typescript %}}

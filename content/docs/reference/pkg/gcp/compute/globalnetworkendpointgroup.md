@@ -32,6 +32,14 @@ const neg = new gcp.compute.GlobalNetworkEndpointGroup("neg", {
     networkEndpointType: "INTERNET_FQDN_PORT",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+neg = gcp.compute.GlobalNetworkEndpointGroup("neg",
+    default_port="90",
+    network_endpoint_type="INTERNET_FQDN_PORT")
+```
 ## Example Usage - Global Network Endpoint Group Ip Address
 
 
@@ -43,6 +51,14 @@ const neg = new gcp.compute.GlobalNetworkEndpointGroup("neg", {
     defaultPort: 90,
     networkEndpointType: "INTERNET_IP_PORT",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+neg = gcp.compute.GlobalNetworkEndpointGroup("neg",
+    default_port=90,
+    network_endpoint_type="INTERNET_IP_PORT")
 ```
 
 
@@ -234,9 +250,7 @@ The GlobalNetworkEndpointGroup resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Supported values are:
-* INTERNET_IP_PORT
-* INTERNET_FQDN_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -297,9 +311,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Supported values are:
-* INTERNET_IP_PORT
-* INTERNET_FQDN_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -360,9 +372,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Supported values are:
-* INTERNET_IP_PORT
-* INTERNET_FQDN_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -423,9 +433,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Supported values are:
-* INTERNET_IP_PORT
-* INTERNET_FQDN_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -754,9 +762,7 @@ character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Supported values are:
-* INTERNET_IP_PORT
-* INTERNET_FQDN_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -826,9 +832,7 @@ character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Supported values are:
-* INTERNET_IP_PORT
-* INTERNET_FQDN_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -898,9 +902,7 @@ character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Supported values are:
-* INTERNET_IP_PORT
-* INTERNET_FQDN_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -970,9 +972,7 @@ character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Supported values are:
-* INTERNET_IP_PORT
-* INTERNET_FQDN_PORT
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

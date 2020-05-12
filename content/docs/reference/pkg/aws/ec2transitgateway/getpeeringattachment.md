@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ec2transitgateway.get_peering_attachment(filters=[{
+    "name": "transit-gateway-attachment-id",
+    "values": ["tgw-attach-12345678"],
+}])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -36,8 +44,8 @@ Coming soon!
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.Ec2TransitGatewayPeeringAttachment({
-    filter: [{
+const example = pulumi.output(aws.ec2transitgateway.getPeeringAttachment({
+    filters: [{
         name: "transit-gateway-attachment-id",
         values: ["tgw-attach-12345678"],
     }],
@@ -55,7 +63,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+attachment = aws.ec2transitgateway.get_peering_attachment(id="tgw-attach-12345678")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -63,7 +76,7 @@ Coming soon!
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const attachment = pulumi.output(aws.Ec2TransitGatewayPeeringAttachment({
+const attachment = pulumi.output(aws.ec2transitgateway.getPeeringAttachment({
     id: "tgw-attach-12345678",
 }, { async: true }));
 ```

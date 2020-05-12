@@ -33,7 +33,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.ProjectDefaultNetworkTier("default", network_tier="PREMIUM")
+```
 {{% /example %}}
 
 {{% example typescript %}}

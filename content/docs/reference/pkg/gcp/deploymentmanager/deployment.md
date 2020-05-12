@@ -26,6 +26,42 @@ deployments in preview as recreate-only for any update operation other
 than actually deploying an in-preview deployment (i.e. `preview=true` to
 `preview=false`).
 
+## Example Usage - Deployment Manager Deployment Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const deployment = new gcp.deploymentmanager.Deployment("deployment", {
+    target: {
+        config: {
+            content: fs.readFileSync("path/to/config.yml"),
+        },
+    },
+    labels: [{
+        key: "foo",
+        value: "bar",
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+deployment = gcp.deploymentmanager.Deployment("deployment",
+    target={
+        "config": {
+            "content": (lambda path: open(path).read())("path/to/config.yml"),
+        },
+    },
+    labels=[{
+        "key": "foo",
+        "value": "bar",
+    }])
+```
+
 
 
 ## Create a Deployment Resource {#create}

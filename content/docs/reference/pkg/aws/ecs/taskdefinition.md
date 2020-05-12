@@ -12,9 +12,68 @@ meta_desc: "Explore the TaskDefinition resource of the ecs module, including exa
 
 Manages a revision of an ECS task definition to be used in `aws.ecs.Service`.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### With AppMesh Proxy
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+service = aws.ecs.TaskDefinition("service",
+    family="service",
+    container_definitions=(lambda path: open(path).read())("task-definitions/service.json"),
+    proxy_configuration={
+        "type": "APPMESH",
+        "containerName": "applicationContainerName",
+        "properties": {
+            "AppPorts": "8080",
+            "EgressIgnoredIPs": "169.254.170.2,169.254.169.254",
+            "IgnoredUID": "1337",
+            "ProxyEgressPort": 15001,
+            "ProxyIngressPort": 15000,
+        },
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * from "fs";
+
+const service = new aws.ecs.TaskDefinition("service", {
+    family: "service",
+    containerDefinitions: fs.readFileSync("task-definitions/service.json"),
+    proxy_configuration: {
+        type: "APPMESH",
+        containerName: "applicationContainerName",
+        properties: {
+            AppPorts: "8080",
+            EgressIgnoredIPs: "169.254.170.2,169.254.169.254",
+            IgnoredUID: "1337",
+            ProxyEgressPort: 15001,
+            ProxyIngressPort: 15000,
+        },
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TaskDefinition Resource {#create}

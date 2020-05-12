@@ -24,6 +24,12 @@ const example = pulumi.output(azuread.getServicePrincipal({
     displayName: "my-awesome-application",
 }, { async: true }));
 ```
+```python
+import pulumi
+import pulumi_azuread as azuread
+
+example = azuread.get_service_principal(display_name="my-awesome-application")
+```
 
 ## Example Usage (by Application ID)
 
@@ -35,6 +41,12 @@ const example = pulumi.output(azuread.getServicePrincipal({
     applicationId: "00000000-0000-0000-0000-000000000000",
 }, { async: true }));
 ```
+```python
+import pulumi
+import pulumi_azuread as azuread
+
+example = azuread.get_service_principal(application_id="00000000-0000-0000-0000-000000000000")
+```
 
 ## Example Usage (by Object ID)
 
@@ -45,6 +57,12 @@ import * as azuread from "@pulumi/azuread";
 const example = pulumi.output(azuread.getServicePrincipal({
     objectId: "00000000-0000-0000-0000-000000000000",
 }, { async: true }));
+```
+```python
+import pulumi
+import pulumi_azuread as azuread
+
+example = azuread.get_service_principal(object_id="00000000-0000-0000-0000-000000000000")
 ```
 
 

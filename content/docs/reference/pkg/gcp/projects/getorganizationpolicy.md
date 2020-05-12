@@ -14,9 +14,46 @@ Allows management of Organization policies for a Google Project. For more inform
 [the official
 documentation](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+policy = gcp.projects.get_organization_policy(project="project-id",
+    constraint="constraints/serviceuser.services")
+pulumi.export("version", policy.version)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const policy = gcp.projects.getOrganizationPolicy({
+    project: "project-id",
+    constraint: "constraints/serviceuser.services",
+});
+export const version = policy.then(policy => policy.version);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetOrganizationPolicy {#using}

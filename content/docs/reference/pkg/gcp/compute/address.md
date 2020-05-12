@@ -41,6 +41,47 @@ import * as gcp from "@pulumi/gcp";
 
 const ipAddress = new gcp.compute.Address("ip_address", {});
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+ip_address = gcp.compute.Address("ipAddress")
+```
+## Example Usage - Address With Subnetwork
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultNetwork = new gcp.compute.Network("defaultNetwork", {});
+const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
+    ipCidrRange: "10.0.0.0/16",
+    region: "us-central1",
+    network: defaultNetwork.id,
+});
+const internalWithSubnetAndAddress = new gcp.compute.Address("internalWithSubnetAndAddress", {
+    subnetwork: defaultSubnetwork.id,
+    addressType: "INTERNAL",
+    address: "10.0.42.42",
+    region: "us-central1",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_network = gcp.compute.Network("defaultNetwork")
+default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
+    ip_cidr_range="10.0.0.0/16",
+    region="us-central1",
+    network=default_network.id)
+internal_with_subnet_and_address = gcp.compute.Address("internalWithSubnetAndAddress",
+    subnetwork=default_subnetwork.id,
+    address_type="INTERNAL",
+    address="10.0.42.42",
+    region="us-central1")
+```
 ## Example Usage - Address With Gce Endpoint
 
 
@@ -52,6 +93,64 @@ const internalWithGceEndpoint = new gcp.compute.Address("internal_with_gce_endpo
     addressType: "INTERNAL",
     purpose: "GCE_ENDPOINT",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+internal_with_gce_endpoint = gcp.compute.Address("internalWithGceEndpoint",
+    address_type="INTERNAL",
+    purpose="GCE_ENDPOINT")
+```
+## Example Usage - Instance With Ip
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const static = new gcp.compute.Address("static", {});
+const debianImage = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const instanceWithIp = new gcp.compute.Instance("instanceWithIp", {
+    machineType: "f1-micro",
+    zone: "us-central1-a",
+    boot_disk: {
+        initialize_params: {
+            image: debianImage.then(debianImage => debianImage.selfLink),
+        },
+    },
+    network_interface: [{
+        network: "default",
+        access_config: [{
+            natIp: static.address,
+        }],
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+static = gcp.compute.Address("static")
+debian_image = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+instance_with_ip = gcp.compute.Instance("instanceWithIp",
+    machine_type="f1-micro",
+    zone="us-central1-a",
+    boot_disk={
+        "initialize_params": {
+            "image": debian_image.self_link,
+        },
+    },
+    network_interface=[{
+        "network": "default",
+        "access_config": [{
+            "natIp": static.address,
+        }],
+    }])
 ```
 
 
@@ -243,8 +342,7 @@ The Address resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of address to reserve, either INTERNAL or EXTERNAL.
-If unspecified, defaults to EXTERNAL.
+    <dd>{{% md %}}The type of address to reserve.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -297,8 +395,7 @@ except the last character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The networking tier used for configuring this address. This field can
-take the following values: PREMIUM or STANDARD. If this field is not
+    <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 {{% /md %}}</dd>
 
@@ -370,8 +467,7 @@ if any.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of address to reserve, either INTERNAL or EXTERNAL.
-If unspecified, defaults to EXTERNAL.
+    <dd>{{% md %}}The type of address to reserve.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -412,8 +508,7 @@ except the last character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The networking tier used for configuring this address. This field can
-take the following values: PREMIUM or STANDARD. If this field is not
+    <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 {{% /md %}}</dd>
 
@@ -485,8 +580,7 @@ if any.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of address to reserve, either INTERNAL or EXTERNAL.
-If unspecified, defaults to EXTERNAL.
+    <dd>{{% md %}}The type of address to reserve.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -527,8 +621,7 @@ except the last character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The networking tier used for configuring this address. This field can
-take the following values: PREMIUM or STANDARD. If this field is not
+    <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 {{% /md %}}</dd>
 
@@ -600,8 +693,7 @@ if any.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of address to reserve, either INTERNAL or EXTERNAL.
-If unspecified, defaults to EXTERNAL.
+    <dd>{{% md %}}The type of address to reserve.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -642,8 +734,7 @@ except the last character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The networking tier used for configuring this address. This field can
-take the following values: PREMIUM or STANDARD. If this field is not
+    <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 {{% /md %}}</dd>
 
@@ -1044,8 +1135,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of address to reserve, either INTERNAL or EXTERNAL.
-If unspecified, defaults to EXTERNAL.
+    <dd>{{% md %}}The type of address to reserve.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1116,8 +1206,7 @@ except the last character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The networking tier used for configuring this address. This field can
-take the following values: PREMIUM or STANDARD. If this field is not
+    <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 {{% /md %}}</dd>
 
@@ -1207,8 +1296,7 @@ if any.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of address to reserve, either INTERNAL or EXTERNAL.
-If unspecified, defaults to EXTERNAL.
+    <dd>{{% md %}}The type of address to reserve.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1267,8 +1355,7 @@ except the last character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The networking tier used for configuring this address. This field can
-take the following values: PREMIUM or STANDARD. If this field is not
+    <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 {{% /md %}}</dd>
 
@@ -1358,8 +1445,7 @@ if any.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of address to reserve, either INTERNAL or EXTERNAL.
-If unspecified, defaults to EXTERNAL.
+    <dd>{{% md %}}The type of address to reserve.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1418,8 +1504,7 @@ except the last character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The networking tier used for configuring this address. This field can
-take the following values: PREMIUM or STANDARD. If this field is not
+    <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 {{% /md %}}</dd>
 
@@ -1509,8 +1594,7 @@ if any.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of address to reserve, either INTERNAL or EXTERNAL.
-If unspecified, defaults to EXTERNAL.
+    <dd>{{% md %}}The type of address to reserve.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1569,8 +1653,7 @@ except the last character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The networking tier used for configuring this address. This field can
-take the following values: PREMIUM or STANDARD. If this field is not
+    <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 {{% /md %}}</dd>
 

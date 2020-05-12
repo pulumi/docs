@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.backup.get_plan(plan_id="tf_example_backup_plan_id")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -36,7 +41,7 @@ Coming soon!
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.BackupPlan({
+const example = pulumi.output(aws.backup.getPlan({
     planId: "tf_example_backup_plan_id",
 }, { async: true }));
 ```

@@ -30,7 +30,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_domain_identity = aws.ses.DomainIdentity("exampleDomainIdentity", domain="example.com")
+example_domain_dkim = aws.ses.DomainDkim("exampleDomainDkim", domain=example_domain_identity.domain)
+example_amazonses_dkim_record = []
+for range in [{"value": i} for i in range(0, 3)]:
+    example_amazonses_dkim_record.append(aws.route53.Record(f"exampleAmazonsesDkimRecord-{range['value']}",
+        name=example_domain_dkim.dkim_tokens[range["value"]].apply(lambda dkim_tokens: f"{dkim_tokens}._domainkey.example.com"),
+        records=[example_domain_dkim.dkim_tokens[range["value"]].apply(lambda dkim_tokens: f"{dkim_tokens}.dkim.amazonses.com")],
+        ttl="600",
+        type="CNAME",
+        zone_id="ABCDEFGHIJ123"))
+```
 {{% /example %}}
 
 {{% example typescript %}}

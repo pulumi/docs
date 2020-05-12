@@ -13,9 +13,42 @@ meta_desc: "Explore the GetUptimeCheckIPs function of the monitoring module, inc
 Returns the list of IP addresses that checkers run from. For more information see
 the [official documentation](https://cloud.google.com/monitoring/uptime-checks#get-ips).
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+ips = gcp.monitoring.get_uptime_check_i_ps()
+pulumi.export("ipList", ips.uptime_check_ips)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const ips = gcp.monitoring.getUptimeCheckIPs({});
+export const ipList = ips.then(ips => ips.uptimeCheckIps);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetUptimeCheckIPs {#using}

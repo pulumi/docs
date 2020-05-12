@@ -33,9 +33,59 @@ To get more information about RegionDisk, see:
 * How-to Guides
     * [Adding or Resizing Regional Persistent Disks](https://cloud.google.com/compute/docs/disks/regional-persistent-disk)
 
-> **Warning:** All arguments including the disk encryption key will be stored in the raw
-state as plain-text.
-[Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
+> **Warning:** All arguments including `disk_encryption_key.raw_key` will be stored in the raw
+state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
+
+## Example Usage - Region Disk Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const disk = new gcp.compute.Disk("disk", {
+    image: "debian-cloud/debian-9",
+    size: 50,
+    type: "pd-ssd",
+    zone: "us-central1-a",
+});
+const snapdisk = new gcp.compute.Snapshot("snapdisk", {
+    sourceDisk: disk.name,
+    zone: "us-central1-a",
+});
+const regiondisk = new gcp.compute.RegionDisk("regiondisk", {
+    snapshot: snapdisk.selfLink,
+    type: "pd-ssd",
+    region: "us-central1",
+    physicalBlockSizeBytes: 4096,
+    replicaZones: [
+        "us-central1-a",
+        "us-central1-f",
+    ],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+disk = gcp.compute.Disk("disk",
+    image="debian-cloud/debian-9",
+    size=50,
+    type="pd-ssd",
+    zone="us-central1-a")
+snapdisk = gcp.compute.Snapshot("snapdisk",
+    source_disk=disk.name,
+    zone="us-central1-a")
+regiondisk = gcp.compute.RegionDisk("regiondisk",
+    snapshot=snapdisk.self_link,
+    type="pd-ssd",
+    region="us-central1",
+    physical_block_size_bytes=4096,
+    replica_zones=[
+        "us-central1-a",
+        "us-central1-f",
+    ])
+```
 
 
 

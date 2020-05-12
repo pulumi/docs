@@ -28,7 +28,23 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+cloudwatch = aws.ses.EventDestination("cloudwatch",
+    cloudwatch_destinations=[{
+        "defaultValue": "default",
+        "dimensionName": "dimension",
+        "valueSource": "emailHeader",
+    }],
+    configuration_set_name=aws_ses_configuration_set["example"]["name"],
+    enabled=True,
+    matching_types=[
+        "bounce",
+        "send",
+    ])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -62,7 +78,22 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+kinesis = aws.ses.EventDestination("kinesis",
+    configuration_set_name=aws_ses_configuration_set["example"]["name"],
+    enabled=True,
+    kinesis_destination={
+        "roleArn": aws_iam_role["example"]["arn"],
+        "streamArn": aws_kinesis_firehose_delivery_stream["example"]["arn"],
+    },
+    matching_types=[
+        "bounce",
+        "send",
+    ])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -95,7 +126,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+sns = aws.ses.EventDestination("sns",
+    configuration_set_name=aws_ses_configuration_set["example"]["name"],
+    enabled=True,
+    matching_types=[
+        "bounce",
+        "send",
+    ],
+    sns_destination={
+        "topicArn": aws_sns_topic["example"]["arn"],
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}

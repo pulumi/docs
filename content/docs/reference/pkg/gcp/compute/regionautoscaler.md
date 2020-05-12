@@ -23,6 +23,115 @@ To get more information about RegionAutoscaler, see:
 * How-to Guides
     * [Autoscaling Groups of Instances](https://cloud.google.com/compute/docs/autoscaler/)
 
+## Example Usage - Region Autoscaler Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const debian9 = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const foobarInstanceTemplate = new gcp.compute.InstanceTemplate("foobarInstanceTemplate", {
+    machineType: "n1-standard-1",
+    canIpForward: false,
+    tags: [
+        "foo",
+        "bar",
+    ],
+    disk: [{
+        sourceImage: debian9.then(debian9 => debian9.selfLink),
+    }],
+    network_interface: [{
+        network: "default",
+    }],
+    metadata: {
+        foo: "bar",
+    },
+    service_account: {
+        scopes: [
+            "userinfo-email",
+            "compute-ro",
+            "storage-ro",
+        ],
+    },
+});
+const foobarTargetPool = new gcp.compute.TargetPool("foobarTargetPool", {});
+const foobarRegionInstanceGroupManager = new gcp.compute.RegionInstanceGroupManager("foobarRegionInstanceGroupManager", {
+    region: "us-central1",
+    version: [{
+        instanceTemplate: foobarInstanceTemplate.id,
+        name: "primary",
+    }],
+    targetPools: [foobarTargetPool.id],
+    baseInstanceName: "foobar",
+});
+const foobarRegionAutoscaler = new gcp.compute.RegionAutoscaler("foobarRegionAutoscaler", {
+    region: "us-central1",
+    target: foobarRegionInstanceGroupManager.id,
+    autoscaling_policy: {
+        maxReplicas: 5,
+        minReplicas: 1,
+        cooldownPeriod: 60,
+        cpu_utilization: {
+            target: 0.5,
+        },
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+debian9 = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+foobar_instance_template = gcp.compute.InstanceTemplate("foobarInstanceTemplate",
+    machine_type="n1-standard-1",
+    can_ip_forward=False,
+    tags=[
+        "foo",
+        "bar",
+    ],
+    disk=[{
+        "sourceImage": debian9.self_link,
+    }],
+    network_interface=[{
+        "network": "default",
+    }],
+    metadata={
+        "foo": "bar",
+    },
+    service_account={
+        "scopes": [
+            "userinfo-email",
+            "compute-ro",
+            "storage-ro",
+        ],
+    })
+foobar_target_pool = gcp.compute.TargetPool("foobarTargetPool")
+foobar_region_instance_group_manager = gcp.compute.RegionInstanceGroupManager("foobarRegionInstanceGroupManager",
+    region="us-central1",
+    version=[{
+        "instanceTemplate": foobar_instance_template.id,
+        "name": "primary",
+    }],
+    target_pools=[foobar_target_pool.id],
+    base_instance_name="foobar")
+foobar_region_autoscaler = gcp.compute.RegionAutoscaler("foobarRegionAutoscaler",
+    region="us-central1",
+    target=foobar_region_instance_group_manager.id,
+    autoscaling_policy={
+        "maxReplicas": 5,
+        "minReplicas": 1,
+        "cooldownPeriod": 60,
+        "cpu_utilization": {
+            "target": 0.5,
+        },
+    })
+```
+
 
 
 ## Create a RegionAutoscaler Resource {#create}
@@ -1725,8 +1834,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Defines how target utilization value is expressed for a
-Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND,
-or DELTA_PER_MINUTE.
+Stackdriver Monitoring metric.
 {{% /md %}}</dd>
 
 </dl>
@@ -1822,8 +1930,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Defines how target utilization value is expressed for a
-Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND,
-or DELTA_PER_MINUTE.
+Stackdriver Monitoring metric.
 {{% /md %}}</dd>
 
 </dl>
@@ -1919,8 +2026,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Defines how target utilization value is expressed for a
-Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND,
-or DELTA_PER_MINUTE.
+Stackdriver Monitoring metric.
 {{% /md %}}</dd>
 
 </dl>
@@ -2016,8 +2122,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Defines how target utilization value is expressed for a
-Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND,
-or DELTA_PER_MINUTE.
+Stackdriver Monitoring metric.
 {{% /md %}}</dd>
 
 </dl>

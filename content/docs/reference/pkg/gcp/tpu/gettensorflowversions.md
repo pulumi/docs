@@ -13,6 +13,31 @@ meta_desc: "Explore the GetTensorflowVersions function of the tpu module, includ
 Get TensorFlow versions available for a project. For more information see the [official documentation](https://cloud.google.com/tpu/docs/) and [API](https://cloud.google.com/tpu/docs/reference/rest/v1/projects.locations.tensorflowVersions).
 
 
+## Example Usage: Configure Basic TPU Node with available version
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const available = gcp.tpu.getTensorflowVersions({});
+const tpu = new gcp.tpu.Node("tpu", {
+    zone: "us-central1-b",
+    acceleratorType: "v3-8",
+    tensorflowVersion: available.then(available => available.versions[0]),
+    cidrBlock: "10.2.0.0/29",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+available = gcp.tpu.get_tensorflow_versions()
+tpu = gcp.tpu.Node("tpu",
+    zone="us-central1-b",
+    accelerator_type="v3-8",
+    tensorflow_version=available.versions[0],
+    cidr_block="10.2.0.0/29")
+```
 
 {{% examples %}}
 ## Example Usage
@@ -28,7 +53,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+available = gcp.tpu.get_tensorflow_versions()
+```
 {{% /example %}}
 
 {{% example typescript %}}

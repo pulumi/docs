@@ -44,6 +44,20 @@ const gceReservation = new gcp.compute.Reservation("gce_reservation", {
     zone: "us-central1-a",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+gce_reservation = gcp.compute.Reservation("gceReservation",
+    specific_reservation={
+        "count": 1,
+        "instanceProperties": {
+            "machineType": "n2-standard-2",
+            "minCpuPlatform": "Intel Cascade Lake",
+        },
+    },
+    zone="us-central1-a")
+```
 
 
 
@@ -1812,8 +1826,7 @@ If you are creating an instance template, specify only the accelerator name.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The disk interface to use for attaching this disk, one
-of `SCSI` or `NVME`. The default is `SCSI`.
+    <dd>{{% md %}}The disk interface to use for attaching this disk.
 {{% /md %}}</dd>
 
 </dl>
@@ -1838,8 +1851,7 @@ of `SCSI` or `NVME`. The default is `SCSI`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The disk interface to use for attaching this disk, one
-of `SCSI` or `NVME`. The default is `SCSI`.
+    <dd>{{% md %}}The disk interface to use for attaching this disk.
 {{% /md %}}</dd>
 
 </dl>
@@ -1864,8 +1876,7 @@ of `SCSI` or `NVME`. The default is `SCSI`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The disk interface to use for attaching this disk, one
-of `SCSI` or `NVME`. The default is `SCSI`.
+    <dd>{{% md %}}The disk interface to use for attaching this disk.
 {{% /md %}}</dd>
 
 </dl>
@@ -1890,8 +1901,7 @@ of `SCSI` or `NVME`. The default is `SCSI`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The disk interface to use for attaching this disk, one
-of `SCSI` or `NVME`. The default is `SCSI`.
+    <dd>{{% md %}}The disk interface to use for attaching this disk.
 {{% /md %}}</dd>
 
 </dl>

@@ -26,6 +26,47 @@ To get more information about ServicePerimeterResource, see:
 * How-to Guides
     * [Service Perimeter Quickstart](https://cloud.google.com/vpc-service-controls/docs/quickstart)
 
+## Example Usage - Access Context Manager Service Perimeter Resource Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const access-policy = new gcp.accesscontextmanager.AccessPolicy("access-policy", {
+    parent: "organizations/123456789",
+    title: "my policy",
+});
+const service-perimeter-resourceServicePerimeter = new gcp.accesscontextmanager.ServicePerimeter("service-perimeter-resourceServicePerimeter", {
+    parent: pulumi.interpolate`accessPolicies/${access-policy.name}`,
+    title: "restrict_all",
+    status: {
+        restrictedServices: ["storage.googleapis.com"],
+    },
+});
+const service-perimeter-resourceServicePerimeterResource = new gcp.accesscontextmanager.ServicePerimeterResource("service-perimeter-resourceServicePerimeterResource", {
+    perimeterName: service-perimeter-resourceServicePerimeter.name,
+    resource: "projects/987654321",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
+    parent="organizations/123456789",
+    title="my policy")
+service_perimeter_resource_service_perimeter = gcp.accesscontextmanager.ServicePerimeter("service-perimeter-resourceServicePerimeter",
+    parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
+    title="restrict_all",
+    status={
+        "restrictedServices": ["storage.googleapis.com"],
+    })
+service_perimeter_resource_service_perimeter_resource = gcp.accesscontextmanager.ServicePerimeterResource("service-perimeter-resourceServicePerimeterResource",
+    perimeter_name=service_perimeter_resource_service_perimeter.name,
+    resource="projects/987654321")
+```
+
 
 
 ## Create a ServicePerimeterResource Resource {#create}

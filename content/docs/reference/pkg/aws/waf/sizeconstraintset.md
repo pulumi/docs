@@ -28,7 +28,19 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+size_constraint_set = aws.waf.SizeConstraintSet("sizeConstraintSet", size_constraints=[{
+    "comparisonOperator": "EQ",
+    "fieldToMatch": {
+        "type": "BODY",
+    },
+    "size": "4096",
+    "textTransformation": "NONE",
+}])
+```
 {{% /example %}}
 
 {{% example typescript %}}

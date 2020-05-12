@@ -12,9 +12,42 @@ meta_desc: "Explore the GetSecretVersion function of the secretmanager module, i
 
 Get a Secret Manager secret's version. For more information see the [official documentation](https://cloud.google.com/secret-manager/docs/) and [API](https://cloud.google.com/secret-manager/docs/reference/rest/v1beta1/projects.secrets.versions).
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+basic = gcp.secretmanager.get_secret_version(secret="my-secret")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const basic = gcp.secretmanager.getSecretVersion({
+    secret: "my-secret",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetSecretVersion {#using}

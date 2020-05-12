@@ -23,9 +23,47 @@ probably be SQS queues.
 
 > **NOTE:** If SNS topic and SQS queue are in different AWS accounts and different AWS regions it is important to recognize that the subscription needs to be initiated from the account with the SQS queue but in the region of the SNS topic.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+user_updates_sqs_target = aws.sns.TopicSubscription("userUpdatesSqsTarget",
+    endpoint="arn:aws:sqs:us-west-2:432981146916:queue-too",
+    protocol="sqs",
+    topic="arn:aws:sns:us-west-2:432981146916:user-updates-topic")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const userUpdatesSqsTarget = new aws.sns.TopicSubscription("user_updates_sqs_target", {
+    endpoint: "arn:aws:sqs:us-west-2:432981146916:queue-too",
+    protocol: "sqs",
+    topic: "arn:aws:sns:us-west-2:432981146916:user-updates-topic",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TopicSubscription Resource {#create}

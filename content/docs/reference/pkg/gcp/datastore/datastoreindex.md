@@ -40,6 +40,23 @@ const defaultDataStoreIndex = new gcp.datastore.DataStoreIndex("default", {
     ],
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.datastore.DataStoreIndex("default",
+    kind="foo",
+    properties=[
+        {
+            "direction": "ASCENDING",
+            "name": "property_a",
+        },
+        {
+            "direction": "ASCENDING",
+            "name": "property_b",
+        },
+    ])
+```
 
 
 
@@ -239,8 +256,7 @@ The DataStoreIndex resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Policy for including ancestors in the index.  Either `ALL_ANCESTORS` or `NONE`,
-the default is `NONE`.
+    <dd>{{% md %}}Policy for including ancestors in the index.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -284,8 +300,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Policy for including ancestors in the index.  Either `ALL_ANCESTORS` or `NONE`,
-the default is `NONE`.
+    <dd>{{% md %}}Policy for including ancestors in the index.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -329,8 +344,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Policy for including ancestors in the index.  Either `ALL_ANCESTORS` or `NONE`,
-the default is `NONE`.
+    <dd>{{% md %}}Policy for including ancestors in the index.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -374,8 +388,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Policy for including ancestors in the index.  Either `ALL_ANCESTORS` or `NONE`,
-the default is `NONE`.
+    <dd>{{% md %}}Policy for including ancestors in the index.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -643,8 +656,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Policy for including ancestors in the index.  Either `ALL_ANCESTORS` or `NONE`,
-the default is `NONE`.
+    <dd>{{% md %}}Policy for including ancestors in the index.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -697,8 +709,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Policy for including ancestors in the index.  Either `ALL_ANCESTORS` or `NONE`,
-the default is `NONE`.
+    <dd>{{% md %}}Policy for including ancestors in the index.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -751,8 +762,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Policy for including ancestors in the index.  Either `ALL_ANCESTORS` or `NONE`,
-the default is `NONE`.
+    <dd>{{% md %}}Policy for including ancestors in the index.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -805,8 +815,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Policy for including ancestors in the index.  Either `ALL_ANCESTORS` or `NONE`,
-the default is `NONE`.
+    <dd>{{% md %}}Policy for including ancestors in the index.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -885,7 +894,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The direction the index should optimize for sorting. Possible values are ASCENDING and DESCENDING.
+    <dd>{{% md %}}The direction the index should optimize for sorting.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -910,7 +919,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The direction the index should optimize for sorting. Possible values are ASCENDING and DESCENDING.
+    <dd>{{% md %}}The direction the index should optimize for sorting.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -935,7 +944,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The direction the index should optimize for sorting. Possible values are ASCENDING and DESCENDING.
+    <dd>{{% md %}}The direction the index should optimize for sorting.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -960,7 +969,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The direction the index should optimize for sorting. Possible values are ASCENDING and DESCENDING.
+    <dd>{{% md %}}The direction the index should optimize for sorting.
 {{% /md %}}</dd>
 
     <dt class="property-required"

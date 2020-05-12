@@ -13,9 +13,49 @@ meta_desc: "Explore the GetNodeTypes function of the compute module, including e
 Provides available node types for Compute Engine sole-tenant nodes in a zone
 for a given project. For more information, see [the official documentation](https://cloud.google.com/compute/docs/nodes/#types) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/nodeTypes).
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+central1b = gcp.compute.get_node_types(zone="us-central1-b")
+tmpl = gcp.compute.NodeTemplate("tmpl",
+    region="us-central1",
+    node_type=data["gcp.compute.getNodeTypes"]["types"]["names"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const central1b = gcp.compute.getNodeTypes({
+    zone: "us-central1-b",
+});
+const tmpl = new gcp.compute.NodeTemplate("tmpl", {
+    region: "us-central1",
+    nodeType: data.google_compute_node_types.types.names[0],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetNodeTypes {#using}

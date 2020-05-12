@@ -34,7 +34,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_key_ring = gcp.kms.get_kms_key_ring(location="us-central1",
+    name="my-key-ring")
+```
 {{% /example %}}
 
 {{% example typescript %}}

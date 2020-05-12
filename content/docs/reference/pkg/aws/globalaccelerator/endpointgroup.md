@@ -28,7 +28,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.globalaccelerator.EndpointGroup("example",
+    endpoint_configurations=[{
+        "endpointId": aws_lb["example"]["arn"],
+        "weight": 100,
+    }],
+    listener_arn=aws_globalaccelerator_listener["example"]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

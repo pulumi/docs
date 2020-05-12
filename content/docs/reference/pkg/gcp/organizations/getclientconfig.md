@@ -12,9 +12,42 @@ meta_desc: "Explore the GetClientConfig function of the organizations module, in
 
 Use this data source to access the configuration of the Google Cloud provider.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+current = gcp.organizations.get_client_config()
+pulumi.export("project", current.project)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const current = gcp.organizations.getClientConfig({});
+export const project = current.then(current => current.project);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetClientConfig {#using}

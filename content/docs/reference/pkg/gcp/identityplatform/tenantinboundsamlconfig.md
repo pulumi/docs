@@ -18,6 +18,56 @@ the marketplace prior to using this resource.
 
 
 
+## Example Usage - Identity Platform Tenant Inbound Saml Config Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const tenant = new gcp.identityplatform.Tenant("tenant", {displayName: "tenant"});
+const tenantSamlConfig = new gcp.identityplatform.TenantInboundSamlConfig("tenantSamlConfig", {
+    displayName: "Display Name",
+    tenant: tenant.name,
+    idp_config: {
+        idpEntityId: "tf-idp",
+        signRequest: true,
+        ssoUrl: "https://example.com",
+        idp_certificates: [{
+            x509Certificate: fs.readFileSync("test-fixtures/rsa_cert.pem"),
+        }],
+    },
+    sp_config: {
+        spEntityId: "tf-sp",
+        callbackUri: "https://example.com",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+tenant = gcp.identityplatform.Tenant("tenant", display_name="tenant")
+tenant_saml_config = gcp.identityplatform.TenantInboundSamlConfig("tenantSamlConfig",
+    display_name="Display Name",
+    tenant=tenant.name,
+    idp_config={
+        "idpEntityId": "tf-idp",
+        "signRequest": True,
+        "ssoUrl": "https://example.com",
+        "idp_certificates": [{
+            "x509Certificate": (lambda path: open(path).read())("test-fixtures/rsa_cert.pem"),
+        }],
+    },
+    sp_config={
+        "spEntityId": "tf-sp",
+        "callbackUri": "https://example.com",
+    })
+```
+
+
+
 ## Create a TenantInboundSamlConfig Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

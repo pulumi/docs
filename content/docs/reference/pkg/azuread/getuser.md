@@ -30,7 +30,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azuread as azuread
+
+example = azuread.get_user(user_principal_name="user@hashicorp.com")
+```
 {{% /example %}}
 
 {{% example typescript %}}

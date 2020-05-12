@@ -29,7 +29,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_queue = aws.batch.get_job_queue(name="tf-test-batch-job-queue")
+```
 {{% /example %}}
 
 {{% example typescript %}}

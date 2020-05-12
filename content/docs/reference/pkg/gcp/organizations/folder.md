@@ -24,9 +24,56 @@ resource must have `roles/resourcemanager.folderCreator`. See the
 [Access Control for Folders Using IAM](https://cloud.google.com/resource-manager/docs/access-control-folders)
 doc for more information.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+# Top-level folder under an organization.
+department1 = gcp.organizations.Folder("department1",
+    display_name="Department 1",
+    parent="organizations/1234567")
+# Folder nested under another folder.
+team_abc = gcp.organizations.Folder("team-abc",
+    display_name="Team ABC",
+    parent=department1.name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+// Top-level folder under an organization.
+const department1 = new gcp.organizations.Folder("department1", {
+    displayName: "Department 1",
+    parent: "organizations/1234567",
+});
+// Folder nested under another folder.
+const team-abc = new gcp.organizations.Folder("team-abc", {
+    displayName: "Team ABC",
+    parent: department1.name,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Folder Resource {#create}

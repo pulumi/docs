@@ -20,6 +20,137 @@ To get more information about Subscription, see:
 * How-to Guides
     * [Managing Subscriptions](https://cloud.google.com/pubsub/docs/admin#managing_subscriptions)
 
+## Example Usage - Pubsub Subscription Push
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleTopic = new gcp.pubsub.Topic("exampleTopic", {});
+const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
+    topic: exampleTopic.name,
+    ackDeadlineSeconds: 20,
+    labels: {
+        foo: "bar",
+    },
+    push_config: {
+        pushEndpoint: "https://example.com/push",
+        attributes: {
+            "x-goog-version": "v1",
+        },
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_topic = gcp.pubsub.Topic("exampleTopic")
+example_subscription = gcp.pubsub.Subscription("exampleSubscription",
+    topic=example_topic.name,
+    ack_deadline_seconds=20,
+    labels={
+        "foo": "bar",
+    },
+    push_config={
+        "pushEndpoint": "https://example.com/push",
+        "attributes": {
+            "x-goog-version": "v1",
+        },
+    })
+```
+## Example Usage - Pubsub Subscription Pull
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleTopic = new gcp.pubsub.Topic("exampleTopic", {});
+const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
+    topic: exampleTopic.name,
+    labels: {
+        foo: "bar",
+    },
+    messageRetentionDuration: "1200s",
+    retainAckedMessages: true,
+    ackDeadlineSeconds: 20,
+    expiration_policy: {
+        ttl: "300000.5s",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_topic = gcp.pubsub.Topic("exampleTopic")
+example_subscription = gcp.pubsub.Subscription("exampleSubscription",
+    topic=example_topic.name,
+    labels={
+        "foo": "bar",
+    },
+    message_retention_duration="1200s",
+    retain_acked_messages=True,
+    ack_deadline_seconds=20,
+    expiration_policy={
+        "ttl": "300000.5s",
+    })
+```
+## Example Usage - Pubsub Subscription Different Project
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleTopic = new gcp.pubsub.Topic("exampleTopic", {project: "topic-project"});
+const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
+    project: "subscription-project",
+    topic: exampleTopic.name,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_topic = gcp.pubsub.Topic("exampleTopic", project="topic-project")
+example_subscription = gcp.pubsub.Subscription("exampleSubscription",
+    project="subscription-project",
+    topic=example_topic.name)
+```
+## Example Usage - Pubsub Subscription Dead Letter
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleTopic = new gcp.pubsub.Topic("exampleTopic", {});
+const exampleDeadLetter = new gcp.pubsub.Topic("exampleDeadLetter", {});
+const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
+    topic: exampleTopic.name,
+    dead_letter_policy: {
+        deadLetterTopic: exampleDeadLetter.id,
+        maxDeliveryAttempts: 10,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_topic = gcp.pubsub.Topic("exampleTopic")
+example_dead_letter = gcp.pubsub.Topic("exampleDeadLetter")
+example_subscription = gcp.pubsub.Subscription("exampleSubscription",
+    topic=example_topic.name,
+    dead_letter_policy={
+        "deadLetterTopic": example_dead_letter.id,
+        "maxDeliveryAttempts": 10,
+    })
+```
+
 
 
 ## Create a Subscription Resource {#create}

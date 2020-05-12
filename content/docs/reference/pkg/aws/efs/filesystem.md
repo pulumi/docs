@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+foo = aws.efs.FileSystem("foo", tags={
+    "Name": "MyProduct",
+})
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -54,7 +61,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+foo_with_lifecyle_policy = aws.efs.FileSystem("fooWithLifecylePolicy", lifecycle_policy={
+    "transitionToIa": "AFTER_30_DAYS",
+})
+```
 {{% /example %}}
 
 {{% example typescript %}}

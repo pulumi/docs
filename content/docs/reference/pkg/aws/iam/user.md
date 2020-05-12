@@ -30,7 +30,33 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+lb_user = aws.iam.User("lbUser",
+    path="/system/",
+    tags={
+        "tag-key": "tag-value",
+    })
+lb_access_key = aws.iam.AccessKey("lbAccessKey", user=lb_user.name)
+lb_ro = aws.iam.UserPolicy("lbRo",
+    policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "ec2:Describe*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+
+""",
+    user=lb_user.name)
+```
 {{% /example %}}
 
 {{% example typescript %}}

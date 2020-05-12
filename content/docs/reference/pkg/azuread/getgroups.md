@@ -30,7 +30,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azuread as azuread
+
+groups = azuread.get_groups(names=[
+    "group-a",
+    "group-b",
+])
+```
 {{% /example %}}
 
 {{% example typescript %}}

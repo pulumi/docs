@@ -32,7 +32,103 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+front_end_load_balancer = aws.lb.LoadBalancer("frontEndLoadBalancer")
+front_end_listener = aws.lb.Listener("frontEndListener")
+static = aws.lb.ListenerRule("static",
+    actions=[{
+        "targetGroupArn": aws_lb_target_group["static"]["arn"],
+        "type": "forward",
+    }],
+    conditions=[
+        {
+            "pathPattern": {
+                "values": ["/static/*"],
+            },
+        },
+        {
+            "hostHeader": {
+                "values": ["example.com"],
+            },
+        },
+    ],
+    listener_arn=front_end_listener.arn,
+    priority=100)
+host_based_routing = aws.lb.ListenerRule("hostBasedRouting",
+    actions=[{
+        "targetGroupArn": aws_lb_target_group["static"]["arn"],
+        "type": "forward",
+    }],
+    conditions=[{
+        "hostHeader": {
+            "values": ["my-service.*.mydomain.io"],
+        },
+    }],
+    listener_arn=front_end_listener.arn,
+    priority=99)
+redirect_http_to_https = aws.lb.ListenerRule("redirectHttpToHttps",
+    actions=[{
+        "redirect": {
+            "port": "443",
+            "protocol": "HTTPS",
+            "statusCode": "HTTP_301",
+        },
+        "type": "redirect",
+    }],
+    conditions=[{
+        "httpHeader": {
+            "httpHeaderName": "X-Forwarded-For",
+            "values": ["192.168.1.*"],
+        },
+    }],
+    listener_arn=front_end_listener.arn)
+health_check = aws.lb.ListenerRule("healthCheck",
+    actions=[{
+        "fixedResponse": {
+            "contentType": "text/plain",
+            "messageBody": "HEALTHY",
+            "statusCode": "200",
+        },
+        "type": "fixed-response",
+    }],
+    conditions=[{
+        "queryString": [
+            {
+                "key": "health",
+                "value": "check",
+            },
+            {
+                "value": "bar",
+            },
+        ],
+    }],
+    listener_arn=front_end_listener.arn)
+pool = aws.cognito.UserPool("pool")
+client = aws.cognito.UserPoolClient("client")
+domain = aws.cognito.UserPoolDomain("domain")
+admin = aws.lb.ListenerRule("admin",
+    actions=[
+        {
+            "authenticateOidc": {
+                "authorizationEndpoint": "https://example.com/authorization_endpoint",
+                "clientId": "client_id",
+                "clientSecret": "client_secret",
+                "issuer": "https://example.com",
+                "tokenEndpoint": "https://example.com/token_endpoint",
+                "userInfoEndpoint": "https://example.com/user_info_endpoint",
+            },
+            "type": "authenticate-oidc",
+        },
+        {
+            "targetGroupArn": aws_lb_target_group["static"]["arn"],
+            "type": "forward",
+        },
+    ],
+    listener_arn=front_end_listener.arn)
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -2492,7 +2588,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerruleconditionpathpattern">Listener<wbr>Rule<wbr>Condition<wbr>Path<wbr>Pattern<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains a single `values` item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard charaters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a `query-string` condition.
+    <dd>{{% md %}}Contains a single `values` item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a `query-string` condition.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2571,7 +2667,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerruleconditionpathpattern">Listener<wbr>Rule<wbr>Condition<wbr>Path<wbr>Pattern</a></span>
     </dt>
-    <dd>{{% md %}}Contains a single `values` item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard charaters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a `query-string` condition.
+    <dd>{{% md %}}Contains a single `values` item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a `query-string` condition.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2650,7 +2746,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerruleconditionpathpattern">Listener<wbr>Rule<wbr>Condition<wbr>Path<wbr>Pattern</a></span>
     </dt>
-    <dd>{{% md %}}Contains a single `values` item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard charaters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a `query-string` condition.
+    <dd>{{% md %}}Contains a single `values` item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a `query-string` condition.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2729,7 +2825,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerruleconditionpathpattern">Dict[Listener<wbr>Rule<wbr>Condition<wbr>Path<wbr>Pattern]</a></span>
     </dt>
-    <dd>{{% md %}}Contains a single `values` item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard charaters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a `query-string` condition.
+    <dd>{{% md %}}Contains a single `values` item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a `query-string` condition.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

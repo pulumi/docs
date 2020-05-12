@@ -21,6 +21,40 @@ To get more information about GlobalNetworkEndpoint, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/load-balancing/docs/negs/)
 
+## Example Usage - Global Network Endpoint
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default-endpoint = new gcp.compute.GlobalNetworkEndpoint("default-endpoint", {
+    globalNetworkEndpointGroup: google_compute_network_endpoint_group.neg.name,
+    fqdn: "www.example.com",
+    port: google_compute_network_endpoint_group.neg.default_port,
+    ipAddress: google_compute_instance["endpoint-instance"].network_interface[0].network_ip,
+});
+const default = new gcp.compute.Network("default", {autoCreateSubnetworks: false});
+const group = new gcp.compute.GlobalNetworkEndpointGroup("group", {
+    network: default.selfLink,
+    defaultPort: "90",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_endpoint = gcp.compute.GlobalNetworkEndpoint("default-endpoint",
+    global_network_endpoint_group=google_compute_network_endpoint_group["neg"]["name"],
+    fqdn="www.example.com",
+    port=google_compute_network_endpoint_group["neg"]["default_port"],
+    ip_address=google_compute_instance["endpoint-instance"]["network_interface"][0]["network_ip"])
+default = gcp.compute.Network("default", auto_create_subnetworks=False)
+group = gcp.compute.GlobalNetworkEndpointGroup("group",
+    network=default.self_link,
+    default_port="90")
+```
+
 
 
 ## Create a GlobalNetworkEndpoint Resource {#create}

@@ -35,6 +35,21 @@ const instance = new aws.iam.Role("instance", {
     path: "/system/",
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+instance_assume_role_policy = aws.iam.get_policy_document(statements=[{
+    "actions": ["sts:AssumeRole"],
+    "principals": [{
+        "identifiers": ["ec2.amazonaws.com"],
+        "type": "Service",
+    }],
+}])
+instance = aws.iam.Role("instance",
+    assume_role_policy=instance_assume_role_policy.json,
+    path="/system/")
+```
 
 {{% examples %}}
 ## Example Usage
@@ -50,7 +65,30 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_role = aws.iam.Role("testRole",
+    assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "ec2.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+
+""",
+    tags={
+        "tag-key": "tag-value",
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -32,7 +32,48 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+current = aws.get_caller_identity()
+foo = aws.s3.Bucket("foo",
+    force_destroy=True,
+    policy=f"""{{
+    "Version": "2012-10-17",
+    "Statement": [
+        {{
+            "Sid": "AWSCloudTrailAclCheck",
+            "Effect": "Allow",
+            "Principal": {{
+              "Service": "cloudtrail.amazonaws.com"
+            }},
+            "Action": "s3:GetBucketAcl",
+            "Resource": "arn:aws:s3:::tf-test-trail"
+        }},
+        {{
+            "Sid": "AWSCloudTrailWrite",
+            "Effect": "Allow",
+            "Principal": {{
+              "Service": "cloudtrail.amazonaws.com"
+            }},
+            "Action": "s3:PutObject",
+            "Resource": "arn:aws:s3:::tf-test-trail/prefix/AWSLogs/{current.account_id}/*",
+            "Condition": {{
+                "StringEquals": {{
+                    "s3:x-amz-acl": "bucket-owner-full-control"
+                }}
+            }}
+        }}
+    ]
+}}
+
+""")
+foobar = aws.cloudtrail.Trail("foobar",
+    include_global_service_events=False,
+    s3_bucket_name=foo.id,
+    s3_key_prefix="prefix")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -95,6 +136,35 @@ Coming soon!
 {{% /example %}}
 
 {{% example typescript %}}
+Coming soon!
+{{% /example %}}
+
+### Logging All Lambda Function Invocations
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.cloudtrail.Trail("example", event_selectors=[{
+    "dataResource": [{
+        "type": "AWS::Lambda::Function",
+        "values": ["arn:aws:lambda"],
+    }],
+    "includeManagementEvents": True,
+    "readWriteType": "All",
+}])
+```
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -104,6 +174,98 @@ const example = new aws.cloudtrail.Trail("example", {
         dataResources: [{
             type: "AWS::Lambda::Function",
             values: ["arn:aws:lambda"],
+        }],
+        includeManagementEvents: true,
+        readWriteType: "All",
+    }],
+});
+```
+{{% /example %}}
+
+### Logging All S3 Bucket Object Events
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.cloudtrail.Trail("example", event_selectors=[{
+    "dataResource": [{
+        "type": "AWS::S3::Object",
+        "values": ["arn:aws:s3:::"],
+    }],
+    "includeManagementEvents": True,
+    "readWriteType": "All",
+}])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.cloudtrail.Trail("example", {
+    eventSelectors: [{
+        dataResources: [{
+            type: "AWS::S3::Object",
+            values: ["arn:aws:s3:::"],
+        }],
+        includeManagementEvents: true,
+        readWriteType: "All",
+    }],
+});
+```
+{{% /example %}}
+
+### Logging Individual S3 Bucket Events
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+important_bucket = aws.s3.get_bucket(bucket="important-bucket")
+example = aws.cloudtrail.Trail("example", event_selectors=[{
+    "dataResource": [{
+        "type": "AWS::S3::Object",
+        "values": [f"{important_bucket.arn}/"],
+    }],
+    "includeManagementEvents": True,
+    "readWriteType": "All",
+}])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const important_bucket = pulumi.output(aws.s3.getBucket({
+    bucket: "important-bucket",
+}, { async: true }));
+const example = new aws.cloudtrail.Trail("example", {
+    eventSelectors: [{
+        dataResources: [{
+            type: "AWS::S3::Object",
+            // Make sure to append a trailing '/' to your ARN if you want
+            // to monitor all objects in a bucket.
+            values: [pulumi.interpolate`${important_bucket.arn}/`],
         }],
         includeManagementEvents: true,
         readWriteType: "All",

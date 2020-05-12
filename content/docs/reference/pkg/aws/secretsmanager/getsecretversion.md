@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.secretsmanager.get_secret_version(secret_id=data["aws.secretsmanager.Secret"]["example"]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -52,7 +57,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+by_version_stage = aws.secretsmanager.get_secret_version(secret_id=data["aws.secretsmanager.Secret"]["example"]["id"],
+    version_stage="example")
+```
 {{% /example %}}
 
 {{% example typescript %}}

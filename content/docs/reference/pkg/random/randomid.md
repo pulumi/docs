@@ -39,7 +39,22 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_random as random
+
+server_random_id = random.RandomId("serverRandomId",
+    byte_length=8,
+    keepers={
+        "ami_id": var["ami_id"],
+    })
+server_instance = aws.ec2.Instance("serverInstance",
+    ami=server_random_id.keepers["amiId"],
+    tags={
+        "Name": server_random_id.hex.apply(lambda hex: f"web-server {hex}"),
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}

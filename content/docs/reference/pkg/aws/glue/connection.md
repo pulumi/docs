@@ -28,7 +28,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.glue.Connection("example", connection_properties={
+    "JDBC_CONNECTION_URL": "jdbc:mysql://example.com/exampledatabase",
+    "PASSWORD": "examplepassword",
+    "USERNAME": "exampleusername",
+})
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -56,7 +65,22 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.glue.Connection("example",
+    connection_properties={
+        "JDBC_CONNECTION_URL": f"jdbc:mysql://{aws_rds_cluster['example']['endpoint']}/exampledatabase",
+        "PASSWORD": "examplepassword",
+        "USERNAME": "exampleusername",
+    },
+    physical_connection_requirements={
+        "availabilityZone": aws_subnet["example"]["availability_zone"],
+        "securityGroupIdList": [aws_security_group["example"]["id"]],
+        "subnetId": aws_subnet["example"]["id"],
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -287,7 +311,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`. Defaults to `JBDC`.
+    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`, `KAFKA`. Defaults to `JBDC`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -357,7 +381,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`. Defaults to `JBDC`.
+    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`, `KAFKA`. Defaults to `JBDC`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -427,7 +451,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`. Defaults to `JBDC`.
+    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`, `KAFKA`. Defaults to `JBDC`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -497,7 +521,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`. Defaults to `JBDC`.
+    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`, `KAFKA`. Defaults to `JBDC`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -764,7 +788,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`. Defaults to `JBDC`.
+    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`, `KAFKA`. Defaults to `JBDC`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -834,7 +858,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`. Defaults to `JBDC`.
+    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`, `KAFKA`. Defaults to `JBDC`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -904,7 +928,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`. Defaults to `JBDC`.
+    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`, `KAFKA`. Defaults to `JBDC`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -974,7 +998,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`. Defaults to `JBDC`.
+    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`, `KAFKA`. Defaults to `JBDC`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

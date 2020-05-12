@@ -19,6 +19,227 @@ To get more information about Hl7V2Store, see:
 * How-to Guides
     * [Creating a HL7v2 Store](https://cloud.google.com/healthcare/docs/how-tos/hl7v2)
 
+## Example Usage - Healthcare Hl7 V2 Store Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const topic = new gcp.pubsub.Topic("topic", {});
+const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"});
+const default = new gcp.healthcare.Hl7Store("default", {
+    dataset: dataset.id,
+    notification_configs: [{
+        pubsubTopic: topic.id,
+    }],
+    labels: {
+        label1: "labelvalue1",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+topic = gcp.pubsub.Topic("topic")
+dataset = gcp.healthcare.Dataset("dataset", location="us-central1")
+default = gcp.healthcare.Hl7Store("default",
+    dataset=dataset.id,
+    notification_configs=[{
+        "pubsubTopic": topic.id,
+    }],
+    labels={
+        "label1": "labelvalue1",
+    })
+```
+## Example Usage - Healthcare Hl7 V2 Store Parser Config
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"});
+const default = new gcp.healthcare.Hl7Store("default", {
+    dataset: dataset.id,
+    parser_config: {
+        allowNullHeader: false,
+        segmentTerminator: "Jw==",
+        schema: `{
+  "schemas": [{
+    "messageSchemaConfigs": {
+      "ADT_A01": {
+        "name": "ADT_A01",
+        "minOccurs": 1,
+        "maxOccurs": 1,
+        "members": [{
+            "segment": {
+              "type": "MSH",
+              "minOccurs": 1,
+              "maxOccurs": 1
+            }
+          },
+          {
+            "segment": {
+              "type": "EVN",
+              "minOccurs": 1,
+              "maxOccurs": 1
+            }
+          },
+          {
+            "segment": {
+              "type": "PID",
+              "minOccurs": 1,
+              "maxOccurs": 1
+            }
+          },
+          {
+            "segment": {
+              "type": "ZPD",
+              "minOccurs": 1,
+              "maxOccurs": 1
+            }
+          },
+          {
+            "segment": {
+              "type": "OBX"
+            }
+          },
+          {
+            "group": {
+              "name": "PROCEDURE",
+              "members": [{
+                  "segment": {
+                    "type": "PR1",
+                    "minOccurs": 1,
+                    "maxOccurs": 1
+                  }
+                },
+                {
+                  "segment": {
+                    "type": "ROL"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "segment": {
+              "type": "PDA",
+              "maxOccurs": 1
+            }
+          }
+        ]
+      }
+    }
+  }],
+  "types": [{
+    "type": [{
+        "name": "ZPD",
+        "primitive": "VARIES"
+      }
+
+    ]
+  }],
+  "ignoreMinOccurs": true
+}
+`,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+dataset = gcp.healthcare.Dataset("dataset", location="us-central1")
+default = gcp.healthcare.Hl7Store("default",
+    dataset=dataset.id,
+    parser_config={
+        "allowNullHeader": False,
+        "segmentTerminator": "Jw==",
+        "schema": """{
+  "schemas": [{
+    "messageSchemaConfigs": {
+      "ADT_A01": {
+        "name": "ADT_A01",
+        "minOccurs": 1,
+        "maxOccurs": 1,
+        "members": [{
+            "segment": {
+              "type": "MSH",
+              "minOccurs": 1,
+              "maxOccurs": 1
+            }
+          },
+          {
+            "segment": {
+              "type": "EVN",
+              "minOccurs": 1,
+              "maxOccurs": 1
+            }
+          },
+          {
+            "segment": {
+              "type": "PID",
+              "minOccurs": 1,
+              "maxOccurs": 1
+            }
+          },
+          {
+            "segment": {
+              "type": "ZPD",
+              "minOccurs": 1,
+              "maxOccurs": 1
+            }
+          },
+          {
+            "segment": {
+              "type": "OBX"
+            }
+          },
+          {
+            "group": {
+              "name": "PROCEDURE",
+              "members": [{
+                  "segment": {
+                    "type": "PR1",
+                    "minOccurs": 1,
+                    "maxOccurs": 1
+                  }
+                },
+                {
+                  "segment": {
+                    "type": "ROL"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "segment": {
+              "type": "PDA",
+              "maxOccurs": 1
+            }
+          }
+        ]
+      }
+    }
+  }],
+  "types": [{
+    "type": [{
+        "name": "ZPD",
+        "primitive": "VARIES"
+      }
+
+    ]
+  }],
+  "ignoreMinOccurs": true
+}
+""",
+    })
+```
+
 
 
 ## Create a Hl7Store Resource {#create}
@@ -30,7 +251,7 @@ To get more information about Hl7V2Store, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Hl7Store</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dataset=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>notification_config=None<span class="p">, </span>parser_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Hl7Store</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dataset=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>notification_config=None<span class="p">, </span>notification_configs=None<span class="p">, </span>parser_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -238,13 +459,26 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>Notification<wbr>Config</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hl7storenotificationconfig">Hl7Store<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}-
+(Optional, Deprecated)
+A nested object resource  Structure is documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Notification<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hl7storenotificationconfigs">List&lt;Hl7Store<wbr>Notification<wbr>Configs<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of notification configs. Each configuration uses a filter to determine whether to publish a
+message (both Ingest & Create) on the corresponding notification destination. Only the message name
+is sent as part of the notification. Supplied by the client.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -299,13 +533,26 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>Notification<wbr>Config</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hl7storenotificationconfig">Hl7Store<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}-
+(Optional, Deprecated)
+A nested object resource  Structure is documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Notification<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hl7storenotificationconfigs">[]Hl7Store<wbr>Notification<wbr>Configs</a></span>
+    </dt>
+    <dd>{{% md %}}A list of notification configs. Each configuration uses a filter to determine whether to publish a
+message (both Ingest & Create) on the corresponding notification destination. Only the message name
+is sent as part of the notification. Supplied by the client.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -360,13 +607,26 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>notification<wbr>Config</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hl7storenotificationconfig">Hl7Store<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}-
+(Optional, Deprecated)
+A nested object resource  Structure is documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>notification<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hl7storenotificationconfigs">Hl7Store<wbr>Notification<wbr>Configs[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of notification configs. Each configuration uses a filter to determine whether to publish a
+message (both Ingest & Create) on the corresponding notification destination. Only the message name
+is sent as part of the notification. Supplied by the client.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -421,13 +681,26 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>notification_<wbr>config</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hl7storenotificationconfig">Dict[Hl7Store<wbr>Notification<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}-
+(Optional, Deprecated)
+A nested object resource  Structure is documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>notification_<wbr>configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hl7storenotificationconfigs">List[Hl7Store<wbr>Notification<wbr>Configs]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of notification configs. Each configuration uses a filter to determine whether to publish a
+message (both Ingest & Create) on the corresponding notification destination. Only the message name
+is sent as part of the notification. Supplied by the client.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -565,7 +838,7 @@ Get an existing Hl7Store resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>dataset=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>notification_config=None<span class="p">, </span>parser_config=None<span class="p">, </span>self_link=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>dataset=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>notification_config=None<span class="p">, </span>notification_configs=None<span class="p">, </span>parser_config=None<span class="p">, </span>self_link=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -715,13 +988,26 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>Notification<wbr>Config</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hl7storenotificationconfig">Hl7Store<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}-
+(Optional, Deprecated)
+A nested object resource  Structure is documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Notification<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hl7storenotificationconfigs">List&lt;Hl7Store<wbr>Notification<wbr>Configs<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of notification configs. Each configuration uses a filter to determine whether to publish a
+message (both Ingest & Create) on the corresponding notification destination. Only the message name
+is sent as part of the notification. Supplied by the client.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -785,13 +1071,26 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>Notification<wbr>Config</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hl7storenotificationconfig">Hl7Store<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}-
+(Optional, Deprecated)
+A nested object resource  Structure is documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Notification<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hl7storenotificationconfigs">[]Hl7Store<wbr>Notification<wbr>Configs</a></span>
+    </dt>
+    <dd>{{% md %}}A list of notification configs. Each configuration uses a filter to determine whether to publish a
+message (both Ingest & Create) on the corresponding notification destination. Only the message name
+is sent as part of the notification. Supplied by the client.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -855,13 +1154,26 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>notification<wbr>Config</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hl7storenotificationconfig">Hl7Store<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}-
+(Optional, Deprecated)
+A nested object resource  Structure is documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>notification<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hl7storenotificationconfigs">Hl7Store<wbr>Notification<wbr>Configs[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of notification configs. Each configuration uses a filter to determine whether to publish a
+message (both Ingest & Create) on the corresponding notification destination. Only the message name
+is sent as part of the notification. Supplied by the client.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -925,13 +1237,26 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>notification_<wbr>config</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hl7storenotificationconfig">Dict[Hl7Store<wbr>Notification<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}-
+(Optional, Deprecated)
+A nested object resource  Structure is documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>notification_<wbr>configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hl7storenotificationconfigs">List[Hl7Store<wbr>Notification<wbr>Configs]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of notification configs. Each configuration uses a filter to determine whether to publish a
+message (both Ingest & Create) on the corresponding notification destination. Only the message name
+is sent as part of the notification. Supplied by the client.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1060,6 +1385,176 @@ It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the
 was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
 project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="hl7storenotificationconfigs">Hl7Store<wbr>Notification<wbr>Configs</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#Hl7StoreNotificationConfigs">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#Hl7StoreNotificationConfigs">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#Hl7StoreNotificationConfigsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#Hl7StoreNotificationConfigsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Inputs.Hl7StoreNotificationConfigsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Outputs.Hl7StoreNotificationConfigs.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Pubsub<wbr>Topic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
+Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Restricts notifications sent for messages matching a filter. If this is empty, all messages
+are matched. Syntax: https://cloud.google.com/appengine/docs/standard/python/search/query_strings
+Fields/functions available for filtering are:
+* messageType, from the MSH-9.1 field. For example, NOT messageType = "ADT".
+* send_date or sendDate, the YYYY-MM-DD date the message was sent in the dataset's timeZone, from the MSH-7 segment. For example, send_date < "2017-01-02".
+* sendTime, the timestamp when the message was sent, using the RFC3339 time format for comparisons, from the MSH-7 segment. For example, sendTime < "2017-01-02T00:00:00-05:00".
+* sendFacility, the care center that the message came from, from the MSH-4 segment. For example, sendFacility = "ABC".
+* PatientId(value, type), which matches if the message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example, PatientId("123456", "MRN").
+* labels.x, a string value of the label with key x as set using the Message.labels map. For example, labels."priority"="high". The operator :* can be used to assert the existence of a label. For example, labels."priority":*.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Pubsub<wbr>Topic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
+Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Restricts notifications sent for messages matching a filter. If this is empty, all messages
+are matched. Syntax: https://cloud.google.com/appengine/docs/standard/python/search/query_strings
+Fields/functions available for filtering are:
+* messageType, from the MSH-9.1 field. For example, NOT messageType = "ADT".
+* send_date or sendDate, the YYYY-MM-DD date the message was sent in the dataset's timeZone, from the MSH-7 segment. For example, send_date < "2017-01-02".
+* sendTime, the timestamp when the message was sent, using the RFC3339 time format for comparisons, from the MSH-7 segment. For example, sendTime < "2017-01-02T00:00:00-05:00".
+* sendFacility, the care center that the message came from, from the MSH-4 segment. For example, sendFacility = "ABC".
+* PatientId(value, type), which matches if the message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example, PatientId("123456", "MRN").
+* labels.x, a string value of the label with key x as set using the Message.labels map. For example, labels."priority"="high". The operator :* can be used to assert the existence of a label. For example, labels."priority":*.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>pubsub<wbr>Topic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
+Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Restricts notifications sent for messages matching a filter. If this is empty, all messages
+are matched. Syntax: https://cloud.google.com/appengine/docs/standard/python/search/query_strings
+Fields/functions available for filtering are:
+* messageType, from the MSH-9.1 field. For example, NOT messageType = "ADT".
+* send_date or sendDate, the YYYY-MM-DD date the message was sent in the dataset's timeZone, from the MSH-7 segment. For example, send_date < "2017-01-02".
+* sendTime, the timestamp when the message was sent, using the RFC3339 time format for comparisons, from the MSH-7 segment. For example, sendTime < "2017-01-02T00:00:00-05:00".
+* sendFacility, the care center that the message came from, from the MSH-4 segment. For example, sendFacility = "ABC".
+* PatientId(value, type), which matches if the message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example, PatientId("123456", "MRN").
+* labels.x, a string value of the label with key x as set using the Message.labels map. For example, labels."priority"="high". The operator :* can be used to assert the existence of a label. For example, labels."priority":*.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>pubsub<wbr>Topic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
+Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Restricts notifications sent for messages matching a filter. If this is empty, all messages
+are matched. Syntax: https://cloud.google.com/appengine/docs/standard/python/search/query_strings
+Fields/functions available for filtering are:
+* messageType, from the MSH-9.1 field. For example, NOT messageType = "ADT".
+* send_date or sendDate, the YYYY-MM-DD date the message was sent in the dataset's timeZone, from the MSH-7 segment. For example, send_date < "2017-01-02".
+* sendTime, the timestamp when the message was sent, using the RFC3339 time format for comparisons, from the MSH-7 segment. For example, sendTime < "2017-01-02T00:00:00-05:00".
+* sendFacility, the care center that the message came from, from the MSH-4 segment. For example, sendFacility = "ABC".
+* PatientId(value, type), which matches if the message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example, PatientId("123456", "MRN").
+* labels.x, a string value of the label with key x as set using the Message.labels map. For example, labels."priority"="high". The operator :* can be used to assert the existence of a label. For example, labels."priority":*.
 {{% /md %}}</dd>
 
 </dl>

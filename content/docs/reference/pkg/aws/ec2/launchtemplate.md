@@ -5387,6 +5387,15 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Partition<wbr>Number</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of the partition the instance should launch in. Valid only if the placement group strategy is set to partition.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Spread<wbr>Domain</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -5444,6 +5453,15 @@ Otherwise, specify the default value of 2.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Dedicated Host for the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Partition<wbr>Number</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of the partition the instance should launch in. Valid only if the placement group strategy is set to partition.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5509,6 +5527,15 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
+        <span>partition<wbr>Number</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of the partition the instance should launch in. Valid only if the placement group strategy is set to partition.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>spread<wbr>Domain</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -5566,6 +5593,15 @@ Otherwise, specify the default value of 2.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Dedicated Host for the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>partition<wbr>Number</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The number of the partition the instance should launch in. Valid only if the placement group strategy is set to partition.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

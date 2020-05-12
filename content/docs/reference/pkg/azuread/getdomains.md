@@ -30,7 +30,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azuread as azuread
+
+aad_domains = azuread.get_domains()
+pulumi.export("domains", aad_domains.domains)
+```
 {{% /example %}}
 
 {{% example typescript %}}

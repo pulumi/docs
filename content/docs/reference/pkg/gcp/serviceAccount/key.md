@@ -13,6 +13,34 @@ meta_desc: "Explore the Key resource of the serviceAccount module, including exa
 Creates and manages service account key-pairs, which allow the user to establish identity of a service account outside of GCP. For more information, see [the official documentation](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) and [API](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys).
 
 
+## Example Usage, creating a new Key Pair
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myaccount = new gcp.serviceAccount.Account("myaccount", {
+    accountId: "myaccount",
+    displayName: "My Service Account",
+});
+const mykey = new gcp.serviceAccount.Key("mykey", {
+    serviceAccountId: myaccount.name,
+    publicKeyType: "TYPE_X509_PEM_FILE",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+myaccount = gcp.service_account.Account("myaccount",
+    account_id="myaccount",
+    display_name="My Service Account")
+mykey = gcp.service_account.Key("mykey",
+    service_account_id=myaccount.name,
+    public_key_type="TYPE_X509_PEM_FILE")
+```
+
+
 
 ## Create a Key Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}

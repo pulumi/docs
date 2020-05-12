@@ -24,6 +24,122 @@ To get more information about BackendService, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/http/backend-service)
 
+> **Warning:** All arguments including `iap.oauth2_client_secret` and `iap.oauth2_client_secret_sha256` will be stored in the raw
+state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
+
+## Example Usage - Backend Service Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultHttpHealthCheck = new gcp.compute.HttpHealthCheck("defaultHttpHealthCheck", {
+    requestPath: "/",
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+});
+const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {healthChecks: [defaultHttpHealthCheck.selfLink]});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_http_health_check = gcp.compute.HttpHealthCheck("defaultHttpHealthCheck",
+    request_path="/",
+    check_interval_sec=1,
+    timeout_sec=1)
+default_backend_service = gcp.compute.BackendService("defaultBackendService", health_checks=[default_http_health_check.self_link])
+```
+## Example Usage - Backend Service Traffic Director Round Robin
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const healthCheck = new gcp.compute.HealthCheck("healthCheck", {http_health_check: {
+    port: 80,
+}});
+const default = new gcp.compute.BackendService("default", {
+    healthChecks: [healthCheck.selfLink],
+    loadBalancingScheme: "INTERNAL_SELF_MANAGED",
+    localityLbPolicy: "ROUND_ROBIN",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+health_check = gcp.compute.HealthCheck("healthCheck", http_health_check={
+    "port": 80,
+})
+default = gcp.compute.BackendService("default",
+    health_checks=[health_check.self_link],
+    load_balancing_scheme="INTERNAL_SELF_MANAGED",
+    locality_lb_policy="ROUND_ROBIN")
+```
+## Example Usage - Backend Service Traffic Director Ring Hash
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const healthCheck = new gcp.compute.HealthCheck("healthCheck", {http_health_check: {
+    port: 80,
+}});
+const default = new gcp.compute.BackendService("default", {
+    healthChecks: [healthCheck.selfLink],
+    loadBalancingScheme: "INTERNAL_SELF_MANAGED",
+    localityLbPolicy: "RING_HASH",
+    sessionAffinity: "HTTP_COOKIE",
+    circuit_breakers: {
+        maxConnections: 10,
+    },
+    consistent_hash: {
+        http_cookie: {
+            ttl: {
+                seconds: 11,
+                nanos: 1111,
+            },
+            name: "mycookie",
+        },
+    },
+    outlier_detection: {
+        consecutiveErrors: 2,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+health_check = gcp.compute.HealthCheck("healthCheck", http_health_check={
+    "port": 80,
+})
+default = gcp.compute.BackendService("default",
+    health_checks=[health_check.self_link],
+    load_balancing_scheme="INTERNAL_SELF_MANAGED",
+    locality_lb_policy="RING_HASH",
+    session_affinity="HTTP_COOKIE",
+    circuit_breakers={
+        "maxConnections": 10,
+    },
+    consistent_hash={
+        "http_cookie": {
+            "ttl": {
+                "seconds": 11,
+                "nanos": 1111,
+            },
+            "name": "mycookie",
+        },
+    },
+    outlier_detection={
+        "consecutiveErrors": 2,
+    })
+```
+
 
 
 ## Create a BackendService Resource {#create}
@@ -334,8 +450,7 @@ Provide this property when you create the resource.
     </dt>
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
-load balancing cannot be used with the other. Must be `EXTERNAL` or
-`INTERNAL_SELF_MANAGED` for a global backend service. Defaults to `EXTERNAL`.
+load balancing cannot be used with the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -426,8 +541,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, TCP, and SSL. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -594,8 +708,7 @@ Provide this property when you create the resource.
     </dt>
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
-load balancing cannot be used with the other. Must be `EXTERNAL` or
-`INTERNAL_SELF_MANAGED` for a global backend service. Defaults to `EXTERNAL`.
+load balancing cannot be used with the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -686,8 +799,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, TCP, and SSL. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -854,8 +966,7 @@ Provide this property when you create the resource.
     </dt>
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
-load balancing cannot be used with the other. Must be `EXTERNAL` or
-`INTERNAL_SELF_MANAGED` for a global backend service. Defaults to `EXTERNAL`.
+load balancing cannot be used with the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -946,8 +1057,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, TCP, and SSL. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -1114,8 +1224,7 @@ Provide this property when you create the resource.
     </dt>
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
-load balancing cannot be used with the other. Must be `EXTERNAL` or
-`INTERNAL_SELF_MANAGED` for a global backend service. Defaults to `EXTERNAL`.
+load balancing cannot be used with the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1206,8 +1315,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, TCP, and SSL. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -1697,8 +1805,7 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
     </dt>
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
-load balancing cannot be used with the other. Must be `EXTERNAL` or
-`INTERNAL_SELF_MANAGED` for a global backend service. Defaults to `EXTERNAL`.
+load balancing cannot be used with the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1789,8 +1896,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, TCP, and SSL. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -1984,8 +2090,7 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
     </dt>
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
-load balancing cannot be used with the other. Must be `EXTERNAL` or
-`INTERNAL_SELF_MANAGED` for a global backend service. Defaults to `EXTERNAL`.
+load balancing cannot be used with the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2076,8 +2181,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, TCP, and SSL. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -2271,8 +2375,7 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
     </dt>
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
-load balancing cannot be used with the other. Must be `EXTERNAL` or
-`INTERNAL_SELF_MANAGED` for a global backend service. Defaults to `EXTERNAL`.
+load balancing cannot be used with the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2363,8 +2466,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, TCP, and SSL. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -2558,8 +2660,7 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
     </dt>
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
-load balancing cannot be used with the other. Must be `EXTERNAL` or
-`INTERNAL_SELF_MANAGED` for a global backend service. Defaults to `EXTERNAL`.
+load balancing cannot be used with the other.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2650,8 +2751,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, TCP, and SSL. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -4685,7 +4785,7 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}OAuth2 Client Secret for IAP
+    <dd>{{% md %}}OAuth2 Client Secret for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4695,7 +4795,7 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}-
-OAuth2 Client Secret SHA-256 for IAP
+OAuth2 Client Secret SHA-256 for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -4720,7 +4820,7 @@ OAuth2 Client Secret SHA-256 for IAP
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}OAuth2 Client Secret for IAP
+    <dd>{{% md %}}OAuth2 Client Secret for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4730,7 +4830,7 @@ OAuth2 Client Secret SHA-256 for IAP
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}-
-OAuth2 Client Secret SHA-256 for IAP
+OAuth2 Client Secret SHA-256 for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -4755,7 +4855,7 @@ OAuth2 Client Secret SHA-256 for IAP
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}OAuth2 Client Secret for IAP
+    <dd>{{% md %}}OAuth2 Client Secret for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4765,7 +4865,7 @@ OAuth2 Client Secret SHA-256 for IAP
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}-
-OAuth2 Client Secret SHA-256 for IAP
+OAuth2 Client Secret SHA-256 for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -4790,7 +4890,7 @@ OAuth2 Client Secret SHA-256 for IAP
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}OAuth2 Client Secret for IAP
+    <dd>{{% md %}}OAuth2 Client Secret for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4800,7 +4900,7 @@ OAuth2 Client Secret SHA-256 for IAP
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}-
-OAuth2 Client Secret SHA-256 for IAP
+OAuth2 Client Secret SHA-256 for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>

@@ -31,7 +31,33 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+main = aws.ec2.Vpc("main", cidr_block="10.0.0.0/16")
+foo = aws.ec2.Subnet("foo",
+    availability_zone="us-west-2a",
+    cidr_block="10.0.1.0/24",
+    vpc_id=main.id)
+bar_subnet = aws.ec2.Subnet("barSubnet",
+    availability_zone="us-west-2b",
+    cidr_block="10.0.2.0/24",
+    vpc_id=main.id)
+bar_directory = aws.directoryservice.Directory("barDirectory",
+    password="SuperSecretPassw0rd",
+    size="Small",
+    tags={
+        "Project": "foo",
+    },
+    vpc_settings={
+        "subnetIds": [
+            foo.id,
+            bar_subnet.id,
+        ],
+        "vpcId": main.id,
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -79,7 +105,34 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+main = aws.ec2.Vpc("main", cidr_block="10.0.0.0/16")
+foo = aws.ec2.Subnet("foo",
+    availability_zone="us-west-2a",
+    cidr_block="10.0.1.0/24",
+    vpc_id=main.id)
+bar_subnet = aws.ec2.Subnet("barSubnet",
+    availability_zone="us-west-2b",
+    cidr_block="10.0.2.0/24",
+    vpc_id=main.id)
+bar_directory = aws.directoryservice.Directory("barDirectory",
+    edition="Standard",
+    password="SuperSecretPassw0rd",
+    tags={
+        "Project": "foo",
+    },
+    type="MicrosoftAD",
+    vpc_settings={
+        "subnetIds": [
+            foo.id,
+            bar_subnet.id,
+        ],
+        "vpcId": main.id,
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -128,7 +181,33 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+main = aws.ec2.Vpc("main", cidr_block="10.0.0.0/16")
+foo = aws.ec2.Subnet("foo",
+    availability_zone="us-west-2a",
+    cidr_block="10.0.1.0/24",
+    vpc_id=main.id)
+bar = aws.ec2.Subnet("bar",
+    availability_zone="us-west-2b",
+    cidr_block="10.0.2.0/24",
+    vpc_id=main.id)
+connector = aws.directoryservice.Directory("connector",
+    connect_settings={
+        "customerDnsIps": ["A.B.C.D"],
+        "customerUsername": "Admin",
+        "subnetIds": [
+            foo.id,
+            bar.id,
+        ],
+        "vpcId": main.id,
+    },
+    password="SuperSecretPassw0rd",
+    size="Small",
+    type="ADConnector")
+```
 {{% /example %}}
 
 {{% example typescript %}}

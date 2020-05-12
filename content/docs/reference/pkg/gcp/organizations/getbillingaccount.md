@@ -12,6 +12,32 @@ meta_desc: "Explore the GetBillingAccount function of the organizations module, 
 
 Use this data source to get information about a Google Billing Account.
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const acct = gcp.organizations.getBillingAccount({
+    displayName: "My Billing Account",
+    open: true,
+});
+const myProject = new gcp.organizations.Project("myProject", {
+    projectId: "your-project-id",
+    orgId: "1234567",
+    billingAccount: acct.then(acct => acct.id),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+acct = gcp.organizations.get_billing_account(display_name="My Billing Account",
+    open=True)
+my_project = gcp.organizations.Project("myProject",
+    project_id="your-project-id",
+    org_id="1234567",
+    billing_account=acct.id)
+```
+
 
 
 ## Using GetBillingAccount {#using}

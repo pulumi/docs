@@ -24,6 +24,58 @@ To get more information about NotificationChannel, see:
     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
 
 
+## Example Usage - Notification Channel Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const basic = gcp.monitoring.getNotificationChannel({
+    displayName: "Test Notification Channel",
+});
+const alertPolicy = new gcp.monitoring.AlertPolicy("alertPolicy", {
+    displayName: "My Alert Policy",
+    notificationChannels: [basic.then(basic => basic.name)],
+    combiner: "OR",
+    conditions: [{
+        displayName: "test condition",
+        condition_threshold: {
+            filter: "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"",
+            duration: "60s",
+            comparison: "COMPARISON_GT",
+            aggregations: [{
+                alignmentPeriod: "60s",
+                perSeriesAligner: "ALIGN_RATE",
+            }],
+        },
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+basic = gcp.monitoring.get_notification_channel(display_name="Test Notification Channel")
+alert_policy = gcp.monitoring.AlertPolicy("alertPolicy",
+    display_name="My Alert Policy",
+    notification_channels=[basic.name],
+    combiner="OR",
+    conditions=[{
+        "displayName": "test condition",
+        "condition_threshold": {
+            "filter": "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"",
+            "duration": "60s",
+            "comparison": "COMPARISON_GT",
+            "aggregations": [{
+                "alignmentPeriod": "60s",
+                "perSeriesAligner": "ALIGN_RATE",
+            }],
+        },
+    }])
+```
+
+
 
 ## Using GetNotificationChannel {#using}
 

@@ -26,7 +26,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.cloudfront.PublicKey("example",
+    comment="test public key",
+    encoded_key=(lambda path: open(path).read())("public_key.pem"))
+```
 {{% /example %}}
 
 {{% example typescript %}}

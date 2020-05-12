@@ -33,7 +33,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_exclusion = gcp.logging.ProjectExclusion("my-exclusion",
+    description="Exclude GCE instance debug logs",
+    filter="resource.type = gce_instance AND severity <= DEBUG")
+```
 {{% /example %}}
 
 {{% example typescript %}}

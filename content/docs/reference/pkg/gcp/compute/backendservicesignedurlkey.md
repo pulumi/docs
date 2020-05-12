@@ -19,6 +19,98 @@ To get more information about BackendServiceSignedUrlKey, see:
 * How-to Guides
     * [Using Signed URLs](https://cloud.google.com/cdn/docs/using-signed-urls/)
 
+> **Warning:** All arguments including `key_value` will be stored in the raw
+state as plain-text.
+
+## Example Usage - Backend Service Signed Url Key
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const webserver = new gcp.compute.InstanceTemplate("webserver", {
+    machineType: "n1-standard-1",
+    network_interface: [{
+        network: "default",
+    }],
+    disk: [{
+        sourceImage: "debian-cloud/debian-9",
+        autoDelete: true,
+        boot: true,
+    }],
+});
+const webservers = new gcp.compute.InstanceGroupManager("webservers", {
+    version: [{
+        instanceTemplate: webserver.selfLink,
+        name: "primary",
+    }],
+    baseInstanceName: "webserver",
+    zone: "us-central1-f",
+    targetSize: 1,
+});
+const default = new gcp.compute.HttpHealthCheck("default", {
+    requestPath: "/",
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+});
+const exampleBackend = new gcp.compute.BackendService("exampleBackend", {
+    description: "Our company website",
+    portName: "http",
+    protocol: "HTTP",
+    timeoutSec: 10,
+    enableCdn: true,
+    backend: [{
+        group: webservers.instanceGroup,
+    }],
+    healthChecks: [default.selfLink],
+});
+const backendKey = new gcp.compute.BackendServiceSignedUrlKey("backendKey", {
+    keyValue: "pPsVemX8GM46QVeezid6Rw==",
+    backendService: exampleBackend.name,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+webserver = gcp.compute.InstanceTemplate("webserver",
+    machine_type="n1-standard-1",
+    network_interface=[{
+        "network": "default",
+    }],
+    disk=[{
+        "sourceImage": "debian-cloud/debian-9",
+        "autoDelete": True,
+        "boot": True,
+    }])
+webservers = gcp.compute.InstanceGroupManager("webservers",
+    version=[{
+        "instanceTemplate": webserver.self_link,
+        "name": "primary",
+    }],
+    base_instance_name="webserver",
+    zone="us-central1-f",
+    target_size=1)
+default = gcp.compute.HttpHealthCheck("default",
+    request_path="/",
+    check_interval_sec=1,
+    timeout_sec=1)
+example_backend = gcp.compute.BackendService("exampleBackend",
+    description="Our company website",
+    port_name="http",
+    protocol="HTTP",
+    timeout_sec=10,
+    enable_cdn=True,
+    backend=[{
+        "group": webservers.instance_group,
+    }],
+    health_checks=[default.self_link])
+backend_key = gcp.compute.BackendServiceSignedUrlKey("backendKey",
+    key_value="pPsVemX8GM46QVeezid6Rw==",
+    backend_service=example_backend.name)
+```
+
 
 
 ## Create a BackendServiceSignedUrlKey Resource {#create}
@@ -218,7 +310,7 @@ The BackendServiceSignedUrlKey resource accepts the following [input]({{< relref
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}128-bit key value used for signing the URL. The key value must be a
-valid RFC 4648 Section 5 base64url encoded string.
+valid RFC 4648 Section 5 base64url encoded string.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -263,7 +355,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}128-bit key value used for signing the URL. The key value must be a
-valid RFC 4648 Section 5 base64url encoded string.
+valid RFC 4648 Section 5 base64url encoded string.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -308,7 +400,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}128-bit key value used for signing the URL. The key value must be a
-valid RFC 4648 Section 5 base64url encoded string.
+valid RFC 4648 Section 5 base64url encoded string.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -353,7 +445,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}128-bit key value used for signing the URL. The key value must be a
-valid RFC 4648 Section 5 base64url encoded string.
+valid RFC 4648 Section 5 base64url encoded string.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -595,7 +687,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}128-bit key value used for signing the URL. The key value must be a
-valid RFC 4648 Section 5 base64url encoded string.
+valid RFC 4648 Section 5 base64url encoded string.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -640,7 +732,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}128-bit key value used for signing the URL. The key value must be a
-valid RFC 4648 Section 5 base64url encoded string.
+valid RFC 4648 Section 5 base64url encoded string.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -685,7 +777,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}128-bit key value used for signing the URL. The key value must be a
-valid RFC 4648 Section 5 base64url encoded string.
+valid RFC 4648 Section 5 base64url encoded string.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -730,7 +822,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}128-bit key value used for signing the URL. The key value must be a
-valid RFC 4648 Section 5 base64url encoded string.
+valid RFC 4648 Section 5 base64url encoded string.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

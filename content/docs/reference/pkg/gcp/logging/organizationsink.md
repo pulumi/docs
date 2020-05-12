@@ -17,9 +17,56 @@ Manages a organization-level logging sink. For more information see
 Note that you must have the "Logs Configuration Writer" IAM role (`roles/logging.configWriter`)
 granted to the credentials used with this provider.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+log_bucket = gcp.storage.Bucket("log-bucket")
+my_sink = gcp.logging.OrganizationSink("my-sink",
+    org_id="123456789",
+    destination=log_bucket.name.apply(lambda name: f"storage.googleapis.com/{name}"),
+    filter="resource.type = gce_instance AND severity >= WARN")
+log_writer = gcp.projects.IAMMember("log-writer",
+    role="roles/storage.objectCreator",
+    member=my_sink.writer_identity)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const log-bucket = new gcp.storage.Bucket("log-bucket", {});
+const my-sink = new gcp.logging.OrganizationSink("my-sink", {
+    orgId: "123456789",
+    destination: pulumi.interpolate`storage.googleapis.com/${log-bucket.name}`,
+    filter: "resource.type = gce_instance AND severity >= WARN",
+});
+const log-writer = new gcp.projects.IAMMember("log-writer", {
+    role: "roles/storage.objectCreator",
+    member: my-sink.writerIdentity,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a OrganizationSink Resource {#create}
@@ -214,6 +261,9 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -282,6 +332,9 @@ associated with child projects are also exported; otherwise only logs relating t
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
@@ -352,6 +405,9 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -420,6 +476,9 @@ associated with child projects are also exported; otherwise only logs relating t
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
@@ -736,6 +795,9 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -814,6 +876,9 @@ configured `destination`.
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
@@ -894,6 +959,9 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
@@ -972,6 +1040,9 @@ configured `destination`.
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>

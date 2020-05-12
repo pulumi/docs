@@ -18,6 +18,34 @@ To get more information about ScanConfig, see:
 * How-to Guides
     * [Using Cloud Security Scanner](https://cloud.google.com/security-scanner/docs/scanning)
 
+> **Warning:** All arguments including `authentication.google_account.password` and `authentication.custom_account.password` will be stored in the raw
+state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
+
+## Example Usage - Scan Config Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const scannerStaticIp = new gcp.compute.Address("scannerStaticIp", {});
+const scan-config = new gcp.compute.SecurityScanConfig("scan-config", {
+    displayName: "scan-config",
+    startingUrls: [pulumi.interpolate`http://${scannerStaticIp.address}`],
+    targetPlatforms: ["COMPUTE"],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+scanner_static_ip = gcp.compute.Address("scannerStaticIp")
+scan_config = gcp.compute.SecurityScanConfig("scan-config",
+    display_name="scan-config",
+    starting_urls=[scanner_static_ip.address.apply(lambda address: f"http://{address}")],
+    target_platforms=["COMPUTE"])
+```
+
 
 
 ## Create a SecurityScanConfig Resource {#create}
@@ -1438,7 +1466,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The password of the custom account. The credential is stored encrypted
-in GCP.
+in GCP.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1473,7 +1501,7 @@ in GCP.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The password of the custom account. The credential is stored encrypted
-in GCP.
+in GCP.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1508,7 +1536,7 @@ in GCP.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The password of the custom account. The credential is stored encrypted
-in GCP.
+in GCP.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1543,7 +1571,7 @@ in GCP.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The password of the custom account. The credential is stored encrypted
-in GCP.
+in GCP.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1587,7 +1615,7 @@ in GCP.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The password of the custom account. The credential is stored encrypted
-in GCP.
+in GCP.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1613,7 +1641,7 @@ in GCP.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The password of the custom account. The credential is stored encrypted
-in GCP.
+in GCP.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1639,7 +1667,7 @@ in GCP.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The password of the custom account. The credential is stored encrypted
-in GCP.
+in GCP.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1665,7 +1693,7 @@ in GCP.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The password of the custom account. The credential is stored encrypted
-in GCP.
+in GCP.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"

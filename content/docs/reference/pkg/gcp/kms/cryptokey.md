@@ -28,6 +28,57 @@ To get more information about CryptoKey, see:
 * How-to Guides
     * [Creating a key](https://cloud.google.com/kms/docs/creating-keys#create_a_key)
 
+## Example Usage - Kms Crypto Key Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const example-key = new gcp.kms.CryptoKey("example-key", {
+    keyRing: keyring.selfLink,
+    rotationPeriod: "100000s",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+keyring = gcp.kms.KeyRing("keyring", location="global")
+example_key = gcp.kms.CryptoKey("example-key",
+    key_ring=keyring.self_link,
+    rotation_period="100000s")
+```
+## Example Usage - Kms Crypto Key Asymmetric Sign
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const example-asymmetric-sign-key = new gcp.kms.CryptoKey("example-asymmetric-sign-key", {
+    keyRing: keyring.selfLink,
+    purpose: "ASYMMETRIC_SIGN",
+    version_template: {
+        algorithm: "EC_SIGN_P384_SHA384",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+keyring = gcp.kms.KeyRing("keyring", location="global")
+example_asymmetric_sign_key = gcp.kms.CryptoKey("example-asymmetric-sign-key",
+    key_ring=keyring.self_link,
+    purpose="ASYMMETRIC_SIGN",
+    version_template={
+        "algorithm": "EC_SIGN_P384_SHA384",
+    })
+```
+
 
 
 ## Create a CryptoKey Resource {#create}

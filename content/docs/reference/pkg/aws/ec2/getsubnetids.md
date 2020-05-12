@@ -14,9 +14,48 @@ meta_desc: "Explore the GetSubnetIds function of the ec2 module, including examp
 
 This resource can be useful for getting back a set of subnet ids for a vpc.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_subnet_ids = aws.ec2.get_subnet_ids(vpc_id=var["vpc_id"])
+example_subnet = [aws.ec2.get_subnet(id=__value) for __key, __value in example_subnet_ids.ids]
+pulumi.export("subnetCidrBlocks", [s.cidr_block for s in example_subnet])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleSubnetIds = aws.ec2.getSubnetIds({
+    vpcId: var.vpc_id,
+});
+const exampleSubnet = exampleSubnetIds.then(exampleSubnetIds => exampleSubnetIds.ids.map((v, k) => [k, v]).map(([, ]) => aws.ec2.getSubnet({
+    id: __value,
+})));
+export const subnetCidrBlocks = exampleSubnet.map(s => s.cidrBlock);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetSubnetIds {#using}

@@ -32,7 +32,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+appserver = gcp.compute.get_instance(name="primary-application-server",
+    zone="us-central1-a")
+```
 {{% /example %}}
 
 {{% example typescript %}}

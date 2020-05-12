@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.secretsmanager.Secret("example")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -50,7 +55,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+rotation_example = aws.secretsmanager.Secret("rotation-example",
+    rotation_lambda_arn=aws_lambda_function["example"]["arn"],
+    rotation_rules={
+        "automaticallyAfterDays": 7,
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}

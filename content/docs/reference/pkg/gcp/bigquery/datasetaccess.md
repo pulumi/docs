@@ -25,6 +25,80 @@ To get more information about DatasetAccess, see:
 * How-to Guides
     * [Controlling access to datasets](https://cloud.google.com/bigquery/docs/dataset-access-controls)
 
+## Example Usage - Bigquery Dataset Access Basic User
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const dataset = new gcp.bigquery.Dataset("dataset", {datasetId: "example_dataset"});
+const bqowner = new gcp.serviceAccount.Account("bqowner", {accountId: "bqowner"});
+const access = new gcp.bigquery.DatasetAccess("access", {
+    datasetId: dataset.datasetId,
+    role: "OWNER",
+    userByEmail: bqowner.email,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+dataset = gcp.bigquery.Dataset("dataset", dataset_id="example_dataset")
+bqowner = gcp.service_account.Account("bqowner", account_id="bqowner")
+access = gcp.bigquery.DatasetAccess("access",
+    dataset_id=dataset.dataset_id,
+    role="OWNER",
+    user_by_email=bqowner.email)
+```
+## Example Usage - Bigquery Dataset Access View
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const private = new gcp.bigquery.Dataset("private", {datasetId: "example_dataset"});
+const publicDataset = new gcp.bigquery.Dataset("publicDataset", {datasetId: "example_dataset2"});
+const publicTable = new gcp.bigquery.Table("publicTable", {
+    datasetId: publicDataset.datasetId,
+    tableId: "example_table",
+    view: {
+        query: "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
+        useLegacySql: false,
+    },
+});
+const access = new gcp.bigquery.DatasetAccess("access", {
+    datasetId: private.datasetId,
+    view: {
+        projectId: publicTable.project,
+        datasetId: publicDataset.datasetId,
+        tableId: publicTable.tableId,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+private = gcp.bigquery.Dataset("private", dataset_id="example_dataset")
+public_dataset = gcp.bigquery.Dataset("publicDataset", dataset_id="example_dataset2")
+public_table = gcp.bigquery.Table("publicTable",
+    dataset_id=public_dataset.dataset_id,
+    table_id="example_table",
+    view={
+        "query": "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
+        "useLegacySql": False,
+    })
+access = gcp.bigquery.DatasetAccess("access",
+    dataset_id=private.dataset_id,
+    view={
+        "projectId": public_table.project,
+        "datasetId": public_dataset.dataset_id,
+        "tableId": public_table.table_id,
+    })
+```
+
 
 
 ## Create a DatasetAccess Resource {#create}

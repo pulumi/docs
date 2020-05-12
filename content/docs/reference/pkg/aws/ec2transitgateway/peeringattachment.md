@@ -13,9 +13,74 @@ meta_desc: "Explore the PeeringAttachment resource of the ec2transitgateway modu
 Manages an EC2 Transit Gateway Peering Attachment.
 For examples of custom route table association and propagation, see the [EC2 Transit Gateway Networking Examples Guide](https://docs.aws.amazon.com/vpc/latest/tgw/TGW_Scenarios.html).
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_pulumi as pulumi
+
+local = pulumi.providers.Aws("local", region="us-east-1")
+peer = pulumi.providers.Aws("peer", region="us-west-2")
+peer_region = aws.get_region()
+local_transit_gateway = aws.ec2transitgateway.TransitGateway("localTransitGateway", tags={
+    "Name": "Local TGW",
+})
+peer_transit_gateway = aws.ec2transitgateway.TransitGateway("peerTransitGateway", tags={
+    "Name": "Peer TGW",
+})
+example = aws.ec2transitgateway.PeeringAttachment("example",
+    peer_account_id=peer_transit_gateway.owner_id,
+    peer_region=peer_region.name,
+    peer_transit_gateway_id=peer_transit_gateway.id,
+    transit_gateway_id=local_transit_gateway.id,
+    tags={
+        "Name": "TGW Peering Requestor",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const local = new aws.Provider("local", {region: "us-east-1"});
+const peer = new aws.Provider("peer", {region: "us-west-2"});
+const peerRegion = aws.getRegion({});
+const localTransitGateway = new aws.ec2transitgateway.TransitGateway("localTransitGateway", {tags: {
+    Name: "Local TGW",
+}});
+const peerTransitGateway = new aws.ec2transitgateway.TransitGateway("peerTransitGateway", {tags: {
+    Name: "Peer TGW",
+}});
+const example = new aws.ec2transitgateway.PeeringAttachment("example", {
+    peerAccountId: peerTransitGateway.ownerId,
+    peerRegion: peerRegion.then(peerRegion => peerRegion.name),
+    peerTransitGatewayId: peerTransitGateway.id,
+    transitGatewayId: localTransitGateway.id,
+    tags: {
+        Name: "TGW Peering Requestor",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PeeringAttachment Resource {#create}
@@ -232,7 +297,7 @@ The PeeringAttachment resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -284,7 +349,7 @@ The PeeringAttachment resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -336,7 +401,7 @@ The PeeringAttachment resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -388,7 +453,7 @@ The PeeringAttachment resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -610,7 +675,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -662,7 +727,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -714,7 +779,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -766,7 +831,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+    <dd>{{% md %}}Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

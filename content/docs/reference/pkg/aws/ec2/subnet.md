@@ -30,7 +30,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+main = aws.ec2.Subnet("main",
+    cidr_block="10.0.1.0/24",
+    tags={
+        "Name": "Main",
+    },
+    vpc_id=aws_vpc["main"]["id"])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -58,7 +68,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+secondary_cidr = aws.ec2.VpcIpv4CidrBlockAssociation("secondaryCidr",
+    cidr_block="172.2.0.0/16",
+    vpc_id=aws_vpc["main"]["id"])
+in_secondary_cidr = aws.ec2.Subnet("inSecondaryCidr",
+    cidr_block="172.2.0.0/24",
+    vpc_id=secondary_cidr.vpc_id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

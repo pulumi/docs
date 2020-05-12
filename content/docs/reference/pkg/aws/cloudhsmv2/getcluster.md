@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+cluster = aws.cloudhsmv2.get_cluster(cluster_id="cluster-testclusterid")
+```
 {{% /example %}}
 
 {{% example typescript %}}

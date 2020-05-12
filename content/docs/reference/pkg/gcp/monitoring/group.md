@@ -34,6 +34,43 @@ const basic = new gcp.monitoring.Group("basic", {
     filter: "resource.metadata.region=\"europe-west2\"",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+basic = gcp.monitoring.Group("basic",
+    display_name="tf-test MonitoringGroup",
+    filter="resource.metadata.region=\"europe-west2\"")
+```
+## Example Usage - Monitoring Group Subgroup
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const parent = new gcp.monitoring.Group("parent", {
+    displayName: "tf-test MonitoringParentGroup",
+    filter: "resource.metadata.region=\"europe-west2\"",
+});
+const subgroup = new gcp.monitoring.Group("subgroup", {
+    displayName: "tf-test MonitoringSubGroup",
+    filter: "resource.metadata.region=\"europe-west2\"",
+    parentName: parent.name,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+parent = gcp.monitoring.Group("parent",
+    display_name="tf-test MonitoringParentGroup",
+    filter="resource.metadata.region=\"europe-west2\"")
+subgroup = gcp.monitoring.Group("subgroup",
+    display_name="tf-test MonitoringSubGroup",
+    filter="resource.metadata.region=\"europe-west2\"",
+    parent_name=parent.name)
+```
 
 
 

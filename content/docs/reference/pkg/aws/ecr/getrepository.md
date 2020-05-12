@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+service = aws.ecr.get_repository(name="ecr-repository")
+```
 {{% /example %}}
 
 {{% example typescript %}}

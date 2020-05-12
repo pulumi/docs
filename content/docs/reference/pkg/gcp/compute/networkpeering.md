@@ -20,9 +20,56 @@ to be functional.
 
 > Subnets IP ranges across peered VPC networks cannot overlap.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.Network("default", auto_create_subnetworks="false")
+other = gcp.compute.Network("other", auto_create_subnetworks="false")
+peering1 = gcp.compute.NetworkPeering("peering1",
+    network=default.self_link,
+    peer_network=other.self_link)
+peering2 = gcp.compute.NetworkPeering("peering2",
+    network=other.self_link,
+    peer_network=default.self_link)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default = new gcp.compute.Network("default", {autoCreateSubnetworks: "false"});
+const other = new gcp.compute.Network("other", {autoCreateSubnetworks: "false"});
+const peering1 = new gcp.compute.NetworkPeering("peering1", {
+    network: default.selfLink,
+    peerNetwork: other.selfLink,
+});
+const peering2 = new gcp.compute.NetworkPeering("peering2", {
+    network: other.selfLink,
+    peerNetwork: default.selfLink,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NetworkPeering Resource {#create}

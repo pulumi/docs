@@ -47,6 +47,14 @@ const example = new gcp.compute.Image("example", {
     },
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example = gcp.compute.Image("example", raw_disk={
+    "source": "https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz",
+})
+```
 ## Example Usage - Image Guest Os
 
 
@@ -67,6 +75,23 @@ const example = new gcp.compute.Image("example", {
         source: "https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz",
     },
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example = gcp.compute.Image("example",
+    guest_os_features=[
+        {
+            "type": "SECURE_BOOT",
+        },
+        {
+            "type": "MULTI_IP_SUBNET",
+        },
+    ],
+    raw_disk={
+        "source": "https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz",
+    })
 ```
 
 

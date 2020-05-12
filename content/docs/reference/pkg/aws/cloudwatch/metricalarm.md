@@ -40,6 +40,29 @@ const batMetricAlarm = new aws.cloudwatch.MetricAlarm("bat", {
     threshold: 80,
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+bat_policy = aws.autoscaling.Policy("batPolicy",
+    adjustment_type="ChangeInCapacity",
+    autoscaling_group_name=aws_autoscaling_group["bar"]["name"],
+    cooldown=300,
+    scaling_adjustment=4)
+bat_metric_alarm = aws.cloudwatch.MetricAlarm("batMetricAlarm",
+    alarm_actions=[bat_policy.arn],
+    alarm_description="This metric monitors ec2 cpu utilization",
+    comparison_operator="GreaterThanOrEqualToThreshold",
+    dimensions={
+        "AutoScalingGroupName": aws_autoscaling_group["bar"]["name"],
+    },
+    evaluation_periods="2",
+    metric_name="CPUUtilization",
+    namespace="AWS/EC2",
+    period="120",
+    statistic="Average",
+    threshold="80")
+```
 
 ## Example with an Expression
 
@@ -89,6 +112,51 @@ const foobar = new aws.cloudwatch.MetricAlarm("foobar", {
     threshold: 10,
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+foobar = aws.cloudwatch.MetricAlarm("foobar",
+    alarm_description="Request error rate has exceeded 10%",
+    comparison_operator="GreaterThanOrEqualToThreshold",
+    evaluation_periods="2",
+    insufficient_data_actions=[],
+    metric_queries=[
+        {
+            "expression": "m2/m1*100",
+            "id": "e1",
+            "label": "Error Rate",
+            "returnData": "true",
+        },
+        {
+            "id": "m1",
+            "metric": {
+                "dimensions": {
+                    "LoadBalancer": "app/web",
+                },
+                "metricName": "RequestCount",
+                "namespace": "AWS/ApplicationELB",
+                "period": "120",
+                "stat": "Sum",
+                "unit": "Count",
+            },
+        },
+        {
+            "id": "m2",
+            "metric": {
+                "dimensions": {
+                    "LoadBalancer": "app/web",
+                },
+                "metricName": "HTTPCode_ELB_5XX_Count",
+                "namespace": "AWS/ApplicationELB",
+                "period": "120",
+                "stat": "Sum",
+                "unit": "Count",
+            },
+        },
+    ],
+    threshold="10")
+```
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -124,6 +192,88 @@ const xxAnomalyDetection = new aws.cloudwatch.MetricAlarm("xx_anomaly_detection"
     thresholdMetricId: "e1",
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+xx_anomaly_detection = aws.cloudwatch.MetricAlarm("xxAnomalyDetection",
+    alarm_description="This metric monitors ec2 cpu utilization",
+    comparison_operator="GreaterThanUpperThreshold",
+    evaluation_periods="2",
+    insufficient_data_actions=[],
+    metric_queries=[
+        {
+            "expression": "ANOMALY_DETECTION_BAND(m1)",
+            "id": "e1",
+            "label": "CPUUtilization (Expected)",
+            "returnData": "true",
+        },
+        {
+            "id": "m1",
+            "metric": {
+                "dimensions": {
+                    "InstanceId": "i-abc123",
+                },
+                "metricName": "CPUUtilization",
+                "namespace": "AWS/EC2",
+                "period": "120",
+                "stat": "Average",
+                "unit": "Count",
+            },
+            "returnData": "true",
+        },
+    ],
+    threshold_metric_id="e1")
+```
+
+## Example of monitoring Healthy Hosts on NLB using Target Group and NLB
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const xxxNlbHealthyhosts = new aws.cloudwatch.MetricAlarm("xxxNlbHealthyhosts", {
+    comparisonOperator: "LessThanThreshold",
+    evaluationPeriods: "1",
+    metricName: "HealthyHostCount",
+    namespace: "AWS/NetworkELB",
+    period: "60",
+    statistic: "Average",
+    threshold: var.logstash_servers_count,
+    alarmDescription: "Number of XXXX nodes healthy in Target Group",
+    actionsEnabled: "true",
+    alarmActions: [aws_sns_topic.sns.arn],
+    okActions: [aws_sns_topic.sns.arn],
+    dimensions: {
+        TargetGroup: aws_lb_target_group["lb-tg"].arn_suffix,
+        LoadBalancer: aws_lb.lb.arn_suffix,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+xxx_nlb_healthyhosts = aws.cloudwatch.MetricAlarm("xxxNlbHealthyhosts",
+    comparison_operator="LessThanThreshold",
+    evaluation_periods="1",
+    metric_name="HealthyHostCount",
+    namespace="AWS/NetworkELB",
+    period="60",
+    statistic="Average",
+    threshold=var["logstash_servers_count"],
+    alarm_description="Number of XXXX nodes healthy in Target Group",
+    actions_enabled="true",
+    alarm_actions=[aws_sns_topic["sns"]["arn"]],
+    ok_actions=[aws_sns_topic["sns"]["arn"]],
+    dimensions={
+        "TargetGroup": aws_lb_target_group["lb-tg"]["arn_suffix"],
+        "LoadBalancer": aws_lb["lb"]["arn_suffix"],
+    })
+```
+
+> **NOTE:**  You cannot create a metric alarm consisting of both `statistic` and `extended_statistic` parameters.
+You must choose one or the other
 
 {{% examples %}}
 ## Example Usage
@@ -139,7 +289,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+foobar = aws.cloudwatch.MetricAlarm("foobar",
+    alarm_description="This metric monitors ec2 cpu utilization",
+    comparison_operator="GreaterThanOrEqualToThreshold",
+    evaluation_periods="2",
+    insufficient_data_actions=[],
+    metric_name="CPUUtilization",
+    namespace="AWS/EC2",
+    period="120",
+    statistic="Average",
+    threshold="80")
+```
 {{% /example %}}
 
 {{% example typescript %}}

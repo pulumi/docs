@@ -30,7 +30,22 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.glue.Classifier("example", csv_classifier={
+    "allowSingleColumn": False,
+    "containsHeader": "PRESENT",
+    "delimiter": ",",
+    "disableValueTrimming": False,
+    "header": [
+        "example1",
+        "example2",
+    ],
+    "quoteSymbol": "'",
+})
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -64,7 +79,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.glue.Classifier("example", grok_classifier={
+    "classification": "example",
+    "grokPattern": "example",
+})
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -91,7 +114,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.glue.Classifier("example", json_classifier={
+    "jsonPath": "example",
+})
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -117,7 +147,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.glue.Classifier("example", xml_classifier={
+    "classification": "example",
+    "rowTag": "example",
+})
+```
 {{% /example %}}
 
 {{% example typescript %}}

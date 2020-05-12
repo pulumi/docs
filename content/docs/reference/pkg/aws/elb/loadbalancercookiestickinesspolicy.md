@@ -28,7 +28,23 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+lb = aws.elb.LoadBalancer("lb",
+    availability_zones=["us-east-1a"],
+    listeners=[{
+        "instancePort": 8000,
+        "instanceProtocol": "http",
+        "lbPort": 80,
+        "lbProtocol": "http",
+    }])
+foo = aws.elb.LoadBalancerCookieStickinessPolicy("foo",
+    cookie_expiration_period=600,
+    lb_port=80,
+    load_balancer=lb.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

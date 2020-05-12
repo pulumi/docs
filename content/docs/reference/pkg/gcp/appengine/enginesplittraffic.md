@@ -17,6 +17,116 @@ To get more information about ServiceSplitTraffic, see:
 
 * [API documentation](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services)
 
+## Example Usage - App Engine Service Split Traffic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bucket = new gcp.storage.Bucket("bucket", {});
+const object = new gcp.storage.BucketObject("object", {
+    bucket: bucket.name,
+    source: new pulumi.asset.FileAsset("./test-fixtures/appengine/hello-world.zip"),
+});
+const liveappV1 = new gcp.appengine.StandardAppVersion("liveappV1", {
+    versionId: "v1",
+    service: "liveapp",
+    deleteServiceOnDestroy: true,
+    runtime: "nodejs10",
+    entrypoint: {
+        shell: "node ./app.js",
+    },
+    deployment: {
+        zip: {
+            sourceUrl: pulumi.interpolate`https://storage.googleapis.com/${bucket.name}/${object.name}`,
+        },
+    },
+    envVariables: {
+        port: "8080",
+    },
+});
+const liveappV2 = new gcp.appengine.StandardAppVersion("liveappV2", {
+    versionId: "v2",
+    service: "liveapp",
+    noopOnDestroy: true,
+    runtime: "nodejs10",
+    entrypoint: {
+        shell: "node ./app.js",
+    },
+    deployment: {
+        zip: {
+            sourceUrl: pulumi.interpolate`https://storage.googleapis.com/${bucket.name}/${object.name}`,
+        },
+    },
+    envVariables: {
+        port: "8080",
+    },
+});
+const liveapp = new gcp.appengine.EngineSplitTraffic("liveapp", {
+    service: liveappV2.service,
+    migrateTraffic: false,
+    split: {
+        shardBy: "IP",
+        allocations: pulumi.all([liveappV1.versionId, liveappV2.versionId]).apply(([liveappV1VersionId, liveappV2VersionId]) => {
+            [liveappV1VersionId]: 0.75,
+            [liveappV2VersionId]: 0.25,
+        }),
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bucket = gcp.storage.Bucket("bucket")
+object = gcp.storage.BucketObject("object",
+    bucket=bucket.name,
+    source=pulumi.FileAsset("./test-fixtures/appengine/hello-world.zip"))
+liveapp_v1 = gcp.appengine.StandardAppVersion("liveappV1",
+    version_id="v1",
+    service="liveapp",
+    delete_service_on_destroy=True,
+    runtime="nodejs10",
+    entrypoint={
+        "shell": "node ./app.js",
+    },
+    deployment={
+        "zip": {
+            "sourceUrl": pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
+        },
+    },
+    env_variables={
+        "port": "8080",
+    })
+liveapp_v2 = gcp.appengine.StandardAppVersion("liveappV2",
+    version_id="v2",
+    service="liveapp",
+    noop_on_destroy=True,
+    runtime="nodejs10",
+    entrypoint={
+        "shell": "node ./app.js",
+    },
+    deployment={
+        "zip": {
+            "sourceUrl": pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
+        },
+    },
+    env_variables={
+        "port": "8080",
+    })
+liveapp = gcp.appengine.EngineSplitTraffic("liveapp",
+    service=liveapp_v2.service,
+    migrate_traffic=False,
+    split={
+        "shardBy": "IP",
+        "allocations": pulumi.Output.all(liveapp_v1.version_id, liveapp_v2.version_id).apply(lambda liveappV1Version_id, liveappV2Version_id: {
+            liveapp_v1_version_id: 0.75,
+            liveapp_v2_version_id: 0.25,
+        }),
+    })
+```
+
 
 
 ## Create a EngineSplitTraffic Resource {#create}

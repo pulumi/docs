@@ -28,6 +28,12 @@ const simplecluster = new gcp.dataproc.Cluster("simplecluster", {
     region: "us-central1",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+simplecluster = gcp.dataproc.Cluster("simplecluster", region="us-central1")
+```
 
 ## Example Usage - Advanced
 
@@ -89,6 +95,61 @@ const mycluster = new gcp.dataproc.Cluster("mycluster", {
     region: "us-central1",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+mycluster = gcp.dataproc.Cluster("mycluster",
+    cluster_config={
+        "gceClusterConfig": {
+            "serviceAccountScopes": [
+                "https://www.googleapis.com/auth/monitoring",
+                "useraccounts-ro",
+                "storage-rw",
+                "logging-write",
+            ],
+            "tags": [
+                "foo",
+                "bar",
+            ],
+        },
+        "initializationAction": [{
+            "script": "gs://dataproc-initialization-actions/stackdriver/stackdriver.sh",
+            "timeoutSec": 500,
+        }],
+        "masterConfig": {
+            "diskConfig": {
+                "bootDiskSizeGb": 15,
+                "bootDiskType": "pd-ssd",
+            },
+            "machineType": "n1-standard-1",
+            "numInstances": 1,
+        },
+        "preemptibleWorkerConfig": {
+            "numInstances": 0,
+        },
+        "softwareConfig": {
+            "imageVersion": "1.3.7-deb9",
+            "overrideProperties": {
+                "dataproc:dataproc.allow.zero.workers": "true",
+            },
+        },
+        "stagingBucket": "dataproc-staging-bucket",
+        "workerConfig": {
+            "diskConfig": {
+                "bootDiskSizeGb": 15,
+                "numLocalSsds": 1,
+            },
+            "machineType": "n1-standard-1",
+            "minCpuPlatform": "Intel Skylake",
+            "numInstances": 2,
+        },
+    },
+    labels={
+        "foo": "bar",
+    },
+    region="us-central1")
+```
 
 ## Example Usage - Using a GPU accelerator
 
@@ -110,6 +171,24 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
     },
     region: "us-central1",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+accelerated_cluster = gcp.dataproc.Cluster("acceleratedCluster",
+    cluster_config={
+        "gceClusterConfig": {
+            "zone": "us-central1-a",
+        },
+        "masterConfig": {
+            "accelerators": [{
+                "acceleratorCount": "1",
+                "acceleratorType": "nvidia-tesla-k80",
+            }],
+        },
+    },
+    region="us-central1")
 ```
 
 

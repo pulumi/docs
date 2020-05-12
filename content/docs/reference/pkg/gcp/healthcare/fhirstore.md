@@ -19,6 +19,51 @@ To get more information about FhirStore, see:
 * How-to Guides
     * [Creating a FHIR store](https://cloud.google.com/healthcare/docs/how-tos/fhir)
 
+## Example Usage - Healthcare Fhir Store Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const topic = new gcp.pubsub.Topic("topic", {});
+const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"});
+const default = new gcp.healthcare.FhirStore("default", {
+    dataset: dataset.id,
+    version: "R4",
+    enableUpdateCreate: false,
+    disableReferentialIntegrity: false,
+    disableResourceVersioning: false,
+    enableHistoryImport: false,
+    notification_config: {
+        pubsubTopic: topic.id,
+    },
+    labels: {
+        label1: "labelvalue1",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+topic = gcp.pubsub.Topic("topic")
+dataset = gcp.healthcare.Dataset("dataset", location="us-central1")
+default = gcp.healthcare.FhirStore("default",
+    dataset=dataset.id,
+    version="R4",
+    enable_update_create=False,
+    disable_referential_integrity=False,
+    disable_resource_versioning=False,
+    enable_history_import=False,
+    notification_config={
+        "pubsubTopic": topic.id,
+    },
+    labels={
+        "label1": "labelvalue1",
+    })
+```
+
 
 
 ## Create a FhirStore Resource {#create}
@@ -309,7 +354,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The FHIR specification version. Supported values include DSTU2, STU3 and R4. Defaults to STU3.
+    <dd>{{% md %}}The FHIR specification version.
 {{% /md %}}</dd>
 
 </dl>
@@ -426,7 +471,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The FHIR specification version. Supported values include DSTU2, STU3 and R4. Defaults to STU3.
+    <dd>{{% md %}}The FHIR specification version.
 {{% /md %}}</dd>
 
 </dl>
@@ -543,7 +588,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The FHIR specification version. Supported values include DSTU2, STU3 and R4. Defaults to STU3.
+    <dd>{{% md %}}The FHIR specification version.
 {{% /md %}}</dd>
 
 </dl>
@@ -660,7 +705,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The FHIR specification version. Supported values include DSTU2, STU3 and R4. Defaults to STU3.
+    <dd>{{% md %}}The FHIR specification version.
 {{% /md %}}</dd>
 
 </dl>
@@ -1019,7 +1064,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The FHIR specification version. Supported values include DSTU2, STU3 and R4. Defaults to STU3.
+    <dd>{{% md %}}The FHIR specification version.
 {{% /md %}}</dd>
 
 </dl>
@@ -1145,7 +1190,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The FHIR specification version. Supported values include DSTU2, STU3 and R4. Defaults to STU3.
+    <dd>{{% md %}}The FHIR specification version.
 {{% /md %}}</dd>
 
 </dl>
@@ -1271,7 +1316,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The FHIR specification version. Supported values include DSTU2, STU3 and R4. Defaults to STU3.
+    <dd>{{% md %}}The FHIR specification version.
 {{% /md %}}</dd>
 
 </dl>
@@ -1397,7 +1442,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The FHIR specification version. Supported values include DSTU2, STU3 and R4. Defaults to STU3.
+    <dd>{{% md %}}The FHIR specification version.
 {{% /md %}}</dd>
 
 </dl>

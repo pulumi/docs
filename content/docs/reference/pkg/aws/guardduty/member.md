@@ -12,9 +12,55 @@ meta_desc: "Explore the Member resource of the guardduty module, including examp
 
 Provides a resource to manage a GuardDuty member. To accept invitations in member accounts, see the [`aws.guardduty.InviteAccepter` resource](https://www.terraform.io/docs/providers/aws/r/guardduty_invite_accepter.html).
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+master = aws.guardduty.Detector("master", enable=True)
+member_detector = aws.guardduty.Detector("memberDetector", enable=True)
+member_member = aws.guardduty.Member("memberMember",
+    account_id=member_detector.account_id,
+    detector_id=master.id,
+    email="required@example.com",
+    invite=True,
+    invitation_message="please accept guardduty invitation")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const master = new aws.guardduty.Detector("master", {enable: true});
+const memberDetector = new aws.guardduty.Detector("memberDetector", {enable: true});
+const memberMember = new aws.guardduty.Member("memberMember", {
+    accountId: memberDetector.accountId,
+    detectorId: master.id,
+    email: "required@example.com",
+    invite: true,
+    invitationMessage: "please accept guardduty invitation",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Member Resource {#create}

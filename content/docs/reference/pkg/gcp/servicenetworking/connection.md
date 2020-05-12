@@ -15,6 +15,41 @@ Manages a private VPC connection with a GCP service provider. For more informati
 and
 [API](https://cloud.google.com/service-infrastructure/docs/service-networking/reference/rest/v1/services.connections).
 
+## Example usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const peeringNetwork = new gcp.compute.Network("peeringNetwork", {});
+const privateIpAlloc = new gcp.compute.GlobalAddress("privateIpAlloc", {
+    purpose: "VPC_PEERING",
+    addressType: "INTERNAL",
+    prefixLength: 16,
+    network: peeringNetwork.selfLink,
+});
+const foobar = new gcp.servicenetworking.Connection("foobar", {
+    network: peeringNetwork.selfLink,
+    service: "servicenetworking.googleapis.com",
+    reservedPeeringRanges: [privateIpAlloc.name],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+peering_network = gcp.compute.Network("peeringNetwork")
+private_ip_alloc = gcp.compute.GlobalAddress("privateIpAlloc",
+    purpose="VPC_PEERING",
+    address_type="INTERNAL",
+    prefix_length=16,
+    network=peering_network.self_link)
+foobar = gcp.servicenetworking.Connection("foobar",
+    network=peering_network.self_link,
+    service="servicenetworking.googleapis.com",
+    reserved_peering_ranges=[private_ip_alloc.name])
+```
+
 
 
 ## Create a Connection Resource {#create}

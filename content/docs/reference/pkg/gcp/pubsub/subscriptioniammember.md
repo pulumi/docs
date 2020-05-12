@@ -20,6 +20,36 @@ Three different resources help you manage your IAM policy for pubsub subscriptio
 
 > **Note:** `gcp.pubsub.SubscriptionIAMBinding` resources **can be** used in conjunction with `gcp.pubsub.SubscriptionIAMMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_pubsub\_subscription\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const editor = new gcp.pubsub.SubscriptionIAMPolicy("editor", {
+    subscription: "your-subscription-name",
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/editor",
+    "members": ["user:jane@example.com"],
+}])
+editor = gcp.pubsub.SubscriptionIAMPolicy("editor",
+    subscription="your-subscription-name",
+    policy_data=admin.policy_data)
+```
+
 ## google\_pubsub\_subscription\_iam\_binding
 
 ```typescript
@@ -31,6 +61,15 @@ const editor = new gcp.pubsub.SubscriptionIAMBinding("editor", {
     role: "roles/editor",
     subscription: "your-subscription-name",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+editor = gcp.pubsub.SubscriptionIAMBinding("editor",
+    members=["user:jane@example.com"],
+    role="roles/editor",
+    subscription="your-subscription-name")
 ```
 
 ## google\_pubsub\_subscription\_iam\_member
@@ -44,6 +83,15 @@ const editor = new gcp.pubsub.SubscriptionIAMMember("editor", {
     role: "roles/editor",
     subscription: "your-subscription-name",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+editor = gcp.pubsub.SubscriptionIAMMember("editor",
+    member="user:jane@example.com",
+    role="roles/editor",
+    subscription="your-subscription-name")
 ```
 
 

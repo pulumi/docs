@@ -40,6 +40,15 @@ const defaultHttpsHealthCheck = new gcp.compute.HttpsHealthCheck("default", {
     timeoutSec: 1,
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.HttpsHealthCheck("default",
+    check_interval_sec=1,
+    request_path="/health_check",
+    timeout_sec=1)
+```
 
 
 

@@ -14,6 +14,64 @@ Describes an autoscaling policy for Dataproc cluster autoscaler.
 
 
 
+## Example Usage - Dataproc Autoscaling Policy
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const asp = new gcp.dataproc.AutoscalingPolicy("asp", {
+    policyId: "dataproc-policy",
+    location: "us-central1",
+    worker_config: {
+        maxInstances: 3,
+    },
+    basic_algorithm: {
+        yarn_config: {
+            gracefulDecommissionTimeout: "30s",
+            scaleUpFactor: 0.5,
+            scaleDownFactor: 0.5,
+        },
+    },
+});
+const basic = new gcp.dataproc.Cluster("basic", {
+    region: "us-central1",
+    cluster_config: {
+        autoscaling_config: {
+            policyUri: asp.name,
+        },
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+asp = gcp.dataproc.AutoscalingPolicy("asp",
+    policy_id="dataproc-policy",
+    location="us-central1",
+    worker_config={
+        "maxInstances": 3,
+    },
+    basic_algorithm={
+        "yarn_config": {
+            "gracefulDecommissionTimeout": "30s",
+            "scaleUpFactor": 0.5,
+            "scaleDownFactor": 0.5,
+        },
+    })
+basic = gcp.dataproc.Cluster("basic",
+    region="us-central1",
+    cluster_config={
+        "autoscaling_config": {
+            "policyUri": asp.name,
+        },
+    })
+```
+
+
+
 ## Create a AutoscalingPolicy Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

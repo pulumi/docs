@@ -13,70 +13,6 @@ meta_desc: "Explore the Integration resource of the apigateway module, including
 Provides an HTTP Method Integration for an API Gateway Integration.
 
 
-## Lambda integration
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const config = new pulumi.Config();
-// Variables
-const myregion = config.require("myregion");
-const accountId = config.require("accountId");
-
-// API Gateway
-const api = new aws.apigateway.RestApi("api", {});
-const resource = new aws.apigateway.Resource("resource", {
-    parentId: api.rootResourceId,
-    pathPart: "resource",
-    restApi: api.id,
-});
-const method = new aws.apigateway.Method("method", {
-    authorization: "NONE",
-    httpMethod: "GET",
-    resourceId: resource.id,
-    restApi: api.id,
-});
-// IAM
-const role = new aws.iam.Role("role", {
-    assumeRolePolicy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "sts:AssumeRole",
-      "Principal": {
-        "Service": "lambda.amazonaws.com"
-      },
-      "Effect": "Allow",
-      "Sid": ""
-    }
-  ]
-}
-`,
-});
-const lambda = new aws.lambda.Function("lambda", {
-    code: new pulumi.asset.FileArchive("lambda.zip"),
-    handler: "lambda.lambda_handler",
-    role: role.arn,
-    runtime: "python2.7",
-});
-const integration = new aws.apigateway.Integration("integration", {
-    httpMethod: method.httpMethod,
-    integrationHttpMethod: "POST",
-    resourceId: resource.id,
-    restApi: api.id,
-    type: "AWS_PROXY",
-    uri: lambda.invokeArn,
-});
-// Lambda
-const apigwLambda = new aws.lambda.Permission("apigw_lambda", {
-    action: "lambda:InvokeFunction",
-    function: lambda.functionName,
-    principal: "apigateway.amazonaws.com",
-    sourceArn: pulumi.interpolate`arn:aws:execute-api:${myregion}:${accountId}:${api.id}/*/${method.httpMethod}${resource.path}`,
-});
-```
-
 ## VPC Link
 
 ```typescript
@@ -132,6 +68,53 @@ const testIntegration = new aws.apigateway.Integration("test", {
     uri: "https://www.google.de",
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+config = pulumi.Config()
+name = config.require_object("name")
+subnet_id = config.require_object("subnetId")
+test_load_balancer = aws.lb.LoadBalancer("testLoadBalancer",
+    internal=True,
+    load_balancer_type="network",
+    subnets=[subnet_id])
+test_vpc_link = aws.apigateway.VpcLink("testVpcLink", target_arn=test_load_balancer.arn)
+test_rest_api = aws.apigateway.RestApi("testRestApi")
+test_resource = aws.apigateway.Resource("testResource",
+    parent_id=test_rest_api.root_resource_id,
+    path_part="test",
+    rest_api=test_rest_api.id)
+test_method = aws.apigateway.Method("testMethod",
+    authorization="NONE",
+    http_method="GET",
+    request_models={
+        "application/json": "Error",
+    },
+    resource_id=test_resource.id,
+    rest_api=test_rest_api.id)
+test_integration = aws.apigateway.Integration("testIntegration",
+    connection_id=test_vpc_link.id,
+    connection_type="VPC_LINK",
+    content_handling="CONVERT_TO_TEXT",
+    http_method=test_method.http_method,
+    integration_http_method="GET",
+    passthrough_behavior="WHEN_NO_MATCH",
+    request_parameters={
+        "integration.request.header.X-Authorization": "'static'",
+        "integration.request.header.X-Foo": "'Bar'",
+    },
+    request_templates={
+        "application/json": "",
+        "application/xml": """#set($$inputRoot = $$input.path('$$'))
+{ }
+""",
+    },
+    resource_id=test_resource.id,
+    rest_api=test_rest_api.id,
+    type="HTTP",
+    uri="https://www.google.de")
+```
 
 {{% examples %}}
 ## Example Usage
@@ -147,7 +130,39 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+my_demo_api = aws.apigateway.RestApi("myDemoAPI", description="This is my API for demonstration purposes")
+my_demo_resource = aws.apigateway.Resource("myDemoResource",
+    parent_id=my_demo_api.root_resource_id,
+    path_part="mydemoresource",
+    rest_api=my_demo_api.id)
+my_demo_method = aws.apigateway.Method("myDemoMethod",
+    authorization="NONE",
+    http_method="GET",
+    resource_id=my_demo_resource.id,
+    rest_api=my_demo_api.id)
+my_demo_integration = aws.apigateway.Integration("myDemoIntegration",
+    cache_key_parameters=["method.request.path.param"],
+    cache_namespace="foobar",
+    http_method=my_demo_method.http_method,
+    request_parameters={
+        "integration.request.header.X-Authorization": "'static'",
+    },
+    request_templates={
+        "application/xml": """{
+   "body" : $$input.json('$$')
+}
+
+""",
+    },
+    resource_id=my_demo_resource.id,
+    rest_api=my_demo_api.id,
+    timeout_milliseconds=29000,
+    type="MOCK")
+```
 {{% /example %}}
 
 {{% example typescript %}}

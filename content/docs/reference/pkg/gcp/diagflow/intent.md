@@ -20,6 +20,31 @@ To get more information about Intent, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/dialogflow/docs/)
 
+## Example Usage - Dialogflow Intent Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const basicAgent = new gcp.diagflow.Agent("basicAgent", {
+    displayName: "example_agent",
+    defaultLanguageCode: "en",
+    timeZone: "America/New_York",
+});
+const basicIntent = new gcp.diagflow.Intent("basicIntent", {displayName: "basic-intent"});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+basic_agent = gcp.diagflow.Agent("basicAgent",
+    display_name="example_agent",
+    default_language_code="en",
+    time_zone="America/New_York")
+basic_intent = gcp.diagflow.Intent("basicIntent", display_name="basic-intent")
+```
+
 
 
 ## Create a Intent Resource {#create}

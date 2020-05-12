@@ -28,7 +28,22 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.glue.Trigger("example",
+    actions=[{
+        "jobName": aws_glue_job["example1"]["name"],
+    }],
+    predicate={
+        "conditions": [{
+            "jobName": aws_glue_job["example2"]["name"],
+            "state": "SUCCEEDED",
+        }],
+    },
+    type="CONDITIONAL")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -61,7 +76,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.glue.Trigger("example",
+    actions=[{
+        "jobName": aws_glue_job["example"]["name"],
+    }],
+    type="ON_DEMAND")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -88,7 +112,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.glue.Trigger("example",
+    actions=[{
+        "jobName": aws_glue_job["example"]["name"],
+    }],
+    schedule="cron(15 12 * * ? *)",
+    type="SCHEDULED")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -116,7 +150,22 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.glue.Trigger("example",
+    actions=[{
+        "crawlerName": aws_glue_crawler["example1"]["name"],
+    }],
+    predicate={
+        "conditions": [{
+            "jobName": aws_glue_job["example2"]["name"],
+            "state": "SUCCEEDED",
+        }],
+    },
+    type="CONDITIONAL")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -149,7 +198,22 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.glue.Trigger("example",
+    actions=[{
+        "jobName": aws_glue_job["example1"]["name"],
+    }],
+    predicate={
+        "conditions": [{
+            "crawlState": "SUCCEEDED",
+            "crawlerName": aws_glue_crawler["example2"]["name"],
+        }],
+    },
+    type="CONDITIONAL")
+```
 {{% /example %}}
 
 {{% example typescript %}}

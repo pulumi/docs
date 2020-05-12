@@ -20,6 +20,36 @@ Three different resources help you manage your IAM policy for Healthcare HL7v2 s
 
 > **Note:** `gcp.healthcare.Hl7StoreIamBinding` resources **can be** used in conjunction with `gcp.healthcare.Hl7StoreIamMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_healthcare\_hl7\_v2\_store\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const hl7V2Store = new gcp.healthcare.Hl7StoreIamPolicy("hl7V2Store", {
+    hl7V2StoreId: "your-hl7-v2-store-id",
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/editor",
+    "members": ["user:jane@example.com"],
+}])
+hl7_v2_store = gcp.healthcare.Hl7StoreIamPolicy("hl7V2Store",
+    hl7_v2_store_id="your-hl7-v2-store-id",
+    policy_data=admin.policy_data)
+```
+
 ## google\_healthcare\_hl7\_v2\_store\_iam\_binding
 
 ```typescript
@@ -31,6 +61,15 @@ const hl7V2Store = new gcp.healthcare.Hl7StoreIamBinding("hl7_v2_store", {
     members: ["user:jane@example.com"],
     role: "roles/editor",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+hl7_v2_store = gcp.healthcare.Hl7StoreIamBinding("hl7V2Store",
+    hl7_v2_store_id="your-hl7-v2-store-id",
+    members=["user:jane@example.com"],
+    role="roles/editor")
 ```
 
 ## google\_healthcare\_hl7\_v2\_store\_iam\_member
@@ -44,6 +83,15 @@ const hl7V2Store = new gcp.healthcare.Hl7StoreIamMember("hl7_v2_store", {
     member: "user:jane@example.com",
     role: "roles/editor",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+hl7_v2_store = gcp.healthcare.Hl7StoreIamMember("hl7V2Store",
+    hl7_v2_store_id="your-hl7-v2-store-id",
+    member="user:jane@example.com",
+    role="roles/editor")
 ```
 
 

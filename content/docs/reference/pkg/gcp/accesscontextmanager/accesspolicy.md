@@ -35,6 +35,14 @@ const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy",
     title: "my policy",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
+    parent="organizations/123456789",
+    title="my policy")
+```
 
 
 

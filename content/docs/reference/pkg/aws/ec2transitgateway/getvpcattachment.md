@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ec2transitgateway.get_vpc_attachment(filters=[{
+    "name": "vpc-id",
+    "values": ["vpc-12345678"],
+}])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -55,7 +63,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ec2transitgateway.get_vpc_attachment(id="tgw-attach-12345678")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -30,6 +30,40 @@ To get more information about ObjectAccessControl, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/storage/docs/access-control/create-manage-lists)
 
+## Example Usage - Storage Object Access Control Public Object
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bucket = new gcp.storage.Bucket("bucket", {});
+const object = new gcp.storage.BucketObject("object", {
+    bucket: bucket.name,
+    source: new pulumi.asset.FileAsset("../static/img/header-logo.png"),
+});
+const publicRule = new gcp.storage.ObjectAccessControl("publicRule", {
+    object: object.outputName,
+    bucket: bucket.name,
+    role: "READER",
+    entity: "allUsers",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bucket = gcp.storage.Bucket("bucket")
+object = gcp.storage.BucketObject("object",
+    bucket=bucket.name,
+    source=pulumi.FileAsset("../static/img/header-logo.png"))
+public_rule = gcp.storage.ObjectAccessControl("publicRule",
+    object=object.output_name,
+    bucket=bucket.name,
+    role="READER",
+    entity="allUsers")
+```
+
 
 
 ## Create a ObjectAccessControl Resource {#create}

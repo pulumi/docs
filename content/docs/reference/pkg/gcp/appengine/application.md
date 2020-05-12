@@ -17,9 +17,52 @@ Allows creation and management of an App Engine application.
    successfully deleted; this is a limitation of the provider, and will go away in the future.
    This provider is not able to delete App Engine applications.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_project = gcp.organizations.Project("myProject",
+    project_id="your-project-id",
+    org_id="1234567")
+app = gcp.appengine.Application("app",
+    project=my_project.project_id,
+    location_id="us-central")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myProject = new gcp.organizations.Project("myProject", {
+    projectId: "your-project-id",
+    orgId: "1234567",
+});
+const app = new gcp.appengine.Application("app", {
+    project: myProject.projectId,
+    locationId: "us-central",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Application Resource {#create}

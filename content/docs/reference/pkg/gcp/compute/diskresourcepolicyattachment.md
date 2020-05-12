@@ -17,6 +17,67 @@ which will be applied to this disk for scheduling snapshot creation.
 
 
 
+## Example Usage - Disk Resource Policy Attachment Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myImage = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const ssd = new gcp.compute.Disk("ssd", {
+    image: myImage.then(myImage => myImage.selfLink),
+    size: 50,
+    type: "pd-ssd",
+    zone: "us-central1-a",
+});
+const attachment = new gcp.compute.DiskResourcePolicyAttachment("attachment", {
+    disk: ssd.name,
+    zone: "us-central1-a",
+});
+const policy = new gcp.compute.ResourcePolicy("policy", {
+    region: "us-central1",
+    snapshot_schedule_policy: {
+        schedule: {
+            daily_schedule: {
+                daysInCycle: 1,
+                startTime: "04:00",
+            },
+        },
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_image = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+ssd = gcp.compute.Disk("ssd",
+    image=my_image.self_link,
+    size=50,
+    type="pd-ssd",
+    zone="us-central1-a")
+attachment = gcp.compute.DiskResourcePolicyAttachment("attachment",
+    disk=ssd.name,
+    zone="us-central1-a")
+policy = gcp.compute.ResourcePolicy("policy",
+    region="us-central1",
+    snapshot_schedule_policy={
+        "schedule": {
+            "daily_schedule": {
+                "daysInCycle": 1,
+                "startTime": "04:00",
+            },
+        },
+    })
+```
+
+
+
 ## Create a DiskResourcePolicyAttachment Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

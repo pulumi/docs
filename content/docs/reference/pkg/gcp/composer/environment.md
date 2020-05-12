@@ -49,7 +49,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+test = gcp.composer.Environment("test", region="us-central1")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -59,6 +64,81 @@ import * as gcp from "@pulumi/gcp";
 
 const test = new gcp.composer.Environment("test", {
     region: "us-central1",
+});
+```
+{{% /example %}}
+
+### With GKE and Compute Resource Dependencies
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+test_network = gcp.compute.Network("testNetwork", auto_create_subnetworks=False)
+test_subnetwork = gcp.compute.Subnetwork("testSubnetwork",
+    ip_cidr_range="10.2.0.0/16",
+    region="us-central1",
+    network=test_network.id)
+test_account = gcp.service_account.Account("testAccount",
+    account_id="composer-env-account",
+    display_name="Test Service Account for Composer Environment")
+composer_worker = gcp.projects.IAMMember("composer-worker",
+    role="roles/composer.worker",
+    member=test_account.email.apply(lambda email: f"serviceAccount:{email}"))
+test_environment = gcp.composer.Environment("testEnvironment",
+    region="us-central1",
+    config={
+        "nodeCount": 4,
+        "node_config": {
+            "zone": "us-central1-a",
+            "machineType": "n1-standard-1",
+            "network": test_network.id,
+            "subnetwork": test_subnetwork.id,
+            "serviceAccount": test_account.name,
+        },
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const testNetwork = new gcp.compute.Network("testNetwork", {autoCreateSubnetworks: false});
+const testSubnetwork = new gcp.compute.Subnetwork("testSubnetwork", {
+    ipCidrRange: "10.2.0.0/16",
+    region: "us-central1",
+    network: testNetwork.id,
+});
+const testAccount = new gcp.serviceAccount.Account("testAccount", {
+    accountId: "composer-env-account",
+    displayName: "Test Service Account for Composer Environment",
+});
+const composer-worker = new gcp.projects.IAMMember("composer-worker", {
+    role: "roles/composer.worker",
+    member: pulumi.interpolate`serviceAccount:${testAccount.email}`,
+});
+const testEnvironment = new gcp.composer.Environment("testEnvironment", {
+    region: "us-central1",
+    config: {
+        nodeCount: 4,
+        node_config: {
+            zone: "us-central1-a",
+            machineType: "n1-standard-1",
+            network: testNetwork.id,
+            subnetwork: testSubnetwork.id,
+            serviceAccount: testAccount.name,
+        },
+    },
 });
 ```
 {{% /example %}}
@@ -73,7 +153,27 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+test = gcp.composer.Environment("test",
+    config={
+        "softwareConfig": {
+            "airflowConfigOverrides": {
+                "core-loadExample": "True",
+            },
+            "envVariables": {
+                "FOO": "bar",
+            },
+            "pypiPackages": {
+                "numpy": "",
+                "scipy": "==1.1.0",
+            },
+        },
+    },
+    region="us-central1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -12,9 +12,57 @@ meta_desc: "Explore the User resource of the sql module, including examples, inp
 
 Creates a new Google SQL User on a Google SQL User Instance. For more information, see the [official documentation](https://cloud.google.com/sql/), or the [JSON API](https://cloud.google.com/sql/docs/admin-api/v1beta4/users).
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+import pulumi_random as random
+
+db_name_suffix = random.RandomId("dbNameSuffix", byte_length=4)
+master = gcp.sql.DatabaseInstance("master", settings={
+    "tier": "db-f1-micro",
+})
+users = gcp.sql.User("users",
+    instance=master.name,
+    host="me.com",
+    password="changeme")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * as random from "@pulumi/random";
+
+const dbNameSuffix = new random.RandomId("dbNameSuffix", {byteLength: 4});
+const master = new gcp.sql.DatabaseInstance("master", {settings: {
+    tier: "db-f1-micro",
+}});
+const users = new gcp.sql.User("users", {
+    instance: master.name,
+    host: "me.com",
+    password: "changeme",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a User Resource {#create}

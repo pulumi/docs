@@ -30,7 +30,40 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+aws.sns.Topic = aws.sns.Topic("awsSnsTopic")
+my_archive = aws.glacier.Vault("myArchive",
+    access_policy="""{
+    "Version":"2012-10-17",
+    "Statement":[
+       {
+          "Sid": "add-read-only-perm",
+          "Principal": "*",
+          "Effect": "Allow",
+          "Action": [
+             "glacier:InitiateJob",
+             "glacier:GetJobOutput"
+          ],
+          "Resource": "arn:aws:glacier:eu-west-1:432981146916:vaults/MyArchive"
+       }
+    ]
+}
+
+""",
+    notifications=[{
+        "events": [
+            "ArchiveRetrievalCompleted",
+            "InventoryRetrievalCompleted",
+        ],
+        "snsTopic": aws_sns_topic.arn,
+    }],
+    tags={
+        "Test": "MyArchive",
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}

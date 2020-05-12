@@ -17,9 +17,60 @@ documentation](https://cloud.google.com/compute/docs/load-balancing/network/targ
 and [API](https://cloud.google.com/compute/docs/reference/latest/targetPools).
 
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_http_health_check = gcp.compute.HttpHealthCheck("defaultHttpHealthCheck",
+    request_path="/",
+    check_interval_sec=1,
+    timeout_sec=1)
+default_target_pool = gcp.compute.TargetPool("defaultTargetPool",
+    instances=[
+        "us-central1-a/myinstance1",
+        "us-central1-b/myinstance2",
+    ],
+    health_checks=[default_http_health_check.name])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultHttpHealthCheck = new gcp.compute.HttpHealthCheck("defaultHttpHealthCheck", {
+    requestPath: "/",
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+});
+const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {
+    instances: [
+        "us-central1-a/myinstance1",
+        "us-central1-b/myinstance2",
+    ],
+    healthChecks: [defaultHttpHealthCheck.name],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TargetPool Resource {#create}

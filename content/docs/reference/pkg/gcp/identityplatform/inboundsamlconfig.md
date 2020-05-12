@@ -18,6 +18,52 @@ the marketplace prior to using this resource.
 
 
 
+## Example Usage - Identity Platform Inbound Saml Config Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const samlConfig = new gcp.identityplatform.InboundSamlConfig("samlConfig", {
+    displayName: "Display Name",
+    idp_config: {
+        idpEntityId: "tf-idp",
+        signRequest: true,
+        ssoUrl: "https://example.com",
+        idp_certificates: [{
+            x509Certificate: fs.readFileSync("test-fixtures/rsa_cert.pem"),
+        }],
+    },
+    sp_config: {
+        spEntityId: "tf-sp",
+        callbackUri: "https://example.com",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+saml_config = gcp.identityplatform.InboundSamlConfig("samlConfig",
+    display_name="Display Name",
+    idp_config={
+        "idpEntityId": "tf-idp",
+        "signRequest": True,
+        "ssoUrl": "https://example.com",
+        "idp_certificates": [{
+            "x509Certificate": (lambda path: open(path).read())("test-fixtures/rsa_cert.pem"),
+        }],
+    },
+    sp_config={
+        "spEntityId": "tf-sp",
+        "callbackUri": "https://example.com",
+    })
+```
+
+
+
 ## Create a InboundSamlConfig Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

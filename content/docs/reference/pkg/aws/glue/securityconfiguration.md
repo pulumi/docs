@@ -28,7 +28,23 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.glue.SecurityConfiguration("example", encryption_configuration={
+    "cloudwatchEncryption": {
+        "cloudwatchEncryptionMode": "DISABLED",
+    },
+    "jobBookmarksEncryption": {
+        "jobBookmarksEncryptionMode": "DISABLED",
+    },
+    "s3Encryption": {
+        "kmsKeyArn": data["aws.kms.Key"]["example"]["arn"],
+        "s3EncryptionMode": "SSE-KMS",
+    },
+})
+```
 {{% /example %}}
 
 {{% example typescript %}}

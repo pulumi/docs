@@ -28,7 +28,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+config = pulumi.Config()
+file_system_id = config.get("fileSystemId")
+if file_system_id is None:
+    file_system_id = ""
+by_id = aws.efs.get_file_system(file_system_id=file_system_id)
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -319,6 +328,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Size<wbr>In<wbr>Bytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The current byte count used by the file system.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
@@ -428,6 +446,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The throughput, measured in MiB/s, that you want to provision for the file system.
 * `tags` -A map of tags to assign to the file system.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Size<wbr>In<wbr>Bytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The current byte count used by the file system.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -545,6 +572,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>size<wbr>In<wbr>Bytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The current byte count used by the file system.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
@@ -654,6 +690,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The throughput, measured in MiB/s, that you want to provision for the file system.
 * `tags` -A map of tags to assign to the file system.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>size_<wbr>in_<wbr>bytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The current byte count used by the file system.
 {{% /md %}}</dd>
 
     <dt class="property-"

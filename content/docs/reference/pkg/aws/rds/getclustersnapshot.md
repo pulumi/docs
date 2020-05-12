@@ -31,7 +31,26 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+development_final_snapshot = aws.rds.get_cluster_snapshot(db_cluster_identifier="development_cluster",
+    most_recent=True)
+# Use the last snapshot of the dev database before it was destroyed to create
+# a new dev database.
+aurora_cluster = aws.rds.Cluster("auroraCluster",
+    cluster_identifier="development_cluster",
+    db_subnet_group_name="my_db_subnet_group",
+    lifecycle={
+        "ignoreChanges": ["snapshotIdentifier"],
+    },
+    snapshot_identifier=development_final_snapshot.id)
+aurora_cluster_instance = aws.rds.ClusterInstance("auroraClusterInstance",
+    cluster_identifier=aurora_cluster.id,
+    db_subnet_group_name="my_db_subnet_group",
+    instance_class="db.t2.small")
+```
 {{% /example %}}
 
 {{% example typescript %}}

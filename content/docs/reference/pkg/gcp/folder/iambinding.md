@@ -21,9 +21,54 @@ an existing Google Cloud Platform folder.
     Use `pulumi import` and inspect the output to ensure
     your existing members are preserved.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+department1 = gcp.organizations.Folder("department1",
+    display_name="Department 1",
+    parent="organizations/1234567")
+admin = gcp.folder.IAMBinding("admin",
+    folder=department1.name,
+    role="roles/editor",
+    members=["user:alice@gmail.com"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const department1 = new gcp.organizations.Folder("department1", {
+    displayName: "Department 1",
+    parent: "organizations/1234567",
+});
+const admin = new gcp.folder.IAMBinding("admin", {
+    folder: department1.name,
+    role: "roles/editor",
+    members: ["user:alice@gmail.com"],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IAMBinding Resource {#create}

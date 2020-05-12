@@ -30,7 +30,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azuread as azuread
+
+example_application = azuread.Application("exampleApplication",
+    available_to_other_tenants=False,
+    homepage="http://homepage",
+    identifier_uris=["http://uri"],
+    oauth2_allow_implicit_flow=True,
+    reply_urls=["http://replyurl"])
+example_application_password = azuread.ApplicationPassword("exampleApplicationPassword",
+    application_id=example_application.id,
+    end_date="2099-01-01T01:02:03Z",
+    value="VT=uSgbTanZhyz@%nL9Hpd+Tfay_MRV#")
+```
 {{% /example %}}
 
 {{% example typescript %}}

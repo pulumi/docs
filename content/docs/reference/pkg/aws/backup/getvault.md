@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.backup.get_vault(name="example_backup_vault")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -36,7 +41,7 @@ Coming soon!
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.BackupVault({
+const example = pulumi.output(aws.backup.getVault({
     name: "example_backup_vault",
 }, { async: true }));
 ```

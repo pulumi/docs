@@ -12,6 +12,28 @@ meta_desc: "Explore the GetOrganization function of the organizations module, in
 
 Use this data source to get information about a Google Cloud Organization.
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const org = gcp.organizations.getOrganization({
+    domain: "example.com",
+});
+const sales = new gcp.organizations.Folder("sales", {
+    displayName: "Sales",
+    parent: org.then(org => org.name),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+org = gcp.organizations.get_organization(domain="example.com")
+sales = gcp.organizations.Folder("sales",
+    display_name="Sales",
+    parent=org.name)
+```
+
 
 
 ## Using GetOrganization {#using}

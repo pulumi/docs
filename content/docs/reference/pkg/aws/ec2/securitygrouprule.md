@@ -24,8 +24,7 @@ a conflict of rule settings and will overwrite rules.
 
 > **NOTE:** Referencing Security Groups across VPC peering has certain restrictions. More information is available in the [VPC Peering User Guide](https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html).
 
-{{% examples %}}
-{{% /examples %}}
+
 ## Usage with prefix list IDs
 
 Prefix list IDs are manged by AWS internally. Prefix list IDs
@@ -47,7 +46,66 @@ const allowAll = new aws.ec2.SecurityGroupRule("allow_all", {
     type: "egress",
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
 
+# ...
+my_endpoint = aws.ec2.VpcEndpoint("myEndpoint")
+allow_all = aws.ec2.SecurityGroupRule("allowAll",
+    from_port=0,
+    prefix_list_ids=[my_endpoint.prefix_list_id],
+    protocol="-1",
+    security_group_id="sg-123456",
+    to_port=0,
+    type="egress")
+```
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ec2.SecurityGroupRule("example",
+    type="ingress",
+    from_port=0,
+    to_port=65535,
+    protocol="tcp",
+    cidr_blocks=aws_vpc["example"]["cidr_block"],
+    security_group_id="sg-123456")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.ec2.SecurityGroupRule("example", {
+    type: "ingress",
+    fromPort: 0,
+    toPort: 65535,
+    protocol: "tcp",
+    cidrBlocks: aws_vpc.example.cidr_block,
+    securityGroupId: "sg-123456",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SecurityGroupRule Resource {#create}

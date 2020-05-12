@@ -29,6 +29,9 @@ The below snippet demonstrates use with the `s3_origin_config` structure for the
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 
 ### Updating your bucket policy
 
@@ -66,6 +69,32 @@ const example = new aws.s3.BucketPolicy("example", {
     policy: s3Policy.json,
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+s3_policy = aws.iam.get_policy_document(statements=[
+    {
+        "actions": ["s3:GetObject"],
+        "principals": [{
+            "identifiers": [aws_cloudfront_origin_access_identity["origin_access_identity"]["iam_arn"]],
+            "type": "AWS",
+        }],
+        "resources": [f"{aws_s3_bucket['example']['arn']}/*"],
+    },
+    {
+        "actions": ["s3:ListBucket"],
+        "principals": [{
+            "identifiers": [aws_cloudfront_origin_access_identity["origin_access_identity"]["iam_arn"]],
+            "type": "AWS",
+        }],
+        "resources": [aws_s3_bucket["example"]["arn"]],
+    },
+])
+example = aws.s3.BucketPolicy("example",
+    bucket=aws_s3_bucket["example"]["id"],
+    policy=s3_policy.json)
+```
 
 [1]: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html
 [2]: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html
@@ -86,7 +115,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+origin_access_identity = aws.cloudfront.OriginAccessIdentity("originAccessIdentity", comment="Some comment")
+```
 {{% /example %}}
 
 {{% example typescript %}}

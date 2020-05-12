@@ -30,6 +30,55 @@ To get more information about Firewall, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/vpc/docs/firewalls)
 
+## Example Usage - Firewall Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultNetwork = new gcp.compute.Network("defaultNetwork", {});
+const defaultFirewall = new gcp.compute.Firewall("defaultFirewall", {
+    network: defaultNetwork.name,
+    allow: [
+        {
+            protocol: "icmp",
+        },
+        {
+            protocol: "tcp",
+            ports: [
+                "80",
+                "8080",
+                "1000-2000",
+            ],
+        },
+    ],
+    sourceTags: ["web"],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_network = gcp.compute.Network("defaultNetwork")
+default_firewall = gcp.compute.Firewall("defaultFirewall",
+    network=default_network.name,
+    allow=[
+        {
+            "protocol": "icmp",
+        },
+        {
+            "protocol": "tcp",
+            "ports": [
+                "80",
+                "8080",
+                "1000-2000",
+            ],
+        },
+    ],
+    source_tags=["web"])
+```
+
 
 
 ## Create a Firewall Resource {#create}

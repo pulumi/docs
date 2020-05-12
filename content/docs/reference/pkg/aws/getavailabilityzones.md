@@ -25,6 +25,43 @@ which provides some details about a specific availability zone.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+### By State
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+available = aws.get_availability_zones(state="available")
+primary = aws.ec2.Subnet("primary", availability_zone=available.names[0])
+# ...
+secondary = aws.ec2.Subnet("secondary", availability_zone=available.names[1])
+# ...
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const available = aws.getAvailabilityZones({
+    state: "available",
+});
+const primary = new aws.ec2.Subnet("primary", {availabilityZone: available.then(available => available.names[0])});
+// ...
+const secondary = new aws.ec2.Subnet("secondary", {availabilityZone: available.then(available => available.names[1])});
+// ...
+```
+{{% /example %}}
+
 ### By Filter
 {{% example csharp %}}
 Coming soon!
@@ -35,7 +72,19 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.get_availability_zones(all_availability_zones=True,
+    filters=[{
+        "name": "opt-in-status",
+        "values": [
+            "not-opted-in",
+            "opted-in",
+        ],
+    }])
+```
 {{% /example %}}
 
 {{% example typescript %}}

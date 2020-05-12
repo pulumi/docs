@@ -29,7 +29,22 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+ebs_volume = aws.ebs.get_volume(filters=[
+        {
+            "name": "volume-type",
+            "values": ["gp2"],
+        },
+        {
+            "name": "tag:Name",
+            "values": ["Example"],
+        },
+    ],
+    most_recent=True)
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -308,6 +323,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Multi<wbr>Attach<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Specifies whether Amazon EBS Multi-Attach is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Outpost<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -435,6 +459,15 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Multi<wbr>Attach<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Specifies whether Amazon EBS Multi-Attach is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -570,6 +603,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>multi<wbr>Attach<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Specifies whether Amazon EBS Multi-Attach is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>outpost<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -697,6 +739,15 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>multi_<wbr>attach_<wbr>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Specifies whether Amazon EBS Multi-Attach is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-"

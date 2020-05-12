@@ -28,7 +28,22 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.athena.Workgroup("example", configuration={
+    "enforceWorkgroupConfiguration": True,
+    "publishCloudwatchMetricsEnabled": True,
+    "resultConfiguration": {
+        "encryptionConfiguration": {
+            "encryptionOption": "SSE_KMS",
+            "kmsKeyArn": aws_kms_key["example"]["arn"],
+        },
+        "outputLocation": "s3://{aws_s3_bucket.example.bucket}/output/",
+    },
+})
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -30,7 +30,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+foo_vpcs = aws.ec2.get_vpcs(tags={
+    "service": "production",
+})
+pulumi.export("foo", foo_vpcs.ids)
+```
 {{% /example %}}
 
 {{% example typescript %}}

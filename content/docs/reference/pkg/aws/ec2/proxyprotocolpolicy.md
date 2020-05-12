@@ -28,7 +28,33 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+lb = aws.elb.LoadBalancer("lb",
+    availability_zones=["us-east-1a"],
+    listeners=[
+        {
+            "instancePort": 25,
+            "instanceProtocol": "tcp",
+            "lbPort": 25,
+            "lbProtocol": "tcp",
+        },
+        {
+            "instancePort": 587,
+            "instanceProtocol": "tcp",
+            "lbPort": 587,
+            "lbProtocol": "tcp",
+        },
+    ])
+smtp = aws.ec2.ProxyProtocolPolicy("smtp",
+    instance_ports=[
+        "25",
+        "587",
+    ],
+    load_balancer=lb.name)
+```
 {{% /example %}}
 
 {{% example typescript %}}

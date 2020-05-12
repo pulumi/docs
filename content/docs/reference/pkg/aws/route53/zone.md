@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+primary = aws.route53.Zone("primary")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -50,7 +55,26 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+main = aws.route53.Zone("main")
+dev = aws.route53.Zone("dev", tags={
+    "Environment": "dev",
+})
+dev_ns = aws.route53.Record("dev-ns",
+    name="dev.example.com",
+    records=[
+        dev.name_servers[0],
+        dev.name_servers[1],
+        dev.name_servers[2],
+        dev.name_servers[3],
+    ],
+    ttl="30",
+    type="NS",
+    zone_id=main.zone_id)
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -89,7 +113,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+private = aws.route53.Zone("private", vpcs=[{
+    "vpcId": aws_vpc["example"]["id"],
+}])
+```
 {{% /example %}}
 
 {{% example typescript %}}

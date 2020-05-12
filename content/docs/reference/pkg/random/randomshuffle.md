@@ -29,7 +29,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_random as random
+
+az = random.RandomShuffle("az",
+    inputs=[
+        "us-west-1a",
+        "us-west-1c",
+        "us-west-1d",
+        "us-west-1e",
+    ],
+    result_count=2)
+example = aws.elb.LoadBalancer("example", availability_zones=az.results)
+```
 {{% /example %}}
 
 {{% example typescript %}}

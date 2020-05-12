@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_subnetwork = gcp.compute.get_subnetwork(name="default-us-east1",
+    region="us-east1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

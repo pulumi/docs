@@ -14,9 +14,44 @@ This data source fetches the project name, and provides the appropriate URLs to 
 
 The URLs are computed entirely offline - as long as the project exists, they will be valid, but this data source does not contact Google Container Registry (GCR) at any point.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+debian = gcp.container.get_registry_image(name="debian")
+pulumi.export("gcrLocation", debian.image_url)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const debian = gcp.container.getRegistryImage({
+    name: "debian",
+});
+export const gcrLocation = debian.then(debian => debian.imageUrl);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetRegistryImage {#using}

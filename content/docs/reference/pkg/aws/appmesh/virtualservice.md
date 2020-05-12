@@ -28,7 +28,20 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+servicea = aws.appmesh.VirtualService("servicea",
+    mesh_name=aws_appmesh_mesh["simple"]["id"],
+    spec={
+        "provider": {
+            "virtualNode": {
+                "virtualNodeName": aws_appmesh_virtual_node["serviceb1"]["name"],
+            },
+        },
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -59,7 +72,20 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+servicea = aws.appmesh.VirtualService("servicea",
+    mesh_name=aws_appmesh_mesh["simple"]["id"],
+    spec={
+        "provider": {
+            "virtualRouter": {
+                "virtualRouterName": aws_appmesh_virtual_router["serviceb"]["name"],
+            },
+        },
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}

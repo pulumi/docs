@@ -38,6 +38,17 @@ const custom = new gcp.monitoring.CustomService("custom", {
     },
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+custom = gcp.monitoring.CustomService("custom",
+    display_name="My Custom Service custom-srv",
+    service_id="custom-srv",
+    telemetry={
+        "resourceName": "//product.googleapis.com/foo/foo/services/test",
+    })
+```
 
 
 

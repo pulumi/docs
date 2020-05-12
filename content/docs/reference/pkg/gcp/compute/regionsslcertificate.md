@@ -21,6 +21,144 @@ To get more information about RegionSslCertificate, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/load-balancing/docs/ssl-certificates)
 
+> **Warning:** All arguments including `certificate` and `private_key` will be stored in the raw
+state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
+
+## Example Usage - Region Ssl Certificate Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const default = new gcp.compute.RegionSslCertificate("default", {
+    region: "us-central1",
+    namePrefix: "my-certificate-",
+    description: "a description",
+    privateKey: fs.readFileSync("path/to/private.key"),
+    certificate: fs.readFileSync("path/to/certificate.crt"),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.RegionSslCertificate("default",
+    region="us-central1",
+    name_prefix="my-certificate-",
+    description="a description",
+    private_key=(lambda path: open(path).read())("path/to/private.key"),
+    certificate=(lambda path: open(path).read())("path/to/certificate.crt"))
+```
+## Example Usage - Region Ssl Certificate Target Https Proxies
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+// Using with Region Target HTTPS Proxies
+//
+// SSL certificates cannot be updated after creation. In order to apply
+// the specified configuration, the provider will destroy the existing
+// resource and create a replacement. To effectively use an SSL
+// certificate resource with a Target HTTPS Proxy resource, it's
+// recommended to specify create_before_destroy in a lifecycle block.
+// Either omit the Instance Template name attribute, specify a partial
+// name with name_prefix, or use random_id resource. Example:
+const defaultRegionSslCertificate = new gcp.compute.RegionSslCertificate("defaultRegionSslCertificate", {
+    region: "us-central1",
+    namePrefix: "my-certificate-",
+    privateKey: fs.readFileSync("path/to/private.key"),
+    certificate: fs.readFileSync("path/to/certificate.crt"),
+});
+const defaultRegionHealthCheck = new gcp.compute.RegionHealthCheck("defaultRegionHealthCheck", {
+    region: "us-central1",
+    http_health_check: {
+        port: 80,
+    },
+});
+const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaultRegionBackendService", {
+    region: "us-central1",
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [defaultRegionHealthCheck.selfLink],
+});
+const defaultRegionUrlMap = new gcp.compute.RegionUrlMap("defaultRegionUrlMap", {
+    region: "us-central1",
+    description: "a description",
+    defaultService: defaultRegionBackendService.selfLink,
+    host_rule: [{
+        hosts: ["mysite.com"],
+        pathMatcher: "allpaths",
+    }],
+    path_matcher: [{
+        name: "allpaths",
+        defaultService: defaultRegionBackendService.selfLink,
+        path_rule: [{
+            paths: ["/*"],
+            service: defaultRegionBackendService.selfLink,
+        }],
+    }],
+});
+const defaultRegionTargetHttpsProxy = new gcp.compute.RegionTargetHttpsProxy("defaultRegionTargetHttpsProxy", {
+    region: "us-central1",
+    urlMap: defaultRegionUrlMap.selfLink,
+    sslCertificates: [defaultRegionSslCertificate.selfLink],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+# Using with Region Target HTTPS Proxies
+#
+# SSL certificates cannot be updated after creation. In order to apply
+# the specified configuration, the provider will destroy the existing
+# resource and create a replacement. To effectively use an SSL
+# certificate resource with a Target HTTPS Proxy resource, it's
+# recommended to specify create_before_destroy in a lifecycle block.
+# Either omit the Instance Template name attribute, specify a partial
+# name with name_prefix, or use random_id resource. Example:
+default_region_ssl_certificate = gcp.compute.RegionSslCertificate("defaultRegionSslCertificate",
+    region="us-central1",
+    name_prefix="my-certificate-",
+    private_key=(lambda path: open(path).read())("path/to/private.key"),
+    certificate=(lambda path: open(path).read())("path/to/certificate.crt"))
+default_region_health_check = gcp.compute.RegionHealthCheck("defaultRegionHealthCheck",
+    region="us-central1",
+    http_health_check={
+        "port": 80,
+    })
+default_region_backend_service = gcp.compute.RegionBackendService("defaultRegionBackendService",
+    region="us-central1",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default_region_health_check.self_link])
+default_region_url_map = gcp.compute.RegionUrlMap("defaultRegionUrlMap",
+    region="us-central1",
+    description="a description",
+    default_service=default_region_backend_service.self_link,
+    host_rule=[{
+        "hosts": ["mysite.com"],
+        "pathMatcher": "allpaths",
+    }],
+    path_matcher=[{
+        "name": "allpaths",
+        "defaultService": default_region_backend_service.self_link,
+        "path_rule": [{
+            "paths": ["/*"],
+            "service": default_region_backend_service.self_link,
+        }],
+    }])
+default_region_target_https_proxy = gcp.compute.RegionTargetHttpsProxy("defaultRegionTargetHttpsProxy",
+    region="us-central1",
+    url_map=default_region_url_map.self_link,
+    ssl_certificates=[default_region_ssl_certificate.self_link])
+```
+
 
 
 ## Create a RegionSslCertificate Resource {#create}
@@ -212,7 +350,7 @@ The RegionSslCertificate resource accepts the following [input]({{< relref "/doc
     </dt>
     <dd>{{% md %}}The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert.
+The chain must include at least one intermediate cert.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -221,7 +359,7 @@ The chain must include at least one intermediate cert.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The write-only private key in PEM format.
+    <dd>{{% md %}}The write-only private key in PEM format.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -293,7 +431,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert.
+The chain must include at least one intermediate cert.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -302,7 +440,7 @@ The chain must include at least one intermediate cert.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The write-only private key in PEM format.
+    <dd>{{% md %}}The write-only private key in PEM format.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -374,7 +512,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert.
+The chain must include at least one intermediate cert.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -383,7 +521,7 @@ The chain must include at least one intermediate cert.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The write-only private key in PEM format.
+    <dd>{{% md %}}The write-only private key in PEM format.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -455,7 +593,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert.
+The chain must include at least one intermediate cert.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -464,7 +602,7 @@ The chain must include at least one intermediate cert.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The write-only private key in PEM format.
+    <dd>{{% md %}}The write-only private key in PEM format.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -841,7 +979,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert.
+The chain must include at least one intermediate cert.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -902,7 +1040,7 @@ specified prefix. Conflicts with `name`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The write-only private key in PEM format.
+    <dd>{{% md %}}The write-only private key in PEM format.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -949,7 +1087,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert.
+The chain must include at least one intermediate cert.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1010,7 +1148,7 @@ specified prefix. Conflicts with `name`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The write-only private key in PEM format.
+    <dd>{{% md %}}The write-only private key in PEM format.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1057,7 +1195,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert.
+The chain must include at least one intermediate cert.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1118,7 +1256,7 @@ specified prefix. Conflicts with `name`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The write-only private key in PEM format.
+    <dd>{{% md %}}The write-only private key in PEM format.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1165,7 +1303,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert.
+The chain must include at least one intermediate cert.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1226,7 +1364,7 @@ specified prefix. Conflicts with `name`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The write-only private key in PEM format.
+    <dd>{{% md %}}The write-only private key in PEM format.  **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

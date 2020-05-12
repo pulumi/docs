@@ -35,7 +35,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ebs.DefaultKmsKey("example", key_arn=aws_kms_key["example"]["arn"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

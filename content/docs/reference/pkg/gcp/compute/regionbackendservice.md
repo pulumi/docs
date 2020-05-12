@@ -20,6 +20,257 @@ To get more information about RegionBackendService, see:
 * How-to Guides
     * [Internal TCP/UDP Load Balancing](https://cloud.google.com/compute/docs/load-balancing/internal/)
 
+## Example Usage - Region Backend Service Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultHealthCheck = new gcp.compute.HealthCheck("defaultHealthCheck", {
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+    tcp_health_check: {
+        port: "80",
+    },
+});
+const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaultRegionBackendService", {
+    region: "us-central1",
+    healthChecks: [defaultHealthCheck.selfLink],
+    connectionDrainingTimeoutSec: 10,
+    sessionAffinity: "CLIENT_IP",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_health_check = gcp.compute.HealthCheck("defaultHealthCheck",
+    check_interval_sec=1,
+    timeout_sec=1,
+    tcp_health_check={
+        "port": "80",
+    })
+default_region_backend_service = gcp.compute.RegionBackendService("defaultRegionBackendService",
+    region="us-central1",
+    health_checks=[default_health_check.self_link],
+    connection_draining_timeout_sec=10,
+    session_affinity="CLIENT_IP")
+```
+## Example Usage - Region Backend Service Ilb Round Robin
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const healthCheck = new gcp.compute.HealthCheck("healthCheck", {http_health_check: {
+    port: 80,
+}});
+const default = new gcp.compute.RegionBackendService("default", {
+    region: "us-central1",
+    healthChecks: [healthCheck.selfLink],
+    protocol: "HTTP",
+    loadBalancingScheme: "INTERNAL_MANAGED",
+    localityLbPolicy: "ROUND_ROBIN",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+health_check = gcp.compute.HealthCheck("healthCheck", http_health_check={
+    "port": 80,
+})
+default = gcp.compute.RegionBackendService("default",
+    region="us-central1",
+    health_checks=[health_check.self_link],
+    protocol="HTTP",
+    load_balancing_scheme="INTERNAL_MANAGED",
+    locality_lb_policy="ROUND_ROBIN")
+```
+## Example Usage - Region Backend Service Ilb Ring Hash
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const healthCheck = new gcp.compute.HealthCheck("healthCheck", {http_health_check: {
+    port: 80,
+}});
+const default = new gcp.compute.RegionBackendService("default", {
+    region: "us-central1",
+    healthChecks: [healthCheck.selfLink],
+    loadBalancingScheme: "INTERNAL_MANAGED",
+    localityLbPolicy: "RING_HASH",
+    sessionAffinity: "HTTP_COOKIE",
+    protocol: "HTTP",
+    circuit_breakers: {
+        maxConnections: 10,
+    },
+    consistent_hash: {
+        http_cookie: {
+            ttl: {
+                seconds: 11,
+                nanos: 1111,
+            },
+            name: "mycookie",
+        },
+    },
+    outlier_detection: {
+        consecutiveErrors: 2,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+health_check = gcp.compute.HealthCheck("healthCheck", http_health_check={
+    "port": 80,
+})
+default = gcp.compute.RegionBackendService("default",
+    region="us-central1",
+    health_checks=[health_check.self_link],
+    load_balancing_scheme="INTERNAL_MANAGED",
+    locality_lb_policy="RING_HASH",
+    session_affinity="HTTP_COOKIE",
+    protocol="HTTP",
+    circuit_breakers={
+        "maxConnections": 10,
+    },
+    consistent_hash={
+        "http_cookie": {
+            "ttl": {
+                "seconds": 11,
+                "nanos": 1111,
+            },
+            "name": "mycookie",
+        },
+    },
+    outlier_detection={
+        "consecutiveErrors": 2,
+    })
+```
+## Example Usage - Region Backend Service Balancing Mode
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const debianImage = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const defaultNetwork = new gcp.compute.Network("defaultNetwork", {
+    autoCreateSubnetworks: false,
+    routingMode: "REGIONAL",
+});
+const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
+    ipCidrRange: "10.1.2.0/24",
+    region: "us-central1",
+    network: defaultNetwork.selfLink,
+});
+const instanceTemplate = new gcp.compute.InstanceTemplate("instanceTemplate", {
+    machineType: "n1-standard-1",
+    network_interface: [{
+        network: defaultNetwork.selfLink,
+        subnetwork: defaultSubnetwork.selfLink,
+    }],
+    disk: [{
+        sourceImage: debianImage.then(debianImage => debianImage.selfLink),
+        autoDelete: true,
+        boot: true,
+    }],
+    tags: [
+        "allow-ssh",
+        "load-balanced-backend",
+    ],
+});
+const rigm = new gcp.compute.RegionInstanceGroupManager("rigm", {
+    region: "us-central1",
+    version: [{
+        instanceTemplate: instanceTemplate.selfLink,
+        name: "primary",
+    }],
+    baseInstanceName: "internal-glb",
+    targetSize: 1,
+});
+const defaultRegionHealthCheck = new gcp.compute.RegionHealthCheck("defaultRegionHealthCheck", {
+    region: "us-central1",
+    http_health_check: {
+        portSpecification: "USE_SERVING_PORT",
+    },
+});
+const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaultRegionBackendService", {
+    loadBalancingScheme: "INTERNAL_MANAGED",
+    backend: [{
+        group: rigm.instanceGroup,
+        balancingMode: "UTILIZATION",
+        capacityScaler: 1,
+    }],
+    region: "us-central1",
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [defaultRegionHealthCheck.selfLink],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+debian_image = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+default_network = gcp.compute.Network("defaultNetwork",
+    auto_create_subnetworks=False,
+    routing_mode="REGIONAL")
+default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
+    ip_cidr_range="10.1.2.0/24",
+    region="us-central1",
+    network=default_network.self_link)
+instance_template = gcp.compute.InstanceTemplate("instanceTemplate",
+    machine_type="n1-standard-1",
+    network_interface=[{
+        "network": default_network.self_link,
+        "subnetwork": default_subnetwork.self_link,
+    }],
+    disk=[{
+        "sourceImage": debian_image.self_link,
+        "autoDelete": True,
+        "boot": True,
+    }],
+    tags=[
+        "allow-ssh",
+        "load-balanced-backend",
+    ])
+rigm = gcp.compute.RegionInstanceGroupManager("rigm",
+    region="us-central1",
+    version=[{
+        "instanceTemplate": instance_template.self_link,
+        "name": "primary",
+    }],
+    base_instance_name="internal-glb",
+    target_size=1)
+default_region_health_check = gcp.compute.RegionHealthCheck("defaultRegionHealthCheck",
+    region="us-central1",
+    http_health_check={
+        "portSpecification": "USE_SERVING_PORT",
+    })
+default_region_backend_service = gcp.compute.RegionBackendService("defaultRegionBackendService",
+    load_balancing_scheme="INTERNAL_MANAGED",
+    backend=[{
+        "group": rigm.instance_group,
+        "balancingMode": "UTILIZATION",
+        "capacityScaler": 1,
+    }],
+    region="us-central1",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default_region_health_check.self_link])
+```
+
 
 
 ## Create a RegionBackendService Resource {#create}
@@ -299,8 +550,7 @@ Provide this property when you create the resource.
     </dt>
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
-balancing cannot be used with the other(s). Must be `INTERNAL` or
-`INTERNAL_MANAGED`. Defaults to `INTERNAL`.
+balancing cannot be used with the other(s).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -390,8 +640,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, SSL, TCP, and UDP. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -528,8 +777,7 @@ Provide this property when you create the resource.
     </dt>
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
-balancing cannot be used with the other(s). Must be `INTERNAL` or
-`INTERNAL_MANAGED`. Defaults to `INTERNAL`.
+balancing cannot be used with the other(s).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -619,8 +867,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, SSL, TCP, and UDP. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -757,8 +1004,7 @@ Provide this property when you create the resource.
     </dt>
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
-balancing cannot be used with the other(s). Must be `INTERNAL` or
-`INTERNAL_MANAGED`. Defaults to `INTERNAL`.
+balancing cannot be used with the other(s).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -848,8 +1094,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, SSL, TCP, and UDP. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -986,8 +1231,7 @@ Provide this property when you create the resource.
     </dt>
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
-balancing cannot be used with the other(s). Must be `INTERNAL` or
-`INTERNAL_MANAGED`. Defaults to `INTERNAL`.
+balancing cannot be used with the other(s).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1077,8 +1321,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, SSL, TCP, and UDP. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -1538,8 +1781,7 @@ check can be specified, and a health check is required.
     </dt>
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
-balancing cannot be used with the other(s). Must be `INTERNAL` or
-`INTERNAL_MANAGED`. Defaults to `INTERNAL`.
+balancing cannot be used with the other(s).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1629,8 +1871,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, SSL, TCP, and UDP. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -1794,8 +2035,7 @@ check can be specified, and a health check is required.
     </dt>
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
-balancing cannot be used with the other(s). Must be `INTERNAL` or
-`INTERNAL_MANAGED`. Defaults to `INTERNAL`.
+balancing cannot be used with the other(s).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1885,8 +2125,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, SSL, TCP, and UDP. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -2050,8 +2289,7 @@ check can be specified, and a health check is required.
     </dt>
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
-balancing cannot be used with the other(s). Must be `INTERNAL` or
-`INTERNAL_MANAGED`. Defaults to `INTERNAL`.
+balancing cannot be used with the other(s).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2141,8 +2379,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, SSL, TCP, and UDP. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -2306,8 +2543,7 @@ check can be specified, and a health check is required.
     </dt>
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
-balancing cannot be used with the other(s). Must be `INTERNAL` or
-`INTERNAL_MANAGED`. Defaults to `INTERNAL`.
+balancing cannot be used with the other(s).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2397,8 +2633,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
-Possible values are HTTP, HTTPS, HTTP2, SSL, TCP, and UDP. The default is
-HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 {{% /md %}}</dd>
 
@@ -2504,7 +2739,7 @@ partial URL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the balancing mode for this backend. Defaults to CONNECTION.
+    <dd>{{% md %}}Specifies the balancing mode for this backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2671,7 +2906,7 @@ partial URL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the balancing mode for this backend. Defaults to CONNECTION.
+    <dd>{{% md %}}Specifies the balancing mode for this backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2838,7 +3073,7 @@ partial URL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the balancing mode for this backend. Defaults to CONNECTION.
+    <dd>{{% md %}}Specifies the balancing mode for this backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3005,7 +3240,7 @@ partial URL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the balancing mode for this backend. Defaults to CONNECTION.
+    <dd>{{% md %}}Specifies the balancing mode for this backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

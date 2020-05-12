@@ -24,14 +24,52 @@ management of the VPC Peering Connection and allows options to be set correctly 
 VPC Peering Connections use the `aws.ec2.VpcPeeringConnection` resource to manage the requester's side of the
 connection and use the `aws.ec2.VpcPeeringConnectionAccepter` resource to manage the accepter's side of the connection.
 
-{{% examples %}}
-{{% /examples %}}
+
 ## Notes
 
 If both VPCs are not in the same AWS account do not enable the `auto_accept` attribute.
 The accepter can manage its side of the connection using the `aws.ec2.VpcPeeringConnectionAccepter` resource
 or accept the connection manually using the AWS Management Console, AWS CLI, through SDKs, etc.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+foo = aws.ec2.VpcPeeringConnection("foo",
+    peer_owner_id=var["peer_owner_id"],
+    peer_vpc_id=aws_vpc["bar"]["id"],
+    vpc_id=aws_vpc["foo"]["id"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const foo = new aws.ec2.VpcPeeringConnection("foo", {
+    peerOwnerId: var_peer_owner_id,
+    peerVpcId: aws_vpc_bar.id,
+    vpcId: aws_vpc_foo.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VpcPeeringConnection Resource {#create}

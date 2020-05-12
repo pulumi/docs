@@ -12,9 +12,124 @@ meta_desc: "Explore the NodeGroup resource of the eks module, including examples
 
 Manages an EKS Node Group, which can provision and optionally update an Auto Scaling Group of Kubernetes worker nodes compatible with EKS. Additional documentation about this functionality can be found in the [EKS User Guide](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html).
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.eks.NodeGroup("example",
+    cluster_name=aws_eks_cluster["example"]["name"],
+    node_role_arn=aws_iam_role["example"]["arn"],
+    subnet_ids=[__item["id"] for __item in aws_subnet["example"]],
+    scaling_config={
+        "desiredSize": 1,
+        "maxSize": 1,
+        "minSize": 1,
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.eks.NodeGroup("example", {
+    clusterName: aws_eks_cluster.example.name,
+    nodeRoleArn: aws_iam_role.example.arn,
+    subnetIds: aws_subnet.example.map(__item => __item.id),
+    scaling_config: {
+        desiredSize: 1,
+        maxSize: 1,
+        minSize: 1,
+    },
+});
+```
+{{% /example %}}
+
+### Example IAM Role for EKS Node Group
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import json
+import pulumi_aws as aws
+
+example = aws.iam.Role("example", assume_role_policy=json.dumps({
+    "Statement": [{
+        "Action": "sts:AssumeRole",
+        "Effect": "Allow",
+        "Principal": {
+            "Service": "ec2.amazonaws.com",
+        },
+    }],
+    "Version": "2012-10-17",
+}))
+example__amazon_eks_worker_node_policy = aws.iam.RolePolicyAttachment("example-AmazonEKSWorkerNodePolicy",
+    policy_arn="arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+    role=example.name)
+example__amazon_ekscni_policy = aws.iam.RolePolicyAttachment("example-AmazonEKSCNIPolicy",
+    policy_arn="arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+    role=example.name)
+example__amazon_ec2_container_registry_read_only = aws.iam.RolePolicyAttachment("example-AmazonEC2ContainerRegistryReadOnly",
+    policy_arn="arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
+    role=example.name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.iam.Role("example", {assumeRolePolicy: JSON.stringify({
+    Statement: [{
+        Action: "sts:AssumeRole",
+        Effect: "Allow",
+        Principal: {
+            Service: "ec2.amazonaws.com",
+        },
+    }],
+    Version: "2012-10-17",
+})});
+const example-AmazonEKSWorkerNodePolicy = new aws.iam.RolePolicyAttachment("example-AmazonEKSWorkerNodePolicy", {
+    policyArn: "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+    role: example.name,
+});
+const example-AmazonEKSCNIPolicy = new aws.iam.RolePolicyAttachment("example-AmazonEKSCNIPolicy", {
+    policyArn: "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+    role: example.name,
+});
+const example-AmazonEC2ContainerRegistryReadOnly = new aws.iam.RolePolicyAttachment("example-AmazonEC2ContainerRegistryReadOnly", {
+    policyArn: "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
+    role: example.name,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NodeGroup Resource {#create}

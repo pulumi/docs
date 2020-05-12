@@ -33,7 +33,25 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_random as random
+
+priority = random.RandomInteger("priority",
+    keepers={
+        "listener_arn": var["listener_arn"],
+    },
+    max=50000,
+    min=1)
+main = aws.alb.ListenerRule("main",
+    actions=[{
+        "targetGroupArn": var["target_group_arn"],
+        "type": "forward",
+    }],
+    listener_arn=var["listener_arn"],
+    priority=priority.result)
+```
 {{% /example %}}
 
 {{% example typescript %}}

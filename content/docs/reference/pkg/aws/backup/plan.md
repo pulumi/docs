@@ -28,7 +28,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.backup.Plan("example", rules=[{
+    "ruleName": "tf_example_backup_rule",
+    "schedule": "cron(0 12 * * ? *)",
+    "targetVaultName": aws_backup_vault["test"]["name"],
+}])
+```
 {{% /example %}}
 
 {{% example typescript %}}

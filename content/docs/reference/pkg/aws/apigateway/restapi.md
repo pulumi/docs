@@ -30,7 +30,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+my_demo_api = aws.apigateway.RestApi("myDemoAPI", description="This is my API for demonstration purposes")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -54,7 +59,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.apigateway.RestApi("example", endpoint_configuration={
+    "types": "REGIONAL",
+})
+```
 {{% /example %}}
 
 {{% example typescript %}}

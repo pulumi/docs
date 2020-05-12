@@ -29,7 +29,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+ecs_mongo = aws.ecs.get_cluster(cluster_name="ecs-mongo-production")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -12,9 +12,55 @@ meta_desc: "Explore the GetImageVersions function of the composer module, includ
 
 Provides access to available Cloud Composer versions in a region for a given project.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+all = gcp.composer.get_image_versions()
+test = gcp.composer.Environment("test",
+    region="us-central1",
+    config={
+        "software_config": {
+            "imageVersion": all.image_versions[0]["imageVersionId"],
+        },
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const all = gcp.composer.getImageVersions({});
+const test = new gcp.composer.Environment("test", {
+    region: "us-central1",
+    config: {
+        software_config: {
+            imageVersion: all.then(all => all.imageVersions[0].imageVersionId),
+        },
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetImageVersions {#using}

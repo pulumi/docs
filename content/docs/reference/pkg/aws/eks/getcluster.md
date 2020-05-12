@@ -12,42 +12,9 @@ meta_desc: "Explore the GetCluster function of the eks module, including example
 
 Retrieve information about an EKS Cluster.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = pulumi.output(aws.eks.getCluster({
-    name: "example",
-}, { async: true }));
-
-export const endpoint = example.endpoint;
-export const kubeconfig_certificate_authority_data = example.certificateAuthorities.data;
-// Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019.
-export const identity_oidc_issuer = example.identities[0].oidcs[0].issuer;
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Using GetCluster {#using}

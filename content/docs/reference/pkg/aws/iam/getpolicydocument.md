@@ -57,6 +57,44 @@ const examplePolicy = new aws.iam.Policy("example", {
     policy: examplePolicyDocument.json,
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_policy_document = aws.iam.get_policy_document(statements=[
+    {
+        "actions": [
+            "s3:ListAllMyBuckets",
+            "s3:GetBucketLocation",
+        ],
+        "resources": ["arn:aws:s3:::*"],
+        "sid": "1",
+    },
+    {
+        "actions": ["s3:ListBucket"],
+        "condition": [{
+            "test": "StringLike",
+            "values": [
+                "",
+                "home/",
+                "home/&{aws:username}/",
+            ],
+            "variable": "s3:prefix",
+        }],
+        "resources": [f"arn:aws:s3:::{var['s3_bucket_name']}"],
+    },
+    {
+        "actions": ["s3:*"],
+        "resources": [
+            f"arn:aws:s3:::{var['s3_bucket_name']}/home/&{{aws:username}}",
+            f"arn:aws:s3:::{var['s3_bucket_name']}/home/&{{aws:username}}/*",
+        ],
+    },
+])
+example_policy = aws.iam.Policy("examplePolicy",
+    path="/",
+    policy=example_policy_document.json)
+```
 
 Using this data source to generate policy documents is *optional*. It is also
 valid to use literal JSON strings within your configuration, or to use the
@@ -103,6 +141,24 @@ const eventStreamBucketRoleAssumeRolePolicy = pulumi.output(aws.iam.getPolicyDoc
         ],
     }],
 }, { async: true }));
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+event_stream_bucket_role_assume_role_policy = aws.iam.get_policy_document(statements=[{
+    "actions": ["sts:AssumeRole"],
+    "principals": [
+        {
+            "identifiers": ["firehose.amazonaws.com"],
+            "type": "Service",
+        },
+        {
+            "identifiers": [var["trusted_role_arn"]],
+            "type": "AWS",
+        },
+    ],
+}])
 ```
 
 ## Example with Source and Override
@@ -162,17 +218,68 @@ const overrideJsonExample = override.apply(override => aws.iam.getPolicyDocument
     ],
 }, { async: true }));
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+source = aws.iam.get_policy_document(statements=[
+    {
+        "actions": ["ec2:*"],
+        "resources": ["*"],
+    },
+    {
+        "actions": ["s3:*"],
+        "resources": ["*"],
+        "sid": "SidToOverwrite",
+    },
+])
+source_json_example = aws.iam.get_policy_document(source_json=source.json,
+    statements=[{
+        "actions": ["s3:*"],
+        "resources": [
+            "arn:aws:s3:::somebucket",
+            "arn:aws:s3:::somebucket/*",
+        ],
+        "sid": "SidToOverwrite",
+    }])
+override = aws.iam.get_policy_document(statements=[{
+    "actions": ["s3:*"],
+    "resources": ["*"],
+    "sid": "SidToOverwrite",
+}])
+override_json_example = aws.iam.get_policy_document(override_json=override.json,
+    statements=[
+        {
+            "actions": ["ec2:*"],
+            "resources": ["*"],
+        },
+        {
+            "actions": ["s3:*"],
+            "resources": [
+                "arn:aws:s3:::somebucket",
+                "arn:aws:s3:::somebucket/*",
+            ],
+            "sid": "SidToOverwrite",
+        },
+    ])
+```
 
 `data.aws_iam_policy_document.source_json_example.json` will evaluate to:
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+```python
+import pulumi
+```
 
 `data.aws_iam_policy_document.override_json_example.json` will evaluate to:
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 
 You can also combine `source_json` and `override_json` in the same document.
@@ -204,11 +311,31 @@ const politik = pulumi.all([override, source]).apply(([override, source]) => aws
     sourceJson: source.json,
 }, { async: true }));
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+source = aws.iam.get_policy_document(statements=[{
+    "actions": ["ec2:DescribeAccountAttributes"],
+    "resources": ["*"],
+    "sid": "OverridePlaceholder",
+}])
+override = aws.iam.get_policy_document(statements=[{
+    "actions": ["s3:GetObject"],
+    "resources": ["*"],
+    "sid": "OverridePlaceholder",
+}])
+politik = aws.iam.get_policy_document(override_json=override.json,
+    source_json=source.json)
+```
 
 `data.aws_iam_policy_document.politik.json` will evaluate to:
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 
 

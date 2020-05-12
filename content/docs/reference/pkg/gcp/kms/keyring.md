@@ -35,6 +35,12 @@ const example_keyring = new gcp.kms.KeyRing("example-keyring", {
     location: "global",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_keyring = gcp.kms.KeyRing("example-keyring", location="global")
+```
 
 
 

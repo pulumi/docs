@@ -56,6 +56,38 @@ const lambdaLogs = new aws.iam.RolePolicyAttachment("lambda_logs", {
 });
 const testLambda = new aws.lambda.Function("test_lambda", {}, { dependsOn: [example, lambdaLogs] });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_lambda = aws.lambda_.Function("testLambda")
+# This is to optionally manage the CloudWatch Log Group for the Lambda Function.
+# If skipping this resource configuration, also add "logs:CreateLogGroup" to the IAM policy below.
+example = aws.cloudwatch.LogGroup("example", retention_in_days=14)
+# See also the following AWS managed policy: AWSLambdaBasicExecutionRole
+lambda_logging = aws.iam.Policy("lambdaLogging",
+    description="IAM policy for logging from a lambda",
+    path="/",
+    policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:*:*:*",
+      "Effect": "Allow"
+    }
+  ]
+}
+
+""")
+lambda_logs = aws.iam.RolePolicyAttachment("lambdaLogs",
+    policy_arn=lambda_logging.arn,
+    role=aws_iam_role["iam_for_lambda"]["name"])
+```
 
 ## Specifying the Deployment Package
 
@@ -74,54 +106,6 @@ large files efficiently.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Basic Example
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const iamForLambda = new aws.iam.Role("iam_for_lambda", {
-    assumeRolePolicy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "sts:AssumeRole",
-      "Principal": {
-        "Service": "lambda.amazonaws.com"
-      },
-      "Effect": "Allow",
-      "Sid": ""
-    }
-  ]
-}
-`,
-});
-const testLambda = new aws.lambda.Function("test_lambda", {
-    environment: {
-        variables: {
-            foo: "bar",
-        },
-    },
-    code: new pulumi.asset.FileArchive("lambda_function_payload.zip"),
-    handler: "exports.test",
-    role: iamForLambda.arn,
-    runtime: "nodejs12.x",
-});
-```
-{{% /example %}}
-
 ### Lambda Layers
 {{% example csharp %}}
 Coming soon!
@@ -132,7 +116,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_layer_version = aws.lambda_.LayerVersion("exampleLayerVersion")
+example_function = aws.lambda_.Function("exampleFunction", layers=[example_layer_version.arn])
+```
 {{% /example %}}
 
 {{% example typescript %}}

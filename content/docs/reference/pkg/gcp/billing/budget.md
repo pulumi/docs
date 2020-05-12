@@ -18,6 +18,113 @@ To get more information about Budget, see:
 * How-to Guides
     * [Creating a budget](https://cloud.google.com/billing/docs/how-to/budgets)
 
+## Example Usage - Billing Budget Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const account = gcp.organizations.getBillingAccount({
+    billingAccount: "000000-0000000-0000000-000000",
+});
+const budget = new gcp.billing.Budget("budget", {
+    billingAccount: account.then(account => account.id),
+    displayName: "Example Billing Budget",
+    amount: {
+        specified_amount: {
+            currencyCode: "USD",
+            units: "100000",
+        },
+    },
+    threshold_rules: [{
+        thresholdPercent: 0.5,
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+account = gcp.organizations.get_billing_account(billing_account="000000-0000000-0000000-000000")
+budget = gcp.billing.Budget("budget",
+    billing_account=account.id,
+    display_name="Example Billing Budget",
+    amount={
+        "specified_amount": {
+            "currencyCode": "USD",
+            "units": "100000",
+        },
+    },
+    threshold_rules=[{
+        "thresholdPercent": 0.5,
+    }])
+```
+## Example Usage - Billing Budget Filter
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const account = gcp.organizations.getBillingAccount({
+    billingAccount: "000000-0000000-0000000-000000",
+});
+const budget = new gcp.billing.Budget("budget", {
+    billingAccount: account.then(account => account.id),
+    displayName: "Example Billing Budget",
+    budget_filter: {
+        projects: ["projects/my-project-name"],
+        creditTypesTreatment: "EXCLUDE_ALL_CREDITS",
+        services: ["services/24E6-581D-38E5"],
+    },
+    amount: {
+        specified_amount: {
+            currencyCode: "USD",
+            units: "100000",
+        },
+    },
+    threshold_rules: [
+        {
+            thresholdPercent: 0.5,
+        },
+        {
+            thresholdPercent: 0.9,
+            spendBasis: "FORECASTED_SPEND",
+        },
+    ],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+account = gcp.organizations.get_billing_account(billing_account="000000-0000000-0000000-000000")
+budget = gcp.billing.Budget("budget",
+    billing_account=account.id,
+    display_name="Example Billing Budget",
+    budget_filter={
+        "projects": ["projects/my-project-name"],
+        "creditTypesTreatment": "EXCLUDE_ALL_CREDITS",
+        "services": ["services/24E6-581D-38E5"],
+    },
+    amount={
+        "specified_amount": {
+            "currencyCode": "USD",
+            "units": "100000",
+        },
+    },
+    threshold_rules=[
+        {
+            "thresholdPercent": 0.5,
+        },
+        {
+            "thresholdPercent": 0.9,
+            "spendBasis": "FORECASTED_SPEND",
+        },
+    ])
+```
+
 
 
 ## Create a Budget Resource {#create}

@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.msk.get_cluster(cluster_name="example")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -55,6 +55,41 @@ const lambda = new aws.sns.TopicSubscription("lambda", {
     topic: defaultTopic.arn,
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+default_topic = aws.sns.Topic("defaultTopic")
+default_role = aws.iam.Role("defaultRole", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+
+""")
+func = aws.lambda_.Function("func",
+    code=pulumi.FileArchive("lambdatest.zip"),
+    handler="exports.handler",
+    role=default_role.arn,
+    runtime="python2.7")
+with_sns = aws.lambda_.Permission("withSns",
+    action="lambda:InvokeFunction",
+    function=func.name,
+    principal="sns.amazonaws.com",
+    source_arn=default_topic.arn)
+lambda_ = aws.sns.TopicSubscription("lambda",
+    endpoint=func.arn,
+    protocol="lambda",
+    topic=default_topic.arn)
+```
 
 ## Specify Lambda permissions for API Gateway REST API
 
@@ -72,6 +107,17 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
     sourceArn: pulumi.interpolate`${myDemoAPI.executionArn}/*/*/*`,
 });
 ```
+```python
+import pulumi
+import pulumi_aws as aws
+
+my_demo_api = aws.apigateway.RestApi("myDemoAPI", description="This is my API for demonstration purposes")
+lambda_permission = aws.lambda_.Permission("lambdaPermission",
+    action="lambda:InvokeFunction",
+    function="MyDemoFunction",
+    principal="apigateway.amazonaws.com",
+    source_arn=my_demo_api.execution_arn.apply(lambda execution_arn: f"{execution_arn}/*/*/*"))
+```
 
 {{% examples %}}
 ## Example Usage
@@ -87,7 +133,41 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+iam_for_lambda = aws.iam.Role("iamForLambda", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+
+""")
+test_lambda = aws.lambda_.Function("testLambda",
+    code=pulumi.FileArchive("lambdatest.zip"),
+    handler="exports.handler",
+    role=iam_for_lambda.arn,
+    runtime="nodejs8.10")
+test_alias = aws.lambda_.Alias("testAlias",
+    description="a sample description",
+    function_name=test_lambda.name,
+    function_version="$$LATEST")
+allow_cloudwatch = aws.lambda_.Permission("allowCloudwatch",
+    action="lambda:InvokeFunction",
+    function=test_lambda.name,
+    principal="events.amazonaws.com",
+    qualifier=test_alias.name,
+    source_arn="arn:aws:events:eu-west-1:111122223333:rule/RunDaily")
+```
 {{% /example %}}
 
 {{% example typescript %}}

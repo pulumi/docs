@@ -11,13 +11,17 @@ Explore the resources and functions of the logging module in the GCP package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="billingaccountbucketconfig" title="BillingAccountBucketConfig"><span class="symbol resource"></span>BillingAccountBucketConfig</a></li>
     <li><a href="billingaccountexclusion" title="BillingAccountExclusion"><span class="symbol resource"></span>BillingAccountExclusion</a></li>
     <li><a href="billingaccountsink" title="BillingAccountSink"><span class="symbol resource"></span>BillingAccountSink</a></li>
+    <li><a href="folderbucketconfig" title="FolderBucketConfig"><span class="symbol resource"></span>FolderBucketConfig</a></li>
     <li><a href="folderexclusion" title="FolderExclusion"><span class="symbol resource"></span>FolderExclusion</a></li>
     <li><a href="foldersink" title="FolderSink"><span class="symbol resource"></span>FolderSink</a></li>
     <li><a href="metric" title="Metric"><span class="symbol resource"></span>Metric</a></li>
+    <li><a href="organizationbucketconfig" title="OrganizationBucketConfig"><span class="symbol resource"></span>OrganizationBucketConfig</a></li>
     <li><a href="organizationexclusion" title="OrganizationExclusion"><span class="symbol resource"></span>OrganizationExclusion</a></li>
     <li><a href="organizationsink" title="OrganizationSink"><span class="symbol resource"></span>OrganizationSink</a></li>
+    <li><a href="projectbucketconfig" title="ProjectBucketConfig"><span class="symbol resource"></span>ProjectBucketConfig</a></li>
     <li><a href="projectexclusion" title="ProjectExclusion"><span class="symbol resource"></span>ProjectExclusion</a></li>
     <li><a href="projectsink" title="ProjectSink"><span class="symbol resource"></span>ProjectSink</a></li>
 </ul>
@@ -31,6 +35,6 @@ Explore the resources and functions of the logging module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.3.0</dd>
+	<dd>3.4.0</dd>
 </dl>
 

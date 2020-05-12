@@ -19,6 +19,97 @@ To get more information about Dataset, see:
 * How-to Guides
     * [Datasets Intro](https://cloud.google.com/bigquery/docs/datasets-intro)
 
+## Example Usage - Bigquery Dataset Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bqowner = new gcp.serviceAccount.Account("bqowner", {accountId: "bqowner"});
+const dataset = new gcp.bigquery.Dataset("dataset", {
+    datasetId: "example_dataset",
+    friendlyName: "test",
+    description: "This is a test description",
+    location: "EU",
+    defaultTableExpirationMs: 3600000,
+    labels: {
+        env: "default",
+    },
+    access: [
+        {
+            role: "OWNER",
+            userByEmail: bqowner.email,
+        },
+        {
+            role: "READER",
+            domain: "hashicorp.com",
+        },
+    ],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bqowner = gcp.service_account.Account("bqowner", account_id="bqowner")
+dataset = gcp.bigquery.Dataset("dataset",
+    dataset_id="example_dataset",
+    friendly_name="test",
+    description="This is a test description",
+    location="EU",
+    default_table_expiration_ms=3600000,
+    labels={
+        "env": "default",
+    },
+    access=[
+        {
+            "role": "OWNER",
+            "userByEmail": bqowner.email,
+        },
+        {
+            "role": "READER",
+            "domain": "hashicorp.com",
+        },
+    ])
+```
+## Example Usage - Bigquery Dataset Cmek
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyRing = new gcp.kms.KeyRing("keyRing", {location: "us"});
+const cryptoKey = new gcp.kms.CryptoKey("cryptoKey", {keyRing: keyRing.selfLink});
+const dataset = new gcp.bigquery.Dataset("dataset", {
+    datasetId: "example_dataset",
+    friendlyName: "test",
+    description: "This is a test description",
+    location: "US",
+    defaultTableExpirationMs: 3600000,
+    default_encryption_configuration: {
+        kmsKeyName: cryptoKey.selfLink,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+key_ring = gcp.kms.KeyRing("keyRing", location="us")
+crypto_key = gcp.kms.CryptoKey("cryptoKey", key_ring=key_ring.self_link)
+dataset = gcp.bigquery.Dataset("dataset",
+    dataset_id="example_dataset",
+    friendly_name="test",
+    description="This is a test description",
+    location="US",
+    default_table_expiration_ms=3600000,
+    default_encryption_configuration={
+        "kmsKeyName": crypto_key.self_link,
+    })
+```
+
 
 
 ## Create a Dataset Resource {#create}

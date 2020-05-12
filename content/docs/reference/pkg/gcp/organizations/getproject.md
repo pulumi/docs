@@ -14,9 +14,42 @@ Use this data source to get project details.
 For more information see
 [API](https://cloud.google.com/resource-manager/reference/rest/v1/projects#Project)
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+project = gcp.organizations.get_project()
+pulumi.export("projectNumber", project.number)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const project = gcp.organizations.getProject({});
+export const projectNumber = project.then(project => project.number);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetProject {#using}

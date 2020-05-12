@@ -13,9 +13,45 @@ meta_desc: "Explore the RouteTableAssociation resource of the ec2 module, includ
 Provides a resource to create an association between a route table and a subnet or a route table and an
 internet gateway or virtual private gateway.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+route_table_association = aws.ec2.RouteTableAssociation("routeTableAssociation",
+    subnet_id=aws_subnet["foo"]["id"],
+    route_table_id=aws_route_table["bar"]["id"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const routeTableAssociation = new aws.ec2.RouteTableAssociation("routeTableAssociation", {
+    subnetId: aws_subnet.foo.id,
+    routeTableId: aws_route_table.bar.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RouteTableAssociation Resource {#create}

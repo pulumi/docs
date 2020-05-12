@@ -32,6 +32,15 @@ const connector = new gcp.vpcaccess.Connector("connector", {
     region: "us-central1",
 });
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+connector = gcp.vpcaccess.Connector("connector",
+    ip_cidr_range="10.8.0.0/28",
+    network="default",
+    region="us-central1")
+```
 
 
 

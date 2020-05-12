@@ -12,9 +12,81 @@ meta_desc: "Explore the ProvisionedConcurrencyConfig resource of the lambda modu
 
 Manages a Lambda Provisioned Concurrency Configuration.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Alias Name
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.lambda_.ProvisionedConcurrencyConfig("example",
+    function_name=aws_lambda_alias["example"]["function_name"],
+    provisioned_concurrent_executions=1,
+    qualifier=aws_lambda_alias["example"]["name"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.lambda.ProvisionedConcurrencyConfig("example", {
+    functionName: aws_lambda_alias.example.function_name,
+    provisionedConcurrentExecutions: 1,
+    qualifier: aws_lambda_alias.example.name,
+});
+```
+{{% /example %}}
+
+### Function Version
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.lambda_.ProvisionedConcurrencyConfig("example",
+    function_name=aws_lambda_function["example"]["function_name"],
+    provisioned_concurrent_executions=1,
+    qualifier=aws_lambda_function["example"]["version"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.lambda.ProvisionedConcurrencyConfig("example", {
+    functionName: aws_lambda_function.example.function_name,
+    provisionedConcurrentExecutions: 1,
+    qualifier: aws_lambda_function.example.version,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ProvisionedConcurrencyConfig Resource {#create}

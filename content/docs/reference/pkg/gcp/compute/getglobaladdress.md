@@ -13,9 +13,55 @@ meta_desc: "Explore the GetGlobalAddress function of the compute module, includi
 Get the IP address from a static address reserved for a Global Forwarding Rule which are only used for HTTP load balancing. For more information see
 the official [API](https://cloud.google.com/compute/docs/reference/latest/globalAddresses) documentation.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_address = gcp.compute.get_global_address(name="foobar")
+prod = gcp.dns.ManagedZone("prod", dns_name="prod.mydomain.com.")
+frontend = gcp.dns.RecordSet("frontend",
+    type="A",
+    ttl=300,
+    managed_zone=prod.name,
+    rrdatas=[my_address.address])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myAddress = gcp.compute.getGlobalAddress({
+    name: "foobar",
+});
+const prod = new gcp.dns.ManagedZone("prod", {dnsName: "prod.mydomain.com."});
+const frontend = new gcp.dns.RecordSet("frontend", {
+    type: "A",
+    ttl: 300,
+    managedZone: prod.name,
+    rrdatas: [myAddress.then(myAddress => myAddress.address)],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetGlobalAddress {#using}

@@ -20,6 +20,38 @@ Three different resources help you manage IAM policies on bigtable instances. Ea
 
 > **Note:** `gcp.bigtable.InstanceIamBinding` resources **can be** used in conjunction with `gcp.bigtable.InstanceIamMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_bigtable\_instance\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const editor = new gcp.bigtable.InstanceIamPolicy("editor", {
+    project: "your-project",
+    instance: "your-bigtable-instance",
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/editor",
+    "members": ["user:jane@example.com"],
+}])
+editor = gcp.bigtable.InstanceIamPolicy("editor",
+    project="your-project",
+    instance="your-bigtable-instance",
+    policy_data=admin.policy_data)
+```
+
 ## google\_bigtable\_instance\_iam\_binding
 
 ```typescript
@@ -31,6 +63,15 @@ const editor = new gcp.bigtable.InstanceIamBinding("editor", {
     members: ["user:jane@example.com"],
     role: "roles/editor",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+editor = gcp.bigtable.InstanceIamBinding("editor",
+    instance="your-bigtable-instance",
+    members=["user:jane@example.com"],
+    role="roles/editor")
 ```
 
 ## google\_bigtable\_instance\_iam\_member
@@ -44,6 +85,15 @@ const editor = new gcp.bigtable.InstanceIamMember("editor", {
     member: "user:jane@example.com",
     role: "roles/editor",
 });
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+editor = gcp.bigtable.InstanceIamMember("editor",
+    instance="your-bigtable-instance",
+    member="user:jane@example.com",
+    role="roles/editor")
 ```
 
 

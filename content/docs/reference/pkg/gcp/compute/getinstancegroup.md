@@ -23,6 +23,13 @@ const all = pulumi.output(gcp.compute.getInstanceGroup({
     zone: "us-central1-a",
 }, { async: true }));
 ```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+all = gcp.compute.get_instance_group(name="instance-group-name",
+    zone="us-central1-a")
+```
 
 
 
