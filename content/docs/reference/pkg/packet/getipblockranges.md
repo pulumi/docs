@@ -16,9 +16,46 @@ There are four types of IP blocks in Packet: global IPv4, public IPv4, private I
 
 The datasource has 4 list attributes: `global_ipv4`, `public_ipv4`, `private_ipv4` and `ipv6`, each listing CIDR notation (`<network>/<mask>`) of respective blocks from the project.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_packet as packet
+
+project_id = "<UUID_of_your_project>"
+test = packet.get_ip_block_ranges(project_id=project_id)
+pulumi.export("out", test)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as packet from "@pulumi/packet";
+
+const projectId = "<UUID_of_your_project>";
+const test = packet.getIpBlockRanges({
+    projectId: projectId,
+});
+export const out = test;
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetIpBlockRanges {#using}

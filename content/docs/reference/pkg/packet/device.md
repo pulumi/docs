@@ -18,9 +18,53 @@ modify, and delete devices.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_packet as packet
+
+web1 = packet.Device("web1",
+    hostname="tf.coreos2",
+    plan="t1.small.x86",
+    facilities=["ewr1"],
+    operating_system="coreos_stable",
+    billing_cycle="hourly",
+    project_id=local["project_id"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as packet from "@pulumi/packet";
+
+const web1 = new packet.Device("web1", {
+    hostname: "tf.coreos2",
+    plan: "t1.small.x86",
+    facilities: ["ewr1"],
+    operatingSystem: "coreos_stable",
+    billingCycle: "hourly",
+    projectId: local.project_id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Device Resource {#create}

@@ -12,9 +12,63 @@ meta_desc: "Explore the GetOperatingSystem function of the Packet package, inclu
 
 Use this data source to get Packet Operating System image.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_packet as packet
+
+example = packet.get_operating_system(name="Container Linux",
+    distro="coreos",
+    version="alpha",
+    provisionable_on="c1.small.x86")
+server = packet.Device("server",
+    hostname="tf.coreos2",
+    plan="c1.small.x86",
+    facilities=["ewr1"],
+    operating_system=example.id,
+    billing_cycle="hourly",
+    project_id=local["project_id"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as packet from "@pulumi/packet";
+
+const example = packet.getOperatingSystem({
+    name: "Container Linux",
+    distro: "coreos",
+    version: "alpha",
+    provisionableOn: "c1.small.x86",
+});
+const server = new packet.Device("server", {
+    hostname: "tf.coreos2",
+    plan: "c1.small.x86",
+    facilities: ["ewr1"],
+    operatingSystem: example.then(example => example.id),
+    billingCycle: "hourly",
+    projectId: local.project_id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetOperatingSystem {#using}

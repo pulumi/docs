@@ -21,14 +21,137 @@ To learn more about Layer 2 networking in Packet, refer to
 * https://www.packet.com/resources/guides/layer-2-configurations/ 
 * https://www.packet.com/developers/docs/network/advanced/layer-2/
 
-{{% examples %}}
-{{% /examples %}}
+
 ## Attribute Referece
 
 * `id` - UUID of device port used in the assignment
 * `vlan_id` - UUID of VLAN API resource
 * `port_id` - UUID of device port
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_packet as packet
+
+# Hybrid network type
+test_vlan = packet.Vlan("testVlan",
+    description="VLAN in New Jersey",
+    facility="ewr1",
+    project_id=local["project_id"])
+test_device = packet.Device("testDevice",
+    hostname="test",
+    plan="m1.xlarge.x86",
+    facilities=["ewr1"],
+    operating_system="ubuntu_16_04",
+    billing_cycle="hourly",
+    project_id=local["project_id"],
+    network_type="hybrid")
+test_port_vlan_attachment = packet.PortVlanAttachment("testPortVlanAttachment",
+    device_id=test_device.id,
+    port_name="eth1",
+    vlan_vnid=test_vlan.vxlan)
+# Layer 2 network
+test_index_device_device = packet.Device("testIndex/deviceDevice",
+    hostname="test",
+    plan="m1.xlarge.x86",
+    facilities=["ewr1"],
+    operating_system="ubuntu_16_04",
+    billing_cycle="hourly",
+    project_id=local["project_id"],
+    network_type="layer2-individual")
+test1_vlan = packet.Vlan("test1Vlan",
+    description="VLAN in New Jersey",
+    facility="ewr1",
+    project_id=local["project_id"])
+test2_vlan = packet.Vlan("test2Vlan",
+    description="VLAN in New Jersey",
+    facility="ewr1",
+    project_id=local["project_id"])
+test1_port_vlan_attachment = packet.PortVlanAttachment("test1PortVlanAttachment",
+    device_id=test_device.id,
+    vlan_vnid=test1_vlan.vxlan,
+    port_name="eth1")
+test2_port_vlan_attachment = packet.PortVlanAttachment("test2PortVlanAttachment",
+    device_id=test_device.id,
+    vlan_vnid=test2_vlan.vxlan,
+    port_name="eth1",
+    native=True)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as packet from "@pulumi/packet";
+
+// Hybrid network type
+const testVlan = new packet.Vlan("testVlan", {
+    description: "VLAN in New Jersey",
+    facility: "ewr1",
+    projectId: local.project_id,
+});
+const testDevice = new packet.Device("testDevice", {
+    hostname: "test",
+    plan: "m1.xlarge.x86",
+    facilities: ["ewr1"],
+    operatingSystem: "ubuntu_16_04",
+    billingCycle: "hourly",
+    projectId: local.project_id,
+    networkType: "hybrid",
+});
+const testPortVlanAttachment = new packet.PortVlanAttachment("testPortVlanAttachment", {
+    deviceId: testDevice.id,
+    portName: "eth1",
+    vlanVnid: testVlan.vxlan,
+});
+// Layer 2 network
+const testIndex/deviceDevice = new packet.Device("testIndex/deviceDevice", {
+    hostname: "test",
+    plan: "m1.xlarge.x86",
+    facilities: ["ewr1"],
+    operatingSystem: "ubuntu_16_04",
+    billingCycle: "hourly",
+    projectId: local.project_id,
+    networkType: "layer2-individual",
+});
+const test1Vlan = new packet.Vlan("test1Vlan", {
+    description: "VLAN in New Jersey",
+    facility: "ewr1",
+    projectId: local.project_id,
+});
+const test2Vlan = new packet.Vlan("test2Vlan", {
+    description: "VLAN in New Jersey",
+    facility: "ewr1",
+    projectId: local.project_id,
+});
+const test1PortVlanAttachment = new packet.PortVlanAttachment("test1PortVlanAttachment", {
+    deviceId: testDevice.id,
+    vlanVnid: test1Vlan.vxlan,
+    portName: "eth1",
+});
+const test2PortVlanAttachment = new packet.PortVlanAttachment("test2PortVlanAttachment", {
+    deviceId: testDevice.id,
+    vlanVnid: test2Vlan.vxlan,
+    portName: "eth1",
+    native: true,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PortVlanAttachment Resource {#create}

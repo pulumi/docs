@@ -16,9 +16,49 @@ To learn more about Layer 2 networking in Packet, refer to
 * https://www.packet.com/resources/guides/layer-2-configurations/
 * https://www.packet.com/developers/docs/network/advanced/layer-2/
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_packet as packet
+
+# Create a new VLAN in datacenter "ewr1"
+vlan1 = packet.Vlan("vlan1",
+    description="VLAN in New Jersey",
+    facility="ewr1",
+    project_id=local["project_id"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as packet from "@pulumi/packet";
+
+// Create a new VLAN in datacenter "ewr1"
+const vlan1 = new packet.Vlan("vlan1", {
+    description: "VLAN in New Jersey",
+    facility: "ewr1",
+    projectId: local.project_id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Vlan Resource {#create}
