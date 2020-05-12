@@ -12,9 +12,60 @@ meta_desc: "Explore the PipelineScheduleVariable resource of the GitLab package,
 
 This resource allows you to create and manage variables for pipeline schedules.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gitlab as gitlab
+
+example_pipeline_schedule = gitlab.PipelineSchedule("examplePipelineSchedule",
+    project="12345",
+    description="Used to schedule builds",
+    ref="master",
+    cron="0 1 * * *")
+example_pipeline_schedule_variable = gitlab.PipelineScheduleVariable("examplePipelineScheduleVariable",
+    project=gitlab_pipeline_schedule["project"],
+    pipeline_schedule_id=gitlab_pipeline_schedule["id"],
+    key="EXAMPLE_KEY",
+    value="example")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gitlab from "@pulumi/gitlab";
+
+const examplePipelineSchedule = new gitlab.PipelineSchedule("examplePipelineSchedule", {
+    project: "12345",
+    description: "Used to schedule builds",
+    ref: "master",
+    cron: "0 1 * * *",
+});
+const examplePipelineScheduleVariable = new gitlab.PipelineScheduleVariable("examplePipelineScheduleVariable", {
+    project: gitlab_pipeline_schedule.project,
+    pipelineScheduleId: gitlab_pipeline_schedule.id,
+    key: "EXAMPLE_KEY",
+    value: "example",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PipelineScheduleVariable Resource {#create}

@@ -31,7 +31,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gitlab as gitlab
+
+foo = gitlab.Group("foo", path="foo-path")
+bar = gitlab.GroupCluster("bar",
+    domain="example.com",
+    enabled=True,
+    environment_scope="*",
+    group=foo.id,
+    kubernetes_api_url="https://124.124.124",
+    kubernetes_authorization_type="rbac",
+    kubernetes_ca_cert="some-cert",
+    kubernetes_token="some-token")
+```
 {{% /example %}}
 
 {{% example typescript %}}

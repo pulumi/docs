@@ -30,7 +30,24 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gitlab as gitlab
+
+# A repo to host the deployment key
+parent_project = gitlab.Project("parentProject")
+# A second repo to use the deployment key from the parent project
+foo_project = gitlab.Project("fooProject")
+# Upload a deployment key for the parent repo
+parent_deploy_key = gitlab.DeployKey("parentDeployKey",
+    key="ssh-rsa AAAA...",
+    project=parent_project.id,
+    title="Example deploy key")
+# Enable the deployment key on the second repo
+foo_deploy_key_enable = gitlab.DeployKeyEnable("fooDeployKeyEnable",
+    key_id=parent_deploy_key.id,
+    project=foo_project.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

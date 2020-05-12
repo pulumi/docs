@@ -30,7 +30,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gitlab as gitlab
+
+example = gitlab.PipelineSchedule("example",
+    cron="0 1 * * *",
+    description="Used to schedule builds",
+    project="12345",
+    ref="master")
+```
 {{% /example %}}
 
 {{% example typescript %}}

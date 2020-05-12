@@ -30,7 +30,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gitlab as gitlab
+
+example = gitlab.get_users(created_before="2019-01-01",
+    order_by="name",
+    sort="desc")
+```
 {{% /example %}}
 
 {{% example typescript %}}

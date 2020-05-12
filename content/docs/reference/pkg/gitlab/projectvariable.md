@@ -31,7 +31,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gitlab as gitlab
+
+example = gitlab.ProjectVariable("example",
+    key="project_variable_key",
+    project="12345",
+    protected=False,
+    value="project_variable_value")
+```
 {{% /example %}}
 
 {{% example typescript %}}

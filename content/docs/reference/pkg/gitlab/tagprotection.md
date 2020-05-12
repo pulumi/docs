@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gitlab as gitlab
+
+tag_protect = gitlab.TagProtection("tagProtect",
+    create_access_level="developer",
+    project="12345",
+    tag="TagProtected")
+```
 {{% /example %}}
 
 {{% example typescript %}}

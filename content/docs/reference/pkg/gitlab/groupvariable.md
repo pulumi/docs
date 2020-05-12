@@ -31,7 +31,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gitlab as gitlab
+
+example = gitlab.GroupVariable("example",
+    group="12345",
+    key="group_variable_key",
+    protected=False,
+    value="group_variable_value")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -28,7 +28,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_gitlab as gitlab
+
+branch_protect = gitlab.BranchProtection("branchProtect",
+    branch="BranchProtected",
+    merge_access_level="developer",
+    project="12345",
+    push_access_level="developer")
+```
 {{% /example %}}
 
 {{% example typescript %}}
