@@ -73,20 +73,20 @@ group = aws.ec2.SecurityGroup('my-sg',
 {{% choosable language go %}}
 
 ```go
-group, err := ec2.NewSecurityGroup(ctx, "my-sg",
+group, err := ec2.NewSecurityGroup(ctx, "web-sg",
     &ec2.SecurityGroupArgs{
-        Name: "my-sg-62a569b",
-        Description: "Enable HTTP access",
-        Ingress: []map[string]interface{}{
-            {
-                "protocol":   "tcp",
-                "fromPort":   80,
-                "toPort":     80,
-                "cidrBlocks": []string{"0.0.0.0/0"},
+        Name:        pulumi.String("web-sg-62a569b"),
+        Description: pulumi.String("Enable HTTP access"),
+        Ingress: ec2.SecurityGroupIngressArray{
+            ec2.SecurityGroupIngressArgs{
+                Protocol:   pulumi.String("tcp"),
+                FromPort:   pulumi.Int(80),
+                ToPort:     pulumi.Int(80),
+                CidrBlocks: pulumi.StringArray{pulumi.String("0.0.0.0/0")},
             },
         },
     },
-    pulumi.ResourceOpt{Import: "sg-04aeda9a214730248"},
+    pulumi.Import(pulumi.ID("sg-04aeda9a214730248")),
 )
 if err != nil {
     return err
