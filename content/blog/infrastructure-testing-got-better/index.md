@@ -1,6 +1,7 @@
 ---
 title: "At Scale Infrastructure Testing With Pulumi"
 date: 2020-05-13
+draft: true
 meta_desc: "Pulumi accelerates infrastructure testing 60x with mocking and unit tests."
 meta_image: dustin-farris.png
 authors:
