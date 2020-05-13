@@ -40,3 +40,21 @@ A Pulumi package for creating and managing F5 BigIP resources.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.html" title="Pulumi.F5BigIP">Pulumi.F5BigIP</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/?tab=doc#" title="f5bigip">f5bigip</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/#" title="@pulumi/f5bigip">@pulumi/f5bigip</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_f5bigip" title="pulumi_f5bigip">pulumi_f5bigip</a></dd>
+
+</dl>
+
