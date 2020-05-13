@@ -26,3 +26,21 @@ Explore the resources and functions of the gcp module in the Datadog package.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Gcp.html" title="Pulumi.Datadog.Gcp">Pulumi.Datadog.Gcp</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/gcp?tab=doc#" title="datadog/gcp">datadog/gcp</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/datadog/gcp/#" title="@pulumi/datadog/gcp">@pulumi/datadog/gcp</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_datadog/gcp" title="pulumi_datadog/gcp">pulumi_datadog/gcp</a></dd>
+
+</dl>
+
