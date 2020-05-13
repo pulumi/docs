@@ -22,6 +22,12 @@ import * as postgresql from "@pulumi/postgresql";
 
 const myExtension = new postgresql.Extension("my_extension", {});
 ```
+```python
+import pulumi
+import pulumi_postgresql as postgresql
+
+my_extension = postgresql.Extension("myExtension")
+```
 
 
 

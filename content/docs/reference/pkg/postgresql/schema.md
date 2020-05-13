@@ -46,6 +46,32 @@ const mySchema = new postgresql.Schema("my_schema", {
     ],
 });
 ```
+```python
+import pulumi
+import pulumi_postgresql as postgresql
+
+app_www = postgresql.Role("appWww")
+app_dba = postgresql.Role("appDba")
+app_releng = postgresql.Role("appReleng")
+my_schema = postgresql.Schema("mySchema",
+    owner="postgres",
+    policies=[
+        {
+            "role": app_www.name,
+            "usage": True,
+        },
+        {
+            "create": True,
+            "role": app_releng.name,
+            "usage": True,
+        },
+        {
+            "createWithGrant": True,
+            "role": app_dba.name,
+            "usageWithGrant": True,
+        },
+    ])
+```
 
 
 
