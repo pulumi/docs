@@ -33,3 +33,21 @@ Explore the resources and functions of the gpdb module in the AliCloud package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Gpdb.html" title="Pulumi.AliCloud.Gpdb">Pulumi.AliCloud.Gpdb</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/gpdb?tab=doc#" title="alicloud/gpdb">alicloud/gpdb</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/gpdb/#" title="@pulumi/alicloud/gpdb">@pulumi/alicloud/gpdb</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/gpdb" title="pulumi_alicloud/gpdb">pulumi_alicloud/gpdb</a></dd>
+
+</dl>
+

@@ -29,3 +29,21 @@ Explore the resources and functions of the resourcemanager module in the AliClou
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ResourceManager.html" title="Pulumi.AliCloud.ResourceManager">Pulumi.AliCloud.ResourceManager</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/resourcemanager?tab=doc#" title="alicloud/resourcemanager">alicloud/resourcemanager</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/resourcemanager/#" title="@pulumi/alicloud/resourcemanager">@pulumi/alicloud/resourcemanager</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/resourcemanager" title="pulumi_alicloud/resourcemanager">pulumi_alicloud/resourcemanager</a></dd>
+
+</dl>
+

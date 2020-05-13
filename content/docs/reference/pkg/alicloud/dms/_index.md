@@ -26,3 +26,21 @@ Explore the resources and functions of the dms module in the AliCloud package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Dms.html" title="Pulumi.AliCloud.Dms">Pulumi.AliCloud.Dms</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/dms?tab=doc#" title="alicloud/dms">alicloud/dms</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/dms/#" title="@pulumi/alicloud/dms">@pulumi/alicloud/dms</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/dms" title="pulumi_alicloud/dms">pulumi_alicloud/dms</a></dd>
+
+</dl>
+

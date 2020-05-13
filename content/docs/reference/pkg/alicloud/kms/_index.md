@@ -37,3 +37,21 @@ Explore the resources and functions of the kms module in the AliCloud package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Kms.html" title="Pulumi.AliCloud.Kms">Pulumi.AliCloud.Kms</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/kms?tab=doc#" title="alicloud/kms">alicloud/kms</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/kms/#" title="@pulumi/alicloud/kms">@pulumi/alicloud/kms</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/kms" title="pulumi_alicloud/kms">pulumi_alicloud/kms</a></dd>
+
+</dl>
+

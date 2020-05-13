@@ -89,3 +89,21 @@ A Pulumi package for creating and managing AliCloud resources.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.html" title="Pulumi.AliCloud">Pulumi.AliCloud</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/?tab=doc#" title="alicloud">alicloud</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/#" title="@pulumi/alicloud">@pulumi/alicloud</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud" title="pulumi_alicloud">pulumi_alicloud</a></dd>
+
+</dl>
+
