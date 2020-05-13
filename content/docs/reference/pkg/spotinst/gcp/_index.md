@@ -23,6 +23,24 @@ Explore the resources and functions of the gcp module in the Spotinst package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`spotinst` Terraform Provider](https://github.com/terraform-providers/terraform-provider-spotinst).</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
+	<dd>2.3.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Gcp.html" title="Pulumi.Spotinst.Gcp">Pulumi.Spotinst.Gcp</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#" title="spotinst/gcp">spotinst/gcp</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/gcp/#" title="@pulumi/spotinst/gcp">@pulumi/spotinst/gcp</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_spotinst/gcp" title="pulumi_spotinst/gcp">pulumi_spotinst/gcp</a></dd>
+
 </dl>
 
