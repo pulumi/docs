@@ -1,7 +1,7 @@
 ---
 title: "At Scale Infrastructure Testing With Pulumi"
 date: 2020-05-13
-meta_desc: "Pulumi accelerates infrastructure testing 6000x with mocking and unit tests."
+meta_desc: "Pulumi accelerates infrastructure testing 60x with mocking and unit tests."
 meta_image: dustin-farris.png
 authors:
     - dustin-farris
@@ -118,7 +118,7 @@ After working with Pulumi to build-out our data lake and implementing robust, en
 
 ## Conclusion
 
-Testing is just one of the superpowers that Pulumi 2.0 delivers. For more information, see our [Testing User Guide]({{< relref "/docs/guides/testing" >}}) and [worked examples](https://github.com/pulumi/examples#testing) on GitHub in the language of your choice. Watch Dustin Farris and Lee Zen demonstrate unit testing on this episode of Modern Infrastructure as Code. 
+Testing is just one of the superpowers that Pulumi 2.0 delivers. For more information, see our [Testing User Guide]({{< relref "/docs/guides/testing" >}}) and [worked examples](https://github.com/pulumi/examples#testing) on GitHub in the language of your choice. Watch Dustin Farris and Lee Zen demonstrate unit testing on this episode of [Modern Infrastructure Wednesday](https://www.youtube.com/playlist?list=PLyy8Vx2ZoWloyj3V5gXzPraiKStO2GGZw).
 
 {{< youtube "ydR61dZmKgU" >}}
 
