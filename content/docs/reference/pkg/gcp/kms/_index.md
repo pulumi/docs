@@ -44,3 +44,21 @@ Explore the resources and functions of the kms module in the GCP package.
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.html" title="Pulumi.Gcp.Kms">Pulumi.Gcp.Kms</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#" title="gcp/kms">gcp/kms</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#" title="@pulumi/gcp/kms">@pulumi/gcp/kms</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/kms" title="pulumi_gcp/kms">pulumi_gcp/kms</a></dd>
+
+</dl>
+

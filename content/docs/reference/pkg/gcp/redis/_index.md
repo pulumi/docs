@@ -26,3 +26,21 @@ Explore the resources and functions of the redis module in the GCP package.
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Redis.html" title="Pulumi.Gcp.Redis">Pulumi.Gcp.Redis</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/redis?tab=doc#" title="gcp/redis">gcp/redis</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/redis/#" title="@pulumi/gcp/redis">@pulumi/gcp/redis</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/redis" title="pulumi_gcp/redis">pulumi_gcp/redis</a></dd>
+
+</dl>
+

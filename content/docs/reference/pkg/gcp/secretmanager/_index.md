@@ -35,3 +35,21 @@ Explore the resources and functions of the secretmanager module in the GCP packa
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecretManager.html" title="Pulumi.Gcp.SecretManager">Pulumi.Gcp.SecretManager</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/secretmanager?tab=doc#" title="gcp/secretmanager">gcp/secretmanager</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/secretmanager/#" title="@pulumi/gcp/secretmanager">@pulumi/gcp/secretmanager</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/secretmanager" title="pulumi_gcp/secretmanager">pulumi_gcp/secretmanager</a></dd>
+
+</dl>
+

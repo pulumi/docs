@@ -26,3 +26,21 @@ Explore the resources and functions of the deploymentmanager module in the GCP p
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.html" title="Pulumi.Gcp.DeploymentManager">Pulumi.Gcp.DeploymentManager</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#" title="gcp/deploymentmanager">gcp/deploymentmanager</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/deploymentmanager/#" title="@pulumi/gcp/deploymentmanager">@pulumi/gcp/deploymentmanager</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/deploymentmanager" title="pulumi_gcp/deploymentmanager">pulumi_gcp/deploymentmanager</a></dd>
+
+</dl>
+

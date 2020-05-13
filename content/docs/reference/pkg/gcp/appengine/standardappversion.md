@@ -49,19 +49,19 @@ const myappV1 = new gcp.appengine.StandardAppVersion("myappV1", {
     envVariables: {
         port: "8080",
     },
-    automatic_scaling: [{
+    automatic_scaling: {
         maxConcurrentRequests: 10,
         minIdleInstances: 1,
         maxIdleInstances: 3,
         minPendingLatency: "1s",
         maxPendingLatency: "5s",
-        standard_scheduler_settings: [{
+        standard_scheduler_settings: {
             targetCpuUtilization: 0.5,
             targetThroughputUtilization: 0.75,
             minInstances: 2,
             maxInstances: 10,
-        }],
-    }],
+        },
+    },
     deleteServiceOnDestroy: true,
 });
 const myappV2 = new gcp.appengine.StandardAppVersion("myappV2", {
@@ -79,9 +79,9 @@ const myappV2 = new gcp.appengine.StandardAppVersion("myappV2", {
     envVariables: {
         port: "8080",
     },
-    basic_scaling: [{
+    basic_scaling: {
         maxInstances: 5,
-    }],
+    },
     noopOnDestroy: true,
 });
 ```
@@ -108,19 +108,19 @@ myapp_v1 = gcp.appengine.StandardAppVersion("myappV1",
     env_variables={
         "port": "8080",
     },
-    automatic_scaling=[{
+    automatic_scaling={
         "maxConcurrentRequests": 10,
         "minIdleInstances": 1,
         "maxIdleInstances": 3,
         "minPendingLatency": "1s",
         "maxPendingLatency": "5s",
-        "standard_scheduler_settings": [{
+        "standard_scheduler_settings": {
             "targetCpuUtilization": 0.5,
             "targetThroughputUtilization": 0.75,
             "minInstances": 2,
             "maxInstances": 10,
-        }],
-    }],
+        },
+    },
     delete_service_on_destroy=True)
 myapp_v2 = gcp.appengine.StandardAppVersion("myappV2",
     version_id="v2",
@@ -137,9 +137,9 @@ myapp_v2 = gcp.appengine.StandardAppVersion("myappV2",
     env_variables={
         "port": "8080",
     },
-    basic_scaling=[{
+    basic_scaling={
         "maxInstances": 5,
-    }],
+    },
     noop_on_destroy=True)
 ```
 

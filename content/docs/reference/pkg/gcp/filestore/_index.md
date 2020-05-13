@@ -26,3 +26,21 @@ Explore the resources and functions of the filestore module in the GCP package.
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Filestore.html" title="Pulumi.Gcp.Filestore">Pulumi.Gcp.Filestore</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/filestore?tab=doc#" title="gcp/filestore">gcp/filestore</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/filestore/#" title="@pulumi/gcp/filestore">@pulumi/gcp/filestore</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/filestore" title="pulumi_gcp/filestore">pulumi_gcp/filestore</a></dd>
+
+</dl>
+

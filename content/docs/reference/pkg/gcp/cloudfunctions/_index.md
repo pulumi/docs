@@ -34,3 +34,21 @@ Explore the resources and functions of the cloudfunctions module in the GCP pack
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.html" title="Pulumi.Gcp.CloudFunctions">Pulumi.Gcp.CloudFunctions</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#" title="gcp/cloudfunctions">gcp/cloudfunctions</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#" title="@pulumi/gcp/cloudfunctions">@pulumi/gcp/cloudfunctions</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/cloudfunctions" title="pulumi_gcp/cloudfunctions">pulumi_gcp/cloudfunctions</a></dd>
+
+</dl>
+

@@ -26,3 +26,21 @@ Explore the resources and functions of the serviceusage module in the GCP packag
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ServiceUsage.html" title="Pulumi.Gcp.ServiceUsage">Pulumi.Gcp.ServiceUsage</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceusage?tab=doc#" title="gcp/serviceusage">gcp/serviceusage</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/serviceusage/#" title="@pulumi/gcp/serviceusage">@pulumi/gcp/serviceusage</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/serviceusage" title="pulumi_gcp/serviceusage">pulumi_gcp/serviceusage</a></dd>
+
+</dl>
+

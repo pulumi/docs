@@ -33,3 +33,21 @@ Explore the resources and functions of the spanner module in the GCP package.
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Spanner.html" title="Pulumi.Gcp.Spanner">Pulumi.Gcp.Spanner</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/spanner?tab=doc#" title="gcp/spanner">gcp/spanner</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/spanner/#" title="@pulumi/gcp/spanner">@pulumi/gcp/spanner</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/spanner" title="pulumi_gcp/spanner">pulumi_gcp/spanner</a></dd>
+
+</dl>
+

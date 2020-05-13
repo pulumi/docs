@@ -15,6 +15,243 @@ Once a BigQuery job is created, it cannot be changed or deleted.
 
 
 
+## Example Usage - Bigquery Job Query
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bar = new gcp.bigquery.Dataset("bar", {
+    datasetId: "job_query_dataset",
+    friendlyName: "test",
+    description: "This is a test description",
+    location: "US",
+});
+const foo = new gcp.bigquery.Table("foo", {
+    datasetId: bar.datasetId,
+    tableId: "job_query_table",
+});
+const job = new gcp.bigquery.Job("job", {
+    jobId: "job_query",
+    labels: {
+        "example-label": "example-value",
+    },
+    query: {
+        query: "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
+        destination_table: {
+            projectId: foo.project,
+            datasetId: foo.datasetId,
+            tableId: foo.tableId,
+        },
+        allowLargeResults: true,
+        flattenResults: true,
+        script_options: {
+            keyResultStatement: "LAST",
+        },
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bar = gcp.bigquery.Dataset("bar",
+    dataset_id="job_query_dataset",
+    friendly_name="test",
+    description="This is a test description",
+    location="US")
+foo = gcp.bigquery.Table("foo",
+    dataset_id=bar.dataset_id,
+    table_id="job_query_table")
+job = gcp.bigquery.Job("job",
+    job_id="job_query",
+    labels={
+        "example-label": "example-value",
+    },
+    query={
+        "query": "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
+        "destination_table": {
+            "projectId": foo.project,
+            "datasetId": foo.dataset_id,
+            "tableId": foo.table_id,
+        },
+        "allowLargeResults": True,
+        "flattenResults": True,
+        "script_options": {
+            "keyResultStatement": "LAST",
+        },
+    })
+```
+## Example Usage - Bigquery Job Load
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bar = new gcp.bigquery.Dataset("bar", {
+    datasetId: "job_load_dataset",
+    friendlyName: "test",
+    description: "This is a test description",
+    location: "US",
+});
+const foo = new gcp.bigquery.Table("foo", {
+    datasetId: bar.datasetId,
+    tableId: "job_load_table",
+});
+const job = new gcp.bigquery.Job("job", {
+    jobId: "job_load",
+    labels: {
+        my_job: "load",
+    },
+    load: {
+        sourceUris: ["gs://cloud-samples-data/bigquery/us-states/us-states-by-date.csv"],
+        destination_table: {
+            projectId: foo.project,
+            datasetId: foo.datasetId,
+            tableId: foo.tableId,
+        },
+        skipLeadingRows: 1,
+        schemaUpdateOptions: [
+            "ALLOW_FIELD_RELAXATION",
+            "ALLOW_FIELD_ADDITION",
+        ],
+        writeDisposition: "WRITE_APPEND",
+        autodetect: true,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bar = gcp.bigquery.Dataset("bar",
+    dataset_id="job_load_dataset",
+    friendly_name="test",
+    description="This is a test description",
+    location="US")
+foo = gcp.bigquery.Table("foo",
+    dataset_id=bar.dataset_id,
+    table_id="job_load_table")
+job = gcp.bigquery.Job("job",
+    job_id="job_load",
+    labels={
+        "my_job": "load",
+    },
+    load={
+        "sourceUris": ["gs://cloud-samples-data/bigquery/us-states/us-states-by-date.csv"],
+        "destination_table": {
+            "projectId": foo.project,
+            "datasetId": foo.dataset_id,
+            "tableId": foo.table_id,
+        },
+        "skipLeadingRows": 1,
+        "schemaUpdateOptions": [
+            "ALLOW_FIELD_RELAXATION",
+            "ALLOW_FIELD_ADDITION",
+        ],
+        "writeDisposition": "WRITE_APPEND",
+        "autodetect": True,
+    })
+```
+## Example Usage - Bigquery Job Extract
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const source-oneDataset = new gcp.bigquery.Dataset("source-oneDataset", {
+    datasetId: "job_extract_dataset",
+    friendlyName: "test",
+    description: "This is a test description",
+    location: "US",
+});
+const source-oneTable = new gcp.bigquery.Table("source-oneTable", {
+    datasetId: source-oneDataset.datasetId,
+    tableId: "job_extract_table",
+    schema: `[
+  {
+    "name": "name",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "post_abbr",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "date",
+    "type": "DATE",
+    "mode": "NULLABLE"
+  }
+]
+`,
+});
+const dest = new gcp.storage.Bucket("dest", {forceDestroy: true});
+const job = new gcp.bigquery.Job("job", {
+    jobId: "job_extract",
+    extract: {
+        destinationUris: [pulumi.interpolate`${dest.url}/extract`],
+        source_table: {
+            projectId: source-oneTable.project,
+            datasetId: source-oneTable.datasetId,
+            tableId: source-oneTable.tableId,
+        },
+        destinationFormat: "NEWLINE_DELIMITED_JSON",
+        compression: "GZIP",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+source_one_dataset = gcp.bigquery.Dataset("source-oneDataset",
+    dataset_id="job_extract_dataset",
+    friendly_name="test",
+    description="This is a test description",
+    location="US")
+source_one_table = gcp.bigquery.Table("source-oneTable",
+    dataset_id=source_one_dataset.dataset_id,
+    table_id="job_extract_table",
+    schema="""[
+  {
+    "name": "name",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "post_abbr",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "date",
+    "type": "DATE",
+    "mode": "NULLABLE"
+  }
+]
+""")
+dest = gcp.storage.Bucket("dest", force_destroy=True)
+job = gcp.bigquery.Job("job",
+    job_id="job_extract",
+    extract={
+        "destinationUris": [dest.url.apply(lambda url: f"{url}/extract")],
+        "source_table": {
+            "projectId": source_one_table.project,
+            "datasetId": source_one_table.dataset_id,
+            "tableId": source_one_table.table_id,
+        },
+        "destinationFormat": "NEWLINE_DELIMITED_JSON",
+        "compression": "GZIP",
+    })
+```
+
+
+
 ## Create a Job Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

@@ -29,3 +29,21 @@ Explore the resources and functions of the endpoints module in the GCP package.
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Endpoints.html" title="Pulumi.Gcp.Endpoints">Pulumi.Gcp.Endpoints</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/endpoints?tab=doc#" title="gcp/endpoints">gcp/endpoints</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/endpoints/#" title="@pulumi/gcp/endpoints">@pulumi/gcp/endpoints</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/endpoints" title="pulumi_gcp/endpoints">pulumi_gcp/endpoints</a></dd>
+
+</dl>
+

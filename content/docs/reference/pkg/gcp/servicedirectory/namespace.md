@@ -19,6 +19,35 @@ To get more information about Namespace, see:
 * How-to Guides
     * [Configuring a namespace](https://cloud.google.com/service-directory/docs/configuring-service-directory#configuring_a_namespace)
 
+## Example Usage - Service Directory Namespace Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example = new gcp.servicedirectory.Namespace("example", {
+    namespaceId: "example-namespace",
+    location: "us-central1",
+    labels: {
+        key: "value",
+        foo: "bar",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example = gcp.servicedirectory.Namespace("example",
+    namespace_id="example-namespace",
+    location="us-central1",
+    labels={
+        "key": "value",
+        "foo": "bar",
+    })
+```
+
 
 
 ## Create a Namespace Resource {#create}

@@ -26,3 +26,21 @@ Explore the resources and functions of the iam module in the GCP package.
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iam.html" title="Pulumi.Gcp.Iam">Pulumi.Gcp.Iam</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iam?tab=doc#" title="gcp/iam">gcp/iam</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/iam/#" title="@pulumi/gcp/iam">@pulumi/gcp/iam</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/iam" title="pulumi_gcp/iam">pulumi_gcp/iam</a></dd>
+
+</dl>
+

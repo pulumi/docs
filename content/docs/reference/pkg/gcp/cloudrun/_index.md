@@ -30,3 +30,21 @@ Explore the resources and functions of the cloudrun module in the GCP package.
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.html" title="Pulumi.Gcp.CloudRun">Pulumi.Gcp.CloudRun</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#" title="gcp/cloudrun">gcp/cloudrun</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#" title="@pulumi/gcp/cloudrun">@pulumi/gcp/cloudrun</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/cloudrun" title="pulumi_gcp/cloudrun">pulumi_gcp/cloudrun</a></dd>
+
+</dl>
+

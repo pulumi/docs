@@ -26,3 +26,21 @@ Explore the resources and functions of the resourcemanager module in the GCP pac
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ResourceManager.html" title="Pulumi.Gcp.ResourceManager">Pulumi.Gcp.ResourceManager</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/resourcemanager?tab=doc#" title="gcp/resourcemanager">gcp/resourcemanager</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/resourcemanager/#" title="@pulumi/gcp/resourcemanager">@pulumi/gcp/resourcemanager</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/resourcemanager" title="pulumi_gcp/resourcemanager">pulumi_gcp/resourcemanager</a></dd>
+
+</dl>
+

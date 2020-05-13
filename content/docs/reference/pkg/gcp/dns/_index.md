@@ -34,3 +34,21 @@ Explore the resources and functions of the dns module in the GCP package.
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.html" title="Pulumi.Gcp.Dns">Pulumi.Gcp.Dns</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#" title="gcp/dns">gcp/dns</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dns/#" title="@pulumi/gcp/dns">@pulumi/gcp/dns</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/dns" title="pulumi_gcp/dns">pulumi_gcp/dns</a></dd>
+
+</dl>
+

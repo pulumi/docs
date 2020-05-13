@@ -217,6 +217,47 @@ peering_zone = gcp.dns.ManagedZone("peering-zone",
         },
     })
 ```
+## Example Usage - Dns Managed Zone Service Directory
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example = new gcp.servicedirectory.Namespace("example", {
+    namespaceId: "example",
+    location: "us-central1",
+});
+const sd-zone = new gcp.dns.ManagedZone("sd-zone", {
+    dnsName: "services.example.com.",
+    description: "Example private DNS Service Directory zone",
+    visibility: "private",
+    service_directory_config: {
+        namespace: {
+            namespaceUrl: example.id,
+        },
+    },
+});
+const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example = gcp.servicedirectory.Namespace("example",
+    namespace_id="example",
+    location="us-central1")
+sd_zone = gcp.dns.ManagedZone("sd-zone",
+    dns_name="services.example.com.",
+    description="Example private DNS Service Directory zone",
+    visibility="private",
+    service_directory_config={
+        "namespace": {
+            "namespaceUrl": example.id,
+        },
+    })
+network = gcp.compute.Network("network", auto_create_subnetworks=False)
+```
 
 
 
