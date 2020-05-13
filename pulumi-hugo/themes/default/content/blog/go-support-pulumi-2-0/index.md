@@ -27,7 +27,7 @@ Pulumi is a modern infrastructure as code tool for the cloud.  It is built aroun
 
 ## Giving you superpowers
 
-Pulumi gives you the productivity superpowers of real programming languages. But what can you do with them?
+Pulumi gives you the software engineering superpowers of the Go programming language for working with cloud infrastructure. But what can you do with them?  In this post, we'll walk through a few vignettes of how Pulumi can be used to work with serverless, containers and Kubernetes workloads across GCP, Azure, AWS and self-managed clouds.
 
 ### Serverless
 
