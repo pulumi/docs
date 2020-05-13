@@ -14,7 +14,7 @@ Manages an Azure Container Registry Webhook.
 
 
 
-Deprecated: azure.containerservice.RegistryWebook has been deprecated in favour of azure.containerservice.RegistryWebhook
+Deprecated: azure.containerservice.RegistryWebook has been deprecated in favor of azure.containerservice.RegistryWebhook
 
 {{% examples %}}
 ## Example Usage
@@ -82,7 +82,7 @@ const webhook = new azure.containerservice.RegistryWebhook("webhook", {
 {{% /example %}}
 
 {{% /examples %}}
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.containerservice.RegistryWebook has been deprecated in favour of azure.containerservice.RegistryWebhook{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.containerservice.RegistryWebook has been deprecated in favor of azure.containerservice.RegistryWebhook{{% /md %}}</p>
 
 
 ## Create a RegistryWebook Resource {#create}

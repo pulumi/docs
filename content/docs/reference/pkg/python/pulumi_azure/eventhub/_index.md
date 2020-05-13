@@ -379,7 +379,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">})</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.Domain has been deprecated in favour of azure.eventgrid.Domain</p>
+<p>Deprecated: azure.eventhub.Domain has been deprecated in favor of azure.eventgrid.Domain</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -581,7 +581,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">})</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.EventGridTopic has been deprecated in favour of azure.eventgrid.Topic</p>
+<p>Deprecated: azure.eventhub.EventGridTopic has been deprecated in favor of azure.eventgrid.Topic</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -914,7 +914,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">manage</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.EventHubAuthorizationRule has been deprecated in favour of azure.eventhub.AuthorizationRule</p>
+<p>Deprecated: azure.eventhub.EventHubAuthorizationRule has been deprecated in favor of azure.eventhub.AuthorizationRule</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1103,7 +1103,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">user_metadata</span><span class="o">=</span><span class="s2">&quot;some-meta-data&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.EventHubConsumerGroup has been deprecated in favour of azure.eventhub.ConsumerGroup</p>
+<p>Deprecated: azure.eventhub.EventHubConsumerGroup has been deprecated in favor of azure.eventhub.ConsumerGroup</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1658,7 +1658,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">})</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.EventSubscription has been deprecated in favour of azure.eventgrid.EventSubscription</p>
+<p>Deprecated: azure.eventhub.EventSubscription has been deprecated in favor of azure.eventgrid.EventSubscription</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2434,7 +2434,7 @@ authorization rule <code class="docutils literal notranslate"><span class="pre">
     <span class="p">})</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.Namespace has been deprecated in favour of azure.servicebus.Namespace</p>
+<p>Deprecated: azure.eventhub.Namespace has been deprecated in favor of azure.servicebus.Namespace</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2614,7 +2614,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">manage</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.NamespaceAuthorizationRule has been deprecated in favour of azure.servicebus.NamespaceAuthorizationRule</p>
+<p>Deprecated: azure.eventhub.NamespaceAuthorizationRule has been deprecated in favor of azure.servicebus.NamespaceAuthorizationRule</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2774,7 +2774,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">enable_partitioning</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.Queue has been deprecated in favour of azure.servicebus.Queue</p>
+<p>Deprecated: azure.eventhub.Queue has been deprecated in favor of azure.servicebus.Queue</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3035,7 +3035,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">manage</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.QueueAuthorizationRule has been deprecated in favour of azure.servicebus.QueueAuthorizationRule</p>
+<p>Deprecated: azure.eventhub.QueueAuthorizationRule has been deprecated in favor of azure.servicebus.QueueAuthorizationRule</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3208,7 +3208,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">max_delivery_count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.Subscription has been deprecated in favour of azure.servicebus.Subscription</p>
+<p>Deprecated: azure.eventhub.Subscription has been deprecated in favor of azure.servicebus.Subscription</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3445,7 +3445,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">})</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.SubscriptionRule has been deprecated in favour of azure.servicebus.SubscriptionRule</p>
+<p>Deprecated: azure.eventhub.SubscriptionRule has been deprecated in favor of azure.servicebus.SubscriptionRule</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3634,7 +3634,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">enable_partitioning</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.Topic has been deprecated in favour of azure.servicebus.Topic</p>
+<p>Deprecated: azure.eventhub.Topic has been deprecated in favor of azure.servicebus.Topic</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3878,7 +3878,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">manage</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.TopicAuthorizationRule has been deprecated in favour of azure.servicebus.TopicAuthorizationRule</p>
+<p>Deprecated: azure.eventhub.TopicAuthorizationRule has been deprecated in favor of azure.servicebus.TopicAuthorizationRule</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4087,7 +4087,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;eventhubNamespaceId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.getEventhubNamespace has been deprecated in favour of azure.eventhub.getNamespace</p>
+<p>Deprecated: azure.eventhub.getEventhubNamespace has been deprecated in favor of azure.eventhub.getNamespace</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4156,7 +4156,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;location&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">location</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.getServiceBusNamespace has been deprecated in favour of azure.servicebus.getNamespace</p>
+<p>Deprecated: azure.eventhub.getServiceBusNamespace has been deprecated in favor of azure.servicebus.getNamespace</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -44,6 +44,24 @@ Explore the resources and functions of the automation module in the Azure packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.5.1</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Automation.html" title="Pulumi.Azure.Automation">Pulumi.Azure.Automation</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/automation?tab=doc#" title="azure/automation">azure/automation</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/automation/#" title="@pulumi/azure/automation">@pulumi/azure/automation</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/automation" title="pulumi_azure/automation">pulumi_azure/automation</a></dd>
+
 </dl>
 

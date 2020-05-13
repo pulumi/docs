@@ -14,7 +14,7 @@ Manages an EventGrid Domain
 
 
 
-Deprecated: azure.eventhub.Domain has been deprecated in favour of azure.eventgrid.Domain
+Deprecated: azure.eventhub.Domain has been deprecated in favor of azure.eventgrid.Domain
 
 {{% examples %}}
 ## Example Usage
@@ -61,7 +61,7 @@ const exampleDomain = new azure.eventgrid.Domain("exampleDomain", {
 {{% /example %}}
 
 {{% /examples %}}
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.Domain has been deprecated in favour of azure.eventgrid.Domain{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.Domain has been deprecated in favor of azure.eventgrid.Domain{{% /md %}}</p>
 
 
 ## Create a Domain Resource {#create}

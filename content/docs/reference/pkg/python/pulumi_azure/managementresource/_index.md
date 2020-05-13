@@ -52,7 +52,7 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">notes</span><span class="o">=</span><span class="s2">&quot;Locked because it&#39;s needed by a third-party&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.managementresource.ManangementLock has been deprecated in favour of azure.management.Lock</p>
+<p>Deprecated: azure.managementresource.ManangementLock has been deprecated in favor of azure.management.Lock</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -14,7 +14,7 @@ Manages a Management Group.
 
 
 
-Deprecated: azure.managementgroups.ManagementGroup has been deprecated in favour of azure.management.Group
+Deprecated: azure.managementgroups.ManagementGroup has been deprecated in favor of azure.management.Group
 
 {{% examples %}}
 ## Example Usage
@@ -66,7 +66,7 @@ const exampleChild = new azure.management.Group("exampleChild", {
 {{% /example %}}
 
 {{% /examples %}}
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.managementgroups.ManagementGroup has been deprecated in favour of azure.management.Group{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.managementgroups.ManagementGroup has been deprecated in favor of azure.management.Group{{% /md %}}</p>
 
 
 ## Create a ManagementGroup Resource {#create}

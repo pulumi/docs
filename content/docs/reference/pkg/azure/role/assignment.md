@@ -175,9 +175,9 @@ example_assignment = azure.authorization.Assignment("exampleAssignment",
     principal_id=example_client_config.client_id)
 ```
 
-Deprecated: azure.role.Assignment has been deprecated in favour of azure.authorization.Assignment
+Deprecated: azure.role.Assignment has been deprecated in favor of azure.authorization.Assignment
 
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.role.Assignment has been deprecated in favour of azure.authorization.Assignment{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.role.Assignment has been deprecated in favor of azure.authorization.Assignment{{% /md %}}</p>
 
 
 ## Create a Assignment Resource {#create}

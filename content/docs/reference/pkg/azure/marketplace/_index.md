@@ -23,6 +23,24 @@ Explore the resources and functions of the marketplace module in the Azure packa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.5.1</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Marketplace.html" title="Pulumi.Azure.Marketplace">Pulumi.Azure.Marketplace</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/marketplace?tab=doc#" title="azure/marketplace">azure/marketplace</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/marketplace/#" title="@pulumi/azure/marketplace">@pulumi/azure/marketplace</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/marketplace" title="pulumi_azure/marketplace">pulumi_azure/marketplace</a></dd>
+
 </dl>
 

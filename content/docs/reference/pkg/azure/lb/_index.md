@@ -35,6 +35,24 @@ Explore the resources and functions of the lb module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.5.1</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Lb.html" title="Pulumi.Azure.Lb">Pulumi.Azure.Lb</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb?tab=doc#" title="azure/lb">azure/lb</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/lb/#" title="@pulumi/azure/lb">@pulumi/azure/lb</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/lb" title="pulumi_azure/lb">pulumi_azure/lb</a></dd>
+
 </dl>
 

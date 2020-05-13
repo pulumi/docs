@@ -36,6 +36,24 @@ Explore the resources and functions of the keyvault module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.5.1</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.html" title="Pulumi.Azure.KeyVault">Pulumi.Azure.KeyVault</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#" title="azure/keyvault">azure/keyvault</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/keyvault/#" title="@pulumi/azure/keyvault">@pulumi/azure/keyvault</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/keyvault" title="pulumi_azure/keyvault">pulumi_azure/keyvault</a></dd>
+
 </dl>
 

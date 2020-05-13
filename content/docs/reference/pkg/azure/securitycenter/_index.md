@@ -26,6 +26,24 @@ Explore the resources and functions of the securitycenter module in the Azure pa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.5.1</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.SecurityCenter.html" title="Pulumi.Azure.SecurityCenter">Pulumi.Azure.SecurityCenter</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/securitycenter?tab=doc#" title="azure/securitycenter">azure/securitycenter</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/securitycenter/#" title="@pulumi/azure/securitycenter">@pulumi/azure/securitycenter</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/securitycenter" title="pulumi_azure/securitycenter">pulumi_azure/securitycenter</a></dd>
+
 </dl>
 

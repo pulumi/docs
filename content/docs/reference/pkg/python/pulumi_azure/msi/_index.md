@@ -26,7 +26,7 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.msi.UserAssignedIdentity has been deprecated in favour of azure.authorization.UserAssignedIdentity</p>
+<p>Deprecated: azure.msi.UserAssignedIdentity has been deprecated in favor of azure.authorization.UserAssignedIdentity</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

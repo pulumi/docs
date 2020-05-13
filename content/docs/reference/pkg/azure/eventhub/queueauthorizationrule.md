@@ -14,7 +14,7 @@ Manages an Authorization Rule for a ServiceBus Queue.
 
 
 
-Deprecated: azure.eventhub.QueueAuthorizationRule has been deprecated in favour of azure.servicebus.QueueAuthorizationRule
+Deprecated: azure.eventhub.QueueAuthorizationRule has been deprecated in favor of azure.servicebus.QueueAuthorizationRule
 
 {{% examples %}}
 ## Example Usage
@@ -87,7 +87,7 @@ const exampleQueueAuthorizationRule = new azure.servicebus.QueueAuthorizationRul
 {{% /example %}}
 
 {{% /examples %}}
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.QueueAuthorizationRule has been deprecated in favour of azure.servicebus.QueueAuthorizationRule{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.QueueAuthorizationRule has been deprecated in favor of azure.servicebus.QueueAuthorizationRule{{% /md %}}</p>
 
 
 ## Create a QueueAuthorizationRule Resource {#create}

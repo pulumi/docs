@@ -308,7 +308,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">})</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.keyvault.Certifiate has been deprecated in favour of azure.keyvault.Certificate</p>
+<p>Deprecated: azure.keyvault.Certifiate has been deprecated in favor of azure.keyvault.Certificate</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

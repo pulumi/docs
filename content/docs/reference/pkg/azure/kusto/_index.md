@@ -31,6 +31,24 @@ Explore the resources and functions of the kusto module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.5.1</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Kusto.html" title="Pulumi.Azure.Kusto">Pulumi.Azure.Kusto</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/kusto?tab=doc#" title="azure/kusto">azure/kusto</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/kusto/#" title="@pulumi/azure/kusto">@pulumi/azure/kusto</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/kusto" title="pulumi_azure/kusto">pulumi_azure/kusto</a></dd>
+
 </dl>
 

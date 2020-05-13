@@ -35,9 +35,9 @@ pulumi.export("uaiClientId", example.client_id)
 pulumi.export("uaiPrincipalId", example.principal_id)
 ```
 
-Deprecated: azure.core.getUserAssignedIdentity has been deprecated in favour of azure.authorization.getUserAssignedIdentity
+Deprecated: azure.core.getUserAssignedIdentity has been deprecated in favor of azure.authorization.getUserAssignedIdentity
 
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.core.getUserAssignedIdentity has been deprecated in favour of azure.authorization.getUserAssignedIdentity{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.core.getUserAssignedIdentity has been deprecated in favor of azure.authorization.getUserAssignedIdentity{{% /md %}}</p>
 
 
 ## Using GetUserAssignedIdentity {#using}

@@ -225,9 +225,9 @@ example_certificate = azure.keyvault.Certificate("exampleCertificate",
     })
 ```
 
-Deprecated: azure.keyvault.Certifiate has been deprecated in favour of azure.keyvault.Certificate
+Deprecated: azure.keyvault.Certifiate has been deprecated in favor of azure.keyvault.Certificate
 
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.keyvault.Certifiate has been deprecated in favour of azure.keyvault.Certificate{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.keyvault.Certifiate has been deprecated in favor of azure.keyvault.Certificate{{% /md %}}</p>
 
 
 ## Create a Certifiate Resource {#create}

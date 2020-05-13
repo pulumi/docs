@@ -16,7 +16,7 @@ Manages a ServiceBus Topic.
 
 
 
-Deprecated: azure.eventhub.Topic has been deprecated in favour of azure.servicebus.Topic
+Deprecated: azure.eventhub.Topic has been deprecated in favor of azure.servicebus.Topic
 
 {{% examples %}}
 ## Example Usage
@@ -74,7 +74,7 @@ const exampleTopic = new azure.servicebus.Topic("exampleTopic", {
 {{% /example %}}
 
 {{% /examples %}}
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.Topic has been deprecated in favour of azure.servicebus.Topic{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.Topic has been deprecated in favor of azure.servicebus.Topic{{% /md %}}</p>
 
 
 ## Create a Topic Resource {#create}

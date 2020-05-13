@@ -30,6 +30,24 @@ Explore the resources and functions of the databasemigration module in the Azure
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.5.1</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DatabaseMigration.html" title="Pulumi.Azure.DatabaseMigration">Pulumi.Azure.DatabaseMigration</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/databasemigration?tab=doc#" title="azure/databasemigration">azure/databasemigration</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/databasemigration/#" title="@pulumi/azure/databasemigration">@pulumi/azure/databasemigration</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/databasemigration" title="pulumi_azure/databasemigration">pulumi_azure/databasemigration</a></dd>
+
 </dl>
 

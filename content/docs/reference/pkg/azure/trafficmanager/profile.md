@@ -14,7 +14,7 @@ Manages a Traffic Manager Profile to which multiple endpoints can be attached.
 
 
 
-Deprecated: azure.trafficmanager.Profile has been deprecated in favour of azure.network.TrafficManagerProfile
+Deprecated: azure.trafficmanager.Profile has been deprecated in favor of azure.network.TrafficManagerProfile
 
 {{% examples %}}
 ## Example Usage
@@ -98,7 +98,7 @@ const exampleTrafficManagerProfile = new azure.network.TrafficManagerProfile("ex
 {{% /example %}}
 
 {{% /examples %}}
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.trafficmanager.Profile has been deprecated in favour of azure.network.TrafficManagerProfile{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.trafficmanager.Profile has been deprecated in favor of azure.network.TrafficManagerProfile{{% /md %}}</p>
 
 
 ## Create a Profile Resource {#create}

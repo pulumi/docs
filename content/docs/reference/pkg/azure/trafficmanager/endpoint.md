@@ -14,7 +14,7 @@ Manages a Traffic Manager Endpoint.
 
 
 
-Deprecated: azure.trafficmanager.Endpoint has been deprecated in favour of azure.network.TrafficManagerEndpoint
+Deprecated: azure.trafficmanager.Endpoint has been deprecated in favor of azure.network.TrafficManagerEndpoint
 
 {{% examples %}}
 ## Example Usage
@@ -109,7 +109,7 @@ const exampleTrafficManagerEndpoint = new azure.network.TrafficManagerEndpoint("
 {{% /example %}}
 
 {{% /examples %}}
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.trafficmanager.Endpoint has been deprecated in favour of azure.network.TrafficManagerEndpoint{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.trafficmanager.Endpoint has been deprecated in favor of azure.network.TrafficManagerEndpoint{{% /md %}}</p>
 
 
 ## Create a Endpoint Resource {#create}

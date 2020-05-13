@@ -14,7 +14,7 @@ Use this data source to access information about an existing ServiceBus Namespac
 
 
 
-Deprecated: azure.eventhub.getServiceBusNamespace has been deprecated in favour of azure.servicebus.getNamespace
+Deprecated: azure.eventhub.getServiceBusNamespace has been deprecated in favor of azure.servicebus.getNamespace
 
 {{% examples %}}
 ## Example Usage
@@ -54,7 +54,7 @@ export const location = example.then(example => example.location);
 {{% /example %}}
 
 {{% /examples %}}
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.getServiceBusNamespace has been deprecated in favour of azure.servicebus.getNamespace{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.getServiceBusNamespace has been deprecated in favor of azure.servicebus.getNamespace{{% /md %}}</p>
 
 
 ## Using GetServiceBusNamespace {#using}

@@ -31,6 +31,24 @@ Explore the resources and functions of the notificationhub module in the Azure p
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.5.1</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.NotificationHub.html" title="Pulumi.Azure.NotificationHub">Pulumi.Azure.NotificationHub</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/notificationhub?tab=doc#" title="azure/notificationhub">azure/notificationhub</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/notificationhub/#" title="@pulumi/azure/notificationhub">@pulumi/azure/notificationhub</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/notificationhub" title="pulumi_azure/notificationhub">pulumi_azure/notificationhub</a></dd>
+
 </dl>
 

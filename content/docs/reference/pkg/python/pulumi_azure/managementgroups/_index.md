@@ -66,7 +66,7 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="c1"># other subscription IDs can go here</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.managementgroups.ManagementGroup has been deprecated in favour of azure.management.Group</p>
+<p>Deprecated: azure.managementgroups.ManagementGroup has been deprecated in favor of azure.management.Group</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -180,7 +180,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;displayName&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">display_name</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.managementgroups.getManagementGroup has been deprecated in favour of azure.management.getGroup</p>
+<p>Deprecated: azure.managementgroups.getManagementGroup has been deprecated in favor of azure.management.getGroup</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
