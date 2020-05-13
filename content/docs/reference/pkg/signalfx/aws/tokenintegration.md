@@ -16,9 +16,91 @@ SignalFx AWS CloudWatch integrations using security tokens. For help with this i
 
 > **WARNING** This resource implements a part of a workflow. You must use it with `signalfx.aws.Integration`.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_signalfx as signalfx
+
+aws_myteam_token = signalfx.aws.TokenIntegration("awsMyteamToken")
+# Make yourself an AWS IAM role here
+aws_sfx_role = aws.iam.Role("awsSfxRole")
+# Stuff here that uses the external and account ID
+aws_myteam = signalfx.aws.Integration("awsMyteam",
+    enabled=True,
+    integration_id=aws_myteam_token.id,
+    token="put_your_token_here",
+    key="put_your_key_here",
+    regions=["us-east-1"],
+    poll_rate=300,
+    import_cloud_watch=True,
+    enable_aws_usage=True,
+    custom_namespace_sync_rule=[{
+        "defaultAction": "Exclude",
+        "filterAction": "Include",
+        "filterSource": "filter('code', '200')",
+        "namespace": "fart",
+    }],
+    namespace_sync_rule=[{
+        "defaultAction": "Exclude",
+        "filterAction": "Include",
+        "filterSource": "filter('code', '200')",
+        "namespace": "AWS/EC2",
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as signalfx from "@pulumi/signalfx";
+
+const awsMyteamToken = new signalfx.aws.TokenIntegration("awsMyteamToken", {});
+// Make yourself an AWS IAM role here
+const awsSfxRole = new aws.iam.Role("awsSfxRole", {});
+// Stuff here that uses the external and account ID
+const awsMyteam = new signalfx.aws.Integration("awsMyteam", {
+    enabled: true,
+    integrationId: awsMyteamToken.id,
+    token: "put_your_token_here",
+    key: "put_your_key_here",
+    regions: ["us-east-1"],
+    pollRate: 300,
+    importCloudWatch: true,
+    enableAwsUsage: true,
+    custom_namespace_sync_rule: [{
+        defaultAction: "Exclude",
+        filterAction: "Include",
+        filterSource: "filter('code', '200')",
+        namespace: "fart",
+    }],
+    namespace_sync_rule: [{
+        defaultAction: "Exclude",
+        filterAction: "Include",
+        filterSource: "filter('code', '200')",
+        namespace: "AWS/EC2",
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TokenIntegration Resource {#create}

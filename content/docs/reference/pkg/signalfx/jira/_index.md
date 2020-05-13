@@ -23,6 +23,24 @@ Explore the resources and functions of the jira module in the SignalFx package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/terraform-providers/terraform-provider-signalfx).</dd>
 	<dt>Version</dt>
-	<dd>2.2.1</dd>
+	<dd>2.3.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.Jira.html" title="Pulumi.Signalfx.Jira">Pulumi.Signalfx.Jira</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/jira?tab=doc#" title="signalfx/jira">signalfx/jira</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/jira/#" title="@pulumi/signalfx/jira">@pulumi/signalfx/jira</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_signalfx/jira" title="pulumi_signalfx/jira">pulumi_signalfx/jira</a></dd>
+
 </dl>
 

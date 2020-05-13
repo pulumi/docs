@@ -20,7 +20,32 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider. Otherwise you’ll receive a 4xx error.</p>
 </div></blockquote>
-<p>Fields that expect an Azure service will work with one of: “microsoft.sql/servers/elasticpools” “microsoft.storage/storageaccounts” “microsoft.storage/storageaccountsservices/tableservices” “microsoft.storage/storageaccountsservices/blobservices” “microsoft.storage/storageaccounts/queueservices” “microsoft.storage/storageaccounts/fileservices” “microsoft.compute/virtualmachinescalesets” “microsoft.compute/virtualmachinescalesets/virtualmachines” “microsoft.compute/virtualmachines” “microsoft.devices/iothubs” “microsoft.eventHub/namespaces” “microsoft.batch/batchaccounts” “microsoft.sql/servers/databases” “microsoft.cache/redis” “microsoft.logic/workflows”.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_signalfx</span> <span class="k">as</span> <span class="nn">signalfx</span>
+
+<span class="n">azure_myteam</span> <span class="o">=</span> <span class="n">signalfx</span><span class="o">.</span><span class="n">azure</span><span class="o">.</span><span class="n">Integration</span><span class="p">(</span><span class="s2">&quot;azureMyteam&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">resource</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;signalfxAzureIntegration&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;azureMyteamXX&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;appId&quot;</span><span class="p">:</span> <span class="s2">&quot;YYY&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;azure&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;AzureFoo&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;pollRate&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+                <span class="s2">&quot;secretKey&quot;</span><span class="p">:</span> <span class="s2">&quot;XXX&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;services&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;microsoft.sql/servers/elasticpools&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;subscriptions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;sub-guid-here&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;tenantId&quot;</span><span class="p">:</span> <span class="s2">&quot;ZZZ&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+        <span class="p">}],</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>NOTE</strong> You can use the data source “.getAzureServices” to specify all services.</p>
+</div></blockquote>
+<p>Fields that expect an Azure service will work with one of: “microsoft.sql/servers/elasticpools”, “microsoft.storage/storageaccounts”, “microsoft.storage/storageaccountsservices/tableservices”, “microsoft.storage/storageaccountsservices/blobservices”, “microsoft.storage/storageaccounts/queueservices”, “microsoft.storage/storageaccounts/fileservices”, “microsoft.compute/virtualmachinescalesets”, “microsoft.compute/virtualmachinescalesets/virtualmachines”, “microsoft.compute/virtualmachines”, “microsoft.devices”, “microsoft.devices/iothubs”, “microsoft.devices/elasticpools”, “microsoft.devices/elasticpools/iothubtenants”, “microsoft.eventHub/namespaces”, “microsoft.batch/batchaccounts”, “microsoft.sql/servers/databases”, “microsoft.cache/redis”, “microsoft.logic/workflows”, “microsoft.web”, “microsoft.web/sites”, “microsoft.web/serverfarms”, “microsoft.web/slots”, “microsoft.web/hostingenvironments/multirolepools”, “microsoft.web/hostingenvironments/workerpools”, “microsoft.analysisservices/servers”, “microsoft.apimanagement/service”, “microsoft.automation/automationaccounts”, “microsoft.classiccompute/virtualmachines”, “microsoft.cognitiveservices/accounts”, “microsoft.customerinsights/hubs”, “microsoft.datafactory”, “microsoft.datafactory/datafactories”, “microsoft.datafactory/factories”, “microsoft.datalakeanalytics/accounts”, “microsoft.datalakestore/accounts”, “microsoft.dbformysql/servers”, “microsoft.dbforpostgresql/servers”, “microsoft.documentdb/databaseaccounts”, “microsoft.keyvault/vaults”, “microsoft.locationbasedservices/accounts”, “microsoft.network/loadbalancers”, “microsoft.network/publicipaddresses”, “microsoft.network/applicationgateways”, “microsoft.network/virtualnetworkgateways”, “microsoft.network/expressroutecircuits”, “microsoft.network/trafficmanagerprofiles”, “microsoft.notificationhubs/namespaces/notificationhubs”, “microsoft.powerbidedicated/capacities”, “microsoft.relay/namespaces”, “microsoft.search/searchservices”, “microsoft.servicebus/namespaces”, “microsoft.sql/servers”, “microsoft.streamanalytics/streamingjobs”, “microsoft.network/dnszones”, “microsoft.hdinsight/clusters”, “microsoft.containerinstance/containergroups”, “microsoft.containerservice/managedclusters”, “microsoft.kusto/clusters”, “microsoft.machinelearningservices/workspaces”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

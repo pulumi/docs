@@ -12,9 +12,109 @@ meta_desc: "Explore the DataLink resource of the SignalFx package, including exa
 
 Manage SignalFx [Data Links](https://docs.signalfx.com/en/latest/managing/data-links.html).
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Global link to a dashboard
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_signalfx as signalfx
+
+my_data_link = signalfx.DataLink("myDataLink",
+    property_name="pname",
+    property_value="pvalue",
+    target_signalfx_dashboard=[{
+        "isDefault": True,
+        "name": "sfx_dash",
+        "dashboardGroupId": signalfx_dashboard_group["mydashboardgroup0"]["id"],
+        "dashboardId": signalfx_dashboard["mydashboard0"]["id"],
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as signalfx from "@pulumi/signalfx";
+
+const myDataLink = new signalfx.DataLink("myDataLink", {
+    propertyName: "pname",
+    propertyValue: "pvalue",
+    target_signalfx_dashboard: [{
+        isDefault: true,
+        name: "sfx_dash",
+        dashboardGroupId: signalfx_dashboard_group.mydashboardgroup0.id,
+        dashboardId: signalfx_dashboard.mydashboard0.id,
+    }],
+});
+```
+{{% /example %}}
+
+### Dashboard specific link to an external URL
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_signalfx as signalfx
+
+my_data_link_dash = signalfx.DataLink("myDataLinkDash",
+    context_dashboard_id=signalfx_dashboard["mydashboard0"]["id"],
+    property_name="pname2",
+    property_value="pvalue",
+    target_external_url=[{
+        "isDefault": False,
+        "name": "ex_url",
+        "timeFormat": "ISO8601",
+        "url": "https://www.example.com",
+        "propertyKeyMapping": {
+            "foo": "bar",
+        },
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as signalfx from "@pulumi/signalfx";
+
+const myDataLinkDash = new signalfx.DataLink("myDataLinkDash", {
+    contextDashboardId: signalfx_dashboard.mydashboard0.id,
+    propertyName: "pname2",
+    propertyValue: "pvalue",
+    target_external_url: [{
+        isDefault: false,
+        name: "ex_url",
+        timeFormat: "ISO8601",
+        url: "https://www.example.com",
+        propertyKeyMapping: {
+            foo: "bar",
+        },
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DataLink Resource {#create}

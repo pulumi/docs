@@ -28,7 +28,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_signalfx as signalfx
+
+mynote0 = signalfx.EventFeedChart("mynote0",
+    description="Lorem ipsum dolor sit amet",
+    program_text="A = events(eventType='Fart Testing').publish(label='A')",
+    viz_options=[{
+        "color": "orange",
+        "label": "A",
+    }])
+```
 {{% /example %}}
 
 {{% example typescript %}}
