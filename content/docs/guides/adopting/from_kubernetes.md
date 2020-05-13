@@ -91,31 +91,30 @@ pulumi.export('private_ip', frontend.spec['cluster_ip'])
 {{% choosable language go %}}
 
 ```go
-// Pulumi Kubernetes support for Go is coming soon:
-// https://github.com/pulumi/pulumi-kubernetes/issues/70
-```
+package main
 
-As we can see here, the `getResource` function lets us retrieve an internal resource by type and name, so that we can interact with its properties. These will be strongly typed based on the resource type. Be careful using this, of course, as it makes your code subject to the internal implementation details of the YAML configuration &mdash; however, it's often necessary to find the information you need, like the auto-assigned IP addresses.
+import (
+    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
+    "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/yaml"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
 
-Running `pulumi up` will deploy the resources and then export the resulting frontend service's auto-assigned cluster IP address:
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        guestbook, err := yaml.NewConfigFile(ctx, "guestbook", &yaml.ConfigFileArgs{
+            File: "guestbook-all-in-one.yaml",
+        })
+        if err != nil {
+            return err
+        }
 
-```bash
-Updating (dev):
-     Type                              Name          Status
- +   pulumi:pulumi:Stack               k8s-yaml-dev  created
- +   └─ kubernetes:yaml:ConfigFile     guestbook     created
- +      ├─ kubernetes:core:Service     redis-master  created
- +      ├─ kubernetes:core:Service     frontend      created
- +      ├─ kubernetes:apps:Deployment  frontend      created
- +      ├─ kubernetes:core:Service     redis-slave   created
- +      ├─ kubernetes:apps:Deployment  redis-master  created
- +      └─ kubernetes:apps:Deployment  redis-slave   created
+        // Export the private cluster IP address of the frontend.
+        frontend := guestbook.GetResource("v1/Service", "frontend", "").(*corev1.Service)
+        ctx.Export("privateIP", frontend.Spec.ClusterIP())
 
-Outputs:
-    privateIp: "10.52.254.168"
-
-Resources:
-    + 8 created
+        return nil
+    })
+}
 ```
 
 {{% /choosable %}}
@@ -157,6 +156,29 @@ class Program
 {{% /choosable %}}
 
 {{< /chooser >}}
+
+As we can see here, the `getResource` function lets us retrieve an internal resource by type and name, so that we can interact with its properties. These will be strongly typed based on the resource type. Be careful using this, of course, as it makes your code subject to the internal implementation details of the YAML configuration &mdash; however, it's often necessary to find the information you need, like the auto-assigned IP addresses.
+
+Running `pulumi up` will deploy the resources and then export the resulting frontend service's auto-assigned cluster IP address:
+
+```bash
+Updating (dev):
+     Type                              Name          Status
+ +   pulumi:pulumi:Stack               k8s-yaml-dev  created
+ +   └─ kubernetes:yaml:ConfigFile     guestbook     created
+ +      ├─ kubernetes:core:Service     redis-master  created
+ +      ├─ kubernetes:core:Service     frontend      created
+ +      ├─ kubernetes:apps:Deployment  frontend      created
+ +      ├─ kubernetes:core:Service     redis-slave   created
+ +      ├─ kubernetes:apps:Deployment  redis-master  created
+ +      └─ kubernetes:apps:Deployment  redis-slave   created
+
+Outputs:
+    privateIp: "10.52.254.168"
+
+Resources:
+    + 8 created
+```
 
 ### Deploying Multiple Kubernetes YAML Files
 
@@ -223,8 +245,32 @@ export const privateIp = frontend.spec.clusterIP;
 {{% choosable language go %}}
 
 ```go
-// Pulumi Kubernetes support for Go is coming soon:
-// https://github.com/pulumi/pulumi-kubernetes/issues/70
+package main
+
+import (
+    "path/filepath"
+
+    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
+    "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/yaml"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        guestbook, err := yaml.NewConfigGroup(ctx, "guestbook", &yaml.ConfigGroupArgs{
+            Files: []string{filepath.Join("yaml", "*.yaml")},
+        })
+        if err != nil {
+            return err
+        }
+
+        // Export the private cluster IP address of the frontend.
+        frontend := guestbook.GetResource("v1/Service", "frontend", "").(*corev1.Service)
+        ctx.Export("privateIP", frontend.Spec.ClusterIP())
+
+        return nil
+    })
+}
 ```
 
 {{% /choosable %}}
@@ -337,7 +383,7 @@ let k8s = require("@pulumi/kubernetes");
 let wordpress = new k8s.helm.v2.Chart("wpdev", {
     repo: "stable",
     chart: "wordpress",
-    version: "2.1.3",
+    version: "9.0.3",
 });
 
 // Export the public IP for WordPress.
@@ -357,7 +403,7 @@ import * as k8s from "@pulumi/kubernetes";
 const wordpress = new k8s.helm.v2.Chart("wpdev", {
     repo: "stable",
     chart: "wordpress",
-    version: "2.1.3",
+    version: "9.0.3",
 });
 
 // Export the public IP for WordPress.
@@ -376,7 +422,7 @@ from pulumi_kubernetes.helm.v2 import Chart, ChartOpts
 wordpress = Chart('wpdev', config=ChartOpts(
     repo='stable',
     chart='wordpress',
-    version='2.1.3',
+    version='9.0.3',
 ))
 
 # Export the public IP for WordPress.
@@ -388,8 +434,36 @@ pulumi.export('frontend_ip', frontend.status.load_balancer.ingress[0].ip)
 {{% choosable language go %}}
 
 ```go
-// Pulumi Kubernetes support for Go is coming soon:
-// https://github.com/pulumi/pulumi-kubernetes/issues/70
+package main
+
+import (
+    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
+    helmv2 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/helm/v2"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        // Deploy the latest version of the stable/wordpress chart.
+        wordpress, err := helmv2.NewChart(ctx, "wpdev", helmv2.ChartArgs{
+            Repo:    pulumi.String("stable"),
+            Chart:   pulumi.String("wordpress"),
+            Version: pulumi.String("9.0.3"),
+        })
+        if err != nil {
+            return err
+        }
+
+        // Export the public IP for WordPress.
+        frontendIP := wordpress.GetResource("v1/Service", "wpdev-wordpress", "").Apply(func(r interface{}) (interface{}, error) {
+            svc := r.(*corev1.Service)
+            return svc.Status.LoadBalancer().Ingress().Index(pulumi.Int(0)).Ip(), nil
+        })
+        ctx.Export("frontendIp", frontendIP)
+
+        return nil
+    })
+}
 ```
 
 {{% /choosable %}}
@@ -415,7 +489,7 @@ class Program
             {
                 Repo = "stable",
                 Chart = "wordpress",
-                Version = "2.1.3",
+                Version = "9.0.3",
             });
 
             // Export the public IP for WordPress.
@@ -442,20 +516,20 @@ Updating (dev):
      Type                                         Name                      Status
  +   pulumi:pulumi:Stack                          k8s-helm-dev              created
  +   └─ kubernetes:helm.sh:Chart                  wpdev                     created
+ +      ├─ kubernetes:core:Secret                 wpdev-wordpress           created
+ +      ├─ kubernetes:core:Secret                 wpdev-mariadb             created
  +      ├─ kubernetes:core:ConfigMap              wpdev-mariadb-tests       created
+ +      ├─ kubernetes:core:ConfigMap              wpdev-mariadb             created
  +      ├─ kubernetes:core:PersistentVolumeClaim  wpdev-wordpress           created
  +      ├─ kubernetes:core:Service                wpdev-wordpress           created
- +      ├─ kubernetes:core:ConfigMap              wpdev-mariadb             created
- +      ├─ kubernetes:core:Pod                    wpdev-credentials-test    created
  +      ├─ kubernetes:core:Service                wpdev-mariadb             created
- +      ├─ kubernetes:core:Pod                    wpdev-mariadb-test-erk7r  created
- +      ├─ kubernetes:extensions:Deployment       wpdev-wordpress           created
- +      ├─ kubernetes:apps:StatefulSet            wpdev-mariadb             created
- +      ├─ kubernetes:core:Secret                 wpdev-mariadb             created
- +      └─ kubernetes:core:Secret                 wpdev-wordpress           created
+ +      ├─ kubernetes:core:Pod                    wpdev-credentials-test    created
+ +      ├─ kubernetes:core:Pod                    wpdev-mariadb-test-zbeq0  created
+ +      ├─ kubernetes:apps:Deployment             wpdev-wordpress           created
+ +      └─ kubernetes:apps:StatefulSet            wpdev-mariadb             created
 
 Outputs:
-    frontendIp: "35.185.249.143"
+    frontendIp: "34.71.25.45"
 
 Resources:
     + 13 created
@@ -583,8 +657,61 @@ svc = Service('nginx-svc',
 {{% choosable language go %}}
 
 ```go
-// Pulumi Kubernetes support for Go is coming soon:
-// https://github.com/pulumi/pulumi-kubernetes/issues/70
+package main
+
+import (
+    "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes"
+    appsv1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1"
+    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
+    metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        renderProvider, err := kubernetes.NewProvider(ctx, "k8s-yaml-renderer", &kubernetes.ProviderArgs{
+            RenderYamlToDirectory: pulumi.String("yaml"),
+        })
+        if err != nil {
+            return err
+        }
+
+        labels := pulumi.StringMap{"app": pulumi.String("nginx")}
+
+        _, err = appsv1.NewDeployment(ctx, "nginx-dep", &appsv1.DeploymentArgs{
+            Spec: &appsv1.DeploymentSpecArgs{
+                Selector: &metav1.LabelSelectorArgs{MatchLabels: labels},
+                Replicas: pulumi.Int(1),
+                Template: corev1.PodTemplateSpecArgs{
+                    Metadata: metav1.ObjectMetaArgs{Labels: labels},
+                    Spec: &corev1.PodSpecArgs{
+                        Containers: &corev1.ContainerArray{
+                            &corev1.ContainerArgs{
+                                Name:  pulumi.String("nginx"),
+                                Image: pulumi.String("nginx"),
+                            },
+                        },
+                    },
+                },
+            },
+        }, pulumi.Provider(renderProvider))
+        if err != nil {
+            return err
+        }
+        _, err = corev1.NewService(ctx, "nginx-svc", &corev1.ServiceArgs{
+            Spec: &corev1.ServiceSpecArgs{
+                Type:     pulumi.String("LoadBalancer"),
+                Selector: labels,
+                Ports:    corev1.ServicePortArray{corev1.ServicePortArgs{Port: pulumi.Int(80)}},
+            },
+        }, pulumi.Provider(renderProvider))
+        if err != nil {
+            return err
+        }
+
+        return nil
+    })
+}
 ```
 
 {{% /choosable %}}
@@ -770,8 +897,24 @@ pulumi.export('public_ip', frontend.status['load_balancer']['ingress'][0]['ip'])
 {{% choosable language go %}}
 
 ```go
-// Pulumi Kubernetes support for Go is coming soon:
-// https://github.com/pulumi/pulumi-kubernetes/issues/70
+...
+guestbook, err := yaml.NewConfigFile(ctx, "guestbook", &yaml.ConfigFileArgs{
+    File: "guestbook-all-in-one.yaml",
+    Transformations: []yaml.Transformation{func(state map[string]interface{}, opts ...pulumi.ResourceOption) {
+        if kind, ok := state["kind"]; ok && kind == "Service" && state["metadata"].(map[string]interface{})["name"] == "frontend" {
+            state["spec"].(map[string]interface{})["type"] = "LoadBalancer"
+        }
+    }},
+})
+if err != nil {
+    return err
+}
+
+// Export the private cluster IP address of the frontend.
+frontend := guestbook.GetResource("v1/Service", "frontend", "").(*corev1.Service)
+ctx.Export("privateIP", frontend.Spec.ClusterIP())
+ctx.Export("publicIP", frontend.Status.LoadBalancer().Ingress().Index(pulumi.Int(0)).Ip())
+...
 ```
 
 {{% /choosable %}}
@@ -779,30 +922,30 @@ pulumi.export('public_ip', frontend.status['load_balancer']['ingress'][0]['ip'])
 
 ```csharp
 ...
-            Func<ImmutableDictionary<string, object>,
-                CustomResourceOptions, ImmutableDictionary<string, object>>[] transformations =
-            {
-                (obj, opts) => {
-                    if ((string)obj["kind"] == "Service" &&
-                            (string)((ImmutableDictionary<string, object>)obj["metadata"])["name"] == "frontend")
-                    {
-                        var spec = ((ImmutableDictionary<string, object>)obj["spec"]);
-                        obj = obj.SetItem("spec", spec.SetItem("type", "LoadBalancer"));
-                    }
-                    return obj;
-                },
-            };
-            var guestbook = new ConfigFile("guestbook", new ConfigFileArgs
-            {
-                File = "guestbook-all-in-one.yaml",
-                Transformations = transformations,
-            });
+Func<ImmutableDictionary<string, object>,
+    CustomResourceOptions, ImmutableDictionary<string, object>>[] transformations =
+{
+    (obj, opts) => {
+        if ((string)obj["kind"] == "Service" &&
+                (string)((ImmutableDictionary<string, object>)obj["metadata"])["name"] == "frontend")
+        {
+            var spec = ((ImmutableDictionary<string, object>)obj["spec"]);
+            obj = obj.SetItem("spec", spec.SetItem("type", "LoadBalancer"));
+        }
+        return obj;
+    },
+};
+var guestbook = new ConfigFile("guestbook", new ConfigFileArgs
+{
+    File = "guestbook-all-in-one.yaml",
+    Transformations = transformations,
+});
 ...
-            return new Dictionary<string, object?>
-            {
-                { "privateIp", frontend.Apply(fe => fe.Spec.Apply(spec => spec.ClusterIP)) },
-                { "publicIp", frontend.Apply(fe => fe.Status.Apply(status => status.LoadBalancer.Ingress[0].Ip)) },
-            };
+return new Dictionary<string, object?>
+{
+    { "privateIp", frontend.Apply(fe => fe.Spec.Apply(spec => spec.ClusterIP)) },
+    { "publicIp", frontend.Apply(fe => fe.Status.Apply(status => status.LoadBalancer.Ingress[0].Ip)) },
+};
 ...
 ```
 
