@@ -24,3 +24,18 @@ meta_desc: ""
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/certificates?tab=doc#" title="kubernetes/certificates">kubernetes/certificates</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/certificates/#" title="@pulumi/kubernetes/certificates">@pulumi/kubernetes/certificates</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/certificates" title="pulumi_kubernetes/certificates">pulumi_kubernetes/certificates</a></dd>
+
+</dl>
+

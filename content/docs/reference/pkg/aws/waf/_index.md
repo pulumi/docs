@@ -45,3 +45,21 @@ Explore the resources and functions of the waf module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Waf.html" title="Pulumi.Aws.Waf">Pulumi.Aws.Waf</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/waf?tab=doc#" title="aws/waf">aws/waf</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/waf/#" title="@pulumi/aws/waf">@pulumi/aws/waf</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/waf" title="pulumi_aws/waf">pulumi_aws/waf</a></dd>
+
+</dl>
+

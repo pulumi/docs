@@ -27,3 +27,21 @@ Explore the resources and functions of the fsx module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Fsx.html" title="Pulumi.Aws.Fsx">Pulumi.Aws.Fsx</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/fsx?tab=doc#" title="aws/fsx">aws/fsx</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/fsx/#" title="@pulumi/aws/fsx">@pulumi/aws/fsx</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/fsx" title="pulumi_aws/fsx">pulumi_aws/fsx</a></dd>
+
+</dl>
+

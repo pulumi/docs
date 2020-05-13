@@ -30,3 +30,21 @@ Explore the resources and functions of the appmesh module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.html" title="Pulumi.Aws.AppMesh">Pulumi.Aws.AppMesh</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#" title="aws/appmesh">aws/appmesh</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#" title="@pulumi/aws/appmesh">@pulumi/aws/appmesh</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/appmesh" title="pulumi_aws/appmesh">pulumi_aws/appmesh</a></dd>
+
+</dl>
+

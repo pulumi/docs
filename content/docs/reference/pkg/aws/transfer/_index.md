@@ -33,3 +33,21 @@ Explore the resources and functions of the transfer module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Transfer.html" title="Pulumi.Aws.Transfer">Pulumi.Aws.Transfer</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/transfer?tab=doc#" title="aws/transfer">aws/transfer</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/transfer/#" title="@pulumi/aws/transfer">@pulumi/aws/transfer</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/transfer" title="pulumi_aws/transfer">pulumi_aws/transfer</a></dd>
+
+</dl>
+

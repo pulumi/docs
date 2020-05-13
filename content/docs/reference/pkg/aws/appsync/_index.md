@@ -30,3 +30,21 @@ Explore the resources and functions of the appsync module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.html" title="Pulumi.Aws.AppSync">Pulumi.Aws.AppSync</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#" title="aws/appsync">aws/appsync</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/appsync/#" title="@pulumi/aws/appsync">@pulumi/aws/appsync</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/appsync" title="pulumi_aws/appsync">pulumi_aws/appsync</a></dd>
+
+</dl>
+

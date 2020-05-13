@@ -42,3 +42,21 @@ Explore the resources and functions of the s3 module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.html" title="Pulumi.Aws.S3">Pulumi.Aws.S3</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#" title="aws/s3">aws/s3</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#" title="@pulumi/aws/s3">@pulumi/aws/s3</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/s3" title="pulumi_aws/s3">pulumi_aws/s3</a></dd>
+
+</dl>
+

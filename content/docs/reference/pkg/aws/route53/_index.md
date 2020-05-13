@@ -42,3 +42,21 @@ Explore the resources and functions of the route53 module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.html" title="Pulumi.Aws.Route53">Pulumi.Aws.Route53</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#" title="aws/route53">aws/route53</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#" title="@pulumi/aws/route53">@pulumi/aws/route53</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/route53" title="pulumi_aws/route53">pulumi_aws/route53</a></dd>
+
+</dl>
+

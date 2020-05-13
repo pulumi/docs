@@ -35,3 +35,21 @@ Explore the resources and functions of the extensions/v1beta1 module in the Kube
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Extensions.V1Beta1.html" title="Pulumi.Kubernetes.Extensions.V1Beta1">Pulumi.Kubernetes.Extensions.V1Beta1</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/extensions/v1beta1?tab=doc#" title="kubernetes/extensions/v1beta1">kubernetes/extensions/v1beta1</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/extensions/v1beta1/#" title="@pulumi/kubernetes/extensions/v1beta1">@pulumi/kubernetes/extensions/v1beta1</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/extensions/v1beta1" title="pulumi_kubernetes/extensions/v1beta1">pulumi_kubernetes/extensions/v1beta1</a></dd>
+
+</dl>
+
