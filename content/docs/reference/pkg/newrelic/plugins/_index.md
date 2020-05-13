@@ -33,3 +33,21 @@ Explore the resources and functions of the plugins module in the New Relic packa
 	<dd>2.2.2</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Plugins.html" title="Pulumi.NewRelic.Plugins">Pulumi.NewRelic.Plugins</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/plugins?tab=doc#" title="newrelic/plugins">newrelic/plugins</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/plugins/#" title="@pulumi/newrelic/plugins">@pulumi/newrelic/plugins</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_newrelic/plugins" title="pulumi_newrelic/plugins">pulumi_newrelic/plugins</a></dd>
+
+</dl>
+
