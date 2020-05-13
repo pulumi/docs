@@ -17,7 +17,7 @@ Over the last 10 years, Go has quickly become the "language of the cloud" for bu
 
 Pulumi is a modern infrastructure as code tool for the cloud.  It is built around four key ideas.
 
-- Programming Languages. Offer the best languages and tools to declare infrastructure and gain best-in-class productivity and engineering capabilities, leverage world-class language and tooling innovation, and connect to existing communities and ecosystems.
+- Programming Languages. Pulumi offers best-in-class productivity and software engineering capabilities by allowing you to use existing rich programming languages like JavaScript, Python, .NET and of course Go.  Pulumi combines this with still getting the reliability of a desired-state infrastructure as code.  The best of both worlds! ```
 
 - Multi-Cloud. Give operators the tools to build consistent workflows across any cloud(s). Whether public, private, or hybrid — you can use the full breadth and depth of any cloud services.
 
