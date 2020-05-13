@@ -15,7 +15,7 @@ Over the last 10 years, Go has quickly become the "language of the cloud" for bu
 
 ## What is Pulumi?
 
-Pulumi's approach to modern Infrastructure as Code summarized in four points.
+Pulumi is a modern infrastructure as code tool for the cloud.  It is built around four key ideas.
 
 - Programming Languages. Offer the best languages and tools to declare infrastructure and gain best-in-class productivity and engineering capabilities, leverage world-class language and tooling innovation, and connect to existing communities and ecosystems.
 
