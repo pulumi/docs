@@ -9,7 +9,7 @@ tags:
     - Go
 ---
 
-Over the last 10 years, Go has quickly become the "language of the cloud" for building application servers and services that run in and on today's cloud platforms. With [Pulumi 2.0](https://www.pulumi.com/blog/pulumi-2-0/, Go can also be used to manage and provision modern infrastructure as well.  Across any cloud (AWS, Azure, GCP, Kubernetes and [more than 50 others](https://www.pulumi.com/docs/reference/pkg/)!) and across a variety of workloads (containers, serverless, kubernetes, core infrastructure and more), you can now use the rich software engineering strengths of the Go language and ecosystem to manage your cloud infrastructure.  The [Pulumi open source project](https://github.com/pulumi/pulumi) itself has been built on Go from day 1, and so we're really excited to bring full Go support for cloud infrastructure as code to the same language ecosystem that Pulumi itself has been part of.
+Over the last 10 years, Go has quickly become the "language of the cloud" for building application servers and services that run in and on today's cloud platforms. With [Pulumi 2.0]({{< relref "/blog/pulumi-2-0" >}}), Go can also be used to manage and provision modern infrastructure as well.  Across any cloud (AWS, Azure, GCP, Kubernetes and [more than 50 others]({{< relref "/docs/reference/pkg" >}})!) and across a variety of workloads (containers, serverless, kubernetes, core infrastructure and more), you can now use the rich software engineering strengths of the Go language and ecosystem to manage your cloud infrastructure.  The [Pulumi open source project](https://github.com/pulumi/pulumi) itself has been built on Go from day 1, and so we're really excited to bring full Go support for cloud infrastructure as code to the same language ecosystem that Pulumi itself has been part of.
 
 <!--more-->
 
@@ -31,7 +31,7 @@ Pulumi gives you the software engineering superpowers of the Go programming lang
 
 ### Serverless
 
-Pulumi has first-class support for serverless workloads, allowing your application and infrastructure code to live side by side (and both be written in Go if you want!). Easily deploy [a lambda running a Go handler on AWS]([https://github.com/pulumi/examples/tree/master/aws-go-lambda):
+Pulumi has first-class support for serverless workloads, allowing your application and infrastructure code to live side by side (and both be written in Go if you want!). Easily deploy [a lambda running a Go handler on AWS](https://github.com/pulumi/examples/tree/master/aws-go-lambda):
 
 ```go
 		args := &lambda.FunctionArgs{
@@ -57,7 +57,7 @@ Pulumi has first-class support for serverless workloads, allowing your applicati
 
 ```
 
-And with Pulumi’s multi-cloud approach [you can do the equivalent on Google Cloud]([https://github.com/pulumi/examples/tree/master/gcp-go-functions):
+And with Pulumi’s multi-cloud approach [you can do the equivalent on Google Cloud](https://github.com/pulumi/examples/tree/master/gcp-go-functions):
 
 ```go
 		// Set arguments for creating the function resource.
@@ -225,9 +225,9 @@ The power doesn’t stop with managing Kubernetes resources. You can provision c
 
 The magic doesn’t stop here. There’s a [wealth of examples](https://github.com/pulumi/examples), and we’re excited to see where the community takes it. If you’d like to try out Pulumi today, you can get started with your favorite cloud here:
 
-- [AWS](https://www.pulumi.com/docs/get-started/aws/)
-- [Azure](https://www.pulumi.com/docs/get-started/azure/)
-- [Google Cloud](https://www.pulumi.com/docs/get-started/gcp/)
-- [Kubernetes](https://www.pulumi.com/docs/get-started/kubernetes/)
+- [AWS]({{< relref "/docs/get-started/aws" >}})
+- [Azure]({{< relref "/docs/get-started/azure" >}})
+- [Google Cloud]({{< relref "/docs/get-started/gcp" >}})
+- [Kubernetes]({{< relref "/docs/get-started/kubernetes" >}})
 
 We’d love to hear what you think. We look forward to hanging out on [Pulumi Slack](https://slack.pulumi.com/) or hearing from your thoughts in a [GitHub issue](https://github.com/pulumi/pulumi/issues/new).
