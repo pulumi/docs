@@ -43,3 +43,21 @@ Explore the resources and functions of the compute module in the Open Stack pack
 	<dd>2.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Compute.html" title="Pulumi.OpenStack.Compute">Pulumi.OpenStack.Compute</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#" title="openstack/compute">openstack/compute</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/openstack/compute/#" title="@pulumi/openstack/compute">@pulumi/openstack/compute</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_openstack/compute" title="pulumi_openstack/compute">pulumi_openstack/compute</a></dd>
+
+</dl>
+

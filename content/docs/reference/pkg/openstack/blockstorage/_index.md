@@ -41,3 +41,21 @@ Explore the resources and functions of the blockstorage module in the Open Stack
 	<dd>2.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.BlockStorage.html" title="Pulumi.OpenStack.BlockStorage">Pulumi.OpenStack.BlockStorage</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/blockstorage?tab=doc#" title="openstack/blockstorage">openstack/blockstorage</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/openstack/blockstorage/#" title="@pulumi/openstack/blockstorage">@pulumi/openstack/blockstorage</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_openstack/blockstorage" title="pulumi_openstack/blockstorage">pulumi_openstack/blockstorage</a></dd>
+
+</dl>
+

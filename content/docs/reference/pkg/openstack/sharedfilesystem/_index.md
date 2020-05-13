@@ -37,3 +37,21 @@ Explore the resources and functions of the sharedfilesystem module in the Open S
 	<dd>2.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.SharedFileSystem.html" title="Pulumi.OpenStack.SharedFileSystem">Pulumi.OpenStack.SharedFileSystem</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/sharedfilesystem?tab=doc#" title="openstack/sharedfilesystem">openstack/sharedfilesystem</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/openstack/sharedfilesystem/#" title="@pulumi/openstack/sharedfilesystem">@pulumi/openstack/sharedfilesystem</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_openstack/sharedfilesystem" title="pulumi_openstack/sharedfilesystem">pulumi_openstack/sharedfilesystem</a></dd>
+
+</dl>
+
