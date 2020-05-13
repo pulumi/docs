@@ -26,6 +26,24 @@ Explore the resources and functions of the gke module in the Spotinst package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`spotinst` Terraform Provider](https://github.com/terraform-providers/terraform-provider-spotinst).</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
+	<dd>2.3.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Gke.html" title="Pulumi.Spotinst.Gke">Pulumi.Spotinst.Gke</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#" title="spotinst/gke">spotinst/gke</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/gke/#" title="@pulumi/spotinst/gke">@pulumi/spotinst/gke</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_spotinst/gke" title="pulumi_spotinst/gke">pulumi_spotinst/gke</a></dd>
+
 </dl>
 

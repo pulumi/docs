@@ -39,6 +39,12 @@ example = spotinst.aws.OceanLaunchSpec("example",
         "memoryPerUnit": 2048,
         "numOfUnits": 5,
     }],
+    elastic_ip_pools=[{
+        "tagSelector": {
+            "tagKey": "key",
+            "tagValue": "value",
+        },
+    }],
     iam_instance_profile="iam-profile",
     image_id="ami-123456",
     labels=[{
@@ -73,6 +79,12 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
         gpuPerUnit: 0,
         memoryPerUnit: 2048,
         numOfUnits: 5,
+    }],
+    elasticIpPools: [{
+        tagSelector: {
+            tagKey: "key",
+            tagValue: "value",
+        },
     }],
     iamInstanceProfile: "iam-profile",
     imageId: "ami-123456",
@@ -110,7 +122,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OceanLaunchSpec</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autoscale_headrooms=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>taints=None<span class="p">, </span>user_data=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OceanLaunchSpec</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autoscale_headrooms=None<span class="p">, </span>elastic_ip_pools=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>taints=None<span class="p">, </span>user_data=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -302,6 +314,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
+        <span>Elastic<wbr>Ip<wbr>Pools</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecelasticippool">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Elastic<wbr>Ip<wbr>Pool<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Assign an Elastic IP to the instances spun by the launch spec. Can be null.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -413,6 +434,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">[]Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom</a></span>
     </dt>
     <dd>{{% md %}}Set custom headroom per launch spec. provide list of headrooms object.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Elastic<wbr>Ip<wbr>Pools</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecelasticippool">[]Ocean<wbr>Launch<wbr>Spec<wbr>Elastic<wbr>Ip<wbr>Pool</a></span>
+    </dt>
+    <dd>{{% md %}}Assign an Elastic IP to the instances spun by the launch spec. Can be null.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -532,6 +562,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
+        <span>elastic<wbr>Ip<wbr>Pools</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecelasticippool">Ocean<wbr>Launch<wbr>Spec<wbr>Elastic<wbr>Ip<wbr>Pool[]</a></span>
+    </dt>
+    <dd>{{% md %}}Assign an Elastic IP to the instances spun by the launch spec. Can be null.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -643,6 +682,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">List[Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom]</a></span>
     </dt>
     <dd>{{% md %}}Set custom headroom per launch spec. provide list of headrooms object.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>elastic_<wbr>ip_<wbr>pools</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecelasticippool">List[Ocean<wbr>Launch<wbr>Spec<wbr>Elastic<wbr>Ip<wbr>Pool]</a></span>
+    </dt>
+    <dd>{{% md %}}Assign an Elastic IP to the instances spun by the launch spec. Can be null.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -825,7 +873,7 @@ Get an existing OceanLaunchSpec resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>autoscale_headrooms=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>taints=None<span class="p">, </span>user_data=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>autoscale_headrooms=None<span class="p">, </span>elastic_ip_pools=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>taints=None<span class="p">, </span>user_data=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -950,6 +998,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Elastic<wbr>Ip<wbr>Pools</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecelasticippool">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Elastic<wbr>Ip<wbr>Pool<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Assign an Elastic IP to the instances spun by the launch spec. Can be null.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -1061,6 +1118,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">[]Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom</a></span>
     </dt>
     <dd>{{% md %}}Set custom headroom per launch spec. provide list of headrooms object.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Elastic<wbr>Ip<wbr>Pools</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecelasticippool">[]Ocean<wbr>Launch<wbr>Spec<wbr>Elastic<wbr>Ip<wbr>Pool</a></span>
+    </dt>
+    <dd>{{% md %}}Assign an Elastic IP to the instances spun by the launch spec. Can be null.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1180,6 +1246,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>elastic<wbr>Ip<wbr>Pools</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecelasticippool">Ocean<wbr>Launch<wbr>Spec<wbr>Elastic<wbr>Ip<wbr>Pool[]</a></span>
+    </dt>
+    <dd>{{% md %}}Assign an Elastic IP to the instances spun by the launch spec. Can be null.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1291,6 +1366,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">List[Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom]</a></span>
     </dt>
     <dd>{{% md %}}Set custom headroom per launch spec. provide list of headrooms object.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>elastic_<wbr>ip_<wbr>pools</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecelasticippool">List[Ocean<wbr>Launch<wbr>Spec<wbr>Elastic<wbr>Ip<wbr>Pool]</a></span>
+    </dt>
+    <dd>{{% md %}}Assign an Elastic IP to the instances spun by the launch spec. Can be null.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1588,6 +1672,206 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Optionally configure the amount of memory (MiB) to allocate for each headroom unit.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="oceanlaunchspecelasticippool">Ocean<wbr>Launch<wbr>Spec<wbr>Elastic<wbr>Ip<wbr>Pool</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecElasticIpPool">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanLaunchSpecElasticIpPool">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanLaunchSpecElasticIpPoolArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanLaunchSpecElasticIpPoolOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.OceanLaunchSpecElasticIpPoolArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.OceanLaunchSpecElasticIpPool.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tag<wbr>Selector</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecelasticippooltagselector">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Elastic<wbr>Ip<wbr>Pool<wbr>Tag<wbr>Selector<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Key-value object, which defines an Elastic IP from the customer pool. Can be null.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tag<wbr>Selector</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecelasticippooltagselector">Ocean<wbr>Launch<wbr>Spec<wbr>Elastic<wbr>Ip<wbr>Pool<wbr>Tag<wbr>Selector</a></span>
+    </dt>
+    <dd>{{% md %}}Key-value object, which defines an Elastic IP from the customer pool. Can be null.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tag<wbr>Selector</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecelasticippooltagselector">Ocean<wbr>Launch<wbr>Spec<wbr>Elastic<wbr>Ip<wbr>Pool<wbr>Tag<wbr>Selector</a></span>
+    </dt>
+    <dd>{{% md %}}Key-value object, which defines an Elastic IP from the customer pool. Can be null.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tag<wbr>Selector</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecelasticippooltagselector">Dict[Ocean<wbr>Launch<wbr>Spec<wbr>Elastic<wbr>Ip<wbr>Pool<wbr>Tag<wbr>Selector]</a></span>
+    </dt>
+    <dd>{{% md %}}Key-value object, which defines an Elastic IP from the customer pool. Can be null.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="oceanlaunchspecelasticippooltagselector">Ocean<wbr>Launch<wbr>Spec<wbr>Elastic<wbr>Ip<wbr>Pool<wbr>Tag<wbr>Selector</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecElasticIpPoolTagSelector">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanLaunchSpecElasticIpPoolTagSelector">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanLaunchSpecElasticIpPoolTagSelectorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanLaunchSpecElasticIpPoolTagSelectorOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.OceanLaunchSpecElasticIpPoolTagSelectorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.OceanLaunchSpecElasticIpPoolTagSelector.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Tag<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Elastic IP tag key. The launch spec will consider all elastic IPs tagged with this tag as a part of the elastic IP pool to use.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tag<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Elastic IP tag value. Can be null.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Tag<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Elastic IP tag key. The launch spec will consider all elastic IPs tagged with this tag as a part of the elastic IP pool to use.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tag<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Elastic IP tag value. Can be null.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>tag<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Elastic IP tag key. The launch spec will consider all elastic IPs tagged with this tag as a part of the elastic IP pool to use.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tag<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Elastic IP tag value. Can be null.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>tag<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Elastic IP tag key. The launch spec will consider all elastic IPs tagged with this tag as a part of the elastic IP pool to use.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tag<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Elastic IP tag value. Can be null.
 {{% /md %}}</dd>
 
 </dl>
