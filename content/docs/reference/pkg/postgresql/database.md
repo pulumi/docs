@@ -29,6 +29,17 @@ const myDb = new postgresql.Database("my_db", {
     template: "template0",
 });
 ```
+```python
+import pulumi
+import pulumi_postgresql as postgresql
+
+my_db = postgresql.Database("myDb",
+    allow_connections=True,
+    connection_limit=-1,
+    lc_collate="C",
+    owner="my_role",
+    template="template0")
+```
 
 
 

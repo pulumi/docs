@@ -28,6 +28,17 @@ const readonlyTables = new postgresql.Grant("readonly_tables", {
     schema: "public",
 });
 ```
+```python
+import pulumi
+import pulumi_postgresql as postgresql
+
+readonly_tables = postgresql.Grant("readonlyTables",
+    database="test_db",
+    object_type="table",
+    privileges=["SELECT"],
+    role="test_role",
+    schema="public")
+```
 
 
 

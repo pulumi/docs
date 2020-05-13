@@ -33,6 +33,24 @@ A Pulumi package for creating and managing postgresql cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`postgresql` Terraform Provider](https://github.com/terraform-providers/terraform-provider-postgresql).</dd>
 	<dt>Version</dt>
-	<dd>2.1.0</dd>
+	<dd>2.1.1</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Postgresql/Pulumi.Postgresql.html" title="Pulumi.Postgresql">Pulumi.Postgresql</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/?tab=doc#" title="postgresql">postgresql</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#" title="@pulumi/postgresql">@pulumi/postgresql</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_postgresql" title="pulumi_postgresql">pulumi_postgresql</a></dd>
+
 </dl>
 

@@ -29,6 +29,18 @@ const readOnlyTables = new postgresql.DefaultPrivileges("read_only_tables", {
     schema: "public",
 });
 ```
+```python
+import pulumi
+import pulumi_postgresql as postgresql
+
+read_only_tables = postgresql.DefaultPrivileges("readOnlyTables",
+    database="test_db",
+    object_type="table",
+    owner="db_owner",
+    privileges=["SELECT"],
+    role="test_role",
+    schema="public")
+```
 
 
 

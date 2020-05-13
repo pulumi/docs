@@ -11,9 +11,9 @@ meta_desc: "Explore the DefaultPrivileg resource of the PostgreSQL package, incl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-Deprecated: postgresql.DefaultPrivileg has been deprecated in favour of postgresql.DefaultPrivileges
+Deprecated: postgresql.DefaultPrivileg has been deprecated in favor of postgresql.DefaultPrivileges
 
-<p class="resource-deprecated">Deprecated: {{% md %}}postgresql.DefaultPrivileg has been deprecated in favour of postgresql.DefaultPrivileges{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}postgresql.DefaultPrivileg has been deprecated in favor of postgresql.DefaultPrivileges{{% /md %}}</p>
 
 
 ## Create a DefaultPrivileg Resource {#create}

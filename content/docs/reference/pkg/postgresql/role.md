@@ -43,6 +43,19 @@ const myReplicationRole = new postgresql.Role("my_replication_role", {
     replication: true,
 });
 ```
+```python
+import pulumi
+import pulumi_postgresql as postgresql
+
+my_role = postgresql.Role("myRole",
+    login=True,
+    password="mypass")
+my_replication_role = postgresql.Role("myReplicationRole",
+    connection_limit=5,
+    login=True,
+    password="md5c98cbfeb6a347a47eb8e96cfb4c4b890",
+    replication=True)
+```
 
 
 
