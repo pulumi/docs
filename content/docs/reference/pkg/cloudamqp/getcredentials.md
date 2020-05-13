@@ -35,7 +35,7 @@ meta_desc: "Explore the GetCredentials function of the CloudAMQP package, includ
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCredentials </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudamqp/Pulumi.Cloudamqp.GetCredentialsResult.html">GetCredentialsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudamqp/Pulumi.CloudAmqp.GetCredentialsArgs.html">GetCredentialsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.CloudAmqp/Pulumi.CloudAmqp.GetCredentialsResult.html">GetCredentialsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.CloudAmqp/Pulumi.CloudAmqp.GetCredentialsArgs.html">GetCredentialsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 

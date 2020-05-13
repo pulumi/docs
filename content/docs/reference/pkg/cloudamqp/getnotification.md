@@ -35,7 +35,7 @@ meta_desc: "Explore the GetNotification function of the CloudAMQP package, inclu
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetNotification </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudamqp/Pulumi.Cloudamqp.GetNotificationResult.html">GetNotificationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudamqp/Pulumi.CloudAmqp.GetNotificationArgs.html">GetNotificationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.CloudAmqp/Pulumi.CloudAmqp.GetNotificationResult.html">GetNotificationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.CloudAmqp/Pulumi.CloudAmqp.GetNotificationArgs.html">GetNotificationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 

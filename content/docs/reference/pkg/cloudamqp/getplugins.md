@@ -35,7 +35,7 @@ meta_desc: "Explore the GetPlugins function of the CloudAMQP package, including 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPlugins </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudamqp/Pulumi.Cloudamqp.GetPluginsResult.html">GetPluginsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudamqp/Pulumi.CloudAmqp.GetPluginsArgs.html">GetPluginsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.CloudAmqp/Pulumi.CloudAmqp.GetPluginsResult.html">GetPluginsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.CloudAmqp/Pulumi.CloudAmqp.GetPluginsArgs.html">GetPluginsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -296,7 +296,7 @@ The following output properties are available:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/v2/go/cloudamqp/?tab=doc#GetPluginsPluginArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/v2/go/cloudamqp/?tab=doc#GetPluginsPlugin">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Cloudamqp/Pulumi.CloudAmqp.Inputs.GetPluginsPluginArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Cloudamqp/Pulumi.CloudAmqp.Outputs.GetPluginsPlugin.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.CloudAmqp/Pulumi.CloudAmqp.Inputs.GetPluginsPluginArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.CloudAmqp/Pulumi.CloudAmqp.Outputs.GetPluginsPlugin.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
