@@ -14,7 +14,7 @@ Manages a user assigned identity.
 
 
 
-Deprecated: azure.msi.UserAssignedIdentity has been deprecated in favour of azure.authorization.UserAssignedIdentity
+Deprecated: azure.msi.UserAssignedIdentity has been deprecated in favor of azure.authorization.UserAssignedIdentity
 
 {{% examples %}}
 ## Example Usage
@@ -57,7 +57,7 @@ const exampleUserAssignedIdentity = new azure.authorization.UserAssignedIdentity
 {{% /example %}}
 
 {{% /examples %}}
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.msi.UserAssignedIdentity has been deprecated in favour of azure.authorization.UserAssignedIdentity{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.msi.UserAssignedIdentity has been deprecated in favor of azure.authorization.UserAssignedIdentity{{% /md %}}</p>
 
 
 ## Create a UserAssignedIdentity Resource {#create}

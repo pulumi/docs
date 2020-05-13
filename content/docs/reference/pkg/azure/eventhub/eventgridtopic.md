@@ -16,7 +16,7 @@ Manages an EventGrid Topic
 
 
 
-Deprecated: azure.eventhub.EventGridTopic has been deprecated in favour of azure.eventgrid.Topic
+Deprecated: azure.eventhub.EventGridTopic has been deprecated in favor of azure.eventgrid.Topic
 
 {{% examples %}}
 ## Example Usage
@@ -63,7 +63,7 @@ const exampleTopic = new azure.eventgrid.Topic("exampleTopic", {
 {{% /example %}}
 
 {{% /examples %}}
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.EventGridTopic has been deprecated in favour of azure.eventgrid.Topic{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.EventGridTopic has been deprecated in favor of azure.eventgrid.Topic{{% /md %}}</p>
 
 
 ## Create a EventGridTopic Resource {#create}

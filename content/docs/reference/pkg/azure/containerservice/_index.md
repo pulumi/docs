@@ -35,6 +35,24 @@ Explore the resources and functions of the containerservice module in the Azure 
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.5.1</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.html" title="Pulumi.Azure.ContainerService">Pulumi.Azure.ContainerService</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#" title="azure/containerservice">azure/containerservice</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/containerservice/#" title="@pulumi/azure/containerservice">@pulumi/azure/containerservice</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/containerservice" title="pulumi_azure/containerservice">pulumi_azure/containerservice</a></dd>
+
 </dl>
 

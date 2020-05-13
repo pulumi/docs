@@ -25,6 +25,24 @@ Explore the resources and functions of the loganalytics module in the Azure pack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.5.1</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.LogAnalytics.html" title="Pulumi.Azure.LogAnalytics">Pulumi.Azure.LogAnalytics</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/loganalytics?tab=doc#" title="azure/loganalytics">azure/loganalytics</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/loganalytics/#" title="@pulumi/azure/loganalytics">@pulumi/azure/loganalytics</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/loganalytics" title="pulumi_azure/loganalytics">pulumi_azure/loganalytics</a></dd>
+
 </dl>
 

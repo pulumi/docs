@@ -95,9 +95,9 @@ public_ip = azure.management.Lock("public-ip",
     notes="Locked because it's needed by a third-party")
 ```
 
-Deprecated: azure.managementresource.ManangementLock has been deprecated in favour of azure.management.Lock
+Deprecated: azure.managementresource.ManangementLock has been deprecated in favor of azure.management.Lock
 
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.managementresource.ManangementLock has been deprecated in favour of azure.management.Lock{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.managementresource.ManangementLock has been deprecated in favor of azure.management.Lock{{% /md %}}</p>
 
 
 ## Create a ManangementLock Resource {#create}

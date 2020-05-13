@@ -31,6 +31,24 @@ Explore the resources and functions of the authorization module in the Azure pac
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.5.1</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Authorization.html" title="Pulumi.Azure.Authorization">Pulumi.Azure.Authorization</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/authorization?tab=doc#" title="azure/authorization">azure/authorization</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/authorization/#" title="@pulumi/azure/authorization">@pulumi/azure/authorization</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/authorization" title="pulumi_azure/authorization">pulumi_azure/authorization</a></dd>
+
 </dl>
 

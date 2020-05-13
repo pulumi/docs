@@ -32,6 +32,24 @@ Explore the resources and functions of the mariadb module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.5.1</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MariaDB.html" title="Pulumi.Azure.MariaDB">Pulumi.Azure.MariaDB</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mariadb?tab=doc#" title="azure/mariadb">azure/mariadb</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/mariadb/#" title="@pulumi/azure/mariadb">@pulumi/azure/mariadb</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/mariadb" title="pulumi_azure/mariadb">pulumi_azure/mariadb</a></dd>
+
 </dl>
 

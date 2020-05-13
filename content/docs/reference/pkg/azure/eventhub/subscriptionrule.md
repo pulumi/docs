@@ -148,9 +148,9 @@ example_subscription_rule = azure.servicebus.SubscriptionRule("exampleSubscripti
     })
 ```
 
-Deprecated: azure.eventhub.SubscriptionRule has been deprecated in favour of azure.servicebus.SubscriptionRule
+Deprecated: azure.eventhub.SubscriptionRule has been deprecated in favor of azure.servicebus.SubscriptionRule
 
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.SubscriptionRule has been deprecated in favour of azure.servicebus.SubscriptionRule{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.SubscriptionRule has been deprecated in favor of azure.servicebus.SubscriptionRule{{% /md %}}</p>
 
 
 ## Create a SubscriptionRule Resource {#create}

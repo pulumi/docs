@@ -798,7 +798,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;uaiPrincipalId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">principal_id</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.core.getUserAssignedIdentity has been deprecated in favour of azure.authorization.getUserAssignedIdentity</p>
+<p>Deprecated: azure.core.getUserAssignedIdentity has been deprecated in favor of azure.authorization.getUserAssignedIdentity</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

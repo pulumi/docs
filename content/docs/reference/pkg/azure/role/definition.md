@@ -14,7 +14,7 @@ Manages a custom Role Definition, used to assign Roles to Users/Principals. See 
 
 
 
-Deprecated: azure.role.Definition has been deprecated in favour of azure.authorization.RoleDefinition
+Deprecated: azure.role.Definition has been deprecated in favor of azure.authorization.RoleDefinition
 
 {{% examples %}}
 ## Example Usage
@@ -65,7 +65,7 @@ const example = new azure.authorization.RoleDefinition("example", {
 {{% /example %}}
 
 {{% /examples %}}
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.role.Definition has been deprecated in favour of azure.authorization.RoleDefinition{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.role.Definition has been deprecated in favor of azure.authorization.RoleDefinition{{% /md %}}</p>
 
 
 ## Create a Definition Resource {#create}

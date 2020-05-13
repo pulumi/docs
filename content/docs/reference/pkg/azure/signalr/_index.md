@@ -28,6 +28,24 @@ Explore the resources and functions of the signalr module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.5.1</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.SignalR.html" title="Pulumi.Azure.SignalR">Pulumi.Azure.SignalR</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/signalr?tab=doc#" title="azure/signalr">azure/signalr</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/signalr/#" title="@pulumi/azure/signalr">@pulumi/azure/signalr</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/signalr" title="pulumi_azure/signalr">pulumi_azure/signalr</a></dd>
+
 </dl>
 

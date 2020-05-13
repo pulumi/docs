@@ -31,6 +31,24 @@ Explore the resources and functions of the appinsights module in the Azure packa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.5.1</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppInsights.html" title="Pulumi.Azure.AppInsights">Pulumi.Azure.AppInsights</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appinsights?tab=doc#" title="azure/appinsights">azure/appinsights</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/appinsights/#" title="@pulumi/azure/appinsights">@pulumi/azure/appinsights</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/appinsights" title="pulumi_azure/appinsights">pulumi_azure/appinsights</a></dd>
+
 </dl>
 

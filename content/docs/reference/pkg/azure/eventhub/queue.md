@@ -14,7 +14,7 @@ Manages a ServiceBus Queue.
 
 
 
-Deprecated: azure.eventhub.Queue has been deprecated in favour of azure.servicebus.Queue
+Deprecated: azure.eventhub.Queue has been deprecated in favor of azure.servicebus.Queue
 
 {{% examples %}}
 ## Example Usage
@@ -72,7 +72,7 @@ const exampleQueue = new azure.servicebus.Queue("exampleQueue", {
 {{% /example %}}
 
 {{% /examples %}}
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.Queue has been deprecated in favour of azure.servicebus.Queue{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.Queue has been deprecated in favor of azure.servicebus.Queue{{% /md %}}</p>
 
 
 ## Create a Queue Resource {#create}

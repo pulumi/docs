@@ -89,7 +89,7 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">principal_id</span><span class="o">=</span><span class="n">example_client_config</span><span class="o">.</span><span class="n">client_id</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.role.Assignment has been deprecated in favour of azure.authorization.Assignment</p>
+<p>Deprecated: azure.role.Assignment has been deprecated in favor of azure.authorization.Assignment</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -230,7 +230,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">assignable_scopes</span><span class="o">=</span><span class="p">[</span><span class="n">primary</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.role.Definition has been deprecated in favour of azure.authorization.RoleDefinition</p>
+<p>Deprecated: azure.role.Definition has been deprecated in favor of azure.authorization.RoleDefinition</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -376,7 +376,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_azure.role.get_role_definition">
 <code class="sig-prename descclassname">pulumi_azure.role.</code><code class="sig-name descname">get_role_definition</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_definition_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.role.get_role_definition" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deprecated: azure.role.getRoleDefinition has been deprecated in favour of azure.authorization.getRoleDefinition</p>
+<dd><p>Deprecated: azure.role.getRoleDefinition has been deprecated in favor of azure.authorization.getRoleDefinition</p>
 </dd></dl>
 
 </div>

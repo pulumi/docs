@@ -1997,7 +1997,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">})</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.containerservice.RegistryWebook has been deprecated in favour of azure.containerservice.RegistryWebhook</p>
+<p>Deprecated: azure.containerservice.RegistryWebook has been deprecated in favor of azure.containerservice.RegistryWebhook</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

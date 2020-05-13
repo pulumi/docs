@@ -33,6 +33,24 @@ Explore the resources and functions of the logicapps module in the Azure package
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.5.1</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.LogicApps.html" title="Pulumi.Azure.LogicApps">Pulumi.Azure.LogicApps</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/logicapps?tab=doc#" title="azure/logicapps">azure/logicapps</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/logicapps/#" title="@pulumi/azure/logicapps">@pulumi/azure/logicapps</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/logicapps" title="pulumi_azure/logicapps">pulumi_azure/logicapps</a></dd>
+
 </dl>
 

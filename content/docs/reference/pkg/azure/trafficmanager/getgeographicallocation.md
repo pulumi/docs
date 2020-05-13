@@ -31,9 +31,9 @@ example = azure.network.get_traffic_manager(name="World")
 pulumi.export("locationCode", example.id)
 ```
 
-Deprecated: azure.trafficmanager.getGeographicalLocation has been deprecated in favour of azure.network.getTrafficManager
+Deprecated: azure.trafficmanager.getGeographicalLocation has been deprecated in favor of azure.network.getTrafficManager
 
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.trafficmanager.getGeographicalLocation has been deprecated in favour of azure.network.getTrafficManager{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.trafficmanager.getGeographicalLocation has been deprecated in favor of azure.network.getTrafficManager{{% /md %}}</p>
 
 
 ## Using GetGeographicalLocation {#using}

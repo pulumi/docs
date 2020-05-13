@@ -14,7 +14,7 @@ Use this data source to access information about an existing EventHub Namespace.
 
 
 
-Deprecated: azure.eventhub.getEventhubNamespace has been deprecated in favour of azure.eventhub.getNamespace
+Deprecated: azure.eventhub.getEventhubNamespace has been deprecated in favor of azure.eventhub.getNamespace
 
 {{% examples %}}
 ## Example Usage
@@ -54,7 +54,7 @@ export const eventhubNamespaceId = example.then(example => example.id);
 {{% /example %}}
 
 {{% /examples %}}
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.getEventhubNamespace has been deprecated in favour of azure.eventhub.getNamespace{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.getEventhubNamespace has been deprecated in favor of azure.eventhub.getNamespace{{% /md %}}</p>
 
 
 ## Using GetEventhubNamespace {#using}
