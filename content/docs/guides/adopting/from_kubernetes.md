@@ -94,26 +94,26 @@ pulumi.export('private_ip', frontend.spec['cluster_ip'])
 package main
 
 import (
-	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
-	"github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/yaml"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
+    "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/yaml"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		guestbook, err := yaml.NewConfigFile(ctx, "guestbook", &yaml.ConfigFileArgs{
-			File: "guestbook-all-in-one.yaml",
-		})
-		if err != nil {
-			return err
-		}
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        guestbook, err := yaml.NewConfigFile(ctx, "guestbook", &yaml.ConfigFileArgs{
+            File: "guestbook-all-in-one.yaml",
+        })
+        if err != nil {
+            return err
+        }
 
-		// Export the private cluster IP address of the frontend.
-		frontend := guestbook.GetResource("v1/Service", "frontend", "").(*corev1.Service)
-		ctx.Export("privateIP", frontend.Spec.ClusterIP())
+        // Export the private cluster IP address of the frontend.
+        frontend := guestbook.GetResource("v1/Service", "frontend", "").(*corev1.Service)
+        ctx.Export("privateIP", frontend.Spec.ClusterIP())
 
-		return nil
-	})
+        return nil
+    })
 }
 ```
 
@@ -248,28 +248,28 @@ export const privateIp = frontend.spec.clusterIP;
 package main
 
 import (
-	"path/filepath"
+    "path/filepath"
 
-	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
-	"github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/yaml"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
+    "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/yaml"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		guestbook, err := yaml.NewConfigGroup(ctx, "guestbook", &yaml.ConfigGroupArgs{
-			Files: []string{filepath.Join("yaml", "*.yaml")},
-		})
-		if err != nil {
-			return err
-		}
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        guestbook, err := yaml.NewConfigGroup(ctx, "guestbook", &yaml.ConfigGroupArgs{
+            Files: []string{filepath.Join("yaml", "*.yaml")},
+        })
+        if err != nil {
+            return err
+        }
 
-		// Export the private cluster IP address of the frontend.
-		frontend := guestbook.GetResource("v1/Service", "frontend", "").(*corev1.Service)
-		ctx.Export("privateIP", frontend.Spec.ClusterIP())
+        // Export the private cluster IP address of the frontend.
+        frontend := guestbook.GetResource("v1/Service", "frontend", "").(*corev1.Service)
+        ctx.Export("privateIP", frontend.Spec.ClusterIP())
 
-		return nil
-	})
+        return nil
+    })
 }
 ```
 
@@ -437,32 +437,32 @@ pulumi.export('frontend_ip', frontend.status.load_balancer.ingress[0].ip)
 package main
 
 import (
-	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
-	helmv2 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/helm/v2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
+    helmv2 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/helm/v2"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
+    pulumi.Run(func(ctx *pulumi.Context) error {
         // Deploy the latest version of the stable/wordpress chart.
-		wordpress, err := helmv2.NewChart(ctx, "wpdev", helmv2.ChartArgs{
-			Repo:    pulumi.String("stable"),
-			Chart:   pulumi.String("wordpress"),
-			Version: pulumi.String("9.0.3"),
-		})
-		if err != nil {
-			return err
-		}
+        wordpress, err := helmv2.NewChart(ctx, "wpdev", helmv2.ChartArgs{
+            Repo:    pulumi.String("stable"),
+            Chart:   pulumi.String("wordpress"),
+            Version: pulumi.String("9.0.3"),
+        })
+        if err != nil {
+            return err
+        }
 
-		// Export the public IP for WordPress.
-		frontendIP := wordpress.GetResource("v1/Service", "wpdev-wordpress", "").Apply(func(r interface{}) (interface{}, error) {
-			svc := r.(*corev1.Service)
-			return svc.Status.LoadBalancer().Ingress().Index(pulumi.Int(0)).Ip(), nil
-		})
-		ctx.Export("frontendIp", frontendIP)
+        // Export the public IP for WordPress.
+        frontendIP := wordpress.GetResource("v1/Service", "wpdev-wordpress", "").Apply(func(r interface{}) (interface{}, error) {
+            svc := r.(*corev1.Service)
+            return svc.Status.LoadBalancer().Ingress().Index(pulumi.Int(0)).Ip(), nil
+        })
+        ctx.Export("frontendIp", frontendIP)
 
-		return nil
-	})
+        return nil
+    })
 }
 ```
 
@@ -660,57 +660,57 @@ svc = Service('nginx-svc',
 package main
 
 import (
-	"github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes"
-	appsv1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1"
-	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
-	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes"
+    appsv1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1"
+    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
+    metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		renderProvider, err := kubernetes.NewProvider(ctx, "k8s-yaml-renderer", &kubernetes.ProviderArgs{
-			RenderYamlToDirectory: pulumi.String("yaml"),
-		})
-		if err != nil {
-			return err
-		}
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        renderProvider, err := kubernetes.NewProvider(ctx, "k8s-yaml-renderer", &kubernetes.ProviderArgs{
+            RenderYamlToDirectory: pulumi.String("yaml"),
+        })
+        if err != nil {
+            return err
+        }
 
-		labels := pulumi.StringMap{"app": pulumi.String("nginx")}
+        labels := pulumi.StringMap{"app": pulumi.String("nginx")}
 
-		_, err = appsv1.NewDeployment(ctx, "nginx-dep", &appsv1.DeploymentArgs{
-			Spec: &appsv1.DeploymentSpecArgs{
-				Selector: &metav1.LabelSelectorArgs{MatchLabels: labels},
-				Replicas: pulumi.Int(1),
-				Template: corev1.PodTemplateSpecArgs{
-					Metadata: metav1.ObjectMetaArgs{Labels: labels},
-					Spec: &corev1.PodSpecArgs{
-						Containers: &corev1.ContainerArray{
-							&corev1.ContainerArgs{
-								Name:  pulumi.String("nginx"),
-								Image: pulumi.String("nginx"),
-							},
-						},
-					},
-				},
-			},
-		}, pulumi.Provider(renderProvider))
-		if err != nil {
-			return err
-		}
-		_, err = corev1.NewService(ctx, "nginx-svc", &corev1.ServiceArgs{
-			Spec: &corev1.ServiceSpecArgs{
-				Type:     pulumi.String("LoadBalancer"),
-				Selector: labels,
-				Ports:    corev1.ServicePortArray{corev1.ServicePortArgs{Port: pulumi.Int(80)}},
-			},
-		}, pulumi.Provider(renderProvider))
-		if err != nil {
-			return err
-		}
+        _, err = appsv1.NewDeployment(ctx, "nginx-dep", &appsv1.DeploymentArgs{
+            Spec: &appsv1.DeploymentSpecArgs{
+                Selector: &metav1.LabelSelectorArgs{MatchLabels: labels},
+                Replicas: pulumi.Int(1),
+                Template: corev1.PodTemplateSpecArgs{
+                    Metadata: metav1.ObjectMetaArgs{Labels: labels},
+                    Spec: &corev1.PodSpecArgs{
+                        Containers: &corev1.ContainerArray{
+                            &corev1.ContainerArgs{
+                                Name:  pulumi.String("nginx"),
+                                Image: pulumi.String("nginx"),
+                            },
+                        },
+                    },
+                },
+            },
+        }, pulumi.Provider(renderProvider))
+        if err != nil {
+            return err
+        }
+        _, err = corev1.NewService(ctx, "nginx-svc", &corev1.ServiceArgs{
+            Spec: &corev1.ServiceSpecArgs{
+                Type:     pulumi.String("LoadBalancer"),
+                Selector: labels,
+                Ports:    corev1.ServicePortArray{corev1.ServicePortArgs{Port: pulumi.Int(80)}},
+            },
+        }, pulumi.Provider(renderProvider))
+        if err != nil {
+            return err
+        }
 
-		return nil
-	})
+        return nil
+    })
 }
 ```
 
@@ -898,22 +898,22 @@ pulumi.export('public_ip', frontend.status['load_balancer']['ingress'][0]['ip'])
 
 ```go
 ...
-		guestbook, err := yaml.NewConfigFile(ctx, "guestbook", &yaml.ConfigFileArgs{
-			File: "guestbook-all-in-one.yaml",
-			Transformations: []yaml.Transformation{func(state map[string]interface{}, opts ...pulumi.ResourceOption) {
-				if kind, ok := state["kind"]; ok && kind == "Service" && state["metadata"].(map[string]interface{})["name"] == "frontend" {
-					state["spec"].(map[string]interface{})["type"] = "LoadBalancer"
-				}
-			}},
-		})
-		if err != nil {
-			return err
-		}
+guestbook, err := yaml.NewConfigFile(ctx, "guestbook", &yaml.ConfigFileArgs{
+    File: "guestbook-all-in-one.yaml",
+    Transformations: []yaml.Transformation{func(state map[string]interface{}, opts ...pulumi.ResourceOption) {
+        if kind, ok := state["kind"]; ok && kind == "Service" && state["metadata"].(map[string]interface{})["name"] == "frontend" {
+            state["spec"].(map[string]interface{})["type"] = "LoadBalancer"
+        }
+    }},
+})
+if err != nil {
+    return err
+}
 
-		// Export the private cluster IP address of the frontend.
-		frontend := guestbook.GetResource("v1/Service", "frontend", "").(*corev1.Service)
-        ctx.Export("privateIP", frontend.Spec.ClusterIP())
-        ctx.Export("publicIP", frontend.Status.LoadBalancer().Ingress().Index(pulumi.Int(0)).Ip())
+// Export the private cluster IP address of the frontend.
+frontend := guestbook.GetResource("v1/Service", "frontend", "").(*corev1.Service)
+ctx.Export("privateIP", frontend.Spec.ClusterIP())
+ctx.Export("publicIP", frontend.Status.LoadBalancer().Ingress().Index(pulumi.Int(0)).Ip())
 ...
 ```
 
@@ -922,30 +922,30 @@ pulumi.export('public_ip', frontend.status['load_balancer']['ingress'][0]['ip'])
 
 ```csharp
 ...
-            Func<ImmutableDictionary<string, object>,
-                CustomResourceOptions, ImmutableDictionary<string, object>>[] transformations =
-            {
-                (obj, opts) => {
-                    if ((string)obj["kind"] == "Service" &&
-                            (string)((ImmutableDictionary<string, object>)obj["metadata"])["name"] == "frontend")
-                    {
-                        var spec = ((ImmutableDictionary<string, object>)obj["spec"]);
-                        obj = obj.SetItem("spec", spec.SetItem("type", "LoadBalancer"));
-                    }
-                    return obj;
-                },
-            };
-            var guestbook = new ConfigFile("guestbook", new ConfigFileArgs
-            {
-                File = "guestbook-all-in-one.yaml",
-                Transformations = transformations,
-            });
+Func<ImmutableDictionary<string, object>,
+    CustomResourceOptions, ImmutableDictionary<string, object>>[] transformations =
+{
+    (obj, opts) => {
+        if ((string)obj["kind"] == "Service" &&
+                (string)((ImmutableDictionary<string, object>)obj["metadata"])["name"] == "frontend")
+        {
+            var spec = ((ImmutableDictionary<string, object>)obj["spec"]);
+            obj = obj.SetItem("spec", spec.SetItem("type", "LoadBalancer"));
+        }
+        return obj;
+    },
+};
+var guestbook = new ConfigFile("guestbook", new ConfigFileArgs
+{
+    File = "guestbook-all-in-one.yaml",
+    Transformations = transformations,
+});
 ...
-            return new Dictionary<string, object?>
-            {
-                { "privateIp", frontend.Apply(fe => fe.Spec.Apply(spec => spec.ClusterIP)) },
-                { "publicIp", frontend.Apply(fe => fe.Status.Apply(status => status.LoadBalancer.Ingress[0].Ip)) },
-            };
+return new Dictionary<string, object?>
+{
+    { "privateIp", frontend.Apply(fe => fe.Spec.Apply(spec => spec.ClusterIP)) },
+    { "publicIp", frontend.Apply(fe => fe.Status.Apply(status => status.LoadBalancer.Ingress[0].Ip)) },
+};
 ...
 ```
 
