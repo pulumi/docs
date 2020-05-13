@@ -76,7 +76,7 @@ const web1 = new packet.Device("web1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Device</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>always_pxe=None<span class="p">, </span>billing_cycle=None<span class="p">, </span>description=None<span class="p">, </span>facilities=None<span class="p">, </span>force_detach_volumes=None<span class="p">, </span>hardware_reservation_id=None<span class="p">, </span>hostname=None<span class="p">, </span>ip_addresses=None<span class="p">, </span>ipxe_script_url=None<span class="p">, </span>network_type=None<span class="p">, </span>operating_system=None<span class="p">, </span>plan=None<span class="p">, </span>project_id=None<span class="p">, </span>project_ssh_key_ids=None<span class="p">, </span>public_ipv4_subnet_size=None<span class="p">, </span>storage=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>wait_for_reservation_deprovision=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Device</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>always_pxe=None<span class="p">, </span>billing_cycle=None<span class="p">, </span>description=None<span class="p">, </span>facilities=None<span class="p">, </span>force_detach_volumes=None<span class="p">, </span>hardware_reservation_id=None<span class="p">, </span>hostname=None<span class="p">, </span>ip_addresses=None<span class="p">, </span>ipxe_script_url=None<span class="p">, </span>network_type=None<span class="p">, </span>operating_system=None<span class="p">, </span>plan=None<span class="p">, </span>project_id=None<span class="p">, </span>project_ssh_key_ids=None<span class="p">, </span>storage=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>wait_for_reservation_deprovision=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -377,17 +377,6 @@ doc.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>Public<wbr>Ipv4Subnet<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}Size of allocated subnet, more
-information is in the
-[Custom Subnet Size](https://www.packet.com/developers/docs/servers/key-features/custom-subnet-size/) doc.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of &#39;ip_address&#39; attribute.{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Storage</span>
@@ -560,17 +549,6 @@ doc.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>Public<wbr>Ipv4Subnet<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}Size of allocated subnet, more
-information is in the
-[Custom Subnet Size](https://www.packet.com/developers/docs/servers/key-features/custom-subnet-size/) doc.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of &#39;ip_address&#39; attribute.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -745,17 +723,6 @@ doc.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>public<wbr>Ipv4Subnet<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}Size of allocated subnet, more
-information is in the
-[Custom Subnet Size](https://www.packet.com/developers/docs/servers/key-features/custom-subnet-size/) doc.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of &#39;ip_address&#39; attribute.{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>storage</span>
@@ -928,17 +895,6 @@ doc.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>public_<wbr>ipv4_<wbr>subnet_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}Size of allocated subnet, more
-information is in the
-[Custom Subnet Size](https://www.packet.com/developers/docs/servers/key-features/custom-subnet-size/) doc.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of &#39;ip_address&#39; attribute.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1519,7 +1475,7 @@ Get an existing Device resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_private_ipv4=None<span class="p">, </span>access_public_ipv4=None<span class="p">, </span>access_public_ipv6=None<span class="p">, </span>always_pxe=None<span class="p">, </span>billing_cycle=None<span class="p">, </span>created=None<span class="p">, </span>deployed_facility=None<span class="p">, </span>description=None<span class="p">, </span>facilities=None<span class="p">, </span>force_detach_volumes=None<span class="p">, </span>hardware_reservation_id=None<span class="p">, </span>hostname=None<span class="p">, </span>ip_addresses=None<span class="p">, </span>ipxe_script_url=None<span class="p">, </span>locked=None<span class="p">, </span>network_type=None<span class="p">, </span>networks=None<span class="p">, </span>operating_system=None<span class="p">, </span>plan=None<span class="p">, </span>ports=None<span class="p">, </span>project_id=None<span class="p">, </span>project_ssh_key_ids=None<span class="p">, </span>public_ipv4_subnet_size=None<span class="p">, </span>root_password=None<span class="p">, </span>ssh_key_ids=None<span class="p">, </span>state=None<span class="p">, </span>storage=None<span class="p">, </span>tags=None<span class="p">, </span>updated=None<span class="p">, </span>user_data=None<span class="p">, </span>wait_for_reservation_deprovision=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_private_ipv4=None<span class="p">, </span>access_public_ipv4=None<span class="p">, </span>access_public_ipv6=None<span class="p">, </span>always_pxe=None<span class="p">, </span>billing_cycle=None<span class="p">, </span>created=None<span class="p">, </span>deployed_facility=None<span class="p">, </span>description=None<span class="p">, </span>facilities=None<span class="p">, </span>force_detach_volumes=None<span class="p">, </span>hardware_reservation_id=None<span class="p">, </span>hostname=None<span class="p">, </span>ip_addresses=None<span class="p">, </span>ipxe_script_url=None<span class="p">, </span>locked=None<span class="p">, </span>network_type=None<span class="p">, </span>networks=None<span class="p">, </span>operating_system=None<span class="p">, </span>plan=None<span class="p">, </span>ports=None<span class="p">, </span>project_id=None<span class="p">, </span>project_ssh_key_ids=None<span class="p">, </span>root_password=None<span class="p">, </span>ssh_key_ids=None<span class="p">, </span>state=None<span class="p">, </span>storage=None<span class="p">, </span>tags=None<span class="p">, </span>updated=None<span class="p">, </span>user_data=None<span class="p">, </span>wait_for_reservation_deprovision=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1839,17 +1795,6 @@ The fields of the network attributes are:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>Public<wbr>Ipv4Subnet<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}Size of allocated subnet, more
-information is in the
-[Custom Subnet Size](https://www.packet.com/developers/docs/servers/key-features/custom-subnet-size/) doc.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of &#39;ip_address&#39; attribute.{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Root<wbr>Password</span>
@@ -2135,17 +2080,6 @@ The fields of the network attributes are:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>Public<wbr>Ipv4Subnet<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}Size of allocated subnet, more
-information is in the
-[Custom Subnet Size](https://www.packet.com/developers/docs/servers/key-features/custom-subnet-size/) doc.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of &#39;ip_address&#39; attribute.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2433,17 +2367,6 @@ The fields of the network attributes are:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>public<wbr>Ipv4Subnet<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}Size of allocated subnet, more
-information is in the
-[Custom Subnet Size](https://www.packet.com/developers/docs/servers/key-features/custom-subnet-size/) doc.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of &#39;ip_address&#39; attribute.{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>root<wbr>Password</span>
@@ -2729,17 +2652,6 @@ The fields of the network attributes are:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>public_<wbr>ipv4_<wbr>subnet_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}Size of allocated subnet, more
-information is in the
-[Custom Subnet Size](https://www.packet.com/developers/docs/servers/key-features/custom-subnet-size/) doc.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of &#39;ip_address&#39; attribute.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">

@@ -33,6 +33,7 @@ A Pulumi package for creating and managing X cloud resources.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getdevice" title="GetDevice"><span class="symbol function"></span>GetDevice</a></li>
+    <li><a href="getdevicebgpneighbors" title="GetDeviceBgpNeighbors"><span class="symbol function"></span>GetDeviceBgpNeighbors</a></li>
     <li><a href="getipblockranges" title="GetIpBlockRanges"><span class="symbol function"></span>GetIpBlockRanges</a></li>
     <li><a href="getoperatingsystem" title="GetOperatingSystem"><span class="symbol function"></span>GetOperatingSystem</a></li>
     <li><a href="getorganization" title="GetOrganization"><span class="symbol function"></span>GetOrganization</a></li>
@@ -52,6 +53,24 @@ A Pulumi package for creating and managing X cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`packet` Terraform Provider](https://github.com/terraform-providers/terraform-provider-packet).</dd>
 	<dt>Version</dt>
-	<dd>2.1.1</dd>
+	<dd>2.2.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.html" title="Pulumi.Packet">Pulumi.Packet</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#" title="packet">packet</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/packet/#" title="@pulumi/packet">@pulumi/packet</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_packet" title="pulumi_packet">pulumi_packet</a></dd>
+
 </dl>
 

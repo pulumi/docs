@@ -11,7 +11,7 @@ meta_desc: "Explore the SpotMarketRequest resource of the Packet package, includ
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a Packet Spot Market Request resource to allow you to
-manage spot market requests on your account. For more detail on Spot Market, see [this article in Packing documentaion](https://www.packet.com/developers/docs/getting-started/deployment-options/spot-market/).
+manage spot market requests on your account. For more detail on Spot Market, see [this article in Packet documentaion](https://www.packet.com/developers/docs/getting-started/deployment-options/spot-market/).
 
 
 
