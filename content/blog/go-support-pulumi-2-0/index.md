@@ -9,7 +9,7 @@ tags:
     - Go
 ---
 
-We use Go to build Pulumi, making everyone on our engineering team a Gopher. Our open-source pulumi engine and SaaS back is written in Go, which has quickly become "the language of cloud." [Pulumi 2.0](https://www.pulumi.com/blog/pulumi-2-0/) affirms our commitment to Go by welcoming it to the family of supported infrastructure as code languages.
+Over the last 10 years, Go has quickly become the "language of the cloud" for building application servers and services that run in and on today's cloud platforms. With [Pulumi 2.0](https://www.pulumi.com/blog/pulumi-2-0/, Go can also be used to manage and provision modern infrastructure as well.  Across any cloud (AWS, Azure, GCP, Kubernetes and [more than 50 others](https://www.pulumi.com/docs/reference/pkg/)!) and across a variety of workloads (containers, serverless, kubernetes, core infrastructure and more), you can now use the rich software engineering strengths of the Go language and ecosystem to manage your cloud infrastructure.  The [Pulumi open source project](https://github.com/pulumi/pulumi) itself has been built on Go from day 1, and so we're really excited to bring full Go support for cloud infrastructure as code to the same language ecosystem that Pulumi itself has been part of.
 
 <!--more-->
 
