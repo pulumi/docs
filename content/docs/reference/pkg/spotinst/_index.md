@@ -46,7 +46,7 @@ A Pulumi package for creating and managing spotinst cloud resources.
 <dl class="tabular">
 
     <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.html" title="Pulumi.Spotinst">Pulumi.Spotinst</a></dd>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.html" title="Pulumi.SpotInst">Pulumi.SpotInst</a></dd>
 
     <dt>Go</dt>
     <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/?tab=doc#" title="spotinst">spotinst</a></dd>

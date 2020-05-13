@@ -30,7 +30,7 @@ meta_desc: "Explore the MrScalar resource of the aws module, including examples,
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Aws.MrScalar.html">MrScalar</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.MrScalarArgs.html">MrScalarArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.MrScalar.html">MrScalar</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.MrScalarArgs.html">MrScalarArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -159,7 +159,7 @@ meta_desc: "Explore the MrScalar resource of the aws module, including examples,
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.MrScalarArgs.html">MrScalarArgs</a></span>
+        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.MrScalarArgs.html">MrScalarArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -2257,7 +2257,7 @@ Get an existing MrScalar resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Aws.MrScalar.html">MrScalar</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Aws.MrScalarState.html">MrScalarState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.MrScalar.html">MrScalar</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.MrScalarState.html">MrScalarState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4352,7 +4352,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarApplicationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarApplicationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.MrScalarApplicationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.MrScalarApplication.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.MrScalarApplicationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.MrScalarApplication.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4498,7 +4498,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarBootstrapActionsFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarBootstrapActionsFileOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.MrScalarBootstrapActionsFileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.MrScalarBootstrapActionsFile.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.MrScalarBootstrapActionsFileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.MrScalarBootstrapActionsFile.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4608,7 +4608,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarConfigurationsFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarConfigurationsFileOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.MrScalarConfigurationsFileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.MrScalarConfigurationsFile.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.MrScalarConfigurationsFileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.MrScalarConfigurationsFile.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4718,7 +4718,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarCoreEbsBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarCoreEbsBlockDeviceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.MrScalarCoreEbsBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.MrScalarCoreEbsBlockDevice.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.MrScalarCoreEbsBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.MrScalarCoreEbsBlockDevice.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4892,7 +4892,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarCoreScalingDownPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarCoreScalingDownPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.MrScalarCoreScalingDownPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.MrScalarCoreScalingDownPolicy.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.MrScalarCoreScalingDownPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.MrScalarCoreScalingDownPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5546,7 +5546,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarCoreScalingUpPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarCoreScalingUpPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.MrScalarCoreScalingUpPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.MrScalarCoreScalingUpPolicy.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.MrScalarCoreScalingUpPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.MrScalarCoreScalingUpPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6200,7 +6200,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarInstanceWeightArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarInstanceWeightOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.MrScalarInstanceWeightArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.MrScalarInstanceWeight.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.MrScalarInstanceWeightArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.MrScalarInstanceWeight.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6310,7 +6310,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarMasterEbsBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarMasterEbsBlockDeviceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.MrScalarMasterEbsBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.MrScalarMasterEbsBlockDevice.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.MrScalarMasterEbsBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.MrScalarMasterEbsBlockDevice.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6484,7 +6484,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarProvisioningTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarProvisioningTimeoutOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.MrScalarProvisioningTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.MrScalarProvisioningTimeout.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.MrScalarProvisioningTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.MrScalarProvisioningTimeout.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6594,7 +6594,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarScheduledTaskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarScheduledTaskOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.MrScalarScheduledTaskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.MrScalarScheduledTask.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.MrScalarScheduledTaskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.MrScalarScheduledTask.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6864,7 +6864,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarStepsFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarStepsFileOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.MrScalarStepsFileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.MrScalarStepsFile.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.MrScalarStepsFileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.MrScalarStepsFile.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6974,7 +6974,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarTagArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarTagOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.MrScalarTagArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.MrScalarTag.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.MrScalarTagArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.MrScalarTag.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7084,7 +7084,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarTaskEbsBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarTaskEbsBlockDeviceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.MrScalarTaskEbsBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.MrScalarTaskEbsBlockDevice.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.MrScalarTaskEbsBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.MrScalarTaskEbsBlockDevice.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7258,7 +7258,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarTaskScalingDownPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarTaskScalingDownPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.MrScalarTaskScalingDownPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.MrScalarTaskScalingDownPolicy.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.MrScalarTaskScalingDownPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.MrScalarTaskScalingDownPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7912,7 +7912,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarTaskScalingUpPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarTaskScalingUpPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.MrScalarTaskScalingUpPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.MrScalarTaskScalingUpPolicy.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.MrScalarTaskScalingUpPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.MrScalarTaskScalingUpPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -8566,7 +8566,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarTerminationPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarTerminationPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.MrScalarTerminationPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.MrScalarTerminationPolicy.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.MrScalarTerminationPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.MrScalarTerminationPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -8644,7 +8644,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarTerminationPolicyStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#MrScalarTerminationPolicyStatementOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.MrScalarTerminationPolicyStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.MrScalarTerminationPolicyStatement.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.MrScalarTerminationPolicyStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.MrScalarTerminationPolicyStatement.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

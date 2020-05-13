@@ -158,7 +158,7 @@ const example = new spotinst.gke.OceanImport("example", {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Gke.OceanImport.html">OceanImport</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.OceanImportArgs.html">OceanImportArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.OceanImport.html">OceanImport</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.OceanImportArgs.html">OceanImportArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -287,7 +287,7 @@ const example = new spotinst.gke.OceanImport("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.OceanImportArgs.html">OceanImportArgs</a></span>
+        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.OceanImportArgs.html">OceanImportArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -785,7 +785,7 @@ Get an existing OceanImport resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Gke.OceanImport.html">OceanImport</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Gke.OceanImportState.html">OceanImportState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.OceanImport.html">OceanImport</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.OceanImportState.html">OceanImportState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1280,7 +1280,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportAutoscalerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportAutoscalerOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.OceanImportAutoscalerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.OceanImportAutoscaler.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.OceanImportAutoscalerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.OceanImportAutoscaler.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1550,7 +1550,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportAutoscalerDownArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportAutoscalerDownOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.OceanImportAutoscalerDownArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.OceanImportAutoscalerDown.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.OceanImportAutoscalerDownArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.OceanImportAutoscalerDown.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1660,7 +1660,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportAutoscalerHeadroomArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportAutoscalerHeadroomOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.OceanImportAutoscalerHeadroomArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.OceanImportAutoscalerHeadroom.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.OceanImportAutoscalerHeadroomArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.OceanImportAutoscalerHeadroom.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1834,7 +1834,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportAutoscalerResourceLimitsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportAutoscalerResourceLimitsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.OceanImportAutoscalerResourceLimitsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.OceanImportAutoscalerResourceLimits.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.OceanImportAutoscalerResourceLimitsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.OceanImportAutoscalerResourceLimits.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1944,7 +1944,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportBackendServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportBackendServiceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.OceanImportBackendServiceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.OceanImportBackendService.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.OceanImportBackendServiceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.OceanImportBackendService.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2130,7 +2130,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportBackendServiceNamedPortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportBackendServiceNamedPortOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.OceanImportBackendServiceNamedPortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.OceanImportBackendServiceNamedPort.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.OceanImportBackendServiceNamedPortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.OceanImportBackendServiceNamedPort.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2244,7 +2244,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportScheduledTaskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportScheduledTaskOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.OceanImportScheduledTaskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.OceanImportScheduledTask.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.OceanImportScheduledTaskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.OceanImportScheduledTask.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2354,7 +2354,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportScheduledTaskShutdownHoursArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportScheduledTaskShutdownHoursOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.OceanImportScheduledTaskShutdownHoursArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.OceanImportScheduledTaskShutdownHours.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.OceanImportScheduledTaskShutdownHoursArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.OceanImportScheduledTaskShutdownHours.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2464,7 +2464,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportScheduledTaskTaskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportScheduledTaskTaskOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.OceanImportScheduledTaskTaskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.OceanImportScheduledTaskTask.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.OceanImportScheduledTaskTaskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.OceanImportScheduledTaskTask.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

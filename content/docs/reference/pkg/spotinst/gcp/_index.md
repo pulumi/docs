@@ -31,7 +31,7 @@ Explore the resources and functions of the gcp module in the Spotinst package.
 <dl class="tabular">
 
     <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Gcp.html" title="Pulumi.Spotinst.Gcp">Pulumi.Spotinst.Gcp</a></dd>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.html" title="Pulumi.SpotInst.Gcp">Pulumi.SpotInst.Gcp</a></dd>
 
     <dt>Go</dt>
     <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#" title="spotinst/gcp">spotinst/gcp</a></dd>

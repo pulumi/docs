@@ -30,7 +30,7 @@ meta_desc: "Explore the Elastigroup resource of the gke module, including exampl
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Gke.Elastigroup.html">Elastigroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.ElastigroupArgs.html">ElastigroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Elastigroup.html">Elastigroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.ElastigroupArgs.html">ElastigroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -159,7 +159,7 @@ meta_desc: "Explore the Elastigroup resource of the gke module, including exampl
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.ElastigroupArgs.html">ElastigroupArgs</a></span>
+        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.ElastigroupArgs.html">ElastigroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1253,7 +1253,7 @@ Get an existing Elastigroup resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Gke.Elastigroup.html">Elastigroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Gke.ElastigroupState.html">ElastigroupState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Elastigroup.html">Elastigroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.ElastigroupState.html">ElastigroupState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2344,7 +2344,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupBackendServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupBackendServiceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.ElastigroupBackendServiceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.ElastigroupBackendService.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.ElastigroupBackendServiceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.ElastigroupBackendService.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2518,7 +2518,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupBackendServiceNamedPortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupBackendServiceNamedPortOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.ElastigroupBackendServiceNamedPortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.ElastigroupBackendServiceNamedPort.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.ElastigroupBackendServiceNamedPortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.ElastigroupBackendServiceNamedPort.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2628,7 +2628,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupDiskOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.ElastigroupDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.ElastigroupDisk.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.ElastigroupDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.ElastigroupDisk.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2930,7 +2930,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupDiskInitializeParamArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupDiskInitializeParamOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.ElastigroupDiskInitializeParamArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.ElastigroupDiskInitializeParam.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.ElastigroupDiskInitializeParamArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.ElastigroupDiskInitializeParam.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3072,7 +3072,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupGpuArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupGpuOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.ElastigroupGpuArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.ElastigroupGpu.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.ElastigroupGpuArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.ElastigroupGpu.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3182,7 +3182,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupInstanceTypesCustomArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupInstanceTypesCustomOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.ElastigroupInstanceTypesCustomArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.ElastigroupInstanceTypesCustom.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.ElastigroupInstanceTypesCustomArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.ElastigroupInstanceTypesCustom.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3292,7 +3292,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupIntegrationDockerSwarmArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupIntegrationDockerSwarmOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.ElastigroupIntegrationDockerSwarmArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.ElastigroupIntegrationDockerSwarm.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.ElastigroupIntegrationDockerSwarmArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.ElastigroupIntegrationDockerSwarm.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3402,7 +3402,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupIntegrationGkeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupIntegrationGkeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.ElastigroupIntegrationGkeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.ElastigroupIntegrationGke.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.ElastigroupIntegrationGkeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.ElastigroupIntegrationGke.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3740,7 +3740,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupIntegrationGkeAutoscaleDownArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupIntegrationGkeAutoscaleDownOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.ElastigroupIntegrationGkeAutoscaleDownArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.ElastigroupIntegrationGkeAutoscaleDown.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.ElastigroupIntegrationGkeAutoscaleDownArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.ElastigroupIntegrationGkeAutoscaleDown.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3818,7 +3818,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupIntegrationGkeAutoscaleHeadroomArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupIntegrationGkeAutoscaleHeadroomOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.ElastigroupIntegrationGkeAutoscaleHeadroomArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.ElastigroupIntegrationGkeAutoscaleHeadroom.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.ElastigroupIntegrationGkeAutoscaleHeadroomArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.ElastigroupIntegrationGkeAutoscaleHeadroom.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3960,7 +3960,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupIntegrationGkeAutoscaleLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupIntegrationGkeAutoscaleLabelOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.ElastigroupIntegrationGkeAutoscaleLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.ElastigroupIntegrationGkeAutoscaleLabel.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.ElastigroupIntegrationGkeAutoscaleLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.ElastigroupIntegrationGkeAutoscaleLabel.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4070,7 +4070,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupLabelOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.ElastigroupLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.ElastigroupLabel.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.ElastigroupLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.ElastigroupLabel.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4180,7 +4180,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupMetadataArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupMetadataOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.ElastigroupMetadataArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.ElastigroupMetadata.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.ElastigroupMetadataArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.ElastigroupMetadata.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4290,7 +4290,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupNetworkInterfaceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupNetworkInterfaceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.ElastigroupNetworkInterfaceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.ElastigroupNetworkInterface.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.ElastigroupNetworkInterfaceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.ElastigroupNetworkInterface.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4432,7 +4432,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupNetworkInterfaceAccessConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupNetworkInterfaceAccessConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.ElastigroupNetworkInterfaceAccessConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.ElastigroupNetworkInterfaceAccessConfig.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.ElastigroupNetworkInterfaceAccessConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.ElastigroupNetworkInterfaceAccessConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4542,7 +4542,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupNetworkInterfaceAliasIpRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupNetworkInterfaceAliasIpRangeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.ElastigroupNetworkInterfaceAliasIpRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.ElastigroupNetworkInterfaceAliasIpRange.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.ElastigroupNetworkInterfaceAliasIpRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.ElastigroupNetworkInterfaceAliasIpRange.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4652,7 +4652,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupScalingDownPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupScalingDownPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.ElastigroupScalingDownPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.ElastigroupScalingDownPolicy.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.ElastigroupScalingDownPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.ElastigroupScalingDownPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5146,7 +5146,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupScalingDownPolicyDimensionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupScalingDownPolicyDimensionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.ElastigroupScalingDownPolicyDimensionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.ElastigroupScalingDownPolicyDimension.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.ElastigroupScalingDownPolicyDimensionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.ElastigroupScalingDownPolicyDimension.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5256,7 +5256,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupScalingUpPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupScalingUpPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.ElastigroupScalingUpPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.ElastigroupScalingUpPolicy.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.ElastigroupScalingUpPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.ElastigroupScalingUpPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5750,7 +5750,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupScalingUpPolicyDimensionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#ElastigroupScalingUpPolicyDimensionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.ElastigroupScalingUpPolicyDimensionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.ElastigroupScalingUpPolicyDimension.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.ElastigroupScalingUpPolicyDimensionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.ElastigroupScalingUpPolicyDimension.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

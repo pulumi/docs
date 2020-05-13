@@ -36,7 +36,7 @@ Explore the resources and functions of the multai module in the Spotinst package
 <dl class="tabular">
 
     <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Multai.html" title="Pulumi.Spotinst.Multai">Pulumi.Spotinst.Multai</a></dd>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Multai.html" title="Pulumi.SpotInst.Multai">Pulumi.SpotInst.Multai</a></dd>
 
     <dt>Go</dt>
     <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/multai?tab=doc#" title="spotinst/multai">spotinst/multai</a></dd>
