@@ -42,7 +42,7 @@ The unit test suite for our data lake consists of over 700 tests and previously 
 
 ## Getting Started with Resource Mocking
 
-Continuously testing resource definitions is a best practice and it’s incredibly easy to get started. In this example, we mock a resource name to attach to an IAM Policy Role. The test returns the ARN and the name of any resource, which is the Policy Role.
+Continuously testing resource definitions is a best practice and it’s incredibly easy to get started. In this example, we mock a resource name to attach to an IAM Policy Role. The test checks that we attach the correct policy to the expected role.
 
 test-setup.ts
 
