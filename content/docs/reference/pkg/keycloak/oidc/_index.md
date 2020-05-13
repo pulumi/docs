@@ -27,3 +27,21 @@ Explore the resources and functions of the oidc module in the Keycloak package.
 	<dd>2.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Oidc.html" title="Pulumi.Keycloak.Oidc">Pulumi.Keycloak.Oidc</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/oidc?tab=doc#" title="keycloak/oidc">keycloak/oidc</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/oidc/#" title="@pulumi/keycloak/oidc">@pulumi/keycloak/oidc</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_keycloak/oidc" title="pulumi_keycloak/oidc">pulumi_keycloak/oidc</a></dd>
+
+</dl>
+
