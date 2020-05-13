@@ -10,7 +10,7 @@ tags:
     - unit testing
 ---
 
-_Guest Article:_ Dustin Farris is an experienced cloud engineering consultant.  He’s currently building a new data lake for a large public university using Pulumi. The project handles sensitive student and research data and as a result, his team must meet stringent QA and security requirements.  Dustin shows how resource mocking in Pulumi makes testing and verification faster than ever before.
+**Guest Article:** Dustin Farris is an experienced cloud engineering consultant.  He’s currently building a new data lake for a large public university using Pulumi. The project handles sensitive student and research data and as a result, his team must meet stringent QA and security requirements.  Dustin shows how resource mocking in Pulumi makes testing and verification faster than ever before.
 
 <!--more-->
 
@@ -30,7 +30,11 @@ With this shift, it makes sense to throw out old configurations and pick the bes
 * Because Pulumi uses real programming languages, we can unit test our code
 * By virtue of working with TypeScript, it natively supports Mocha - our testing framework of choice.
 
-## Accelerating Test and Verification
+##### *Watch Dustin Farris and Lee Zen demonstrate unit testing on this episode of [Modern Infrastructure Wednesday](https://www.youtube.com/playlist?list=PLyy8Vx2ZoWloyj3V5gXzPraiKStO2GGZw).*
+
+{{< youtube "ydR61dZmKgU" >}}
+
+## Accelerating Verification
 
 There are many benefits to using Pulumi to develop and test infrastructure. First, the team has the immediate benefit of modern language and IDE support: things like missing arguments are now visible in-line as we define resources.  In addition, state tracking and version control capabilities, for all cloud provider resources, make for a terrific experience in terms of productivity.
 
@@ -118,6 +122,4 @@ After working with Pulumi to build-out our data lake and implementing robust, en
 
 ## Conclusion
 
-Testing is just one of the superpowers that Pulumi 2.0 delivers. For more information, see our [Testing User Guide]({{< relref "/docs/guides/testing" >}}) and [worked examples](https://github.com/pulumi/examples#testing) on GitHub in the language of your choice. Watch Dustin Farris and Lee Zen demonstrate unit testing on this episode of [Modern Infrastructure Wednesday](https://www.youtube.com/playlist?list=PLyy8Vx2ZoWloyj3V5gXzPraiKStO2GGZw).
-
-{{< youtube "ydR61dZmKgU" >}}
+Testing is just one of the superpowers that Pulumi 2.0 delivers. For more information, see our [Testing User Guide]({{< relref "/docs/guides/testing" >}}) and [worked examples](https://github.com/pulumi/examples#testing) on GitHub in the language of your choice.
