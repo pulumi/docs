@@ -30,7 +30,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_signalfx as signalfx
+
+opgenie_myteam = signalfx.opsgenie.Integration("opgenieMyteam",
+    api_key="farts",
+    api_url="https://api.opsgenie.com",
+    enabled=True)
+```
 {{% /example %}}
 
 {{% example typescript %}}

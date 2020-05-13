@@ -30,7 +30,25 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_signalfx as signalfx
+
+gcp_myteam = signalfx.gcp.Integration("gcpMyteam",
+    enabled=True,
+    poll_rate=300000,
+    project_service_keys=[
+        {
+            "projectId": "gcp_project_id_1",
+            "projectKey": (lambda path: open(path).read())("/path/to/gcp_credentials_1.json"),
+        },
+        {
+            "projectId": "gcp_project_id_2",
+            "projectKey": (lambda path: open(path).read())("/path/to/gcp_credentials_2.json"),
+        },
+    ],
+    services=["compute"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

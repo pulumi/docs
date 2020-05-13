@@ -23,6 +23,24 @@ Explore the resources and functions of the azure module in the SignalFx package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/terraform-providers/terraform-provider-signalfx).</dd>
 	<dt>Version</dt>
-	<dd>2.2.1</dd>
+	<dd>2.3.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.Azure.html" title="Pulumi.Signalfx.Azure">Pulumi.Signalfx.Azure</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/azure?tab=doc#" title="signalfx/azure">signalfx/azure</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/azure/#" title="@pulumi/signalfx/azure">@pulumi/signalfx/azure</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_signalfx/azure" title="pulumi_signalfx/azure">pulumi_signalfx/azure</a></dd>
+
 </dl>
 

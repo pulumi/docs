@@ -30,7 +30,23 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_signalfx as signalfx
+
+jira_myteam_xx = signalfx.jira.Integration("jiraMyteamXX",
+    api_token="abc123",
+    assignee_display_name="Testy Testerson",
+    assignee_name="testytesterson",
+    auth_method="EmailAndToken",
+    base_url="https://www.example.com",
+    enabled=False,
+    issue_type="Story",
+    password="paasword",
+    project_key="TEST",
+    user_email="yoosername@example.com",
+    username="yoosername")
+```
 {{% /example %}}
 
 {{% example typescript %}}

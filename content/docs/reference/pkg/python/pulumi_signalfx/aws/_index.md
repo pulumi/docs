@@ -21,6 +21,105 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p><strong>NOTE</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider.</p>
 <p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with <code class="docutils literal notranslate"><span class="pre">aws.Integration</span></code>. Check with SignalFx support for your realm’s AWS account id.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_signalfx</span> <span class="k">as</span> <span class="nn">signalfx</span>
+
+<span class="n">aws_myteam_extern</span> <span class="o">=</span> <span class="n">signalfx</span><span class="o">.</span><span class="n">aws</span><span class="o">.</span><span class="n">ExternalIntegration</span><span class="p">(</span><span class="s2">&quot;awsMyteamExtern&quot;</span><span class="p">)</span>
+<span class="n">signalfx_assume_policy</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_policy_document</span><span class="p">(</span><span class="n">statement</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;sts:AssumeRole&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;principals&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;identifiers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">aws_myteam_extern</span><span class="o">.</span><span class="n">signalfx_aws_account</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="s2">&quot;condition&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;test&quot;</span><span class="p">:</span> <span class="s2">&quot;StringEquals&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;variable&quot;</span><span class="p">:</span> <span class="s2">&quot;sts:ExternalId&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">aws_myteam_extern</span><span class="o">.</span><span class="n">external_id</span><span class="p">],</span>
+    <span class="p">}],</span>
+<span class="p">}])</span>
+<span class="n">aws_sfx_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;awsSfxRole&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;signalfx integration to read out data and send it to signalfxs aws account&quot;</span><span class="p">,</span>
+    <span class="n">assume_role_policy</span><span class="o">=</span><span class="n">signalfx_assume_policy</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>
+<span class="n">aws_read_permissions</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;awsReadPermissions&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;farts&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">        &quot;Version&quot;: &quot;2012-10-17&quot;,</span>
+<span class="s2">        &quot;Statement&quot;: [</span>
+<span class="s2">                {</span>
+<span class="s2">                        &quot;Action&quot;: [</span>
+<span class="s2">                                &quot;dynamodb:ListTables&quot;,</span>
+<span class="s2">                    &quot;dynamodb:DescribeTable&quot;,</span>
+<span class="s2">                    &quot;dynamodb:ListTagsOfResource&quot;,</span>
+<span class="s2">                    &quot;ec2:DescribeInstances&quot;,</span>
+<span class="s2">                    &quot;ec2:DescribeInstanceStatus&quot;,</span>
+<span class="s2">                    &quot;ec2:DescribeVolumes&quot;,</span>
+<span class="s2">                    &quot;ec2:DescribeReservedInstances&quot;,</span>
+<span class="s2">                    &quot;ec2:DescribeReservedInstancesModifications&quot;,</span>
+<span class="s2">                    &quot;ec2:DescribeTags&quot;,</span>
+<span class="s2">                    &quot;organizations:DescribeOrganization&quot;,</span>
+<span class="s2">                    &quot;cloudwatch:ListMetrics&quot;,</span>
+<span class="s2">                    &quot;cloudwatch:GetMetricData&quot;,</span>
+<span class="s2">                    &quot;cloudwatch:GetMetricStatistics&quot;,</span>
+<span class="s2">                    &quot;cloudwatch:DescribeAlarms&quot;,</span>
+<span class="s2">                    &quot;sqs:ListQueues&quot;,</span>
+<span class="s2">                    &quot;sqs:GetQueueAttributes&quot;,</span>
+<span class="s2">                    &quot;sqs:ListQueueTags&quot;,</span>
+<span class="s2">                    &quot;elasticmapreduce:ListClusters&quot;,</span>
+<span class="s2">                    &quot;elasticmapreduce:DescribeCluster&quot;,</span>
+<span class="s2">                    &quot;kinesis:ListShards&quot;,</span>
+<span class="s2">                    &quot;kinesis:ListStreams&quot;,</span>
+<span class="s2">                    &quot;kinesis:DescribeStream&quot;,</span>
+<span class="s2">                    &quot;kinesis:ListTagsForStream&quot;,</span>
+<span class="s2">                    &quot;rds:DescribeDBInstances&quot;,</span>
+<span class="s2">                    &quot;rds:ListTagsForResource&quot;,</span>
+<span class="s2">                    &quot;elasticloadbalancing:DescribeLoadBalancers&quot;,</span>
+<span class="s2">                    &quot;elasticloadbalancing:DescribeTags&quot;,</span>
+<span class="s2">                    &quot;elasticache:describeCacheClusters&quot;,</span>
+<span class="s2">                    &quot;redshift:DescribeClusters&quot;,</span>
+<span class="s2">                    &quot;lambda:GetAlias&quot;,</span>
+<span class="s2">                    &quot;lambda:ListFunctions&quot;,</span>
+<span class="s2">                    &quot;lambda:ListTags&quot;,</span>
+<span class="s2">                    &quot;autoscaling:DescribeAutoScalingGroups&quot;,</span>
+<span class="s2">                    &quot;s3:ListAllMyBuckets&quot;,</span>
+<span class="s2">                    &quot;s3:ListBucket&quot;,</span>
+<span class="s2">                    &quot;s3:GetBucketLocation&quot;,</span>
+<span class="s2">                    &quot;s3:GetBucketTagging&quot;,</span>
+<span class="s2">                    &quot;ecs:ListServices&quot;,</span>
+<span class="s2">                    &quot;ecs:ListTasks&quot;,</span>
+<span class="s2">                    &quot;ecs:DescribeTasks&quot;,</span>
+<span class="s2">                    &quot;ecs:DescribeServices&quot;,</span>
+<span class="s2">                    &quot;ecs:ListClusters&quot;,</span>
+<span class="s2">                    &quot;ecs:DescribeClusters&quot;,</span>
+<span class="s2">                    &quot;ecs:ListTaskDefinitions&quot;,</span>
+<span class="s2">                    &quot;ecs:ListTagsForResource&quot;,</span>
+<span class="s2">                    &quot;apigateway:GET&quot;,</span>
+<span class="s2">                    &quot;cloudfront:ListDistributions&quot;,</span>
+<span class="s2">                    &quot;cloudfront:ListTagsForResource&quot;,</span>
+<span class="s2">                    &quot;tag:GetResources&quot;,</span>
+<span class="s2">                    &quot;es:ListDomainNames&quot;,</span>
+<span class="s2">                    &quot;es:DescribeElasticsearchDomain&quot;</span>
+<span class="s2">                        ],</span>
+<span class="s2">                        &quot;Effect&quot;: &quot;Allow&quot;,</span>
+<span class="s2">                        &quot;Resource&quot;: &quot;*&quot;</span>
+<span class="s2">                }</span>
+<span class="s2">        ]</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">sfx_read_attach</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicyAttachment</span><span class="p">(</span><span class="s2">&quot;sfx-read-attach&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">aws_sfx_role</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">policy_arn</span><span class="o">=</span><span class="n">aws_read_permissions</span><span class="o">.</span><span class="n">arn</span><span class="p">)</span>
+<span class="n">aws_myteam</span> <span class="o">=</span> <span class="n">signalfx</span><span class="o">.</span><span class="n">aws</span><span class="o">.</span><span class="n">Integration</span><span class="p">(</span><span class="s2">&quot;awsMyteam&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">integration_id</span><span class="o">=</span><span class="n">aws_myteam_extern</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">external_id</span><span class="o">=</span><span class="n">aws_myteam_extern</span><span class="o">.</span><span class="n">external_id</span><span class="p">,</span>
+    <span class="n">role_arn</span><span class="o">=</span><span class="n">aws_sfx_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">regions</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">],</span>
+    <span class="n">poll_rate</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">import_cloud_watch</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">enable_aws_usage</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -112,6 +211,41 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider.</p>
 <p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with one of either <code class="docutils literal notranslate"><span class="pre">aws.ExternalIntegration</span></code> or <code class="docutils literal notranslate"><span class="pre">aws.TokenIntegration</span></code>.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_signalfx</span> <span class="k">as</span> <span class="nn">signalfx</span>
+
+<span class="c1"># This resource returns an account id in `external_id`…</span>
+<span class="n">aws_myteam_external</span> <span class="o">=</span> <span class="n">signalfx</span><span class="o">.</span><span class="n">aws</span><span class="o">.</span><span class="n">ExternalIntegration</span><span class="p">(</span><span class="s2">&quot;awsMyteamExternal&quot;</span><span class="p">)</span>
+<span class="c1"># Make yourself an AWS IAM role here, use `signalfx_aws_external_integration.aws_myteam_external.external_id`</span>
+<span class="n">aws_sfx_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;awsSfxRole&quot;</span><span class="p">)</span>
+<span class="c1"># Stuff here that uses the external and account ID</span>
+<span class="n">aws_myteam</span> <span class="o">=</span> <span class="n">signalfx</span><span class="o">.</span><span class="n">aws</span><span class="o">.</span><span class="n">Integration</span><span class="p">(</span><span class="s2">&quot;awsMyteam&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">integration_id</span><span class="o">=</span><span class="n">aws_myteam_external</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">external_id</span><span class="o">=</span><span class="n">aws_myteam_external</span><span class="o">.</span><span class="n">external_id</span><span class="p">,</span>
+    <span class="n">role_arn</span><span class="o">=</span><span class="n">aws_sfx_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="n">regions</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">],</span>
+    <span class="n">poll_rate</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">import_cloud_watch</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">enable_aws_usage</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">custom_namespace_sync_rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;defaultAction&quot;</span><span class="p">:</span> <span class="s2">&quot;Exclude&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;filterAction&quot;</span><span class="p">:</span> <span class="s2">&quot;Include&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;filterSource&quot;</span><span class="p">:</span> <span class="s2">&quot;filter(&#39;code&#39;, &#39;200&#39;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;namespace&quot;</span><span class="p">:</span> <span class="s2">&quot;fart&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">namespace_sync_rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;defaultAction&quot;</span><span class="p">:</span> <span class="s2">&quot;Exclude&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;filterAction&quot;</span><span class="p">:</span> <span class="s2">&quot;Include&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;filterSource&quot;</span><span class="p">:</span> <span class="s2">&quot;filter(&#39;code&#39;, &#39;200&#39;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;namespace&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS/EC2&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>NOTE</strong> You can use the data source “.getAwsServices” to specify all services.</p>
 </div></blockquote>
 <p>Fields that expect an AWS service/namespace will work with one of: “AWS/ApiGateway” “AWS/AppStream” “AWS/AutoScaling” “AWS/Billing” “AWS/CloudFront” “AWS/CloudSearch” “AWS/Events” “AWS/Logs” “AWS/Connect” “AWS/DMS” “AWS/DX” “AWS/DynamoDB” “AWS/EC2” “AWS/EC2Spot” “AWS/ECS” “AWS/ElasticBeanstalk” “AWS/EBS” “AWS/EFS” “AWS/ELB” “AWS/ApplicationELB” “AWS/NetworkELB” “AWS/ElasticTranscoder” “AWS/ElastiCache” “AWS/ES” “AWS/ElasticMapReduce” “AWS/GameLift” “AWS/Inspector” “AWS/IoT” “AWS/KMS” “AWS/KinesisAnalytics” “AWS/Firehose” “AWS/Kinesis” “AWS/KinesisVideo” “AWS/Lambda” “AWS/Lex” “AWS/ML” “AWS/OpsWorks” “AWS/Polly” “AWS/Redshift” “AWS/RDS” “AWS/Route53” “AWS/SageMaker” “AWS/DDoSProtection” “AWS/SES” “AWS/SNS” “AWS/SQS” “AWS/S3” “AWS/SWF” “AWS/States” “AWS/StorageGateway” “AWS/Translate” “AWS/NATGateway” “AWS/VPN” “WAF” “AWS/WorkSpaces”.</p>
 <dl class="field-list simple">
@@ -344,6 +478,37 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider.</p>
 <p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with <code class="docutils literal notranslate"><span class="pre">aws.Integration</span></code>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_signalfx</span> <span class="k">as</span> <span class="nn">signalfx</span>
+
+<span class="n">aws_myteam_token</span> <span class="o">=</span> <span class="n">signalfx</span><span class="o">.</span><span class="n">aws</span><span class="o">.</span><span class="n">TokenIntegration</span><span class="p">(</span><span class="s2">&quot;awsMyteamToken&quot;</span><span class="p">)</span>
+<span class="c1"># Make yourself an AWS IAM role here</span>
+<span class="n">aws_sfx_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;awsSfxRole&quot;</span><span class="p">)</span>
+<span class="c1"># Stuff here that uses the external and account ID</span>
+<span class="n">aws_myteam</span> <span class="o">=</span> <span class="n">signalfx</span><span class="o">.</span><span class="n">aws</span><span class="o">.</span><span class="n">Integration</span><span class="p">(</span><span class="s2">&quot;awsMyteam&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">integration_id</span><span class="o">=</span><span class="n">aws_myteam_token</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">token</span><span class="o">=</span><span class="s2">&quot;put_your_token_here&quot;</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;put_your_key_here&quot;</span><span class="p">,</span>
+    <span class="n">regions</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">],</span>
+    <span class="n">poll_rate</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">import_cloud_watch</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">enable_aws_usage</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">custom_namespace_sync_rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;defaultAction&quot;</span><span class="p">:</span> <span class="s2">&quot;Exclude&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;filterAction&quot;</span><span class="p">:</span> <span class="s2">&quot;Include&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;filterSource&quot;</span><span class="p">:</span> <span class="s2">&quot;filter(&#39;code&#39;, &#39;200&#39;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;namespace&quot;</span><span class="p">:</span> <span class="s2">&quot;fart&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">namespace_sync_rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;defaultAction&quot;</span><span class="p">:</span> <span class="s2">&quot;Exclude&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;filterAction&quot;</span><span class="p">:</span> <span class="s2">&quot;Include&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;filterSource&quot;</span><span class="p">:</span> <span class="s2">&quot;filter(&#39;code&#39;, &#39;200&#39;)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;namespace&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS/EC2&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

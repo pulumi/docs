@@ -14,44 +14,9 @@ SignalFx Webhook integration.
 
 > **NOTE** When managing integrations you'll need to use an admin token to authenticate the SignalFx provider. Otherwise you'll receive a 4xx error.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as signalfx from "@pulumi/signalfx";
-
-const webhookMyteam = new signalfx.WebhookResource("webhook_myteam", {
-    enabled: true,
-    headers: [{
-        headerKey: "some_header",
-        headerValue: "value_for_that_header",
-    }],
-    name: "Webhook - My Team",
-    sharedSecret: "abc1234",
-    url: "https://www.example.com",
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a WebhookIntegration Resource {#create}

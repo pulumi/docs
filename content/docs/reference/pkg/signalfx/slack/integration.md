@@ -30,7 +30,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_signalfx as signalfx
+
+slack_myteam = signalfx.slack.Integration("slackMyteam",
+    enabled=True,
+    webhook_url="http://example.com")
+```
 {{% /example %}}
 
 {{% example typescript %}}

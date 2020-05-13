@@ -31,7 +31,45 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_signalfx as signalfx
+
+mylistchart0 = signalfx.ListChart("mylistchart0",
+    color_by="Metric",
+    description="Very cool List Chart",
+    disable_sampling=True,
+    legend_options_fields=[
+        {
+            "enabled": False,
+            "property": "collector",
+        },
+        {
+            "enabled": True,
+            "property": "cluster_name",
+        },
+        {
+            "enabled": True,
+            "property": "role",
+        },
+        {
+            "enabled": False,
+            "property": "collector",
+        },
+        {
+            "enabled": False,
+            "property": "host",
+        },
+    ],
+    max_delay=2,
+    max_precision=2,
+    program_text="""myfilters = filter("cluster_name", "prod") and filter("role", "search")
+data("cpu.total.idle", filter=myfilters).publish()
+
+""",
+    refresh_interval=1,
+    sort_by="-value")
+```
 {{% /example %}}
 
 {{% example typescript %}}

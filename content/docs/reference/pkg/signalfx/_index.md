@@ -45,6 +45,8 @@ A Pulumi package for creating and managing SignalFx resources.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getawsservices" title="GetAwsServices"><span class="symbol function"></span>GetAwsServices</a></li>
+    <li><a href="getazureservices" title="GetAzureServices"><span class="symbol function"></span>GetAzureServices</a></li>
     <li><a href="getdimensionvalues" title="GetDimensionValues"><span class="symbol function"></span>GetDimensionValues</a></li>
 </ul>
 
@@ -57,6 +59,24 @@ A Pulumi package for creating and managing SignalFx resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/terraform-providers/terraform-provider-signalfx).</dd>
 	<dt>Version</dt>
-	<dd>2.2.1</dd>
+	<dd>2.3.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.html" title="Pulumi.Signalfx">Pulumi.Signalfx</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#" title="signalfx">signalfx</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#" title="@pulumi/signalfx">@pulumi/signalfx</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_signalfx" title="pulumi_signalfx">pulumi_signalfx</a></dd>
+
 </dl>
 

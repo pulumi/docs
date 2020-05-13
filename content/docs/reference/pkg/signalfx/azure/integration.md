@@ -17,7 +17,9 @@ SignalFx Azure integrations. For help with this integration see [Monitoring Micr
 
 ## Service Names
 
-Fields that expect an Azure service will work with one of: "microsoft.sql/servers/elasticpools" "microsoft.storage/storageaccounts" "microsoft.storage/storageaccountsservices/tableservices" "microsoft.storage/storageaccountsservices/blobservices" "microsoft.storage/storageaccounts/queueservices" "microsoft.storage/storageaccounts/fileservices" "microsoft.compute/virtualmachinescalesets" "microsoft.compute/virtualmachinescalesets/virtualmachines" "microsoft.compute/virtualmachines" "microsoft.devices/iothubs" "microsoft.eventHub/namespaces" "microsoft.batch/batchaccounts" "microsoft.sql/servers/databases" "microsoft.cache/redis" "microsoft.logic/workflows".
+> **NOTE** You can use the data source "signalfx..getAzureServices" to specify all services.
+
+Fields that expect an Azure service will work with one of: "microsoft.sql/servers/elasticpools", "microsoft.storage/storageaccounts", "microsoft.storage/storageaccountsservices/tableservices", "microsoft.storage/storageaccountsservices/blobservices", "microsoft.storage/storageaccounts/queueservices", "microsoft.storage/storageaccounts/fileservices", "microsoft.compute/virtualmachinescalesets", "microsoft.compute/virtualmachinescalesets/virtualmachines", "microsoft.compute/virtualmachines", "microsoft.devices", "microsoft.devices/iothubs", "microsoft.devices/elasticpools", "microsoft.devices/elasticpools/iothubtenants", "microsoft.eventHub/namespaces", "microsoft.batch/batchaccounts", "microsoft.sql/servers/databases", "microsoft.cache/redis", "microsoft.logic/workflows", "microsoft.web", "microsoft.web/sites", "microsoft.web/serverfarms", "microsoft.web/slots", "microsoft.web/hostingenvironments/multirolepools", "microsoft.web/hostingenvironments/workerpools", "microsoft.analysisservices/servers", "microsoft.apimanagement/service", "microsoft.automation/automationaccounts", "microsoft.classiccompute/virtualmachines", "microsoft.cognitiveservices/accounts", "microsoft.customerinsights/hubs", "microsoft.datafactory", "microsoft.datafactory/datafactories", "microsoft.datafactory/factories", "microsoft.datalakeanalytics/accounts", "microsoft.datalakestore/accounts", "microsoft.dbformysql/servers", "microsoft.dbforpostgresql/servers", "microsoft.documentdb/databaseaccounts", "microsoft.keyvault/vaults", "microsoft.locationbasedservices/accounts", "microsoft.network/loadbalancers", "microsoft.network/publicipaddresses", "microsoft.network/applicationgateways", "microsoft.network/virtualnetworkgateways", "microsoft.network/expressroutecircuits", "microsoft.network/trafficmanagerprofiles", "microsoft.notificationhubs/namespaces/notificationhubs", "microsoft.powerbidedicated/capacities", "microsoft.relay/namespaces", "microsoft.search/searchservices", "microsoft.servicebus/namespaces", "microsoft.sql/servers", "microsoft.streamanalytics/streamingjobs", "microsoft.network/dnszones", "microsoft.hdinsight/clusters", "microsoft.containerinstance/containergroups", "microsoft.containerservice/managedclusters", "microsoft.kusto/clusters", "microsoft.machinelearningservices/workspaces".
 
 {{% examples %}}
 ## Example Usage
@@ -33,7 +35,28 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_signalfx as signalfx
+
+azure_myteam = signalfx.azure.Integration("azureMyteam",
+    enabled=True,
+    resource=[{
+        "signalfxAzureIntegration": [{
+            "azureMyteamXX": [{
+                "appId": "YYY",
+                "enabled": False,
+                "environment": "azure",
+                "name": "AzureFoo",
+                "pollRate": 300,
+                "secretKey": "XXX",
+                "services": ["microsoft.sql/servers/elasticpools"],
+                "subscriptions": ["sub-guid-here"],
+                "tenantId": "ZZZ",
+            }],
+        }],
+    }])
+```
 {{% /example %}}
 
 {{% example typescript %}}

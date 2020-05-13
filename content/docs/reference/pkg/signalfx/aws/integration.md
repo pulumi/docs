@@ -16,12 +16,98 @@ SignalFx AWS CloudWatch integrations. For help with this integration see [Monito
 
 > **WARNING** This resource implements a part of a workflow. You must use it with one of either `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
 
-{{% examples %}}
-{{% /examples %}}
+
 ## Service Names
+
+> **NOTE** You can use the data source "signalfx..getAwsServices" to specify all services.
 
 Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGateway" "AWS/AppStream" "AWS/AutoScaling" "AWS/Billing" "AWS/CloudFront" "AWS/CloudSearch" "AWS/Events" "AWS/Logs" "AWS/Connect" "AWS/DMS" "AWS/DX" "AWS/DynamoDB" "AWS/EC2" "AWS/EC2Spot" "AWS/ECS" "AWS/ElasticBeanstalk" "AWS/EBS" "AWS/EFS" "AWS/ELB" "AWS/ApplicationELB" "AWS/NetworkELB" "AWS/ElasticTranscoder" "AWS/ElastiCache" "AWS/ES" "AWS/ElasticMapReduce" "AWS/GameLift" "AWS/Inspector" "AWS/IoT" "AWS/KMS" "AWS/KinesisAnalytics" "AWS/Firehose" "AWS/Kinesis" "AWS/KinesisVideo" "AWS/Lambda" "AWS/Lex" "AWS/ML" "AWS/OpsWorks" "AWS/Polly" "AWS/Redshift" "AWS/RDS" "AWS/Route53" "AWS/SageMaker" "AWS/DDoSProtection" "AWS/SES" "AWS/SNS" "AWS/SQS" "AWS/S3" "AWS/SWF" "AWS/States" "AWS/StorageGateway" "AWS/Translate" "AWS/NATGateway" "AWS/VPN" "WAF" "AWS/WorkSpaces".
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_signalfx as signalfx
+
+# This resource returns an account id in `external_id`…
+aws_myteam_external = signalfx.aws.ExternalIntegration("awsMyteamExternal")
+# Make yourself an AWS IAM role here, use `signalfx_aws_external_integration.aws_myteam_external.external_id`
+aws_sfx_role = aws.iam.Role("awsSfxRole")
+# Stuff here that uses the external and account ID
+aws_myteam = signalfx.aws.Integration("awsMyteam",
+    enabled=True,
+    integration_id=aws_myteam_external.id,
+    external_id=aws_myteam_external.external_id,
+    role_arn=aws_sfx_role.arn,
+    regions=["us-east-1"],
+    poll_rate=300,
+    import_cloud_watch=True,
+    enable_aws_usage=True,
+    custom_namespace_sync_rule=[{
+        "defaultAction": "Exclude",
+        "filterAction": "Include",
+        "filterSource": "filter('code', '200')",
+        "namespace": "fart",
+    }],
+    namespace_sync_rule=[{
+        "defaultAction": "Exclude",
+        "filterAction": "Include",
+        "filterSource": "filter('code', '200')",
+        "namespace": "AWS/EC2",
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as signalfx from "@pulumi/signalfx";
+
+// This resource returns an account id in `external_id`…
+const awsMyteamExternal = new signalfx.aws.ExternalIntegration("awsMyteamExternal", {});
+// Make yourself an AWS IAM role here, use `signalfx_aws_external_integration.aws_myteam_external.external_id`
+const awsSfxRole = new aws.iam.Role("awsSfxRole", {});
+// Stuff here that uses the external and account ID
+const awsMyteam = new signalfx.aws.Integration("awsMyteam", {
+    enabled: true,
+    integrationId: awsMyteamExternal.id,
+    externalId: awsMyteamExternal.externalId,
+    roleArn: awsSfxRole.arn,
+    regions: ["us-east-1"],
+    pollRate: 300,
+    importCloudWatch: true,
+    enableAwsUsage: true,
+    custom_namespace_sync_rule: [{
+        defaultAction: "Exclude",
+        filterAction: "Include",
+        filterSource: "filter('code', '200')",
+        namespace: "fart",
+    }],
+    namespace_sync_rule: [{
+        defaultAction: "Exclude",
+        filterAction: "Include",
+        filterSource: "filter('code', '200')",
+        namespace: "AWS/EC2",
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Integration Resource {#create}

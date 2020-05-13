@@ -30,7 +30,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_signalfx as signalfx
+
+pagerduty_myteam = signalfx.pagerduty.Integration("pagerdutyMyteam",
+    api_key="1234567890",
+    enabled=True)
+```
 {{% /example %}}
 
 {{% example typescript %}}

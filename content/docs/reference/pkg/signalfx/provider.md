@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_url=None<span class="p">, </span>auth_token=None<span class="p">, </span>custom_app_url=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_url=None<span class="p">, </span>auth_token=None<span class="p">, </span>custom_app_url=None<span class="p">, </span>timeout_seconds=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -225,6 +225,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Application URL for your SignalFx org, often customzied for organizations using SSO
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Timeout<wbr>Seconds</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Timeout duration for a single HTTP call in seconds. Defaults to 120
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -257,6 +266,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Application URL for your SignalFx org, often customzied for organizations using SSO
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Timeout<wbr>Seconds</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Timeout duration for a single HTTP call in seconds. Defaults to 120
 {{% /md %}}</dd>
 
 </dl>
@@ -293,6 +311,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Application URL for your SignalFx org, often customzied for organizations using SSO
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>timeout<wbr>Seconds</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Timeout duration for a single HTTP call in seconds. Defaults to 120
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -325,6 +352,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Application URL for your SignalFx org, often customzied for organizations using SSO
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>timeout_<wbr>seconds</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Timeout duration for a single HTTP call in seconds. Defaults to 120
 {{% /md %}}</dd>
 
 </dl>

@@ -14,9 +14,57 @@ Provides a SignalFx resource for managing alert muting rules. See [Mute Notifica
 
 > **WARNING** SignalFx does not allow the start time of a **currently active** muting rule to be modified. As such, attempting to modify a currently active rule will destroy the existing rule and create a new rule. This may result in the emission of notifications.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_signalfx as signalfx
+
+rool_mooter_one = signalfx.AlertMutingRule("roolMooterOne",
+    description="mooted it NEW",
+    start_time=1573063243,
+    stop_time=0,
+    detectors=[signalfx_detector["some_detector_id"]],
+    filter=[{
+        "property": "foo",
+        "propertyValue": "bar",
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as signalfx from "@pulumi/signalfx";
+
+const roolMooterOne = new signalfx.AlertMutingRule("roolMooterOne", {
+    description: "mooted it NEW",
+    startTime: 1573063243,
+    stopTime: 0,
+    detectors: [signalfx_detector.some_detector_id],
+    filter: [{
+        property: "foo",
+        propertyValue: "bar",
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AlertMutingRule Resource {#create}
