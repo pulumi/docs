@@ -1,5 +1,5 @@
 ---
-title: "Infrastructure Testing Just Got Better with Pulumi"
+title: "At Scale Infrastructure Testing With Pulumi"
 date: 2020-05-13
 meta_desc: "Pulumi accelerates infrastructure testing 6000x with mocking and unit tests."
 meta_image: dustin-farris.png
@@ -38,7 +38,7 @@ Second, creating standard infrastructure stacks for the team helps everyone move
 
 Ideally, a unit test should demonstrate that a new component or resource works in isolation from other dependencies.  Resource mocking mimics complex infrastructure in lieu of spinning up the dedicated infrastructure for a test (which would be slow and potentially expensive.) This step is critical for preventing configuration mistakes from reaching production.
 
-The unit test suite for our data lake consists of over 700 tests and previously took almost 20 minutes to execute.  With improvements to StackReference mocking and the new ‘monitor mock’ feature, these same tests now run in about 20 seconds.  _That’s a 6000% improvement over our previous performance!_
+The unit test suite for our data lake consists of over 700 tests and previously took almost 20 minutes to execute.  With improvements to StackReference mocking and the new ‘monitor mock’ feature, these same tests now run in about 20 seconds.  _That’s a 60x faster over our previous performance!_
 
 ## Getting Started with Resource Mocking
 
@@ -118,4 +118,7 @@ After working with Pulumi to build-out our data lake and implementing robust, en
 
 ## Conclusion
 
-Testing is just one of the superpowers that Pulumi 2.0 delivers. For more information, see our [Testing User Guide]({{< relref "/docs/guides/testing" >}}) and [worked examples](https://github.com/pulumi/examples#testing) on GitHub in the language of your choice.
+Testing is just one of the superpowers that Pulumi 2.0 delivers. For more information, see our [Testing User Guide]({{< relref "/docs/guides/testing" >}}) and [worked examples](https://github.com/pulumi/examples#testing) on GitHub in the language of your choice. Watch Dustin Farris and Lee Zen demonstrate unit testing on this episode of Modern Infrastructure as Code. 
+
+{{< youtube "ydR61dZmKgU" >}}
+
