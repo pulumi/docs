@@ -31,7 +31,7 @@ Explore the resources and functions of the jira module in the SignalFx package.
 <dl class="tabular">
 
     <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.Jira.html" title="Pulumi.Signalfx.Jira">Pulumi.Signalfx.Jira</a></dd>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Jira.html" title="Pulumi.SignalFx.Jira">Pulumi.SignalFx.Jira</a></dd>
 
     <dt>Go</dt>
     <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/jira?tab=doc#" title="signalfx/jira">signalfx/jira</a></dd>

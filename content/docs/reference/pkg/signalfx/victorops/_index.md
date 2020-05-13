@@ -31,7 +31,7 @@ Explore the resources and functions of the victorops module in the SignalFx pack
 <dl class="tabular">
 
     <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.VictorOps.html" title="Pulumi.Signalfx.VictorOps">Pulumi.Signalfx.VictorOps</a></dd>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.VictorOps.html" title="Pulumi.SignalFx.VictorOps">Pulumi.SignalFx.VictorOps</a></dd>
 
     <dt>Go</dt>
     <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/victorops?tab=doc#" title="signalfx/victorops">signalfx/victorops</a></dd>

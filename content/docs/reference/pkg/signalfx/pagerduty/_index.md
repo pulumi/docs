@@ -31,7 +31,7 @@ Explore the resources and functions of the pagerduty module in the SignalFx pack
 <dl class="tabular">
 
     <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.PagerDuty.html" title="Pulumi.Signalfx.PagerDuty">Pulumi.Signalfx.PagerDuty</a></dd>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.PagerDuty.html" title="Pulumi.SignalFx.PagerDuty">Pulumi.SignalFx.PagerDuty</a></dd>
 
     <dt>Go</dt>
     <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/pagerduty?tab=doc#" title="signalfx/pagerduty">signalfx/pagerduty</a></dd>

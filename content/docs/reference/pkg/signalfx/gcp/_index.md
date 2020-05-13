@@ -31,7 +31,7 @@ Explore the resources and functions of the gcp module in the SignalFx package.
 <dl class="tabular">
 
     <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.Gcp.html" title="Pulumi.Signalfx.Gcp">Pulumi.Signalfx.Gcp</a></dd>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Gcp.html" title="Pulumi.SignalFx.Gcp">Pulumi.SignalFx.Gcp</a></dd>
 
     <dt>Go</dt>
     <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/gcp?tab=doc#" title="signalfx/gcp">signalfx/gcp</a></dd>
