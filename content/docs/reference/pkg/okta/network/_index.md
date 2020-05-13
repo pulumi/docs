@@ -26,3 +26,21 @@ Explore the resources and functions of the network module in the Okta package.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Network.html" title="Pulumi.Okta.Network">Pulumi.Okta.Network</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/network?tab=doc#" title="okta/network">okta/network</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/okta/network/#" title="@pulumi/okta/network">@pulumi/okta/network</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_okta/network" title="pulumi_okta/network">pulumi_okta/network</a></dd>
+
+</dl>
+
