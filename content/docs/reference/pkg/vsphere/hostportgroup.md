@@ -13,17 +13,50 @@ meta_desc: "Explore the HostPortGroup resource of the vSphere package, including
 The `vsphere..HostPortGroup` resource can be used to manage vSphere standard
 port groups on an ESXi host. These port groups are connected to standard
 virtual switches, which can be managed by the
-[`vsphere..HostVirtualSwitch`][host-virtual-switch] resource.
+`vsphere..HostVirtualSwitch` resource.
 
 For an overview on vSphere networking concepts, see [this page][ref-vsphere-net-concepts].
 
-[host-virtual-switch]: /docs/providers/vsphere/r/host_virtual_switch.html
 [ref-vsphere-net-concepts]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-2B11DBB8-CB3C-4AFF-8885-EFEA0FC562F4.html
 
-## Example Usages
 
-**Create a virtual switch and bind a port group to it:**
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a virtual switch and bind a port group to it
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+datacenter = vsphere.get_datacenter(name="dc1")
+esxi_host = vsphere.get_host(datacenter_id=datacenter.id,
+    name="esxi1")
+switch = vsphere.HostVirtualSwitch("switch",
+    active_nics=["vmnic0"],
+    host_system_id=esxi_host.id,
+    network_adapters=[
+        "vmnic0",
+        "vmnic1",
+    ],
+    standby_nics=["vmnic1"])
+pg = vsphere.HostPortGroup("pg",
+    host_system_id=esxi_host.id,
+    virtual_switch_name=switch.name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -49,6 +82,18 @@ const pg = new vsphere.HostPortGroup("pg", {
     virtualSwitchName: switchHostVirtualSwitch.name,
 });
 ```
+{{% /example %}}
+
+### Create a port group with VLAN set and some overrides
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_vsphere as vsphere
@@ -65,18 +110,14 @@ switch = vsphere.HostVirtualSwitch("switch",
     ],
     standby_nics=["vmnic1"])
 pg = vsphere.HostPortGroup("pg",
+    allow_promiscuous=True,
     host_system_id=esxi_host.id,
-    virtual_switch_name=switch.name)
+    virtual_switch_name=switch.name,
+    vlan_id=4095)
 ```
+{{% /example %}}
 
-**Create a port group with VLAN set and some overrides:**
-
-This example sets the trunk mode VLAN (`4095`, which passes through all tags)
-and sets
-[`allow_promiscuous`](https://www.terraform.io/docs/providers/vsphere/r/host_virtual_switch.html#allow_promiscuous)
-to ensure that all traffic is seen on the port. The latter setting overrides
-the implicit default of `false` set on the virtual switch.
-
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -104,28 +145,9 @@ const pg = new vsphere.HostPortGroup("pg", {
     vlanId: 4095,
 });
 ```
-```python
-import pulumi
-import pulumi_vsphere as vsphere
+{{% /example %}}
 
-datacenter = vsphere.get_datacenter(name="dc1")
-esxi_host = vsphere.get_host(datacenter_id=datacenter.id,
-    name="esxi1")
-switch = vsphere.HostVirtualSwitch("switch",
-    active_nics=["vmnic0"],
-    host_system_id=esxi_host.id,
-    network_adapters=[
-        "vmnic0",
-        "vmnic1",
-    ],
-    standby_nics=["vmnic1"])
-pg = vsphere.HostPortGroup("pg",
-    allow_promiscuous=True,
-    host_system_id=esxi_host.id,
-    virtual_switch_name=switch.name,
-    vlan_id=4095)
-```
-
+{{% /examples %}}
 
 
 ## Create a HostPortGroup Resource {#create}
@@ -315,7 +337,7 @@ The HostPortGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the host to set the port group up on. Forces a new resource if changed.
 {{% /md %}}</dd>
 
@@ -484,7 +506,7 @@ tagging. Default: `0`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the host to set the port group up on. Forces a new resource if changed.
 {{% /md %}}</dd>
 
@@ -653,7 +675,7 @@ tagging. Default: `0`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the host to set the port group up on. Forces a new resource if changed.
 {{% /md %}}</dd>
 
@@ -822,7 +844,7 @@ tagging. Default: `0`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the host to set the port group up on. Forces a new resource if changed.
 {{% /md %}}</dd>
 
@@ -1002,8 +1024,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map with a full set of the [policy
-options][host-vswitch-policy-options] computed from defaults and overrides,
+    <dd>{{% md %}}A map with a full set of the policy
+options computed from defaults and overrides,
 explaining the effective policy for this port group.
 {{% /md %}}</dd>
 
@@ -1046,8 +1068,8 @@ explaining the effective policy for this port group.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map with a full set of the [policy
-options][host-vswitch-policy-options] computed from defaults and overrides,
+    <dd>{{% md %}}A map with a full set of the policy
+options computed from defaults and overrides,
 explaining the effective policy for this port group.
 {{% /md %}}</dd>
 
@@ -1090,8 +1112,8 @@ explaining the effective policy for this port group.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map with a full set of the [policy
-options][host-vswitch-policy-options] computed from defaults and overrides,
+    <dd>{{% md %}}A map with a full set of the policy
+options computed from defaults and overrides,
 explaining the effective policy for this port group.
 {{% /md %}}</dd>
 
@@ -1134,8 +1156,8 @@ explaining the effective policy for this port group.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map with a full set of the [policy
-options][host-vswitch-policy-options] computed from defaults and overrides,
+    <dd>{{% md %}}A map with a full set of the policy
+options computed from defaults and overrides,
 explaining the effective policy for this port group.
 {{% /md %}}</dd>
 
@@ -1351,8 +1373,8 @@ only.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map with a full set of the [policy
-options][host-vswitch-policy-options] computed from defaults and overrides,
+    <dd>{{% md %}}A map with a full set of the policy
+options computed from defaults and overrides,
 explaining the effective policy for this port group.
 {{% /md %}}</dd>
 
@@ -1371,7 +1393,7 @@ explaining the effective policy for this port group.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the host to set the port group up on. Forces a new resource if changed.
 {{% /md %}}</dd>
 
@@ -1549,8 +1571,8 @@ only.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map with a full set of the [policy
-options][host-vswitch-policy-options] computed from defaults and overrides,
+    <dd>{{% md %}}A map with a full set of the policy
+options computed from defaults and overrides,
 explaining the effective policy for this port group.
 {{% /md %}}</dd>
 
@@ -1569,7 +1591,7 @@ explaining the effective policy for this port group.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the host to set the port group up on. Forces a new resource if changed.
 {{% /md %}}</dd>
 
@@ -1747,8 +1769,8 @@ only.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map with a full set of the [policy
-options][host-vswitch-policy-options] computed from defaults and overrides,
+    <dd>{{% md %}}A map with a full set of the policy
+options computed from defaults and overrides,
 explaining the effective policy for this port group.
 {{% /md %}}</dd>
 
@@ -1767,7 +1789,7 @@ explaining the effective policy for this port group.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the host to set the port group up on. Forces a new resource if changed.
 {{% /md %}}</dd>
 
@@ -1945,8 +1967,8 @@ only.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map with a full set of the [policy
-options][host-vswitch-policy-options] computed from defaults and overrides,
+    <dd>{{% md %}}A map with a full set of the policy
+options computed from defaults and overrides,
 explaining the effective policy for this port group.
 {{% /md %}}</dd>
 
@@ -1965,7 +1987,7 @@ explaining the effective policy for this port group.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the host to set the port group up on. Forces a new resource if changed.
 {{% /md %}}</dd>
 

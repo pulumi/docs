@@ -14,7 +14,7 @@ Provides a VMware vSphere vnic resource.
 
 ## Example Usages
 
-**Create a vnic attached to a distributed virtual switch using the vmotion TCP/IP stack:**
+### Create a vnic attached to a distributed virtual switch using the vmotion TCP/IP stack
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -74,7 +74,7 @@ v1 = vsphere.Vnic("v1",
     netstack="vmotion")
 ```
 
-**Create a vnic attached to a portgroup using the default TCP/IP stack:**
+### Create a vnic attached to a portgroup using the default TCP/IP stack
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";

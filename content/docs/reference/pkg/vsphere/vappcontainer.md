@@ -353,7 +353,7 @@ The VappContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs]
+    <dd>{{% md %}}The managed object ID
 of the parent resource pool. This can be the root resource pool for a cluster
 or standalone host, or a resource pool itself. When moving a vApp container
 from one parent resource pool to another, both must share a common root
@@ -498,7 +498,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the vApp container's parent folder.
 {{% /md %}}</dd>
 
@@ -508,8 +508,7 @@ the vApp container's parent folder.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -525,7 +524,7 @@ the vApp container's parent folder.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs]
+    <dd>{{% md %}}The managed object ID
 of the parent resource pool. This can be the root resource pool for a cluster
 or standalone host, or a resource pool itself. When moving a vApp container
 from one parent resource pool to another, both must share a common root
@@ -670,7 +669,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the vApp container's parent folder.
 {{% /md %}}</dd>
 
@@ -680,8 +679,7 @@ the vApp container's parent folder.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -697,7 +695,7 @@ the vApp container's parent folder.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs]
+    <dd>{{% md %}}The managed object ID
 of the parent resource pool. This can be the root resource pool for a cluster
 or standalone host, or a resource pool itself. When moving a vApp container
 from one parent resource pool to another, both must share a common root
@@ -842,7 +840,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the vApp container's parent folder.
 {{% /md %}}</dd>
 
@@ -852,8 +850,7 @@ the vApp container's parent folder.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -869,7 +866,7 @@ the vApp container's parent folder.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs]
+    <dd>{{% md %}}The managed object ID
 of the parent resource pool. This can be the root resource pool for a cluster
 or standalone host, or a resource pool itself. When moving a vApp container
 from one parent resource pool to another, both must share a common root
@@ -1014,7 +1011,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the vApp container's parent folder.
 {{% /md %}}</dd>
 
@@ -1024,8 +1021,7 @@ the vApp container's parent folder.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1370,7 +1366,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the vApp container's parent folder.
 {{% /md %}}</dd>
 
@@ -1380,7 +1376,7 @@ the vApp container's parent folder.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs]
+    <dd>{{% md %}}The managed object ID
 of the parent resource pool. This can be the root resource pool for a cluster
 or standalone host, or a resource pool itself. When moving a vApp container
 from one parent resource pool to another, both must share a common root
@@ -1393,8 +1389,7 @@ resource pool or the move will fail.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1542,7 +1537,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the vApp container's parent folder.
 {{% /md %}}</dd>
 
@@ -1552,7 +1547,7 @@ the vApp container's parent folder.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs]
+    <dd>{{% md %}}The managed object ID
 of the parent resource pool. This can be the root resource pool for a cluster
 or standalone host, or a resource pool itself. When moving a vApp container
 from one parent resource pool to another, both must share a common root
@@ -1565,8 +1560,7 @@ resource pool or the move will fail.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1714,7 +1708,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the vApp container's parent folder.
 {{% /md %}}</dd>
 
@@ -1724,7 +1718,7 @@ the vApp container's parent folder.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs]
+    <dd>{{% md %}}The managed object ID
 of the parent resource pool. This can be the root resource pool for a cluster
 or standalone host, or a resource pool itself. When moving a vApp container
 from one parent resource pool to another, both must share a common root
@@ -1737,8 +1731,7 @@ resource pool or the move will fail.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1886,7 +1879,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the vApp container's parent folder.
 {{% /md %}}</dd>
 
@@ -1896,7 +1889,7 @@ the vApp container's parent folder.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs]
+    <dd>{{% md %}}The managed object ID
 of the parent resource pool. This can be the root resource pool for a cluster
 or standalone host, or a resource pool itself. When moving a vApp container
 from one parent resource pool to another, both must share a common root
@@ -1909,8 +1902,7 @@ resource pool or the move will fail.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>

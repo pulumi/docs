@@ -12,18 +12,14 @@ meta_desc: "Explore the ComputeClusterHostGroup resource of the vSphere package,
 
 The `vsphere..ComputeClusterHostGroup` resource can be used to manage groups
 of hosts in a cluster, either created by the
-[`vsphere..ComputeCluster`][tf-vsphere-cluster-resource] resource or looked up
-by the [`vsphere..ComputeCluster`][tf-vsphere-cluster-data-source] data source.
+`vsphere..ComputeCluster` resource or looked up
+by the `vsphere..ComputeCluster` data source.
 
-[tf-vsphere-cluster-resource]: /docs/providers/vsphere/r/compute_cluster.html
-[tf-vsphere-cluster-data-source]: /docs/providers/vsphere/d/compute_cluster.html
 
 This resource mainly serves as an input to the
-[`vsphere..ComputeClusterVmHostRule`][tf-vsphere-cluster-vm-host-rule-resource]
+`vsphere..ComputeClusterVmHostRule`
 resource - see the documentation for that resource for further details on how
 to use host groups.
-
-[tf-vsphere-cluster-vm-host-rule-resource]: /docs/providers/vsphere/r/compute_cluster_vm_host_rule.html
 
 > **NOTE:** This resource requires vCenter and is not available on direct ESXi
 connections.
@@ -222,8 +218,8 @@ The ComputeClusterHostGroup resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -233,7 +229,7 @@ resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+    <dd>{{% md %}}The managed object IDs of
 the hosts to put in the cluster.
 {{% /md %}}</dd>
 
@@ -260,8 +256,8 @@ cluster. Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -271,7 +267,7 @@ resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+    <dd>{{% md %}}The managed object IDs of
 the hosts to put in the cluster.
 {{% /md %}}</dd>
 
@@ -298,8 +294,8 @@ cluster. Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -309,7 +305,7 @@ resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+    <dd>{{% md %}}The managed object IDs of
 the hosts to put in the cluster.
 {{% /md %}}</dd>
 
@@ -336,8 +332,8 @@ cluster. Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -347,7 +343,7 @@ resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+    <dd>{{% md %}}The managed object IDs of
 the hosts to put in the cluster.
 {{% /md %}}</dd>
 
@@ -571,8 +567,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -582,7 +578,7 @@ resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+    <dd>{{% md %}}The managed object IDs of
 the hosts to put in the cluster.
 {{% /md %}}</dd>
 
@@ -609,8 +605,8 @@ cluster. Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -620,7 +616,7 @@ resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+    <dd>{{% md %}}The managed object IDs of
 the hosts to put in the cluster.
 {{% /md %}}</dd>
 
@@ -647,8 +643,8 @@ cluster. Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -658,7 +654,7 @@ resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+    <dd>{{% md %}}The managed object IDs of
 the hosts to put in the cluster.
 {{% /md %}}</dd>
 
@@ -685,8 +681,8 @@ cluster. Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -696,7 +692,7 @@ resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+    <dd>{{% md %}}The managed object IDs of
 the hosts to put in the cluster.
 {{% /md %}}</dd>
 

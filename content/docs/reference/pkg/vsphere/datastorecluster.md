@@ -217,7 +217,7 @@ The DatastoreCluster resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
 {{% /md %}}</dd>
@@ -240,7 +240,13 @@ for custom attributes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the folder to locate the datastore cluster in.
+    <dd>{{% md %}}The relative path to a folder to put this datastore
+cluster in.  This is a path relative to the datacenter you are deploying the
+datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
+`foo/bar`, The provider will place a datastore cluster named
+`datastore-cluster-test` in a datastore folder located at
+`/dc1/datastore/foo/bar`, with the final inventory path being
+`/dc1/datastore/foo/bar/datastore-cluster-test`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -258,7 +264,8 @@ for custom attributes.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Advanced configuration options for storage DRS.
+    <dd>{{% md %}}A key/value map of advanced Storage DRS
+settings that are not exposed via the provider or the vSphere client.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -469,8 +476,7 @@ automation settings when generating recommendations for datastore evacuation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -486,7 +492,7 @@ automation settings when generating recommendations for datastore evacuation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
 {{% /md %}}</dd>
@@ -509,7 +515,13 @@ for custom attributes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the folder to locate the datastore cluster in.
+    <dd>{{% md %}}The relative path to a folder to put this datastore
+cluster in.  This is a path relative to the datacenter you are deploying the
+datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
+`foo/bar`, The provider will place a datastore cluster named
+`datastore-cluster-test` in a datastore folder located at
+`/dc1/datastore/foo/bar`, with the final inventory path being
+`/dc1/datastore/foo/bar/datastore-cluster-test`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -527,7 +539,8 @@ for custom attributes.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Advanced configuration options for storage DRS.
+    <dd>{{% md %}}A key/value map of advanced Storage DRS
+settings that are not exposed via the provider or the vSphere client.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -738,8 +751,7 @@ automation settings when generating recommendations for datastore evacuation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -755,7 +767,7 @@ automation settings when generating recommendations for datastore evacuation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
 {{% /md %}}</dd>
@@ -778,7 +790,13 @@ for custom attributes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the folder to locate the datastore cluster in.
+    <dd>{{% md %}}The relative path to a folder to put this datastore
+cluster in.  This is a path relative to the datacenter you are deploying the
+datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
+`foo/bar`, The provider will place a datastore cluster named
+`datastore-cluster-test` in a datastore folder located at
+`/dc1/datastore/foo/bar`, with the final inventory path being
+`/dc1/datastore/foo/bar/datastore-cluster-test`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -796,7 +814,8 @@ for custom attributes.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Advanced configuration options for storage DRS.
+    <dd>{{% md %}}A key/value map of advanced Storage DRS
+settings that are not exposed via the provider or the vSphere client.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1007,8 +1026,7 @@ automation settings when generating recommendations for datastore evacuation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1024,7 +1042,7 @@ automation settings when generating recommendations for datastore evacuation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
 {{% /md %}}</dd>
@@ -1047,7 +1065,13 @@ for custom attributes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the folder to locate the datastore cluster in.
+    <dd>{{% md %}}The relative path to a folder to put this datastore
+cluster in.  This is a path relative to the datacenter you are deploying the
+datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
+`foo/bar`, The provider will place a datastore cluster named
+`datastore-cluster-test` in a datastore folder located at
+`/dc1/datastore/foo/bar`, with the final inventory path being
+`/dc1/datastore/foo/bar/datastore-cluster-test`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1065,7 +1089,8 @@ for custom attributes.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}Advanced configuration options for storage DRS.
+    <dd>{{% md %}}A key/value map of advanced Storage DRS
+settings that are not exposed via the provider or the vSphere client.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1276,8 +1301,7 @@ automation settings when generating recommendations for datastore evacuation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1502,7 +1526,7 @@ for custom attributes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
 {{% /md %}}</dd>
@@ -1513,7 +1537,13 @@ changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the folder to locate the datastore cluster in.
+    <dd>{{% md %}}The relative path to a folder to put this datastore
+cluster in.  This is a path relative to the datacenter you are deploying the
+datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
+`foo/bar`, The provider will place a datastore cluster named
+`datastore-cluster-test` in a datastore folder located at
+`/dc1/datastore/foo/bar`, with the final inventory path being
+`/dc1/datastore/foo/bar/datastore-cluster-test`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1531,7 +1561,8 @@ changed.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Advanced configuration options for storage DRS.
+    <dd>{{% md %}}A key/value map of advanced Storage DRS
+settings that are not exposed via the provider or the vSphere client.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1742,8 +1773,7 @@ automation settings when generating recommendations for datastore evacuation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1771,7 +1801,7 @@ for custom attributes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
 {{% /md %}}</dd>
@@ -1782,7 +1812,13 @@ changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the folder to locate the datastore cluster in.
+    <dd>{{% md %}}The relative path to a folder to put this datastore
+cluster in.  This is a path relative to the datacenter you are deploying the
+datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
+`foo/bar`, The provider will place a datastore cluster named
+`datastore-cluster-test` in a datastore folder located at
+`/dc1/datastore/foo/bar`, with the final inventory path being
+`/dc1/datastore/foo/bar/datastore-cluster-test`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1800,7 +1836,8 @@ changed.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Advanced configuration options for storage DRS.
+    <dd>{{% md %}}A key/value map of advanced Storage DRS
+settings that are not exposed via the provider or the vSphere client.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2011,8 +2048,7 @@ automation settings when generating recommendations for datastore evacuation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -2040,7 +2076,7 @@ for custom attributes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
 {{% /md %}}</dd>
@@ -2051,7 +2087,13 @@ changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the folder to locate the datastore cluster in.
+    <dd>{{% md %}}The relative path to a folder to put this datastore
+cluster in.  This is a path relative to the datacenter you are deploying the
+datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
+`foo/bar`, The provider will place a datastore cluster named
+`datastore-cluster-test` in a datastore folder located at
+`/dc1/datastore/foo/bar`, with the final inventory path being
+`/dc1/datastore/foo/bar/datastore-cluster-test`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2069,7 +2111,8 @@ changed.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Advanced configuration options for storage DRS.
+    <dd>{{% md %}}A key/value map of advanced Storage DRS
+settings that are not exposed via the provider or the vSphere client.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2280,8 +2323,7 @@ automation settings when generating recommendations for datastore evacuation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -2309,7 +2351,7 @@ for custom attributes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
 {{% /md %}}</dd>
@@ -2320,7 +2362,13 @@ changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the folder to locate the datastore cluster in.
+    <dd>{{% md %}}The relative path to a folder to put this datastore
+cluster in.  This is a path relative to the datacenter you are deploying the
+datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
+`foo/bar`, The provider will place a datastore cluster named
+`datastore-cluster-test` in a datastore folder located at
+`/dc1/datastore/foo/bar`, with the final inventory path being
+`/dc1/datastore/foo/bar/datastore-cluster-test`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2338,7 +2386,8 @@ changed.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}Advanced configuration options for storage DRS.
+    <dd>{{% md %}}A key/value map of advanced Storage DRS
+settings that are not exposed via the provider or the vSphere client.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2549,8 +2598,7 @@ automation settings when generating recommendations for datastore evacuation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>

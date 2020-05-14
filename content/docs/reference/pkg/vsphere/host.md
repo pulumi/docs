@@ -13,10 +13,52 @@ meta_desc: "Explore the Host resource of the vSphere package, including examples
 Provides a VMware vSphere host resource. This represents an ESXi host that
 can be used either as part of a Compute Cluster or Standalone.
 
-## Example Usages
 
-**Create a standalone host:**
+## Importing 
 
+An existing host can be [imported][docs-import] into this resource
+via supplying the host's ID. An example is below:
+
+[docs-import]: /docs/import/index.html
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
+```
+
+The above would import the host with ID `host-123`.
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a standalone host
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+dc = vsphere.get_datacenter(name="my-datacenter")
+h1 = vsphere.Host("h1",
+    hostname="10.10.10.1",
+    username="root",
+    password="password",
+    license="00000-00000-00000-00000i-00000",
+    datacenter=dc.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -32,21 +74,35 @@ const h1 = new vsphere.Host("h1", {
     datacenter: dc.then(dc => dc.id),
 });
 ```
+{{% /example %}}
+
+### Create host in a compute cluster
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_vsphere as vsphere
 
-dc = vsphere.get_datacenter(name="my-datacenter")
+dc = vsphere.get_datacenter(name="TfDatacenter")
+c1 = vsphere.get_compute_cluster(name="DC0_C0",
+    datacenter_id=dc.id)
 h1 = vsphere.Host("h1",
     hostname="10.10.10.1",
     username="root",
     password="password",
     license="00000-00000-00000-00000i-00000",
-    datacenter=dc.id)
+    cluster=c1.id)
 ```
+{{% /example %}}
 
-**Create host in a compute cluster:**
-
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -66,37 +122,9 @@ const h1 = new vsphere.Host("h1", {
     cluster: c1.then(c1 => c1.id),
 });
 ```
-```python
-import pulumi
-import pulumi_vsphere as vsphere
+{{% /example %}}
 
-dc = vsphere.get_datacenter(name="TfDatacenter")
-c1 = vsphere.get_compute_cluster(name="DC0_C0",
-    datacenter_id=dc.id)
-h1 = vsphere.Host("h1",
-    hostname="10.10.10.1",
-    username="root",
-    password="password",
-    license="00000-00000-00000-00000i-00000",
-    cluster=c1.id)
-```
-
-## Importing 
-
-An existing host can be [imported][docs-import] into this resource
-via supplying the host's ID. An example is below:
-
-[docs-import]: /docs/import/index.html
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-
-The above would import the host with ID `host-123`.
-
+{{% /examples %}}
 
 
 ## Create a Host Resource {#create}

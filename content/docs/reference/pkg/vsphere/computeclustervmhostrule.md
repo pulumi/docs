@@ -12,22 +12,16 @@ meta_desc: "Explore the ComputeClusterVmHostRule resource of the vSphere package
 
 The `vsphere..ComputeClusterVmHostRule` resource can be used to manage
 VM-to-host rules in a cluster, either created by the
-[`vsphere..ComputeCluster`][tf-vsphere-cluster-resource] resource or looked up
-by the [`vsphere..ComputeCluster`][tf-vsphere-cluster-data-source] data source.
-
-[tf-vsphere-cluster-resource]: /docs/providers/vsphere/r/compute_cluster.html
-[tf-vsphere-cluster-data-source]: /docs/providers/vsphere/d/compute_cluster.html
+`vsphere..ComputeCluster` resource or looked up
+by the `vsphere..ComputeCluster` data source.
 
 This resource can create both _affinity rules_, where virtual machines run on
 specified hosts, or _anti-affinity_ rules, where virtual machines run on hosts
 outside of the ones specified in the rule. Virtual machines and hosts are
 supplied via groups, which can be managed via the
-[`vsphere..ComputeClusterVmGroup`][tf-vsphere-cluster-vm-group-resource] and
-[`vsphere..ComputeClusterHostGroup`][tf-vsphere-cluster-host-group-resource]
+`vsphere..ComputeClusterVmGroup` and
+`vsphere..ComputeClusterHostGroup`
 resources.
-
-[tf-vsphere-cluster-vm-group-resource]: /docs/providers/vsphere/r/compute_cluster_vm_group.html
-[tf-vsphere-cluster-host-group-resource]: /docs/providers/vsphere/r/compute_cluster_host_group.html
 
 > **NOTE:** This resource requires vCenter and is not available on direct ESXi
 connections.
@@ -333,8 +327,8 @@ The ComputeClusterVmHostRule resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -412,8 +406,8 @@ cluster.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -491,8 +485,8 @@ cluster.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -570,8 +564,8 @@ cluster.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -868,8 +862,8 @@ run on the hosts defined in this host group.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -947,8 +941,8 @@ run on the hosts defined in this host group.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -1026,8 +1020,8 @@ run on the hosts defined in this host group.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -1105,8 +1099,8 @@ run on the hosts defined in this host group.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
