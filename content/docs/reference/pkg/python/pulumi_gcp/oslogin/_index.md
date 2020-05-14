@@ -26,6 +26,15 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">me</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_client_open_id_user_info</span><span class="p">()</span>
+<span class="n">cache</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">oslogin</span><span class="o">.</span><span class="n">SshPublicKey</span><span class="p">(</span><span class="s2">&quot;cache&quot;</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="n">me</span><span class="o">.</span><span class="n">email</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;path/to/id_rsa.pub&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -26,13 +26,29 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">datastore</span><span class="o">.</span><span class="n">DataStoreIndex</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">properties</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;ASCENDING&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;property_a&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;ASCENDING&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;property_b&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>ancestor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Policy for including ancestors in the index.  Either <code class="docutils literal notranslate"><span class="pre">ALL_ANCESTORS</span></code> or <code class="docutils literal notranslate"><span class="pre">NONE</span></code>,
-the default is <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.</p></li>
+<li><p><strong>ancestor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Policy for including ancestors in the index.</p></li>
 <li><p><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The entity kind which the index applies to.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
@@ -42,14 +58,13 @@ If it is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>properties</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The direction the index should optimize for sorting. Possible values are ASCENDING and DESCENDING.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The direction the index should optimize for sorting.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The property name to index.</p></li>
 </ul>
 <dl class="py attribute">
 <dt id="pulumi_gcp.datastore.DataStoreIndex.ancestor">
 <code class="sig-name descname">ancestor</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datastore.DataStoreIndex.ancestor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Policy for including ancestors in the index.  Either <code class="docutils literal notranslate"><span class="pre">ALL_ANCESTORS</span></code> or <code class="docutils literal notranslate"><span class="pre">NONE</span></code>,
-the default is <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.</p>
+<dd><p>Policy for including ancestors in the index.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -76,7 +91,7 @@ If it is not provided, the provider project is used.</p>
 <code class="sig-name descname">properties</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datastore.DataStoreIndex.properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>An ordered list of properties to index on.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The direction the index should optimize for sorting. Possible values are ASCENDING and DESCENDING.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The direction the index should optimize for sorting.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The property name to index.</p></li>
 </ul>
 </dd></dl>
@@ -92,8 +107,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>ancestor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Policy for including ancestors in the index.  Either <code class="docutils literal notranslate"><span class="pre">ALL_ANCESTORS</span></code> or <code class="docutils literal notranslate"><span class="pre">NONE</span></code>,
-the default is <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.</p></li>
+<li><p><strong>ancestor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Policy for including ancestors in the index.</p></li>
 <li><p><strong>index_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The index id.</p></li>
 <li><p><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The entity kind which the index applies to.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
@@ -104,7 +118,7 @@ If it is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>properties</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The direction the index should optimize for sorting. Possible values are ASCENDING and DESCENDING.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The direction the index should optimize for sorting.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The property name to index.</p></li>
 </ul>
 </dd></dl>

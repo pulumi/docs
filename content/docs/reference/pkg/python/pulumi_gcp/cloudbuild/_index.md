@@ -26,6 +26,21 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">filename_trigger</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">cloudbuild</span><span class="o">.</span><span class="n">Trigger</span><span class="p">(</span><span class="s2">&quot;filename-trigger&quot;</span><span class="p">,</span>
+    <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;cloudbuild.yaml&quot;</span><span class="p">,</span>
+    <span class="n">substitutions</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;_BAZ&quot;</span><span class="p">:</span> <span class="s2">&quot;qux&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;_FOO&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">trigger_template</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;branchName&quot;</span><span class="p">:</span> <span class="s2">&quot;master&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;repoName&quot;</span><span class="p">:</span> <span class="s2">&quot;my-repo&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -15,7 +15,7 @@ forwarding rules to route incoming HTTP requests to a URL map.
 
 To get more information about RegionTargetHttpProxy, see:
 
-* [API documentation](https://cloud.google.com/compute/docs/reference/rest/beta/regionTargetHttpProxies)
+* [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/regionTargetHttpProxies)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/http/target-proxies)
 
@@ -103,6 +103,7 @@ const defaultRegionUrlMap = new gcp.compute.RegionUrlMap("defaultRegionUrlMap", 
     region: "us-central1",
     default_url_redirect: {
         httpsRedirect: true,
+        stripQuery: false,
     },
 });
 const defaultRegionTargetHttpProxy = new gcp.compute.RegionTargetHttpProxy("defaultRegionTargetHttpProxy", {
@@ -118,6 +119,7 @@ default_region_url_map = gcp.compute.RegionUrlMap("defaultRegionUrlMap",
     region="us-central1",
     default_url_redirect={
         "httpsRedirect": True,
+        "stripQuery": False,
     })
 default_region_target_http_proxy = gcp.compute.RegionTargetHttpProxy("defaultRegionTargetHttpProxy",
     region="us-central1",

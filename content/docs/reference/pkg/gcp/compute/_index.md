@@ -53,6 +53,7 @@ Explore the resources and functions of the compute module in the GCP package.
     <li><a href="nodegroup" title="NodeGroup"><span class="symbol resource"></span>NodeGroup</a></li>
     <li><a href="nodetemplate" title="NodeTemplate"><span class="symbol resource"></span>NodeTemplate</a></li>
     <li><a href="packetmirroring" title="PacketMirroring"><span class="symbol resource"></span>PacketMirroring</a></li>
+    <li><a href="perinstanceconfig" title="PerInstanceConfig"><span class="symbol resource"></span>PerInstanceConfig</a></li>
     <li><a href="projectdefaultnetworktier" title="ProjectDefaultNetworkTier"><span class="symbol resource"></span>ProjectDefaultNetworkTier</a></li>
     <li><a href="projectmetadata" title="ProjectMetadata"><span class="symbol resource"></span>ProjectMetadata</a></li>
     <li><a href="projectmetadataitem" title="ProjectMetadataItem"><span class="symbol resource"></span>ProjectMetadataItem</a></li>
@@ -132,7 +133,7 @@ Explore the resources and functions of the compute module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.4.0</dd>
+	<dd>3.5.0</dd>
 </dl>
 
 

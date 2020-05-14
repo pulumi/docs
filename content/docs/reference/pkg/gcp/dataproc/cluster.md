@@ -1091,6 +1091,17 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Endpoint<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclusterconfigendpointconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The config settings for port access on the cluster.
+Structure defined below.
+- - -
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Gce<wbr>Cluster<wbr>Config</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiggceclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Args</a></span>
@@ -1216,6 +1227,17 @@ Structure defined below.
     </dt>
     <dd>{{% md %}}The Customer managed encryption keys settings for the cluster.
 Structure defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Endpoint<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclusterconfigendpointconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The config settings for port access on the cluster.
+Structure defined below.
+- - -
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1349,6 +1371,17 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span>endpoint<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclusterconfigendpointconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The config settings for port access on the cluster.
+Structure defined below.
+- - -
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>gce<wbr>Cluster<wbr>Config</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiggceclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config</a></span>
@@ -1474,6 +1507,17 @@ Structure defined below.
     </dt>
     <dd>{{% md %}}The Customer managed encryption keys settings for the cluster.
 Structure defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>endpoint<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclusterconfigendpointconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}The config settings for port access on the cluster.
+Structure defined below.
+- - -
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1737,6 +1781,124 @@ all instances in the cluster.
     <dd>{{% md %}}The Cloud KMS key name to use for PD disk encryption for
 all instances in the cluster.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clusterclusterconfigendpointconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigEndpointConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigEndpointConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigEndpointConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigEndpointConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigEndpointConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigEndpointConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Enable<wbr>Http<wbr>Port<wbr>Access</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The flag to enable http access to specific ports
+on the cluster from external sources (aka Component Gateway). Defaults to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Http<wbr>Ports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Enable<wbr>Http<wbr>Port<wbr>Access</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The flag to enable http access to specific ports
+on the cluster from external sources (aka Component Gateway). Defaults to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Http<wbr>Ports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>enable<wbr>Http<wbr>Port<wbr>Access</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}The flag to enable http access to specific ports
+on the cluster from external sources (aka Component Gateway). Defaults to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>http<wbr>Ports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>enable<wbr>Http<wbr>Port<wbr>Access</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The flag to enable http access to specific ports
+on the cluster from external sources (aka Component Gateway). Defaults to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>http<wbr>Ports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

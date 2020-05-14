@@ -28,6 +28,22 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">filestore</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span>
+    <span class="n">file_shares</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;capacityGb&quot;</span><span class="p">:</span> <span class="mi">2660</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;share1&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">networks</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;modes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;MODE_IPV4&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">tier</span><span class="o">=</span><span class="s2">&quot;PREMIUM&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-b&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

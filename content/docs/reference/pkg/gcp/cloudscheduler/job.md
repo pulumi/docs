@@ -38,6 +38,9 @@ const job = new gcp.cloudscheduler.Job("job", {
         httpMethod: "POST",
         uri: "https://example.com/ping",
     },
+    retryConfig: {
+        retryCount: 1,
+    },
     schedule: "*/8 * * * *",
     timeZone: "America/New_York",
 });
@@ -52,6 +55,9 @@ job = gcp.cloudscheduler.Job("job",
     http_target={
         "httpMethod": "POST",
         "uri": "https://example.com/ping",
+    },
+    retry_config={
+        "retryCount": 1,
     },
     schedule="*/8 * * * *",
     time_zone="America/New_York")
@@ -75,6 +81,12 @@ const job = new gcp.cloudscheduler.Job("job", {
     },
     attemptDeadline: "320s",
     description: "test app engine job",
+    retryConfig: {
+        maxDoublings: 2,
+        maxRetryDuration: "10s",
+        minBackoffDuration: "1s",
+        retryCount: 3,
+    },
     schedule: "*/4 * * * *",
     timeZone: "Europe/London",
 });
@@ -95,6 +107,12 @@ job = gcp.cloudscheduler.Job("job",
     },
     attempt_deadline="320s",
     description="test app engine job",
+    retry_config={
+        "maxDoublings": 2,
+        "maxRetryDuration": "10s",
+        "minBackoffDuration": "1s",
+        "retryCount": 3,
+    },
     schedule="*/4 * * * *",
     time_zone="Europe/London")
 ```

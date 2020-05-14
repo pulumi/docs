@@ -29,6 +29,21 @@ experienced user of both tools.</p>
 deployments in preview as recreate-only for any update operation other
 than actually deploying an in-preview deployment (i.e. <code class="docutils literal notranslate"><span class="pre">preview=true</span></code> to
 <code class="docutils literal notranslate"><span class="pre">preview=false</span></code>).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">deployment</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">deploymentmanager</span><span class="o">.</span><span class="n">Deployment</span><span class="p">(</span><span class="s2">&quot;deployment&quot;</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;config&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;path/to/config.yml&quot;</span><span class="p">),</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

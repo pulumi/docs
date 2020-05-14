@@ -42,7 +42,7 @@ const webserver = new gcp.compute.InstanceTemplate("webserver", {
 });
 const webservers = new gcp.compute.InstanceGroupManager("webservers", {
     version: [{
-        instanceTemplate: webserver.selfLink,
+        instanceTemplate: webserver.id,
         name: "primary",
     }],
     baseInstanceName: "webserver",
@@ -63,7 +63,7 @@ const exampleBackend = new gcp.compute.BackendService("exampleBackend", {
     backend: [{
         group: webservers.instanceGroup,
     }],
-    healthChecks: [default.selfLink],
+    healthChecks: [default.id],
 });
 const backendKey = new gcp.compute.BackendServiceSignedUrlKey("backendKey", {
     keyValue: "pPsVemX8GM46QVeezid6Rw==",
@@ -86,7 +86,7 @@ webserver = gcp.compute.InstanceTemplate("webserver",
     }])
 webservers = gcp.compute.InstanceGroupManager("webservers",
     version=[{
-        "instanceTemplate": webserver.self_link,
+        "instanceTemplate": webserver.id,
         "name": "primary",
     }],
     base_instance_name="webserver",
@@ -105,7 +105,7 @@ example_backend = gcp.compute.BackendService("exampleBackend",
     backend=[{
         "group": webservers.instance_group,
     }],
-    health_checks=[default.self_link])
+    health_checks=[default.id])
 backend_key = gcp.compute.BackendServiceSignedUrlKey("backendKey",
     key_value="pPsVemX8GM46QVeezid6Rw==",
     backend_service=example_backend.name)
