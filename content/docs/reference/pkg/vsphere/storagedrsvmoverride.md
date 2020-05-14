@@ -306,8 +306,8 @@ The StorageDrsVmOverride resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster to put the override in.
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
 {{% /md %}}</dd>
 
@@ -330,7 +330,7 @@ the override for.  Forces a new resource if changed.
     <dd>{{% md %}}Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
-[specific SDRS subsystem][tf-vsphere-datastore-cluster-sdrs-levels].
+specific SDRS subsystem.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -370,8 +370,8 @@ requirements. When not specified, the datastore cluster's settings are used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster to put the override in.
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
 {{% /md %}}</dd>
 
@@ -394,7 +394,7 @@ the override for.  Forces a new resource if changed.
     <dd>{{% md %}}Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
-[specific SDRS subsystem][tf-vsphere-datastore-cluster-sdrs-levels].
+specific SDRS subsystem.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -434,8 +434,8 @@ requirements. When not specified, the datastore cluster's settings are used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster to put the override in.
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
 {{% /md %}}</dd>
 
@@ -458,7 +458,7 @@ the override for.  Forces a new resource if changed.
     <dd>{{% md %}}Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
-[specific SDRS subsystem][tf-vsphere-datastore-cluster-sdrs-levels].
+specific SDRS subsystem.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -498,8 +498,8 @@ requirements. When not specified, the datastore cluster's settings are used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster to put the override in.
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
 {{% /md %}}</dd>
 
@@ -522,7 +522,7 @@ the override for.  Forces a new resource if changed.
     <dd>{{% md %}}Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
-[specific SDRS subsystem][tf-vsphere-datastore-cluster-sdrs-levels].
+specific SDRS subsystem.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -759,8 +759,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster to put the override in.
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
 {{% /md %}}</dd>
 
@@ -773,7 +773,7 @@ Forces a new resource if changed.
     <dd>{{% md %}}Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
-[specific SDRS subsystem][tf-vsphere-datastore-cluster-sdrs-levels].
+specific SDRS subsystem.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -823,8 +823,8 @@ the override for.  Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster to put the override in.
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
 {{% /md %}}</dd>
 
@@ -837,7 +837,7 @@ Forces a new resource if changed.
     <dd>{{% md %}}Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
-[specific SDRS subsystem][tf-vsphere-datastore-cluster-sdrs-levels].
+specific SDRS subsystem.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -887,8 +887,8 @@ the override for.  Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster to put the override in.
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
 {{% /md %}}</dd>
 
@@ -901,7 +901,7 @@ Forces a new resource if changed.
     <dd>{{% md %}}Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
-[specific SDRS subsystem][tf-vsphere-datastore-cluster-sdrs-levels].
+specific SDRS subsystem.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -951,8 +951,8 @@ the override for.  Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster to put the override in.
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
 {{% /md %}}</dd>
 
@@ -965,7 +965,7 @@ Forces a new resource if changed.
     <dd>{{% md %}}Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
-[specific SDRS subsystem][tf-vsphere-datastore-cluster-sdrs-levels].
+specific SDRS subsystem.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

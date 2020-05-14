@@ -13,9 +13,7 @@ meta_desc: "Explore the GetVappContainer function of the vSphere package, includ
 The `vsphere..VappContainer` data source can be used to discover the ID of a
 vApp container in vSphere. This is useful to fetch the ID of a vApp container
 that you want to use to create virtual machines in using the
-[`vsphere..VirtualMachine`][docs-virtual-machine-resource] resource. 
-
-[docs-virtual-machine-resource]: /docs/providers/vsphere/r/virtual_machine.html
+`vsphere..VirtualMachine` resource. 
 
 
 
@@ -102,8 +100,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datacenter the vApp container is located in.
+    <dd>{{% md %}}The managed object reference
+ID of the datacenter the vApp container is located in.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -129,8 +127,8 @@ path.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datacenter the vApp container is located in.
+    <dd>{{% md %}}The managed object reference
+ID of the datacenter the vApp container is located in.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -156,8 +154,8 @@ path.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datacenter the vApp container is located in.
+    <dd>{{% md %}}The managed object reference
+ID of the datacenter the vApp container is located in.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -183,8 +181,8 @@ path.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datacenter the vApp container is located in.
+    <dd>{{% md %}}The managed object reference
+ID of the datacenter the vApp container is located in.
 {{% /md %}}</dd>
 
     <dt class="property-required"

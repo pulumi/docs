@@ -12,11 +12,8 @@ meta_desc: "Explore the DatastoreClusterVmAntiAffinityRule resource of the vSphe
 
 The `vsphere..DatastoreClusterVmAntiAffinityRule` resource can be used to
 manage VM anti-affinity rules in a datastore cluster, either created by the
-[`vsphere..DatastoreCluster`][tf-vsphere-datastore-cluster-resource] resource or looked up
-by the [`vsphere..DatastoreCluster`][tf-vsphere-datastore-cluster-data-source] data source.
-
-[tf-vsphere-datastore-cluster-resource]: /docs/providers/vsphere/r/datastore_cluster.html
-[tf-vsphere-datastore-cluster-data-source]: /docs/providers/vsphere/d/datastore_cluster.html
+`vsphere..DatastoreCluster` resource or looked up
+by the `vsphere..DatastoreCluster` data source.
 
 This rule can be used to tell a set to virtual machines to run on different
 datastores within a cluster, useful for preventing single points of failure in
@@ -312,8 +309,8 @@ The DatastoreClusterVmAntiAffinityRule resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster to put the group in.  Forces
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster to put the group in.  Forces
 a new resource if changed.
 {{% /md %}}</dd>
 
@@ -368,8 +365,8 @@ machine operations that may violate this rule. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster to put the group in.  Forces
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster to put the group in.  Forces
 a new resource if changed.
 {{% /md %}}</dd>
 
@@ -424,8 +421,8 @@ machine operations that may violate this rule. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster to put the group in.  Forces
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster to put the group in.  Forces
 a new resource if changed.
 {{% /md %}}</dd>
 
@@ -480,8 +477,8 @@ machine operations that may violate this rule. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster to put the group in.  Forces
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster to put the group in.  Forces
 a new resource if changed.
 {{% /md %}}</dd>
 
@@ -733,8 +730,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster to put the group in.  Forces
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster to put the group in.  Forces
 a new resource if changed.
 {{% /md %}}</dd>
 
@@ -789,8 +786,8 @@ on different datastores from each other.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster to put the group in.  Forces
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster to put the group in.  Forces
 a new resource if changed.
 {{% /md %}}</dd>
 
@@ -845,8 +842,8 @@ on different datastores from each other.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster to put the group in.  Forces
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster to put the group in.  Forces
 a new resource if changed.
 {{% /md %}}</dd>
 
@@ -901,8 +898,8 @@ on different datastores from each other.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster to put the group in.  Forces
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster to put the group in.  Forces
 a new resource if changed.
 {{% /md %}}</dd>
 

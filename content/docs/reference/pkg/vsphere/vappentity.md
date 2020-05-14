@@ -200,7 +200,7 @@ The VappEntity resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the vApp
+    <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
 {{% /md %}}</dd>
 
@@ -210,7 +210,7 @@ container the entity is a member of.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the entity
+    <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
 {{% /md %}}</dd>
 
@@ -308,7 +308,7 @@ property has no effect for vApps. Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the vApp
+    <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
 {{% /md %}}</dd>
 
@@ -318,7 +318,7 @@ container the entity is a member of.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the entity
+    <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
 {{% /md %}}</dd>
 
@@ -416,7 +416,7 @@ property has no effect for vApps. Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the vApp
+    <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
 {{% /md %}}</dd>
 
@@ -426,7 +426,7 @@ container the entity is a member of.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the entity
+    <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
 {{% /md %}}</dd>
 
@@ -524,7 +524,7 @@ property has no effect for vApps. Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the vApp
+    <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
 {{% /md %}}</dd>
 
@@ -534,7 +534,7 @@ container the entity is a member of.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the entity
+    <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
 {{% /md %}}</dd>
 
@@ -829,7 +829,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the vApp
+    <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
 {{% /md %}}</dd>
 
@@ -909,7 +909,7 @@ guestShutdown. Default: 120
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the entity
+    <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
 {{% /md %}}</dd>
 
@@ -937,7 +937,7 @@ property has no effect for vApps. Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the vApp
+    <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
 {{% /md %}}</dd>
 
@@ -1017,7 +1017,7 @@ guestShutdown. Default: 120
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the entity
+    <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
 {{% /md %}}</dd>
 
@@ -1045,7 +1045,7 @@ property has no effect for vApps. Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the vApp
+    <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
 {{% /md %}}</dd>
 
@@ -1125,7 +1125,7 @@ guestShutdown. Default: 120
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the entity
+    <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
 {{% /md %}}</dd>
 
@@ -1153,7 +1153,7 @@ property has no effect for vApps. Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the vApp
+    <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
 {{% /md %}}</dd>
 
@@ -1233,7 +1233,7 @@ guestShutdown. Default: 120
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the entity
+    <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
 {{% /md %}}</dd>
 

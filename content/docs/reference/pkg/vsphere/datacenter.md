@@ -13,25 +13,58 @@ meta_desc: "Explore the Datacenter resource of the vSphere package, including ex
 Provides a VMware vSphere datacenter resource. This can be used as the primary
 container of inventory objects such as hosts and virtual machines.
 
-## Example Usages
 
-**Create datacenter on the root folder:**
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as vsphere from "@pulumi/vsphere";
+{{% examples %}}
+## Example Usage
 
-const prodDatacenter = new vsphere.Datacenter("prod_datacenter", {});
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create datacenter on the root folder
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_vsphere as vsphere
 
 prod_datacenter = vsphere.Datacenter("prodDatacenter")
 ```
+{{% /example %}}
 
-**Create datacenter on a subfolder:**
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
 
+const prodDatacenter = new vsphere.Datacenter("prod_datacenter", {});
+```
+{{% /example %}}
+
+### Create datacenter on a subfolder
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+research_datacenter = vsphere.Datacenter("researchDatacenter", folder="/research/")
+```
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -40,13 +73,9 @@ const researchDatacenter = new vsphere.Datacenter("research_datacenter", {
     folder: "/research/",
 });
 ```
-```python
-import pulumi
-import pulumi_vsphere as vsphere
+{{% /example %}}
 
-research_datacenter = vsphere.Datacenter("researchDatacenter", folder="/research/")
-```
-
+{{% /examples %}}
 
 
 ## Create a Datacenter Resource {#create}
@@ -268,8 +297,7 @@ within the folder. Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -317,8 +345,7 @@ within the folder. Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -366,8 +393,7 @@ within the folder. Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -415,8 +441,7 @@ within the folder. Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -451,7 +476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID][docs-about-morefs] of this datacenter.
+    <dd>{{% md %}}Managed object ID of this datacenter.
 {{% /md %}}</dd>
 
 </dl>
@@ -475,7 +500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID][docs-about-morefs] of this datacenter.
+    <dd>{{% md %}}Managed object ID of this datacenter.
 {{% /md %}}</dd>
 
 </dl>
@@ -499,7 +524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID][docs-about-morefs] of this datacenter.
+    <dd>{{% md %}}Managed object ID of this datacenter.
 {{% /md %}}</dd>
 
 </dl>
@@ -523,7 +548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID][docs-about-morefs] of this datacenter.
+    <dd>{{% md %}}Managed object ID of this datacenter.
 {{% /md %}}</dd>
 
 </dl>
@@ -687,7 +712,7 @@ Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID][docs-about-morefs] of this datacenter.
+    <dd>{{% md %}}Managed object ID of this datacenter.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -706,8 +731,7 @@ within the folder. Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -745,7 +769,7 @@ Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID][docs-about-morefs] of this datacenter.
+    <dd>{{% md %}}Managed object ID of this datacenter.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -764,8 +788,7 @@ within the folder. Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -803,7 +826,7 @@ Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID][docs-about-morefs] of this datacenter.
+    <dd>{{% md %}}Managed object ID of this datacenter.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -822,8 +845,7 @@ within the folder. Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -861,7 +883,7 @@ Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID][docs-about-morefs] of this datacenter.
+    <dd>{{% md %}}Managed object ID of this datacenter.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -880,8 +902,7 @@ within the folder. Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
 </dl>
