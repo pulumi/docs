@@ -90,3 +90,21 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.html" title="Pulumi.Gcp">Pulumi.Gcp</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/?tab=doc#" title="gcp">gcp</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/#" title="@pulumi/gcp">@pulumi/gcp</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp" title="pulumi_gcp">pulumi_gcp</a></dd>
+
+</dl>
+

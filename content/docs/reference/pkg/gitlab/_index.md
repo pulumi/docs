@@ -60,3 +60,21 @@ A Pulumi package for creating and managing GitLab resources.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.html" title="Pulumi.GitLab">Pulumi.GitLab</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab/?tab=doc#" title="gitlab">gitlab</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#" title="@pulumi/gitlab">@pulumi/gitlab</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gitlab" title="pulumi_gitlab">pulumi_gitlab</a></dd>
+
+</dl>
+

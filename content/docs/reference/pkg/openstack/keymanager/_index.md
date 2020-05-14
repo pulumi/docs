@@ -34,3 +34,21 @@ Explore the resources and functions of the keymanager module in the Open Stack p
 	<dd>2.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.KeyManager.html" title="Pulumi.OpenStack.KeyManager">Pulumi.OpenStack.KeyManager</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#" title="openstack/keymanager">openstack/keymanager</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/openstack/keymanager/#" title="@pulumi/openstack/keymanager">@pulumi/openstack/keymanager</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_openstack/keymanager" title="pulumi_openstack/keymanager">pulumi_openstack/keymanager</a></dd>
+
+</dl>
+

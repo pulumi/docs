@@ -36,3 +36,21 @@ Explore the resources and functions of the actiontrail module in the AliCloud pa
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ActionTrail.html" title="Pulumi.AliCloud.ActionTrail">Pulumi.AliCloud.ActionTrail</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/actiontrail?tab=doc#" title="alicloud/actiontrail">alicloud/actiontrail</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/actiontrail/#" title="@pulumi/alicloud/actiontrail">@pulumi/alicloud/actiontrail</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/actiontrail" title="pulumi_alicloud/actiontrail">pulumi_alicloud/actiontrail</a></dd>
+
+</dl>
+

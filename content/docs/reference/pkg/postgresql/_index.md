@@ -41,7 +41,7 @@ A Pulumi package for creating and managing postgresql cloud resources.
 <dl class="tabular">
 
     <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Postgresql/Pulumi.Postgresql.html" title="Pulumi.Postgresql">Pulumi.Postgresql</a></dd>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.PostgreSql/Pulumi.PostgreSql.html" title="Pulumi.PostgreSql">Pulumi.PostgreSql</a></dd>
 
     <dt>Go</dt>
     <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/?tab=doc#" title="postgresql">postgresql</a></dd>

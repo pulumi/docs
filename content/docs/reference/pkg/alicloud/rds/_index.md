@@ -41,3 +41,21 @@ Explore the resources and functions of the rds module in the AliCloud package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Rds.html" title="Pulumi.AliCloud.Rds">Pulumi.AliCloud.Rds</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rds?tab=doc#" title="alicloud/rds">alicloud/rds</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/rds/#" title="@pulumi/alicloud/rds">@pulumi/alicloud/rds</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/rds" title="pulumi_alicloud/rds">pulumi_alicloud/rds</a></dd>
+
+</dl>
+

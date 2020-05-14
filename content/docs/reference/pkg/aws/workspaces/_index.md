@@ -32,3 +32,21 @@ Explore the resources and functions of the workspaces module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Workspaces.html" title="Pulumi.Aws.Workspaces">Pulumi.Aws.Workspaces</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#" title="aws/workspaces">aws/workspaces</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/workspaces/#" title="@pulumi/aws/workspaces">@pulumi/aws/workspaces</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/workspaces" title="pulumi_aws/workspaces">pulumi_aws/workspaces</a></dd>
+
+</dl>
+

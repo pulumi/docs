@@ -31,7 +31,7 @@ Explore the resources and functions of the slack module in the SignalFx package.
 <dl class="tabular">
 
     <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.Slack.html" title="Pulumi.Signalfx.Slack">Pulumi.Signalfx.Slack</a></dd>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Slack.html" title="Pulumi.SignalFx.Slack">Pulumi.SignalFx.Slack</a></dd>
 
     <dt>Go</dt>
     <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/slack?tab=doc#" title="signalfx/slack">signalfx/slack</a></dd>

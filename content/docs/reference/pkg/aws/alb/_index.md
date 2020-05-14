@@ -38,3 +38,21 @@ Explore the resources and functions of the alb module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.html" title="Pulumi.Aws.Alb">Pulumi.Aws.Alb</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/alb?tab=doc#" title="aws/alb">aws/alb</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/alb/#" title="@pulumi/aws/alb">@pulumi/aws/alb</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/alb" title="pulumi_aws/alb">pulumi_aws/alb</a></dd>
+
+</dl>
+

@@ -32,7 +32,7 @@ Explore the resources and functions of the ecs module in the Spotinst package.
 <dl class="tabular">
 
     <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Ecs.html" title="Pulumi.Spotinst.Ecs">Pulumi.Spotinst.Ecs</a></dd>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Ecs.html" title="Pulumi.SpotInst.Ecs">Pulumi.SpotInst.Ecs</a></dd>
 
     <dt>Go</dt>
     <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/ecs?tab=doc#" title="spotinst/ecs">spotinst/ecs</a></dd>

@@ -72,7 +72,7 @@ const example = pulumi.output(openstack.keymanager.getContainer({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetContainer </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Keymanager.GetContainerResult.html">GetContainerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.KeyManager.GetContainerArgs.html">GetContainerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Keymanager.GetContainerResult.html">GetContainerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.KeyManager.GetContainerArgs.html">GetContainerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -693,7 +693,7 @@ structure is described below.
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#GetContainerAcl">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.KeyManager.Outputs.GetContainerAcl.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.KeyManager.Outputs.GetContainerAcl.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -771,7 +771,7 @@ structure is described below.
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#GetContainerAclRead">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.KeyManager.Outputs.GetContainerAclRead.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.KeyManager.Outputs.GetContainerAclRead.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -965,7 +965,7 @@ when `project_access` is set to `false`.
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#GetContainerConsumer">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.KeyManager.Outputs.GetContainerConsumer.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.KeyManager.Outputs.GetContainerConsumer.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1083,7 +1083,7 @@ when `project_access` is set to `false`.
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#GetContainerSecretRef">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.KeyManager.Outputs.GetContainerSecretRef.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.KeyManager.Outputs.GetContainerSecretRef.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

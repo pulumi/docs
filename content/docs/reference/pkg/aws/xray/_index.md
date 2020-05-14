@@ -26,3 +26,21 @@ Explore the resources and functions of the xray module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Xray.html" title="Pulumi.Aws.Xray">Pulumi.Aws.Xray</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/xray?tab=doc#" title="aws/xray">aws/xray</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/xray/#" title="@pulumi/aws/xray">@pulumi/aws/xray</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/xray" title="pulumi_aws/xray">pulumi_aws/xray</a></dd>
+
+</dl>
+

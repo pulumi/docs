@@ -80,7 +80,7 @@ export const output = k8sClusters.clusters;
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetManagedKubernetesClusters </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cs.GetManagedKubernetesClustersResult.html">GetManagedKubernetesClustersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.CS.GetManagedKubernetesClustersArgs.html">GetManagedKubernetesClustersArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cs.GetManagedKubernetesClustersResult.html">GetManagedKubernetesClustersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.GetManagedKubernetesClustersArgs.html">GetManagedKubernetesClustersArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -553,7 +553,7 @@ The following output properties are available:
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#GetManagedKubernetesClustersCluster">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.CS.Outputs.GetManagedKubernetesClustersCluster.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Outputs.GetManagedKubernetesClustersCluster.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -887,7 +887,7 @@ The following output properties are available:
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#GetManagedKubernetesClustersClusterConnections">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.CS.Outputs.GetManagedKubernetesClustersClusterConnections.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Outputs.GetManagedKubernetesClustersClusterConnections.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1077,7 +1077,7 @@ The following output properties are available:
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#GetManagedKubernetesClustersClusterWorkerNode">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.CS.Outputs.GetManagedKubernetesClustersClusterWorkerNode.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Outputs.GetManagedKubernetesClustersClusterWorkerNode.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -27,3 +27,21 @@ Explore the resources and functions of the flowcontrol/v1alpha1 module in the Ku
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.FlowControl.V1Alpha1.html" title="Pulumi.Kubernetes.FlowControl.V1Alpha1">Pulumi.Kubernetes.FlowControl.V1Alpha1</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/flowcontrol/v1alpha1?tab=doc#" title="kubernetes/flowcontrol/v1alpha1">kubernetes/flowcontrol/v1alpha1</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/flowcontrol/v1alpha1/#" title="@pulumi/kubernetes/flowcontrol/v1alpha1">@pulumi/kubernetes/flowcontrol/v1alpha1</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/flowcontrol.apiserver.k8s.io/v1alpha1" title="pulumi_kubernetes/flowcontrol.apiserver.k8s.io/v1alpha1">pulumi_kubernetes/flowcontrol.apiserver.k8s.io/v1alpha1</a></dd>
+
+</dl>
+

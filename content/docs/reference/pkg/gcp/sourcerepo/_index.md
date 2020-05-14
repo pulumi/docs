@@ -29,3 +29,21 @@ Explore the resources and functions of the sourcerepo module in the GCP package.
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SourceRepo.html" title="Pulumi.Gcp.SourceRepo">Pulumi.Gcp.SourceRepo</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sourcerepo?tab=doc#" title="gcp/sourcerepo">gcp/sourcerepo</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/sourcerepo/#" title="@pulumi/gcp/sourcerepo">@pulumi/gcp/sourcerepo</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/sourcerepo" title="pulumi_gcp/sourcerepo">pulumi_gcp/sourcerepo</a></dd>
+
+</dl>
+

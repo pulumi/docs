@@ -31,3 +31,21 @@ Explore the resources and functions of the acmpca module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acmpca.html" title="Pulumi.Aws.Acmpca">Pulumi.Aws.Acmpca</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acmpca?tab=doc#" title="aws/acmpca">aws/acmpca</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/acmpca/#" title="@pulumi/aws/acmpca">@pulumi/aws/acmpca</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/acmpca" title="pulumi_aws/acmpca">pulumi_aws/acmpca</a></dd>
+
+</dl>
+

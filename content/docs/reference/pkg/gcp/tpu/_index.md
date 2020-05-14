@@ -31,3 +31,21 @@ Explore the resources and functions of the tpu module in the GCP package.
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Tpu.html" title="Pulumi.Gcp.Tpu">Pulumi.Gcp.Tpu</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu?tab=doc#" title="gcp/tpu">gcp/tpu</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/tpu/#" title="@pulumi/gcp/tpu">@pulumi/gcp/tpu</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/tpu" title="pulumi_gcp/tpu">pulumi_gcp/tpu</a></dd>
+
+</dl>
+

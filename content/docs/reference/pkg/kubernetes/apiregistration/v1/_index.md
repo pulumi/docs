@@ -25,3 +25,21 @@ Explore the resources and functions of the apiregistration/v1 module in the Kube
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.ApiRegistration.V1.html" title="Pulumi.Kubernetes.ApiRegistration.V1">Pulumi.Kubernetes.ApiRegistration.V1</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiregistration/v1?tab=doc#" title="kubernetes/apiregistration/v1">kubernetes/apiregistration/v1</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/apiregistration/v1/#" title="@pulumi/kubernetes/apiregistration/v1">@pulumi/kubernetes/apiregistration/v1</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/apiregistration.k8s.io/v1" title="pulumi_kubernetes/apiregistration.k8s.io/v1">pulumi_kubernetes/apiregistration.k8s.io/v1</a></dd>
+
+</dl>
+

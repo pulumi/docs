@@ -38,3 +38,21 @@ Explore the resources and functions of the elasticloadbalancingv2 module in the 
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.html" title="Pulumi.Aws.ElasticLoadBalancingV2">Pulumi.Aws.ElasticLoadBalancingV2</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#" title="aws/elasticloadbalancingv2">aws/elasticloadbalancingv2</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticloadbalancingv2/#" title="@pulumi/aws/elasticloadbalancingv2">@pulumi/aws/elasticloadbalancingv2</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/elasticloadbalancingv2" title="pulumi_aws/elasticloadbalancingv2">pulumi_aws/elasticloadbalancingv2</a></dd>
+
+</dl>
+

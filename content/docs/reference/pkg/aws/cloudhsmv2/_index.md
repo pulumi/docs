@@ -32,3 +32,21 @@ Explore the resources and functions of the cloudhsmv2 module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudHsmV2.html" title="Pulumi.Aws.CloudHsmV2">Pulumi.Aws.CloudHsmV2</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudhsmv2?tab=doc#" title="aws/cloudhsmv2">aws/cloudhsmv2</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudhsmv2/#" title="@pulumi/aws/cloudhsmv2">@pulumi/aws/cloudhsmv2</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/cloudhsmv2" title="pulumi_aws/cloudhsmv2">pulumi_aws/cloudhsmv2</a></dd>
+
+</dl>
+

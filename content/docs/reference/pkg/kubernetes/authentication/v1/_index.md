@@ -25,3 +25,21 @@ Explore the resources and functions of the authentication/v1 module in the Kuber
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Authentication.V1.html" title="Pulumi.Kubernetes.Authentication.V1">Pulumi.Kubernetes.Authentication.V1</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/authentication/v1?tab=doc#" title="kubernetes/authentication/v1">kubernetes/authentication/v1</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/authentication/v1/#" title="@pulumi/kubernetes/authentication/v1">@pulumi/kubernetes/authentication/v1</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/authentication.k8s.io/v1" title="pulumi_kubernetes/authentication.k8s.io/v1">pulumi_kubernetes/authentication.k8s.io/v1</a></dd>
+
+</dl>
+

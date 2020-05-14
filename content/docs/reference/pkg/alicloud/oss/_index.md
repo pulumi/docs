@@ -36,3 +36,21 @@ Explore the resources and functions of the oss module in the AliCloud package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Oss.html" title="Pulumi.AliCloud.Oss">Pulumi.AliCloud.Oss</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#" title="alicloud/oss">alicloud/oss</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/oss/#" title="@pulumi/alicloud/oss">@pulumi/alicloud/oss</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/oss" title="pulumi_alicloud/oss">pulumi_alicloud/oss</a></dd>
+
+</dl>
+

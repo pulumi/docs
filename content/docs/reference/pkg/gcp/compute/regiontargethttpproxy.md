@@ -101,9 +101,9 @@ import * as gcp from "@pulumi/gcp";
 
 const defaultRegionUrlMap = new gcp.compute.RegionUrlMap("defaultRegionUrlMap", {
     region: "us-central1",
-    default_url_redirect: [{
+    default_url_redirect: {
         httpsRedirect: true,
-    }],
+    },
 });
 const defaultRegionTargetHttpProxy = new gcp.compute.RegionTargetHttpProxy("defaultRegionTargetHttpProxy", {
     region: "us-central1",
@@ -116,9 +116,9 @@ import pulumi_gcp as gcp
 
 default_region_url_map = gcp.compute.RegionUrlMap("defaultRegionUrlMap",
     region="us-central1",
-    default_url_redirect=[{
+    default_url_redirect={
         "httpsRedirect": True,
-    }])
+    })
 default_region_target_http_proxy = gcp.compute.RegionTargetHttpProxy("defaultRegionTargetHttpProxy",
     region="us-central1",
     url_map=default_region_url_map.self_link)

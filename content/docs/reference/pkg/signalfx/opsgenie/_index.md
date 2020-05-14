@@ -31,7 +31,7 @@ Explore the resources and functions of the opsgenie module in the SignalFx packa
 <dl class="tabular">
 
     <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.Opsgenie.html" title="Pulumi.Signalfx.Opsgenie">Pulumi.Signalfx.Opsgenie</a></dd>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Opsgenie.html" title="Pulumi.SignalFx.Opsgenie">Pulumi.SignalFx.Opsgenie</a></dd>
 
     <dt>Go</dt>
     <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/opsgenie?tab=doc#" title="signalfx/opsgenie">signalfx/opsgenie</a></dd>

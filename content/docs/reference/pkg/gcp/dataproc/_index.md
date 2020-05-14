@@ -34,3 +34,21 @@ Explore the resources and functions of the dataproc module in the GCP package.
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.html" title="Pulumi.Gcp.Dataproc">Pulumi.Gcp.Dataproc</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#" title="gcp/dataproc">gcp/dataproc</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#" title="@pulumi/gcp/dataproc">@pulumi/gcp/dataproc</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/dataproc" title="pulumi_gcp/dataproc">pulumi_gcp/dataproc</a></dd>
+
+</dl>
+

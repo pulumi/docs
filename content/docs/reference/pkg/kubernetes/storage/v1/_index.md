@@ -31,3 +31,21 @@ Explore the resources and functions of the storage/v1 module in the Kubernetes p
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Storage.V1.html" title="Pulumi.Kubernetes.Storage.V1">Pulumi.Kubernetes.Storage.V1</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/storage/v1?tab=doc#" title="kubernetes/storage/v1">kubernetes/storage/v1</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/storage/v1/#" title="@pulumi/kubernetes/storage/v1">@pulumi/kubernetes/storage/v1</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/storage.k8s.io/v1" title="pulumi_kubernetes/storage.k8s.io/v1">pulumi_kubernetes/storage.k8s.io/v1</a></dd>
+
+</dl>
+

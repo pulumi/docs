@@ -60,3 +60,21 @@ Explore the resources and functions of the ecs module in the AliCloud package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.html" title="Pulumi.AliCloud.Ecs">Pulumi.AliCloud.Ecs</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#" title="alicloud/ecs">alicloud/ecs</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#" title="@pulumi/alicloud/ecs">@pulumi/alicloud/ecs</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/ecs" title="pulumi_alicloud/ecs">pulumi_alicloud/ecs</a></dd>
+
+</dl>
+

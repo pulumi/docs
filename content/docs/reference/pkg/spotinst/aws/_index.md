@@ -36,7 +36,7 @@ Explore the resources and functions of the aws module in the Spotinst package.
 <dl class="tabular">
 
     <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Aws.html" title="Pulumi.Spotinst.Aws">Pulumi.Spotinst.Aws</a></dd>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.html" title="Pulumi.SpotInst.Aws">Pulumi.SpotInst.Aws</a></dd>
 
     <dt>Go</dt>
     <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#" title="spotinst/aws">spotinst/aws</a></dd>

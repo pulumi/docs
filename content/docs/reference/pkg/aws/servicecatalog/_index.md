@@ -26,3 +26,21 @@ Explore the resources and functions of the servicecatalog module in the AWS pack
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ServiceCatalog.html" title="Pulumi.Aws.ServiceCatalog">Pulumi.Aws.ServiceCatalog</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/servicecatalog?tab=doc#" title="aws/servicecatalog">aws/servicecatalog</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/servicecatalog/#" title="@pulumi/aws/servicecatalog">@pulumi/aws/servicecatalog</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/servicecatalog" title="pulumi_aws/servicecatalog">pulumi_aws/servicecatalog</a></dd>
+
+</dl>
+

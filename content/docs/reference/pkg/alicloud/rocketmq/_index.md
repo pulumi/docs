@@ -43,3 +43,21 @@ Explore the resources and functions of the rocketmq module in the AliCloud packa
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.RocketMQ.html" title="Pulumi.AliCloud.RocketMQ">Pulumi.AliCloud.RocketMQ</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rocketmq?tab=doc#" title="alicloud/rocketmq">alicloud/rocketmq</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/rocketmq/#" title="@pulumi/alicloud/rocketmq">@pulumi/alicloud/rocketmq</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/rocketmq" title="pulumi_alicloud/rocketmq">pulumi_alicloud/rocketmq</a></dd>
+
+</dl>
+

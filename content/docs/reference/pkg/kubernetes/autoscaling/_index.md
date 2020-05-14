@@ -26,3 +26,18 @@ meta_desc: ""
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/autoscaling?tab=doc#" title="kubernetes/autoscaling">kubernetes/autoscaling</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/autoscaling/#" title="@pulumi/kubernetes/autoscaling">@pulumi/kubernetes/autoscaling</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/autoscaling" title="pulumi_kubernetes/autoscaling">pulumi_kubernetes/autoscaling</a></dd>
+
+</dl>
+

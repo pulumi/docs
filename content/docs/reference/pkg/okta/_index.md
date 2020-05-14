@@ -46,3 +46,21 @@ A Pulumi package for creating and managing okta resources.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.html" title="Pulumi.Okta">Pulumi.Okta</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/?tab=doc#" title="okta">okta</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/okta/#" title="@pulumi/okta">@pulumi/okta</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_okta" title="pulumi_okta">pulumi_okta</a></dd>
+
+</dl>
+

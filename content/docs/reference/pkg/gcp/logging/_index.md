@@ -38,3 +38,21 @@ Explore the resources and functions of the logging module in the GCP package.
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.html" title="Pulumi.Gcp.Logging">Pulumi.Gcp.Logging</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#" title="gcp/logging">gcp/logging</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#" title="@pulumi/gcp/logging">@pulumi/gcp/logging</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/logging" title="pulumi_gcp/logging">pulumi_gcp/logging</a></dd>
+
+</dl>
+

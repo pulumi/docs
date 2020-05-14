@@ -28,3 +28,21 @@ Explore the resources and functions of the datahub module in the AliCloud packag
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Datahub.html" title="Pulumi.AliCloud.Datahub">Pulumi.AliCloud.Datahub</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/datahub?tab=doc#" title="alicloud/datahub">alicloud/datahub</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/datahub/#" title="@pulumi/alicloud/datahub">@pulumi/alicloud/datahub</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/datahub" title="pulumi_alicloud/datahub">pulumi_alicloud/datahub</a></dd>
+
+</dl>
+

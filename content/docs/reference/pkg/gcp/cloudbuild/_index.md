@@ -26,3 +26,21 @@ Explore the resources and functions of the cloudbuild module in the GCP package.
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.html" title="Pulumi.Gcp.CloudBuild">Pulumi.Gcp.CloudBuild</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#" title="gcp/cloudbuild">gcp/cloudbuild</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudbuild/#" title="@pulumi/gcp/cloudbuild">@pulumi/gcp/cloudbuild</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/cloudbuild" title="pulumi_gcp/cloudbuild">pulumi_gcp/cloudbuild</a></dd>
+
+</dl>
+

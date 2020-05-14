@@ -34,3 +34,21 @@ Explore the resources and functions of the firebase module in the GCP package.
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Firebase.html" title="Pulumi.Gcp.Firebase">Pulumi.Gcp.Firebase</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/firebase?tab=doc#" title="gcp/firebase">gcp/firebase</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/firebase/#" title="@pulumi/gcp/firebase">@pulumi/gcp/firebase</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/firebase" title="pulumi_gcp/firebase">pulumi_gcp/firebase</a></dd>
+
+</dl>
+

@@ -27,3 +27,21 @@ Explore the resources and functions of the pagerduty module in the Datadog packa
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.PagerDuty.html" title="Pulumi.Datadog.PagerDuty">Pulumi.Datadog.PagerDuty</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/pagerduty?tab=doc#" title="datadog/pagerduty">datadog/pagerduty</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/datadog/pagerduty/#" title="@pulumi/datadog/pagerduty">@pulumi/datadog/pagerduty</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_datadog/pagerduty" title="pulumi_datadog/pagerduty">pulumi_datadog/pagerduty</a></dd>
+
+</dl>
+

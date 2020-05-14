@@ -63,3 +63,21 @@ A Pulumi package for creating and managing keycloak cloud resources.
 	<dd>2.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.html" title="Pulumi.Keycloak">Pulumi.Keycloak</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/?tab=doc#" title="keycloak">keycloak</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/#" title="@pulumi/keycloak">@pulumi/keycloak</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_keycloak" title="pulumi_keycloak">pulumi_keycloak</a></dd>
+
+</dl>
+

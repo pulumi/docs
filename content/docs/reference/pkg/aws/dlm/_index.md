@@ -26,3 +26,21 @@ Explore the resources and functions of the dlm module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dlm.html" title="Pulumi.Aws.Dlm">Pulumi.Aws.Dlm</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dlm?tab=doc#" title="aws/dlm">aws/dlm</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/dlm/#" title="@pulumi/aws/dlm">@pulumi/aws/dlm</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/dlm" title="pulumi_aws/dlm">pulumi_aws/dlm</a></dd>
+
+</dl>
+

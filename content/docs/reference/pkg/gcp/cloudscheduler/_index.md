@@ -26,3 +26,21 @@ Explore the resources and functions of the cloudscheduler module in the GCP pack
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.html" title="Pulumi.Gcp.CloudScheduler">Pulumi.Gcp.CloudScheduler</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#" title="gcp/cloudscheduler">gcp/cloudscheduler</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudscheduler/#" title="@pulumi/gcp/cloudscheduler">@pulumi/gcp/cloudscheduler</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/cloudscheduler" title="pulumi_gcp/cloudscheduler">pulumi_gcp/cloudscheduler</a></dd>
+
+</dl>
+

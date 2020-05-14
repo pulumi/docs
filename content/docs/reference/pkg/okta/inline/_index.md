@@ -26,3 +26,21 @@ Explore the resources and functions of the inline module in the Okta package.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Inline.html" title="Pulumi.Okta.Inline">Pulumi.Okta.Inline</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/inline?tab=doc#" title="okta/inline">okta/inline</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/okta/inline/#" title="@pulumi/okta/inline">@pulumi/okta/inline</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_okta/inline" title="pulumi_okta/inline">pulumi_okta/inline</a></dd>
+
+</dl>
+

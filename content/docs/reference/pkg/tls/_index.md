@@ -38,3 +38,21 @@ A Pulumi package to create TLS resources in Pulumi programs.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Tls/Pulumi.Tls.html" title="Pulumi.Tls">Pulumi.Tls</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/v2/go/tls/?tab=doc#" title="tls">tls</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/tls/#" title="@pulumi/tls">@pulumi/tls</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_tls" title="pulumi_tls">pulumi_tls</a></dd>
+
+</dl>
+

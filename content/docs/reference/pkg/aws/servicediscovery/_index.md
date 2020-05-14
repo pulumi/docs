@@ -29,3 +29,21 @@ Explore the resources and functions of the servicediscovery module in the AWS pa
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ServiceDiscovery.html" title="Pulumi.Aws.ServiceDiscovery">Pulumi.Aws.ServiceDiscovery</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/servicediscovery?tab=doc#" title="aws/servicediscovery">aws/servicediscovery</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/servicediscovery/#" title="@pulumi/aws/servicediscovery">@pulumi/aws/servicediscovery</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/servicediscovery" title="pulumi_aws/servicediscovery">pulumi_aws/servicediscovery</a></dd>
+
+</dl>
+

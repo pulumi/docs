@@ -34,3 +34,21 @@ Explore the resources and functions of the saml module in the Keycloak package.
 	<dd>2.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Saml.html" title="Pulumi.Keycloak.Saml">Pulumi.Keycloak.Saml</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/saml?tab=doc#" title="keycloak/saml">keycloak/saml</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/saml/#" title="@pulumi/keycloak/saml">@pulumi/keycloak/saml</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_keycloak/saml" title="pulumi_keycloak/saml">pulumi_keycloak/saml</a></dd>
+
+</dl>
+

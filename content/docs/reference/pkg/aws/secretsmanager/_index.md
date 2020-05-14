@@ -33,3 +33,21 @@ Explore the resources and functions of the secretsmanager module in the AWS pack
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.SecretsManager.html" title="Pulumi.Aws.SecretsManager">Pulumi.Aws.SecretsManager</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/secretsmanager?tab=doc#" title="aws/secretsmanager">aws/secretsmanager</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/secretsmanager/#" title="@pulumi/aws/secretsmanager">@pulumi/aws/secretsmanager</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/secretsmanager" title="pulumi_aws/secretsmanager">pulumi_aws/secretsmanager</a></dd>
+
+</dl>
+

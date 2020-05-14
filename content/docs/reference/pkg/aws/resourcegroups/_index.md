@@ -26,3 +26,21 @@ Explore the resources and functions of the resourcegroups module in the AWS pack
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ResourceGroups.html" title="Pulumi.Aws.ResourceGroups">Pulumi.Aws.ResourceGroups</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/resourcegroups?tab=doc#" title="aws/resourcegroups">aws/resourcegroups</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/resourcegroups/#" title="@pulumi/aws/resourcegroups">@pulumi/aws/resourcegroups</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/resourcegroups" title="pulumi_aws/resourcegroups">pulumi_aws/resourcegroups</a></dd>
+
+</dl>
+

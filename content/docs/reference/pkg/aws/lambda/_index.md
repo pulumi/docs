@@ -40,3 +40,21 @@ Explore the resources and functions of the lambda module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.html" title="Pulumi.Aws.Lambda">Pulumi.Aws.Lambda</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#" title="aws/lambda">aws/lambda</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#" title="@pulumi/aws/lambda">@pulumi/aws/lambda</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/lambda" title="pulumi_aws/lambda">pulumi_aws/lambda</a></dd>
+
+</dl>
+

@@ -24,6 +24,24 @@ Explore the resources and functions of the jwt module in the Vault package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 	<dt>Version</dt>
-	<dd>2.1.1</dd>
+	<dd>2.1.2-beta.1</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Jwt.html" title="Pulumi.Vault.Jwt">Pulumi.Vault.Jwt</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/jwt?tab=doc#" title="vault/jwt">vault/jwt</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/jwt/#" title="@pulumi/vault/jwt">@pulumi/vault/jwt</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_vault/jwt" title="pulumi_vault/jwt">pulumi_vault/jwt</a></dd>
+
 </dl>
 

@@ -52,3 +52,21 @@ Explore the resources and functions of the slb module in the AliCloud package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.html" title="Pulumi.AliCloud.Slb">Pulumi.AliCloud.Slb</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#" title="alicloud/slb">alicloud/slb</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/slb/#" title="@pulumi/alicloud/slb">@pulumi/alicloud/slb</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/slb" title="pulumi_alicloud/slb">pulumi_alicloud/slb</a></dd>
+
+</dl>
+

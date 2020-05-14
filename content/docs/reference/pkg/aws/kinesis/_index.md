@@ -34,3 +34,21 @@ Explore the resources and functions of the kinesis module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.html" title="Pulumi.Aws.Kinesis">Pulumi.Aws.Kinesis</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#" title="aws/kinesis">aws/kinesis</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesis/#" title="@pulumi/aws/kinesis">@pulumi/aws/kinesis</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/kinesis" title="pulumi_aws/kinesis">pulumi_aws/kinesis</a></dd>
+
+</dl>
+

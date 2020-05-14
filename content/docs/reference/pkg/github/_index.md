@@ -64,3 +64,21 @@ A Pulumi package for creating and managing github cloud resources.
 	<dd>1.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.html" title="Pulumi.Github">Pulumi.Github</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#" title="github">github</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/github/#" title="@pulumi/github">@pulumi/github</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_github" title="pulumi_github">pulumi_github</a></dd>
+
+</dl>
+

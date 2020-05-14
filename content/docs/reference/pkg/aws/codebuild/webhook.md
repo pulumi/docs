@@ -72,6 +72,58 @@ const example = new aws.codebuild.Webhook("example", {
 ```
 {{% /example %}}
 
+### GitHub Enterprise
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_github as github
+
+example_webhook = aws.codebuild.Webhook("exampleWebhook", project_name=aws_codebuild_project["example"]["name"])
+example_repository_webhook = github.RepositoryWebhook("exampleRepositoryWebhook",
+    active=True,
+    configuration={
+        "contentType": "json",
+        "insecureSsl": False,
+        "secret": example_webhook.secret,
+        "url": example_webhook.payload_url,
+    },
+    events=["push"],
+    repository=github_repository["example"]["name"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as github from "@pulumi/github";
+
+const exampleWebhook = new aws.codebuild.Webhook("example", {
+    projectName: aws_codebuild_project_example.name,
+});
+const exampleRepositoryWebhook = new github.RepositoryWebhook("example", {
+    active: true,
+    configuration: {
+        contentType: "json",
+        insecureSsl: false,
+        secret: exampleWebhook.secret,
+        url: exampleWebhook.payloadUrl,
+    },
+    events: ["push"],
+    repository: github_repository_example.name,
+});
+```
+{{% /example %}}
+
 {{% /examples %}}
 
 

@@ -25,6 +25,24 @@ Explore the resources and functions of the ldap module in the Vault package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 	<dt>Version</dt>
-	<dd>2.1.1</dd>
+	<dd>2.1.2-beta.1</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Ldap.html" title="Pulumi.Vault.Ldap">Pulumi.Vault.Ldap</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/ldap?tab=doc#" title="vault/ldap">vault/ldap</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/ldap/#" title="@pulumi/vault/ldap">@pulumi/vault/ldap</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_vault/ldap" title="pulumi_vault/ldap">pulumi_vault/ldap</a></dd>
+
 </dl>
 

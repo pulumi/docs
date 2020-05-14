@@ -25,3 +25,21 @@ Explore the resources and functions of the settings/v1alpha1 module in the Kuber
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Settings.V1Alpha1.html" title="Pulumi.Kubernetes.Settings.V1Alpha1">Pulumi.Kubernetes.Settings.V1Alpha1</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/settings/v1alpha1?tab=doc#" title="kubernetes/settings/v1alpha1">kubernetes/settings/v1alpha1</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/settings/v1alpha1/#" title="@pulumi/kubernetes/settings/v1alpha1">@pulumi/kubernetes/settings/v1alpha1</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/settings.k8s.io/v1alpha1" title="pulumi_kubernetes/settings.k8s.io/v1alpha1">pulumi_kubernetes/settings.k8s.io/v1alpha1</a></dd>
+
+</dl>
+

@@ -36,3 +36,21 @@ Explore the resources and functions of the elasticbeanstalk module in the AWS pa
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.html" title="Pulumi.Aws.ElasticBeanstalk">Pulumi.Aws.ElasticBeanstalk</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticbeanstalk?tab=doc#" title="aws/elasticbeanstalk">aws/elasticbeanstalk</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticbeanstalk/#" title="@pulumi/aws/elasticbeanstalk">@pulumi/aws/elasticbeanstalk</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/elasticbeanstalk" title="pulumi_aws/elasticbeanstalk">pulumi_aws/elasticbeanstalk</a></dd>
+
+</dl>
+

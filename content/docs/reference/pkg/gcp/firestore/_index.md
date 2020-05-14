@@ -26,3 +26,21 @@ Explore the resources and functions of the firestore module in the GCP package.
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Firestore.html" title="Pulumi.Gcp.Firestore">Pulumi.Gcp.Firestore</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/firestore?tab=doc#" title="gcp/firestore">gcp/firestore</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/firestore/#" title="@pulumi/gcp/firestore">@pulumi/gcp/firestore</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/firestore" title="pulumi_gcp/firestore">pulumi_gcp/firestore</a></dd>
+
+</dl>
+

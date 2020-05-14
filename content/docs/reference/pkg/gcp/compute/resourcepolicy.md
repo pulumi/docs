@@ -112,10 +112,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const baz = new gcp.compute.ResourcePolicy("baz", {
-    groupPlacementPolicy: [{
+    groupPlacementPolicy: {
         collocation: "COLLOCATED",
         vmCount: 2,
-    }],
+    },
     region: "us-central1",
 });
 ```
@@ -124,10 +124,10 @@ import pulumi
 import pulumi_gcp as gcp
 
 baz = gcp.compute.ResourcePolicy("baz",
-    group_placement_policy=[{
+    group_placement_policy={
         "collocation": "COLLOCATED",
         "vmCount": 2,
-    }],
+    },
     region="us-central1")
 ```
 

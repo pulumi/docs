@@ -32,3 +32,21 @@ Explore the resources and functions of the identityplatform module in the GCP pa
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.IdentityPlatform.html" title="Pulumi.Gcp.IdentityPlatform">Pulumi.Gcp.IdentityPlatform</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/identityplatform?tab=doc#" title="gcp/identityplatform">gcp/identityplatform</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/identityplatform/#" title="@pulumi/gcp/identityplatform">@pulumi/gcp/identityplatform</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/identityplatform" title="pulumi_gcp/identityplatform">pulumi_gcp/identityplatform</a></dd>
+
+</dl>
+

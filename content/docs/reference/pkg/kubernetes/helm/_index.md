@@ -25,3 +25,18 @@ meta_desc: ""
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/helm?tab=doc#" title="kubernetes/helm">kubernetes/helm</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/helm/#" title="@pulumi/kubernetes/helm">@pulumi/kubernetes/helm</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/helm" title="pulumi_kubernetes/helm">pulumi_kubernetes/helm</a></dd>
+
+</dl>
+

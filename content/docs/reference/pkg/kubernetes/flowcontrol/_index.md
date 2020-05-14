@@ -24,3 +24,18 @@ meta_desc: ""
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/flowcontrol?tab=doc#" title="kubernetes/flowcontrol">kubernetes/flowcontrol</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/flowcontrol/#" title="@pulumi/kubernetes/flowcontrol">@pulumi/kubernetes/flowcontrol</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/flowcontrol" title="pulumi_kubernetes/flowcontrol">pulumi_kubernetes/flowcontrol</a></dd>
+
+</dl>
+

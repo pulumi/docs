@@ -36,3 +36,21 @@ Explore the resources and functions of the synthetics module in the New Relic pa
 	<dd>2.2.2</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Synthetics.html" title="Pulumi.NewRelic.Synthetics">Pulumi.NewRelic.Synthetics</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/synthetics?tab=doc#" title="newrelic/synthetics">newrelic/synthetics</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/synthetics/#" title="@pulumi/newrelic/synthetics">@pulumi/newrelic/synthetics</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_newrelic/synthetics" title="pulumi_newrelic/synthetics">pulumi_newrelic/synthetics</a></dd>
+
+</dl>
+

@@ -26,3 +26,21 @@ Explore the resources and functions of the dds module in the AliCloud package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Dds.html" title="Pulumi.AliCloud.Dds">Pulumi.AliCloud.Dds</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/dds?tab=doc#" title="alicloud/dds">alicloud/dds</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/dds/#" title="@pulumi/alicloud/dds">@pulumi/alicloud/dds</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/dds" title="pulumi_alicloud/dds">pulumi_alicloud/dds</a></dd>
+
+</dl>
+

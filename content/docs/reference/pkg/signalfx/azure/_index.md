@@ -31,7 +31,7 @@ Explore the resources and functions of the azure module in the SignalFx package.
 <dl class="tabular">
 
     <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.Azure.html" title="Pulumi.Signalfx.Azure">Pulumi.Signalfx.Azure</a></dd>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Azure.html" title="Pulumi.SignalFx.Azure">Pulumi.SignalFx.Azure</a></dd>
 
     <dt>Go</dt>
     <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/azure?tab=doc#" title="signalfx/azure">signalfx/azure</a></dd>

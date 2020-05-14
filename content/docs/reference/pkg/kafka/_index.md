@@ -31,3 +31,21 @@ A Pulumi package for creating and managing Kafka.
 	<dd>2.1.2</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Kafka/Pulumi.Kafka.html" title="Pulumi.Kafka">Pulumi.Kafka</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kafka/sdk/v2/go/kafka/?tab=doc#" title="kafka">kafka</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kafka/#" title="@pulumi/kafka">@pulumi/kafka</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kafka" title="pulumi_kafka">pulumi_kafka</a></dd>
+
+</dl>
+

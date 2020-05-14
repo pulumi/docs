@@ -25,3 +25,18 @@ meta_desc: ""
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiregistration?tab=doc#" title="kubernetes/apiregistration">kubernetes/apiregistration</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/apiregistration/#" title="@pulumi/kubernetes/apiregistration">@pulumi/kubernetes/apiregistration</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/apiregistration" title="pulumi_kubernetes/apiregistration">pulumi_kubernetes/apiregistration</a></dd>
+
+</dl>
+

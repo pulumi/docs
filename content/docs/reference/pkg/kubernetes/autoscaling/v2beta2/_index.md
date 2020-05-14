@@ -25,3 +25,21 @@ Explore the resources and functions of the autoscaling/v2beta2 module in the Kub
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Autoscaling.V2Beta2.html" title="Pulumi.Kubernetes.Autoscaling.V2Beta2">Pulumi.Kubernetes.Autoscaling.V2Beta2</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/autoscaling/v2beta2?tab=doc#" title="kubernetes/autoscaling/v2beta2">kubernetes/autoscaling/v2beta2</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/autoscaling/v2beta2/#" title="@pulumi/kubernetes/autoscaling/v2beta2">@pulumi/kubernetes/autoscaling/v2beta2</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/autoscaling/v2beta2" title="pulumi_kubernetes/autoscaling/v2beta2">pulumi_kubernetes/autoscaling/v2beta2</a></dd>
+
+</dl>
+

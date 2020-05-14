@@ -26,3 +26,21 @@ Explore the resources and functions of the datapipeline module in the AWS packag
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DataPipeline.html" title="Pulumi.Aws.DataPipeline">Pulumi.Aws.DataPipeline</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/datapipeline?tab=doc#" title="aws/datapipeline">aws/datapipeline</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/datapipeline/#" title="@pulumi/aws/datapipeline">@pulumi/aws/datapipeline</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/datapipeline" title="pulumi_aws/datapipeline">pulumi_aws/datapipeline</a></dd>
+
+</dl>
+

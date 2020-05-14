@@ -26,3 +26,21 @@ Explore the resources and functions of the mediaconvert module in the AWS packag
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.MediaConvert.html" title="Pulumi.Aws.MediaConvert">Pulumi.Aws.MediaConvert</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/mediaconvert?tab=doc#" title="aws/mediaconvert">aws/mediaconvert</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/mediaconvert/#" title="@pulumi/aws/mediaconvert">@pulumi/aws/mediaconvert</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/mediaconvert" title="pulumi_aws/mediaconvert">pulumi_aws/mediaconvert</a></dd>
+
+</dl>
+

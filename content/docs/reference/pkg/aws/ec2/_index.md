@@ -127,3 +127,21 @@ Explore the resources and functions of the ec2 module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.html" title="Pulumi.Aws.Ec2">Pulumi.Aws.Ec2</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#" title="aws/ec2">aws/ec2</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#" title="@pulumi/aws/ec2">@pulumi/aws/ec2</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/ec2" title="pulumi_aws/ec2">pulumi_aws/ec2</a></dd>
+
+</dl>
+

@@ -31,7 +31,7 @@ Explore the resources and functions of the azure module in the Spotinst package.
 <dl class="tabular">
 
     <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Azure.html" title="Pulumi.Spotinst.Azure">Pulumi.Spotinst.Azure</a></dd>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Azure.html" title="Pulumi.SpotInst.Azure">Pulumi.SpotInst.Azure</a></dd>
 
     <dt>Go</dt>
     <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#" title="spotinst/azure">spotinst/azure</a></dd>

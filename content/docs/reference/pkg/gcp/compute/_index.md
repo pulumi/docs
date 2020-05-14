@@ -135,3 +135,21 @@ Explore the resources and functions of the compute module in the GCP package.
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.html" title="Pulumi.Gcp.Compute">Pulumi.Gcp.Compute</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#" title="gcp/compute">gcp/compute</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#" title="@pulumi/gcp/compute">@pulumi/gcp/compute</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/compute" title="pulumi_gcp/compute">pulumi_gcp/compute</a></dd>
+
+</dl>
+

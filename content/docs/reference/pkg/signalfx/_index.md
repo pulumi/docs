@@ -67,7 +67,7 @@ A Pulumi package for creating and managing SignalFx resources.
 <dl class="tabular">
 
     <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.html" title="Pulumi.Signalfx">Pulumi.Signalfx</a></dd>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.html" title="Pulumi.SignalFx">Pulumi.SignalFx</a></dd>
 
     <dt>Go</dt>
     <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#" title="signalfx">signalfx</a></dd>

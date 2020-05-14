@@ -30,7 +30,7 @@ meta_desc: "Explore the Api resource of the apigateway module, including example
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.ApiGateway.Api.html">Api</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.ApiGateway.ApiArgs.html">ApiArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ApiGateway.Api.html">Api</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ApiGateway.ApiArgs.html">ApiArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -159,7 +159,7 @@ meta_desc: "Explore the Api resource of the apigateway module, including example
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.ApiGateway.ApiArgs.html">ApiArgs</a></span>
+        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ApiGateway.ApiArgs.html">ApiArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -853,7 +853,7 @@ Get an existing Api resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.ApiGateway.Api.html">Api</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.ApiGateway.ApiState.html">ApiState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ApiGateway.Api.html">Api</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ApiGateway.ApiState.html">ApiState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1544,7 +1544,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/apigateway?tab=doc#ApiConstantParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/apigateway?tab=doc#ApiConstantParameterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.ApiGateway.Inputs.ApiConstantParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.ApiGateway.Outputs.ApiConstantParameter.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ApiGateway.Inputs.ApiConstantParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ApiGateway.Outputs.ApiConstantParameter.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1734,7 +1734,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/apigateway?tab=doc#ApiFcServiceConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/apigateway?tab=doc#ApiFcServiceConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.ApiGateway.Inputs.ApiFcServiceConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.ApiGateway.Outputs.ApiFcServiceConfig.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ApiGateway.Inputs.ApiFcServiceConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ApiGateway.Outputs.ApiFcServiceConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1960,7 +1960,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/apigateway?tab=doc#ApiHttpServiceConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/apigateway?tab=doc#ApiHttpServiceConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.ApiGateway.Inputs.ApiHttpServiceConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.ApiGateway.Outputs.ApiHttpServiceConfig.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ApiGateway.Inputs.ApiHttpServiceConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ApiGateway.Outputs.ApiHttpServiceConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2182,7 +2182,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/apigateway?tab=doc#ApiHttpVpcServiceConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/apigateway?tab=doc#ApiHttpVpcServiceConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.ApiGateway.Inputs.ApiHttpVpcServiceConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.ApiGateway.Outputs.ApiHttpVpcServiceConfig.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ApiGateway.Inputs.ApiHttpVpcServiceConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ApiGateway.Outputs.ApiHttpVpcServiceConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2404,7 +2404,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/apigateway?tab=doc#ApiMockServiceConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/apigateway?tab=doc#ApiMockServiceConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.ApiGateway.Inputs.ApiMockServiceConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.ApiGateway.Outputs.ApiMockServiceConfig.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ApiGateway.Inputs.ApiMockServiceConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ApiGateway.Outputs.ApiMockServiceConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2518,7 +2518,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/apigateway?tab=doc#ApiRequestConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/apigateway?tab=doc#ApiRequestConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.ApiGateway.Inputs.ApiRequestConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.ApiGateway.Outputs.ApiRequestConfig.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ApiGateway.Inputs.ApiRequestConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ApiGateway.Outputs.ApiRequestConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2744,7 +2744,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/apigateway?tab=doc#ApiRequestParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/apigateway?tab=doc#ApiRequestParameterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.ApiGateway.Inputs.ApiRequestParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.ApiGateway.Outputs.ApiRequestParameter.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ApiGateway.Inputs.ApiRequestParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ApiGateway.Outputs.ApiRequestParameter.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3078,7 +3078,7 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/apigateway?tab=doc#ApiSystemParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/apigateway?tab=doc#ApiSystemParameterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.ApiGateway.Inputs.ApiSystemParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.ApiGateway.Outputs.ApiSystemParameter.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ApiGateway.Inputs.ApiSystemParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ApiGateway.Outputs.ApiSystemParameter.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

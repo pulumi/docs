@@ -43,3 +43,21 @@ Explore the resources and functions of the ec2transitgateway module in the AWS p
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2TransitGateway.html" title="Pulumi.Aws.Ec2TransitGateway">Pulumi.Aws.Ec2TransitGateway</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway?tab=doc#" title="aws/ec2transitgateway">aws/ec2transitgateway</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2transitgateway/#" title="@pulumi/aws/ec2transitgateway">@pulumi/aws/ec2transitgateway</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/ec2transitgateway" title="pulumi_aws/ec2transitgateway">pulumi_aws/ec2transitgateway</a></dd>
+
+</dl>
+

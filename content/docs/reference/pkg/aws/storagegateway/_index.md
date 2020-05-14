@@ -37,3 +37,21 @@ Explore the resources and functions of the storagegateway module in the AWS pack
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.StorageGateway.html" title="Pulumi.Aws.StorageGateway">Pulumi.Aws.StorageGateway</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway?tab=doc#" title="aws/storagegateway">aws/storagegateway</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/storagegateway/#" title="@pulumi/aws/storagegateway">@pulumi/aws/storagegateway</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/storagegateway" title="pulumi_aws/storagegateway">pulumi_aws/storagegateway</a></dd>
+
+</dl>
+

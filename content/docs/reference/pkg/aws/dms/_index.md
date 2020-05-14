@@ -31,3 +31,21 @@ Explore the resources and functions of the dms module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dms.html" title="Pulumi.Aws.Dms">Pulumi.Aws.Dms</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dms?tab=doc#" title="aws/dms">aws/dms</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/dms/#" title="@pulumi/aws/dms">@pulumi/aws/dms</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/dms" title="pulumi_aws/dms">pulumi_aws/dms</a></dd>
+
+</dl>
+

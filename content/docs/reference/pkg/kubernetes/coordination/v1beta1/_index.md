@@ -25,3 +25,21 @@ Explore the resources and functions of the coordination/v1beta1 module in the Ku
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Coordination.V1Beta1.html" title="Pulumi.Kubernetes.Coordination.V1Beta1">Pulumi.Kubernetes.Coordination.V1Beta1</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/coordination/v1beta1?tab=doc#" title="kubernetes/coordination/v1beta1">kubernetes/coordination/v1beta1</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/coordination/v1beta1/#" title="@pulumi/kubernetes/coordination/v1beta1">@pulumi/kubernetes/coordination/v1beta1</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/coordination.k8s.io/v1beta1" title="pulumi_kubernetes/coordination.k8s.io/v1beta1">pulumi_kubernetes/coordination.k8s.io/v1beta1</a></dd>
+
+</dl>
+

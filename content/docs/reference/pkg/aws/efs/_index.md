@@ -33,3 +33,21 @@ Explore the resources and functions of the efs module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Efs.html" title="Pulumi.Aws.Efs">Pulumi.Aws.Efs</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/efs?tab=doc#" title="aws/efs">aws/efs</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/efs/#" title="@pulumi/aws/efs">@pulumi/aws/efs</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/efs" title="pulumi_aws/efs">pulumi_aws/efs</a></dd>
+
+</dl>
+

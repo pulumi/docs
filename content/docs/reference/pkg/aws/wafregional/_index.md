@@ -46,3 +46,21 @@ Explore the resources and functions of the wafregional module in the AWS package
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.html" title="Pulumi.Aws.WafRegional">Pulumi.Aws.WafRegional</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#" title="aws/wafregional">aws/wafregional</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#" title="@pulumi/aws/wafregional">@pulumi/aws/wafregional</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/wafregional" title="pulumi_aws/wafregional">pulumi_aws/wafregional</a></dd>
+
+</dl>
+

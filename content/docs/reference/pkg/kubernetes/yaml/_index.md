@@ -25,3 +25,21 @@ Explore the resources and functions of the yaml module in the Kubernetes package
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Yaml.html" title="Pulumi.Kubernetes.Yaml">Pulumi.Kubernetes.Yaml</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/yaml?tab=doc#" title="kubernetes/yaml">kubernetes/yaml</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/yaml/#" title="@pulumi/kubernetes/yaml">@pulumi/kubernetes/yaml</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/yaml" title="pulumi_kubernetes/yaml">pulumi_kubernetes/yaml</a></dd>
+
+</dl>
+

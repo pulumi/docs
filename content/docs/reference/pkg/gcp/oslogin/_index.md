@@ -26,3 +26,21 @@ Explore the resources and functions of the oslogin module in the GCP package.
 	<dd>3.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsLogin.html" title="Pulumi.Gcp.OsLogin">Pulumi.Gcp.OsLogin</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/oslogin?tab=doc#" title="gcp/oslogin">gcp/oslogin</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/oslogin/#" title="@pulumi/gcp/oslogin">@pulumi/gcp/oslogin</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/oslogin" title="pulumi_gcp/oslogin">pulumi_gcp/oslogin</a></dd>
+
+</dl>
+

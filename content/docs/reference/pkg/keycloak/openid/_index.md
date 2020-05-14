@@ -56,3 +56,21 @@ Explore the resources and functions of the openid module in the Keycloak package
 	<dd>2.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.html" title="Pulumi.Keycloak.OpenId">Pulumi.Keycloak.OpenId</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/openid?tab=doc#" title="keycloak/openid">keycloak/openid</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/openid/#" title="@pulumi/keycloak/openid">@pulumi/keycloak/openid</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_keycloak/openid" title="pulumi_keycloak/openid">pulumi_keycloak/openid</a></dd>
+
+</dl>
+

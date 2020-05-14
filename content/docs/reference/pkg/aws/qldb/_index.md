@@ -31,3 +31,21 @@ Explore the resources and functions of the qldb module in the AWS package.
 	<dd>2.4.0</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Qldb.html" title="Pulumi.Aws.Qldb">Pulumi.Aws.Qldb</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/qldb?tab=doc#" title="aws/qldb">aws/qldb</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/qldb/#" title="@pulumi/aws/qldb">@pulumi/aws/qldb</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/qldb" title="pulumi_aws/qldb">pulumi_aws/qldb</a></dd>
+
+</dl>
+
