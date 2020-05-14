@@ -72,58 +72,6 @@ const example = new aws.codebuild.Webhook("example", {
 ```
 {{% /example %}}
 
-### GitHub Enterprise
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-import pulumi_github as github
-
-example_webhook = aws.codebuild.Webhook("exampleWebhook", project_name=aws_codebuild_project["example"]["name"])
-example_repository_webhook = github.RepositoryWebhook("exampleRepositoryWebhook",
-    active=True,
-    configuration={
-        "contentType": "json",
-        "insecureSsl": False,
-        "secret": example_webhook.secret,
-        "url": example_webhook.payload_url,
-    },
-    events=["push"],
-    repository=github_repository["example"]["name"])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * as github from "@pulumi/github";
-
-const exampleWebhook = new aws.codebuild.Webhook("example", {
-    projectName: aws_codebuild_project_example.name,
-});
-const exampleRepositoryWebhook = new github.RepositoryWebhook("example", {
-    active: true,
-    configuration: {
-        contentType: "json",
-        insecureSsl: false,
-        secret: exampleWebhook.secret,
-        url: exampleWebhook.payloadUrl,
-    },
-    events: ["push"],
-    repository: github_repository_example.name,
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
 
 
@@ -136,11 +84,11 @@ const exampleRepositoryWebhook = new github.RepositoryWebhook("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Webhook</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>branch_filter=None<span class="p">, </span>filter_groups=None<span class="p">, </span>project_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codebuild/#Webhook">Webhook</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>branch_filter=None<span class="p">, </span>filter_groups=None<span class="p">, </span>project_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewWebhook<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#WebhookArgs">WebhookArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#Webhook">Webhook</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#Webhook">NewWebhook</a></span><span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#WebhookArgs">WebhookArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#Webhook">Webhook</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

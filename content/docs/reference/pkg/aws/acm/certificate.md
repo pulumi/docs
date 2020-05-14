@@ -72,71 +72,6 @@ const cert = new aws.acm.Certificate("cert", {
 ```
 {{% /example %}}
 
-### Importing an existing certificate
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-import pulumi_tls as tls
-
-example_private_key = tls.PrivateKey("examplePrivateKey", algorithm="RSA")
-example_self_signed_cert = tls.SelfSignedCert("exampleSelfSignedCert",
-    allowed_uses=[
-        "key_encipherment",
-        "digital_signature",
-        "server_auth",
-    ],
-    key_algorithm="RSA",
-    private_key_pem=example_private_key.private_key_pem,
-    subjects=[{
-        "commonName": "example.com",
-        "organization": "ACME Examples, Inc",
-    }],
-    validity_period_hours=12)
-cert = aws.acm.Certificate("cert",
-    certificate_body=example_self_signed_cert.cert_pem,
-    private_key=example_private_key.private_key_pem)
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * as tls from "@pulumi/tls";
-
-const examplePrivateKey = new tls.PrivateKey("example", {
-    algorithm: "RSA",
-});
-const exampleSelfSignedCert = new tls.SelfSignedCert("example", {
-    allowedUses: [
-        "key_encipherment",
-        "digital_signature",
-        "server_auth",
-    ],
-    keyAlgorithm: "RSA",
-    privateKeyPem: examplePrivateKey.privateKeyPem,
-    subjects: [{
-        commonName: "example.com",
-        organization: "ACME Examples, Inc",
-    }],
-    validityPeriodHours: 12,
-});
-const cert = new aws.acm.Certificate("cert", {
-    certificateBody: exampleSelfSignedCert.certPem,
-    privateKey: examplePrivateKey.privateKeyPem,
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
 
 
@@ -149,11 +84,11 @@ const cert = new aws.acm.Certificate("cert", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Certificate</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>certificate_authority_arn=None<span class="p">, </span>certificate_body=None<span class="p">, </span>certificate_chain=None<span class="p">, </span>domain_name=None<span class="p">, </span>options=None<span class="p">, </span>private_key=None<span class="p">, </span>subject_alternative_names=None<span class="p">, </span>tags=None<span class="p">, </span>validation_method=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/acm/#Certificate">Certificate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>certificate_authority_arn=None<span class="p">, </span>certificate_body=None<span class="p">, </span>certificate_chain=None<span class="p">, </span>domain_name=None<span class="p">, </span>options=None<span class="p">, </span>private_key=None<span class="p">, </span>subject_alternative_names=None<span class="p">, </span>tags=None<span class="p">, </span>validation_method=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCertificate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acm?tab=doc#CertificateArgs">CertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acm?tab=doc#Certificate">Certificate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acm?tab=doc#Certificate">NewCertificate</a></span><span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acm?tab=doc#CertificateArgs">CertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acm?tab=doc#Certificate">Certificate</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
